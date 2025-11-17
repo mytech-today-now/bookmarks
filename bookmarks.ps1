@@ -1,0 +1,864 @@
+<#
+.SYNOPSIS
+    Manage a consistent "myTech.Today" bookmarks folder across multiple browsers.
+.DESCRIPTION
+    This script builds and maintains a structured "myTech.Today" bookmarks tree in supported
+    browsers. For each application category it generates topic-focused bookmark groups
+    (news and updates, aggregators, ratings and reviews, statistics, videos, how-to guides,
+    resources, and search engines) and links to local myTech.Today logs and configuration folders.
+
+    The script can add, remove, or restore the bookmark structure for one or more browsers and
+    writes detailed log output via the shared logging module stored under
+    %USERPROFILE%\myTech.Today\.
+.PARAMETER Mode
+    Specifies whether to Add, Remove, or Restore the myTech.Today bookmark structure.
+.PARAMETER Browser
+    One or more target browsers (Chrome, Edge, Brave, Firefox, Vivaldi, Opera, etc. or 'All').
+.PARAMETER BackupPath
+    When Mode is Restore, the path to a backup file containing browser bookmarks.
+    - For Chromium-based browsers: a JSON backup file created by this script.
+    - For Firefox-family browsers: a places.sqlite backup file created by this script.
+.PARAMETER CuratedLinksPath
+    Optional path to a .psd1 or .ps1 file containing curated bookmark data; if omitted, default names in the script folder are probed.
+.PARAMETER WhatIf
+    Shows what would change without modifying any bookmark files.
+.EXAMPLE
+    Install (add) the myTech.Today bookmark structure for all supported browsers:
+
+        .\bookmarks\bookmarks.ps1 -Mode Add -Browser All
+
+.EXAMPLE
+    Uninstall (remove) the myTech.Today bookmark structure for all supported browsers:
+
+        .\bookmarks\bookmarks.ps1 -Mode Remove -Browser All
+
+.EXAMPLE
+    Restore the bookmarks for a specific Chromium-based browser from a JSON backup file:
+
+        .\bookmarks\bookmarks.ps1 -Mode Restore -Browser Chrome -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Bookmarks\Chrome\Bookmarks_20250101_120000.json"
+
+.EXAMPLE
+    Restore the bookmarks for a Firefox profile from a places.sqlite backup file:
+
+        .\bookmarks\bookmarks.ps1 -Mode Restore -Browser Firefox -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Bookmarks\Firefox\places_oyxj9ris.default-release_20250101_120000.sqlite"
+
+.NOTES
+    Version : 1.3.0
+    Script  : bookmarks.ps1
+    Project : myTech.Today PowerShellScripts
+    Author  : Kyle Rode (myTech.Today)
+#>
+
+
+#Requires -Version 5.1
+[CmdletBinding()]
+param(
+    [ValidateSet('Add','Remove','Restore')]
+    [string]$Mode = 'Add',
+
+    [ValidateSet('Chrome','Brave','Firefox','Edge','Vivaldi','Opera','OperaGX','LibreWolf','TorBrowser','Waterfox','Chromium','PaleMoon','UngoogledChromium','Midori','Min','All')]
+    [string[]]$Browser = @('All'),
+
+    [string]$BackupPath,
+
+    [string]$CuratedLinksPath,
+
+    [switch]$WhatIf
+)
+
+$ErrorActionPreference = 'Stop'
+
+# Import generic logging module (GitHub first, local fallback)
+$loggingUrl = 'https://raw.githubusercontent.com/mytech-today-now/scripts/refs/heads/main/logging.ps1'
+$script:LoggingModuleLoaded = $false
+
+try {
+    Write-Host "Loading generic logging module..." -ForegroundColor Cyan
+    Invoke-Expression (Invoke-WebRequest -Uri $loggingUrl -UseBasicParsing).Content
+    $script:LoggingModuleLoaded = $true
+    Write-Host "[OK] Generic logging module loaded successfully" -ForegroundColor Green
+}
+catch {
+    Write-Host "[ERROR] Failed to load generic logging module: $_" -ForegroundColor Red
+    Write-Host "[INFO] Falling back to local logging implementation" -ForegroundColor Yellow
+
+    $localLoggingPath = Join-Path $PSScriptRoot "..\scripts\logging.ps1"
+    if (Test-Path $localLoggingPath) {
+        try {
+            . $localLoggingPath
+            $script:LoggingModuleLoaded = $true
+            Write-Host "[OK] Loaded logging module from local path" -ForegroundColor Green
+        }
+        catch {
+            Write-Host "[ERROR] Failed to load local logging module: $_" -ForegroundColor Red
+        }
+    }
+}
+
+if (-not $script:LoggingModuleLoaded) {
+    Write-Warning "Logging module not available. Exiting."
+    return
+}
+
+$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.2.0"
+Write-Log "=== Bookmarks Manager started (Mode=$Mode) ===" -Level INFO
+
+function Get-InstallerCategories {
+    $installPath = Join-Path $PSScriptRoot "..\app_installer\install.ps1"
+    if (-not (Test-Path $installPath)) { return @() }
+    $content = Get-Content $installPath -Raw
+    $matches = [regex]::Matches($content, 'Category\s*=\s*"([^"]+)"')
+    $matches | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique
+}
+
+function Convert-ToFileUrl {
+    param([string]$Path)
+    $p = $Path -replace '\\','/'
+    if (-not $p.EndsWith('/')) { $p += '/' }
+    "file:///$p"
+}
+
+function New-BookmarkUrlNode {
+    param(
+        [string]$Name,
+        [string]$Url
+    )
+    [PSCustomObject]@{ name = $Name; type = 'url'; url = $Url }
+}
+function Get-TopicKeyword {
+    param([string]$Category)
+
+    switch ($Category) {
+        'Browsers'      { 'web browser' }
+        'Development'   { 'software development' }
+        'Productivity'  { 'productivity tools' }
+        'Media'         { 'media software' }
+        'Utilities'     { 'system utilities' }
+        'Security'      { 'computer security' }
+        'Communication' { 'communication tools' }
+        'Cloud Storage' { 'cloud storage' }
+        'Gaming'        { 'pc gaming platforms' }
+        'Education'     { 'online education' }
+        'Finance'       { 'personal finance software' }
+        'Remote Access' { 'remote desktop software' }
+        'Maintenance'   { 'pc maintenance tools' }
+        'Shortcuts'     { 'productivity shortcuts' }
+        default         { $Category }
+    }
+}
+
+function Initialize-CuratedBookmarks {
+    param(
+        [string]$Path
+    )
+
+    $pathsToTry = @()
+
+    if ($Path) {
+        if (-not [IO.Path]::IsPathRooted($Path)) {
+            $pathsToTry += (Join-Path $PSScriptRoot $Path)
+        }
+        else {
+            $pathsToTry += $Path
+        }
+    }
+    else {
+        $pathsToTry += @(
+            (Join-Path $PSScriptRoot 'links.psd1'),
+            (Join-Path $PSScriptRoot 'links.ps1'),
+            (Join-Path $PSScriptRoot 'links-sample.psd1'),
+            (Join-Path $PSScriptRoot 'links-sample.ps1')
+        )
+    }
+
+    foreach ($candidate in $pathsToTry) {
+        if (-not (Test-Path -LiteralPath $candidate)) { continue }
+
+        try {
+            $ext  = [IO.Path]::GetExtension($candidate)
+            $data = $null
+
+            if ($ext -ieq '.psd1') {
+                $data = Import-PowerShellDataFile -LiteralPath $candidate
+            }
+            elseif ($ext -ieq '.ps1') {
+                $data = & $candidate
+            }
+
+            if ($data -is [hashtable]) {
+                $script:CuratedBookmarks = $data
+                Write-Log "Loaded curated bookmark data from '$candidate'." -Level INFO
+                return
+            }
+        }
+        catch {
+            Write-Log "Failed to load curated bookmark data from '$candidate': $_" -Level WARNING
+        }
+    }
+
+    Write-Log "No curated bookmark data file found; using abstracted link patterns only." -Level INFO
+}
+
+
+function Get-CategoryBookmarkNodes {
+    param(
+        [string]$Category
+    )
+
+    $year = (Get-Date).Year
+
+    # 1. Try curated data from external hashtable (e.g., links-sample.psd1/ps1)
+    if ($script:CuratedBookmarks -is [hashtable] -and $script:CuratedBookmarks.ContainsKey($Category)) {
+        $categoryTable = $script:CuratedBookmarks[$Category]
+        if ($categoryTable -is [hashtable]) {
+            $curatedNodes = @()
+
+            foreach ($groupName in $categoryTable.Keys) {
+                $group = $categoryTable[$groupName]
+                if (-not $group) { continue }
+
+                foreach ($bookmark in $group) {
+                    if (-not $bookmark) { continue }
+
+                    $title = $bookmark.Title
+                    $url   = $bookmark.URL
+
+                    if ($null -eq $title -or $null -eq $url) { continue }
+
+                    # Replace explicit year placeholder (for example, 2025 -> current year)
+                    $title = $title -replace '\b2025\b', $year.ToString()
+                    $url   = $url   -replace '\b2025\b', $year.ToString()
+
+                    $curatedNodes += New-BookmarkUrlNode -Name $title -Url $url
+                }
+            }
+
+            if ($curatedNodes.Count -gt 0) {
+                Write-Log "Using curated bookmarks for category '$Category'." -Level INFO
+                return $curatedNodes
+            }
+        }
+    }
+
+    # 2. Fallback: abstracted search-based links that mirror the curated link types
+    $keyword = Get-TopicKeyword -Category $Category
+    $encoded = ($keyword -replace '\s+', '+')
+    $slug    = ($keyword -replace '\s+', '_')
+
+    @(
+        # News and updates
+        New-BookmarkUrlNode -Name "$Category overview (Wikipedia)"                       -Url "https://en.wikipedia.org/wiki/$slug"
+        New-BookmarkUrlNode -Name "$Category news and updates ($year, overview articles)"  -Url "https://www.google.com/search?q=$encoded+$year+news+updates"
+        New-BookmarkUrlNode -Name "$Category news and updates (community discussions)"   -Url "https://www.reddit.com/search/?q=$encoded+$year+news"
+
+        # Aggregators (round-ups and comparison lists)
+        New-BookmarkUrlNode -Name "$Category round-ups (best of $year lists)"            -Url "https://www.google.com/search?q=$encoded+best+tools+$year"
+        New-BookmarkUrlNode -Name "$Category comparison guides ($year)"                  -Url "https://www.google.com/search?q=$encoded+comparison+guide+$year"
+        New-BookmarkUrlNode -Name "$Category list posts (top $year overviews)"           -Url "https://www.google.com/search?q=$encoded+top+$year+overview"
+
+        # Ratings and reviews
+        New-BookmarkUrlNode -Name "$Category reviews ($year)"                            -Url "https://www.google.com/search?q=$encoded+reviews+$year"
+        New-BookmarkUrlNode -Name "$Category ratings and rankings"                       -Url "https://www.google.com/search?q=$encoded+ratings+rankings+$year"
+        New-BookmarkUrlNode -Name "$Category user review round-ups"                      -Url "https://www.google.com/search?q=$encoded+user+reviews+$year"
+
+        # Statistics and usage
+        New-BookmarkUrlNode -Name "$Category usage statistics"                           -Url "https://www.google.com/search?q=$encoded+usage+statistics+$year"
+        New-BookmarkUrlNode -Name "$Category market share statistics"                    -Url "https://www.google.com/search?q=$encoded+market+share+$year"
+        New-BookmarkUrlNode -Name "$Category industry reports"                           -Url "https://www.google.com/search?q=$encoded+industry+report+$year"
+
+        # Videos
+        New-BookmarkUrlNode -Name "$Category overview videos ($year)"                    -Url "https://www.youtube.com/results?search_query=$encoded+overview+$year"
+        New-BookmarkUrlNode -Name "$Category tutorials (video)"                          -Url "https://www.youtube.com/results?search_query=$encoded+tutorial+$year"
+        New-BookmarkUrlNode -Name "$Category best tools in $year (video)"                -Url "https://www.youtube.com/results?search_query=$encoded+best+tools+$year"
+
+        # How-tos and guides
+        New-BookmarkUrlNode -Name "$Category getting started guides"                     -Url "https://www.google.com/search?q=$encoded+getting+started+guide"
+        New-BookmarkUrlNode -Name "$Category step-by-step tutorials"                     -Url "https://www.google.com/search?q=$encoded+step+by+step+tutorial"
+        New-BookmarkUrlNode -Name "$Category troubleshooting guides"                     -Url "https://www.google.com/search?q=$encoded+troubleshooting"
+
+        # Resources and documentation
+        New-BookmarkUrlNode -Name "$Category official documentation"                     -Url "https://www.google.com/search?q=$encoded+official+documentation"
+        New-BookmarkUrlNode -Name "$Category curated resources"                          -Url "https://www.google.com/search?q=$encoded+resources"
+        New-BookmarkUrlNode -Name "$Category best practices"                             -Url "https://www.google.com/search?q=$encoded+best+practices"
+
+        # Search engines (including alternative and privacy-focused options)
+        New-BookmarkUrlNode -Name "$Category results (Google)"                           -Url "https://www.google.com/search?q=$encoded"
+        New-BookmarkUrlNode -Name "$Category results (DuckDuckGo)"                       -Url "https://duckduckgo.com/?q=$encoded"
+        New-BookmarkUrlNode -Name "$Category results (Bing)"                             -Url "https://www.bing.com/search?q=$encoded"
+        New-BookmarkUrlNode -Name "$Category results (Brave Search)"                     -Url "https://search.brave.com/search?q=$encoded"
+        New-BookmarkUrlNode -Name "$Category results (Ecosia)"                           -Url "https://www.ecosia.org/search?q=$encoded"
+        New-BookmarkUrlNode -Name "$Category results (Startpage)"                        -Url "https://www.startpage.com/do/dsearch?query=$encoded"
+    )
+}
+
+
+function New-MyTechTodayFolder {
+    param([string[]]$Categories)
+
+    $root = [PSCustomObject]@{ name = 'myTech.Today'; type = 'folder'; children = @() }
+
+    # Root-level myTech.Today site links
+    $root.children += (New-BookmarkUrlNode -Name 'myTech.Today'            -Url 'https://mytech.today/')
+    $root.children += (New-BookmarkUrlNode -Name 'myTech.Today tools-2025' -Url 'https://mytech.today/tools-2025')
+
+    foreach ($cat in $Categories) {
+        $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
+        $links = Get-CategoryBookmarkNodes -Category $cat
+        $catFolder.children += $links
+        $root.children += $catFolder
+    }
+
+    $base = Join-Path $env:USERPROFILE 'myTech.Today'
+    $localFolder = [PSCustomObject]@{ name = 'myTech.Today'; type = 'folder'; children = @() }
+
+    # Logs subfolder with specific log files
+    $logsFolder = [PSCustomObject]@{ name = 'Logs'; type = 'folder'; children = @() }
+
+    $logsRootPath = Join-Path $base 'logs'
+    $logsFolder.children += (New-BookmarkUrlNode -Name 'Logs root' -Url (Convert-ToFileUrl $logsRootPath))
+
+    $computerName       = $env:COMPUTERNAME
+    # Belarc Advisor HTML reports live under Program Files (x86)
+    $belarcRoot         = 'C:\Program Files (x86)\Belarc\BelarcAdvisor\System\tmp'
+    $belarcSystemHtml   = Join-Path $belarcRoot "$computerName.html"
+    $disaBenchmarkHtml  = Join-Path $belarcRoot "BenchmarkSummary(($computerName)).html"
+    $hotfixReportHtml   = Join-Path $belarcRoot "SummaryQfeExternal(($computerName)).html"
+
+    $appInstallerLog    = '%USERPROFILE%\mytech.today\logs\AppInstaller.md'
+    $wingetUpdateLog    = '%USERPROFILE%\mytech.today\logs\winget-update.md'
+    $appInstallerGuiLog = '%USERPROFILE%\mytech.today\logs\AppInstaller-GUI.md'
+
+    # Use proper file:/// URLs for Belarc reports (spaces encoded as %20, etc.)
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$belarcSystemHtml]")      -Url ([Uri]::new($belarcSystemHtml).AbsoluteUri))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$disaBenchmarkHtml]")     -Url ([Uri]::new($disaBenchmarkHtml).AbsoluteUri))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$hotfixReportHtml]")      -Url ([Uri]::new($hotfixReportHtml).AbsoluteUri))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$appInstallerLog]")       -Url ('file:///' + ($appInstallerLog    -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$wingetUpdateLog]")       -Url ('file:///' + ($wingetUpdateLog    -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$appInstallerGuiLog]")    -Url ('file:///' + ($appInstallerGuiLog -replace '\\','/')))
+
+    $localFolder.children += $logsFolder
+    $localFolder.children += (New-BookmarkUrlNode -Name 'Reports' -Url (Convert-ToFileUrl (Join-Path $base 'reports')))
+    $localFolder.children += (New-BookmarkUrlNode -Name 'Config'  -Url (Convert-ToFileUrl (Join-Path $base 'config')))
+    $root.children += $localFolder
+
+    $root
+}
+
+function Get-ChromiumBookmarkFile {
+    param([string]$Browser)
+
+    switch ($Browser) {
+        'Chrome' {
+            Join-Path $env:LOCALAPPDATA 'Google\Chrome\User Data\Default\Bookmarks'
+        }
+        'Edge' {
+            Join-Path $env:LOCALAPPDATA 'Microsoft\Edge\User Data\Default\Bookmarks'
+        }
+        default { $null }
+    }
+}
+function Get-ChromiumProfilePaths {
+    param(
+        [string]$Browser
+    )
+
+    $root = $null
+    $singleFileRoot = $false
+
+    switch ($Browser) {
+        'Chrome' {
+            $root = Join-Path $env:LOCALAPPDATA 'Google\Chrome\User Data'
+        }
+        'Edge' {
+            $root = Join-Path $env:LOCALAPPDATA 'Microsoft\Edge\User Data'
+        }
+        'Brave' {
+            $root = Join-Path $env:LOCALAPPDATA 'BraveSoftware\Brave-Browser\User Data'
+        }
+        'Vivaldi' {
+            $root = Join-Path $env:LOCALAPPDATA 'Vivaldi\User Data'
+        }
+        'Chromium' {
+            $root = Join-Path $env:LOCALAPPDATA 'Chromium\User Data'
+        }
+        'UngoogledChromium' {
+            # Most Windows builds of Ungoogled Chromium reuse the Chromium profile location
+            $root = Join-Path $env:LOCALAPPDATA 'Chromium\User Data'
+        }
+        'Opera' {
+            # Opera stores bookmarks under the "Opera Stable" profile folder
+            $root = Join-Path $env:APPDATA 'Opera Software\Opera Stable'
+            $singleFileRoot = $true
+        }
+        'OperaGX' {
+            # Opera GX stores bookmarks under the "Opera GX Stable" profile folder
+            $root = Join-Path $env:APPDATA 'Opera Software\Opera GX Stable'
+            $singleFileRoot = $true
+        }
+        default {
+            return @()
+        }
+    }
+
+    if (-not (Test-Path $root)) { return @() }
+
+    if ($singleFileRoot) {
+        $bookmarksPath = Join-Path $root 'Bookmarks'
+        if (Test-Path $bookmarksPath) {
+            return ,([PSCustomObject]@{
+                ProfileName   = 'Default'
+                BookmarksPath = $bookmarksPath
+            })
+        }
+        return @()
+    }
+
+    Get-ChildItem -Path $root -Directory | ForEach-Object {
+        $bookmarksPath = Join-Path $_.FullName 'Bookmarks'
+        if (Test-Path $bookmarksPath) {
+            [PSCustomObject]@{
+                ProfileName   = $_.Name
+                BookmarksPath = $bookmarksPath
+            }
+        }
+    }
+}
+
+function Get-FirefoxProfilePaths {
+    param(
+        [string]$Browser
+    )
+
+    switch ($Browser) {
+        'Firefox' {
+            $profilesRoot = Join-Path $env:APPDATA 'Mozilla\Firefox\Profiles'
+        }
+        'LibreWolf' {
+            $profilesRoot = Join-Path $env:APPDATA 'LibreWolf\Profiles'
+        }
+        'Waterfox' {
+            $profilesRoot = Join-Path $env:APPDATA 'Waterfox\Profiles'
+        }
+        'PaleMoon' {
+            $profilesRoot = Join-Path $env:APPDATA 'Moonchild Productions\Pale Moon\Profiles'
+        }
+        'TorBrowser' {
+            # Tor Browser stores profile data under the TorBrowser Data\Browser folder
+            $profilesRoot = Join-Path $env:APPDATA 'Tor Browser\Browser\TorBrowser\Data\Browser'
+        }
+        default {
+            return @()
+        }
+    }
+
+    if (-not (Test-Path $profilesRoot)) { return @() }
+
+    Get-ChildItem -Path $profilesRoot -Directory | ForEach-Object {
+        $placesPath = Join-Path $_.FullName 'places.sqlite'
+        if (Test-Path $placesPath) {
+            [PSCustomObject]@{
+                ProfileName = $_.Name
+                PlacesPath  = $placesPath
+            }
+        }
+    }
+}
+
+function Backup-FirefoxBookmarks {
+    param(
+        [string]$Browser,
+        [string]$ProfileName,
+        [string]$PlacesPath
+    )
+
+    if (-not (Test-Path $PlacesPath)) { return }
+
+    $backupRoot = Join-Path $env:USERPROFILE "myTech.Today\Backups\Bookmarks\$Browser"
+    if (-not (Test-Path $backupRoot)) {
+        New-Item -ItemType Directory -Path $backupRoot -Force | Out-Null
+    }
+
+    $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+    $fileName = "places_${ProfileName}_$timestamp.sqlite"
+    $backupPath = Join-Path $backupRoot $fileName
+    Copy-Item -Path $PlacesPath -Destination $backupPath -Force
+    Write-Log "Backup created for $Browser profile '$ProfileName' at $backupPath" -Level INFO
+}
+
+
+function Restore-FirefoxBookmarksFromBackup {
+    param(
+        [string]$Browser,
+        [string]$BackupPath,
+        [switch]$WhatIf
+    )
+
+    if (-not $BackupPath) {
+        Write-Log "Restore mode requires -BackupPath pointing to a Firefox places.sqlite backup file." -Level ERROR
+        return
+    }
+
+    if (-not (Test-Path $BackupPath)) {
+        Write-Log "Backup file not found at $BackupPath" -Level ERROR
+        return
+    }
+
+    $profiles = Get-FirefoxProfilePaths -Browser $Browser
+    if (-not $profiles -or $profiles.Count -eq 0) {
+        Write-Log "No $Browser profiles with bookmark databases found; cannot restore from backup." -Level WARNING
+        return
+    }
+
+    $targetProfile = $null
+    $profileNameHint = $null
+    $fileName = [IO.Path]::GetFileNameWithoutExtension($BackupPath)
+    if ($fileName -like 'places_*_*') {
+        $lastUnderscore = $fileName.LastIndexOf('_')
+        if ($lastUnderscore -gt 7) {
+            $profileNameHint = $fileName.Substring(7, $lastUnderscore - 7)
+        }
+    }
+
+    if ($profileNameHint) {
+        $targetProfile = $profiles | Where-Object { $_.ProfileName -eq $profileNameHint } | Select-Object -First 1
+    }
+    if (-not $targetProfile) {
+        $targetProfile = $profiles | Where-Object { $_.ProfileName -like '*.default-release' } | Select-Object -First 1
+    }
+    if (-not $targetProfile) {
+        $targetProfile = $profiles | Select-Object -First 1
+    }
+
+    $targetPath = $targetProfile.PlacesPath
+
+    if ($WhatIf) {
+        Write-Log "WhatIf: would restore $Browser profile '$($targetProfile.ProfileName)' bookmarks database from $BackupPath to $targetPath" -Level INFO
+        return
+    }
+
+    # Backup current database before overwriting
+    Backup-FirefoxBookmarks -Browser $Browser -ProfileName $targetProfile.ProfileName -PlacesPath $targetPath
+
+    try {
+        Copy-Item -Path $BackupPath -Destination $targetPath -Force
+        Write-Log "Restored bookmarks database for $Browser profile '$($targetProfile.ProfileName)' from $BackupPath" -Level SUCCESS
+    }
+    catch {
+        Write-Log ("Failed to restore {0} profile '{1}' from {2}: {3}" -f $Browser, $targetProfile.ProfileName, $BackupPath, $_) -Level ERROR
+    }
+}
+
+function Export-FirefoxMyTechTodayHtml {
+    param(
+        [string[]]$Categories,
+        [string]$BrowserName = 'Firefox',
+        [switch]$WhatIf
+    )
+
+    $rootNode = New-MyTechTodayFolder -Categories $Categories
+
+    function Convert-NodeToHtml {
+        param(
+            $Node,
+            [string]$Indent = '    '
+        )
+
+        if ($Node.type -eq 'folder') {
+            $html = @()
+            $html += "$Indent<DT><H3>$($Node.name)</H3>"
+            $html += "$Indent<DL><p>"
+            foreach ($child in $Node.children) {
+                $html += Convert-NodeToHtml -Node $child -Indent ("$Indent    ")
+            }
+            $html += "$Indent</DL><p>"
+            return $html
+        }
+        elseif ($Node.type -eq 'url') {
+            return ($Indent + '<DT><A HREF="' + $Node.url + '">' + $Node.name + '</A>')
+        }
+    }
+
+    $lines = @()
+    $lines += '<!DOCTYPE NETSCAPE-Bookmark-file-1>'
+    $lines += '<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">'
+    $lines += '<TITLE>myTech.Today Bookmarks</TITLE>'
+    $lines += '<H1>myTech.Today Bookmarks</H1>'
+    $lines += '<DL><p>'
+    $lines += Convert-NodeToHtml -Node $rootNode -Indent '    '
+    $lines += '</DL><p>'
+
+    $browserDir = Join-Path $env:USERPROFILE ("myTech.Today\$BrowserName")
+    $outFile = Join-Path $browserDir 'myTech.Today-bookmarks.html'
+
+    if ($WhatIf) {
+        Write-Log "WhatIf: would create $BrowserName import file at $outFile" -Level INFO
+        return
+    }
+
+    if (-not (Test-Path $browserDir)) {
+        New-Item -ItemType Directory -Path $browserDir -Force | Out-Null
+    }
+
+    Set-Content -Path $outFile -Value $lines -Encoding UTF8
+    Write-Log "$BrowserName import file created at $outFile. Import via the browser's bookmarks/library UI using 'Import Bookmarks from HTML'." -Level INFO
+}
+
+
+
+
+
+function Backup-BookmarkFile {
+    param(
+        [string]$Browser,
+        [string]$Path
+    )
+
+    if (-not (Test-Path $Path)) { return }
+
+    $backupRoot = Join-Path $env:USERPROFILE 'myTech.Today\Backups\Bookmarks'
+    $browserDir = Join-Path $backupRoot $Browser
+
+    if (-not (Test-Path $browserDir)) {
+        New-Item -ItemType Directory -Path $browserDir -Force | Out-Null
+    }
+
+    $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+    $backupFile = Join-Path $browserDir ("Bookmarks_$timestamp.json")
+    Copy-Item -Path $Path -Destination $backupFile -Force
+    Write-Log "Backup created for $Browser at $backupFile" -Level INFO
+}
+
+function Restore-ChromiumBookmarksFromBackup {
+    param(
+        [string]$Browser,
+        [string]$BackupPath,
+        [switch]$WhatIf
+    )
+
+    if (-not $BackupPath) {
+        Write-Log "Restore mode requires -BackupPath pointing to a JSON backup file." -Level ERROR
+        return
+    }
+
+    if (-not (Test-Path $BackupPath)) {
+        Write-Log "Backup file not found at $BackupPath" -Level ERROR
+        return
+    }
+
+    $profiles = Get-ChromiumProfilePaths -Browser $Browser
+    if (-not $profiles -or $profiles.Count -eq 0) {
+        Write-Log "No $Browser profiles with bookmarks found; cannot restore from backup." -Level WARNING
+        return
+    }
+
+    # Prefer the 'Default' profile if present; otherwise use the first profile discovered.
+    $targetProfile = $profiles | Where-Object { $_.ProfileName -eq 'Default' } | Select-Object -First 1
+    if (-not $targetProfile) {
+        $targetProfile = $profiles | Select-Object -First 1
+    }
+
+    $targetPath = $targetProfile.BookmarksPath
+
+    if ($WhatIf) {
+        Write-Log "WhatIf: would restore $Browser profile '$($targetProfile.ProfileName)' bookmarks from $BackupPath to $targetPath" -Level INFO
+        return
+    }
+
+    # Backup current bookmarks before overwriting
+    Backup-BookmarkFile -Browser "$Browser-$($targetProfile.ProfileName)" -Path $targetPath
+
+    $backupContent = Get-Content $BackupPath -Raw
+
+    try {
+        # Basic validation that the file is JSON
+        $null = $backupContent | ConvertFrom-Json
+    }
+    catch {
+        Write-Log "Backup file at $BackupPath is not valid JSON: $_" -Level ERROR
+        return
+    }
+
+    Set-Content -Path $targetPath -Value $backupContent -Encoding UTF8
+    Write-Log "Restored bookmarks for $Browser profile '$($targetProfile.ProfileName)' from $BackupPath" -Level SUCCESS
+}
+
+function Update-ChromiumBookmarks {
+    param(
+        [string]$Browser,
+        [string]$Mode,
+        [string[]]$Categories,
+        [switch]$WhatIf,
+        [string]$ProfilePath,
+        [string]$ProfileName = 'Default'
+    )
+
+    $path = if ($ProfilePath) { $ProfilePath } else { Get-ChromiumBookmarkFile -Browser $Browser }
+    if (-not $path -or -not (Test-Path $path)) {
+        Write-Log "Bookmark file not found for $Browser profile '$ProfileName'" -Level WARNING
+        return
+    }
+
+    Write-Log "Processing $Browser profile '$ProfileName' bookmarks at $path" -Level INFO
+
+    if ($WhatIf) {
+        Write-Log "WhatIf: would $Mode myTech.Today structure for $Browser profile '$ProfileName'" -Level INFO
+        return
+    }
+
+    Backup-BookmarkFile -Browser "$Browser-$ProfileName" -Path $path
+
+    $json = Get-Content $path -Raw | ConvertFrom-Json
+    if (-not $json.roots.bookmark_bar) {
+        Write-Log "bookmark_bar not found in $Browser profile '$ProfileName' bookmarks" -Level WARNING
+        return
+    }
+
+    $children = @($json.roots.bookmark_bar.children)
+    $children = $children | Where-Object { $_.name -ne 'myTech.Today' }
+
+    if ($Mode -eq 'Add') {
+        $node = New-MyTechTodayFolder -Categories $Categories
+        $json.roots.bookmark_bar.children = @($node) + $children
+        Write-Log "Added myTech.Today folder for $Browser profile '$ProfileName'" -Level SUCCESS
+    }
+    else {
+        $json.roots.bookmark_bar.children = $children
+        Write-Log "Removed myTech.Today folder for $Browser profile '$ProfileName'" -Level SUCCESS
+    }
+
+    $json | ConvertTo-Json -Depth 10 | Set-Content -Path $path -Encoding UTF8
+}
+
+$categories = Get-InstallerCategories
+if (-not $categories -or $categories.Count -eq 0) {
+    $categories = @('Browsers','Development','Productivity','Media','Utilities','Security','Communication','Cloud Storage','Gaming','Education','Finance','Remote Access','Maintenance','Shortcuts')
+    Write-Log "Using fallback category list" -Level WARNING
+}
+
+$script:CuratedBookmarks = $null
+Initialize-CuratedBookmarks -Path $CuratedLinksPath
+
+$chromiumBrowsers = @('Chrome','Edge','Brave','Vivaldi','Opera','OperaGX','Chromium','UngoogledChromium')
+$firefoxProfileBrowsers = @('Firefox','LibreWolf','TorBrowser','Waterfox','PaleMoon')
+$htmlOnlyBrowsers = @('Midori','Min')
+
+if ($Mode -eq 'Restore') {
+    # Restore mode supports Chromium-based browsers (JSON backups) and Firefox-family browsers (SQLite backups).
+    if ($Browser -contains 'All') {
+        $ext = if ($BackupPath) { [IO.Path]::GetExtension($BackupPath) } else { $null }
+        if ($ext) { $ext = $ext.ToLowerInvariant() }
+
+        $parentBrowser = $null
+        if ($BackupPath) {
+            $parentDir = Split-Path -Path $BackupPath -Parent
+            if ($parentDir) {
+                $parentBrowser = Split-Path -Path $parentDir -Leaf
+            }
+        }
+
+        switch ($ext) {
+            '.json' {
+                if ($parentBrowser -and ($chromiumBrowsers -contains $parentBrowser)) {
+                    $browsersToProcess = @($parentBrowser)
+                }
+                else {
+                    $browsersToProcess = $chromiumBrowsers
+                }
+            }
+            '.sqlite' {
+                if ($parentBrowser -and ($firefoxProfileBrowsers -contains $parentBrowser)) {
+                    $browsersToProcess = @($parentBrowser)
+                }
+                else {
+                    $browsersToProcess = $firefoxProfileBrowsers
+                }
+            }
+            default {
+                $browsersToProcess = $chromiumBrowsers + $firefoxProfileBrowsers
+            }
+        }
+    }
+    else {
+        $browsersToProcess = $Browser
+    }
+
+    foreach ($b in $browsersToProcess | Sort-Object -Unique) {
+        if ($chromiumBrowsers -contains $b) {
+            Restore-ChromiumBookmarksFromBackup -Browser $b -BackupPath $BackupPath -WhatIf:$WhatIf
+        }
+        elseif ($firefoxProfileBrowsers -contains $b) {
+            Restore-FirefoxBookmarksFromBackup -Browser $b -BackupPath $BackupPath -WhatIf:$WhatIf
+        }
+        else {
+            Write-Log "Restore mode currently supports Chromium and Firefox-family browsers; skipping $b." -Level WARNING
+        }
+    }
+}
+else {
+    $browsersToProcess = if ($Browser -contains 'All') { $chromiumBrowsers + $firefoxProfileBrowsers + $htmlOnlyBrowsers } else { $Browser }
+
+    foreach ($b in $browsersToProcess | Sort-Object -Unique) {
+        if ($chromiumBrowsers -contains $b) {
+            $profiles = Get-ChromiumProfilePaths -Browser $b
+            if (-not $profiles -or $profiles.Count -eq 0) {
+                Write-Log "No $b profiles with bookmarks found" -Level WARNING
+                continue
+            }
+
+            foreach ($p in $profiles) {
+                Update-ChromiumBookmarks -Browser $b -Mode $Mode -Categories $categories -WhatIf:$WhatIf -ProfilePath $p.BookmarksPath -ProfileName $p.ProfileName
+            }
+        }
+        elseif ($firefoxProfileBrowsers -contains $b) {
+            $profiles = Get-FirefoxProfilePaths -Browser $b
+            if (-not $profiles -or $profiles.Count -eq 0) {
+                Write-Log "$b profiles not found; skipping $b" -Level WARNING
+                if ($Mode -eq 'Add') {
+                    Export-FirefoxMyTechTodayHtml -Categories $categories -BrowserName $b -WhatIf:$WhatIf
+                }
+                continue
+            }
+
+            if ($WhatIf) {
+                foreach ($p in $profiles) {
+                    Write-Log "WhatIf: would backup $b profile '$($p.ProfileName)' database from $($p.PlacesPath)" -Level INFO
+                }
+                Export-FirefoxMyTechTodayHtml -Categories $categories -BrowserName $b -WhatIf
+                continue
+            }
+
+            foreach ($p in $profiles) {
+                Backup-FirefoxBookmarks -Browser $b -ProfileName $p.ProfileName -PlacesPath $p.PlacesPath
+            }
+
+            if ($Mode -eq 'Add') {
+                Export-FirefoxMyTechTodayHtml -Categories $categories -BrowserName $b
+            }
+            else {
+                Write-Log "To remove myTech.Today bookmarks from $b, delete the folder manually from the bookmarks/library UI." -Level WARNING
+            }
+        }
+        elseif ($htmlOnlyBrowsers -contains $b) {
+            $targetDir = Join-Path $env:USERPROFILE ("myTech.Today\$b")
+            $outFile = Join-Path $targetDir 'myTech.Today-bookmarks.html'
+
+            if ($WhatIf) {
+                Write-Log "WhatIf: would create $b import file at $outFile" -Level INFO
+                continue
+            }
+
+            if ($Mode -eq 'Add') {
+                Export-FirefoxMyTechTodayHtml -Categories $categories -BrowserName $b
+            }
+            else {
+                Write-Log "To remove myTech.Today bookmarks from $b, delete the folder manually from the bookmarks UI." -Level WARNING
+            }
+        }
+        else {
+            Write-Log "Browser '$b' is not currently handled by this script." -Level WARNING
+        }
+    }
+}
+
+Write-Log "=== Bookmarks Manager completed (Mode=$Mode) ===" -Level SUCCESS
+

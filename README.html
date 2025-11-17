@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>myTech.Today Bookmarks Manager</title>
+  <meta name="description" content="PowerShell script to manage a consistent myTech.Today bookmarks folder across multiple browsers." />
+</head>
+<body>
+  <h1>myTech.Today Bookmarks Manager</h1>
+  <p>
+    <code>bookmarks.ps1</code> builds and maintains a consistent <strong>myTech.Today</strong>
+    bookmarks folder across multiple browsers on Windows. It is designed to complement the
+    myTech.Today app installer profiles and logging conventions.
+  </p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Add or remove a structured <code>myTech.Today</code> bookmarks folder for multiple browsers in one run.</li>
+    <li>Automatically derive application categories from <code>app_installer\install.ps1</code> (when present).</li>
+    <li>Create groups of links per category: popularity/overview, technical resources, community resources, off-brand search engines, topic-specific search engines, and topical resource searches.</li>
+    <li>Add a dedicated <code>myTech.Today</code> bookmark subtree that points to logs, reports, config, and local diagnostic HTML reports.</li>
+    <li>Restore a Chromium-based browser's bookmark file from a JSON backup created earlier.</li>
+  </ul>
+
+  <h2>Supported browsers</h2>
+  <p>The script can work with the following browsers (when installed):</p>
+  <ul>
+    <li>Chrome, Edge, Brave, Vivaldi</li>
+    <li>Firefox, LibreWolf, Waterfox, Tor Browser</li>
+    <li>Chromium, Ungoogled Chromium</li>
+    <li>Opera, Opera GX</li>
+    <li>Pale Moon, Midori, Min</li>
+    <li><code>All</code> to target every supported browser that is detected</li>
+  </ul>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Windows with PowerShell 5.1 or later (<code>#Requires -Version 5.1</code>).</li>
+    <li>File-system access to the browser profile directories.</li>
+    <li>Optional: <code>app_installer\install.ps1</code> in the repository to supply application categories.</li>
+    <li>Network access the first time the shared logging module is downloaded from GitHub, or a local copy of <code>scripts\logging.ps1</code>.</li>
+  </ul>
+
+  <h2>Usage</h2>
+  <p>From the repository root or the <code>bookmarks</code> folder:</p>
+  <pre><code class="language-powershell">
+# Add myTech.Today bookmarks for all supported browsers
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All
+
+# Add bookmarks only for Chrome and Edge
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser Chrome,Edge
+
+# Remove the myTech.Today bookmark structure (dry run)
+.\bookmarks\bookmarks.ps1 -Mode Remove -Browser All -WhatIf
+
+# Restore Chrome bookmarks from a JSON backup file (full file overwrite for default profile)
+.\bookmarks\bookmarks.ps1 -Mode Restore -Browser Chrome -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Bookmarks\Chrome\Bookmarks_20250101_120000.json"
+  </code></pre>
+
+  <h2>Logging and local resources</h2>
+  <p>The script writes detailed log output using the shared <code>logging.ps1</code> module. By convention, logs are stored under:</p>
+  <ul>
+    <li><code>%USERPROFILE%\myTech.Today\logs\</code></li>
+  </ul>
+  <p>The <code>myTech.Today</code> bookmark subtree includes quick links to:</p>
+  <ul>
+    <li><code>%USERPROFILE%\myTech.Today\logs\</code></li>
+    <li><code>%USERPROFILE%\myTech.Today\reports\</code></li>
+    <li><code>%USERPROFILE%\myTech.Today\config\</code></li>
+    <li>Belarc Advisor reports under <code>%ProgramFiles(x86)%\Belarc\BelarcAdvisor\System\tmp\</code></li>
+    <li>Local log files such as <code>AppInstaller.md</code>, <code>winget-update.md</code>, and <code>AppInstaller-GUI.md</code>.</li>
+  </ul>
+
+  <h2>Safety and recommendations</h2>
+  <ul>
+    <li>Close all target browsers before running the script to avoid conflicts while bookmark files are being updated.</li>
+    <li>Consider backing up your browser profiles (especially the bookmark files) before the first run.</li>
+    <li>Use <code>-WhatIf</code> with <code>-Mode Remove</code> to see what would be changed without applying it.</li>
+    <li>When using <code>-Mode Restore</code>, the target browser's bookmark file is overwritten with the contents of the backup JSON; use only with trusted backups and keep the browser closed.</li>
+  </ul>
+
+  <h2>Related scripts</h2>
+  <p>This script is part of the wider <strong>myTech.Today</strong> PowerShell toolkit, which also includes:</p>
+  <ul>
+    <li>Application installation automation (<code>app_installer\install.ps1</code>)</li>
+    <li>Logging utilities (<code>scripts\logging.ps1</code>)</li>
+    <li>Test and analysis helpers under <code>tools\</code></li>
+  </ul>
+</body>
+</html>
+
