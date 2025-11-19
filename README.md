@@ -4,7 +4,9 @@
 
 ## Features
 
-- Add or remove a structured `myTech.Today` bookmarks folder for multiple browsers in one run
+- Add or remove a structured `myTech.Today` bookmarks folder for multiple browsers in one run:
+  - Chromium-based browsers (Chrome, Edge, Brave, Vivaldi, etc.) are updated in-place via their bookmark JSON files.
+  - Firefox-family and HTML-only browsers get an importable `myTech.Today-bookmarks.html` file that you can load via the browser's library/import UI.
 - Automatically derive application categories from `app_installer\install.ps1` (when present)
 - Create groups of links per category:
   - Popularity / overview links

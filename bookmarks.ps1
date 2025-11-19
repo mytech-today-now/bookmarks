@@ -7,9 +7,10 @@
     (news and updates, aggregators, ratings and reviews, statistics, videos, how-to guides,
     resources, and search engines) and links to local myTech.Today logs and configuration folders.
 
-    The script can add, remove, or restore the bookmark structure for one or more browsers and
-    writes detailed log output via the shared logging module stored under
-    %USERPROFILE%\myTech.Today\.
+    For Chromium-based browsers the script can add, remove, or restore the bookmark structure directly in
+    the bookmarks file. For Firefox-family and HTML-only browsers it generates importable bookmark HTML files
+    that you can load via the browser's library/import UI. All operations write detailed log output via the
+    shared logging module stored under %USERPROFILE%\myTech.Today\.
 .PARAMETER Mode
     Specifies whether to Add, Remove, or Restore the myTech.Today bookmark structure.
 .PARAMETER Browser
@@ -43,7 +44,7 @@
         .\bookmarks\bookmarks.ps1 -Mode Restore -Browser Firefox -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Bookmarks\Firefox\places_oyxj9ris.default-release_20250101_120000.sqlite"
 
 .NOTES
-    Version : 1.3.0
+    Version : 1.3.1
     Script  : bookmarks.ps1
     Project : myTech.Today PowerShellScripts
     Author  : Kyle Rode (myTech.Today)
@@ -125,26 +126,100 @@ function New-BookmarkUrlNode {
     )
     [PSCustomObject]@{ name = $Name; type = 'url'; url = $Url }
 }
+$script:TopicCategories = @{
+    'SoftwareTools' = @{
+        'Browsers'      = 'web browser'
+        'Development'   = 'software development'
+        'Productivity'  = 'productivity tools'
+        'Media'         = 'media software'
+        'Utilities'     = 'system utilities'
+        'Security'      = 'computer security'
+        'Communication' = 'communication tools'
+        'Remote Access' = 'remote desktop software'
+        'Maintenance'   = 'pc maintenance tools'
+        'Shortcuts'     = 'productivity shortcuts'
+    }
+    'WebServices' = @{
+        'Cloud Storage' = 'cloud storage'
+        'News'          = 'news websites'
+        'Social'        = 'social media platforms'
+        'Reference'     = 'online reference tools'
+        'Ecommerce'     = 'online shopping sites'
+        'Health'        = 'health and wellness resources'
+        'Travel'        = 'travel planning websites'
+        'Weather'       = 'weather forecast services'
+        'Forums'        = 'tech discussion forums'
+        'Documentation' = 'api and dev documentation'
+        'Backup'        = 'online backup services'
+    }
+    'Entertainment' = @{
+        'Gaming'        = 'pc gaming platforms'
+        'Education'     = 'online education'
+        'Finance'       = 'personal finance software'  # Moved here for user-facing web tools
+    }
+    'NicheEdgy' = @{
+        'Conspiracy'    = 'conspiracy theory hubs'
+        'Piracy'        = 'file sharing archives'
+        'MemeEconomy'   = 'meme trading outposts'
+        'UrbanSurvival' = 'off-grid survival guides'
+        'CryptoScams'   = 'crypto scheme trackers'
+        'RetroWare'     = 'abandonware download dens'
+        'Hacktivism'    = 'whistleblower leak sites'
+        'BootlegMedia'  = 'unofficial streaming dens'
+        'ParanoidPrep'  = 'privacy evasion toolkits'
+        'DarkPatterns'  = 'ux trick dissection labs'
+    }
+    'AI' = @{
+        'Generative'    = 'generative ai tools'
+        'Chatbots'      = 'ai chat assistants'
+        'ImageGen'      = 'ai image generators'
+        'CodeAssist'    = 'ai coding helpers'
+        'VoiceAI'       = 'ai voice synthesis'
+        'Analytics'     = 'ai data analytics'
+    }
+    'OnlineTools' = @{
+        'Converters'        = 'online file converters'
+        'MediaDownloaders'  = 'online free media downloaders'
+        'ImageEditors'      = 'online image editors'
+        'PDFUtils'          = 'online pdf tools'
+        'TextProcessors'    = 'online text formatters'
+        'Calculators'       = 'online math calculators'
+        'Compressors'       = 'online file compressors'
+    }
+}
+
 function Get-TopicKeyword {
     param([string]$Category)
 
-    switch ($Category) {
-        'Browsers'      { 'web browser' }
-        'Development'   { 'software development' }
-        'Productivity'  { 'productivity tools' }
-        'Media'         { 'media software' }
-        'Utilities'     { 'system utilities' }
-        'Security'      { 'computer security' }
-        'Communication' { 'communication tools' }
-        'Cloud Storage' { 'cloud storage' }
-        'Gaming'        { 'pc gaming platforms' }
-        'Education'     { 'online education' }
-        'Finance'       { 'personal finance software' }
-        'Remote Access' { 'remote desktop software' }
-        'Maintenance'   { 'pc maintenance tools' }
-        'Shortcuts'     { 'productivity shortcuts' }
-        default         { $Category }
+    if (-not $Category) { return '' }
+
+    if ($script:TopicCategories -is [hashtable]) {
+        foreach ($topicGroup in $script:TopicCategories.Values) {
+            if ($topicGroup -is [hashtable] -and $topicGroup.ContainsKey($Category)) {
+                return $topicGroup[$Category]
+            }
+        }
     }
+
+    return $Category
+}
+
+
+function Get-TopicGroupForCategory {
+    param([string]$Category)
+
+    if (-not $Category) { return 'Other' }
+
+    if ($script:TopicCategories -is [hashtable]) {
+        foreach ($groupName in $script:TopicCategories.Keys) {
+            $topicGroup = $script:TopicCategories[$groupName]
+            if ($topicGroup -is [hashtable] -and $topicGroup.ContainsKey($Category)) {
+                return $groupName
+            }
+        }
+    }
+
+    return 'Other'
 }
 
 function Initialize-CuratedBookmarks {
@@ -217,6 +292,8 @@ function Get-CategoryBookmarkNodes {
                 $group = $categoryTable[$groupName]
                 if (-not $group) { continue }
 
+                $groupChildren = @()
+
                 foreach ($bookmark in $group) {
                     if (-not $bookmark) { continue }
 
@@ -229,7 +306,15 @@ function Get-CategoryBookmarkNodes {
                     $title = $title -replace '\b2025\b', $year.ToString()
                     $url   = $url   -replace '\b2025\b', $year.ToString()
 
-                    $curatedNodes += New-BookmarkUrlNode -Name $title -Url $url
+                    $groupChildren += New-BookmarkUrlNode -Name $title -Url $url
+                }
+
+                if ($groupChildren.Count -gt 0) {
+                    $curatedNodes += [PSCustomObject]@{
+                        name     = $groupName
+                        type     = 'folder'
+                        children = $groupChildren
+                    }
                 }
             }
 
@@ -240,55 +325,82 @@ function Get-CategoryBookmarkNodes {
         }
     }
 
-    # 2. Fallback: abstracted search-based links that mirror the curated link types
+    # 2. Fallback: abstracted search-based links that mirror the curated link types,
+    #    organized into an additional folder level for easier browsing.
     $keyword = Get-TopicKeyword -Category $Category
     $encoded = ($keyword -replace '\s+', '+')
     $slug    = ($keyword -replace '\s+', '_')
 
-    @(
-        # News and updates
-        New-BookmarkUrlNode -Name "$Category overview (Wikipedia)"                       -Url "https://en.wikipedia.org/wiki/$slug"
-        New-BookmarkUrlNode -Name "$Category news and updates ($year, overview articles)"  -Url "https://www.google.com/search?q=$encoded+$year+news+updates"
-        New-BookmarkUrlNode -Name "$Category news and updates (community discussions)"   -Url "https://www.reddit.com/search/?q=$encoded+$year+news"
+    $nodes = @()
 
-        # Aggregators (round-ups and comparison lists)
-        New-BookmarkUrlNode -Name "$Category round-ups (best of $year lists)"            -Url "https://www.google.com/search?q=$encoded+best+tools+$year"
-        New-BookmarkUrlNode -Name "$Category comparison guides ($year)"                  -Url "https://www.google.com/search?q=$encoded+comparison+guide+$year"
-        New-BookmarkUrlNode -Name "$Category list posts (top $year overviews)"           -Url "https://www.google.com/search?q=$encoded+top+$year+overview"
+    # News and updates
+    $newsChildren = @()
+    $newsChildren += New-BookmarkUrlNode -Name "$Category overview (Wikipedia)"                        -Url "https://en.wikipedia.org/wiki/$slug"
+    $newsChildren += New-BookmarkUrlNode -Name "$Category news and updates ($year, overview articles)" -Url "https://www.google.com/search?q=$encoded+$year+news+updates"
+    $newsChildren += New-BookmarkUrlNode -Name "$Category news and updates (community discussions)"    -Url "https://www.reddit.com/search/?q=$encoded+$year+news"
+    $nodes += [PSCustomObject]@{ name = 'News and updates'; type = 'folder'; children = $newsChildren }
 
-        # Ratings and reviews
-        New-BookmarkUrlNode -Name "$Category reviews ($year)"                            -Url "https://www.google.com/search?q=$encoded+reviews+$year"
-        New-BookmarkUrlNode -Name "$Category ratings and rankings"                       -Url "https://www.google.com/search?q=$encoded+ratings+rankings+$year"
-        New-BookmarkUrlNode -Name "$Category user review round-ups"                      -Url "https://www.google.com/search?q=$encoded+user+reviews+$year"
+    # Aggregators (round-ups and comparison lists)
+    $aggregatorChildren = @()
+    $aggregatorChildren += New-BookmarkUrlNode -Name "$Category round-ups (best of $year lists)"       -Url "https://www.google.com/search?q=$encoded+best+tools+$year"
+    $aggregatorChildren += New-BookmarkUrlNode -Name "$Category comparison guides ($year)"             -Url "https://www.google.com/search?q=$encoded+comparison+guide+$year"
+    $aggregatorChildren += New-BookmarkUrlNode -Name "$Category list posts (top $year overviews)"      -Url "https://www.google.com/search?q=$encoded+top+$year+overview"
+    $nodes += [PSCustomObject]@{ name = 'Aggregators and comparisons'; type = 'folder'; children = $aggregatorChildren }
 
-        # Statistics and usage
-        New-BookmarkUrlNode -Name "$Category usage statistics"                           -Url "https://www.google.com/search?q=$encoded+usage+statistics+$year"
-        New-BookmarkUrlNode -Name "$Category market share statistics"                    -Url "https://www.google.com/search?q=$encoded+market+share+$year"
-        New-BookmarkUrlNode -Name "$Category industry reports"                           -Url "https://www.google.com/search?q=$encoded+industry+report+$year"
+    # Ratings and reviews
+    $ratingsChildren = @()
+    $ratingsChildren += New-BookmarkUrlNode -Name "$Category reviews ($year)"                          -Url "https://www.google.com/search?q=$encoded+reviews+$year"
+    $ratingsChildren += New-BookmarkUrlNode -Name "$Category ratings and rankings"                     -Url "https://www.google.com/search?q=$encoded+ratings+rankings+$year"
+    $ratingsChildren += New-BookmarkUrlNode -Name "$Category user review round-ups"                    -Url "https://www.google.com/search?q=$encoded+user+reviews+$year"
+    $nodes += [PSCustomObject]@{ name = 'Ratings and reviews'; type = 'folder'; children = $ratingsChildren }
 
-        # Videos
-        New-BookmarkUrlNode -Name "$Category overview videos ($year)"                    -Url "https://www.youtube.com/results?search_query=$encoded+overview+$year"
-        New-BookmarkUrlNode -Name "$Category tutorials (video)"                          -Url "https://www.youtube.com/results?search_query=$encoded+tutorial+$year"
-        New-BookmarkUrlNode -Name "$Category best tools in $year (video)"                -Url "https://www.youtube.com/results?search_query=$encoded+best+tools+$year"
+    # Statistics and usage
+    $statsChildren = @()
+    $statsChildren += New-BookmarkUrlNode -Name "$Category usage statistics"                          -Url "https://www.google.com/search?q=$encoded+usage+statistics+$year"
+    $statsChildren += New-BookmarkUrlNode -Name "$Category market share statistics"                   -Url "https://www.google.com/search?q=$encoded+market+share+$year"
+    $statsChildren += New-BookmarkUrlNode -Name "$Category industry reports"                          -Url "https://www.google.com/search?q=$encoded+industry+report+$year"
+    $nodes += [PSCustomObject]@{ name = 'Statistics and usage'; type = 'folder'; children = $statsChildren }
 
-        # How-tos and guides
-        New-BookmarkUrlNode -Name "$Category getting started guides"                     -Url "https://www.google.com/search?q=$encoded+getting+started+guide"
-        New-BookmarkUrlNode -Name "$Category step-by-step tutorials"                     -Url "https://www.google.com/search?q=$encoded+step+by+step+tutorial"
-        New-BookmarkUrlNode -Name "$Category troubleshooting guides"                     -Url "https://www.google.com/search?q=$encoded+troubleshooting"
+    # Videos
+    $videoChildren = @()
+    $videoChildren += New-BookmarkUrlNode -Name "$Category overview videos ($year)"                   -Url "https://www.youtube.com/results?search_query=$encoded+overview+$year"
+    $videoChildren += New-BookmarkUrlNode -Name "$Category tutorials (video)"                         -Url "https://www.youtube.com/results?search_query=$encoded+tutorial+$year"
+    $videoChildren += New-BookmarkUrlNode -Name "$Category best tools in $year (video)"               -Url "https://www.youtube.com/results?search_query=$encoded+best+tools+$year"
+    $nodes += [PSCustomObject]@{ name = 'Videos'; type = 'folder'; children = $videoChildren }
 
-        # Resources and documentation
-        New-BookmarkUrlNode -Name "$Category official documentation"                     -Url "https://www.google.com/search?q=$encoded+official+documentation"
-        New-BookmarkUrlNode -Name "$Category curated resources"                          -Url "https://www.google.com/search?q=$encoded+resources"
-        New-BookmarkUrlNode -Name "$Category best practices"                             -Url "https://www.google.com/search?q=$encoded+best+practices"
+    # How-tos and guides
+    $howToChildren = @()
+    $howToChildren += New-BookmarkUrlNode -Name "$Category getting started guides"                    -Url "https://www.google.com/search?q=$encoded+getting+started+guide"
+    $howToChildren += New-BookmarkUrlNode -Name "$Category step-by-step tutorials"                    -Url "https://www.google.com/search?q=$encoded+step+by+step+tutorial"
+    $howToChildren += New-BookmarkUrlNode -Name "$Category troubleshooting guides"                    -Url "https://www.google.com/search?q=$encoded+troubleshooting"
+    $nodes += [PSCustomObject]@{ name = 'How-tos and guides'; type = 'folder'; children = $howToChildren }
 
-        # Search engines (including alternative and privacy-focused options)
-        New-BookmarkUrlNode -Name "$Category results (Google)"                           -Url "https://www.google.com/search?q=$encoded"
-        New-BookmarkUrlNode -Name "$Category results (DuckDuckGo)"                       -Url "https://duckduckgo.com/?q=$encoded"
-        New-BookmarkUrlNode -Name "$Category results (Bing)"                             -Url "https://www.bing.com/search?q=$encoded"
-        New-BookmarkUrlNode -Name "$Category results (Brave Search)"                     -Url "https://search.brave.com/search?q=$encoded"
-        New-BookmarkUrlNode -Name "$Category results (Ecosia)"                           -Url "https://www.ecosia.org/search?q=$encoded"
-        New-BookmarkUrlNode -Name "$Category results (Startpage)"                        -Url "https://www.startpage.com/do/dsearch?query=$encoded"
-    )
+    # Resources and documentation
+    $resourceChildren = @()
+    $resourceChildren += New-BookmarkUrlNode -Name "$Category official documentation"                 -Url "https://www.google.com/search?q=$encoded+official+documentation"
+    $resourceChildren += New-BookmarkUrlNode -Name "$Category curated resources"                      -Url "https://www.google.com/search?q=$encoded+resources"
+    $resourceChildren += New-BookmarkUrlNode -Name "$Category best practices"                         -Url "https://www.google.com/search?q=$encoded+best+practices"
+    $nodes += [PSCustomObject]@{ name = 'Resources and documentation'; type = 'folder'; children = $resourceChildren }
+
+    # Search engines (including alternative and privacy-focused options)
+    $searchChildren = @()
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (Google)"                         -Url "https://www.google.com/search?q=$encoded"
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (DuckDuckGo)"                     -Url "https://duckduckgo.com/?q=$encoded"
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (Bing)"                           -Url "https://www.bing.com/search?q=$encoded"
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (Brave Search)"                   -Url "https://search.brave.com/search?q=$encoded"
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (Ecosia)"                         -Url "https://www.ecosia.org/search?q=$encoded"
+    $searchChildren += New-BookmarkUrlNode -Name "$Category results (Startpage)"                      -Url "https://www.startpage.com/do/dsearch?query=$encoded"
+
+    # General-purpose search tools from myTech.Today Tools 2025 (Search Engines section)
+    $searchChildren += New-BookmarkUrlNode -Name "Search tools directory (myTech.Today - Tools 2025)" -Url "https://mytech.today/tools-2025/#search-engines"
+    $searchChildren += New-BookmarkUrlNode -Name "Google search operators (complete list)"            -Url "https://www.imarketingonly.com/google-search-operators-the-complete-list-42-advanced-operators/"
+    $searchChildren += New-BookmarkUrlNode -Name "DuckDuckGo !bang reference"                         -Url "https://duckduckgo.com/bang"
+    $searchChildren += New-BookmarkUrlNode -Name "Internet Archive – Wayback Machine"                 -Url "https://web.archive.org/"
+    $searchChildren += New-BookmarkUrlNode -Name "Archive.is – single-page snapshots"                 -Url "https://archive.is/"
+
+    $nodes += [PSCustomObject]@{ name = 'Search engines'; type = 'folder'; children = $searchChildren }
+
+    return $nodes
 }
 
 
@@ -301,11 +413,30 @@ function New-MyTechTodayFolder {
     $root.children += (New-BookmarkUrlNode -Name 'myTech.Today'            -Url 'https://mytech.today/')
     $root.children += (New-BookmarkUrlNode -Name 'myTech.Today tools-2025' -Url 'https://mytech.today/tools-2025')
 
-    foreach ($cat in $Categories) {
-        $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
-        $links = Get-CategoryBookmarkNodes -Category $cat
-        $catFolder.children += $links
-        $root.children += $catFolder
+    # Group application categories into higher-level topic groups where possible
+    $groupedCategories = @{}
+
+    foreach ($cat in $Categories | Sort-Object -Unique) {
+        $group = Get-TopicGroupForCategory -Category $cat
+
+        if (-not $groupedCategories.ContainsKey($group)) {
+            $groupedCategories[$group] = @()
+        }
+
+        $groupedCategories[$group] += $cat
+    }
+
+    foreach ($groupName in ($groupedCategories.Keys | Sort-Object)) {
+        $groupFolder = [PSCustomObject]@{ name = $groupName; type = 'folder'; children = @() }
+
+        foreach ($cat in ($groupedCategories[$groupName] | Sort-Object -Unique)) {
+            $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
+            $links = Get-CategoryBookmarkNodes -Category $cat
+            $catFolder.children += $links
+            $groupFolder.children += $catFolder
+        }
+
+        $root.children += $groupFolder
     }
 
     $base = Join-Path $env:USERPROFILE 'myTech.Today'
@@ -707,23 +838,59 @@ function Update-ChromiumBookmarks {
 
     Backup-BookmarkFile -Browser "$Browser-$ProfileName" -Path $path
 
-    $json = Get-Content $path -Raw | ConvertFrom-Json
-    if (-not $json.roots.bookmark_bar) {
-        Write-Log "bookmark_bar not found in $Browser profile '$ProfileName' bookmarks" -Level WARNING
+    try {
+        $json = Get-Content $path -Raw | ConvertFrom-Json
+    }
+    catch {
+        Write-Log "Failed to parse bookmarks file at $path for $Browser profile '$ProfileName': $_" -Level ERROR
         return
     }
 
-    $children = @($json.roots.bookmark_bar.children)
-    $children = $children | Where-Object { $_.name -ne 'myTech.Today' }
+    if (-not $json.roots) {
+        Write-Log "Unexpected bookmark structure for $Browser profile '$ProfileName' (no roots node)" -Level WARNING
+        return
+    }
+
+    # Strip any existing myTech.Today folder from common roots first so we don't accumulate duplicates
+    $removedCount = 0
+    $rootNames = @('bookmark_bar','other','synced')
+    foreach ($rootName in $rootNames) {
+        $rootNode = $json.roots.$rootName
+        if ($null -eq $rootNode) { continue }
+
+        $existingChildren = $rootNode.children
+        if ($null -eq $existingChildren) { continue }
+
+        $originalChildren = @($existingChildren)
+        if ($originalChildren.Count -eq 0) { continue }
+
+        $filteredChildren = $originalChildren | Where-Object { $_.name -ne 'myTech.Today' }
+        $rootNode.children = @($filteredChildren)
+        $removedCount += ($originalChildren.Count - $rootNode.children.Count)
+    }
 
     if ($Mode -eq 'Add') {
+        if (-not $json.roots.bookmark_bar) {
+            Write-Log "bookmark_bar not found in $Browser profile '$ProfileName' bookmarks; cannot add myTech.Today folder" -Level WARNING
+            return
+        }
+
+        $children = @($json.roots.bookmark_bar.children)
         $node = New-MyTechTodayFolder -Categories $Categories
         $json.roots.bookmark_bar.children = @($node) + $children
+
+        if ($removedCount -gt 0) {
+            Write-Log "Replaced existing myTech.Today folder(s) ($removedCount instance(s)) for $Browser profile '$ProfileName'" -Level INFO
+        }
         Write-Log "Added myTech.Today folder for $Browser profile '$ProfileName'" -Level SUCCESS
     }
     else {
-        $json.roots.bookmark_bar.children = $children
-        Write-Log "Removed myTech.Today folder for $Browser profile '$ProfileName'" -Level SUCCESS
+        if ($removedCount -gt 0) {
+            Write-Log "Removed myTech.Today folder ($removedCount instance(s)) for $Browser profile '$ProfileName'" -Level SUCCESS
+        }
+        else {
+            Write-Log "myTech.Today folder not found for $Browser profile '$ProfileName'; nothing to remove" -Level INFO
+        }
     }
 
     $json | ConvertTo-Json -Depth 10 | Set-Content -Path $path -Encoding UTF8
@@ -800,7 +967,16 @@ else {
     foreach ($b in $browsersToProcess | Sort-Object -Unique) {
         if ($chromiumBrowsers -contains $b) {
             $profiles = Get-ChromiumProfilePaths -Browser $b
+
             if (-not $profiles -or $profiles.Count -eq 0) {
+                # Fallback: try the default profile location for browsers where we know it
+                $fallbackPath = Get-ChromiumBookmarkFile -Browser $b
+                if ($fallbackPath -and (Test-Path $fallbackPath)) {
+                    Write-Log "No explicit $b profiles discovered; falling back to default profile at $fallbackPath" -Level INFO
+                    Update-ChromiumBookmarks -Browser $b -Mode $Mode -Categories $categories -WhatIf:$WhatIf -ProfilePath $fallbackPath -ProfileName 'Default'
+                    continue
+                }
+
                 Write-Log "No $b profiles with bookmarks found" -Level WARNING
                 continue
             }
