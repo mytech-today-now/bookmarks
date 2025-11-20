@@ -2,90 +2,642 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>myTech.Today Bookmarks Manager</title>
-  <meta name="description" content="PowerShell script to manage a consistent myTech.Today bookmarks folder across multiple browsers." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myTech.Today Bookmarks Manager - Documentation</title>
+  <meta name="description" content="Comprehensive PowerShell solution for managing browser bookmarks across multiple browsers on Windows with curated links and automatic backups." />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 8px;
+    }
+    h3 {
+      color: #7f8c8d;
+      margin-top: 25px;
+    }
+    h4 {
+      color: #95a5a6;
+      margin-top: 20px;
+    }
+    code {
+      background-color: #f8f9fa;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+      color: #e74c3c;
+    }
+    pre {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      border-left: 4px solid #3498db;
+    }
+    pre code {
+      background-color: transparent;
+      color: #ecf0f1;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    ul, ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    .note {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .warning {
+      background-color: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .toc {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .toc li {
+      margin: 5px 0;
+    }
+    .toc a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #ecf0f1;
+      margin: 40px 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>myTech.Today Bookmarks Manager</h1>
-  <p>
-    <code>bookmarks.ps1</code> builds and maintains a consistent <strong>myTech.Today</strong>
-    bookmarks folder across multiple browsers on Windows. It is designed to complement the
-    myTech.Today app installer profiles and logging conventions.
-  </p>
+  <div class="container">
+    <h1>myTech.Today Bookmarks Manager</h1>
 
-  <h2>Features</h2>
-  <ul>
-    <li>Add or remove a structured <code>myTech.Today</code> bookmarks folder for multiple browsers in one run.</li>
-    <li>Automatically derive application categories from <code>app_installer\install.ps1</code> (when present).</li>
-    <li>Create groups of links per category: popularity/overview, technical resources, community resources, off-brand search engines, topic-specific search engines, and topical resource searches.</li>
-    <li>Add a dedicated <code>myTech.Today</code> bookmark subtree that points to logs, reports, config, and local diagnostic HTML reports.</li>
-    <li>Restore a Chromium-based browser's bookmark file from a JSON backup created earlier.</li>
-  </ul>
+    <p>A comprehensive PowerShell solution for managing browser bookmarks across multiple browsers on Windows. This toolkit consists of two main components:</p>
 
-  <h2>Supported browsers</h2>
-  <p>The script can work with the following browsers (when installed):</p>
-  <ul>
-    <li>Chrome, Edge, Brave, Vivaldi</li>
-    <li>Firefox, LibreWolf, Waterfox, Tor Browser</li>
-    <li>Chromium, Ungoogled Chromium</li>
-    <li>Opera, Opera GX</li>
-    <li>Pale Moon, Midori, Min</li>
-    <li><code>All</code> to target every supported browser that is detected</li>
-  </ul>
+    <ol>
+      <li><strong><code>bookmarks.ps1</code></strong> - The main script that manages bookmark installation, removal, and restoration</li>
+      <li><strong><code>links-sample.psd1</code></strong> - A curated collection of 168+ high-quality bookmarks organized into 31 categories</li>
+    </ol>
 
-  <h2>Requirements</h2>
-  <ul>
-    <li>Windows with PowerShell 5.1 or later (<code>#Requires -Version 5.1</code>).</li>
-    <li>File-system access to the browser profile directories.</li>
-    <li>Optional: <code>app_installer\install.ps1</code> in the repository to supply application categories.</li>
-    <li>Network access the first time the shared logging module is downloaded from GitHub, or a local copy of <code>scripts\logging.ps1</code>.</li>
-  </ul>
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#bookmarks-ps1">File: bookmarks.ps1</a></li>
+        <li><a href="#links-sample-psd1">File: links-sample.psd1</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#local-resources">Local Resource Links</a></li>
+        <li><a href="#safety">Safety and Best Practices</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#related">Related Scripts</a></li>
+      </ul>
+    </div>
 
-  <h2>Usage</h2>
-  <p>From the repository root or the <code>bookmarks</code> folder:</p>
-  <pre><code class="language-powershell">
-# Add myTech.Today bookmarks for all supported browsers
+    <h2 id="overview">Overview</h2>
+
+    <p>The Bookmarks Manager builds and maintains a consistent <strong>myTech.Today</strong> bookmarks folder across all your browsers. It intelligently uses curated bookmarks from <code>links-sample.psd1</code> when available, and falls back to auto-generated search-based links for categories without curated data.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>Multi-Browser Support</strong>: Works with Chromium-based browsers (Chrome, Edge, Brave, Vivaldi, Opera), Firefox-family browsers (Firefox, LibreWolf, Waterfox), and HTML-only browsers (Midori, Min)</li>
+      <li><strong>Three Operation Modes</strong>: Add, Remove, or Restore bookmark structures</li>
+      <li><strong>Curated Bookmarks</strong>: Uses high-quality, hand-picked bookmarks with favicons from <code>links-sample.psd1</code></li>
+      <li><strong>Auto-Generated Fallback</strong>: Creates search-based bookmark groups for categories without curated data</li>
+      <li><strong>Organized Hierarchy</strong>: Bookmarks are organized into topic groups (SoftwareTools, WebServices, Entertainment, Other)</li>
+      <li><strong>Local Resource Links</strong>: Includes <code>file:///</code> links to myTech.Today logs, reports, and configuration folders</li>
+      <li><strong>Automatic Backups</strong>: Creates timestamped backups before making any changes</li>
+      <li><strong>Detailed Logging</strong>: Uses the shared <code>logging.ps1</code> module for comprehensive activity tracking</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="bookmarks-ps1">File: <code>bookmarks.ps1</code></h2>
+
+    <h3>Description</h3>
+    <p>The main PowerShell script that manages the myTech.Today bookmark structure across multiple browsers. It can add, remove, or restore bookmarks, and works differently depending on the browser type:</p>
+
+    <ul>
+      <li><strong>Chromium-based browsers</strong>: Directly modifies the browser's <code>Bookmarks</code> JSON file</li>
+      <li><strong>Firefox-family browsers</strong>: Generates an importable <code>myTech.Today-bookmarks.html</code> file</li>
+      <li><strong>HTML-only browsers</strong>: Generates an importable HTML file</li>
+    </ul>
+
+    <h3>Parameters</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>-Mode</code></td>
+          <td>String</td>
+          <td><code>Add</code></td>
+          <td>Operation mode: <code>Add</code>, <code>Remove</code>, or <code>Restore</code></td>
+        </tr>
+        <tr>
+          <td><code>-Browser</code></td>
+          <td>String[]</td>
+          <td><code>All</code></td>
+          <td>Target browsers: <code>Chrome</code>, <code>Edge</code>, <code>Brave</code>, <code>Firefox</code>, <code>Vivaldi</code>, <code>Opera</code>, <code>OperaGX</code>, <code>LibreWolf</code>, <code>TorBrowser</code>, <code>Waterfox</code>, <code>Chromium</code>, <code>PaleMoon</code>, <code>UngoogledChromium</code>, <code>Midori</code>, <code>Min</code>, or <code>All</code></td>
+        </tr>
+        <tr>
+          <td><code>-BackupPath</code></td>
+          <td>String</td>
+          <td>(none)</td>
+          <td>Path to backup file for Restore mode (JSON for Chromium, SQLite for Firefox)</td>
+        </tr>
+        <tr>
+          <td><code>-CuratedLinksPath</code></td>
+          <td>String</td>
+          <td>(auto)</td>
+          <td>Path to curated bookmark data file (.psd1 or .ps1). If omitted, searches for <code>links.psd1</code>, <code>links.ps1</code>, <code>links-sample.psd1</code>, or <code>links-sample.ps1</code> in the script folder</td>
+        </tr>
+        <tr>
+          <td><code>-WhatIf</code></td>
+          <td>Switch</td>
+          <td>(none)</td>
+          <td>Shows what would change without modifying any files</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bookmark Structure</h3>
+    <p>The script creates a hierarchical bookmark structure:</p>
+    <pre><code>myTech.Today (root)
+├── myTech.Today (link to https://mytech.today/)
+├── myTech.Today tools-2025 (link to https://mytech.today/tools-2025)
+├── Media Downloading (category)
+│   ├── Video Downloaders (subfolder)
+│   │   ├── Bookmark 1
+│   │   └── Bookmark 2
+│   └── Social Media Downloaders (subfolder)
+├── Entertainment (topic group)
+│   ├── Gaming (category)
+│   ├── Education (category)
+│   └── Finance (category)
+├── SoftwareTools (topic group)
+│   ├── Browsers (category)
+│   ├── Development (category)
+│   ├── Productivity (category)
+│   └── ... (more categories)
+├── WebServices (topic group)
+│   ├── Cloud Storage (category)
+│   ├── News (category)
+│   └── ... (more categories)
+├── Other (topic group)
+│   └── ... (uncategorized items)
+└── myTech.Today (local resources)
+    ├── Logs (folder with file:/// links)
+    ├── Reports (file:/// link)
+    └── Config (file:/// link)</code></pre>
+
+    <h3>Topic Groups</h3>
+    <p>Categories are automatically organized into topic groups:</p>
+    <ul>
+      <li><strong>SoftwareTools</strong>: Browsers, Development, Productivity, Media, Utilities, Security, Communication, Remote Access, Maintenance, Shortcuts</li>
+      <li><strong>WebServices</strong>: Cloud Storage, News, Social, Reference, Ecommerce, Health, Travel, Weather, Forums, Documentation, Backup</li>
+      <li><strong>Entertainment</strong>: Gaming, Education, Finance</li>
+      <li><strong>Other</strong>: All other categories (3D &amp; CAD, AI, Audio Production, Networking, Runtime, Screen Recording, Video Editing, Writing, etc.)</li>
+    </ul>
+
+    <h3>Curated vs Auto-Generated Bookmarks</h3>
+    <p>The script uses a two-tier approach:</p>
+    <ol>
+      <li><strong>Curated Bookmarks</strong> (preferred): If a category exists in <code>links-sample.psd1</code> (or your custom <code>links.psd1</code>), the script uses those hand-picked bookmarks with favicons</li>
+      <li><strong>Auto-Generated Bookmarks</strong> (fallback): If no curated data exists, the script generates search-based bookmark groups:
+        <ul>
+          <li>News and updates</li>
+          <li>Aggregators and comparisons</li>
+          <li>Ratings and reviews</li>
+          <li>Statistics and usage</li>
+          <li>Videos</li>
+          <li>How-tos and guides</li>
+          <li>Resources and documentation</li>
+          <li>Search engines (Google, DuckDuckGo, Bing, Brave Search, etc.)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Usage Examples</h3>
+    <pre><code class="language-powershell"># Add myTech.Today bookmarks for all supported browsers
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All
 
 # Add bookmarks only for Chrome and Edge
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser Chrome,Edge
 
+# Add bookmarks using a custom curated links file
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -CuratedLinksPath ".\my-custom-links.psd1"
+
 # Remove the myTech.Today bookmark structure (dry run)
 .\bookmarks\bookmarks.ps1 -Mode Remove -Browser All -WhatIf
 
-# Restore Chrome bookmarks from a JSON backup file (full file overwrite for default profile)
-.\bookmarks\bookmarks.ps1 -Mode Restore -Browser Chrome -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Bookmarks\Chrome\Bookmarks_20250101_120000.json"
-  </code></pre>
+# Remove bookmarks from Chrome only
+.\bookmarks\bookmarks.ps1 -Mode Remove -Browser Chrome
 
-  <h2>Logging and local resources</h2>
-  <p>The script writes detailed log output using the shared <code>logging.ps1</code> module. By convention, logs are stored under:</p>
-  <ul>
-    <li><code>%USERPROFILE%\myTech.Today\logs\</code></li>
-  </ul>
-  <p>The <code>myTech.Today</code> bookmark subtree includes quick links to:</p>
-  <ul>
-    <li><code>%USERPROFILE%\myTech.Today\logs\</code></li>
-    <li><code>%USERPROFILE%\myTech.Today\reports\</code></li>
-    <li><code>%USERPROFILE%\myTech.Today\config\</code></li>
-    <li>Belarc Advisor reports under <code>%ProgramFiles(x86)%\Belarc\BelarcAdvisor\System\tmp\</code></li>
-    <li>Local log files such as <code>AppInstaller.md</code>, <code>winget-update.md</code>, and <code>AppInstaller-GUI.md</code>.</li>
-  </ul>
+# Restore Chrome bookmarks from a JSON backup file
+.\bookmarks\bookmarks.ps1 -Mode Restore -Browser Chrome -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Chrome-Default\Bookmarks_20250101_120000.json"
 
-  <h2>Safety and recommendations</h2>
-  <ul>
-    <li>Close all target browsers before running the script to avoid conflicts while bookmark files are being updated.</li>
-    <li>Consider backing up your browser profiles (especially the bookmark files) before the first run.</li>
-    <li>Use <code>-WhatIf</code> with <code>-Mode Remove</code> to see what would be changed without applying it.</li>
-    <li>When using <code>-Mode Restore</code>, the target browser's bookmark file is overwritten with the contents of the backup JSON; use only with trusted backups and keep the browser closed.</li>
-  </ul>
+# Restore Firefox bookmarks from a SQLite backup file
+.\bookmarks\bookmarks.ps1 -Mode Restore -Browser Firefox -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Firefox\places_oyxj9ris.default-release_20250101_120000.sqlite"</code></pre>
 
-  <h2>Related scripts</h2>
-  <p>This script is part of the wider <strong>myTech.Today</strong> PowerShell toolkit, which also includes:</p>
-  <ul>
-    <li>Application installation automation (<code>app_installer\install.ps1</code>)</li>
-    <li>Logging utilities (<code>scripts\logging.ps1</code>)</li>
-    <li>Test and analysis helpers under <code>tools\</code></li>
-  </ul>
+    <h3>Supported Browsers</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Browser</th>
+          <th>Type</th>
+          <th>Update Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Chrome</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Edge</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Brave</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Vivaldi</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Opera</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Opera GX</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Chromium</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Ungoogled Chromium</td><td>Chromium</td><td>Direct JSON modification</td></tr>
+        <tr><td>Firefox</td><td>Firefox</td><td>HTML export (manual import)</td></tr>
+        <tr><td>LibreWolf</td><td>Firefox</td><td>HTML export (manual import)</td></tr>
+        <tr><td>Waterfox</td><td>Firefox</td><td>HTML export (manual import)</td></tr>
+        <tr><td>Tor Browser</td><td>Firefox</td><td>HTML export (manual import)</td></tr>
+        <tr><td>Pale Moon</td><td>Firefox</td><td>HTML export (manual import)</td></tr>
+        <tr><td>Midori</td><td>HTML-only</td><td>HTML export (manual import)</td></tr>
+        <tr><td>Min</td><td>HTML-only</td><td>HTML export (manual import)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Backup Locations</h3>
+    <p>Backups are automatically created before any modifications:</p>
+    <ul>
+      <li><strong>Chromium browsers</strong>: <code>%USERPROFILE%\myTech.Today\Backups\&lt;BrowserName&gt;-&lt;ProfileName&gt;\Bookmarks_YYYYMMDD_HHMMSS.json</code></li>
+      <li><strong>Firefox browsers</strong>: <code>%USERPROFILE%\myTech.Today\Backups\&lt;BrowserName&gt;\places_&lt;ProfileName&gt;_YYYYMMDD_HHMMSS.sqlite</code></li>
+    </ul>
+
+    <h3>Log Files</h3>
+    <p>Detailed logs are written to:</p>
+    <ul>
+      <li><strong>Current log</strong>: <code>%USERPROFILE%\myTech.Today\logs\bookmarks-manager.md</code></li>
+      <li><strong>Archived logs</strong>: <code>%USERPROFILE%\myTech.Today\logs\bookmarks-manager.YYYY-MM.md</code> (monthly archives)</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="links-sample-psd1">File: <code>links-sample.psd1</code></h2>
+
+    <h3>Description</h3>
+    <p>A PowerShell Data File containing curated, high-quality bookmarks organized into categories and subfolders. This file serves as the default source of bookmark data for <code>bookmarks.ps1</code>.</p>
+
+    <h3>Structure</h3>
+    <p>The file uses a three-level hierarchy:</p>
+    <pre><code class="language-powershell">@{
+    'CategoryName' = @{
+        'SubfolderName' = @(
+            @{
+                Title = 'Bookmark Title';
+                URL   = 'https://example.com/';
+                Icon  = 'https://example.com/favicon.ico';
+            },
+            # ... more bookmarks
+        );
+        # ... more subfolders
+    };
+    # ... more categories
+}</code></pre>
+
+    <h3>Hierarchy Levels</h3>
+    <ol>
+      <li><strong>Category</strong> (top-level key): Corresponds to application categories (e.g., <code>Browsers</code>, <code>Development</code>, <code>Gaming</code>)</li>
+      <li><strong>Subfolder</strong> (second-level key): Organizes bookmarks within a category (e.g., <code>News Updates</code>, <code>Aggregators</code>, <code>Resources</code>)</li>
+      <li><strong>Bookmark</strong> (array element): Individual bookmark with <code>Title</code>, <code>URL</code>, and <code>Icon</code> properties</li>
+    </ol>
+
+    <h3>Included Categories</h3>
+    <p>The file contains <strong>31 categories</strong> with <strong>168+ curated bookmarks</strong>:</p>
+
+    <h4>SoftwareTools Group</h4>
+    <ul>
+      <li><strong>Browsers</strong> (4 subfolders, 21 bookmarks)</li>
+      <li><strong>Development</strong> (9 subfolders, 36 bookmarks)</li>
+      <li><strong>Productivity</strong> (3 subfolders, 7 bookmarks)</li>
+      <li><strong>Media</strong> (3 subfolders, 5 bookmarks)</li>
+      <li><strong>Utilities</strong> (3 subfolders, 5 bookmarks)</li>
+      <li><strong>Security</strong> (3 subfolders, 4 bookmarks)</li>
+      <li><strong>Communication</strong> (3 subfolders, 6 bookmarks)</li>
+      <li><strong>Remote Access</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>Maintenance</strong> (1 subfolder, 2 bookmarks)</li>
+      <li><strong>Shortcuts</strong> (1 subfolder, 2 bookmarks)</li>
+    </ul>
+
+    <h4>WebServices Group</h4>
+    <ul>
+      <li><strong>Cloud Storage</strong> (2 subfolders, 2 bookmarks)</li>
+      <li><strong>News</strong> (1 subfolder, 2 bookmarks)</li>
+      <li><strong>Social</strong> (1 subfolder, 2 bookmarks)</li>
+      <li><strong>Backup</strong> (1 subfolder, 3 bookmarks)</li>
+    </ul>
+
+    <h4>Entertainment Group</h4>
+    <ul>
+      <li><strong>Gaming</strong> (2 subfolders, 4 bookmarks)</li>
+      <li><strong>Education</strong> (2 subfolders, 4 bookmarks)</li>
+      <li><strong>Finance</strong> (2 subfolders, 3 bookmarks)</li>
+    </ul>
+
+    <h4>AI Categories</h4>
+    <ul>
+      <li><strong>Generative</strong> (1 subfolder, 2 bookmarks)</li>
+      <li><strong>Chatbots</strong> (1 subfolder, 4 bookmarks)</li>
+      <li><strong>ImageGen</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>CodeAssist</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>AI</strong> (2 subfolders, 4 bookmarks)</li>
+    </ul>
+
+    <h4>Other Categories</h4>
+    <ul>
+      <li><strong>Media Downloading</strong> (4 subfolders, 13 bookmarks)</li>
+      <li><strong>3D &amp; CAD</strong> (2 subfolders, 3 bookmarks)</li>
+      <li><strong>Networking</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>Runtime</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>Writing</strong> (2 subfolders, 3 bookmarks)</li>
+      <li><strong>Video Editing</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>Audio Production</strong> (1 subfolder, 3 bookmarks)</li>
+      <li><strong>Screen Recording</strong> (1 subfolder, 2 bookmarks)</li>
+      <li><strong>Mockups &amp; Wireframe</strong> (1 subfolder, 3 bookmarks)</li>
+    </ul>
+
+    <h3>Customization</h3>
+    <p>To create your own curated bookmarks:</p>
+    <ol>
+      <li><strong>Copy the sample file</strong>:
+        <pre><code class="language-powershell">Copy-Item .\bookmarks\links-sample.psd1 .\bookmarks\links.psd1</code></pre>
+      </li>
+      <li><strong>Edit <code>links.psd1</code></strong> to add, remove, or modify bookmarks</li>
+      <li><strong>Run the script</strong> (it will automatically use <code>links.psd1</code> instead of <code>links-sample.psd1</code>):
+        <pre><code class="language-powershell">.\bookmarks\bookmarks.ps1 -Mode Add -Browser All</code></pre>
+      </li>
+    </ol>
+
+    <h3>Bookmark Properties</h3>
+    <p>Each bookmark object supports the following properties:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Required</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Title</code></td>
+          <td>Yes</td>
+          <td>Display name of the bookmark</td>
+          <td><code>'Steam - Digital Game Distribution'</code></td>
+        </tr>
+        <tr>
+          <td><code>URL</code></td>
+          <td>Yes</td>
+          <td>Full URL of the bookmark</td>
+          <td><code>'https://store.steampowered.com/'</code></td>
+        </tr>
+        <tr>
+          <td><code>Icon</code></td>
+          <td>No*</td>
+          <td>URL to the favicon image</td>
+          <td><code>'https://store.steampowered.com/favicon.ico'</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>Note:</strong> While <code>Icon</code> is technically optional, it's included in all bookmarks in <code>links-sample.psd1</code> for better visual appearance in browsers.</p>
+
+    <h3>Favicon Best Practices</h3>
+    <p>The file uses several strategies for reliable favicons:</p>
+    <ol>
+      <li><strong>Direct favicon URLs</strong>: <code>https://example.com/favicon.ico</code></li>
+      <li><strong>Google's favicon service</strong>: <code>https://www.google.com/s2/favicons?domain=example.com</code> (reliable fallback)</li>
+      <li><strong>Apple touch icons</strong>: <code>https://example.com/apple-touch-icon.png</code> (higher resolution)</li>
+      <li><strong>Size parameter</strong>: <code>https://www.google.com/s2/favicons?domain=example.com&amp;sz=64</code> (for larger icons)</li>
+    </ol>
+
+    <h3>Validation</h3>
+    <p>To validate your curated links file:</p>
+    <pre><code class="language-powershell"># Test if the file loads correctly
+$data = Import-PowerShellDataFile -Path .\bookmarks\links-sample.psd1
+Write-Host "Categories: $($data.Keys.Count)" -ForegroundColor Green
+
+# Count total bookmarks
+$totalBookmarks = 0
+foreach ($category in $data.Keys) {
+    foreach ($subfolder in $data[$category].Keys) {
+        $totalBookmarks += $data[$category][$subfolder].Count
+    }
+}
+Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
+
+    <hr />
+
+    <h2 id="requirements">Requirements</h2>
+    <ul>
+      <li><strong>Operating System</strong>: Windows 10 or later</li>
+      <li><strong>PowerShell</strong>: Version 5.1 or later (<code>#Requires -Version 5.1</code>)</li>
+      <li><strong>Permissions</strong>: File-system access to browser profile directories</li>
+      <li><strong>Network</strong>: Internet access for downloading the shared logging module (first run only)</li>
+      <li><strong>Optional</strong>: <code>app_installer\install.ps1</code> in the repository to supply additional application categories</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="local-resources">Local Resource Links</h2>
+    <p>The <code>myTech.Today</code> bookmark subtree includes quick <code>file:///</code> links to local folders and files:</p>
+
+    <h3>Folders</h3>
+    <ul>
+      <li><code>%USERPROFILE%\myTech.Today\logs\</code> - Log files from all myTech.Today scripts</li>
+      <li><code>%USERPROFILE%\myTech.Today\reports\</code> - System reports and diagnostics</li>
+      <li><code>%USERPROFILE%\myTech.Today\config\</code> - Configuration files</li>
+    </ul>
+
+    <h3>Log Files</h3>
+    <ul>
+      <li><code>AppInstaller.md</code> - Application installation logs</li>
+      <li><code>winget-update.md</code> - Windows Package Manager update logs</li>
+      <li><code>AppInstaller-GUI.md</code> - GUI installer logs</li>
+      <li><code>bookmarks-manager.md</code> - Bookmark manager logs</li>
+    </ul>
+
+    <h3>System Reports</h3>
+    <ul>
+      <li>Belarc Advisor HTML reports under <code>%ProgramFiles(x86)%\Belarc\BelarcAdvisor\System\tmp\</code></li>
+    </ul>
+
+    <hr />
+
+    <h2 id="safety">Safety and Best Practices</h2>
+
+    <h3>Before Running the Script</h3>
+    <ol>
+      <li><strong>Close all target browsers</strong> to avoid file locking issues</li>
+      <li><strong>Backup your browser profiles</strong> (especially bookmark files) before the first run</li>
+      <li><strong>Test with <code>-WhatIf</code></strong> to preview changes without applying them:
+        <pre><code class="language-powershell">.\bookmarks\bookmarks.ps1 -Mode Remove -Browser All -WhatIf</code></pre>
+      </li>
+    </ol>
+
+    <h3>When Using Restore Mode</h3>
+    <div class="warning">
+      <strong>Warning:</strong>
+      <ul>
+        <li>The target browser's bookmark file is <strong>completely overwritten</strong> with the backup</li>
+        <li>Only use trusted backup files created by this script</li>
+        <li>Keep the target browser closed during restoration</li>
+        <li>Verify the backup file path and timestamp before proceeding</li>
+      </ul>
+    </div>
+
+    <h3>Automatic Backups</h3>
+    <div class="success">
+      <p>The script automatically creates timestamped backups before making any changes:</p>
+      <ul>
+        <li><strong>Add mode</strong>: Creates backup before adding myTech.Today folder</li>
+        <li><strong>Remove mode</strong>: Creates backup before removing myTech.Today folder</li>
+        <li><strong>Restore mode</strong>: Creates backup before overwriting with restored data</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+
+    <h3>Bookmarks Not Appearing</h3>
+    <ol>
+      <li><strong>Close and reopen the browser</strong> - Changes may not be visible until restart</li>
+      <li><strong>Check the log file</strong> at <code>%USERPROFILE%\myTech.Today\logs\bookmarks-manager.md</code></li>
+      <li><strong>Verify browser profile path</strong> - The script auto-detects profiles, but custom locations may not be found</li>
+      <li><strong>For Firefox/HTML browsers</strong>: Manually import the generated <code>myTech.Today-bookmarks.html</code> file</li>
+    </ol>
+
+    <h3>Curated Links Not Loading</h3>
+    <ol>
+      <li><strong>Check file existence</strong>: Ensure <code>links-sample.psd1</code> exists in the <code>bookmarks</code> folder</li>
+      <li><strong>Validate syntax</strong>: Run <code>Import-PowerShellDataFile -Path .\bookmarks\links-sample.psd1</code> to check for errors</li>
+      <li><strong>Check category names</strong>: Category names in <code>links-sample.psd1</code> must match exactly (case-sensitive)</li>
+    </ol>
+
+    <h3>Permission Errors</h3>
+    <ol>
+      <li><strong>Run as Administrator</strong> if accessing system-wide browser installations</li>
+      <li><strong>Check file permissions</strong> on browser profile directories</li>
+      <li><strong>Disable antivirus temporarily</strong> if it's blocking file modifications</li>
+    </ol>
+
+    <hr />
+
+    <h2 id="related">Related Scripts</h2>
+    <p>This script is part of the wider <strong>myTech.Today</strong> PowerShell toolkit:</p>
+    <ul>
+      <li><strong>Application installation automation</strong>: <code>app_installer\install.ps1</code> and <code>app_installer\install-gui.ps1</code></li>
+      <li><strong>Logging utilities</strong>: <code>scripts\logging.ps1</code> (shared logging module)</li>
+      <li><strong>Link validation</strong>: <code>scripts\link-check.ps1</code> (validates URLs in curated links)</li>
+      <li><strong>Test and analysis helpers</strong>: Various scripts under <code>tools\</code></li>
+    </ul>
+
+    <hr />
+
+    <h2>Version History</h2>
+    <ul>
+      <li><strong>v1.3.1</strong> (Current)
+        <ul>
+          <li>Added support for curated bookmarks via <code>links-sample.psd1</code></li>
+          <li>Improved favicon handling with Google's favicon service fallback</li>
+          <li>Enhanced logging with detailed category processing information</li>
+          <li>Fixed JSON depth issue for deeply nested bookmark structures</li>
+          <li>Added automatic backup creation for all operation modes</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>License</h2>
+    <p>Part of the myTech.Today PowerShellScripts repository.</p>
+    <p><strong>Author</strong>: Kyle Rode (myTech.Today)<br />
+    <strong>Repository</strong>: <a href="https://github.com/mytech-today-now/PowerShellScripts">https://github.com/mytech-today-now/PowerShellScripts</a></p>
+
+  </div>
 </body>
 </html>
 
