@@ -1,8 +1,8 @@
-# Sample curated bookmark data for bookmarks.ps1
+﻿# Sample curated bookmark data for bookmarks.ps1
 #
 # STRUCTURE:
 # This file defines a hierarchical bookmark structure:
-#   Category -> Subfolder -> Individual Bookmarks
+#   Category â†’ Subfolder â†’ Individual Bookmarks
 #
 # - Top-level keys are CATEGORIES (e.g., 'Browsers', 'Development', 'Media Downloading')
 #   These correspond to application categories from install.ps1
@@ -15,15 +15,15 @@
 #
 # EXAMPLE HIERARCHY:
 #   myTech.Today (root)
-#     +- SoftwareTools (topic group)
-#         +- Browsers (category)
-#             +- News Updates (subfolder)
-#             |   +- Bookmark 1
-#             |   +- Bookmark 2
-#             +- Aggregators (subfolder)
-#             |   +- Bookmark 3
-#             +- Resources (subfolder)
-#                 +- Bookmark 4
+#     â””â”€ SoftwareTools (topic group)
+#         â””â”€ Browsers (category)
+#             â”œâ”€ News Updates (subfolder)
+#             â”‚   â”œâ”€ Bookmark 1
+#             â”‚   â””â”€ Bookmark 2
+#             â”œâ”€ Aggregators (subfolder)
+#             â”‚   â””â”€ Bookmark 3
+#             â””â”€ Resources (subfolder)
+#                 â””â”€ Bookmark 4
 
 @{
     'Browsers' = @{
@@ -44,7 +44,7 @@
             @{
                 Title = '18 best web browsers 2025 - Efficient App';
                 URL   = 'https://efficient.app/best/browser';
-                Icon  = 'https://www.google.com/s2/favicons?domain=efficient.app';
+                Icon  = 'https://efficient.app/favicon.ico';
             },
             @{
                 Title = 'Best web browsers of 2025';
@@ -85,7 +85,7 @@
             @{
                 Title = 'Archive.is - single-page snapshots';
                 URL   = 'https://archive.is/';
-                Icon  = 'https://archive.is/favicon.ico';
+                Icon  = 'https://www.google.com/s2/favicons?domain=archive.is';
             },
             @{
                 Title = 'grep.app - code search across repos';
@@ -98,9 +98,14 @@
                 Icon  = 'https://www.google.com/s2/favicons?domain=nerdydata.com';
             },
             @{
+                Title = 'Runnaroo - developer-focused search';
+                URL   = 'https://runnaroo.com/';
+                Icon  = 'https://www.google.com/s2/favicons?domain=runnaroo.com';
+            },
+            @{
                 Title = 'infinitysearch - open-source metasearch';
                 URL   = 'https://infinitysearch.co/';
-                Icon  = 'https://www.google.com/s2/favicons?sz=64&domain=infinitysearch.co';
+                Icon  = 'https://www.google.com/s2/favicons?domain=infinitysearch.co';
             },
             @{
                 Title = 'hndex - Hacker News search engine';
@@ -115,12 +120,17 @@
             @{
                 Title = 'Apse.io - personal search engine';
                 URL   = 'https://apse.io/';
-                Icon  = 'https://www.google.com/s2/favicons?sz=64&domain=apse.io';
+                Icon  = 'https://www.google.com/s2/favicons?domain=apse.io';
+            },
+            @{
+                Title = 'asone.ai - research-focused discovery';
+                URL   = 'https://asone.ai/';
+                Icon  = 'https://www.google.com/s2/favicons?domain=asone.ai';
             },
             @{
                 Title = 'Weboas.is - curated search portal';
                 URL   = 'https://weboas.is/';
-                Icon  = 'https://www.google.com/s2/favicons?sz=64&domain=weboas.is';
+                Icon  = 'https://www.google.com/s2/favicons?domain=weboas.is';
             },
             @{
                 Title = 'Yippy - clustered metasearch';
@@ -140,7 +150,7 @@
             @{
                 Title = 'Browser market share statistics 2025';
                 URL   = 'https://gs.statcounter.com/browser-market-share';
-                Icon  = 'https://www.google.com/s2/favicons?domain=gs.statcounter.com';
+                Icon  = 'https://gs.statcounter.com/favicon.ico';
             }
         );
     };
@@ -197,7 +207,7 @@
                 Title = 'JSFiddle - online HTML/CSS/JS playground';
                 URL   = 'https://jsfiddle.net/';
                 Icon  = 'https://www.google.com/s2/favicons?domain=jsfiddle.net';
-            }
+            },
         );
 
         'Data, ML & Analytics' = @(
@@ -214,7 +224,7 @@
             @{
                 Title = 'Streamlit - Python framework for data apps';
                 URL   = 'https://streamlit.io/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=streamlit.io';
+                Icon  = 'https://streamlit.io/favicons.ico';
             }
         );
 
@@ -357,17 +367,14 @@
             @{
                 Title = 'Free Online Video Downloader ( Ultra HD, HDR, 1080p, 4K, 8K )';
                 URL   = 'https://youtube4kdownloader.com/en80/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=youtube4kdownloader.com';
             },
             @{
                 Title = 'Online Youtube 1080p video Downloader | Youtube4KDownloader';
                 URL   = 'https://youtube4kdownloader.com/en81/download-youtube-1080p-video.html';
-                Icon  = 'https://www.google.com/s2/favicons?domain=youtube4kdownloader.com';
             },
             @{
-                Title = 'YouTube Private Video Downloader ( Ultra HD, 1080p, 4K, 8K )';
+                Title = 'YouTube ç§äººè§†é¢‘ä¸‹è½½å™¨ï¼ˆ Ultra HD, 1080p, 4K, 8K ï¼‰';
                 URL   = 'https://youtube4kdownloader.com/youtube-private-downloader.html';
-                Icon  = 'https://www.google.com/s2/favicons?domain=youtube4kdownloader.com';
             }
         );
 
@@ -375,17 +382,14 @@
             @{
                 Title = 'Twitter Video Downloader - Download twitter videos & GIF Online';
                 URL   = 'https://twittervideodownloader.com/';
-                Icon  = 'https://twittervideodownloader.com/favicon.ico';
             },
             @{
                 Title = 'Instagram Downloader - Download Instagram Video, Reels, Story, Photo, IGTV online - Snapinsta';
                 URL   = 'https://snapinsta.app/';
-                Icon  = 'https://snapinsta.app/favicon.ico';
             },
             @{
                 Title = 'Facebook Video Downloader Online - Download Facebook Videos';
                 URL   = 'https://fdown.net/';
-                Icon  = 'https://fdown.net/favicon.ico';
             }
         );
 
@@ -393,40 +397,33 @@
             @{
                 Title = 'Free Rumble Video Downloader HD Quality Fast';
                 URL   = 'https://pastedownload.com/rumble-video-downloader/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=pastedownload.com';
             },
             @{
                 Title = 'Free Wsj Video Downloader HD Quality Fast';
                 URL   = 'https://pastedownload.com/wsj-video-downloader/#url=https://www.wsj.com/livecoverage/trump-rally-incident';
-                Icon  = 'https://www.google.com/s2/favicons?domain=pastedownload.com';
             },
             @{
                 Title = 'Download video Sister Christian | FHD quality';
                 URL   = 'https://youtube4kdownloader.com/download/video/https%253A%252F%252Fopen.substack.com%252Fpub%252Fclifhigh%252Fp%252Fsister-christian%253Fr%253D17hzm3%2526utm_campaign%253Dpost%2526utm_medium%253Dweb';
-                Icon  = 'https://www.google.com/s2/favicons?domain=youtube4kdownloader.com';
             },
             @{
                 Title = 'Download video New Cult on the Block | FHD quality';
                 URL   = 'https://save.tube/download/video/https%253A%252F%252Fclifhigh.substack.com%252Fp%252Fnew-cult-on-the-block%253Fpublication_id%253D681568%2526post_id%253D148369395%2526isFreemail%253Dtrue%2526r%253D17hzm3%2526triedRedirect%253Dtrue%2526utm_source%253Dsubstack%2526utm_medium%253Demail';
-                Icon  = 'https://www.google.com/s2/favicons?domain=save.tube';
             }
         );
 
         'File Converters' = @(
             @{
-                Title = 'Convertio - File Converter';
+                Title = 'Convertio â€” File Converter';
                 URL   = 'https://convertio.co/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=convertio.co';
             },
             @{
                 Title = 'Free File Converter Online - AnyConv';
                 URL   = 'https://anyconv.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=anyconv.com';
             },
             @{
                 Title = 'Online OCR - FREE OCR PDF Document Scanner & Converter - Soda PDF';
                 URL   = 'https://www.sodapdf.com/ocr-pdf/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=sodapdf.com';
             }
         );
     };
@@ -504,13 +501,13 @@
         'Assistants' = @(
             @{
                 Title = 'ChatGPT web app';
-                URL   = 'https://chatgpt.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=chatgpt.com';
+                URL   = 'https://chat.openai.com/';
+                Icon  = 'https://chat.openai.com/favicon.ico';
             },
             @{
                 Title = 'Grok by xAI';
                 URL   = 'https://x.ai/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=x.ai';
+                Icon  = 'https://x.ai/favicon.ico';
             },
             @{
                 Title = 'Google Bard';
@@ -541,7 +538,7 @@
     'ImageGen' = @{
         'Tools' = @(
             @{
-                Title = 'DALL-E image generation';
+                Title = 'DALLÂ·E image generation';
                 URL   = 'https://openai.com/dall-e-3';
                 Icon  = 'https://openai.com/favicon.ico';
             },
@@ -576,7 +573,7 @@
             @{
                 Title = 'Cursor AI code editor';
                 URL   = 'https://cursor.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=cursor.com';
+                Icon  = 'https://cursor.com/favicons.ico';
             },
             @{
                 Title = 'Augment AI code editor';
@@ -594,533 +591,6 @@
         );
     };
 
-    'Productivity' = @{
-        'Office Suites' = @(
-            @{
-                Title = 'LibreOffice - Free Office Suite';
-                URL   = 'https://www.libreoffice.org/';
-                Icon  = 'https://www.libreoffice.org/favicon.ico';
-            },
-            @{
-                Title = 'Apache OpenOffice';
-                URL   = 'https://www.openoffice.org/';
-                Icon  = 'https://www.openoffice.org/favicon.ico';
-            }
-        );
-
-        'Note-Taking' = @(
-            @{
-                Title = 'Obsidian - Knowledge Base';
-                URL   = 'https://obsidian.md/';
-                Icon  = 'https://obsidian.md/favicon.ico';
-            },
-            @{
-                Title = 'Notion - All-in-one Workspace';
-                URL   = 'https://www.notion.so/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=notion.so';
-            },
-            @{
-                Title = 'Joplin - Open Source Notes';
-                URL   = 'https://joplinapp.org/';
-                Icon  = 'https://joplinapp.org/favicon.ico';
-            }
-        );
-
-        'PDF Tools' = @(
-            @{
-                Title = 'Adobe Acrobat Reader';
-                URL   = 'https://get.adobe.com/reader/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=adobe.com';
-            },
-            @{
-                Title = 'Foxit PDF Reader';
-                URL   = 'https://www.foxit.com/pdf-reader/';
-                Icon  = 'https://www.foxit.com/favicon.ico';
-            }
-        );
-    };
-
-    'Media' = @{
-        'Video Players' = @(
-            @{
-                Title = 'VLC Media Player';
-                URL   = 'https://www.videolan.org/vlc/';
-                Icon  = 'https://www.videolan.org/favicon.ico';
-            },
-            @{
-                Title = 'MPC-HC - Media Player Classic';
-                URL   = 'https://mpc-hc.org/';
-                Icon  = 'https://mpc-hc.org/favicon.ico';
-            }
-        );
-
-        'Image Editing' = @(
-            @{
-                Title = 'GIMP - GNU Image Manipulation Program';
-                URL   = 'https://www.gimp.org/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=gimp.org';
-            },
-            @{
-                Title = 'Paint.NET';
-                URL   = 'https://www.getpaint.net/';
-                Icon  = 'https://www.getpaint.net/favicon.ico';
-            }
-        );
-
-        'Audio Editing' = @(
-            @{
-                Title = 'Audacity - Free Audio Editor';
-                URL   = 'https://www.audacityteam.org/';
-                Icon  = 'https://www.google.com/s2/favicons?sz=64&domain=audacityteam.org';
-            }
-        );
-    };
-
-    'Utilities' = @{
-        'System Tools' = @(
-            @{
-                Title = 'PowerToys - Microsoft Utilities';
-                URL   = 'https://github.com/microsoft/PowerToys';
-                Icon  = 'https://github.com/favicon.ico';
-            },
-            @{
-                Title = 'Everything - File Search';
-                URL   = 'https://www.voidtools.com/';
-                Icon  = 'https://www.voidtools.com/favicon.ico';
-            }
-        );
-
-        'Compression' = @(
-            @{
-                Title = '7-Zip - File Archiver';
-                URL   = 'https://www.7-zip.org/';
-                Icon  = 'https://www.7-zip.org/favicon.ico';
-            }
-        );
-
-        'Cleanup' = @(
-            @{
-                Title = 'CCleaner - System Cleaner';
-                URL   = 'https://www.ccleaner.com/';
-                Icon  = 'https://www.ccleaner.com/favicon.ico';
-            },
-            @{
-                Title = 'BleachBit - Privacy Tool';
-                URL   = 'https://www.bleachbit.org/';
-                Icon  = 'https://www.bleachbit.org/favicon.ico';
-            }
-        );
-    };
-
-    'Security' = @{
-        'Password Managers' = @(
-            @{
-                Title = 'Bitwarden - Open Source Password Manager';
-                URL   = 'https://bitwarden.com/';
-                Icon  = 'https://bitwarden.com/favicon.ico';
-            },
-            @{
-                Title = 'KeePass - Secure Password Database';
-                URL   = 'https://keepass.info/';
-                Icon  = 'https://keepass.info/favicon.ico';
-            }
-        );
-
-        'Encryption' = @(
-            @{
-                Title = 'VeraCrypt - Disk Encryption';
-                URL   = 'https://www.veracrypt.fr/';
-                Icon  = 'https://www.veracrypt.fr/favicon.ico';
-            }
-        );
-
-        'Antivirus' = @(
-            @{
-                Title = 'Malwarebytes';
-                URL   = 'https://www.malwarebytes.com/';
-                Icon  = 'https://www.malwarebytes.com/favicon.ico';
-            }
-        );
-    };
-
-    'Communication' = @{
-        'Messaging' = @(
-            @{
-                Title = 'Discord - Voice and Chat';
-                URL   = 'https://discord.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=discord.com';
-            },
-            @{
-                Title = 'Slack - Team Collaboration';
-                URL   = 'https://slack.com/';
-                Icon  = 'https://slack.com/favicon.ico';
-            },
-            @{
-                Title = 'Signal - Private Messenger';
-                URL   = 'https://signal.org/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=signal.org';
-            }
-        );
-
-        'Video Conferencing' = @(
-            @{
-                Title = 'Zoom';
-                URL   = 'https://zoom.us/';
-                Icon  = 'https://zoom.us/favicon.ico';
-            },
-            @{
-                Title = 'Microsoft Teams';
-                URL   = 'https://www.microsoft.com/microsoft-teams/';
-                Icon  = 'https://www.microsoft.com/favicon.ico';
-            }
-        );
-
-        'Email' = @(
-            @{
-                Title = 'Thunderbird - Email Client';
-                URL   = 'https://www.thunderbird.net/';
-                Icon  = 'https://www.thunderbird.net/favicon.ico';
-            }
-        );
-    };
-
-    'Gaming' = @{
-        'Platforms' = @(
-            @{
-                Title = 'Steam - Digital Game Distribution';
-                URL   = 'https://store.steampowered.com/';
-                Icon  = 'https://store.steampowered.com/favicon.ico';
-            },
-            @{
-                Title = 'Epic Games Store';
-                URL   = 'https://www.epicgames.com/store/';
-                Icon  = 'https://www.epicgames.com/favicon.ico';
-            },
-            @{
-                Title = 'GOG - DRM-Free Games';
-                URL   = 'https://www.gog.com/';
-                Icon  = 'https://www.gog.com/favicon.ico';
-            }
-        );
-
-        'Resources' = @(
-            @{
-                Title = 'PC Gaming Wiki';
-                URL   = 'https://www.pcgamingwiki.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=pcgamingwiki.com';
-            }
-        );
-    };
-
-    'Education' = @{
-        'Learning Platforms' = @(
-            @{
-                Title = 'Khan Academy - Free Education';
-                URL   = 'https://www.khanacademy.org/';
-                Icon  = 'https://www.khanacademy.org/favicon.ico';
-            },
-            @{
-                Title = 'Coursera - Online Courses';
-                URL   = 'https://www.coursera.org/';
-                Icon  = 'https://www.coursera.org/favicon.ico';
-            }
-        );
-
-        'Tools' = @(
-            @{
-                Title = 'Anki - Flashcard Learning';
-                URL   = 'https://apps.ankiweb.net/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=ankiweb.net';
-            },
-            @{
-                Title = 'GeoGebra - Math Software';
-                URL   = 'https://www.geogebra.org/';
-                Icon  = 'https://www.geogebra.org/favicon.ico';
-            }
-        );
-    };
-
-    'Finance' = @{
-        'Personal Finance' = @(
-            @{
-                Title = 'GnuCash - Accounting Software';
-                URL   = 'https://www.gnucash.org/';
-                Icon  = 'https://www.gnucash.org/favicon.ico';
-            },
-            @{
-                Title = 'HomeBank - Finance Manager';
-                URL   = 'http://homebank.free.fr/';
-                Icon  = 'http://homebank.free.fr/favicon.ico';
-            }
-        );
-
-        'Resources' = @(
-            @{
-                Title = 'Personal Finance Software Comparison';
-                URL   = 'https://www.google.com/search?q=personal+finance+software+comparison';
-                Icon  = 'https://www.google.com/s2/favicons?domain=google.com';
-            }
-        );
-    };
-
-    'Remote Access' = @{
-        'Remote Desktop' = @(
-            @{
-                Title = 'TeamViewer - Remote Support';
-                URL   = 'https://www.teamviewer.com/';
-                Icon  = 'https://www.teamviewer.com/favicon.ico';
-            },
-            @{
-                Title = 'AnyDesk - Remote Desktop';
-                URL   = 'https://anydesk.com/';
-                Icon  = 'https://anydesk.com/favicon.ico';
-            },
-            @{
-                Title = 'RustDesk - Open Source Remote Desktop';
-                URL   = 'https://rustdesk.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=rustdesk.com';
-            }
-        );
-    };
-
-    'Networking' = @{
-        'Network Tools' = @(
-            @{
-                Title = 'Wireshark - Network Protocol Analyzer';
-                URL   = 'https://www.wireshark.org/';
-                Icon  = 'https://www.wireshark.org/favicon.ico';
-            },
-            @{
-                Title = 'PuTTY - SSH Client';
-                URL   = 'https://www.putty.org/';
-                Icon  = 'https://www.google.com/s2/favicons?sz=64&domain=www.putty.org';
-            },
-            @{
-                Title = 'Nmap - Network Scanner';
-                URL   = 'https://nmap.org/';
-                Icon  = 'https://nmap.org/favicon.ico';
-            }
-        );
-    };
-
-    '3D & CAD' = @{
-        '3D Modeling' = @(
-            @{
-                Title = 'Blender - 3D Creation Suite';
-                URL   = 'https://www.blender.org/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=blender.org';
-            },
-            @{
-                Title = 'FreeCAD - Parametric 3D Modeler';
-                URL   = 'https://www.freecad.org/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=freecad.org';
-            }
-        );
-
-        'CAD' = @(
-            @{
-                Title = 'LibreCAD - 2D CAD';
-                URL   = 'https://librecad.org/';
-                Icon  = 'https://librecad.org/favicon.ico';
-            }
-        );
-    };
-
-    'Runtime' = @{
-        'Runtimes' = @(
-            @{
-                Title = 'Java Runtime Environment';
-                URL   = 'https://www.java.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=java.com';
-            },
-            @{
-                Title = '.NET Desktop Runtime';
-                URL   = 'https://dotnet.microsoft.com/download/dotnet';
-                Icon  = 'https://www.google.com/s2/favicons?domain=dotnet.microsoft.com';
-            },
-            @{
-                Title = 'Visual C++ Redistributable';
-                URL   = 'https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist';
-                Icon  = 'https://learn.microsoft.com/favicon.ico';
-            }
-        );
-    };
-
-    'Writing' = @{
-        'Writing Tools' = @(
-            @{
-                Title = 'FocusWriter - Distraction-Free Writing';
-                URL   = 'https://gottcode.org/focuswriter/';
-                Icon  = 'https://gottcode.org/favicon.ico';
-            },
-            @{
-                Title = 'Manuskript - Novel Writing';
-                URL   = 'https://www.theologeek.ch/manuskript/';
-                Icon  = 'https://www.theologeek.ch/favicon.ico';
-            }
-        );
-
-        'Screenwriting' = @(
-            @{
-                Title = 'Celtx - Screenwriting Software';
-                URL   = 'https://www.celtx.com/';
-                Icon  = 'https://www.celtx.com/favicon.ico';
-            }
-        );
-    };
-
-    'Video Editing' = @{
-        'Video Editors' = @(
-            @{
-                Title = 'DaVinci Resolve - Professional Video Editing';
-                URL   = 'https://www.blackmagicdesign.com/products/davinciresolve';
-                Icon  = 'https://www.blackmagicdesign.com/favicon.ico';
-            },
-            @{
-                Title = 'Shotcut - Free Video Editor';
-                URL   = 'https://shotcut.org/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=shotcut.org';
-            },
-            @{
-                Title = 'OpenShot - Easy Video Editor';
-                URL   = 'https://www.openshot.org/';
-                Icon  = 'https://www.openshot.org/favicon.ico';
-            }
-        );
-    };
-
-    'Audio Production' = @{
-        'DAWs' = @(
-            @{
-                Title = 'Cakewalk by BandLab - Free DAW';
-                URL   = 'https://www.bandlab.com/products/cakewalk';
-                Icon  = 'https://www.bandlab.com/favicon.ico';
-            },
-            @{
-                Title = 'LMMS - Music Production';
-                URL   = 'https://lmms.io/';
-                Icon  = 'https://lmms.io/favicon.ico';
-            },
-            @{
-                Title = 'Reaper - Digital Audio Workstation';
-                URL   = 'https://www.reaper.fm/';
-                Icon  = 'https://www.reaper.fm/favicon.ico';
-            }
-        );
-    };
-
-    'Screen Recording' = @{
-        'Screen Recorders' = @(
-            @{
-                Title = 'OBS Studio - Streaming and Recording';
-                URL   = 'https://obsproject.com/';
-                Icon  = 'https://obsproject.com/favicon.ico';
-            },
-            @{
-                Title = 'ShareX - Screen Capture';
-                URL   = 'https://getsharex.com/';
-                Icon  = 'https://getsharex.com/favicon.ico';
-            }
-        );
-    };
-
-    'Mockups & Wireframe' = @{
-        'Design Tools' = @(
-            @{
-                Title = 'Figma - Collaborative Design';
-                URL   = 'https://www.figma.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=figma.com';
-            },
-            @{
-                Title = 'Draw.io - Diagramming Tool';
-                URL   = 'https://www.drawio.com/';
-                Icon  = 'https://www.drawio.com/favicon.ico';
-            },
-            @{
-                Title = 'Penpot - Open Source Design';
-                URL   = 'https://penpot.app/';
-                Icon  = 'https://penpot.app/favicon.ico';
-            }
-        );
-    };
-
-    'AI' = @{
-        'AI Assistants' = @(
-            @{
-                Title = 'ChatGPT - OpenAI';
-                URL   = 'https://chatgpt.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=chatgpt.com';
-            },
-            @{
-                Title = 'Grok - xAI';
-                URL   = 'https://x.ai/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=x.ai';
-            },
-            @{
-                Title = 'Claude - Anthropic';
-                URL   = 'https://claude.ai/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=claude.ai';
-            }
-        );
-
-        'Dictation' = @(
-            @{
-                Title = 'dictation.io - Voice Dictation';
-                URL   = 'https://dictation.io/';
-                Icon  = 'https://dictation.io/favicon.ico';
-            }
-        );
-    };
-
-    'Maintenance' = @{
-        'System Maintenance' = @(
-            @{
-                Title = 'O&O ShutUp10 - Privacy Settings';
-                URL   = 'https://www.oo-software.com/en/shutup10';
-                Icon  = 'https://www.oo-software.com/favicon.ico';
-            },
-            @{
-                Title = 'Manage Restore Points';
-                URL   = 'https://www.google.com/search?q=windows+system+restore+points';
-                Icon  = 'https://www.google.com/s2/favicons?domain=google.com';
-            }
-        );
-    };
-
-    'Shortcuts' = @{
-        'Productivity Shortcuts' = @(
-            @{
-                Title = 'AutoHotkey - Automation Scripting';
-                URL   = 'https://www.autohotkey.com/';
-                Icon  = 'https://www.autohotkey.com/favicon.ico';
-            },
-            @{
-                Title = 'PowerToys - Windows Utilities';
-                URL   = 'https://github.com/microsoft/PowerToys';
-                Icon  = 'https://github.com/favicon.ico';
-            }
-        );
-    };
-
-    'Backup' = @{
-        'Backup Tools' = @(
-            @{
-                Title = 'Veeam Agent FREE - Backup Solution';
-                URL   = 'https://www.veeam.com/windows-endpoint-server-backup-free.html';
-                Icon  = 'https://www.veeam.com/favicon.ico';
-            },
-            @{
-                Title = 'Duplicati - Encrypted Backup';
-                URL   = 'https://www.duplicati.com/';
-                Icon  = 'https://www.google.com/s2/favicons?domain=duplicati.com';
-            },
-            @{
-                Title = 'FreeFileSync - File Synchronization';
-                URL   = 'https://freefilesync.org/';
-                Icon  = 'https://freefilesync.org/favicon.ico';
-            }
-        );
-    };
-
 }
+
 
