@@ -132,9 +132,24 @@ function Convert-ToFileUrl {
 function New-BookmarkUrlNode {
     param(
         [string]$Name,
-        [string]$Url
+        [string]$Url,
+        [string]$Icon = $null
     )
-    [PSCustomObject]@{ name = $Name; type = 'url'; url = $Url }
+
+    $node = [PSCustomObject]@{
+        name = $Name
+        type = 'url'
+        url  = $Url
+    }
+
+    # Add meta_info with icon_url if Icon is provided (for Chromium browsers)
+    if ($Icon) {
+        $node | Add-Member -MemberType NoteProperty -Name 'meta_info' -Value ([PSCustomObject]@{
+            icon_url = $Icon
+        })
+    }
+
+    return $node
 }
 
 function New-BookmarkSubfolder {
@@ -422,6 +437,7 @@ function Get-CategoryBookmarkNodes {
 
                     $title = $bookmark.Title
                     $url   = $bookmark.URL
+                    $icon  = $bookmark.Icon
 
                     if ($null -eq $title -or $null -eq $url) { continue }
 
@@ -429,7 +445,16 @@ function Get-CategoryBookmarkNodes {
                     $title = $title -replace '\b2025\b', $year.ToString()
                     $url   = $url   -replace '\b2025\b', $year.ToString()
 
-                    $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
+                    # Expand environment variables in URL (e.g., %USERNAME%, %USERPROFILE%)
+                    $url = [Environment]::ExpandEnvironmentVariables($url)
+
+                    # Create bookmark node with icon if available
+                    if ($icon) {
+                        $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                    }
+                    else {
+                        $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
+                    }
                 }
 
                 # Create subfolder using the helper function
@@ -622,10 +647,14 @@ function New-MyTechTodayFolder {
     $disaBenchmarkHtml  = Join-Path $belarcRoot "BenchmarkSummary(($computerName)).html"
     $hotfixReportHtml   = Join-Path $belarcRoot "SummaryQfeExternal(($computerName)).html"
 
-    $appInstallerLog    = '%USERPROFILE%\myTech.Today\logs\AppInstaller.md'
-    $wingetUpdateLog    = '%USERPROFILE%\myTech.Today\logs\winget-update.md'
-    $appInstallerGuiLog = '%USERPROFILE%\myTech.Today\logs\AppInstaller-GUI.md'
-    $bookmarksLog       = '%USERPROFILE%\myTech.Today\logs\bookmarks.md'
+    $appInstallerLog    = Join-Path $base "\logs\AppInstaller.md"
+    $wingetUpdateLog    = Join-Path $base "\logs\winget-update.md"
+    $appInstallerGuiLog = Join-Path $base "\logs\appinstaller-gui.md"
+    $bookmarksLog       = Join-Path $base "\logs\bookmarks-manager.md"
+    $hostsLog           = Join-Path $base "\logs\hosts.md"
+    $restorePointsLog   = Join-Path $base "\logs\Manage-RestorePoints.md"
+    $OOShutUpLog        = Join-Path $base "\logs\OOShutUp10.md"
+    $ResponsiveLog      = Join-Path $base "\logs\responsive.md"
 
     # Use proper file:/// URLs for Belarc reports (spaces encoded as %20, etc.)
     $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$belarcSystemHtml]")      -Url ([Uri]::new($belarcSystemHtml).AbsoluteUri))
@@ -635,6 +664,10 @@ function New-MyTechTodayFolder {
     $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$wingetUpdateLog]")       -Url ('file:///' + ($wingetUpdateLog    -replace '\\','/')))
     $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$appInstallerGuiLog]")    -Url ('file:///' + ($appInstallerGuiLog -replace '\\','/')))
     $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$bookmarksLog]")          -Url ('file:///' + ($bookmarksLog       -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$hostsLog]")              -Url ('file:///' + ($hostsLog           -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$restorePointsLog]")      -Url ('file:///' + ($restorePointsLog   -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$OOShutUpLog]")           -Url ('file:///' + ($OOShutUpLog        -replace '\\','/')))
+    $logsFolder.children += (New-BookmarkUrlNode -Name ("myTech.Today/myTech.Today/Logs/[$ResponsiveLog]")         -Url ('file:///' + ($ResponsiveLog      -replace '\\','/')))
 
     $localFolder.children += $logsFolder
     $localFolder.children += (New-BookmarkUrlNode -Name 'Reports' -Url (Convert-ToFileUrl (Join-Path $base 'reports')))
