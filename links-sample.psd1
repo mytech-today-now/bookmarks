@@ -53,19 +53,11 @@
             }
         );
 
-        'Resources' = @(
-            @{
-                Title = 'List of web browsers - Wikipedia';
-                URL   = 'https://en.wikipedia.org/wiki/List_of_web_browsers';
-                Icon  = 'https://en.wikipedia.org/static/favicon/wikipedia.ico';
-            }
-        );
-
         'SearchEngines' = @(
             @{
                 Title = 'myTech.Today - Tools 2025 Search Engines';
                 URL   = 'https://mytech.today/tools-2025/#search-engines';
-                Icon  = 'https://www.google.com/s2/favicons?domain=mytech.today';
+                Icon  = 'https://mytech.today/favicon.ico';
             },
             @{
                 Title = 'DuckDuckGo - privacy-first search';
