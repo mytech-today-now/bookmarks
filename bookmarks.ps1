@@ -176,90 +176,7 @@ function New-BookmarkSubfolder {
     }
 }
 
-$script:MaxDomainOccurrences = 10
-$script:DomainExemptions = @(
-    'google.com',
-    'duckduckgo.com',
-    'bing.com',
-    'search.brave.com',
-    'ecosia.org',
-    'startpage.com'
-)
 
-function Get-DomainFromUrl {
-    param(
-        [string]$Url
-    )
-
-    if ([string]::IsNullOrWhiteSpace($Url)) {
-        return $null
-    }
-
-    try {
-        $uri  = [Uri]$Url
-        $host = $uri.Host.ToLowerInvariant()
-
-        if ($host.StartsWith('www.')) {
-            $host = $host.Substring(4)
-        }
-
-        return $host
-    }
-    catch {
-        return $null
-    }
-}
-
-function New-LimitedSearchBookmarkNode {
-    param(
-        [string]$Name,
-        [string]$Url
-    )
-
-    if (-not $script:DomainUsage) {
-        $script:DomainUsage = @{}
-    }
-    if (-not $script:DomainUsageAll) {
-        $script:DomainUsageAll = @{}
-    }
-    if (-not $script:MaxDomainOccurrences) {
-        $script:MaxDomainOccurrences = 10
-    }
-
-    $domain = Get-DomainFromUrl -Url $Url
-    if (-not $domain) {
-        return (New-BookmarkUrlNode -Name $Name -Url $Url)
-    }
-
-    # Exempt core search engines from the global repetition limit, but still track usage
-    if ($script:DomainExemptions -contains $domain) {
-        $allCurrent = 0
-        if ($script:DomainUsageAll.ContainsKey($domain)) {
-            $allCurrent = [int]$script:DomainUsageAll[$domain]
-        }
-        $script:DomainUsageAll[$domain] = $allCurrent + 1
-        return (New-BookmarkUrlNode -Name $Name -Url $Url)
-    }
-
-    $current = 0
-    if ($script:DomainUsage.ContainsKey($domain)) {
-        $current = [int]$script:DomainUsage[$domain]
-    }
-
-    if ($current -ge $script:MaxDomainOccurrences) {
-        return $null
-    }
-
-    $script:DomainUsage[$domain] = $current + 1
-
-    $allCurrent = 0
-    if ($script:DomainUsageAll.ContainsKey($domain)) {
-        $allCurrent = [int]$script:DomainUsageAll[$domain]
-    }
-    $script:DomainUsageAll[$domain] = $allCurrent + 1
-
-    return (New-BookmarkUrlNode -Name $Name -Url $Url)
-}
 
 
 $script:TopicCategories = @{
@@ -277,7 +194,6 @@ $script:TopicCategories = @{
     }
     'WebServices' = @{
         'Cloud Storage' = 'cloud storage'
-        'News'          = 'news websites'
         'Social'        = 'social media platforms'
         'Reference'     = 'online reference tools'
         'Ecommerce'     = 'online shopping sites'
@@ -324,21 +240,7 @@ $script:TopicCategories = @{
     }
 }
 
-function Get-TopicKeyword {
-    param([string]$Category)
 
-    if (-not $Category) { return '' }
-
-    if ($script:TopicCategories -is [hashtable]) {
-        foreach ($topicGroup in $script:TopicCategories.Values) {
-            if ($topicGroup -is [hashtable] -and $topicGroup.ContainsKey($Category)) {
-                return $topicGroup[$Category]
-            }
-        }
-    }
-
-    return $Category
-}
 
 
 function Get-TopicGroupForCategory {
@@ -418,9 +320,10 @@ function Get-CategoryBookmarkNodes {
 
     $year = (Get-Date).Year
 
-    # 1. Try curated data from external hashtable (e.g., links-sample.psd1/ps1)
-    #    Curated data is organized as: Category → Subfolder → Bookmarks
-    #    Each subfolder becomes a child folder under the category
+    # Use curated data from external hashtable (e.g., links-sample.psd1/ps1)
+    # Curated data is organized as: Category → Subfolder → Bookmarks
+    # OR: Category → Subfolder → Sub-subfolder → Bookmarks (for nested categories like News)
+    # Each subfolder becomes a child folder under the category
     if ($script:CuratedBookmarks -is [hashtable] -and $script:CuratedBookmarks.ContainsKey($Category)) {
         $categoryTable = $script:CuratedBookmarks[$Category]
         if ($categoryTable -is [hashtable]) {
@@ -430,37 +333,95 @@ function Get-CategoryBookmarkNodes {
                 $bookmarkGroup = $categoryTable[$subfolderName]
                 if (-not $bookmarkGroup) { continue }
 
-                $subfolderChildren = @()
+                # Check if this is a nested subfolder (hashtable) or direct bookmarks (array)
+                if ($bookmarkGroup -is [hashtable]) {
+                    # This is a nested subfolder structure (e.g., News → Sports → Major Mens Leagues)
+                    $nestedSubfolderChildren = @()
 
-                foreach ($bookmark in $bookmarkGroup) {
-                    if (-not $bookmark) { continue }
+                    foreach ($nestedSubfolderName in $bookmarkGroup.Keys) {
+                        $nestedBookmarks = $bookmarkGroup[$nestedSubfolderName]
+                        if (-not $nestedBookmarks) { continue }
 
-                    $title = $bookmark.Title
-                    $url   = $bookmark.URL
-                    $icon  = $bookmark.Icon
+                        $nestedBookmarkNodes = @()
 
-                    if ($null -eq $title -or $null -eq $url) { continue }
+                        foreach ($bookmark in $nestedBookmarks) {
+                            if (-not $bookmark) { continue }
 
-                    # Replace explicit year placeholder (for example, 2025 -> current year)
-                    $title = $title -replace '\b2025\b', $year.ToString()
-                    $url   = $url   -replace '\b2025\b', $year.ToString()
+                            $title = $bookmark.Title
+                            $url   = $bookmark.URL
+                            $icon  = $bookmark.Icon
 
-                    # Expand environment variables in URL (e.g., %USERNAME%, %USERPROFILE%)
-                    $url = [Environment]::ExpandEnvironmentVariables($url)
+                            if ($null -eq $title -or $null -eq $url) { continue }
 
-                    # Create bookmark node with icon if available
-                    if ($icon) {
-                        $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                            # Replace explicit year placeholder
+                            $title = $title -replace '\b2025\b', $year.ToString()
+                            $url   = $url   -replace '\b2025\b', $year.ToString()
+
+                            # Expand environment variables in URL
+                            $url = [Environment]::ExpandEnvironmentVariables($url)
+
+                            # Create bookmark node with icon if available
+                            if ($icon) {
+                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                            }
+                            else {
+                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url
+                            }
+                        }
+
+                        # Create nested subfolder
+                        if ($nestedBookmarkNodes.Count -gt 0) {
+                            $nestedSubfolder = New-BookmarkSubfolder -Name $nestedSubfolderName -Children $nestedBookmarkNodes
+                            if ($null -ne $nestedSubfolder) {
+                                $nestedSubfolderChildren += $nestedSubfolder
+                            }
+                        }
                     }
-                    else {
-                        $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
+
+                    # Create parent subfolder with nested subfolders
+                    if ($nestedSubfolderChildren.Count -gt 0) {
+                        $subfolder = New-BookmarkSubfolder -Name $subfolderName -Children $nestedSubfolderChildren
+                        if ($null -ne $subfolder) {
+                            $curatedNodes += $subfolder
+                        }
                     }
                 }
+                else {
+                    # This is a direct bookmark array (e.g., News → General News → Bookmarks)
+                    $subfolderChildren = @()
 
-                # Create subfolder using the helper function
-                $subfolder = New-BookmarkSubfolder -Name $subfolderName -Children $subfolderChildren
-                if ($null -ne $subfolder) {
-                    $curatedNodes += $subfolder
+                    foreach ($bookmark in $bookmarkGroup) {
+                        if (-not $bookmark) { continue }
+
+                        $title = $bookmark.Title
+                        $url   = $bookmark.URL
+                        $icon  = $bookmark.Icon
+
+                        if ($null -eq $title -or $null -eq $url) { continue }
+
+                        # Replace explicit year placeholder (for example, 2025 -> current year)
+                        $title = $title -replace '\b2025\b', $year.ToString()
+                        $url   = $url   -replace '\b2025\b', $year.ToString()
+
+                        # Expand environment variables in URL (e.g., %USERNAME%, %USERPROFILE%)
+                        $url = [Environment]::ExpandEnvironmentVariables($url)
+
+                        # Create bookmark node with icon if available
+                        if ($icon) {
+                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                        }
+                        else {
+                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
+                        }
+                    }
+
+                    # Create subfolder using the helper function
+                    if ($subfolderChildren.Count -gt 0) {
+                        $subfolder = New-BookmarkSubfolder -Name $subfolderName -Children $subfolderChildren
+                        if ($null -ne $subfolder) {
+                            $curatedNodes += $subfolder
+                        }
+                    }
                 }
             }
 
@@ -471,119 +432,14 @@ function Get-CategoryBookmarkNodes {
         }
     }
 
-    # 2. Fallback: abstracted search-based links that mirror the curated link types,
-    #    organized into subfolders for easier browsing.
-    #    Each subfolder represents a category of information (news, reviews, tutorials, etc.)
-    $keyword = Get-TopicKeyword -Category $Category
-    $encoded = ($keyword -replace '\s+', '+')
-    $slug    = ($keyword -replace '\s+', '_')
-
-    # Define bookmark subfolders with their respective links
-    # Each subfolder will be created as a child folder under the category
-    $subfolderDefinitions = @(
-        @{
-            Name = 'News and updates'
-            Bookmarks = @(
-                @{ Name = "$Category overview (Wikipedia)"; Url = "https://en.wikipedia.org/wiki/$slug" }
-                @{ Name = "$Category news and updates ($year, overview articles)"; Url = "https://www.google.com/search?q=$encoded+$year+news+updates" }
-                @{ Name = "$Category news and updates (community discussions)"; Url = "https://www.reddit.com/search/?q=$encoded+$year+news" }
-            )
-        },
-        @{
-            Name = 'Aggregators and comparisons'
-            Bookmarks = @(
-                @{ Name = "$Category round-ups (best of $year lists)"; Url = "https://www.google.com/search?q=$encoded+best+tools+$year" }
-                @{ Name = "$Category comparison guides ($year)"; Url = "https://www.google.com/search?q=$encoded+comparison+guide+$year" }
-                @{ Name = "$Category list posts (top $year overviews)"; Url = "https://www.google.com/search?q=$encoded+top+$year+overview" }
-            )
-        },
-        @{
-            Name = 'Ratings and reviews'
-            Bookmarks = @(
-                @{ Name = "$Category reviews ($year)"; Url = "https://www.google.com/search?q=$encoded+reviews+$year" }
-                @{ Name = "$Category ratings and rankings"; Url = "https://www.google.com/search?q=$encoded+ratings+rankings+$year" }
-                @{ Name = "$Category user review round-ups"; Url = "https://www.google.com/search?q=$encoded+user+reviews+$year" }
-            )
-        },
-        @{
-            Name = 'Statistics and usage'
-            Bookmarks = @(
-                @{ Name = "$Category usage statistics"; Url = "https://www.google.com/search?q=$encoded+usage+statistics+$year" }
-                @{ Name = "$Category market share statistics"; Url = "https://www.google.com/search?q=$encoded+market+share+$year" }
-                @{ Name = "$Category industry reports"; Url = "https://www.google.com/search?q=$encoded+industry+report+$year" }
-            )
-        },
-        @{
-            Name = 'Videos'
-            Bookmarks = @(
-                @{ Name = "$Category overview videos ($year)"; Url = "https://www.youtube.com/results?search_query=$encoded+overview+$year" }
-                @{ Name = "$Category tutorials (video)"; Url = "https://www.youtube.com/results?search_query=$encoded+tutorial+$year" }
-                @{ Name = "$Category best tools in $year (video)"; Url = "https://www.youtube.com/results?search_query=$encoded+best+tools+$year" }
-            )
-        },
-        @{
-            Name = 'How-tos and guides'
-            Bookmarks = @(
-                @{ Name = "$Category getting started guides"; Url = "https://www.google.com/search?q=$encoded+getting+started+guide" }
-                @{ Name = "$Category step-by-step tutorials"; Url = "https://www.google.com/search?q=$encoded+step+by+step+tutorial" }
-                @{ Name = "$Category troubleshooting guides"; Url = "https://www.google.com/search?q=$encoded+troubleshooting" }
-            )
-        },
-        @{
-            Name = 'Resources and documentation'
-            Bookmarks = @(
-                @{ Name = "$Category official documentation"; Url = "https://www.google.com/search?q=$encoded+official+documentation" }
-                @{ Name = "$Category curated resources"; Url = "https://www.google.com/search?q=$encoded+resources" }
-                @{ Name = "$Category best practices"; Url = "https://www.google.com/search?q=$encoded+best+practices" }
-            )
-        },
-        @{
-            Name = 'Search engines'
-            Bookmarks = @(
-                @{ Name = "$Category results (Google)"; Url = "https://www.google.com/search?q=$encoded" }
-                @{ Name = "$Category results (DuckDuckGo)"; Url = "https://duckduckgo.com/?q=$encoded" }
-                @{ Name = "$Category results (Bing)"; Url = "https://www.bing.com/search?q=$encoded" }
-                @{ Name = "$Category results (Brave Search)"; Url = "https://search.brave.com/search?q=$encoded" }
-                @{ Name = "$Category results (Ecosia)"; Url = "https://www.ecosia.org/search?q=$encoded" }
-                @{ Name = "$Category results (Startpage)"; Url = "https://www.startpage.com/do/dsearch?query=$encoded" }
-                @{ Name = "Search tools directory (myTech.Today - Tools 2025)"; Url = "https://mytech.today/tools-2025/#search-engines" }
-                @{ Name = "Google search operators (complete list)"; Url = "https://www.imarketingonly.com/google-search-operators-the-complete-list-42-advanced-operators/" }
-                @{ Name = "DuckDuckGo !bang reference"; Url = "https://duckduckgo.com/bang" }
-                @{ Name = "Internet Archive - Wayback Machine"; Url = "https://web.archive.org/" }
-                @{ Name = "Archive.is - single-page snapshots"; Url = "https://archive.is/" }
-            )
-        }
-    )
-
-    # Build bookmark subfolders from the definitions
-    $nodes = @()
-    foreach ($subfolderDef in $subfolderDefinitions) {
-        $subfolderChildren = @()
-
-        foreach ($bookmark in $subfolderDef.Bookmarks) {
-            $node = New-LimitedSearchBookmarkNode -Name $bookmark.Name -Url $bookmark.Url
-            if ($null -ne $node) {
-                $subfolderChildren += $node
-            }
-        }
-
-        # Create the subfolder only if it has children
-        $subfolder = New-BookmarkSubfolder -Name $subfolderDef.Name -Children $subfolderChildren
-        if ($null -ne $subfolder) {
-            $nodes += $subfolder
-        }
-    }
-
-    return $nodes
+    # No curated data found for this category
+    Write-Log "No curated bookmarks found for category '$Category'." -Level WARNING
+    return @()
 }
 
 
 function New-MyTechTodayFolder {
     param([string[]]$Categories)
-
-    # Reset domain usage tracking for this tree build
-    $script:DomainUsage    = @{}
-    $script:DomainUsageAll = @{}
 
     $root = [PSCustomObject]@{ name = 'myTech.Today'; type = 'folder'; children = @() }
 
@@ -592,14 +448,17 @@ function New-MyTechTodayFolder {
     $root.children += (New-BookmarkUrlNode -Name 'myTech.Today tools-2025' -Url 'https://mytech.today/tools-2025')
 
     # Special root-level categories that should appear directly under myTech.Today
-    $rootLevelCategories = @('Media Downloading')
+    $rootLevelCategories = @('News', 'Media Downloading')
 
     foreach ($rc in $rootLevelCategories) {
         if ($Categories -contains $rc) {
-            $catFolder = [PSCustomObject]@{ name = $rc; type = 'folder'; children = @() }
             $links = Get-CategoryBookmarkNodes -Category $rc
-            $catFolder.children += $links
-            $root.children += $catFolder
+            # Only create category folder if there are curated bookmarks
+            if ($links.Count -gt 0) {
+                $catFolder = [PSCustomObject]@{ name = $rc; type = 'folder'; children = @() }
+                $catFolder.children += $links
+                $root.children += $catFolder
+            }
         }
     }
 
@@ -622,13 +481,19 @@ function New-MyTechTodayFolder {
         $groupFolder = [PSCustomObject]@{ name = $groupName; type = 'folder'; children = @() }
 
         foreach ($cat in ($groupedCategories[$groupName] | Sort-Object -Unique)) {
-            $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
             $links = Get-CategoryBookmarkNodes -Category $cat
-            $catFolder.children += $links
-            $groupFolder.children += $catFolder
+            # Only create category folder if there are curated bookmarks
+            if ($links.Count -gt 0) {
+                $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
+                $catFolder.children += $links
+                $groupFolder.children += $catFolder
+            }
         }
 
-        $root.children += $groupFolder
+        # Only add group folder if it has category children
+        if ($groupFolder.children.Count -gt 0) {
+            $root.children += $groupFolder
+        }
     }
 
     $base = Join-Path $env:USERPROFILE 'myTech.Today'
@@ -916,18 +781,6 @@ function Export-FirefoxMyTechTodayHtml {
     $lines += '<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">'
     $lines += '<TITLE>myTech.Today Bookmarks</TITLE>'
     $lines += '<H1>myTech.Today Bookmarks</H1>'
-
-    if ($script:DomainUsageAll -and $script:DomainUsageAll.Count -gt 0) {
-        $lines += '<!-- Domain usage summary (top 20 domains by bookmark count; fallback-generated links only). -->'
-        $rank = 1
-        $topDomains = $script:DomainUsageAll.GetEnumerator() | Sort-Object -Property Value -Descending | Select-Object -First 20
-        foreach ($entry in $topDomains) {
-            $lines += ("<!-- {0,2}. {1} - {2} links -->" -f $rank, $entry.Key, $entry.Value)
-            $rank++
-        }
-        $lines += '<!-- End of domain usage summary -->'
-    }
-
     $lines += '<DL><p>'
     $lines += Convert-NodeToHtml -Node $rootNode -Indent '    '
     $lines += '</DL><p>'
@@ -1110,19 +963,27 @@ function Update-ChromiumBookmarks {
     $json | ConvertTo-Json -Depth 100 | Set-Content -Path $path -Encoding UTF8
 }
 
+# Load curated bookmarks first so we can extract categories from it
+$script:CuratedBookmarks = $null
+Initialize-CuratedBookmarks -Path $CuratedLinksPath
+
+# Get categories from installer
 $categories = Get-InstallerCategories
 if (-not $categories -or $categories.Count -eq 0) {
     $categories = @('Browsers','Development','Productivity','Media','Utilities','Security','Communication','Cloud Storage','Gaming','Education','Finance','Remote Access','Maintenance','Shortcuts')
     Write-Log "Using fallback category list" -Level WARNING
 }
 
-# Ensure Media Downloading curated bookmarks are always available as a category
-if (-not ($categories -contains 'Media Downloading')) {
-    $categories += 'Media Downloading'
+# Merge in any additional categories from curated bookmarks
+# This ensures all categories defined in links-sample.psd1 are included
+if ($script:CuratedBookmarks -is [hashtable]) {
+    foreach ($curatedCategory in $script:CuratedBookmarks.Keys) {
+        if ($categories -notcontains $curatedCategory) {
+            $categories += $curatedCategory
+            Write-Log "Added category '$curatedCategory' from curated bookmarks" -Level INFO
+        }
+    }
 }
-
-$script:CuratedBookmarks = $null
-Initialize-CuratedBookmarks -Path $CuratedLinksPath
 
 $chromiumBrowsers = @('Chrome','Edge','Brave','Vivaldi','Opera','OperaGX','Chromium','UngoogledChromium')
 $firefoxProfileBrowsers = @('Firefox','LibreWolf','TorBrowser','Waterfox','PaleMoon')
