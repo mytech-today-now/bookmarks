@@ -67,7 +67,12 @@ param(
 
     [string]$CuratedLinksPath,
 
-    [switch]$WhatIf
+    [switch]$WhatIf,
+
+    # Performance optimization switches
+    [switch]$SkipFavicons,           # Skip all favicon fetching for maximum speed
+    [int]$FaviconParallelism = 10,   # Number of concurrent favicon downloads (default: 10)
+    [switch]$UseGoogleFavicons       # Use Google's favicon service only (faster, more reliable)
 )
 
 $ErrorActionPreference = 'Stop'
@@ -111,8 +116,19 @@ if (-not $script:LoggingModuleLoaded) {
 # Initialize logging
 # The logging module creates logs at %USERPROFILE%\myTech.Today\logs\bookmarks.md
 # and automatically archives them monthly as bookmarks.YYYY-MM.md
-$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.2.0"
+$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.3.0"
 Write-Log "=== Bookmarks Manager started (Mode=$Mode) ===" -Level INFO
+
+# Store performance flags as script-level variables for access in functions
+$script:SkipFavicons = $SkipFavicons.IsPresent
+$script:UseGoogleFavicons = $UseGoogleFavicons.IsPresent
+$script:FaviconParallelism = $FaviconParallelism
+
+if ($script:SkipFavicons) {
+    Write-Log "Favicon fetching DISABLED for maximum speed" -Level INFO
+} elseif ($script:UseGoogleFavicons) {
+    Write-Log "Using Google Favicon Service only for faster, more reliable icons" -Level INFO
+}
 
 function Get-InstallerCategories {
     $installPath = Join-Path $PSScriptRoot "..\app_installer\install.ps1"
@@ -127,6 +143,503 @@ function Convert-ToFileUrl {
     $p = $Path -replace '\\','/'
     if (-not $p.EndsWith('/')) { $p += '/' }
     "file:///$p"
+}
+
+# Cache for favicon data URIs to avoid repeated downloads
+$script:FaviconCache = @{}
+
+# Cache for domain-level favicon failures to avoid repeated fallback attempts
+$script:DomainFaviconFailures = @{}
+
+# Persistent favicon cache file for cross-session caching
+$script:FaviconCacheFile = Join-Path $env:USERPROFILE 'myTech.Today\cache\favicon-cache.json'
+
+function Initialize-FaviconCache {
+    <#
+    .SYNOPSIS
+        Loads the favicon cache from disk if it exists.
+    #>
+    if (Test-Path $script:FaviconCacheFile) {
+        try {
+            $cached = Get-Content $script:FaviconCacheFile -Raw | ConvertFrom-Json
+            foreach ($prop in $cached.PSObject.Properties) {
+                $script:FaviconCache[$prop.Name] = $prop.Value
+            }
+            Write-Log "Loaded $($script:FaviconCache.Count) cached favicons from disk" -Level INFO
+        }
+        catch {
+            Write-Log "Failed to load favicon cache: $_" -Level WARNING
+        }
+    }
+}
+
+function Save-FaviconCache {
+    <#
+    .SYNOPSIS
+        Saves the favicon cache to disk for future sessions.
+    #>
+    try {
+        $cacheDir = Split-Path $script:FaviconCacheFile -Parent
+        if (-not (Test-Path $cacheDir)) {
+            New-Item -ItemType Directory -Path $cacheDir -Force | Out-Null
+        }
+        # Only save successful fetches (non-null values)
+        $toSave = @{}
+        foreach ($key in $script:FaviconCache.Keys) {
+            if ($script:FaviconCache[$key]) {
+                $toSave[$key] = $script:FaviconCache[$key]
+            }
+        }
+        $toSave | ConvertTo-Json -Depth 2 -Compress | Set-Content $script:FaviconCacheFile -Encoding UTF8
+        Write-Log "Saved $($toSave.Count) favicons to cache" -Level INFO
+    }
+    catch {
+        Write-Log "Failed to save favicon cache: $_" -Level WARNING
+    }
+}
+
+function Get-FaviconUrlForDomain {
+    <#
+    .SYNOPSIS
+        Gets a reliable favicon URL for a domain using Google's service.
+    #>
+    param([string]$Domain)
+
+    if (-not $Domain) { return $null }
+    return "https://www.google.com/s2/favicons?domain=$Domain&sz=32"
+}
+
+function Get-FaviconsBatch {
+    <#
+    .SYNOPSIS
+        Fetches favicons for multiple bookmarks in parallel using runspaces.
+    .DESCRIPTION
+        Uses PowerShell runspaces for true parallel processing, significantly
+        faster than sequential fetching for large bookmark sets.
+    #>
+    param(
+        [array]$Bookmarks,
+        [int]$MaxParallel = 10,
+        [switch]$UseGoogleOnly
+    )
+
+    if ($script:SkipFavicons -or $Bookmarks.Count -eq 0) { return @{} }
+
+    $results = [System.Collections.Concurrent.ConcurrentDictionary[string,string]]::new()
+    $runspacePool = [runspacefactory]::CreateRunspacePool(1, $MaxParallel)
+    $runspacePool.Open()
+
+    $jobs = @()
+    $scriptBlock = {
+        param($Url, $IconUrl, $UseGoogleOnly)
+
+        try {
+            $domain = $null
+            if ($Url -match 'https?://([^/]+)') { $domain = $Matches[1] }
+
+            $faviconUrl = if ($UseGoogleOnly -and $domain) {
+                "https://www.google.com/s2/favicons?domain=$domain&sz=32"
+            } elseif ($IconUrl) {
+                $IconUrl
+            } elseif ($domain) {
+                "https://$domain/favicon.ico"
+            } else {
+                return $null
+            }
+
+            $response = Invoke-WebRequest -Uri $faviconUrl -UseBasicParsing -TimeoutSec 3 -ErrorAction Stop
+            if ($response.Content -and $response.Content.Length -gt 10) {
+                $base64 = [Convert]::ToBase64String($response.Content)
+                return "data:image/x-icon;base64,$base64"
+            }
+        }
+        catch { }
+        return $null
+    }
+
+    Write-Log "Starting parallel favicon fetch for $($Bookmarks.Count) bookmarks (max $MaxParallel concurrent)..." -Level INFO
+    $sw = [System.Diagnostics.Stopwatch]::StartNew()
+
+    foreach ($bookmark in $Bookmarks) {
+        $url = $bookmark.URL
+        $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
+
+        # Skip if already cached
+        $cacheKey = $url
+        if ($script:FaviconCache.ContainsKey($cacheKey) -and $script:FaviconCache[$cacheKey]) {
+            $results[$cacheKey] = $script:FaviconCache[$cacheKey]
+            continue
+        }
+
+        $powershell = [powershell]::Create().AddScript($scriptBlock).AddArgument($url).AddArgument($iconUrl).AddArgument($UseGoogleOnly)
+        $powershell.RunspacePool = $runspacePool
+
+        $jobs += @{
+            PowerShell = $powershell
+            Handle = $powershell.BeginInvoke()
+            Url = $url
+        }
+    }
+
+    # Collect results
+    foreach ($job in $jobs) {
+        try {
+            $result = $job.PowerShell.EndInvoke($job.Handle)
+            if ($result) {
+                $results[$job.Url] = $result
+                $script:FaviconCache[$job.Url] = $result
+            }
+        }
+        catch { }
+        finally {
+            $job.PowerShell.Dispose()
+        }
+    }
+
+    $runspacePool.Close()
+    $runspacePool.Dispose()
+
+    $sw.Stop()
+    Write-Log "Parallel favicon fetch completed: $($results.Count) fetched in $($sw.ElapsedMilliseconds)ms" -Level INFO
+
+    return $results
+}
+
+function Test-IsValidImageBytes {
+    <#
+    .SYNOPSIS
+        Validates that byte array contains actual image data, not HTML or other content.
+    #>
+    param(
+        [byte[]]$Bytes,
+        [int]$MinSize = 100
+    )
+
+    if (-not $Bytes -or $Bytes.Length -lt $MinSize) {
+        return $false
+    }
+
+    # Check for common image magic bytes
+    # PNG: 89 50 4E 47 (‰PNG)
+    # ICO: 00 00 01 00 or 00 00 02 00
+    # GIF: 47 49 46 38 (GIF8)
+    # JPEG: FF D8 FF
+    # BMP: 42 4D (BM)
+    # WebP: 52 49 46 46 (RIFF) followed by WEBP
+    # SVG: starts with < (3C) typically <?xml or <svg
+
+    $isPng = ($Bytes[0] -eq 0x89 -and $Bytes[1] -eq 0x50 -and $Bytes[2] -eq 0x4E -and $Bytes[3] -eq 0x47)
+    $isIco = ($Bytes[0] -eq 0x00 -and $Bytes[1] -eq 0x00 -and ($Bytes[2] -eq 0x01 -or $Bytes[2] -eq 0x02) -and $Bytes[3] -eq 0x00)
+    $isGif = ($Bytes[0] -eq 0x47 -and $Bytes[1] -eq 0x49 -and $Bytes[2] -eq 0x46 -and $Bytes[3] -eq 0x38)
+    $isJpeg = ($Bytes[0] -eq 0xFF -and $Bytes[1] -eq 0xD8 -and $Bytes[2] -eq 0xFF)
+    $isBmp = ($Bytes[0] -eq 0x42 -and $Bytes[1] -eq 0x4D)
+    $isWebP = ($Bytes[0] -eq 0x52 -and $Bytes[1] -eq 0x49 -and $Bytes[2] -eq 0x46 -and $Bytes[3] -eq 0x46)
+
+    # Check for SVG (XML-based, starts with < or whitespace then <)
+    $isSvg = $false
+    $textStart = [System.Text.Encoding]::UTF8.GetString($Bytes[0..([Math]::Min(100, $Bytes.Length - 1))])
+    if ($textStart -match '^\s*<(\?xml|svg|!DOCTYPE\s+svg)') {
+        $isSvg = $true
+    }
+
+    # Check for HTML (which we want to reject)
+    $isHtml = $textStart -match '^\s*<!DOCTYPE\s+html|^\s*<html|^\s*<head|^\s*<body|Just a moment'
+
+    if ($isHtml) {
+        return $false
+    }
+
+    return ($isPng -or $isIco -or $isGif -or $isJpeg -or $isBmp -or $isWebP -or $isSvg)
+}
+
+function Get-DomainFromUrl {
+    <#
+    .SYNOPSIS
+        Extracts the domain from a URL.
+    #>
+    param([string]$Url)
+
+    try {
+        $uri = [System.Uri]::new($Url)
+        return $uri.Host
+    }
+    catch {
+        # Fallback regex extraction
+        if ($Url -match 'https?://([^/]+)') {
+            return $matches[1]
+        }
+        return $null
+    }
+}
+
+function Get-FaviconWithFallback {
+    <#
+    .SYNOPSIS
+        Attempts to fetch a favicon with multiple fallback strategies.
+    .DESCRIPTION
+        Tries the following sources in order:
+        1. Original icon URL from bookmark data
+        2. Common alternative paths on the same domain
+        3. Google's favicon service
+        4. DuckDuckGo's favicon service
+    #>
+    param(
+        [string]$IconUrl,
+        [string]$BookmarkUrl
+    )
+
+    $domain = $null
+
+    # Extract domain from bookmark URL or icon URL
+    if ($BookmarkUrl) {
+        $domain = Get-DomainFromUrl -Url $BookmarkUrl
+    }
+    if (-not $domain -and $IconUrl) {
+        $domain = Get-DomainFromUrl -Url $IconUrl
+    }
+
+    # Check if we've already failed all fallbacks for this domain
+    if ($domain -and $script:DomainFaviconFailures.ContainsKey($domain)) {
+        Write-Log "Skipping favicon fetch for $domain - all fallbacks previously failed" -Level INFO
+        return $null
+    }
+
+    # Build list of URLs to try
+    $urlsToTry = @()
+
+    # 1. Original icon URL (if provided and not already a fallback service)
+    if ($IconUrl -and $IconUrl -notmatch 'google\.com/s2/favicons|icons\.duckduckgo\.com') {
+        $urlsToTry += @{ Url = $IconUrl; Source = "Original" }
+    }
+
+    # 2. Common alternative paths on the domain
+    if ($domain) {
+        $baseUrl = "https://$domain"
+        $alternatives = @(
+            "/favicon.ico",
+            "/favicon.png",
+            "/apple-touch-icon.png",
+            "/apple-touch-icon-precomposed.png"
+        )
+        foreach ($alt in $alternatives) {
+            $altUrl = "$baseUrl$alt"
+            if ($altUrl -ne $IconUrl) {
+                $urlsToTry += @{ Url = $altUrl; Source = "Alternative path" }
+            }
+        }
+
+        # 3. Google's favicon service (reliable fallback)
+        $googleFavicon = "https://www.google.com/s2/favicons?domain=$domain&sz=32"
+        $urlsToTry += @{ Url = $googleFavicon; Source = "Google Favicon Service" }
+
+        # 4. DuckDuckGo's favicon service (another reliable fallback)
+        $ddgFavicon = "https://icons.duckduckgo.com/ip3/$domain.ico"
+        $urlsToTry += @{ Url = $ddgFavicon; Source = "DuckDuckGo Favicon Service" }
+    }
+
+    # Try each URL in order
+    foreach ($urlInfo in $urlsToTry) {
+        $url = $urlInfo.Url
+        $source = $urlInfo.Source
+
+        # Check cache first
+        if ($script:FaviconCache.ContainsKey($url)) {
+            $cached = $script:FaviconCache[$url]
+            if ($cached) {
+                Write-Log "Using cached favicon from $source for: $url" -Level INFO
+                return $cached
+            }
+            # Skip if we've already tried and failed this URL
+            continue
+        }
+
+        $result = Get-FaviconFromUrl -Url $url -Source $source
+        if ($result) {
+            return $result
+        }
+    }
+
+    # All fallbacks failed - mark domain as failed to avoid future attempts
+    if ($domain) {
+        $script:DomainFaviconFailures[$domain] = $true
+        Write-Log "All favicon fallbacks failed for domain: $domain" -Level WARNING
+    }
+
+    return $null
+}
+
+function Get-FaviconFromUrl {
+    <#
+    .SYNOPSIS
+        Fetches a favicon from a specific URL with validation.
+    #>
+    param(
+        [string]$Url,
+        [string]$Source = "Direct"
+    )
+
+    if (-not $Url) { return $null }
+
+    # Check cache first
+    if ($script:FaviconCache.ContainsKey($Url)) {
+        return $script:FaviconCache[$Url]
+    }
+
+    try {
+        Write-Log "Fetching favicon from $Source`: $Url" -Level INFO
+
+        # Download the favicon with appropriate headers
+        $headers = @{
+            'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'Accept' = 'image/*, */*'
+        }
+
+        $response = Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec 5 -Headers $headers -ErrorAction Stop
+
+        # Get content type from headers
+        $contentType = $response.Headers['Content-Type']
+        if ($contentType -is [array]) {
+            $contentType = $contentType[0]
+        }
+
+        $imageBytes = $response.Content
+
+        # Validate response size
+        if (-not $imageBytes -or $imageBytes.Length -lt 10) {
+            throw "Response too small to be a valid image ($($imageBytes.Length) bytes)"
+        }
+
+        # Validate that we got actual image data using magic bytes
+        if (-not (Test-IsValidImageBytes -Bytes $imageBytes -MinSize 10)) {
+            throw "Response does not contain valid image data (failed magic byte check)"
+        }
+
+        # Determine MIME type from magic bytes if Content-Type is missing or generic
+        if (-not $contentType -or $contentType -match 'octet-stream|text/') {
+            $contentType = Get-MimeTypeFromBytes -Bytes $imageBytes -FallbackUrl $Url
+        }
+
+        # Convert to base64
+        $base64 = [Convert]::ToBase64String($imageBytes)
+        $dataUri = "data:$contentType;base64,$base64"
+
+        # Cache the result
+        $script:FaviconCache[$Url] = $dataUri
+
+        Write-Log "Successfully fetched favicon from $Source`: $Url ($($imageBytes.Length) bytes)" -Level INFO
+        return $dataUri
+    }
+    catch {
+        $errorMsg = $_.Exception.Message
+        # Truncate long error messages (e.g., Cloudflare HTML responses)
+        if ($errorMsg.Length -gt 200) {
+            $errorMsg = $errorMsg.Substring(0, 200) + "..."
+        }
+        Write-Log "Failed to fetch favicon from $Source ($Url): $errorMsg" -Level WARNING
+        # Cache the failure to avoid repeated attempts
+        $script:FaviconCache[$Url] = $null
+        return $null
+    }
+}
+
+function Get-MimeTypeFromBytes {
+    <#
+    .SYNOPSIS
+        Determines MIME type from image magic bytes.
+    #>
+    param(
+        [byte[]]$Bytes,
+        [string]$FallbackUrl
+    )
+
+    if ($Bytes.Length -ge 4) {
+        # PNG
+        if ($Bytes[0] -eq 0x89 -and $Bytes[1] -eq 0x50 -and $Bytes[2] -eq 0x4E -and $Bytes[3] -eq 0x47) {
+            return 'image/png'
+        }
+        # ICO
+        if ($Bytes[0] -eq 0x00 -and $Bytes[1] -eq 0x00 -and ($Bytes[2] -eq 0x01 -or $Bytes[2] -eq 0x02) -and $Bytes[3] -eq 0x00) {
+            return 'image/x-icon'
+        }
+        # GIF
+        if ($Bytes[0] -eq 0x47 -and $Bytes[1] -eq 0x49 -and $Bytes[2] -eq 0x46 -and $Bytes[3] -eq 0x38) {
+            return 'image/gif'
+        }
+        # WebP
+        if ($Bytes[0] -eq 0x52 -and $Bytes[1] -eq 0x49 -and $Bytes[2] -eq 0x46 -and $Bytes[3] -eq 0x46) {
+            return 'image/webp'
+        }
+    }
+    if ($Bytes.Length -ge 3) {
+        # JPEG
+        if ($Bytes[0] -eq 0xFF -and $Bytes[1] -eq 0xD8 -and $Bytes[2] -eq 0xFF) {
+            return 'image/jpeg'
+        }
+    }
+    if ($Bytes.Length -ge 2) {
+        # BMP
+        if ($Bytes[0] -eq 0x42 -and $Bytes[1] -eq 0x4D) {
+            return 'image/bmp'
+        }
+    }
+
+    # Check for SVG
+    $textStart = [System.Text.Encoding]::UTF8.GetString($Bytes[0..([Math]::Min(100, $Bytes.Length - 1))])
+    if ($textStart -match '^\s*<(\?xml|svg)') {
+        return 'image/svg+xml'
+    }
+
+    # Fallback: guess from URL extension
+    if ($FallbackUrl -match '\.png(\?|$)') { return 'image/png' }
+    if ($FallbackUrl -match '\.(jpg|jpeg)(\?|$)') { return 'image/jpeg' }
+    if ($FallbackUrl -match '\.gif(\?|$)') { return 'image/gif' }
+    if ($FallbackUrl -match '\.svg(\?|$)') { return 'image/svg+xml' }
+    if ($FallbackUrl -match '\.webp(\?|$)') { return 'image/webp' }
+
+    # Default for .ico files
+    return 'image/x-icon'
+}
+
+function Get-FaviconDataUri {
+    <#
+    .SYNOPSIS
+        Gets a favicon data URI with robust fallback handling.
+    .DESCRIPTION
+        This is the main entry point for favicon fetching. It uses Get-FaviconWithFallback
+        to try multiple sources when the primary icon URL fails.
+        Can be skipped entirely with -SkipFavicons for maximum speed.
+    #>
+    param(
+        [string]$IconUrl,
+        [string]$BookmarkUrl
+    )
+
+    # Skip if favicon fetching is disabled
+    if ($script:SkipFavicons) { return $null }
+
+    if (-not $IconUrl -and -not $BookmarkUrl) { return $null }
+
+    # Check cache first (including URL as cache key)
+    $cacheKey = if ($BookmarkUrl) { $BookmarkUrl } else { $IconUrl }
+    if ($script:FaviconCache.ContainsKey($cacheKey) -and $script:FaviconCache[$cacheKey]) {
+        return $script:FaviconCache[$cacheKey]
+    }
+
+    # Use Google favicon service if enabled (faster and more reliable)
+    if ($script:UseGoogleFavicons -and $BookmarkUrl) {
+        $domain = Get-DomainFromUrl -Url $BookmarkUrl
+        if ($domain) {
+            $googleUrl = "https://www.google.com/s2/favicons?domain=$domain&sz=32"
+            $result = Get-FaviconFromUrl -Url $googleUrl -Source "Google Favicon Service"
+            if ($result) {
+                $script:FaviconCache[$cacheKey] = $result
+                return $result
+            }
+        }
+    }
+
+    # Use the fallback-enabled function
+    return Get-FaviconWithFallback -IconUrl $IconUrl -BookmarkUrl $BookmarkUrl
 }
 
 function New-BookmarkUrlNode {
@@ -312,6 +825,125 @@ function Initialize-CuratedBookmarks {
     Write-Log "No curated bookmark data file found; using abstracted link patterns only." -Level INFO
 }
 
+function Import-ExternalDataSource {
+    <#
+    .SYNOPSIS
+        Loads a single external data source file (.ps1 or .psd1).
+    .DESCRIPTION
+        Handles both .ps1 (script) and .psd1 (data) files.
+        For .psd1 files that fail with Import-PowerShellDataFile, falls back to Invoke-Expression.
+    #>
+    param([string]$Path)
+
+    $ext = [IO.Path]::GetExtension($Path)
+    $data = $null
+
+    if ($ext -ieq '.psd1') {
+        # Try Import-PowerShellDataFile first (safer)
+        try {
+            $data = Import-PowerShellDataFile -LiteralPath $Path
+        }
+        catch {
+            # Fallback to Invoke-Expression for complex nested structures
+            try {
+                $content = Get-Content $Path -Raw -Encoding UTF8
+                $data = Invoke-Expression $content
+            }
+            catch {
+                throw "Failed to parse .psd1 file: $_"
+            }
+        }
+    }
+    elseif ($ext -ieq '.ps1') {
+        $data = & $Path
+    }
+
+    return $data
+}
+
+function Load-ExternalDataSources {
+    <#
+    .SYNOPSIS
+        Loads external data source files (e.g., europe.ps1, asia.psd1) and merges them into curated bookmarks.
+    .DESCRIPTION
+        This function looks for external data files in the script directory and merges their
+        content into the main $script:CuratedBookmarks hashtable. This allows large datasets
+        like regional news sources to be maintained in separate files.
+
+        Supports both .ps1 and .psd1 files. For .psd1 files with deeply nested structures
+        that fail with Import-PowerShellDataFile, automatically falls back to Invoke-Expression.
+    #>
+
+    if (-not $script:CuratedBookmarks) {
+        $script:CuratedBookmarks = @{}
+    }
+
+    # List of external data source files to load (in priority order)
+    # Check for both .ps1 and .psd1 versions
+    $externalSources = @(
+        @{ Name = 'europe'; Extensions = @('.ps1', '.psd1') }
+        @{ Name = 'asia';   Extensions = @('.psd1', '.ps1') }
+        # Add more external data sources here as needed
+        # @{ Name = 'americas'; Extensions = @('.ps1', '.psd1') }
+    )
+
+    $sw = [System.Diagnostics.Stopwatch]::StartNew()
+
+    foreach ($source in $externalSources) {
+        $loaded = $false
+
+        foreach ($ext in $source.Extensions) {
+            if ($loaded) { break }
+
+            $sourceName = "$($source.Name)$ext"
+            $sourcePath = Join-Path $PSScriptRoot $sourceName
+
+            if (-not (Test-Path -LiteralPath $sourcePath)) { continue }
+
+            try {
+                Write-Log "Loading external data source from '$sourceName'..." -Level INFO
+                $loadStart = [System.Diagnostics.Stopwatch]::StartNew()
+
+                $externalData = Import-ExternalDataSource -Path $sourcePath
+
+                $loadStart.Stop()
+
+                if ($externalData -is [hashtable]) {
+                    # Merge the external data into the main curated bookmarks
+                    $addedCount = 0
+                    foreach ($key in $externalData.Keys) {
+                        if ($script:CuratedBookmarks.ContainsKey($key)) {
+                            if ($script:CuratedBookmarks[$key] -is [hashtable] -and $script:CuratedBookmarks[$key].Count -eq 0) {
+                                $script:CuratedBookmarks[$key] = $externalData[$key]
+                                $addedCount++
+                            }
+                        }
+                        else {
+                            $script:CuratedBookmarks[$key] = $externalData[$key]
+                            $addedCount++
+                        }
+                    }
+                    Write-Log "Loaded $addedCount categories from '$sourceName' in $($loadStart.ElapsedMilliseconds)ms" -Level INFO
+                    $loaded = $true
+                }
+                else {
+                    Write-Log "External data source '$sourceName' did not return a hashtable; skipping." -Level WARNING
+                }
+            }
+            catch {
+                Write-Log "Failed to load external data source from '$sourceName': $_" -Level WARNING
+            }
+        }
+
+        if (-not $loaded) {
+            Write-Log "No valid data source found for '$($source.Name)'" -Level INFO
+        }
+    }
+
+    $sw.Stop()
+    Write-Log "External data sources loaded in $($sw.ElapsedMilliseconds)ms" -Level INFO
+}
+
 
 function Get-CategoryBookmarkNodes {
     param(
@@ -349,7 +981,8 @@ function Get-CategoryBookmarkNodes {
 
                             $title = $bookmark.Title
                             $url   = $bookmark.URL
-                            $icon  = $bookmark.Icon
+                            # Handle both 'Icon' (links-sample.psd1, europe.ps1) and 'icon' (asia.psd1) keys
+                            $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
 
                             if ($null -eq $title -or $null -eq $url) { continue }
 
@@ -360,9 +993,15 @@ function Get-CategoryBookmarkNodes {
                             # Expand environment variables in URL
                             $url = [Environment]::ExpandEnvironmentVariables($url)
 
+                            # Fetch favicon and convert to data URI if icon URL is provided
+                            $iconDataUri = $null
+                            if ($iconUrl -or $url) {
+                                $iconDataUri = Get-FaviconDataUri -IconUrl $iconUrl -BookmarkUrl $url
+                            }
+
                             # Create bookmark node with icon if available
-                            if ($icon) {
-                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                            if ($iconDataUri) {
+                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url -Icon $iconDataUri
                             }
                             else {
                                 $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url
@@ -395,7 +1034,8 @@ function Get-CategoryBookmarkNodes {
 
                         $title = $bookmark.Title
                         $url   = $bookmark.URL
-                        $icon  = $bookmark.Icon
+                        # Handle both 'Icon' (links-sample.psd1, europe.ps1) and 'icon' (asia.psd1) keys
+                        $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
 
                         if ($null -eq $title -or $null -eq $url) { continue }
 
@@ -406,9 +1046,15 @@ function Get-CategoryBookmarkNodes {
                         # Expand environment variables in URL (e.g., %USERNAME%, %USERPROFILE%)
                         $url = [Environment]::ExpandEnvironmentVariables($url)
 
+                        # Fetch favicon and convert to data URI if icon URL is provided
+                        $iconDataUri = $null
+                        if ($iconUrl -or $url) {
+                            $iconDataUri = Get-FaviconDataUri -IconUrl $iconUrl -BookmarkUrl $url
+                        }
+
                         # Create bookmark node with icon if available
-                        if ($icon) {
-                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $icon
+                        if ($iconDataUri) {
+                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $iconDataUri
                         }
                         else {
                             $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
@@ -963,9 +1609,17 @@ function Update-ChromiumBookmarks {
     $json | ConvertTo-Json -Depth 100 | Set-Content -Path $path -Encoding UTF8
 }
 
+# Initialize favicon cache from disk (speeds up subsequent runs)
+if (-not $script:SkipFavicons) {
+    Initialize-FaviconCache
+}
+
 # Load curated bookmarks first so we can extract categories from it
 $script:CuratedBookmarks = $null
 Initialize-CuratedBookmarks -Path $CuratedLinksPath
+
+# Load external data sources (e.g., europe.ps1, asia.psd1) and merge into curated bookmarks
+Load-ExternalDataSources
 
 # Get categories from installer
 $categories = Get-InstallerCategories
@@ -1116,5 +1770,9 @@ else {
     }
 }
 
-Write-Log "=== Bookmarks Manager completed (Mode=$Mode) ===" -Level SUCCESS
+# Save favicon cache for future sessions (if we fetched any favicons)
+if (-not $script:SkipFavicons -and $script:FaviconCache.Count -gt 0) {
+    Save-FaviconCache
+}
 
+Write-Log "=== Bookmarks Manager completed (Mode=$Mode) ===" -Level SUCCESS

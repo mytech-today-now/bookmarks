@@ -138,11 +138,13 @@
   <div class="container">
     <h1>myTech.Today Bookmarks Manager</h1>
 
-    <p>A comprehensive PowerShell solution for managing browser bookmarks across multiple browsers on Windows. This toolkit consists of two main components:</p>
+    <p>A comprehensive PowerShell solution for managing browser bookmarks across multiple browsers on Windows. This toolkit consists of several main components:</p>
 
     <ol>
       <li><strong><code>bookmarks.ps1</code></strong> - The main script that manages bookmark installation, removal, and restoration</li>
-      <li><strong><code>links-sample.psd1</code></strong> - A curated collection of 168+ high-quality bookmarks organized into 31 categories</li>
+      <li><strong><code>links-sample.psd1</code></strong> - A curated collection of bookmarks organized into categories</li>
+      <li><strong><code>europe.ps1</code></strong> - European regional news and information sources (39 countries/regions)</li>
+      <li><strong><code>asia.psd1</code></strong> - Asian regional news and information sources (15 countries)</li>
     </ol>
 
     <div class="toc">
@@ -151,6 +153,7 @@
         <li><a href="#overview">Overview</a></li>
         <li><a href="#bookmarks-ps1">File: bookmarks.ps1</a></li>
         <li><a href="#links-sample-psd1">File: links-sample.psd1</a></li>
+        <li><a href="#external-data">External Data Sources</a></li>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#local-resources">Local Resource Links</a></li>
         <li><a href="#safety">Safety and Best Practices</a></li>
@@ -161,19 +164,30 @@
 
     <h2 id="overview">Overview</h2>
 
-    <p>The Bookmarks Manager builds and maintains a consistent <strong>myTech.Today</strong> bookmarks folder across all your browsers. It intelligently uses curated bookmarks from <code>links-sample.psd1</code> when available, and falls back to auto-generated search-based links for categories without curated data.</p>
+    <p>The Bookmarks Manager builds and maintains a consistent <strong>myTech.Today</strong> bookmarks folder across all your browsers. It intelligently uses curated bookmarks from <code>links-sample.psd1</code> when available, merges external data sources (Europe, Asia), and falls back to auto-generated search-based links for categories without curated data.</p>
 
     <h3>Key Features</h3>
     <ul>
       <li><strong>Multi-Browser Support</strong>: Works with Chromium-based browsers (Chrome, Edge, Brave, Vivaldi, Opera), Firefox-family browsers (Firefox, LibreWolf, Waterfox), and HTML-only browsers (Midori, Min)</li>
       <li><strong>Three Operation Modes</strong>: Add, Remove, or Restore bookmark structures</li>
       <li><strong>Curated Bookmarks</strong>: Uses high-quality, hand-picked bookmarks with favicons from <code>links-sample.psd1</code></li>
+      <li><strong>Regional Data Sources</strong>: Includes comprehensive European (39 regions) and Asian (15 countries) news sources</li>
+      <li><strong>Performance Optimizations</strong>: Parallel favicon fetching, persistent caching, and skip-favicon mode for maximum speed</li>
       <li><strong>Auto-Generated Fallback</strong>: Creates search-based bookmark groups for categories without curated data</li>
       <li><strong>Organized Hierarchy</strong>: Bookmarks are organized into topic groups (SoftwareTools, WebServices, Entertainment, Other)</li>
       <li><strong>Local Resource Links</strong>: Includes <code>file:///</code> links to myTech.Today logs, reports, and configuration folders</li>
       <li><strong>Automatic Backups</strong>: Creates timestamped backups before making any changes</li>
       <li><strong>Detailed Logging</strong>: Uses the shared <code>logging.ps1</code> module for comprehensive activity tracking</li>
     </ul>
+
+    <div class="success">
+      <h4>Statistics</h4>
+      <ul>
+        <li><strong>85 Total Categories</strong> (31 from links-sample.psd1 + 39 European regions + 15 Asian countries)</li>
+        <li><strong>3,257 Total Subfolders</strong></li>
+        <li><strong>9,539 Total Bookmarks</strong></li>
+      </ul>
+    </div>
 
     <hr />
 
@@ -228,6 +242,24 @@
           <td>Switch</td>
           <td>(none)</td>
           <td>Shows what would change without modifying any files</td>
+        </tr>
+        <tr>
+          <td><code>-SkipFavicons</code></td>
+          <td>Switch</td>
+          <td>(none)</td>
+          <td>Skip all favicon fetching for maximum speed (~2 seconds for 9,500+ bookmarks)</td>
+        </tr>
+        <tr>
+          <td><code>-UseGoogleFavicons</code></td>
+          <td>Switch</td>
+          <td>(none)</td>
+          <td>Use only Google's favicon service (faster and more reliable than direct fetching)</td>
+        </tr>
+        <tr>
+          <td><code>-FaviconParallelism</code></td>
+          <td>Int</td>
+          <td><code>10</code></td>
+          <td>Number of concurrent favicon downloads when fetching in parallel</td>
         </tr>
       </tbody>
     </table>
@@ -298,6 +330,15 @@
 
 # Add bookmarks using a custom curated links file
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -CuratedLinksPath ".\my-custom-links.psd1"
+
+# FAST MODE: Skip favicon fetching for maximum speed (~2 seconds)
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -SkipFavicons
+
+# Use Google's favicon service only (faster and more reliable)
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -UseGoogleFavicons
+
+# Preview changes without modifying any files
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser Chrome -WhatIf
 
 # Remove the myTech.Today bookmark structure (dry run)
 .\bookmarks\bookmarks.ps1 -Mode Remove -Browser All -WhatIf
@@ -510,6 +551,38 @@ Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
 
     <hr />
 
+    <h2 id="external-data">External Data Sources</h2>
+    <p>The Bookmarks Manager supports loading additional bookmark data from external files. These are automatically merged into the main curated bookmarks when the script runs.</p>
+
+    <h3>File: <code>europe.ps1</code></h3>
+    <p>A PowerShell script file containing European regional news and information sources.</p>
+    <ul>
+      <li><strong>Format</strong>: <code>.ps1</code> script that returns a hashtable</li>
+      <li><strong>Regions</strong>: 39 European countries and organizations (EU, NATO, ICC, B.I.S., individual countries)</li>
+      <li><strong>Content</strong>: News sites, government resources, regional information</li>
+      <li><strong>Size</strong>: ~39,000 lines</li>
+    </ul>
+
+    <h3>File: <code>asia.psd1</code></h3>
+    <p>A PowerShell Data File containing Asian regional news and information sources.</p>
+    <ul>
+      <li><strong>Format</strong>: <code>.psd1</code> data file</li>
+      <li><strong>Countries</strong>: 15 Asian countries (China, Japan, India, South Korea, Indonesia, etc.)</li>
+      <li><strong>Content</strong>: News sites, regional media, government resources</li>
+      <li><strong>Size</strong>: ~11,000 lines</li>
+    </ul>
+    <p class="note"><strong>Note:</strong> The <code>asia.psd1</code> file uses lowercase <code>'icon'</code> key. The script handles both <code>'Icon'</code> and <code>'icon'</code> property names.</p>
+
+    <h3>Adding Custom External Data Sources</h3>
+    <p>To add your own external data source:</p>
+    <ol>
+      <li>Create a <code>.ps1</code> or <code>.psd1</code> file with the same structure as <code>europe.ps1</code> or <code>asia.psd1</code></li>
+      <li>Add the file name to the <code>$externalSources</code> array in <code>bookmarks.ps1</code> (in the <code>Load-ExternalDataSources</code> function)</li>
+      <li>The script will automatically load and merge the data</li>
+    </ol>
+
+    <hr />
+
     <h2 id="requirements">Requirements</h2>
     <ul>
       <li><strong>Operating System</strong>: Windows 10 or later</li>
@@ -619,7 +692,19 @@ Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
 
     <h2>Version History</h2>
     <ul>
-      <li><strong>v1.3.1</strong> (Current)
+      <li><strong>v1.4.0</strong> (Current)
+        <ul>
+          <li><strong>Performance Optimizations</strong>: Added parallel favicon fetching using PowerShell runspaces</li>
+          <li><strong>New Parameters</strong>: <code>-SkipFavicons</code>, <code>-UseGoogleFavicons</code>, <code>-FaviconParallelism</code></li>
+          <li><strong>Persistent Favicon Cache</strong>: Favicons cached to disk at <code>%USERPROFILE%\myTech.Today\cache\favicon-cache.json</code></li>
+          <li><strong>External Data Sources</strong>: Added support for <code>europe.ps1</code> (39 regions) and <code>asia.psd1</code> (15 countries)</li>
+          <li><strong>Improved Data Loading</strong>: Better handling of both <code>.ps1</code> and <code>.psd1</code> external data files</li>
+          <li><strong>Icon Key Compatibility</strong>: Handles both <code>'Icon'</code> and <code>'icon'</code> property names in data files</li>
+          <li><strong>Massive Scale</strong>: Now supports 85 categories, 3,257 subfolders, and 9,539+ bookmarks</li>
+          <li><strong>Speed</strong>: With <code>-SkipFavicons</code>, processes all bookmarks in ~2 seconds</li>
+        </ul>
+      </li>
+      <li><strong>v1.3.1</strong>
         <ul>
           <li>Added support for curated bookmarks via <code>links-sample.psd1</code></li>
           <li>Improved favicon handling with Google's favicon service fallback</li>

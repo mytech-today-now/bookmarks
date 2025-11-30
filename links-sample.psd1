@@ -13,6 +13,13 @@
 # - Each subfolder contains an array of BOOKMARK objects with Title, URL, and Icon properties
 #   These become individual bookmark links within the subfolder
 
+#   Grok:
+#   Business - https://grok.com/share/c2hhcmQtNA_44531d45-4b8c-4571-9566-04be6b67e6c6
+#   Africa - https://grok.com/share/c2hhcmQtNA_93c57c86-01a4-4481-a27b-7423175ba8d4
+#   Asia - https://grok.com/share/c2hhcmQtNA_5e9b1cb0-0f40-41ac-bca1-4a207e8a1a38
+#   Europe - https://grok.com/share/c2hhcmQtNA_bfc2c811-476e-4f74-a6c7-36668d3e28f7
+#
+
 @{
     'News' = @{
         'General News' = @(
@@ -236,826 +243,1390 @@
         }
         'Business News' = @{
             'Retail' = @{
-                'Luxury' = @(
+                'Vloggers' = @(
                     @{
-                        'Title' = 'Luxury Daily'
-                        'URL' = 'https://www.luxurydaily.com/'
-                        'Icon' = 'https://www.luxurydaily.com/favicon.ico'
+                        'Title' = 'Shopify'
+                        'URL' = 'https://www.youtube.com/c/shopify'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Robb Report'
-                        'URL' = 'https://robbreport.com/'
-                        'Icon' = 'https://robbreport.com/favicon.ico'
+                        'Title' = 'Wholesale Ted'
+                        'URL' = 'https://www.youtube.com/channel/UCC8wczy7734jKPhiR2UkS9A'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Luxury Insider'
-                        'URL' = 'https://www.luxuryinsider.com/'
-                        'Icon' = 'https://www.luxuryinsider.com/favicon.ico'
+                        'Title' = 'Oberlo'
+                        'URL' = 'https://www.youtube.com/c/oberlo'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Pursuitist'
-                        'URL' = 'https://pursuitist.com/'
-                        'Icon' = 'https://pursuitist.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Luxury Travel Magazine'
-                        'URL' = 'https://www.luxurytravelmagazine.com/'
-                        'Icon' = 'https://www.luxurytravelmagazine.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Luxe Insider'
-                        'URL' = 'https://theluxurytravelexpert.com/'
-                        'Icon' = 'https://theluxurytravelexpert.com/favicon.ico'
+                        'Title' = 'Neil Patel'
+                        'URL' = 'https://www.youtube.com/neilpatel'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
-                'Department Stores' = @(
-                    @{
-                        'Title' = 'Chain Store Age'
-                        'URL' = 'https://chainstoreage.com/'
-                        'Icon' = 'https://chainstoreage.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail News.AI'
-                        'URL' = 'https://retailnews.ai/'
-                        'Icon' = 'https://retailnews.ai/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Stores Magazine'
-                        'URL' = 'https://www.stores.org/'
-                        'Icon' = 'https://www.stores.org/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail Customer Experience'
-                        'URL' = 'https://www.retailcustomerexperience.com/'
-                        'Icon' = 'https://www.retailcustomerexperience.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail TouchPoints'
-                        'URL' = 'https://www.retailtouchpoints.com/'
-                        'Icon' = 'https://www.retailtouchpoints.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'RIS News'
-                        'URL' = 'https://risnews.com/'
-                        'Icon' = 'https://risnews.com/favicon.ico'
-                    }
-                )
-                'Electronics' = @(
-                    @{
-                        'Title' = 'WIRED'
-                        'URL' = 'https://www.wired.com/'
-                        'Icon' = 'https://www.wired.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'CNET'
-                        'URL' = 'https://www.cnet.com/'
-                        'Icon' = 'https://www.cnet.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Engadget'
-                        'URL' = 'https://www.engadget.com/'
-                        'Icon' = 'https://www.engadget.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'RetailWire'
-                        'URL' = 'https://retailwire.com/'
-                        'Icon' = 'https://retailwire.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'PCMag'
-                        'URL' = 'https://www.pcmag.com/'
-                        'Icon' = 'https://www.pcmag.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Twice'
-                        'URL' = 'https://www.twice.com/'
-                        'Icon' = 'https://www.twice.com/favicon.ico'
-                    }
-                )
-                'Fashion' = @(
-                    @{
-                        'Title' = 'Vogue'
-                        'URL' = 'https://www.vogue.com/'
-                        'Icon' = 'https://www.vogue.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Business of Fashion'
-                        'URL' = 'https://www.businessoffashion.com/'
-                        'Icon' = 'https://www.businessoffashion.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'WWD'
-                        'URL' = 'https://wwd.com/'
-                        'Icon' = 'https://wwd.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Fashion Dive'
-                        'URL' = 'https://www.fashiondive.com/'
-                        'Icon' = 'https://www.fashiondive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Glossy'
-                        'URL' = 'https://www.glossy.co/'
-                        'Icon' = 'https://www.glossy.co/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Who What Wear'
-                        'URL' = 'https://www.whowhatwear.com/'
-                        'Icon' = 'https://www.whowhatwear.com/favicon.ico'
-                    }
-                )
-                'Grocery' = @(
-                    @{
-                        'Title' = 'Grocery Dive'
-                        'URL' = 'https://www.grocerydive.com/'
-                        'Icon' = 'https://www.grocerydive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Supermarket News'
-                        'URL' = 'https://www.supermarketnews.com/'
-                        'Icon' = 'https://www.supermarketnews.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Progressive Grocer'
-                        'URL' = 'https://progressivegrocer.com/'
-                        'Icon' = 'https://progressivegrocer.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Canadian Grocer'
-                        'URL' = 'https://canadiangrocer.com/'
-                        'Icon' = 'https://canadiangrocer.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Shelby Report'
-                        'URL' = 'https://www.theshelbyreport.com/'
-                        'Icon' = 'https://www.theshelbyreport.com/favicon.ico'
-                    }
-                )
-                'E-commerce' = @(
-                    @{
-                        'Title' = 'Retail Dive'
-                        'URL' = 'https://www.retaildive.com/'
-                        'Icon' = 'https://www.retaildive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'NRF'
-                        'URL' = 'https://nrf.com/'
-                        'Icon' = 'https://nrf.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail Gazette'
-                        'URL' = 'https://www.retailgazette.co.uk/'
-                        'Icon' = 'https://www.retailgazette.co.uk/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail Insider'
-                        'URL' = 'https://retail-insider.com/'
-                        'Icon' = 'https://retail-insider.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'EcommerceBytes'
-                        'URL' = 'https://www.ecommercebytes.com/'
-                        'Icon' = 'https://www.ecommercebytes.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Retail Brew'
-                        'URL' = 'https://www.retailbrew.com/'
-                        'Icon' = 'https://www.retailbrew.com/favicon.ico'
-                    }
-                )
+                'Luxury' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Emma Chamberlain'
+                            'URL' = 'https://www.youtube.com/c/EmmaChamberlain'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Mikayla Nogueira'
+                            'URL' = 'https://www.youtube.com/c/MikaylaNogueira'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Safiya Nygaard'
+                            'URL' = 'https://www.youtube.com/user/safiyanygaard'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Remi Bader'
+                            'URL' = 'https://www.youtube.com/c/RemiBader'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Luxury Daily'
+                            'URL' = 'https://www.luxurydaily.com/'
+                            'Icon' = 'https://www.luxurydaily.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Robb Report'
+                            'URL' = 'https://robbreport.com/'
+                            'Icon' = 'https://robbreport.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Luxury Insider'
+                            'URL' = 'https://www.luxuryinsider.com/'
+                            'Icon' = 'https://www.luxuryinsider.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Pursuitist'
+                            'URL' = 'https://pursuitist.com/'
+                            'Icon' = 'https://pursuitist.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Luxury Travel Magazine'
+                            'URL' = 'https://www.luxurytravelmagazine.com/'
+                            'Icon' = 'https://www.luxurytravelmagazine.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Luxe Insider'
+                            'URL' = 'https://theluxurytravelexpert.com/'
+                            'Icon' = 'https://theluxurytravelexpert.com/favicon.ico'
+                        }
+                    )
+                }
+                'Department Stores' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Retail MBA'
+                            'URL' = 'https://www.youtube.com/c/RetailMBA'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Dan Lok'
+                            'URL' = 'https://www.youtube.com/c/DanLok'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Andy Elliott'
+                            'URL' = 'https://www.youtube.com/c/AndyElliott'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'eBay'
+                            'URL' = 'https://www.youtube.com/user/ebay'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Chain Store Age'
+                            'URL' = 'https://chainstoreage.com/'
+                            'Icon' = 'https://chainstoreage.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail News.AI'
+                            'URL' = 'https://retailnews.ai/'
+                            'Icon' = 'https://retailnews.ai/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Stores Magazine'
+                            'URL' = 'https://www.stores.org/'
+                            'Icon' = 'https://www.stores.org/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail Customer Experience'
+                            'URL' = 'https://www.retailcustomerexperience.com/'
+                            'Icon' = 'https://www.retailcustomerexperience.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail TouchPoints'
+                            'URL' = 'https://www.retailtouchpoints.com/'
+                            'Icon' = 'https://www.retailtouchpoints.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'RIS News'
+                            'URL' = 'https://risnews.com/'
+                            'Icon' = 'https://risnews.com/favicon.ico'
+                        }
+                    )
+                }
+                'Electronics' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'ElectroBOOM'
+                            'URL' = 'https://www.youtube.com/c/Electroboom'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'bigclivedotcom'
+                            'URL' = 'https://www.youtube.com/user/bigclivedotcom'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'GreatScott!'
+                            'URL' = 'https://www.youtube.com/c/greatscottlab'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Adafruit Industries'
+                            'URL' = 'https://www.youtube.com/user/adafruit'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'WIRED'
+                            'URL' = 'https://www.wired.com/'
+                            'Icon' = 'https://www.wired.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'CNET'
+                            'URL' = 'https://www.cnet.com/'
+                            'Icon' = 'https://www.cnet.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Engadget'
+                            'URL' = 'https://www.engadget.com/'
+                            'Icon' = 'https://www.engadget.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'RetailWire'
+                            'URL' = 'https://retailwire.com/'
+                            'Icon' = 'https://retailwire.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'PCMag'
+                            'URL' = 'https://www.pcmag.com/'
+                            'Icon' = 'https://www.pcmag.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Twice'
+                            'URL' = 'https://www.twice.com/'
+                            'Icon' = 'https://www.twice.com/favicon.ico'
+                        }
+                    )
+                }
+                'Fashion' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Jose Zuniga'
+                            'URL' = 'https://www.youtube.com/c/JoseZuniga'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Patricia Bright'
+                            'URL' = 'https://www.youtube.com/c/PatriciaBright'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Loey Lane'
+                            'URL' = 'https://www.youtube.com/c/LoeyLane'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Amber Scholl'
+                            'URL' = 'https://www.youtube.com/c/AmberScholl'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Vogue'
+                            'URL' = 'https://www.vogue.com/'
+                            'Icon' = 'https://www.vogue.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Business of Fashion'
+                            'URL' = 'https://www.businessoffashion.com/'
+                            'Icon' = 'https://www.businessoffashion.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'WWD'
+                            'URL' = 'https://wwd.com/'
+                            'Icon' = 'https://wwd.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Fashion Dive'
+                            'URL' = 'https://www.fashiondive.com/'
+                            'Icon' = 'https://www.fashiondive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Glossy'
+                            'URL' = 'https://www.glossy.co/'
+                            'Icon' = 'https://www.glossy.co/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Who What Wear'
+                            'URL' = 'https://www.whowhatwear.com/'
+                            'Icon' = 'https://www.whowhatwear.com/favicon.ico'
+                        }
+                    )
+                }
+                'Grocery' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Joshua Schall'
+                            'URL' = 'https://www.youtube.com/c/JoshuaSchall'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Startup CPG'
+                            'URL' = 'https://www.youtube.com/c/StartupCPG'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Tim Forrest Consulting'
+                            'URL' = 'https://www.youtube.com/c/TimForrestConsulting'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Acosta'
+                            'URL' = 'https://www.youtube.com/c/AcostaSales'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Grocery Dive'
+                            'URL' = 'https://www.grocerydive.com/'
+                            'Icon' = 'https://www.grocerydive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Supermarket News'
+                            'URL' = 'https://www.supermarketnews.com/'
+                            'Icon' = 'https://www.supermarketnews.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Progressive Grocer'
+                            'URL' = 'https://progressivegrocer.com/'
+                            'Icon' = 'https://progressivegrocer.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Canadian Grocer'
+                            'URL' = 'https://canadiangrocer.com/'
+                            'Icon' = 'https://canadiangrocer.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Shelby Report'
+                            'URL' = 'https://www.theshelbyreport.com/'
+                            'Icon' = 'https://www.theshelbyreport.com/favicon.ico'
+                        }
+                    )
+                }
+                'E-commerce' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Shopify'
+                            'URL' = 'https://www.youtube.com/c/shopify'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'BigCommerce'
+                            'URL' = 'https://www.youtube.com/c/BigCommerce'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'HubSpot Marketing'
+                            'URL' = 'https://www.youtube.com/c/HubSpot'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'WooCommerce'
+                            'URL' = 'https://www.youtube.com/c/WooCommerce'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Retail Dive'
+                            'URL' = 'https://www.retaildive.com/'
+                            'Icon' = 'https://www.retaildive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'NRF'
+                            'URL' = 'https://nrf.com/'
+                            'Icon' = 'https://nrf.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail Gazette'
+                            'URL' = 'https://www.retailgazette.co.uk/'
+                            'Icon' = 'https://www.retailgazette.co.uk/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail Insider'
+                            'URL' = 'https://retail-insider.com/'
+                            'Icon' = 'https://retail-insider.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'EcommerceBytes'
+                            'URL' = 'https://www.ecommercebytes.com/'
+                            'Icon' = 'https://www.ecommercebytes.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Retail Brew'
+                            'URL' = 'https://www.retailbrew.com/'
+                            'Icon' = 'https://www.retailbrew.com/favicon.ico'
+                        }
+                    )
+                }
             }
             'Manufacturing' = @{
-                'Aerospace' = @(
+                'Vloggers' = @(
                     @{
-                        'Title' = 'Aerospace Manufacturing'
-                        'URL' = 'https://www.aero-mag.com/'
-                        'Icon' = 'https://www.aero-mag.com/favicon.ico'
+                        'Title' = 'Manufacturing News Network'
+                        'URL' = 'https://www.youtube.com/channel/UCUqct-mYEmRYtnvlTa4ifbQ'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Aviation Week'
-                        'URL' = 'https://aviationweek.com/'
-                        'Icon' = 'https://aviationweek.com/favicon.ico'
+                        'Title' = 'Noria'
+                        'URL' = 'https://www.youtube.com/channel/UCDu0_27OKsKhKdCNIjQi9kg'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'AIAA Industry News'
-                        'URL' = 'https://aiaa.org/news/industry-news'
-                        'Icon' = 'https://aiaa.org/favicon.ico'
+                        'Title' = 'U.S. Department of Labor'
+                        'URL' = 'https://www.youtube.com/user/USDepartmentofLabor'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Defense News'
-                        'URL' = 'https://www.defensenews.com/'
-                        'Icon' = 'https://www.defensenews.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Breaking Defense'
-                        'URL' = 'https://breakingdefense.com/'
-                        'Icon' = 'https://breakingdefense.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'FlightGlobal'
-                        'URL' = 'https://www.flightglobal.com/'
-                        'Icon' = 'https://www.flightglobal.com/favicon.ico'
+                        'Title' = 'The Manufacturer'
+                        'URL' = 'https://www.youtube.com/c/Themanufacturer'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
-                'Energy' = @(
-                    @{
-                        'Title' = 'Canary Media'
-                        'URL' = 'https://www.canarymedia.com/'
-                        'Icon' = 'https://www.canarymedia.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Utility Dive'
-                        'URL' = 'https://www.utilitydive.com/'
-                        'Icon' = 'https://www.utilitydive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'EnergyNow'
-                        'URL' = 'https://energynow.com/'
-                        'Icon' = 'https://energynow.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Heatmap'
-                        'URL' = 'https://heatmap.news/'
-                        'Icon' = 'https://heatmap.news/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'E&E News'
-                        'URL' = 'https://www.eenews.net/'
-                        'Icon' = 'https://www.eenews.net/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'OilPrice.com'
-                        'URL' = 'https://oilprice.com/'
-                        'Icon' = 'https://oilprice.com/favicon.ico'
-                    }
-                )
-                'Electronics' = @(
-                    @{
-                        'Title' = 'EE Times'
-                        'URL' = 'https://www.eetimes.com/'
-                        'Icon' = 'https://www.eetimes.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'SMT Today'
-                        'URL' = 'https://smttoday.com/'
-                        'Icon' = 'https://smttoday.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Electronics Weekly'
-                        'URL' = 'https://www.electronicsweekly.com/news/business/manufacturing/'
-                        'Icon' = 'https://www.electronicsweekly.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Manufacturing Dive'
-                        'URL' = 'https://www.manufacturingdive.com/'
-                        'Icon' = 'https://www.manufacturingdive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'EDN'
-                        'URL' = 'https://www.edn.com/'
-                        'Icon' = 'https://www.edn.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Electronic Design'
-                        'URL' = 'https://www.electronicdesign.com/'
-                        'Icon' = 'https://www.electronicdesign.com/favicon.ico'
-                    }
-                )
-                'Pharmaceuticals' = @(
-                    @{
-                        'Title' = 'Fierce Pharma'
-                        'URL' = 'https://www.fiercepharma.com/'
-                        'Icon' = 'https://www.fiercepharma.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'PharmaVoice'
-                        'URL' = 'https://www.pharmavoice.com/'
-                        'Icon' = 'https://www.pharmavoice.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'BioPharma Dive'
-                        'URL' = 'https://www.biopharmadive.com/'
-                        'Icon' = 'https://www.biopharmadive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Pharmaceutical Online'
-                        'URL' = 'https://www.pharmaceuticalonline.com/'
-                        'Icon' = 'https://www.pharmaceuticalonline.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'European Pharmaceutical Review'
-                        'URL' = 'https://www.europeanpharmaceuticalreview.com/'
-                        'Icon' = 'https://www.europeanpharmaceuticalreview.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'BioSpace'
-                        'URL' = 'https://www.biospace.com/'
-                        'Icon' = 'https://www.biospace.com/favicon.ico'
-                    }
-                )
-                'Automotive' = @(
-                    @{
-                        'Title' = 'Automotive News'
-                        'URL' = 'https://www.autonews.com/'
-                        'Icon' = 'https://www.autonews.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'WardsAuto'
-                        'URL' = 'https://www.wardsauto.com/'
-                        'Icon' = 'https://www.wardsauto.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'MotorTrend Auto News'
-                        'URL' = 'https://www.motortrend.com/auto-news'
-                        'Icon' = 'https://www.motortrend.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Automotive World'
-                        'URL' = 'https://www.automotiveworld.com/'
-                        'Icon' = 'https://www.automotiveworld.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'InsideEVs'
-                        'URL' = 'https://insideevs.com/'
-                        'Icon' = 'https://insideevs.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Jalopnik'
-                        'URL' = 'https://jalopnik.com/'
-                        'Icon' = 'https://jalopnik.com/favicon.ico'
-                    }
-                )
-                'Consumer Goods' = @(
-                    @{
-                        'Title' = 'Consumer Goods Technology'
-                        'URL' = 'https://consumergoods.com/'
-                        'Icon' = 'https://consumergoods.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Manufacturing Today'
-                        'URL' = 'https://manufacturing-today.com/'
-                        'Icon' = 'https://manufacturing-today.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Industry Today'
-                        'URL' = 'https://industrytoday.com/'
-                        'Icon' = 'https://industrytoday.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Food Dive'
-                        'URL' = 'https://www.fooddive.com/'
-                        'Icon' = 'https://www.fooddive.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Packaging World'
-                        'URL' = 'https://www.packworld.com/'
-                        'Icon' = 'https://www.packworld.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Shelby Report'
-                        'URL' = 'https://www.theshelbyreport.com/'
-                        'Icon' = 'https://www.theshelbyreport.com/favicon.ico'
-                    }
-                )
+                'Aerospace' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Mentour Pilot'
+                            'URL' = 'https://www.youtube.com/c/MentourPilot'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Captain Joe'
+                            'URL' = 'https://www.youtube.com/c/CaptainJoe'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Sam Chui'
+                            'URL' = 'https://www.youtube.com/c/SamChui'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'VASAviation'
+                            'URL' = 'https://www.youtube.com/c/VASaviation'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Aerospace Manufacturing'
+                            'URL' = 'https://www.aero-mag.com/'
+                            'Icon' = 'https://www.aero-mag.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Aviation Week'
+                            'URL' = 'https://aviationweek.com/'
+                            'Icon' = 'https://aviationweek.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'AIAA Industry News'
+                            'URL' = 'https://aiaa.org/news/industry-news'
+                            'Icon' = 'https://aiaa.org/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Defense News'
+                            'URL' = 'https://www.defensenews.com/'
+                            'Icon' = 'https://www.defensenews.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Breaking Defense'
+                            'URL' = 'https://breakingdefense.com/'
+                            'Icon' = 'https://breakingdefense.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'FlightGlobal'
+                            'URL' = 'https://www.flightglobal.com/'
+                            'Icon' = 'https://www.flightglobal.com/favicon.ico'
+                        }
+                    )
+                }
+                'Energy' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Will Prowse'
+                            'URL' = 'https://www.youtube.com/c/WillProwse'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Engineering with Rosie'
+                            'URL' = 'https://www.youtube.com/c/EngineeringwithRosie'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Just Have a Think'
+                            'URL' = 'https://www.youtube.com/c/JustHaveaThink'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Clean Energy Reviews'
+                            'URL' = 'https://www.youtube.com/c/CleanEnergyReviews'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Canary Media'
+                            'URL' = 'https://www.canarymedia.com/'
+                            'Icon' = 'https://www.canarymedia.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Utility Dive'
+                            'URL' = 'https://www.utilitydive.com/'
+                            'Icon' = 'https://www.utilitydive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'EnergyNow'
+                            'URL' = 'https://energynow.com/'
+                            'Icon' = 'https://energynow.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Heatmap'
+                            'URL' = 'https://heatmap.news/'
+                            'Icon' = 'https://heatmap.news/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'E&E News'
+                            'URL' = 'https://www.eenews.net/'
+                            'Icon' = 'https://www.eenews.net/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'OilPrice.com'
+                            'URL' = 'https://oilprice.com/'
+                            'Icon' = 'https://oilprice.com/favicon.ico'
+                        }
+                    )
+                }
+                'Electronics' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'ElectroBOOM'
+                            'URL' = 'https://www.youtube.com/c/Electroboom'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'bigclivedotcom'
+                            'URL' = 'https://www.youtube.com/user/bigclivedotcom'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'GreatScott!'
+                            'URL' = 'https://www.youtube.com/c/greatscottlab'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Adafruit Industries'
+                            'URL' = 'https://www.youtube.com/user/adafruit'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'EE Times'
+                            'URL' = 'https://www.eetimes.com/'
+                            'Icon' = 'https://www.eetimes.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'SMT Today'
+                            'URL' = 'https://smttoday.com/'
+                            'Icon' = 'https://smttoday.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Electronics Weekly'
+                            'URL' = 'https://www.electronicsweekly.com/news/business/manufacturing/'
+                            'Icon' = 'https://www.electronicsweekly.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Manufacturing Dive'
+                            'URL' = 'https://www.manufacturingdive.com/'
+                            'Icon' = 'https://www.manufacturingdive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'EDN'
+                            'URL' = 'https://www.edn.com/'
+                            'Icon' = 'https://www.edn.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Electronic Design'
+                            'URL' = 'https://www.electronicdesign.com/'
+                            'Icon' = 'https://www.electronicdesign.com/favicon.ico'
+                        }
+                    )
+                }
+                'Pharmaceuticals' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'AbrahamThePharmacist'
+                            'URL' = 'https://www.youtube.com/c/AbrahamThePharmacist'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Hey Pharmacist'
+                            'URL' = 'https://www.youtube.com/c/HeyPharmacist'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'CVS Pharmacy'
+                            'URL' = 'https://www.youtube.com/user/CVSpharmacy'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Sun Pharma'
+                            'URL' = 'https://www.youtube.com/c/SunPharma'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Fierce Pharma'
+                            'URL' = 'https://www.fiercepharma.com/'
+                            'Icon' = 'https://www.fiercepharma.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'PharmaVoice'
+                            'URL' = 'https://www.pharmavoice.com/'
+                            'Icon' = 'https://www.pharmavoice.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'BioPharma Dive'
+                            'URL' = 'https://www.biopharmadive.com/'
+                            'Icon' = 'https://www.biopharmadive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Pharmaceutical Online'
+                            'URL' = 'https://www.pharmaceuticalonline.com/'
+                            'Icon' = 'https://www.pharmaceuticalonline.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'European Pharmaceutical Review'
+                            'URL' = 'https://www.europeanpharmaceuticalreview.com/'
+                            'Icon' = 'https://www.europeanpharmaceuticalreview.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'BioSpace'
+                            'URL' = 'https://www.biospace.com/'
+                            'Icon' = 'https://www.biospace.com/favicon.ico'
+                        }
+                    )
+                }
+                'Automotive' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Doug DeMuro'
+                            'URL' = 'https://www.youtube.com/c/dougdemuro'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Jay Leno''s Garage'
+                            'URL' = 'https://www.youtube.com/c/JayLenosGarage'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'MotorTrend'
+                            'URL' = 'https://www.youtube.com/c/motortrend'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Hagerty'
+                            'URL' = 'https://www.youtube.com/c/Hagerty'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Automotive News'
+                            'URL' = 'https://www.autonews.com/'
+                            'Icon' = 'https://www.autonews.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'WardsAuto'
+                            'URL' = 'https://www.wardsauto.com/'
+                            'Icon' = 'https://www.wardsauto.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'MotorTrend Auto News'
+                            'URL' = 'https://www.motortrend.com/auto-news'
+                            'Icon' = 'https://www.motortrend.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Automotive World'
+                            'URL' = 'https://www.automotiveworld.com/'
+                            'Icon' = 'https://www.automotiveworld.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'InsideEVs'
+                            'URL' = 'https://insideevs.com/'
+                            'Icon' = 'https://insideevs.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Jalopnik'
+                            'URL' = 'https://jalopnik.com/'
+                            'Icon' = 'https://jalopnik.com/favicon.ico'
+                        }
+                    )
+                }
+                'Consumer Goods' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Joshua Schall'
+                            'URL' = 'https://www.youtube.com/c/JoshuaSchall'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Startup CPG'
+                            'URL' = 'https://www.youtube.com/c/StartupCPG'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The FMCG Guys'
+                            'URL' = 'https://www.youtube.com/c/TheFMCGGuy'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Dr. James Richardson'
+                            'URL' = 'https://www.youtube.com/c/DrJamesRichardson'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Consumer Goods Technology'
+                            'URL' = 'https://consumergoods.com/'
+                            'Icon' = 'https://consumergoods.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Manufacturing Today'
+                            'URL' = 'https://manufacturing-today.com/'
+                            'Icon' = 'https://manufacturing-today.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Industry Today'
+                            'URL' = 'https://industrytoday.com/'
+                            'Icon' = 'https://industrytoday.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Food Dive'
+                            'URL' = 'https://www.fooddive.com/'
+                            'Icon' = 'https://www.fooddive.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Packaging World'
+                            'URL' = 'https://www.packworld.com/'
+                            'Icon' = 'https://www.packworld.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Shelby Report'
+                            'URL' = 'https://www.theshelbyreport.com/'
+                            'Icon' = 'https://www.theshelbyreport.com/favicon.ico'
+                        }
+                    )
+                }
             }
             'Investments' = @{
-                'Real Estate' = @(
+                'Vloggers' = @(
                     @{
-                        'Title' = 'HousingWire'
-                        'URL' = 'https://www.housingwire.com/'
-                        'Icon' = 'https://www.housingwire.com/favicon.ico'
+                        'Title' = 'Yahoo Finance'
+                        'URL' = 'https://www.youtube.com/c/yahoofinance'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Realtor.com'
-                        'URL' = 'https://www.realtor.com/'
-                        'Icon' = 'https://www.realtor.com/favicon.ico'
+                        'Title' = 'WhiteBoard Finance'
+                        'URL' = 'https://www.youtube.com/channel/UCL_v4tC26PvOFytV1_eEVSg'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Inman'
-                        'URL' = 'https://www.inman.com/'
-                        'Icon' = 'https://www.inman.com/favicon.ico'
+                        'Title' = 'The Plain Bagel'
+                        'URL' = 'https://www.youtube.com/theplainbagel'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Bisnow Commercial Real Estate News'
-                        'URL' = 'https://www.bisnow.com/'
-                        'Icon' = 'https://www.bisnow.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Real Deal'
-                        'URL' = 'https://therealdeal.com/'
-                        'Icon' = 'https://therealdeal.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'GlobeSt'
-                        'URL' = 'https://www.globest.com/'
-                        'Icon' = 'https://www.globest.com/favicon.ico'
+                        'Title' = 'Mark Tilbury'
+                        'URL' = 'https://www.youtube.com/marktilbury'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
-                'Alternative' = @(
-                    @{
-                        'Title' = 'Alternative Investment News - InvestmentNews'
-                        'URL' = 'https://www.investmentnews.com/alternatives'
-                        'Icon' = 'https://www.investmentnews.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'AltsWire'
-                        'URL' = 'https://altswire.com/'
-                        'Icon' = 'https://altswire.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Alternatives Watch'
-                        'URL' = 'https://www.alternativeswatch.com/'
-                        'Icon' = 'https://www.alternativeswatch.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Opalesque'
-                        'URL' = 'https://www.opalesque.com/'
-                        'Icon' = 'https://www.opalesque.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'CAIA Blog'
-                        'URL' = 'https://caia.org/blog'
-                        'Icon' = 'https://caia.org/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Kubera Blog'
-                        'URL' = 'https://www.kubera.com/blog'
-                        'Icon' = 'https://www.kubera.com/favicon.ico'
-                    }
-                )
-                'Stocks' = @(
-                    @{
-                        'Title' = 'MarketWatch'
-                        'URL' = 'https://www.marketwatch.com/'
-                        'Icon' = 'https://www.marketwatch.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Morningstar'
-                        'URL' = 'https://www.morningstar.com/'
-                        'Icon' = 'https://www.morningstar.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Investing.com'
-                        'URL' = 'https://www.investing.com/'
-                        'Icon' = 'https://www.investing.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Barron''s'
-                        'URL' = 'https://www.barrons.com/'
-                        'Icon' = 'https://www.barrons.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Wall Street Journal'
-                        'URL' = 'https://www.wsj.com/'
-                        'Icon' = 'https://www.wsj.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Benzinga'
-                        'URL' = 'https://www.benzinga.com/'
-                        'Icon' = 'https://www.benzinga.com/favicon.ico'
-                    }
-                )
-                'Crypto' = @(
-                    @{
-                        'Title' = 'CoinDesk'
-                        'URL' = 'https://www.coindesk.com/'
-                        'Icon' = 'https://www.coindesk.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Block'
-                        'URL' = 'https://www.theblock.co/'
-                        'Icon' = 'https://www.theblock.co/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'U.Today'
-                        'URL' = 'https://u.today/'
-                        'Icon' = 'https://u.today/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'CoinGape'
-                        'URL' = 'https://coingape.com/'
-                        'Icon' = 'https://coingape.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Decrypt'
-                        'URL' = 'https://decrypt.co/'
-                        'Icon' = 'https://decrypt.co/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Bankless'
-                        'URL' = 'https://www.bankless.com/'
-                        'Icon' = 'https://www.bankless.com/favicon.ico'
-                    }
-                )
-                'Start-ups' = @(
-                    @{
-                        'Title' = 'TechCrunch'
-                        'URL' = 'https://techcrunch.com/'
-                        'Icon' = 'https://techcrunch.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'VentureBeat'
-                        'URL' = 'https://venturebeat.com/'
-                        'Icon' = 'https://venturebeat.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Crunchbase News'
-                        'URL' = 'https://news.crunchbase.com/'
-                        'Icon' = 'https://news.crunchbase.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Techstars'
-                        'URL' = 'https://www.techstars.com/'
-                        'Icon' = 'https://www.techstars.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Y Combinator'
-                        'URL' = 'https://www.ycombinator.com/'
-                        'Icon' = 'https://www.ycombinator.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Product Hunt'
-                        'URL' = 'https://www.producthunt.com/'
-                        'Icon' = 'https://www.producthunt.com/favicon.ico'
-                    }
-                )
-                'Bonds' = @(
-                    @{
-                        'Title' = 'Bonds & Rates - CNBC'
-                        'URL' = 'https://www.cnbc.com/bonds/'
-                        'Icon' = 'https://www.cnbc.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Fixed Income - Bloomberg.com'
-                        'URL' = 'https://www.bloomberg.com/fixed-income'
-                        'Icon' = 'https://www.bloomberg.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'The Bond Buyer'
-                        'URL' = 'https://www.bondbuyer.com/'
-                        'Icon' = 'https://www.bondbuyer.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Latest Bond Market News on BondbloX'
-                        'URL' = 'https://bondblox.com/news'
-                        'Icon' = 'https://bondblox.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Global Primary Bond Markets News and Analysis'
-                        'URL' = 'https://www.bondradar.com/'
-                        'Icon' = 'https://www.bondradar.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Fixed Income - Financial Times'
-                        'URL' = 'https://www.ft.com/markets/fixed-income'
-                        'Icon' = 'https://www.ft.com/favicon.ico'
-                    }
-                )
-                'Angel Investing' = @(
-                    @{
-                        'Title' = 'AngelList'
-                        'URL' = 'https://www.angellist.com/'
-                        'Icon' = 'https://www.angellist.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Gust'
-                        'URL' = 'https://gust.com/'
-                        'Icon' = 'https://gust.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Angel Investment Network'
-                        'URL' = 'https://www.angelinvestmentnetwork.us/'
-                        'Icon' = 'https://www.angelinvestmentnetwork.us/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Angel Capital Association'
-                        'URL' = 'https://angelcapitalassociation.org/'
-                        'Icon' = 'https://angelcapitalassociation.org/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Wefunder'
-                        'URL' = 'https://wefunder.com/'
-                        'Icon' = 'https://wefunder.com/favicon.ico'
-                    },
-                    @{
-                        'Title' = 'Republic'
-                        'URL' = 'https://republic.com/'
-                        'Icon' = 'https://republic.com/favicon.ico'
-                    }
-                )
+                'Real Estate' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'BiggerPockets'
+                            'URL' = 'https://www.youtube.com/c/BiggerPockets'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Graham Stephan'
+                            'URL' = 'https://www.youtube.com/c/GrahamStephan'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Ryan Serhant'
+                            'URL' = 'https://www.youtube.com/c/RyanSerhant'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Meet Kevin'
+                            'URL' = 'https://www.youtube.com/c/MeetKevin'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'HousingWire'
+                            'URL' = 'https://www.housingwire.com/'
+                            'Icon' = 'https://www.housingwire.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Realtor.com'
+                            'URL' = 'https://www.realtor.com/'
+                            'Icon' = 'https://www.realtor.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Inman'
+                            'URL' = 'https://www.inman.com/'
+                            'Icon' = 'https://www.inman.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Bisnow Commercial Real Estate News'
+                            'URL' = 'https://www.bisnow.com/'
+                            'Icon' = 'https://www.bisnow.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Real Deal'
+                            'URL' = 'https://therealdeal.com/'
+                            'Icon' = 'https://therealdeal.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'GlobeSt'
+                            'URL' = 'https://www.globest.com/'
+                            'Icon' = 'https://www.globest.com/favicon.ico'
+                        }
+                    )
+                }
+                'Alternative' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Financial Education'
+                            'URL' = 'https://www.youtube.com/c/FinancialEducation'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'WhiteBoard Finance'
+                            'URL' = 'https://www.youtube.com/c/WhiteBoardFinance'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Financial Diet'
+                            'URL' = 'https://www.youtube.com/c/TheFinancialDiet'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Andrei Jikh'
+                            'URL' = 'https://www.youtube.com/c/AndreiJikh'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Alternative Investment News - InvestmentNews'
+                            'URL' = 'https://www.investmentnews.com/alternatives'
+                            'Icon' = 'https://www.investmentnews.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'AltsWire'
+                            'URL' = 'https://altswire.com/'
+                            'Icon' = 'https://altswire.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Alternatives Watch'
+                            'URL' = 'https://www.alternativeswatch.com/'
+                            'Icon' = 'https://www.alternativeswatch.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Opalesque'
+                            'URL' = 'https://www.opalesque.com/'
+                            'Icon' = 'https://www.opalesque.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'CAIA Blog'
+                            'URL' = 'https://caia.org/blog'
+                            'Icon' = 'https://caia.org/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Kubera Blog'
+                            'URL' = 'https://www.kubera.com/blog'
+                            'Icon' = 'https://www.kubera.com/favicon.ico'
+                        }
+                    )
+                }
+                'Stocks' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Sasha Evdakov'
+                            'URL' = 'https://www.youtube.com/c/Tradersfly'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Plain Bagel'
+                            'URL' = 'https://www.youtube.com/c/ThePlainBagel'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Swedish Investor'
+                            'URL' = 'https://www.youtube.com/c/TheSwedishInvestor'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Rayner Teo'
+                            'URL' = 'https://www.youtube.com/c/tradingwithrayner'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'MarketWatch'
+                            'URL' = 'https://www.marketwatch.com/'
+                            'Icon' = 'https://www.marketwatch.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Morningstar'
+                            'URL' = 'https://www.morningstar.com/'
+                            'Icon' = 'https://www.morningstar.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Investing.com'
+                            'URL' = 'https://www.investing.com/'
+                            'Icon' = 'https://www.investing.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Barron''s'
+                            'URL' = 'https://www.barrons.com/'
+                            'Icon' = 'https://www.barrons.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Wall Street Journal'
+                            'URL' = 'https://www.wsj.com/'
+                            'Icon' = 'https://www.wsj.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Benzinga'
+                            'URL' = 'https://www.benzinga.com/'
+                            'Icon' = 'https://www.benzinga.com/favicon.ico'
+                        }
+                    )
+                }
+                'Crypto' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Coin Bureau'
+                            'URL' = 'https://www.youtube.com/c/CoinBureau'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Altcoin Daily'
+                            'URL' = 'https://www.youtube.com/c/AltcoinDailyio'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Andreas Antonopoulos'
+                            'URL' = 'https://www.youtube.com/c/aantonop'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Benjamin Cowen'
+                            'URL' = 'https://www.youtube.com/c/BenjaminCowen'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'CoinDesk'
+                            'URL' = 'https://www.coindesk.com/'
+                            'Icon' = 'https://www.coindesk.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Block'
+                            'URL' = 'https://www.theblock.co/'
+                            'Icon' = 'https://www.theblock.co/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'U.Today'
+                            'URL' = 'https://u.today/'
+                            'Icon' = 'https://u.today/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'CoinGape'
+                            'URL' = 'https://coingape.com/'
+                            'Icon' = 'https://coingape.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Decrypt'
+                            'URL' = 'https://decrypt.co/'
+                            'Icon' = 'https://decrypt.co/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Bankless'
+                            'URL' = 'https://www.bankless.com/'
+                            'Icon' = 'https://www.bankless.com/favicon.ico'
+                        }
+                    )
+                }
+                'Start-ups' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Y Combinator'
+                            'URL' = 'https://www.youtube.com/c/ycombinator'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'GaryVee'
+                            'URL' = 'https://www.youtube.com/c/garyvee'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Tim Ferriss'
+                            'URL' = 'https://www.youtube.com/c/timferriss'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Startup Grind'
+                            'URL' = 'https://www.youtube.com/c/StartupGrind'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'TechCrunch'
+                            'URL' = 'https://techcrunch.com/'
+                            'Icon' = 'https://techcrunch.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'VentureBeat'
+                            'URL' = 'https://venturebeat.com/'
+                            'Icon' = 'https://venturebeat.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Crunchbase News'
+                            'URL' = 'https://news.crunchbase.com/'
+                            'Icon' = 'https://news.crunchbase.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Techstars'
+                            'URL' = 'https://www.techstars.com/'
+                            'Icon' = 'https://www.techstars.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Y Combinator'
+                            'URL' = 'https://www.ycombinator.com/'
+                            'Icon' = 'https://www.ycombinator.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Product Hunt'
+                            'URL' = 'https://www.producthunt.com/'
+                            'Icon' = 'https://www.producthunt.com/favicon.ico'
+                        }
+                    )
+                }
+                'Bonds' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Rob Berger'
+                            'URL' = 'https://www.youtube.com/c/RobBerger'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Business With Brian'
+                            'URL' = 'https://www.youtube.com/c/BusinessWithBrian'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Yahoo Finance'
+                            'URL' = 'https://www.youtube.com/c/yahoofinance'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'CNBC'
+                            'URL' = 'https://www.youtube.com/c/CNBCtelevision'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'Bonds & Rates - CNBC'
+                            'URL' = 'https://www.cnbc.com/bonds/'
+                            'Icon' = 'https://www.cnbc.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Fixed Income - Bloomberg.com'
+                            'URL' = 'https://www.bloomberg.com/fixed-income'
+                            'Icon' = 'https://www.bloomberg.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'The Bond Buyer'
+                            'URL' = 'https://www.bondbuyer.com/'
+                            'Icon' = 'https://www.bondbuyer.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Latest Bond Market News on BondbloX'
+                            'URL' = 'https://bondblox.com/news'
+                            'Icon' = 'https://bondblox.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Global Primary Bond Markets News and Analysis'
+                            'URL' = 'https://www.bondradar.com/'
+                            'Icon' = 'https://www.bondradar.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Fixed Income - Financial Times'
+                            'URL' = 'https://www.ft.com/markets/fixed-income'
+                            'Icon' = 'https://www.ft.com/favicon.ico'
+                        }
+                    )
+                }
+                'Angel Investing' = @{
+                    'Vloggers' = @(
+                        @{
+                            'Title' = 'Y Combinator'
+                            'URL' = 'https://www.youtube.com/c/ycombinator'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'AngelList'
+                            'URL' = 'https://www.youtube.com/c/AngelList'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Naval'
+                            'URL' = 'https://www.youtube.com/c/Naval'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = '20VC'
+                            'URL' = 'https://www.youtube.com/c/20vc'
+                            'Icon' = 'https://www.youtube.com/favicon.ico'
+                        }
+                    )
+                    'Publications' = @(
+                        @{
+                            'Title' = 'AngelList'
+                            'URL' = 'https://www.angellist.com/'
+                            'Icon' = 'https://www.angellist.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Gust'
+                            'URL' = 'https://gust.com/'
+                            'Icon' = 'https://gust.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Angel Investment Network'
+                            'URL' = 'https://www.angelinvestmentnetwork.us/'
+                            'Icon' = 'https://www.angelinvestmentnetwork.us/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Angel Capital Association'
+                            'URL' = 'https://angelcapitalassociation.org/'
+                            'Icon' = 'https://angelcapitalassociation.org/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Wefunder'
+                            'URL' = 'https://wefunder.com/'
+                            'Icon' = 'https://wefunder.com/favicon.ico'
+                        },
+                        @{
+                            'Title' = 'Republic'
+                            'URL' = 'https://republic.com/'
+                            'Icon' = 'https://republic.com/favicon.ico'
+                        }
+                    )
+                }
             }
         }
         'International News' = @{
-            'Africa' = @(
-                @{
-                    'Title' = 'AllAfrica'
-                    'URL' = 'https://allafrica.com/'
-                    'Icon' = 'https://allafrica.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Africanews'
-                    'URL' = 'https://www.africanews.com/'
-                    'Icon' = 'https://www.africanews.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'The Africa Report'
-                    'URL' = 'https://www.theafricareport.com/'
-                    'Icon' = 'https://www.theafricareport.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Mail & Guardian'
-                    'URL' = 'https://mg.co.za/'
-                    'Icon' = 'https://mg.co.za/favicon.ico'
-                },
-                @{
-                    'Title' = 'Daily Maverick'
-                    'URL' = 'https://www.dailymaverick.co.za/'
-                    'Icon' = 'https://www.dailymaverick.co.za/favicon.ico'
-                },
-                @{
-                    'Title' = 'News24 Africa'
-                    'URL' = 'https://www.news24.com/news24/africa'
-                    'Icon' = 'https://www.news24.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'BBC Africa'
-                    'URL' = 'https://www.bbc.com/news/world/africa'
-                    'Icon' = 'https://www.bbc.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Al Jazeera Africa'
-                    'URL' = 'https://www.aljazeera.com/africa/'
-                    'Icon' = 'https://www.aljazeera.com/favicon.ico'
-                }
-            )
-            'Asia' = @(
-                @{
-                    'Title' = 'Asia Times'
-                    'URL' = 'https://asiatimes.com/'
-                    'Icon' = 'https://asiatimes.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'South China Morning Post'
-                    'URL' = 'https://www.scmp.com/news/asia'
-                    'Icon' = 'https://www.scmp.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Nikkei Asia'
-                    'URL' = 'https://asia.nikkei.com/'
-                    'Icon' = 'https://asia.nikkei.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'The Diplomat'
-                    'URL' = 'https://thediplomat.com/'
-                    'Icon' = 'https://thediplomat.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Straits Times Asia'
-                    'URL' = 'https://www.straitstimes.com/asia'
-                    'Icon' = 'https://www.straitstimes.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Hindustan Times'
-                    'URL' = 'https://www.hindustantimes.com/india-news'
-                    'Icon' = 'https://www.hindustantimes.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Japan Times'
-                    'URL' = 'https://www.japantimes.co.jp/news/japan/'
-                    'Icon' = 'https://www.japantimes.co.jp/favicon.ico'
-                },
-                @{
-                    'Title' = 'Korea Herald'
-                    'URL' = 'http://www.koreaherald.com/'
-                    'Icon' = 'http://www.koreaherald.com/favicon.ico'
-                }
-            )
-            'Middle East' = @(
-                @{
-                    'Title' = 'Al Jazeera Middle East'
-                    'URL' = 'https://www.aljazeera.com/middle-east/'
-                    'Icon' = 'https://www.aljazeera.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Middle East Eye'
-                    'URL' = 'https://www.middleeasteye.net/'
-                    'Icon' = 'https://www.middleeasteye.net/favicon.ico'
-                },
-                @{
-                    'Title' = 'Haaretz'
-                    'URL' = 'https://www.haaretz.com/'
-                    'Icon' = 'https://www.haaretz.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Jerusalem Post'
-                    'URL' = 'https://www.jpost.com/Middle-East'
-                    'Icon' = 'https://www.jpost.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Arab News'
-                    'URL' = 'https://www.arabnews.com/middle-east'
-                    'Icon' = 'https://www.arabnews.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Tehran Times'
-                    'URL' = 'https://www.tehrantimes.com/news'
-                    'Icon' = 'https://www.tehrantimes.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Asharq Al-Awsat'
-                    'URL' = 'https://english.aawsat.com/'
-                    'Icon' = 'https://english.aawsat.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'The National UAE'
-                    'URL' = 'https://www.thenationalnews.com/world/mena'
-                    'Icon' = 'https://www.thenationalnews.com/favicon.ico'
-                }
-            )
-            'Europe' = @(
-                @{
-                    'Title' = 'Euronews'
-                    'URL' = 'https://www.euronews.com/'
-                    'Icon' = 'https://www.euronews.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'The Local Europe'
-                    'URL' = 'https://www.thelocal.com/'
-                    'Icon' = 'https://www.thelocal.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Politico Europe'
-                    'URL' = 'https://www.politico.eu/'
-                    'Icon' = 'https://www.politico.eu/favicon.ico'
-                },
-                @{
-                    'Title' = 'DW News'
-                    'URL' = 'https://www.dw.com/en/top-stories/europe/s-1431'
-                    'Icon' = 'https://www.dw.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'France 24'
-                    'URL' = 'https://www.france24.com/en/europe'
-                    'Icon' = 'https://www.france24.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Al Jazeera Europe'
-                    'URL' = 'https://www.aljazeera.com/where/europe/'
-                    'Icon' = 'https://www.aljazeera.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'BBC Europe'
-                    'URL' = 'https://www.bbc.com/news/world/europe'
-                    'Icon' = 'https://www.bbc.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Guardian Europe'
-                    'URL' = 'https://www.theguardian.com/world/europe-news'
-                    'Icon' = 'https://www.theguardian.com/favicon.ico'
-                }
-            )
-            'Latin America' = @(
-                @{
-                    'Title' = 'Reuters Latin America'
-                    'URL' = 'https://www.reuters.com/world/americas/'
-                    'Icon' = 'https://www.reuters.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'BBC Latin America'
-                    'URL' = 'https://www.bbc.com/news/world/latin_america'
-                    'Icon' = 'https://www.bbc.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Al Jazeera Americas'
-                    'URL' = 'https://www.aljazeera.com/where/americas/'
-                    'Icon' = 'https://www.aljazeera.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'The Guardian Latin America'
-                    'URL' = 'https://www.theguardian.com/world/latin-america'
-                    'Icon' = 'https://www.theguardian.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Latin American Herald Tribune'
-                    'URL' = 'https://www.laht.com/'
-                    'Icon' = 'https://www.laht.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Inter Press Service'
-                    'URL' = 'http://www.ipsnews.net/region/latin-america/'
-                    'Icon' = 'http://www.ipsnews.net/favicon.ico'
-                },
-                @{
-                    'Title' = 'Rio Times'
-                    'URL' = 'https://www.riotimesonline.com/'
-                    'Icon' = 'https://www.riotimesonline.com/favicon.ico'
-                },
-                @{
-                    'Title' = 'Mexico News Daily'
-                    'URL' = 'https://mexiconewsdaily.com/'
-                    'Icon' = 'https://mexiconewsdaily.com/favicon.ico'
-                }
-            )
+            'Africa' = @{
+                'News Sites' = @(
+                    @{
+                        'Title' = 'AllAfrica'
+                        'URL' = 'https://allafrica.com/'
+                        'Icon' = 'https://allafrica.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Africanews'
+                        'URL' = 'https://www.africanews.com/'
+                        'Icon' = 'https://www.africanews.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'The Africa Report'
+                        'URL' = 'https://www.theafricareport.com/'
+                        'Icon' = 'https://www.theafricareport.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Mail & Guardian'
+                        'URL' = 'https://mg.co.za/'
+                        'Icon' = 'https://mg.co.za/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Daily Maverick'
+                        'URL' = 'https://www.dailymaverick.co.za/'
+                        'Icon' = 'https://www.dailymaverick.co.za/favicon.ico'
+                    }
+                )
+                'Vloggers' = @(
+                    @{
+                        'Title' = 'Africanews'
+                        'URL' = 'https://www.youtube.com/channel/UC1_E8NeF5QHY2dtdLRBCCLA'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'BBC News Africa'
+                        'URL' = 'https://www.youtube.com/bbcafrica'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'NTV Kenya'
+                        'URL' = 'https://www.youtube.com/c/NTVKenya'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Channels Television'
+                        'URL' = 'https://www.youtube.com/channel/UCEXGDNclvmg6RW0vipJYsTQ'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'SABC News'
+                        'URL' = 'https://www.youtube.com/sabcnews'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    }
+                )
+                'Podcasters' = @(
+                    @{
+                        'Title' = 'Focus on Africa'
+                        'URL' = 'https://www.bbc.co.uk/programmes/p02nrtyw'
+                        'Icon' = 'https://www.bbc.co.uk/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Next Africa'
+                        'URL' = 'https://www.bloomberg.com/podcasts/series/next-africa'
+                        'Icon' = 'https://www.bloomberg.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Africa Daily'
+                        'URL' = 'https://www.bbc.co.uk/programmes/p0925ydp'
+                        'Icon' = 'https://www.bbc.co.uk/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Into Africa'
+                        'URL' = 'https://www.csis.org/podcasts/into-africa'
+                        'Icon' = 'https://www.csis.org/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'The Comb'
+                        'URL' = 'https://www.bbc.co.uk/programmes/p05zghd8'
+                        'Icon' = 'https://www.bbc.co.uk/favicon.ico'
+                   }
+                )
+            }
+            'Asia' = @{  }
+            'Middle East' = @{
+                'News Sites' = @(
+                    @{
+                        'Title' = 'Al Jazeera Middle East'
+                        'URL' = 'https://www.aljazeera.com/middle-east/'
+                        'Icon' = 'https://www.aljazeera.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Middle East Eye'
+                        'URL' = 'https://www.middleeasteye.net/'
+                        'Icon' = 'https://www.middleeasteye.net/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Haaretz'
+                        'URL' = 'https://www.haaretz.com/'
+                        'Icon' = 'https://www.haaretz.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Jerusalem Post'
+                        'URL' = 'https://www.jpost.com/Middle-East'
+                        'Icon' = 'https://www.jpost.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Arab News'
+                        'URL' = 'https://www.arabnews.com/middle-east'
+                        'Icon' = 'https://www.arabnews.com/favicon.ico'
+                    }
+                )
+                'Vloggers' = @(
+                    @{
+                        'Title' = 'Middle East Eye'
+                        'URL' = 'https://www.youtube.com/MiddleEastEye'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'ILTV Israel News'
+                        'URL' = 'https://www.youtube.com/channel/UCuxgEyMeaks7HS5gAw6Tt7w'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Al Jazeera English'
+                        'URL' = 'https://www.youtube.com/aljazeeraenglish'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'TV7 Israel News'
+                        'URL' = 'https://www.youtube.com/c/TV7IsraelNews'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Arab News'
+                        'URL' = 'https://www.youtube.com/channel/UCI8DegIWgK51cGakXcf1dOQ'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    }
+                )
+                'Podcasters' = @(
+                    @{
+                        'Title' = 'Middle East Focus'
+                        'URL' = 'https://www.mei.edu/podcasts/middle-east-focus'
+                        'Icon' = 'https://www.mei.edu/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'The Take'
+                        'URL' = 'https://www.aljazeera.com/thetake/'
+                        'Icon' = 'https://www.aljazeera.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Babel: Translating the Middle East'
+                        'URL' = 'https://www.csis.org/podcasts/babel-translating-middle-east'
+                        'Icon' = 'https://www.csis.org/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Essential Middle East'
+                        'URL' = 'https://www.aljazeera.com/audio/podcasts/essential-middle-east/'
+                        'Icon' = 'https://www.aljazeera.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Trending Middle East'
+                        'URL' = 'https://www.almayadeen.net/podcasts/trending-middle-east'
+                        'Icon' = 'https://www.almayadeen.net/favicon.ico'
+                    }
+                )
+            }
+            'Europe' = @{
+            }
+            'Latin America' = @{
+                'News Sites' = @(
+                    @{
+                        'Title' = 'Reuters Latin America'
+                        'URL' = 'https://www.reuters.com/world/americas/'
+                        'Icon' = 'https://www.reuters.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'BBC Latin America'
+                        'URL' = 'https://www.bbc.com/news/world/latin_america'
+                        'Icon' = 'https://www.bbc.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Al Jazeera Americas'
+                        'URL' = 'https://www.aljazeera.com/where/americas/'
+                        'Icon' = 'https://www.aljazeera.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'The Guardian Latin America'
+                        'URL' = 'https://www.theguardian.com/world/latin-america'
+                        'Icon' = 'https://www.theguardian.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Latin American Herald Tribune'
+                        'URL' = 'https://www.laht.com/'
+                        'Icon' = 'https://www.laht.com/favicon.ico'
+                    }
+                )
+                'Vloggers' = @(
+                    @{
+                        'Title' = 'MILENIO'
+                        'URL' = 'https://www.youtube.com/user/MilenioTV'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'El Universal'
+                        'URL' = 'https://www.youtube.com/user/ElUniversalMexico'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Azteca Noticias'
+                        'URL' = 'https://www.youtube.com/user/AztecaNoticias'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Latinus US'
+                        'URL' = 'https://www.youtube.com/c/LatinusUS'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'UnoTV'
+                        'URL' = 'https://www.youtube.com/user/UnoTV'
+                        'Icon' = 'https://www.youtube.com/favicon.ico'
+                    }
+                )
+                'Podcasters' = @(
+                    @{
+                        'Title' = 'Latin America in Focus'
+                        'URL' = 'https://as-coa.org/podcasts/latin-america-focus'
+                        'Icon' = 'https://as-coa.org/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'The LatinNews Podcast'
+                        'URL' = 'https://www.thelatinnewspodcast.com/'
+                        'Icon' = 'https://www.thelatinnewspodcast.com/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Radio Ambulante'
+                        'URL' = 'https://radioambulante.org/'
+                        'Icon' = 'https://radioambulante.org/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'Latino USA'
+                        'URL' = 'https://www.latinousa.org/'
+                        'Icon' = 'https://www.latinousa.org/favicon.ico'
+                    },
+                    @{
+                        'Title' = 'El Hilo'
+                        'URL' = 'https://www.elfinanciero.com.mx/podcasts/el-hilo/'
+                        'Icon' = 'https://www.elfinanciero.com.mx/favicon.ico'
+                    }
+                )
+            }
         }
         'Opinion and Commentary' = @{
             'Podcasts' = @(
@@ -2293,9 +2864,9 @@
                 'Icon' = 'https://x.ai/favicon.ico'
             },
             @{
-                'Title' = 'Google Bard'
-                'URL' = 'https://bard.google/'
-                'Icon' = 'https://bard.google/favicon.ico'
+                'Title' = 'Google Gemini'
+                'URL' = 'https://gemini.google.com/app'
+                'Icon' = 'https://gemini.google.com/favicon.ico'
             },
             @{
                 'Title' = 'Google NotebookLM'
