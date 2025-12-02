@@ -1,6 +1,5 @@
 ﻿@{
-'Asia' = @{
-    'China' = @{
+'China' = @{
     'Mainstream News Sites' = @(
         @{
             'Title' = 'China Daily'
@@ -27415,7 +27414,6 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    }
     }
 }
 }

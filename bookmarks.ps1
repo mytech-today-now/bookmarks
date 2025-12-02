@@ -880,11 +880,14 @@ function Load-ExternalDataSources {
 
     # List of external data source files to load (in priority order)
     # Check for both .ps1 and .psd1 versions
+    # MergePath: if specified, merge into that nested path (e.g., 'News/International News')
+    #            if not specified, merge at root level
     $externalSources = @(
-        @{ Name = 'europe'; Extensions = @('.ps1', '.psd1') }
-        @{ Name = 'asia';   Extensions = @('.psd1', '.ps1') }
-        # Add more external data sources here as needed
-        # @{ Name = 'americas'; Extensions = @('.ps1', '.psd1') }
+        @{ Name = 'europe';          Extensions = @('.ps1', '.psd1'); MergePath = 'News/International News' }
+        @{ Name = 'asia';            Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'africa';          Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'central_america'; Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'middle_east';     Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
     )
 
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
@@ -909,21 +912,37 @@ function Load-ExternalDataSources {
                 $loadStart.Stop()
 
                 if ($externalData -is [hashtable]) {
-                    # Merge the external data into the main curated bookmarks
+                    # Determine merge target based on MergePath
+                    $mergeTarget = $script:CuratedBookmarks
+                    $mergePath = $source.MergePath
+
+                    if ($mergePath) {
+                        # Navigate to the nested path (e.g., 'News/International News')
+                        $pathParts = $mergePath -split '/'
+                        foreach ($part in $pathParts) {
+                            if (-not $mergeTarget.ContainsKey($part)) {
+                                $mergeTarget[$part] = @{}
+                            }
+                            $mergeTarget = $mergeTarget[$part]
+                        }
+                    }
+
+                    # Merge the external data into the target location
                     $addedCount = 0
                     foreach ($key in $externalData.Keys) {
-                        if ($script:CuratedBookmarks.ContainsKey($key)) {
-                            if ($script:CuratedBookmarks[$key] -is [hashtable] -and $script:CuratedBookmarks[$key].Count -eq 0) {
-                                $script:CuratedBookmarks[$key] = $externalData[$key]
+                        if ($mergeTarget.ContainsKey($key)) {
+                            if ($mergeTarget[$key] -is [hashtable] -and $mergeTarget[$key].Count -eq 0) {
+                                $mergeTarget[$key] = $externalData[$key]
                                 $addedCount++
                             }
                         }
                         else {
-                            $script:CuratedBookmarks[$key] = $externalData[$key]
+                            $mergeTarget[$key] = $externalData[$key]
                             $addedCount++
                         }
                     }
-                    Write-Log "Loaded $addedCount categories from '$sourceName' in $($loadStart.ElapsedMilliseconds)ms" -Level INFO
+                    $mergeInfo = if ($mergePath) { " into '$mergePath'" } else { "" }
+                    Write-Log "Loaded $addedCount categories from '$sourceName'$mergeInfo in $($loadStart.ElapsedMilliseconds)ms" -Level INFO
                     $loaded = $true
                 }
                 else {
