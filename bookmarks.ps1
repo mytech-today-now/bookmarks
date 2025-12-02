@@ -47,10 +47,11 @@
         .\bookmarks\bookmarks.ps1 -Mode Restore -Browser Firefox -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Firefox\places_oyxj9ris.default-release_20250101_120000.sqlite"
 
 .NOTES
-    Version : 1.3.1
+    Version : 1.3.2
     Script  : bookmarks.ps1
     Project : myTech.Today PowerShellScripts
     Author  : Kyle Rode (myTech.Today)
+    LastModified: 2025-12-02 - Enhanced Event Viewer logging with descriptive messages
 #>
 
 
@@ -116,7 +117,7 @@ if (-not $script:LoggingModuleLoaded) {
 # Initialize logging
 # The logging module creates logs at %USERPROFILE%\myTech.Today\logs\bookmarks.md
 # and automatically archives them monthly as bookmarks.YYYY-MM.md
-$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.3.0"
+$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.3.2"
 Write-Log "=== Bookmarks Manager started (Mode=$Mode) ===" -Level INFO
 
 # Store performance flags as script-level variables for access in functions
@@ -1357,18 +1358,27 @@ function Restore-FirefoxBookmarksFromBackup {
     )
 
     if (-not $BackupPath) {
-        Write-Log "Restore mode requires -BackupPath pointing to a Firefox places.sqlite backup file." -Level ERROR
+        Write-Log "Restore mode requires -BackupPath pointing to a Firefox places.sqlite backup file." -Level ERROR `
+            -Context "Attempting to restore $Browser bookmarks from backup" `
+            -Solution "Specify the -BackupPath parameter with a valid path to a places.sqlite backup file created by this script (e.g., places_profilename_20251201_120000.sqlite)" `
+            -Component "Bookmark Restore"
         return
     }
 
     if (-not (Test-Path $BackupPath)) {
-        Write-Log "Backup file not found at $BackupPath" -Level ERROR
+        Write-Log "Backup file not found at $BackupPath" -Level ERROR `
+            -Context "Attempting to restore $Browser bookmarks from backup file" `
+            -Solution "Verify the backup file path is correct. Check %USERPROFILE%\myTech.Today\Backups\$Browser\ for available backup files." `
+            -Component "Bookmark Restore"
         return
     }
 
     $profiles = Get-FirefoxProfilePaths -Browser $Browser
     if (-not $profiles -or $profiles.Count -eq 0) {
-        Write-Log "No $Browser profiles with bookmark databases found; cannot restore from backup." -Level WARNING
+        Write-Log "No $Browser profiles with bookmark databases found; cannot restore from backup." -Level WARNING `
+            -Context "Looking for $Browser profile to restore bookmarks into" `
+            -Solution "Install $Browser browser first, then run the restore command again. Profile data is expected in %APPDATA%\Mozilla\Firefox\Profiles\ or equivalent." `
+            -Component "Bookmark Restore"
         return
     }
 
@@ -1499,18 +1509,27 @@ function Restore-ChromiumBookmarksFromBackup {
     )
 
     if (-not $BackupPath) {
-        Write-Log "Restore mode requires -BackupPath pointing to a JSON backup file." -Level ERROR
+        Write-Log "Restore mode requires -BackupPath pointing to a JSON backup file." -Level ERROR `
+            -Context "Attempting to restore $Browser bookmarks from backup" `
+            -Solution "Specify the -BackupPath parameter with a valid path to a JSON backup file created by this script (e.g., Bookmarks_20251201_120000.json)" `
+            -Component "Bookmark Restore"
         return
     }
 
     if (-not (Test-Path $BackupPath)) {
-        Write-Log "Backup file not found at $BackupPath" -Level ERROR
+        Write-Log "Backup file not found at $BackupPath" -Level ERROR `
+            -Context "Attempting to restore $Browser bookmarks from backup file" `
+            -Solution "Verify the backup file path is correct. Check %USERPROFILE%\myTech.Today\Backups\$Browser\ for available backup files." `
+            -Component "Bookmark Restore"
         return
     }
 
     $profiles = Get-ChromiumProfilePaths -Browser $Browser
     if (-not $profiles -or $profiles.Count -eq 0) {
-        Write-Log "No $Browser profiles with bookmarks found; cannot restore from backup." -Level WARNING
+        Write-Log "No $Browser profiles with bookmarks found; cannot restore from backup." -Level WARNING `
+            -Context "Looking for $Browser profile to restore bookmarks into" `
+            -Solution "Install $Browser browser first, then run the restore command again. Profile data is expected in %LOCALAPPDATA%\Google\Chrome\User Data\ or equivalent." `
+            -Component "Bookmark Restore"
         return
     }
 
@@ -1537,7 +1556,10 @@ function Restore-ChromiumBookmarksFromBackup {
         $null = $backupContent | ConvertFrom-Json
     }
     catch {
-        Write-Log "Backup file at $BackupPath is not valid JSON: $_" -Level ERROR
+        Write-Log "Backup file at $BackupPath is not valid JSON: $_" -Level ERROR `
+            -Context "Validating backup file format before restoring $Browser bookmarks" `
+            -Solution "The backup file appears to be corrupted or in the wrong format. Try a different backup file from %USERPROFILE%\myTech.Today\Backups\$Browser\ or re-create a backup by running the script in Add mode first." `
+            -Component "Bookmark Restore"
         return
     }
 
@@ -1730,7 +1752,10 @@ else {
                     continue
                 }
 
-                Write-Log "No $b profiles with bookmarks found" -Level WARNING
+                Write-Log "No $b profiles with bookmarks found" -Level WARNING `
+                    -Context "Scanning for $b browser profiles containing Bookmarks file" `
+                    -Solution "Install $b browser, or verify that $b user data exists in AppData. For Chromium-based browsers, check %LOCALAPPDATA%\<BrowserName>\User Data\" `
+                    -Component "Browser Profile Detection"
                 continue
             }
 
@@ -1741,7 +1766,10 @@ else {
         elseif ($firefoxProfileBrowsers -contains $b) {
             $profiles = Get-FirefoxProfilePaths -Browser $b
             if (-not $profiles -or $profiles.Count -eq 0) {
-                Write-Log "$b profiles not found; skipping $b" -Level WARNING
+                Write-Log "$b profiles not found; skipping $b" -Level WARNING `
+                    -Context "Scanning for $b browser profiles containing places.sqlite database" `
+                    -Solution "Install $b browser, or verify that $b profile data exists. For Firefox-family browsers, check %APPDATA%\Mozilla\Firefox\Profiles\ or equivalent. An HTML import file will be generated as a fallback." `
+                    -Component "Browser Profile Detection"
                 if ($Mode -eq 'Add') {
                     Export-FirefoxMyTechTodayHtml -Categories $categories -BrowserName $b -WhatIf:$WhatIf
                 }
