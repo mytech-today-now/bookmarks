@@ -51,6 +51,7 @@
     Script  : bookmarks.ps1
     Project : myTech.Today PowerShellScripts
     Author  : Kyle Rode (myTech.Today)
+    Created : 2025-11-16
     LastModified: 2025-12-02 - Enhanced Event Viewer logging with descriptive messages
 #>
 
