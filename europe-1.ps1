@@ -90,7 +90,7 @@
                     'Icon' = 'https://joqalbania.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Koha Jonë'
+                    'Title' = 'Koha Jon'
                     'URL' = 'https://www.kohajone.com/'
                     'Icon' = 'https://www.kohajone.com/favicon.ico'
                 },
@@ -146,7 +146,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Elvis Naçi'
+                    'Title' = 'Elvis Naci'
                     'URL' = 'https://www.youtube.com/@elvisnaci'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -165,7 +165,7 @@
                     'Icon' = 'https://euronews.al/favicon.ico'
                 },
                 @{
-                    'Title' = 'Kreshnikët'
+                    'Title' = 'Kreshnikt'
                     'URL' = 'https://kreshniket.com/'
                     'Icon' = 'https://kreshniket.com/favicon.ico'
                 },
@@ -182,7 +182,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'The Albanian Café'
+                    'Title' = 'The Albanian Cafe'
                     'URL' = 'https://www.thealbaniancafe.com/'
                     'Icon' = 'https://www.thealbaniancafe.com/favicon.ico'
                 },
@@ -433,7 +433,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'The Albanian Café'
+                        'Title' = 'The Albanian Cafe'
                         'URL' = 'https://www.thealbaniancafe.com/'
                         'Icon' = 'https://www.thealbaniancafe.com/favicon.ico'
                     },
@@ -904,12 +904,12 @@
         'Podcasters' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Ö1 Journale'
+                    'Title' = 'o1 Journale'
                     'URL' = 'https://oe1.orf.at/artikel/123456'
                     'Icon' = 'https://orf.at/favicon.ico'
                 },
                 @{
-                    'Title' = 'Ö3 Nachrichten'
+                    'Title' = 'o3 Nachrichten'
                     'URL' = 'https://oe3.orf.at/podcasts/o3-nachrichten'
                     'Icon' = 'https://orf.at/favicon.ico'
                 },
@@ -1356,7 +1356,7 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = "L'Officiel Austria"
+                        'Title' = 'L''Officiel Austria'
                         'URL' = 'https://lofficiel.at/'
                         'Icon' = 'https://lofficiel.at/favicon.ico'
                     },
@@ -1436,7 +1436,7 @@
             'Military' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Militär Aktuell'
+                        'Title' = 'Militr Aktuell'
                         'URL' = 'https://militaeraktuell.at/en/'
                         'Icon' = 'https://militaeraktuell.at/favicon.ico'
                     },
@@ -1451,7 +1451,7 @@
                         'Icon' = 'https://thedefensepost.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Bundesministerium für Landesverteidigung'
+                        'Title' = 'Bundesministerium fur Landesverteidigung'
                         'URL' = 'https://www.bmlv.gv.at/english/'
                         'Icon' = 'https://www.bmlv.gv.at/favicon.ico'
                     }
@@ -1497,7 +1497,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'HEERgehört'
+                        'Title' = 'HEERgehort'
                         'URL' = 'https://spartanat.com/en/heergehoert-der-neue-bundesheer-podcast-1'
                         'Icon' = 'https://spartanat.com/favicon.ico'
                     },
@@ -1539,7 +1539,7 @@
                     'Icon' = 'https://www.faz.net/favicon.ico'
                 },
                 @{
-                    'Title' = 'Süddeutsche Zeitung'
+                    'Title' = 'Suddeutsche Zeitung'
                     'URL' = 'https://www.sueddeutsche.de/'
                     'Icon' = 'https://www.sueddeutsche.de/favicon.ico'
                 },
@@ -1839,7 +1839,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'FC Bayern München'
+                        'Title' = 'FC Bayern Munchen'
                         'URL' = 'https://www.youtube.com/user/FCBayern'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -1989,12 +1989,12 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Dinge Erklärt'
+                        'Title' = 'Dinge Erklrt'
                         'URL' = 'https://www.youtube.com/c/dingeerklart'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Terra X Lesch&Co'
+                        'Title' = 'Terra X Lesch and Co'
                         'URL' = 'https://www.youtube.com/user/TerraX'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2086,12 +2086,12 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = "Merkel's Last Dance"
+                        'Title' = 'Merkel''s Last Dance'
                         'URL' = 'https://podcasts.apple.com/us/podcast/merkel-s-last-dance/id123456789'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Spaßbremse'
+                        'Title' = 'Spabremse'
                         'URL' = 'https://spassbremse.de/'
                         'Icon' = 'https://spassbremse.de/favicon.ico'
                     },
@@ -2115,7 +2115,7 @@
                         'Icon' = 'https://www.elle.de/favicon.ico'
                     },
                     @{
-                        'Title' = "Harper's Bazaar Germany"
+                        'Title' = 'Harper''s Bazaar Germany'
                         'URL' = 'https://www.harpersbazaar.de/'
                         'Icon' = 'https://www.harpersbazaar.de/favicon.ico'
                     },
@@ -2137,7 +2137,7 @@
                         'Icon' = 'https://fashionchangers.de/favicon.ico'
                     },
                     @{
-                        'Title' = 'Très Chic'
+                        'Title' = 'Tres Chic'
                         'URL' = 'https://treschic.de/'
                         'Icon' = 'https://treschic.de/favicon.ico'
                     }
@@ -2310,7 +2310,7 @@
                     'Icon' = 'https://www.mediapart.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Libération'
+                    'Title' = 'Liberation'
                     'URL' = 'https://www.liberation.fr/'
                     'Icon' = 'https://www.liberation.fr/favicon.ico'
                 },
@@ -2342,7 +2342,7 @@
                     'Icon' = 'https://www.blast-info.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Le Vent Se Lève'
+                    'Title' = 'Le Vent Se Leve'
                     'URL' = 'https://lvsl.fr/'
                     'Icon' = 'https://lvsl.fr/favicon.ico'
                 }
@@ -2378,7 +2378,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'HugoDécrypte'
+                    'Title' = 'HugoDecrypte'
                     'URL' = 'https://www.youtube.com/c/HugoDecrypte'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -2393,7 +2393,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Journal l Humanité'
+                    'Title' = 'Journal l Humanite'
                     'URL' = 'https://www.youtube.com/@lhumanitefr'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -2422,7 +2422,7 @@
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Le Téléphone Sonne'
+                    'Title' = 'Le Telephone Sonne'
                     'URL' = 'https://www.radiofrance.fr/franceinter/podcasts/le-telephone-sonne'
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 }
@@ -2439,12 +2439,12 @@
                     'Icon' = 'https://www.nouvellesecoutes.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Choses à Savoir'
+                    'Title' = 'Choses  Savoir'
                     'URL' = 'https://www.radiofrance.fr/franceinfo/podcasts/les-choses-a-savoir'
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Géopolitique'
+                    'Title' = 'Geopolitique'
                     'URL' = 'https://www.radiofrance.fr/franceinter/podcasts/geopolitique'
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 }
@@ -2521,7 +2521,7 @@
                     },
                     @{
                         'Title' = 'J peux Pas J ai Business'
-                        'URL' = 'https://open.spotify.com/show/5z5z5z5z5z5z5z5z5z5z5z'  # Placeholder, actual from search
+                        'URL' = 'https://open.spotify.com/show/5z5z5z5z5z5z5z5z5z5z5z'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
@@ -2614,7 +2614,7 @@
             'Culture' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Télérama'
+                        'Title' = 'Telerama'
                         'URL' = 'https://www.telerama.fr/'
                         'Icon' = 'https://www.telerama.fr/favicon.ico'
                     },
@@ -2636,7 +2636,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Numéro'
+                        'Title' = 'Numero'
                         'URL' = 'https://numero.com/'
                         'Icon' = 'https://numero.com/favicon.ico'
                     },
@@ -2658,7 +2658,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hygiène Mentale'
+                        'Title' = 'Hygiene Mentale'
                         'URL' = 'https://www.youtube.com/c/HygieneMentale'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2733,7 +2733,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Science Étonnante'
+                        'Title' = 'Science etonnante'
                         'URL' = 'https://www.youtube.com/user/scienceetonnante'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2796,12 +2796,12 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Arrêt sur Images'
+                        'Title' = 'Arret sur images'
                         'URL' = 'https://www.arretsurimages.net/'
                         'Icon' = 'https://www.arretsurimages.net/favicon.ico'
                     },
                     @{
-                        'Title' = 'Le Vent Se Lève'
+                        'Title' = 'Le Vent Se Leve'
                         'URL' = 'https://lvsl.fr/'
                         'Icon' = 'https://lvsl.fr/favicon.ico'
                     },
@@ -2813,7 +2813,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'HugoDécrypte'
+                        'Title' = 'HugoDecrypte'
                         'URL' = 'https://www.youtube.com/c/HugoDecrypte'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2828,7 +2828,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Journal l Humanité'
+                        'Title' = 'Journal l Humanite'
                         'URL' = 'https://www.youtube.com/@lhumanitefr'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -2845,7 +2845,7 @@
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Géopolitique'
+                        'Title' = 'Geopolitique'
                         'URL' = 'https://www.radiofrance.fr/franceinter/podcasts/geopolitique'
                         'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                     }
@@ -2886,7 +2886,7 @@
                         'Icon' = 'https://nova.bfmtv.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Stylé'
+                        'Title' = 'Style'
                         'URL' = 'https://style.lemonde.fr/'
                         'Icon' = 'https://style.lemonde.fr/favicon.ico'
                     }
@@ -2903,7 +2903,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Fée Main Couture'
+                        'Title' = 'Fee Main Couture'
                         'URL' = 'https://www.youtube.com/@feemaincouture'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2915,7 +2915,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Stylé.es | Le podcast mode'
+                        'Title' = 'Style.es | Le podcast mode'
                         'URL' = 'https://www.radiofrance.fr/franceculture/podcasts/style-es'
                         'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                     },
@@ -2934,7 +2934,7 @@
             'Military' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Ministère des Armées'
+                        'Title' = 'Ministere des Armees'
                         'URL' = 'https://www.defense.gouv.fr/'
                         'Icon' = 'https://www.defense.gouv.fr/favicon.ico'
                     },
@@ -2949,7 +2949,7 @@
                         'Icon' = 'https://www.rfi.fr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Le Monde Défense'
+                        'Title' = 'Le Monde Defense'
                         'URL' = 'https://www.lemonde.fr/defense/'
                         'Icon' = 'https://www.lemonde.fr/favicon.ico'
                     }
@@ -2961,7 +2961,7 @@
                         'Icon' = 'https://www.iris-france.org/favicon.ico'
                     },
                     @{
-                        'Title' = 'Fondation pour la Recherche Stratégique'
+                        'Title' = 'Fondation pour la Recherche Strategique'
                         'URL' = 'https://www.frstrategie.org/'
                         'Icon' = 'https://www.frstrategie.org/favicon.ico'
                     },
@@ -2973,17 +2973,17 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'L Armée Française'
+                        'Title' = 'L Armee Francaise'
                         'URL' = 'https://www.youtube.com/@larmeefrancaise-frencharmy6115'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Légion Étrangère'
+                        'Title' = 'Legion etrangere'
                         'URL' = 'https://www.youtube.com/user/LegionEtrangereVideos'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armée de Terre'
+                        'Title' = 'Armee de Terre'
                         'URL' = 'https://www.youtube.com/user/ArmeeDeTerre'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -2995,12 +2995,12 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Dans la Tête d un Stratège'
+                        'Title' = 'Dans la Tete d un Stratege'
                         'URL' = 'https://www.radiofrance.fr/franceculture/podcasts/dans-la-tete-d-un-stratege'
                         'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Géopolitique Profonde'
+                        'Title' = 'Geopolitique Profonde'
                         'URL' = 'https://open.spotify.com/show/geopolitique-profonde'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -5066,7 +5066,7 @@
                     },
                     @{
                         'Title' = 'RTL Politiek'
-                        'URL' = 'https://www.youtube.com/user/RTLnieuws/playlists?view=50&sort=dd&shelf_id=PL0F5F3F5F5F5F5F5F'
+                        'URL' = 'https://www.youtube.com/user/RTLnieuws/playlists?view=50%26sort=dd%26shelf_id=PL0F5F3F5F5F5F5F5F'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
@@ -5855,7 +5855,7 @@
                         'Icon' = 'https://fashiontrampa.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Bazerdžan'
+                        'Title' = 'Bazerdan'
                         'URL' = 'https://bazerdzan.com/'
                         'Icon' = 'https://bazerdzan.com/favicon.ico'
                     },
@@ -5872,7 +5872,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Udružene Fashion'
+                        'Title' = 'Udruene Fashion'
                         'URL' = 'https://udruzene.org/'
                         'Icon' = 'https://udruzene.org/favicon.ico'
                     },
@@ -5894,7 +5894,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Bazerdžan Fashion'
+                        'Title' = 'Bazerdan Fashion'
                         'URL' = 'https://www.youtube.com/@bazerdzan'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -6440,7 +6440,7 @@
                 'Mainstream News' = @(
                     @{
                         'Title' = 'BAS News'
-                        'URL' = 'https://www.bas.bg/?page_id=48475&amp;lang=en'
+                        'URL' = 'https://www.bas.bg/?page_id=48475%26amp;lang=en'
                         'Icon' = 'https://www.bas.bg/favicon.ico'
                     },
                     @{
@@ -6621,7 +6621,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Udružene Fashion'
+                        'Title' = 'Udruene Fashion'
                         'URL' = 'https://udruzene.org/'
                         'Icon' = 'https://udruzene.org/favicon.ico'
                     },
@@ -6772,7 +6772,7 @@
                     'Icon' = 'https://www.jutarnji.hr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Večernji list'
+                    'Title' = 'Veernji list'
                     'URL' = 'https://www.vecernji.hr/'
                     'Icon' = 'https://www.vecernji.hr/favicon.ico'
                 },
@@ -7014,7 +7014,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Back2Bulgaria'  # Regional similar
+                        'Title' = 'Back2Bulgaria'
                         'URL' = 'https://open.spotify.com/show/0EExqkUUndeTPrmCkzMPBv'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -7147,7 +7147,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Ingrid in Bosnia'  # Regional
+                        'Title' = 'Ingrid in Bosnia'
                         'URL' = 'https://www.youtube.com/@IngridinBosnia'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -7193,7 +7193,7 @@
                         'Icon' = 'https://hrzz.hr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Ruđer Bošković Institute'
+                        'Title' = 'Ruer Bokovi institute'
                         'URL' = 'https://www.irb.hr/eng/News'
                         'Icon' = 'https://www.irb.hr/favicon.ico'
                     },
@@ -7227,7 +7227,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Universiteit van Nederland'  # Regional similar
+                        'Title' = 'Universiteit van Nederland'
                         'URL' = 'https://www.youtube.com/user/universiteitvannederland'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -7322,7 +7322,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'PolitBulgaria'  # Similar regional
+                        'Title' = 'PolitBulgaria'
                         'URL' = 'https://www.youtube.com/channel/UCVyqVi2q9MKmTssZqqGN0kw'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -7402,7 +7402,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Fashion Days Bulgaria'  # Regional
+                        'Title' = 'Fashion Days Bulgaria'
                         'URL' = 'https://www.youtube.com/channel/UCIc42ZRc0vQ7I1la8A6_FQw'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -8097,7 +8097,7 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = "L'Officiel Cyprus"
+                        'Title' = 'L''Officiel Cyprus'
                         'URL' = 'https://lofficiel.cy/'
                         'Icon' = 'https://lofficiel.cy/favicon.ico'
                     },
@@ -8217,7 +8217,7 @@
                 'Vloggers' = @(
                     @{
                         'Title' = 'Cyprus Armed Forces'
-                        'URL' = 'https://www.youtube.com/user/MorhHrvatska'  # Adapted from similar
+                        'URL' = 'https://www.youtube.com/user/MorhHrvatska'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
@@ -8270,22 +8270,22 @@
                     'Icon' = 'https://www.novinky.cz/favicon.ico'
                 },
                 @{
-                    'Title' = 'Seznam Zprávy'
+                    'Title' = 'Seznam Zprvy'
                     'URL' = 'https://www.seznamzpravy.cz/'
                     'Icon' = 'https://www.seznamzpravy.cz/favicon.ico'
                 },
                 @{
-                    'Title' = 'ČT24'
+                    'Title' = 'T24'
                     'URL' = 'https://ct24.ceskatelevize.cz/'
                     'Icon' = 'https://ct24.ceskatelevize.cz/favicon.ico'
                 },
                 @{
-                    'Title' = 'Aktuálně.cz'
+                    'Title' = 'Aktuln.cz'
                     'URL' = 'https://zpravy.aktualne.cz/'
                     'Icon' = 'https://zpravy.aktualne.cz/favicon.ico'
                 },
                 @{
-                    'Title' = 'Deník N'
+                    'Title' = 'Denk N'
                     'URL' = 'https://denikn.cz/'
                     'Icon' = 'https://denikn.cz/favicon.ico'
                 },
@@ -8324,7 +8324,7 @@
             )
             'Counter Culture' = @(
                 @{
-                    'Title' = 'Hlídacípes.org'
+                    'Title' = 'Hldacpes.org'
                     'URL' = 'https://www.hlidacipes.org/'
                     'Icon' = 'https://www.hlidacipes.org/favicon.ico'
                 },
@@ -8343,12 +8343,12 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'ČT24'
+                    'Title' = 'T24'
                     'URL' = 'https://www.youtube.com/user/CT24'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Seznam Zprávy'
+                    'Title' = 'Seznam Zprvy'
                     'URL' = 'https://www.youtube.com/user/SeznamZPRAVY'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -8358,24 +8358,24 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Aktuálně.cz'
+                    'Title' = 'Aktuln.cz'
                     'URL' = 'https://www.youtube.com/user/Aktualnecz'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Deník N'
+                    'Title' = 'Denk N'
                     'URL' = 'https://www.youtube.com/user/DenikN'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Životy slavných'
+                    'Title' = 'ivoty slavnch'
                     'URL' = 'https://www.youtube.com/c/Zivotyslavnych'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jirka vysvětluje věci'
+                    'Title' = 'Jirka vysvtluje vci'
                     'URL' = 'https://www.youtube.com/c/Jirkavysvetlujevice'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -8414,14 +8414,14 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Deep Talks – ENG'
+                    'Title' = 'Deep Talks  ENG'
                     'URL' = 'https://open.spotify.com/show/deep-talks-eng'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 }
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Šťastný podcast'
+                    'Title' = 'astn podcast'
                     'URL' = 'https://open.spotify.com/show/stastny-podcast'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -8446,7 +8446,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hospodářské noviny'
+                        'Title' = 'Hospodske noviny'
                         'URL' = 'https://hn.cz/'
                         'Icon' = 'https://hn.cz/favicon.ico'
                     },
@@ -8456,7 +8456,7 @@
                         'Icon' = 'https://www.e15.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Peníze.cz'
+                        'Title' = 'Penze.cz'
                         'URL' = 'https://www.penize.cz/'
                         'Icon' = 'https://www.penize.cz/favicon.ico'
                     },
@@ -8592,7 +8592,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'KUDY BĚŽÍ ZAJÍC'
+                        'Title' = 'KUDY B ZAJC'
                         'URL' = 'https://open.spotify.com/show/kudy-bez-i-zajic'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -8621,7 +8621,7 @@
                         'Icon' = 'https://www.reflex.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Týden'
+                        'Title' = 'Tden'
                         'URL' = 'https://www.tyden.cz/rubriky/kultura'
                         'Icon' = 'https://www.tyden.cz/favicon.ico'
                     }
@@ -8638,7 +8638,7 @@
                         'Icon' = 'https://hostnimagazin.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Kulturní noviny'
+                        'Title' = 'Kulturn noviny'
                         'URL' = 'https://kulturninoviny.cz/'
                         'Icon' = 'https://kulturninoviny.cz/favicon.ico'
                     }
@@ -8686,7 +8686,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Věda v Česku'
+                        'Title' = 'Vda v esku'
                         'URL' = 'https://vedavesku.cz/'
                         'Icon' = 'https://vedavesku.cz/favicon.ico'
                     },
@@ -8708,7 +8708,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'DeepTechNews Bulgaria'  # Regional adapt
+                        'Title' = 'DeepTechNews Bulgaria'
                         'URL' = 'https://deeptechnews.eu/tag/czechia/'
                         'Icon' = 'https://deeptechnews.eu/favicon.ico'
                     },
@@ -8725,7 +8725,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Jirka vysvětluje věci'
+                        'Title' = 'Jirka vysvtluje vci'
                         'URL' = 'https://www.youtube.com/c/Jirkavysvetlujevice'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -8747,7 +8747,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Věda na dosah'
+                        'Title' = 'Vda na dosah'
                         'URL' = 'https://www.avcr.cz/en/public/A-V-Projects/Podcasts/'
                         'Icon' = 'https://www.avcr.cz/favicon.ico'
                     },
@@ -8766,12 +8766,12 @@
             'Politics' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'České noviny'
+                        'Title' = 'eske noviny'
                         'URL' = 'https://www.ceskenoviny.cz/'
                         'Icon' = 'https://www.ceskenoviny.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Lidové noviny'
+                        'Title' = 'Lidove noviny'
                         'URL' = 'https://www.lidovky.cz/'
                         'Icon' = 'https://www.lidovky.cz/favicon.ico'
                     },
@@ -8781,7 +8781,7 @@
                         'Icon' = 'https://www.mfcr.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Právo'
+                        'Title' = 'Prvo'
                         'URL' = 'https://www.pravo.cz/'
                         'Icon' = 'https://www.pravo.cz/favicon.ico'
                     }
@@ -8798,14 +8798,14 @@
                         'Icon' = 'https://www.echo24.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Seznam Zprávy Politics'
+                        'Title' = 'Seznam Zprvy Politics'
                         'URL' = 'https://www.seznamzpravy.cz/clanek/politika'
                         'Icon' = 'https://www.seznamzpravy.cz/favicon.ico'
                     }
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'PolitBulgaria'  # Adapt regional
+                        'Title' = 'PolitBulgaria'
                         'URL' = 'https://www.youtube.com/channel/UCVyqVi2q9MKmTssZqqGN0kw'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -8832,7 +8832,7 @@
                         'Icon' = 'https://www.denikn.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'Šťastný podcast'
+                        'Title' = 'astn podcast'
                         'URL' = 'https://open.spotify.com/show/stastny-podcast'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -8931,7 +8931,7 @@
                         'Icon' = 'https://www.czdefence.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armádní zpravodaj'
+                        'Title' = 'Armdn zpravodaj'
                         'URL' = 'https://www.armadni.cz/'
                         'Icon' = 'https://www.armadni.cz/favicon.ico'
                     },
@@ -8941,7 +8941,7 @@
                         'Icon' = 'https://www.mo.gov.cz/favicon.ico'
                     },
                     @{
-                        'Title' = 'AČR'
+                        'Title' = 'AR'
                         'URL' = 'https://www.army.cz/en/'
                         'Icon' = 'https://www.army.cz/favicon.ico'
                     }
@@ -9078,7 +9078,7 @@
                     'Icon' = 'https://www.zetland.dk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Tænk'
+                    'Title' = 'Tnk'
                     'URL' = 'https://taenk.dk/'
                     'Icon' = 'https://taenk.dk/favicon.ico'
                 },
@@ -9134,7 +9134,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'David Jæger'
+                    'Title' = 'David Jger'
                     'URL' = 'https://www.youtube.com/@davidjaeger'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -9143,12 +9143,12 @@
         'Podcasters' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Småt Brændbart'
+                    'Title' = 'Smt Brndbart'
                     'URL' = 'https://podcasts.apple.com/dk/podcast/smat-braendbart/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Hårde Odds'
+                    'Title' = 'Hrde Odds'
                     'URL' = 'https://open.spotify.com/show/harde-odds'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -9180,12 +9180,12 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Her Går Det Godt'
+                    'Title' = 'Her Gr Det Godt'
                     'URL' = 'https://open.spotify.com/show/her-gar-det-godt'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Verden ifølge Gram'
+                    'Title' = 'Verden iflge Gram'
                     'URL' = 'https://open.spotify.com/show/verden-ifølge-gram'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 }
@@ -9195,7 +9195,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Børsen'
+                        'Title' = 'Brsen'
                         'URL' = 'https://borsen.dk/'
                         'Icon' = 'https://borsen.dk/favicon.ico'
                     },
@@ -9457,7 +9457,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Forskningsfortællinger'
+                        'Title' = 'Forskningsfortllinger'
                         'URL' = 'https://sciencenews.dk/en/category/podcasts'
                         'Icon' = 'https://sciencenews.dk/favicon.ico'
                     },
@@ -9496,7 +9496,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Forskningsfortællinger'
+                        'Title' = 'Forskningsfortllinger'
                         'URL' = 'https://sciencenews.dk/en/category/podcasts'
                         'Icon' = 'https://sciencenews.dk/favicon.ico'
                     },
@@ -9506,7 +9506,7 @@
                         'Icon' = 'https://www.scienceandcocktails.org/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hjernekassen på P1'
+                        'Title' = 'Hjernekassen p P1'
                         'URL' = 'https://open.spotify.com/show/hjernekassen-pa-p1'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     }
@@ -9547,7 +9547,7 @@
                         'Icon' = 'https://www.zetland.dk/favicon.ico'
                     },
                     @{
-                        'Title' = 'Tænk Politik'
+                        'Title' = 'Tnk Politik'
                         'URL' = 'https://taenk.dk/politik'
                         'Icon' = 'https://taenk.dk/favicon.ico'
                     }
@@ -9564,7 +9564,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'David Jæger'
+                        'Title' = 'David Jger'
                         'URL' = 'https://www.youtube.com/@davidjaeger'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -9724,7 +9724,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Army of the Czech Republic'  # Similar regional
+                        'Title' = 'Army of the Czech Republic'
                         'URL' = 'https://www.youtube.com/c/ArmyCzechRepublic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -9773,12 +9773,12 @@
                     'Icon' = 'https://news.err.ee/favicon.ico'
                 },
                 @{
-                    'Title' = 'Õhtuleht'
+                    'Title' = 'htuleht'
                     'URL' = 'https://www.ohtuleht.ee/'
                     'Icon' = 'https://www.ohtuleht.ee/favicon.ico'
                 },
                 @{
-                    'Title' = 'Eesti Päevaleht'
+                    'Title' = 'Eesti Pevaleht'
                     'URL' = 'https://epl.delfi.ee/'
                     'Icon' = 'https://epl.delfi.ee/favicon.ico'
                 },
@@ -9788,7 +9788,7 @@
                     'Icon' = 'https://maaleht.ee/favicon.ico'
                 },
                 @{
-                    'Title' = 'Lääne Elu'
+                    'Title' = 'Lne Elu'
                     'URL' = 'https://www.laanelyu.ee/'
                     'Icon' = 'https://www.laanelyu.ee/favicon.ico'
                 }
@@ -9810,7 +9810,7 @@
                     'Icon' = 'https://estonianworld.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Vaba Eesti Sõna'
+                    'Title' = 'Vaba Eesti Sna'
                     'URL' = 'https://www.vabaeestisona.com/'
                     'Icon' = 'https://www.vabaeestisona.com/favicon.ico'
                 },
@@ -9924,7 +9924,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Kuula rändajat'
+                    'Title' = 'Kuula rndajat'
                     'URL' = 'https://open.spotify.com/show/kuula-randajat'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -9934,7 +9934,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Müstiline Venemaa'
+                    'Title' = 'Mustiline Venemaa'
                     'URL' = 'https://open.spotify.com/show/mustiline-venemaa'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 }
@@ -9944,7 +9944,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Äripäev'
+                        'Title' = 'ripev'
                         'URL' = 'https://www.aripaev.ee/'
                         'Icon' = 'https://www.aripaev.ee/favicon.ico'
                     },
@@ -10377,7 +10377,7 @@
                     },
                     @{
                         'Title' = 'Madame Estonia'
-                        'URL' = 'https://madamebulgaria.com/'  # Similar regional
+                        'URL' = 'https://madamebulgaria.com/'
                         'Icon' = 'https://madamebulgaria.com/favicon.ico'
                     }
                 )
@@ -10589,7 +10589,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Kuula rändajat'
+                    'Title' = 'Kuula rndajat'
                     'URL' = 'https://open.spotify.com/show/kuula-randajat'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -10599,7 +10599,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Müstiline Venemaa'
+                    'Title' = 'Mustiline Venemaa'
                     'URL' = 'https://open.spotify.com/show/mustiline-venemaa'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 }
@@ -10609,7 +10609,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Äripäev'
+                        'Title' = 'ripev'
                         'URL' = 'https://www.aripaev.ee/'
                         'Icon' = 'https://www.aripaev.ee/favicon.ico'
                     },
@@ -11042,7 +11042,7 @@
                     },
                     @{
                         'Title' = 'Madame Estonia'
-                        'URL' = 'https://madamebulgaria.com/'  # Similar regional
+                        'URL' = 'https://madamebulgaria.com/'
                         'Icon' = 'https://madamebulgaria.com/favicon.ico'
                     }
                 )
@@ -11246,7 +11246,7 @@
                     'Icon' = 'https://www.information.dk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Tænk'
+                    'Title' = 'Tnk'
                     'URL' = 'https://taenk.dk/'
                     'Icon' = 'https://taenk.dk/favicon.ico'
                 }
@@ -11282,7 +11282,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Ville Mäkipelto'
+                    'Title' = 'Ville Mkipelto'
                     'URL' = 'https://www.youtube.com/@villemakipelto'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -11297,7 +11297,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Ali Leiniö'
+                    'Title' = 'Ali Leinio'
                     'URL' = 'https://www.youtube.com/@alileinio'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -11321,12 +11321,12 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Sijoituskästi'
+                    'Title' = 'Sijoitusksti'
                     'URL' = 'https://podcasts.apple.com/us/podcast/sijoituskasti/id1609640413'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jäljillä'
+                    'Title' = 'Jljill'
                     'URL' = 'https://podcasts.apple.com/us/podcast/jaljilla/id1627756227'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
@@ -11363,7 +11363,7 @@
                         'Icon' = 'https://www.kauppalehti.fi/favicon.ico'
                     },
                     @{
-                        'Title' = 'Talouselämä'
+                        'Title' = 'Talouselm'
                         'URL' = 'https://www.talouselama.fi/'
                         'Icon' = 'https://www.talouselama.fi/favicon.ico'
                     },
@@ -11397,7 +11397,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Aleksi Linna – Finland Relocation Expert'
+                        'Title' = 'Aleksi Linna  Finland Relocation Expert'
                         'URL' = 'https://www.youtube.com/channel/UCuBvl8mzPolBzPU9ju4cXsA'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -11620,7 +11620,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Forskningsfortællinger'
+                        'Title' = 'Forskningsfortllinger'
                         'URL' = 'https://sciencenews.dk/en/category/podcasts'
                         'Icon' = 'https://sciencenews.dk/favicon.ico'
                     },
@@ -11659,7 +11659,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Forskningsfortællinger'
+                        'Title' = 'Forskningsfortllinger'
                         'URL' = 'https://sciencenews.dk/en/category/podcasts'
                         'Icon' = 'https://sciencenews.dk/favicon.ico'
                     },
@@ -11669,7 +11669,7 @@
                         'Icon' = 'https://www.scienceandcocktails.org/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hjernekassen på P1'
+                        'Title' = 'Hjernekassen p P1'
                         'URL' = 'https://open.spotify.com/show/hjernekassen-pa-p1'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     }
@@ -11710,7 +11710,7 @@
                         'Icon' = 'https://www.zetland.dk/favicon.ico'
                     },
                     @{
-                        'Title' = 'Tænk Politik'
+                        'Title' = 'Tnk Politik'
                         'URL' = 'https://taenk.dk/politik'
                         'Icon' = 'https://taenk.dk/favicon.ico'
                     }
@@ -11727,7 +11727,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'David Jæger'
+                        'Title' = 'David Jger'
                         'URL' = 'https://www.youtube.com/@davidjaeger'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -12348,12 +12348,12 @@
                 'Mainstream News' = @(
                     @{
                         'Title' = 'Research in Georgia'
-                        'URL' = 'https://researchinestonia.eu/'  # Adapt for Georgia
+                        'URL' = 'https://researchinestonia.eu/'
                         'Icon' = 'https://researchinestonia.eu/favicon.ico'
                     },
                     @{
                         'Title' = 'Estonian Research Council Georgia'
-                        'URL' = 'https://etag.ee/en/'  # Adapt
+                        'URL' = 'https://etag.ee/en/'
                         'Icon' = 'https://etag.ee/favicon.ico'
                     },
                     @{
@@ -12363,7 +12363,7 @@
                     },
                     @{
                         'Title' = 'Ministry of Education Science Georgia'
-                        'URL' = 'https://www.mes.gov.ge/content.php?id=80&lang=eng'
+                        'URL' = 'https://www.mes.gov.ge/content.php?id=80%26lang=eng'
                         'Icon' = 'https://www.mes.gov.ge/favicon.ico'
                     }
                 )
@@ -12551,7 +12551,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Bazerdžan Fashion Georgia'
+                        'Title' = 'Bazerdan Fashion Georgia'
                         'URL' = 'https://www.youtube.com/@bazerdzan'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -13119,7 +13119,7 @@
                 'Counter News' = @(
                     @{
                         'Title' = 'Estonian Research Council Greece'
-                        'URL' = 'https://etag.ee/en/'  # Adapt
+                        'URL' = 'https://etag.ee/en/'
                         'Icon' = 'https://etag.ee/favicon.ico'
                     },
                     @{
@@ -13456,7 +13456,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Népszava'
+                    'Title' = 'Nepszava'
                     'URL' = 'https://nepszava.hu/'
                     'Icon' = 'https://nepszava.hu/favicon.ico'
                 },
@@ -13471,12 +13471,12 @@
                     'Icon' = 'https://direkt36.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Átlátszó'
+                    'Title' = 'tltsz'
                     'URL' = 'https://atlatszo.hu/'
                     'Icon' = 'https://atlatszo.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Partizán'
+                    'Title' = 'Partizn'
                     'URL' = 'https://partizan.hu/'
                     'Icon' = 'https://partizan.hu/favicon.ico'
                 }
@@ -13502,12 +13502,12 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'ATV Magyarország'
+                    'Title' = 'ATV Magyarorszg'
                     'URL' = 'https://www.youtube.com/user/ATVMagyarorszag'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'M1 - Híradó'
+                    'Title' = 'M1 - Hrad'
                     'URL' = 'https://www.youtube.com/user/M1Híradó'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -13517,7 +13517,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Hír TV'
+                    'Title' = 'Hr TV'
                     'URL' = 'https://www.youtube.com/user/HirTV'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -13529,7 +13529,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Partizán'
+                    'Title' = 'Partizn'
                     'URL' = 'https://www.youtube.com/c/Partizan'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -13558,7 +13558,7 @@
                     'Icon' = 'https://hvg.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Partizán Podcast'
+                    'Title' = 'Partizn Podcast'
                     'URL' = 'https://partizan.hu/podcast'
                     'Icon' = 'https://partizan.hu/favicon.ico'
                 },
@@ -13568,7 +13568,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'RTL Híradó Podcast'
+                    'Title' = 'RTL Hrad Podcast'
                     'URL' = 'https://rtl.hu/podcast'
                     'Icon' = 'https://rtl.hu/favicon.ico'
                 },
@@ -13595,7 +13595,7 @@
                     'Icon' = 'https://direkt36.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Átlátszó Podcast'
+                    'Title' = 'tltsz Podcast'
                     'URL' = 'https://atlatszo.hu/podcast'
                     'Icon' = 'https://atlatszo.hu/favicon.ico'
                 }
@@ -13615,12 +13615,12 @@
                         'Icon' = 'https://www.portfolio.hu/favicon.ico'
                     },
                     @{
-                        'Title' = 'HVG Gazdaság'
+                        'Title' = 'HVG Gazdasg'
                         'URL' = 'https://hvg.hu/gazdasag'
                         'Icon' = 'https://hvg.hu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Világgazdaság'
+                        'Title' = 'Vilggazdasg'
                         'URL' = 'https://www.vg.hu/'
                         'Icon' = 'https://www.vg.hu/favicon.ico'
                     }
@@ -13632,7 +13632,7 @@
                         'Icon' = 'https://g7.hu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Átlátszó Gazdaság'
+                        'Title' = 'tltsz Gazdasg'
                         'URL' = 'https://atlatszo.hu/gazdasag'
                         'Icon' = 'https://atlatszo.hu/favicon.ico'
                     },
@@ -13676,7 +13676,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Business Services Café Podcast'
+                        'Title' = 'Business Services Cafe Podcast'
                         'URL' = 'https://absl.hu/business-services-cafe-podcast/'
                         'Icon' = 'https://absl.hu/favicon.ico'
                     }
@@ -13889,7 +13889,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Jirka vysvětluje věci'
+                        'Title' = 'Jirka vysvtluje vci'
                         'URL' = 'https://www.youtube.com/c/Jirkavysvetlujevice'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -13906,7 +13906,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Věda na dosah'
+                        'Title' = 'Vda na dosah'
                         'URL' = 'https://www.avcr.cz/en/public/A-V-Projects/Podcasts/'
                         'Icon' = 'https://www.avcr.cz/favicon.ico'
                     },
@@ -13969,7 +13969,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Partizán'
+                        'Title' = 'Partizn'
                         'URL' = 'https://www.youtube.com/c/Partizan'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -13996,7 +13996,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'PolCast – Political Capital'
+                        'Title' = 'PolCast  Political Capital'
                         'URL' = 'https://politicalcapital.hu/podcast_eng.php'
                         'Icon' = 'https://politicalcapital.hu/favicon.ico'
                     }
@@ -14010,7 +14010,7 @@
                         'Icon' = 'https://www.marieclaire.hu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Nők Lapja Divat'
+                        'Title' = 'Nk Lapja Divat'
                         'URL' = 'https://www.noklapja.hu/divat'
                         'Icon' = 'https://www.noklapja.hu/favicon.ico'
                     },
@@ -14054,7 +14054,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Halmosi Viktória'
+                        'Title' = 'Halmosi Viktria'
                         'URL' = 'https://www.youtube.com/@halmosiviktoria'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -14095,7 +14095,7 @@
                         'Icon' = 'https://www.czdefence.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armádní zpravodaj'
+                        'Title' = 'Armdn zpravodaj'
                         'URL' = 'https://www.armadni.cz/'
                         'Icon' = 'https://www.armadni.cz/favicon.ico'
                     },
@@ -14173,7 +14173,7 @@
                     'Icon' = 'https://www.icelandreview.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'RÚV English'
+                    'Title' = 'RuV English'
                     'URL' = 'https://www.ruv.is/english'
                     'Icon' = 'https://www.ruv.is/favicon.ico'
                 },
@@ -14220,12 +14220,12 @@
                     'Icon' = 'https://icelandmonitor.mbl.is/favicon.ico'
                 },
                 @{
-                    'Title' = 'Morgunblaðið (English)'
+                    'Title' = 'Morgunblai (English)'
                     'URL' = 'https://www.mbl.is/english'
                     'Icon' = 'https://www.mbl.is/favicon.ico'
                 },
                 @{
-                    'Title' = 'Fréttablaðið'
+                    'Title' = 'Frettablai'
                     'URL' = 'https://www.frettabladid.is/'
                     'Icon' = 'https://www.frettabladid.is/favicon.ico'
                 }
@@ -14334,7 +14334,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Samstöðin'
+                    'Title' = 'Samstoin'
                     'URL' = 'https://podcasts.apple.com/us/podcast/samstodin/id1609640413'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -14505,7 +14505,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Draumaliðið'
+                        'Title' = 'Draumalii'
                         'URL' = 'https://podcasts.apple.com/us/podcast/draumalidid/id1627756227'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     }
@@ -14529,7 +14529,7 @@
                         'Icon' = 'https://icelandmag.is/favicon.ico'
                     },
                     @{
-                        'Title' = 'RÚV Culture'
+                        'Title' = 'RuV Culture'
                         'URL' = 'https://www.ruv.is/frettir/innanhus/idrottir-og-tengd-mal'
                         'Icon' = 'https://www.ruv.is/favicon.ico'
                     }
@@ -14621,7 +14621,7 @@
                         'Icon' = 'https://www.icelandreview.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RÚV Science'
+                        'Title' = 'RuV Science'
                         'URL' = 'https://www.ruv.is/english/science'
                         'Icon' = 'https://www.ruv.is/favicon.ico'
                     },
@@ -14684,7 +14684,7 @@
                         'Icon' = 'https://www.government.is/favicon.ico'
                     },
                     @{
-                        'Title' = 'RÚV Politics'
+                        'Title' = 'RuV Politics'
                         'URL' = 'https://www.ruv.is/english/politics'
                         'Icon' = 'https://www.ruv.is/favicon.ico'
                     },
@@ -14849,7 +14849,7 @@
                         'Icon' = 'https://www.highnorthnews.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RÚV Iceland Defense'
+                        'Title' = 'RuV iceland Defense'
                         'URL' = 'https://www.ruv.is/english/2025-09-01-icelands-defence-dilemma-between-nato-commitments-and-american-power-452048'
                         'Icon' = 'https://www.ruv.is/favicon.ico'
                     }
@@ -14883,7 +14883,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Íslenski herinn Vlog'
+                        'Title' = 'slenski herinn Vlog'
                         'URL' = 'https://www.youtube.com/playlist?list=PL4D70BE46C2AEF568'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -14932,7 +14932,7 @@
                     'Icon' = 'https://www.thejournal.ie/favicon.ico'
                 },
                 @{
-                    'Title' = 'RTÉ News'
+                    'Title' = 'RTe News'
                     'URL' = 'https://www.rte.ie/news/'
                     'Icon' = 'https://www.rte.ie/favicon.ico'
                 },
@@ -15000,7 +15000,7 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'RTÉ News'
+                    'Title' = 'RTe News'
                     'URL' = 'https://www.youtube.com/user/rtenews'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -15083,7 +15083,7 @@
                     'Icon' = 'https://www.irishpassportpodcast.com/favicon.ico'
                 },
                 @{
-                    'Title' = "Here's How"
+                    'Title' = 'Here''s How'
                     'URL' = 'https://www.rte.ie/podcasts/heres-how/'
                     'Icon' = 'https://www.rte.ie/favicon.ico'
                 },
@@ -15108,7 +15108,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Business'
+                        'Title' = 'RTe Business'
                         'URL' = 'https://www.rte.ie/news/business/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     },
@@ -15147,7 +15147,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Aleksi Linna – Finland Relocation Expert'
+                        'Title' = 'Aleksi Linna  Finland Relocation Expert'
                         'URL' = 'https://www.youtube.com/channel/UCuBvl8mzPolBzPU9ju4cXsA'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -15188,7 +15188,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Sport'
+                        'Title' = 'RTe Sport'
                         'URL' = 'https://www.rte.ie/sport/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     },
@@ -15268,7 +15268,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Culture'
+                        'Title' = 'RTe Culture'
                         'URL' = 'https://www.rte.ie/culture/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     },
@@ -15324,7 +15324,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Beo Ar Éigean'
+                        'Title' = 'Beo Ar eigean'
                         'URL' = 'https://podcasts.apple.com/us/podcast/beo-ar-éigean/id1530815838'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
@@ -15358,7 +15358,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Science and Technology'
+                        'Title' = 'RTe Science and Technology'
                         'URL' = 'https://www.rte.ie/news/science-and-technology/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     }
@@ -15428,7 +15428,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Politics'
+                        'Title' = 'RTe Politics'
                         'URL' = 'https://www.rte.ie/news/politics/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     },
@@ -15508,7 +15508,7 @@
                         'Icon' = 'https://www.irishtimes.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'RTÉ Fashion'
+                        'Title' = 'RTe Fashion'
                         'URL' = 'https://www.rte.ie/lifestyle/fashion/'
                         'Icon' = 'https://www.rte.ie/favicon.ico'
                     },
@@ -15557,7 +15557,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Saoírse Mamma Roseanna'
+                        'Title' = 'Saorse Mamma Roseanna'
                         'URL' = 'https://www.youtube.com/@saoirsefashion'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -15837,12 +15837,12 @@
                     'Icon' = 'https://www.nouvellesecoutes.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Choses à Savoir'
+                    'Title' = 'Choses  Savoir'
                     'URL' = 'https://www.radiofrance.fr/franceinfo/podcasts/les-choses-a-savoir'
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Géopolitique'
+                    'Title' = 'Geopolitique'
                     'URL' = 'https://www.radiofrance.fr/franceinter/podcasts/geopolitique'
                     'Icon' = 'https://www.radiofrance.fr/favicon.ico'
                 }
@@ -16073,7 +16073,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'The Italian Rêve'
+                        'Title' = 'The italian Reve'
                         'URL' = 'https://open.spotify.com/show/the-italian-reve'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -16274,7 +16274,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'L Officiel Baltic Tbilisi'  # Adapt, but for Italy: L'Officiel Italy
+                        'Title' = 'L Officiel Baltic Tbilisi'
                         'URL' = 'https://lofficielitaly.com/'
                         'Icon' = 'https://lofficielitaly.com/favicon.ico'
                     },
@@ -16284,7 +16284,7 @@
                         'Icon' = 'https://tamra.ge/favicon.ico'
                     },
                     @{
-                        'Title' = 'Forbes Georgian Fashion'  # Adapt: Forbes Italy Fashion
+                        'Title' = 'Forbes Georgian Fashion'
                         'URL' = 'https://forbes.it/tag/moda/'
                         'Icon' = 'https://forbes.it/favicon.ico'
                     }
@@ -16318,7 +16318,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'COSTUME E IDENTITÀ by Maria Chiara'
+                        'Title' = 'COSTUME E iDENTiT by Maria Chiara'
                         'URL' = 'https://open.spotify.com/show/costume-e-identita-by-maria-chiara'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -16403,7 +16403,7 @@
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Listening to “tides of history” podcast about the Italian wars'
+                        'Title' = 'Listening to "tides of history" podcast about the italian wars'
                         'URL' = 'https://www.reddit.com/r/ManorLords/comments/1csubrf/listening_to_tides_of_history_podcast_about_the/'
                         'Icon' = 'https://www.reddit.com/favicon.ico'
                     }
@@ -17960,7 +17960,7 @@
                     'Icon' = 'https://www.edruva.lv/favicon.ico'
                 },
                 @{
-                    'Title' = 'Brīvā Daugava'
+                    'Title' = 'Briva Daugava'
                     'URL' = 'https://www.brivadalgava.lv/'
                     'Icon' = 'https://www.brivadalgava.lv/favicon.ico'
                 },
@@ -17982,7 +17982,7 @@
                     'Icon' = 'https://www.satori.lv/favicon.ico'
                 },
                 @{
-                    'Title' = 'Salacgrīvas Avīze'
+                    'Title' = 'Salacgrivas Avize'
                     'URL' = 'https://www.salacgrivasavize.lv/'
                     'Icon' = 'https://www.salacgrivasavize.lv/favicon.ico'
                 },
@@ -17996,7 +17996,7 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Latvijas Ārlietu ministrija'
+                    'Title' = 'Latvijas arlietu ministrija'
                     'URL' = 'https://www.youtube.com/channel/UC7woKD2X-qI_f5y-okgNUrA'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -18038,7 +18038,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'David Jæger'
+                    'Title' = 'David Jger'
                     'URL' = 'https://www.youtube.com/@davidjaeger'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -18052,7 +18052,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Krustpunktā'
+                    'Title' = 'Krustpunkta'
                     'URL' = 'https://podcasts.apple.com/us/podcast/krustpunkt%C4%81/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -18074,7 +18074,7 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Ekonomikas podkāsts'
+                    'Title' = 'Ekonomikas podkasts'
                     'URL' = 'https://podcasts.apple.com/us/podcast/ekonomikas-podk%C4%81sts/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -18165,7 +18165,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Ekonomikas podkāsts'
+                        'Title' = 'Ekonomikas podkasts'
                         'URL' = 'https://podcasts.apple.com/us/podcast/ekonomikas-podk%C4%81sts/id1530815838'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
@@ -18233,7 +18233,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Reinis Lācis'
+                        'Title' = 'Reinis Lacis'
                         'URL' = 'https://www.youtube.com/@reinislacis'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -18269,7 +18269,7 @@
                         'Icon' = 'https://www.latvia.eu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Kultūras ministrija'
+                        'Title' = 'Kulturas ministrija'
                         'URL' = 'https://www.km.gov.lv/en/articles'
                         'Icon' = 'https://www.km.gov.lv/favicon.ico'
                     },
@@ -18378,7 +18378,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Jirka vysvětluje věci'
+                        'Title' = 'Jirka vysvtluje vci'
                         'URL' = 'https://www.youtube.com/c/Jirkavysvetlujevice'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -18463,7 +18463,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Partizān Latvia'
+                        'Title' = 'Partizan Latvia'
                         'URL' = 'https://www.youtube.com/c/Partizan'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -18490,7 +18490,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Krustpunktā Politics'
+                        'Title' = 'Krustpunkta Politics'
                         'URL' = 'https://podcasts.apple.com/us/podcast/krustpunkt%C4%81/id1530815838'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     }
@@ -18560,7 +18560,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = "Let's Talk About Fashion"
+                        'Title' = 'Let''s Talk About Fashion'
                         'URL' = 'https://open.spotify.com/show/6WbBVyeR8a8VsN6fKOWVLH'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -18579,7 +18579,7 @@
             'Military' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Nacionālie bruņotie spēki'
+                        'Title' = 'Nacionalie bruotie speki'
                         'URL' = 'https://www.mil.lv/en'
                         'Icon' = 'https://www.mil.lv/favicon.ico'
                     },
@@ -18589,7 +18589,7 @@
                         'Icon' = 'https://eng.lsm.lv/favicon.ico'
                     },
                     @{
-                        'Title' = 'Aizsardzības ministrija'
+                        'Title' = 'Aizsardzibas ministrija'
                         'URL' = 'https://www.mod.gov.lv/en'
                         'Icon' = 'https://www.mod.gov.lv/favicon.ico'
                     },
@@ -18745,7 +18745,7 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Fürstentum Liechtenstein Official'
+                    'Title' = 'Furstentum Liechtenstein Official'
                     'URL' = 'https://www.youtube.com/@FurstenhausLiechtenstein'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -18765,7 +18765,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jürg Hanselmann'
+                    'Title' = 'Jurg Hanselmann'
                     'URL' = 'https://www.youtube.com/@juerg_hanselmann'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -19088,7 +19088,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Universität Liechtenstein Research'
+                        'Title' = 'Universitt Liechtenstein Research'
                         'URL' = 'https://www.uni.li/en/research/news'
                         'Icon' = 'https://www.uni.li/favicon.ico'
                     },
@@ -19104,7 +19104,7 @@
                     },
                     @{
                         'Title' = 'ESPON Liechtenstein Science'
-                        'URL' = 'https://www.espon.eu/news?f%5B0%5D=countries%3ALiechtenstein&f%5B1%5D=news_topic%3AScience%2C%20Technology%20and%20Innovation'
+                        'URL' = 'https://www.espon.eu/news?f%5B0%5D=countries%3ALiechtenstein%26f%5B1%5D=news_topic%3AScience%2C%20Technology%20and%20Innovation'
                         'Icon' = 'https://www.espon.eu/favicon.ico'
                     }
                 )
@@ -19127,7 +19127,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Universität Liechtenstein Tech'
+                        'Title' = 'Universitt Liechtenstein Tech'
                         'URL' = 'https://www.youtube.com/@uni_liechtenstein'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -19149,7 +19149,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Universität Liechtenstein Podcast'
+                        'Title' = 'Universitt Liechtenstein Podcast'
                         'URL' = 'https://www.uni.li/en/podcasts'
                         'Icon' = 'https://www.uni.li/favicon.ico'
                     },
@@ -19441,7 +19441,7 @@
                     'Icon' = 'https://kauno.diena.lt/favicon.ico'
                 },
                 @{
-                    'Title' = 'Vakaro žinios'
+                    'Title' = 'Vakaro inios'
                     'URL' = 'https://www.vakaro-zinios.lt/en/'
                     'Icon' = 'https://www.vakaro-zinios.lt/favicon.ico'
                 }
@@ -19731,7 +19731,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Reinis Lācis Sports'
+                        'Title' = 'Reinis Lacis Sports'
                         'URL' = 'https://www.youtube.com/@reinislacis'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -19876,7 +19876,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Jirka vysvětluje věci'
+                        'Title' = 'Jirka vysvtluje vci'
                         'URL' = 'https://www.youtube.com/c/Jirkavysvetlujevice'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -19961,7 +19961,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Partizān Latvia'
+                        'Title' = 'Partizan Latvia'
                         'URL' = 'https://www.youtube.com/c/Partizan'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -19988,7 +19988,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Krustpunktā Politics'
+                        'Title' = 'Krustpunkta Politics'
                         'URL' = 'https://podcasts.apple.com/us/podcast/krustpunkt%C4%81/id1530815838'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     }
@@ -20058,7 +20058,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = "Let's Talk About Fashion"
+                        'Title' = 'Let''s Talk About Fashion'
                         'URL' = 'https://open.spotify.com/show/6WbBVyeR8a8VsN6fKOWVLH'
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
@@ -20077,7 +20077,7 @@
             'Military' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Nacionālie bruņotie spēki'
+                        'Title' = 'Nacionalie bruotie speki'
                         'URL' = 'https://www.mil.lv/en'
                         'Icon' = 'https://www.mil.lv/favicon.ico'
                     },
@@ -20087,7 +20087,7 @@
                         'Icon' = 'https://eng.lsm.lv/favicon.ico'
                     },
                     @{
-                        'Title' = 'Aizsardzības ministrija'
+                        'Title' = 'Aizsardzibas ministrija'
                         'URL' = 'https://www.mod.gov.lv/en'
                         'Icon' = 'https://www.mod.gov.lv/favicon.ico'
                     },
@@ -20217,7 +20217,7 @@
                     'Icon' = 'https://www.contacto.lu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Lëtzebuerger Journal'
+                    'Title' = 'Ltzebuerger Journal'
                     'URL' = 'https://www.letzebuergerjournal.lu/'
                     'Icon' = 'https://www.letzebuergerjournal.lu/favicon.ico'
                 }
@@ -20229,7 +20229,7 @@
                     'Icon' = 'https://www.woxx.lu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Zeitung vum Lëtzebuerger Vollek'
+                    'Title' = 'Zeitung vum Ltzebuerger Vollek'
                     'URL' = 'https://www.zlv.lu/'
                     'Icon' = 'https://www.zlv.lu/favicon.ico'
                 },
@@ -20248,7 +20248,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Lëtzebuergesch mam Leslie'
+                    'Title' = 'Ltzebuergesch mam Leslie'
                     'URL' = 'https://www.youtube.com/@letzebuergeschmamleslie'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -20693,7 +20693,7 @@
                         'Icon' = 'https://chronicle.lu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Lëtzebuerger Journal Politics'
+                        'Title' = 'Ltzebuerger Journal Politics'
                         'URL' = 'https://www.letzebuergerjournal.lu/en/politics'
                         'Icon' = 'https://www.letzebuergerjournal.lu/favicon.ico'
                     },
@@ -21070,12 +21070,12 @@
             )
             'Alternative' = @(
                 @{
-                    'Title' = 'Malta en español'
+                    'Title' = 'Malta en espanol'
                     'URL' = 'https://podcasts.apple.com/us/podcast/malta-en-espanol/id1508197205'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Mużika Mod Ieħor ma  Toni Sant'
+                    'Title' = 'Muika Mod ieor ma  Toni Sant'
                     'URL' = 'https://podcasts.apple.com/us/podcast/muzika-mod-iehor-ma-toni-sant/id1508197205'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -21326,7 +21326,7 @@
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Mużika Mod Ieħor ma  Toni Sant'
+                        'Title' = 'Muika Mod ieor ma  Toni Sant'
                         'URL' = 'https://podcasts.apple.com/us/podcast/muzika-mod-iehor-ma-toni-sant/id1508197205'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     }
@@ -22325,7 +22325,7 @@
                 'Mainstream News' = @(
                     @{
                         'Title' = 'Army.md Moldova'
-                        'URL' = 'https://www.army.md/?lng=3&action=show&cat=122&year=2022&arc=1'
+                        'URL' = 'https://www.army.md/?lng=3%26action=show%26cat=122%26year=2022%26arc=1'
                         'Icon' = 'https://www.army.md/favicon.ico'
                     },
                     @{
@@ -22722,7 +22722,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Tadej Pogačar (Cycling Monaco)'
+                        'Title' = 'Tadej Pogaar (Cycling Monaco)'
                         'URL' = 'https://www.youtube.com/@tadejpogacar'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -22993,7 +22993,7 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = "L'Officiel Monaco"
+                        'Title' = 'L''Officiel Monaco'
                         'URL' = 'https://lofficielmonaco.com/'
                         'Icon' = 'https://lofficielmonaco.com/favicon.ico'
                     },
@@ -23064,7 +23064,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Themoiré Sustainable Fashion (Monaco)'
+                        'Title' = 'Themoire Sustainable Fashion (Monaco)'
                         'URL' = 'https://www.glossy.co/podcasts/themoires-francesca-monaco-on-the-evolution-of-sustainable-fashion-at-milan-fashion-week/'
                         'Icon' = 'https://www.glossy.co/favicon.ico'
                     }
@@ -23271,7 +23271,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Tjaša Deu'
+                    'Title' = 'Tjaa Deu'
                     'URL' = 'https://www.youtube.com/@TjasaDeu'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -23587,7 +23587,7 @@
                         'Icon' = 'https://ntpark.me/favicon.ico'
                     },
                     @{
-                        'Title' = "Montenegro's Emerging Tech Ecosystem"
+                        'Title' = 'Montenegro''s Emerging Tech Ecosystem'
                         'URL' = 'https://montenegrobusiness.eu/montenegros-emerging-tech-innovation-ecosystem-how-a-small-country-can-become-a-regional-digital-leader/'
                         'Icon' = 'https://montenegrobusiness.eu/favicon.ico'
                     },
@@ -23701,17 +23701,17 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Dritan Abazović'
+                        'Title' = 'Dritan Abazovi'
                         'URL' = 'https://www.youtube.com/@DritanAbazovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Milo Đukanović'
+                        'Title' = 'Milo ukanovi'
                         'URL' = 'https://www.youtube.com/@milo_djukanovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Jakov Milatović'
+                        'Title' = 'Jakov Milatovi'
                         'URL' = 'https://www.youtube.com/@jakovmilatovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -23723,7 +23723,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Fireside conversation with Dritan Abazović'
+                        'Title' = 'Fireside conversation with Dritan Abazovi'
                         'URL' = 'https://www.youtube.com/watch?v=8GHJRLw5_9o'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -24020,7 +24020,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Tjaša Deu'
+                    'Title' = 'Tjaa Deu'
                     'URL' = 'https://www.youtube.com/@TjasaDeu'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -24450,17 +24450,17 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Dritan Abazović'
+                        'Title' = 'Dritan Abazovi'
                         'URL' = 'https://www.youtube.com/@DritanAbazovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Milo Đukanović'
+                        'Title' = 'Milo ukanovi'
                         'URL' = 'https://www.youtube.com/@milo_djukanovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Jakov Milatović'
+                        'Title' = 'Jakov Milatovi'
                         'URL' = 'https://www.youtube.com/@jakovmilatovic'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -24472,7 +24472,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Fireside conversation with Dritan Abazović'
+                        'Title' = 'Fireside conversation with Dritan Abazovi'
                         'URL' = 'https://www.youtube.com/watch?v=8GHJRLw5_9o'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -24825,7 +24825,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Presten og Montøren'
+                    'Title' = 'Presten og Montren'
                     'URL' = 'https://open.spotify.com/show/presten-og-mon toren'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -24840,7 +24840,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Dagens Næringsliv'
+                        'Title' = 'Dagens Nringsliv'
                         'URL' = 'https://www.dn.no/'
                         'Icon' = 'https://www.dn.no/favicon.ico'
                     },
@@ -24906,7 +24906,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Næringsveien'
+                        'Title' = 'Nringsveien'
                         'URL' = 'https://www.mediaveien.no/en/podcast'
                         'Icon' = 'https://www.mediaveien.no/favicon.ico'
                     },
@@ -25369,7 +25369,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Magnus Midtbø Military'
+                        'Title' = 'Magnus Midtb Military'
                         'URL' = 'https://www.youtube.com/@magnusmidtbo'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -25472,7 +25472,7 @@
                     'Icon' = 'https://www.sieciprawdy.pl/favicon.ico'
                 },
                 @{
-                    'Title' = 'Przekrój'
+                    'Title' = 'Przekrj'
                     'URL' = 'https://przekroj.org/'
                     'Icon' = 'https://przekroj.org/favicon.ico'
                 },
@@ -25523,7 +25523,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Mówiąc Inaczej'
+                    'Title' = 'Mwic inaczej'
                     'URL' = 'https://www.youtube.com/@MowiacInaczej'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -25537,7 +25537,7 @@
         'Podcasters' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Ośrodek Studiów Wschodnich'
+                    'Title' = 'Orodek Studiw Wschodnich'
                     'URL' = 'https://open.spotify.com/show/osrodek-studiow-wschodnich'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -25552,12 +25552,12 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Dwie Lewe Ręce'
+                    'Title' = 'Dwie Lewe Rce'
                     'URL' = 'https://open.spotify.com/show/dwie-lewe-rece'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Za Rubieżą'
+                    'Title' = 'Za Rubie'
                     'URL' = 'https://podcasts.apple.com/us/podcast/za-rubieza/id1609640413'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
@@ -25633,7 +25633,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Damian Olszewski - Praktycznie o pieniądzach'
+                        'Title' = 'Damian Olszewski - Praktycznie o pienidzach'
                         'URL' = 'https://www.youtube.com/@praktycznieopieniadzach'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -25665,7 +25665,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Næringsveien (Poland Episodes)'
+                        'Title' = 'Nringsveien (Poland Episodes)'
                         'URL' = 'https://www.mediaveien.no/en/podcast'
                         'Icon' = 'https://www.mediaveien.no/favicon.ico'
                     }
@@ -25674,7 +25674,7 @@
             'Sports' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Przegląd Sportowy Onet'
+                        'Title' = 'Przegld Sportowy Onet'
                         'URL' = 'https://przegladsportowy.onet.pl/'
                         'Icon' = 'https://przegladsportowy.onet.pl/favicon.ico'
                     },
@@ -26162,7 +26162,7 @@
                     'Icon' = 'https://www.theportugalnews.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Diário de Notícias'
+                    'Title' = 'Dirio de Notcias'
                     'URL' = 'https://www.dn.pt/'
                     'Icon' = 'https://www.dn.pt/favicon.ico'
                 },
@@ -26172,17 +26172,17 @@
                     'Icon' = 'https://expresso.pt/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jornal de Notícias'
+                    'Title' = 'Jornal de Notcias'
                     'URL' = 'https://www.jn.pt/'
                     'Icon' = 'https://www.jn.pt/favicon.ico'
                 },
                 @{
-                    'Title' = 'Correio da Manhã'
+                    'Title' = 'Correio da Manh'
                     'URL' = 'https://www.cmjornal.pt/'
                     'Icon' = 'https://www.cmjornal.pt/favicon.ico'
                 },
                 @{
-                    'Title' = 'Público'
+                    'Title' = 'Publico'
                     'URL' = 'https://www.publico.pt/'
                     'Icon' = 'https://www.publico.pt/favicon.ico'
                 },
@@ -26245,7 +26245,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Capitão Fausto'
+                    'Title' = 'Capito Fausto'
                     'URL' = 'https://www.youtube.com/@capitaofausto'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -26343,7 +26343,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Jornal de Negócios'
+                        'Title' = 'Jornal de Negcios'
                         'URL' = 'https://www.jornaldenegocios.pt/'
                         'Icon' = 'https://www.jornaldenegocios.pt/favicon.ico'
                     },
@@ -26358,7 +26358,7 @@
                         'Icon' = 'https://executivo.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Público Economia'
+                        'Title' = 'Publico Economia'
                         'URL' = 'https://www.publico.pt/economia'
                         'Icon' = 'https://www.publico.pt/favicon.ico'
                     }
@@ -26503,7 +26503,7 @@
             'Culture' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Público Cultura'
+                        'Title' = 'Publico Cultura'
                         'URL' = 'https://www.publico.pt/cultura'
                         'Icon' = 'https://www.publico.pt/favicon.ico'
                     },
@@ -26513,7 +26513,7 @@
                         'Icon' = 'https://expresso.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Visão Cultura'
+                        'Title' = 'Viso Cultura'
                         'URL' = 'https://visao.sapo.pt/cultura'
                         'Icon' = 'https://visao.sapo.pt/favicon.ico'
                     },
@@ -26525,7 +26525,7 @@
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Público Cultura (Opinion)'
+                        'Title' = 'Publico Cultura (Opinion)'
                         'URL' = 'https://www.publico.pt/cultura/opiniao'
                         'Icon' = 'https://www.publico.pt/favicon.ico'
                     },
@@ -26535,7 +26535,7 @@
                         'Icon' = 'https://expresso.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Visão Cultura (Opinion)'
+                        'Title' = 'Viso Cultura (Opinion)'
                         'URL' = 'https://visao.sapo.pt/cultura/opiniao'
                         'Icon' = 'https://visao.sapo.pt/favicon.ico'
                     }
@@ -26583,7 +26583,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Técnico Lisboa Science'
+                        'Title' = 'Tecnico Lisboa Science'
                         'URL' = 'https://tecnico.ulisboa.pt/en/news/science-technology/'
                         'Icon' = 'https://tecnico.ulisboa.pt/favicon.ico'
                     },
@@ -26622,7 +26622,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Nova Acrópole Portugal'
+                        'Title' = 'Nova Acrpole Portugal'
                         'URL' = 'https://www.youtube.com/@novaacropoleportugal2734'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -26663,39 +26663,39 @@
             'Politics' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Público Política'
+                        'Title' = 'Publico Poltica'
                         'URL' = 'https://www.publico.pt/politica'
                         'Icon' = 'https://www.publico.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Expresso Política'
+                        'Title' = 'Expresso Poltica'
                         'URL' = 'https://expresso.pt/politica'
                         'Icon' = 'https://expresso.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Jornal de Negócios Política'
+                        'Title' = 'Jornal de Negcios Poltica'
                         'URL' = 'https://www.jornaldenegocios.pt/politica'
                         'Icon' = 'https://www.jornaldenegocios.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Observador Política'
+                        'Title' = 'Observador Poltica'
                         'URL' = 'https://observador.pt/politica'
                         'Icon' = 'https://observador.pt/favicon.ico'
                     }
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'Visão Política'
+                        'Title' = 'Viso Poltica'
                         'URL' = 'https://visao.sapo.pt/politica'
                         'Icon' = 'https://visao.sapo.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'SIC Notícias Política'
+                        'Title' = 'SiC Notcias Poltica'
                         'URL' = 'https://sicnoticias.pt/politica'
                         'Icon' = 'https://sicnoticias.pt/favicon.ico'
                     },
                     @{
-                        'Title' = 'Renascença Política'
+                        'Title' = 'Renascenca Poltica'
                         'URL' = 'https://rr.pt/noticia/politica'
                         'Icon' = 'https://rr.pt/favicon.ico'
                     }
@@ -26729,12 +26729,12 @@
                         'Icon' = 'https://liberalforum.eu/favicon.ico'
                     },
                     @{
-                        'Title' = 'Comissão Política'
+                        'Title' = 'Comisso Poltica'
                         'URL' = 'https://podcasts.apple.com/us/podcast/comissao-politica/id1627756227'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Perguntar Não Ofende'
+                        'Title' = 'Perguntar No Ofende'
                         'URL' = 'https://podcasts.apple.com/us/podcast/perguntar-nao-ofende/id1530815838'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     }
@@ -26975,7 +26975,7 @@
                     'Icon' = 'https://www.sieciprawdy.pl/favicon.ico'
                 },
                 @{
-                    'Title' = 'Przekrój'
+                    'Title' = 'Przekrj'
                     'URL' = 'https://przekroj.org/'
                     'Icon' = 'https://przekroj.org/favicon.ico'
                 },
@@ -27131,7 +27131,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'TT&D'
+                        'Title' = 'TT and D'
                         'URL' = 'https://www.youtube.com/@TTD'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -27238,7 +27238,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'VREAU SĂ ȘTIU'
+                        'Title' = 'VREAU S TiU'
                         'URL' = 'https://podcasts.apple.com/us/podcast/vreau-să-știu/id1627756227'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
@@ -27376,7 +27376,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'TT&D'
+                        'Title' = 'TT and D'
                         'URL' = 'https://www.youtube.com/@TTD'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -27558,7 +27558,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Podcasturi Modă și frumusețe'
+                        'Title' = 'Podcasturi Mod i frumusee'
                         'URL' = 'https://podcasts.apple.com/ro/genre/1459?l=ro'
                         'Icon' = 'https://podcasts.apple.com/favicon.ico'
                     },
@@ -28487,7 +28487,7 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Fürstentum Liechtenstein Official'
+                    'Title' = 'Furstentum Liechtenstein Official'
                     'URL' = 'https://www.youtube.com/@FurstenhausLiechtenstein'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -28507,7 +28507,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jürg Hanselmann'
+                    'Title' = 'Jurg Hanselmann'
                     'URL' = 'https://www.youtube.com/@juerg_hanselmann'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -28835,7 +28835,7 @@
                         'Icon' = 'https://www.sanmarinoinnovation.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Università di San Marino Science'
+                        'Title' = 'Universit di San Marino Science'
                         'URL' = 'https://www.unirsm.sm/en/news/sfide-e-opportunita-delle-nuove-tecnologie-in-un-convegno-delluniversita-di-san-marino/'
                         'Icon' = 'https://www.unirsm.sm/favicon.ico'
                     },
@@ -28874,7 +28874,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Università di San Marino Tech'
+                        'Title' = 'Universit di San Marino Tech'
                         'URL' = 'https://www.youtube.com/@unirsm'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -28896,7 +28896,7 @@
                         'Icon' = 'https://www.sanmarinoinnovation.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Università di San Marino Tech Talk'
+                        'Title' = 'Universit di San Marino Tech Talk'
                         'URL' = 'https://www.unirsm.sm/en/podcasts/tech'
                         'Icon' = 'https://www.unirsm.sm/favicon.ico'
                     },
@@ -29222,12 +29222,12 @@
                     'Icon' = 'https://direkt36.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Átlátszó'
+                    'Title' = 'tltsz'
                     'URL' = 'https://atlatszo.hu/'
                     'Icon' = 'https://atlatszo.hu/favicon.ico'
                 },
                 @{
-                    'Title' = 'Partizán'
+                    'Title' = 'Partizn'
                     'URL' = 'https://partizan.hu/'
                     'Icon' = 'https://partizan.hu/favicon.ico'
                 }
@@ -29236,7 +29236,7 @@
         'Vloggers' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Goca Tržan'
+                    'Title' = 'Goca Tran'
                     'URL' = 'https://www.youtube.com/@gocatrzanofficial'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -29268,12 +29268,12 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Braco Gajić'
+                    'Title' = 'Braco Gaji'
                     'URL' = 'https://www.youtube.com/@bracogajic'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Andrej Maričić'
+                    'Title' = 'Andrej Marii'
                     'URL' = 'https://www.youtube.com/@andrejmariicic'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -29319,7 +29319,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Biznis Priče'
+                    'Title' = 'Biznis Prie'
                     'URL' = 'https://open.spotify.com/show/biznis-price'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -29329,7 +29329,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Jovana Miljanović'
+                    'Title' = 'Jovana Miljanovi'
                     'URL' = 'https://open.spotify.com/show/jovana-miljanovic'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 }
@@ -29429,7 +29429,7 @@
                         'Icon' = 'https://mozzartsport.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Sportski žurnal'
+                        'Title' = 'Sportski urnal'
                         'URL' = 'https://www.sportskizurnal.rs/'
                         'Icon' = 'https://www.sportskizurnal.rs/favicon.ico'
                     },
@@ -29473,7 +29473,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Sportski žurnal'
+                        'Title' = 'Sportski urnal'
                         'URL' = 'https://www.youtube.com/@sportskizurnal'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -29922,17 +29922,17 @@
                     'Icon' = 'https://spravy.pravda.sk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Hospodárske noviny'
+                    'Title' = 'Hospodrske noviny'
                     'URL' = 'https://hnonline.sk/'
                     'Icon' = 'https://hnonline.sk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Nový Čas'
+                    'Title' = 'Nov as'
                     'URL' = 'https://www.cas.sk/'
                     'Icon' = 'https://www.cas.sk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Denník N'
+                    'Title' = 'Dennk N'
                     'URL' = 'https://dennikn.sk/'
                     'Icon' = 'https://dennikn.sk/favicon.ico'
                 }
@@ -29944,7 +29944,7 @@
                     'Icon' = 'https://www.aktuality.sk/favicon.ico'
                 },
                 @{
-                    'Title' = 'Korzár'
+                    'Title' = 'Korzr'
                     'URL' = 'https://korzar.sme.sk/'
                     'Icon' = 'https://korzar.sme.sk/favicon.ico'
                 },
@@ -30000,12 +30000,12 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Dušan Brachna'
+                    'Title' = 'Duan Brachna'
                     'URL' = 'https://www.youtube.com/@DusanBrachna'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Denisa Vyšňovská'
+                    'Title' = 'Denisa Vyovsk'
                     'URL' = 'https://www.youtube.com/@denisavysn'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -30017,7 +30017,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Andrej Šulaj'
+                    'Title' = 'Andrej ulaj'
                     'URL' = 'https://www.youtube.com/@Andrejsulaj'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -30036,12 +30036,12 @@
         'Podcasters' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Dobré ráno | Denný podcast denníka SME'
+                    'Title' = 'Dobre rno | Denn podcast dennka SME'
                     'URL' = 'https://podcasts.apple.com/us/podcast/dobr%C3%A9-r%C3%A1no-denn%C3%BD-podcast-denn%C3%ADka-sme/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Piatoček'
+                    'Title' = 'Piatoek'
                     'URL' = 'https://open.spotify.com/show/piatocek'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -30056,7 +30056,7 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Krustpunktā'
+                    'Title' = 'Krustpunkta'
                     'URL' = 'https://podcasts.apple.com/us/podcast/krustpunkt%C4%81/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
@@ -30073,7 +30073,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Ekonomikas podkāsts'
+                    'Title' = 'Ekonomikas podkasts'
                     'URL' = 'https://podcasts.apple.com/us/podcast/ekonomikas-podk%C4%81sts/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -30088,7 +30088,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hospodárske noviny'
+                        'Title' = 'Hospodrske noviny'
                         'URL' = 'https://hnonline.sk/'
                         'Icon' = 'https://hnonline.sk/favicon.ico'
                     },
@@ -30127,7 +30127,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Hospodárske noviny Business'
+                        'Title' = 'Hospodrske noviny Business'
                         'URL' = 'https://www.youtube.com/@hnonline'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -30154,7 +30154,7 @@
                         'Icon' = 'https://trend.sk/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hospodárske noviny Podcast'
+                        'Title' = 'Hospodrske noviny Podcast'
                         'URL' = 'https://hnonline.sk/podcasts'
                         'Icon' = 'https://hnonline.sk/favicon.ico'
                     },
@@ -30168,7 +30168,7 @@
             'Sports' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Šport.sk'
+                        'Title' = 'port.sk'
                         'URL' = 'https://sport.aktuality.sk/'
                         'Icon' = 'https://sport.aktuality.sk/favicon.ico'
                     },
@@ -30207,7 +30207,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Šport.sk'
+                        'Title' = 'port.sk'
                         'URL' = 'https://www.youtube.com/@sportsk'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -30229,7 +30229,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Šport.sk Podcast'
+                        'Title' = 'port.sk Podcast'
                         'URL' = 'https://sport.aktuality.sk/podcasts'
                         'Icon' = 'https://sport.aktuality.sk/favicon.ico'
                     },
@@ -30258,7 +30258,7 @@
                         'Icon' = 'https://www.thedaily.sk/favicon.ico'
                     },
                     @{
-                        'Title' = 'Denník N Culture'
+                        'Title' = 'Dennk N Culture'
                         'URL' = 'https://dennikn.sk/kultura'
                         'Icon' = 'https://dennikn.sk/favicon.ico'
                     },
@@ -30297,7 +30297,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Denník N Culture'
+                        'Title' = 'Dennk N Culture'
                         'URL' = 'https://www.youtube.com/@dennikn'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -30319,7 +30319,7 @@
                         'Icon' = 'https://www.thedaily.sk/favicon.ico'
                     },
                     @{
-                        'Title' = 'Denník N Culture Podcast'
+                        'Title' = 'Dennk N Culture Podcast'
                         'URL' = 'https://dennikn.sk/podcasts/culture'
                         'Icon' = 'https://dennikn.sk/favicon.ico'
                     }
@@ -30329,7 +30329,7 @@
                 'Mainstream News' = @(
                     @{
                         'Title' = 'Slovak Academy of Sciences'
-                        'URL' = 'https://www.sav.sk/?lang=en&doc=services-news&source_no=20&tag_id=16'
+                        'URL' = 'https://www.sav.sk/?lang=en%26doc=services-news%26source_no=20%26tag_id=16'
                         'Icon' = 'https://www.sav.sk/favicon.ico'
                     },
                     @{
@@ -30488,7 +30488,7 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Módarevue'
+                        'Title' = 'Mdarevue'
                         'URL' = 'http://www.modarevue.sk/en_1.htm'
                         'Icon' = 'http://www.modarevue.sk/favicon.ico'
                     },
@@ -30498,7 +30498,7 @@
                         'Icon' = 'https://sk.fashionnetwork.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Éva Slovakia'
+                        'Title' = 'eva Slovakia'
                         'URL' = 'https://www.fashionmodeldirectory.com/magazines/va-slovakia/'
                         'Icon' = 'https://www.fashionmodeldirectory.com/favicon.ico'
                     },
@@ -30527,7 +30527,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Módarevue Fashion'
+                        'Title' = 'Mdarevue Fashion'
                         'URL' = 'https://www.youtube.com/@modarevue'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -30537,7 +30537,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Éva Slovakia'
+                        'Title' = 'eva Slovakia'
                         'URL' = 'https://www.youtube.com/@evask'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -30549,7 +30549,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Módarevue Podcast'
+                        'Title' = 'Mdarevue Podcast'
                         'URL' = 'http://www.modarevue.sk/podcasts'
                         'Icon' = 'http://www.modarevue.sk/favicon.ico'
                     },
@@ -30661,7 +30661,7 @@
                     'Icon' = 'https://www.dnevnik.si/favicon.ico'
                 },
                 @{
-                    'Title' = 'Večer'
+                    'Title' = 'Veer'
                     'URL' = 'https://www.vecer.com/'
                     'Icon' = 'https://www.vecer.com/favicon.ico'
                 },
@@ -30698,7 +30698,7 @@
                     'Icon' = 'https://www.24ur.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Žurnal24'
+                    'Title' = 'urnal24'
                     'URL' = 'https://www.zurnal24.si/'
                     'Icon' = 'https://www.zurnal24.si/favicon.ico'
                 },
@@ -30720,7 +30720,7 @@
                     'Icon' = 'https://www.mladina.si/favicon.ico'
                 },
                 @{
-                    'Title' = 'Oštro'
+                    'Title' = 'Otro'
                     'URL' = 'https://ostrov.si/'
                     'Icon' = 'https://ostrov.si/favicon.ico'
                 },
@@ -30790,17 +30790,17 @@
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Lahko noč, otroci!'
+                    'Title' = 'Lahko no, otroci!'
                     'URL' = 'https://podcasts.apple.com/us/podcast/lahko-no%C4%8D-otroci/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Poddie z Uršo'
+                    'Title' = 'Poddie z Uro'
                     'URL' = 'https://open.spotify.com/show/poddie-z-urso'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Fejmiči'
+                    'Title' = 'Fejmii'
                     'URL' = 'https://podcasts.apple.com/us/podcast/fejmi%C4%8Di/id1609640413'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -30817,7 +30817,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Rožnata dolina'
+                    'Title' = 'Ronata dolina'
                     'URL' = 'https://open.spotify.com/show/rozna-dolina'
                     'Icon' = 'https://open.spotify.com/favicon.ico'
                 },
@@ -31242,7 +31242,7 @@
                         'Icon' = 'https://si.fashionnetwork.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Módarevue'
+                        'Title' = 'Mdarevue'
                         'URL' = 'http://www.modarevue.sk/en_1.htm'
                         'Icon' = 'http://www.modarevue.sk/favicon.ico'
                     },
@@ -31303,7 +31303,7 @@
                         'Icon' = 'https://si.fashionnetwork.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Módarevue Fashion Talk'
+                        'Title' = 'Mdarevue Fashion Talk'
                         'URL' = 'http://www.modarevue.sk/podcasts'
                         'Icon' = 'http://www.modarevue.sk/favicon.ico'
                     },
@@ -31400,7 +31400,7 @@
         'News Sites' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'El País'
+                    'Title' = 'El Pas'
                     'URL' = 'https://elpais.com/'
                     'Icon' = 'https://elpais.com/favicon.ico'
                 },
@@ -31420,7 +31420,7 @@
                     'Icon' = 'https://www.lavanguardia.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'El Periódico'
+                    'Title' = 'El Peridico'
                     'URL' = 'https://www.elperiodico.com/es/'
                     'Icon' = 'https://www.elperiodico.com/favicon.ico'
                 },
@@ -31447,7 +31447,7 @@
                     'Icon' = 'https://www.eldiario.es/favicon.ico'
                 },
                 @{
-                    'Title' = 'Público'
+                    'Title' = 'Publico'
                     'URL' = 'https://www.publico.es/'
                     'Icon' = 'https://www.publico.es/favicon.ico'
                 },
@@ -31457,7 +31457,7 @@
                     'Icon' = 'https://www.ara.cat/favicon.ico'
                 },
                 @{
-                    'Title' = 'Vozpópuli'
+                    'Title' = 'Vozppuli'
                     'URL' = 'https://www.vozpopuli.com/'
                     'Icon' = 'https://www.vozpopuli.com/favicon.ico'
                 }
@@ -31488,7 +31488,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'El País'
+                    'Title' = 'El Pas'
                     'URL' = 'https://www.youtube.com/user/elpais'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -31520,7 +31520,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Público'
+                    'Title' = 'Publico'
                     'URL' = 'https://www.youtube.com/user/publicoes'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -31534,7 +31534,7 @@
         'Podcasters' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'El País Audio'
+                    'Title' = 'El Pas Audio'
                     'URL' = 'https://elpais.com/podcasts/'
                     'Icon' = 'https://elpais.com/favicon.ico'
                 },
@@ -31571,7 +31571,7 @@
                     'Icon' = 'https://www.eldiario.es/favicon.ico'
                 },
                 @{
-                    'Title' = 'Público Podcast'
+                    'Title' = 'Publico Podcast'
                     'URL' = 'https://www.publico.es/podcasts'
                     'Icon' = 'https://www.publico.es/favicon.ico'
                 },
@@ -31586,12 +31586,12 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Expansión'
+                        'Title' = 'Expansin'
                         'URL' = 'https://www.expansion.com/'
                         'Icon' = 'https://www.expansion.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Cinco Días'
+                        'Title' = 'Cinco Das'
                         'URL' = 'https://cincodias.elpais.com/'
                         'Icon' = 'https://cincodias.elpais.com/favicon.ico'
                     },
@@ -31601,36 +31601,36 @@
                         'Icon' = 'https://www.eleconomista.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'La Razón Economía'
+                        'Title' = 'La Razn Economa'
                         'URL' = 'https://www.larazon.es/economia/'
                         'Icon' = 'https://www.larazon.es/favicon.ico'
                     }
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'El Confidencial Economía'
+                        'Title' = 'El Confidencial Economa'
                         'URL' = 'https://www.elconfidencial.com/economia/'
                         'Icon' = 'https://www.elconfidencial.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Eldiario.es Economía'
+                        'Title' = 'Eldiario.es Economa'
                         'URL' = 'https://www.eldiario.es/economia/'
                         'Icon' = 'https://www.eldiario.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Público Economía'
+                        'Title' = 'Publico Economa'
                         'URL' = 'https://www.publico.es/economia'
                         'Icon' = 'https://www.publico.es/favicon.ico'
                     }
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Expansión'
+                        'Title' = 'Expansin'
                         'URL' = 'https://www.youtube.com/@expansion'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Cinco Días'
+                        'Title' = 'Cinco Das'
                         'URL' = 'https://www.youtube.com/@cincodiaselpais'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -31640,19 +31640,19 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'La Razón'
+                        'Title' = 'La Razn'
                         'URL' = 'https://www.youtube.com/@larazon'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Expansión Podcast'
+                        'Title' = 'Expansin Podcast'
                         'URL' = 'https://www.expansion.com/podcasts'
                         'Icon' = 'https://www.expansion.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Cinco Días Podcast'
+                        'Title' = 'Cinco Das Podcast'
                         'URL' = 'https://cincodias.elpais.com/podcasts'
                         'Icon' = 'https://cincodias.elpais.com/favicon.ico'
                     },
@@ -31746,7 +31746,7 @@
             'Culture' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'El País Cultura'
+                        'Title' = 'El Pas Cultura'
                         'URL' = 'https://elpais.com/cultura/'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
@@ -31778,14 +31778,14 @@
                         'Icon' = 'https://www.eldiario.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Público Cultura'
+                        'Title' = 'Publico Cultura'
                         'URL' = 'https://www.publico.es/cultura'
                         'Icon' = 'https://www.publico.es/favicon.ico'
                     }
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'El País Cultura'
+                        'Title' = 'El Pas Cultura'
                         'URL' = 'https://www.youtube.com/@elpaiscultura'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -31807,7 +31807,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'El País Cultura Podcast'
+                        'Title' = 'El Pas Cultura Podcast'
                         'URL' = 'https://elpais.com/podcasts/cultura'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
@@ -31826,7 +31826,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'El País Ciencia'
+                        'Title' = 'El Pas Ciencia'
                         'URL' = 'https://elpais.com/ciencia/'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
@@ -31858,14 +31858,14 @@
                         'Icon' = 'https://www.eldiario.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Público Ciencia'
+                        'Title' = 'Publico Ciencia'
                         'URL' = 'https://www.publico.es/ciencia'
                         'Icon' = 'https://www.publico.es/favicon.ico'
                     }
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'El País Ciencia'
+                        'Title' = 'El Pas Ciencia'
                         'URL' = 'https://www.youtube.com/@elpaisciencia'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -31887,7 +31887,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'El País Ciencia Podcast'
+                        'Title' = 'El Pas Ciencia Podcast'
                         'URL' = 'https://elpais.com/podcasts/ciencia'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
@@ -31906,78 +31906,78 @@
             'Politics' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'El País Política'
+                        'Title' = 'El Pas Poltica'
                         'URL' = 'https://elpais.com/politica/'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'El Mundo Política'
+                        'Title' = 'El Mundo Poltica'
                         'URL' = 'https://www.elmundo.es/espana/'
                         'Icon' = 'https://www.elmundo.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'ABC Política'
+                        'Title' = 'ABC Poltica'
                         'URL' = 'https://www.abc.es/espana/'
                         'Icon' = 'https://www.abc.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'La Vanguardia Política'
+                        'Title' = 'La Vanguardia Poltica'
                         'URL' = 'https://www.lavanguardia.com/politica'
                         'Icon' = 'https://www.lavanguardia.com/favicon.ico'
                     }
                 )
                 'Counter News' = @(
                     @{
-                        'Title' = 'El Confidencial Política'
+                        'Title' = 'El Confidencial Poltica'
                         'URL' = 'https://www.elconfidencial.com/espana/'
                         'Icon' = 'https://www.elconfidencial.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Eldiario.es Política'
+                        'Title' = 'Eldiario.es Poltica'
                         'URL' = 'https://www.eldiario.es/politica/'
                         'Icon' = 'https://www.eldiario.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Público Política'
+                        'Title' = 'Publico Poltica'
                         'URL' = 'https://www.publico.es/politica'
                         'Icon' = 'https://www.publico.es/favicon.ico'
                     }
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'El País Política'
+                        'Title' = 'El Pas Poltica'
                         'URL' = 'https://www.youtube.com/@elpais'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'El Mundo Política'
+                        'Title' = 'El Mundo Poltica'
                         'URL' = 'https://www.youtube.com/@elmundoes'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'ABC Política'
+                        'Title' = 'ABC Poltica'
                         'URL' = 'https://www.youtube.com/@abc_es'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'La Vanguardia Política'
+                        'Title' = 'La Vanguardia Poltica'
                         'URL' = 'https://www.youtube.com/@lavanguardia'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'El País Política Podcast'
+                        'Title' = 'El Pas Poltica Podcast'
                         'URL' = 'https://elpais.com/podcasts/politica'
                         'Icon' = 'https://elpais.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'El Mundo Política Podcast'
+                        'Title' = 'El Mundo Poltica Podcast'
                         'URL' = 'https://www.elmundo.es/podcasts/politica'
                         'Icon' = 'https://www.elmundo.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'ABC Política Podcast'
+                        'Title' = 'ABC Poltica Podcast'
                         'URL' = 'https://www.abc.es/podcasts/politica'
                         'Icon' = 'https://www.abc.es/favicon.ico'
                     }
@@ -31986,17 +31986,17 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Vogue España'
+                        'Title' = 'Vogue Espana'
                         'URL' = 'https://www.vogue.es/'
                         'Icon' = 'https://www.vogue.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'ELLE España'
+                        'Title' = 'ELLE Espana'
                         'URL' = 'https://www.elle.com/es/'
                         'Icon' = 'https://www.elle.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Harper s Bazaar España'
+                        'Title' = 'Harper s Bazaar Espana'
                         'URL' = 'https://www.harpersbazaar.com/es/'
                         'Icon' = 'https://www.harpersbazaar.com/favicon.ico'
                     },
@@ -32025,17 +32025,17 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Vogue España'
+                        'Title' = 'Vogue Espana'
                         'URL' = 'https://www.youtube.com/@vogueespana'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'ELLE España'
+                        'Title' = 'ELLE Espana'
                         'URL' = 'https://www.youtube.com/@elleespana'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Harper s Bazaar España'
+                        'Title' = 'Harper s Bazaar Espana'
                         'URL' = 'https://www.youtube.com/@harpersbazaarespana'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -32047,17 +32047,17 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Vogue España Podcast'
+                        'Title' = 'Vogue Espana Podcast'
                         'URL' = 'https://www.vogue.es/podcasts'
                         'Icon' = 'https://www.vogue.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'ELLE España Podcast'
+                        'Title' = 'ELLE Espana Podcast'
                         'URL' = 'https://www.elle.com/es/podcasts'
                         'Icon' = 'https://www.elle.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Harper s Bazaar España Podcast'
+                        'Title' = 'Harper s Bazaar Espana Podcast'
                         'URL' = 'https://www.harpersbazaar.com/es/podcasts'
                         'Icon' = 'https://www.harpersbazaar.com/favicon.ico'
                     }
@@ -32066,17 +32066,17 @@
             'Military' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Ejército de Tierra'
+                        'Title' = 'Ejercito de Tierra'
                         'URL' = 'https://ejercito.defensa.gob.es/es/actualidad/noticias'
                         'Icon' = 'https://ejercito.defensa.gob.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armada Española'
+                        'Title' = 'Armada Espanola'
                         'URL' = 'https://armada.defensa.gob.es/actualidad/noticias'
                         'Icon' = 'https://armada.defensa.gob.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Ejército del Aire y del Espacio'
+                        'Title' = 'Ejercito del Aire y del Espacio'
                         'URL' = 'https://www.ejercitoaire.defensa.gob.es/es/actualidad/noticias'
                         'Icon' = 'https://www.ejercitoaire.defensa.gob.es/favicon.ico'
                     },
@@ -32105,17 +32105,17 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Ejército de Tierra'
+                        'Title' = 'Ejercito de Tierra'
                         'URL' = 'https://www.youtube.com/@EjercitodeTierra'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armada Española'
+                        'Title' = 'Armada Espanola'
                         'URL' = 'https://www.youtube.com/@Armadaespanola'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Ejército del Aire y del Espacio'
+                        'Title' = 'Ejercito del Aire y del Espacio'
                         'URL' = 'https://www.youtube.com/@EjercitodelAire'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -32127,17 +32127,17 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Ejército de Tierra Podcast'
+                        'Title' = 'Ejercito de Tierra Podcast'
                         'URL' = 'https://ejercito.defensa.gob.es/es/podcasts'
                         'Icon' = 'https://ejercito.defensa.gob.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Armada Española Podcast'
+                        'Title' = 'Armada Espanola Podcast'
                         'URL' = 'https://armada.defensa.gob.es/podcasts'
                         'Icon' = 'https://armada.defensa.gob.es/favicon.ico'
                     },
                     @{
-                        'Title' = 'Ejército del Aire Podcast'
+                        'Title' = 'Ejercito del Aire Podcast'
                         'URL' = 'https://www.ejercitoaire.defensa.gob.es/es/podcasts'
                         'Icon' = 'https://www.ejercitoaire.defensa.gob.es/favicon.ico'
                     }
@@ -32174,7 +32174,7 @@
                     'Icon' = 'https://www.svt.se/favicon.ico'
                 },
                 @{
-                    'Title' = 'Göteborgs-Posten'
+                    'Title' = 'Goteborgs-Posten'
                     'URL' = 'https://www.gp.se/'
                     'Icon' = 'https://www.gp.se/favicon.ico'
                 },
@@ -32201,7 +32201,7 @@
                     'Icon' = 'https://breakit.se/favicon.ico'
                 },
                 @{
-                    'Title' = 'Resumé'
+                    'Title' = 'Resume'
                     'URL' = 'https://www.resume.se/'
                     'Icon' = 'https://www.resume.se/favicon.ico'
                 },
@@ -32274,7 +32274,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Resumé'
+                    'Title' = 'Resume'
                     'URL' = 'https://www.youtube.com/@resume'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -32303,7 +32303,7 @@
                     'Icon' = 'https://www.expressen.se/favicon.ico'
                 },
                 @{
-                    'Title' = 'SVT Dokumentär'
+                    'Title' = 'SVT Dokumentr'
                     'URL' = 'https://www.svt.se/dokumentar/podcasts'
                     'Icon' = 'https://www.svt.se/favicon.ico'
                 }
@@ -32320,7 +32320,7 @@
                     'Icon' = 'https://breakit.se/favicon.ico'
                 },
                 @{
-                    'Title' = 'Resumé Podcast'
+                    'Title' = 'Resume Podcast'
                     'URL' = 'https://www.resume.se/podcasts'
                     'Icon' = 'https://www.resume.se/favicon.ico'
                 },
@@ -32340,7 +32340,7 @@
                         'Icon' = 'https://www.di.se/favicon.ico'
                     },
                     @{
-                        'Title' = 'Affärsvärlden'
+                        'Title' = 'Affrsvrlden'
                         'URL' = 'https://www.affarsvarlden.se/'
                         'Icon' = 'https://www.affarsvarlden.se/favicon.ico'
                     },
@@ -32362,7 +32362,7 @@
                         'Icon' = 'https://breakit.se/favicon.ico'
                     },
                     @{
-                        'Title' = 'Resumé Business'
+                        'Title' = 'Resume Business'
                         'URL' = 'https://www.resume.se/business'
                         'Icon' = 'https://www.resume.se/favicon.ico'
                     },
@@ -32379,7 +32379,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Affärsvärlden'
+                        'Title' = 'Affrsvrlden'
                         'URL' = 'https://www.youtube.com/@affarsvarlden'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -32401,7 +32401,7 @@
                         'Icon' = 'https://www.di.se/favicon.ico'
                     },
                     @{
-                        'Title' = 'Affärsvärlden Podcast'
+                        'Title' = 'Affrsvrlden Podcast'
                         'URL' = 'https://www.affarsvarlden.se/podcasts'
                         'Icon' = 'https://www.affarsvarlden.se/favicon.ico'
                     },
@@ -32580,7 +32580,7 @@
                         'Icon' = 'https://www.nyteknik.se/favicon.ico'
                     },
                     @{
-                        'Title' = 'Teknikföretagen'
+                        'Title' = 'Teknikforetagen'
                         'URL' = 'https://www.teknikforetagen.se/'
                         'Icon' = 'https://www.teknikforetagen.se/favicon.ico'
                     },
@@ -32619,7 +32619,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Teknikföretagen'
+                        'Title' = 'Teknikforetagen'
                         'URL' = 'https://www.youtube.com/@teknikforetagen'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -32864,7 +32864,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Magnus Midtbø Military'
+                        'Title' = 'Magnus Midtb Military'
                         'URL' = 'https://www.youtube.com/@magnusmidtbo'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -33069,7 +33069,7 @@
                     'Icon' = 'https://www.swissinfo.ch/favicon.ico'
                 },
                 @{
-                    'Title' = 'Servus, Grüezi und Hallo'
+                    'Title' = 'Servus, Gruezi und Hallo'
                     'URL' = 'https://podcasts.apple.com/us/podcast/servus-gruezi-und-hallo/id1530815838'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
@@ -33647,7 +33647,7 @@
         'News Sites' = @{
             'Mainstream' = @(
                 @{
-                    'Title' = 'Hürriyet Daily News'
+                    'Title' = 'Hurriyet Daily News'
                     'URL' = 'https://www.hurriyetdailynews.com/'
                     'Icon' = 'https://www.hurriyetdailynews.com/favicon.ico'
                 },
@@ -33677,7 +33677,7 @@
                     'Icon' = 'https://english.sabah.com.tr/favicon.ico'
                 },
                 @{
-                    'Title' = 'CNN Türk English'
+                    'Title' = 'CNN Turk English'
                     'URL' = 'https://www.cnnturk.com/english'
                     'Icon' = 'https://www.cnnturk.com/favicon.ico'
                 }
@@ -33699,7 +33699,7 @@
                     'Icon' = 'https://www.duvarenglish.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'BirGün English'
+                    'Title' = 'BirGun English'
                     'URL' = 'https://www.birgun.net/english'
                     'Icon' = 'https://www.birgun.net/favicon.ico'
                 },
@@ -33716,7 +33716,7 @@
                     'Icon' = 'https://sendika.org/favicon.ico'
                 },
                 @{
-                    'Title' = 'Artı Gerçek'
+                    'Title' = 'Arti Gercek'
                     'URL' = 'https://artigercek.com/english'
                     'Icon' = 'https://artigercek.com/favicon.ico'
                 },
@@ -33735,12 +33735,12 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'CNN Türk'
+                    'Title' = 'CNN Turk'
                     'URL' = 'https://www.youtube.com/@cnnturk'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Hürriyet'
+                    'Title' = 'Hurriyet'
                     'URL' = 'https://www.youtube.com/@hurriyet'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
@@ -33772,7 +33772,7 @@
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'BirGün'
+                    'Title' = 'BirGun'
                     'URL' = 'https://www.youtube.com/@birgun'
                     'Icon' = 'https://www.youtube.com/favicon.ico'
                 }
@@ -33796,7 +33796,7 @@
                     'Icon' = 'https://www.aa.com.tr/favicon.ico'
                 },
                 @{
-                    'Title' = 'Hürriyet Podcast'
+                    'Title' = 'Hurriyet Podcast'
                     'URL' = 'https://www.hurriyet.com.tr/podcasts'
                     'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                 },
@@ -33823,7 +33823,7 @@
                     'Icon' = 'https://www.duvarenglish.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'BirGün Podcast'
+                    'Title' = 'BirGun Podcast'
                     'URL' = 'https://www.birgun.net/podcasts'
                     'Icon' = 'https://www.birgun.net/favicon.ico'
                 }
@@ -33833,7 +33833,7 @@
             'Business' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hürriyet Ekonomi'
+                        'Title' = 'Hurriyet Ekonomi'
                         'URL' = 'https://www.hurriyet.com.tr/ekonomi/'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     },
@@ -33848,7 +33848,7 @@
                         'Icon' = 'https://www.milliyet.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Dünya Gazetesi'
+                        'Title' = 'Dunya Gazetesi'
                         'URL' = 'https://www.dunya.com/'
                         'Icon' = 'https://www.dunya.com/favicon.ico'
                     }
@@ -33887,7 +33887,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Dünya Gazetesi'
+                        'Title' = 'Dunya Gazetesi'
                         'URL' = 'https://www.youtube.com/@dunyanews'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -33899,7 +33899,7 @@
                         'Icon' = 'https://open.spotify.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Dünya Podcast'
+                        'Title' = 'Dunya Podcast'
                         'URL' = 'https://www.dunya.com/podcasts'
                         'Icon' = 'https://www.dunya.com/favicon.ico'
                     },
@@ -33928,7 +33928,7 @@
                         'Icon' = 'https://www.sabah.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hürriyet Sports'
+                        'Title' = 'Hurriyet Sports'
                         'URL' = 'https://www.hurriyet.com.tr/spor/'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     }
@@ -33967,7 +33967,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hürriyet Sports'
+                        'Title' = 'Hurriyet Sports'
                         'URL' = 'https://www.youtube.com/@hurriyetsports'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
@@ -33993,7 +33993,7 @@
             'Culture' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hürriyet Culture'
+                        'Title' = 'Hurriyet Culture'
                         'URL' = 'https://www.hurriyet.com.tr/kultur-sanat/'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     },
@@ -34073,7 +34073,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hürriyet Tech'
+                        'Title' = 'Hurriyet Tech'
                         'URL' = 'https://www.hurriyet.com.tr/teknoloji/'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     },
@@ -34088,7 +34088,7 @@
                         'Icon' = 'https://www.milliyet.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Donanım Haber'
+                        'Title' = 'Donanim Haber'
                         'URL' = 'https://www.donanimhaber.com/'
                         'Icon' = 'https://www.donanimhaber.com/favicon.ico'
                     }
@@ -34112,12 +34112,12 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Donanım Haber Tech'
+                        'Title' = 'Donanim Haber Tech'
                         'URL' = 'https://www.youtube.com/@donanimhaber'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hürriyet Tech'
+                        'Title' = 'Hurriyet Tech'
                         'URL' = 'https://www.youtube.com/@hurriyet'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -34134,7 +34134,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Donanım Haber Podcast'
+                        'Title' = 'Donanim Haber Podcast'
                         'URL' = 'https://www.donanimhaber.com/podcasts'
                         'Icon' = 'https://www.donanimhaber.com/favicon.ico'
                     },
@@ -34153,7 +34153,7 @@
             'Politics' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Hürriyet Politics'
+                        'Title' = 'Hurriyet Politics'
                         'URL' = 'https://www.hurriyet.com.tr/gundem/'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     },
@@ -34197,7 +34197,7 @@
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'CNN Türk Politics'
+                        'Title' = 'CNN Turk Politics'
                         'URL' = 'https://www.youtube.com/@cnnturk'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -34233,22 +34233,22 @@
             'Fashion' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Vogue Türkiye'
+                        'Title' = 'Vogue Turkiye'
                         'URL' = 'https://www.vogue.com.tr/'
                         'Icon' = 'https://www.vogue.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Elle Türkiye'
+                        'Title' = 'Elle Turkiye'
                         'URL' = 'https://www.elle.com.tr/'
                         'Icon' = 'https://www.elle.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'Harper s Bazaar Türkiye'
+                        'Title' = 'Harper s Bazaar Turkiye'
                         'URL' = 'https://www.harpersbazaar.com.tr/'
                         'Icon' = 'https://www.harpersbazaar.com.tr/favicon.ico'
                     },
                     @{
-                        'Title' = 'L Officiel Türkiye'
+                        'Title' = 'L Officiel Turkiye'
                         'URL' = 'https://www.lofficielturkiye.com/'
                         'Icon' = 'https://www.lofficielturkiye.com/favicon.ico'
                     }
@@ -34272,29 +34272,29 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'Vogue Türkiye'
+                        'Title' = 'Vogue Turkiye'
                         'URL' = 'https://www.youtube.com/@vogueturkiye'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Elle Türkiye'
+                        'Title' = 'Elle Turkiye'
                         'URL' = 'https://www.youtube.com/@elleturkiye'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Harper s Bazaar Türkiye'
+                        'Title' = 'Harper s Bazaar Turkiye'
                         'URL' = 'https://www.youtube.com/@harpersbazaarturkiye'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'L Officiel Türkiye'
+                        'Title' = 'L Officiel Turkiye'
                         'URL' = 'https://www.youtube.com/@lofficielturkiye'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     }
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'Vogue Türkiye Podcast'
+                        'Title' = 'Vogue Turkiye Podcast'
                         'URL' = 'https://www.vogue.com.tr/podcasts'
                         'Icon' = 'https://www.vogue.com.tr/favicon.ico'
                     },
@@ -34328,7 +34328,7 @@
                         'Icon' = 'https://www.dailysabah.com/favicon.ico'
                     },
                     @{
-                        'Title' = 'Hürriyet Military'
+                        'Title' = 'Hurriyet Military'
                         'URL' = 'https://www.hurriyet.com.tr/gundem/milli-savunma-bakanligi'
                         'Icon' = 'https://www.hurriyet.com.tr/favicon.ico'
                     }
@@ -36807,7 +36807,7 @@
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'NATÔ Canada!'
+                    'Title' = 'NAT Canada!'
                     'URL' = 'https://podcasts.apple.com/us/podcast/nat%C3%B4-canada/id1609640413'
                     'Icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
@@ -37079,7 +37079,7 @@
             'Science and Technology' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'NATO S&T Organization'
+                        'Title' = 'NATO S and T Organization'
                         'URL' = 'https://www.sto.nato.int/sto-news/'
                         'Icon' = 'https://www.sto.nato.int/favicon.ico'
                     },
@@ -37118,7 +37118,7 @@
                 )
                 'Vloggers' = @(
                     @{
-                        'Title' = 'NATO S&T Vlog'
+                        'Title' = 'NATO S and T Vlog'
                         'URL' = 'https://www.youtube.com/@NATO'
                         'Icon' = 'https://www.youtube.com/favicon.ico'
                     },
@@ -37140,7 +37140,7 @@
                 )
                 'Podcasts' = @(
                     @{
-                        'Title' = 'NATO S&T Podcast'
+                        'Title' = 'NATO S and T Podcast'
                         'URL' = 'https://www.sto.nato.int/podcasts'
                         'Icon' = 'https://www.sto.nato.int/favicon.ico'
                     },
@@ -39003,7 +39003,7 @@
                     'Icon' = 'https://www.ibanet.org/favicon.ico'
                 },
                 @{
-                    'Title' = 'ICC President Hofmański on Fighting Impunity'
+                    'Title' = 'iCC President Hofmaski on Fighting impunity'
                     'URL' = 'https://www.law.berkeley.edu/podcast-episode/borderlines-podcast-icc-president-hofmanski/'
                     'Icon' = 'https://www.law.berkeley.edu/favicon.ico'
                 },
@@ -39093,7 +39093,7 @@
             'Sports' = @{
                 'Mainstream News' = @(
                     @{
-                        'Title' = 'Edouard Ngaïssona and Alfred Yekatom jailed for war crimes'
+                        'Title' = 'Edouard Ngassona and Alfred Yekatom jailed for war crimes'
                         'URL' = 'https://www.bbc.com/news/articles/c3070nlqnq3o'
                         'Icon' = 'https://www.bbc.com/favicon.ico'
                     },
@@ -39268,7 +39268,7 @@
                         'Icon' = 'https://www.eff.org/favicon.ico'
                     },
                     @{
-                        'Title' = 'Cyberwarfare Debate — When Might Cyber Operations Constitute War Crimes?'
+                        'Title' = 'Cyberwarfare Debate  When Might Cyber Operations Constitute War Crimes?'
                         'URL' = 'https://iccforum.com/cyberwar'
                         'Icon' = 'https://iccforum.com/favicon.ico'
                     }

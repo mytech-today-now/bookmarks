@@ -1,4 +1,4 @@
-# Africa bookmark data - loaded by bookmarks.ps1
+﻿# Africa bookmark data - loaded by bookmarks.ps1
 # Structure: 'Africa' key containing regional categories
 @{
     'Africa' = @{
@@ -19,7 +19,7 @@
                 'Icon' = 'https://www.theafricareport.com/favicon.ico'
             },
             @{
-                'Title' = 'Mail & Guardian'
+                'Title' = 'Mail and Guardian'
                 'URL' = 'https://mg.co.za/'
                 'Icon' = 'https://mg.co.za/favicon.ico'
             },

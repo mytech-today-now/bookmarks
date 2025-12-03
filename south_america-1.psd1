@@ -1,8 +1,8 @@
 ﻿# Latin America / Central America bookmark data - loaded by bookmarks.ps1
 # Structure: 'Latin America' key containing regional categories
 @{
-    'Latin America' = @{
-        'News Sites' = @(
+    'South America' = @{
+        'Brazil' = @(
             @{
                 'Title' = 'Reuters Latin America'
                 'URL' = 'https://www.reuters.com/world/americas/'
@@ -29,7 +29,7 @@
                 'Icon' = 'https://www.laht.com/favicon.ico'
             }
         )
-        'Vloggers' = @(
+        'Chile' = @(
             @{
                 'Title' = 'MILENIO'
                 'URL' = 'https://www.youtube.com/user/MilenioTV'
@@ -56,7 +56,7 @@
                 'Icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-        'Podcasters' = @(
+        'Argentina' = @(
             @{
                 'Title' = 'Latin America in Focus'
                 'URL' = 'https://as-coa.org/podcasts/latin-america-focus'

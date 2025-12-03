@@ -25,7 +25,7 @@
         'General News' = @(
             @{
                 'Title' = 'Google News'
-                'URL' = 'https://news.google.com/home?hl=en-US&gl=US&ceid=US:en'
+                'URL' = 'https://news.google.com/home?hl=en-US%26gl=US%26ceid=US:en'
                 'Icon' = 'https://news.google.com/favicon.ico'
             },
             @{
@@ -721,7 +721,7 @@
                             'Icon' = 'https://heatmap.news/favicon.ico'
                         },
                         @{
-                            'Title' = 'E&E News'
+                            'Title' = 'E and E News'
                             'URL' = 'https://www.eenews.net/'
                             'Icon' = 'https://www.eenews.net/favicon.ico'
                         },
@@ -1285,7 +1285,7 @@
                     )
                     'Publications' = @(
                         @{
-                            'Title' = 'Bonds & Rates - CNBC'
+                            'Title' = 'Bonds and Rates - CNBC'
                             'URL' = 'https://www.cnbc.com/bonds/'
                             'Icon' = 'https://www.cnbc.com/favicon.ico'
                         },
@@ -1665,7 +1665,7 @@
                     'Icon' = 'https://arstechnica.com/favicon.ico'
                 },
                 @{
-                    'Title' = 'Sky & Telescope'
+                    'Title' = 'Sky and Telescope'
                     'URL' = 'https://skyandtelescope.org/news/'
                     'Icon' = 'https://skyandtelescope.org/favicon.ico'
                 },
@@ -2406,7 +2406,7 @@
             )
         }
     }
-    '3D & CAD' = @{
+    '3D and CAD' = @{
         '3D Modeling' = @(
             @{
                 'Title' = 'Blender - 3D Creation Suite'
@@ -2498,6 +2498,11 @@
                 'URL' = 'https://mytech.today/tools-2025/#search-engines'
                 'Icon' = 'https://mytech.today/favicon.ico'
             },
+                        @{
+                'Title' = 'myTech.Today - Banned Links, OSINT, and AI'
+                'URL' = 'https://mytech.today/investigative/'
+                'Icon' = 'https://mytech.today/favicon.ico'
+            },
             @{
                 'Title' = 'DuckDuckGo - privacy-first search'
                 'URL' = 'https://duckduckgo.com/'
@@ -2529,14 +2534,14 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=nerdydata.com'
             },
             @{
-                'Title' = 'Symptoma - symptom checker & medical search'
+                'Title' = 'Symptoma - symptom checker and medical search'
                 'URL' = 'https://www.symptoma.com/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=symptoma.com'
             },
             @{
                 'Title' = 'Apse.io - personal search engine'
                 'URL' = 'https://apse.io/'
-                'Icon' = 'https://www.google.com/s2/favicons?sz=64&domain=apse.io'
+                'Icon' = 'https://www.google.com/s2/favicons?sz=64 and domain=apse.io'
             },
             @{
                 'Title' = 'Yippy - clustered metasearch'
@@ -2554,9 +2559,24 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=duckduckgo.com'
             },
             @{
-                'Title' = 'Browser market share statistics 2025'
-                'URL' = 'https://gs.statcounter.com/browser-market-share'
-                'Icon' = 'https://www.google.com/s2/favicons?domain=gs.statcounter.com'
+                'Title' = 'Bing vs Google- Side-by-side list and comparison of Bing vs. Google SERPs'
+                'URL' = 'http://bvsg.org/'
+                'Icon' = 'https://www.google.com/s2/favicons?domain=bvsg.org'
+            },
+            @{
+                'Title' = 'iSeek - Targeted discovery tool to enhance, analyze and organize searches'
+                'URL' = 'http://iseek.com/#/web'
+                'Icon' = 'https://www.google.com/s2/favicons?domain=iseek.com'
+            },
+            @{
+                'Title' = 'PublicWWW - Allows investigators to search the source code and find related websites through HTML codes, widgets and publisher IDs.'
+                'URL' = 'https://publicwww.com/'
+                'Icon' = 'https://www.google.com/s2/favicons?domain=publicwww.com'
+            },
+            @{
+                'Title' = 'Advangle is a simple and convenient builder of complex web-search queries through Google or Bing search engines'
+                'URL' = 'http://advangle.com/'
+                'Icon' = 'https://www.google.com/s2/favicons?domain=advangle.com'
             }
         )
         'News Updates' = @(
@@ -2750,14 +2770,14 @@
                 'Icon' = 'https://tomshardware.com/favicon.ico'
             }
         )
-        'Reference & Catalogs' = @(
+        'Reference and Catalogs' = @(
             @{
                 'Title' = 'Ex-Googler dev tools (xg2xg) - Google-internal equivalents'
                 'URL' = 'https://github.com/jhuangtw/xg2xg'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=github.com'
             }
         )
-        'Web Dev & Prototyping' = @(
+        'Web Dev and Prototyping' = @(
             @{
                 'Title' = 'Glitch - instant web app builder'
                 'URL' = 'https://glitch.com/'
@@ -2769,14 +2789,14 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=jsfiddle.net'
             }
         )
-        'Testing, QA & Automation' = @(
+        'Testing, QA and Automation' = @(
             @{
                 'Title' = 'Apache JMeter - load and performance testing'
                 'URL' = 'https://jmeter.apache.org/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=jmeter.apache.org'
             },
             @{
-                'Title' = 'BlazeMeter - cloud JMeter & performance testing'
+                'Title' = 'BlazeMeter - cloud JMeter and performance testing'
                 'URL' = 'https://www.blazemeter.com/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=blazemeter.com'
             },
@@ -2806,7 +2826,7 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=nirsoft.net'
             },
             @{
-                'Title' = 'Semgrep - lightweight code scanning & SAST'
+                'Title' = 'Semgrep - lightweight code scanning and SAST'
                 'URL' = 'https://semgrep.dev/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=semgrep.dev'
             },
@@ -2821,14 +2841,14 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=qareplay.com'
             }
         )
-        'Productivity & Notes' = @(
+        'Productivity and Notes' = @(
             @{
                 'Title' = 'TakeNote - Markdown note-taking app (takenote.dev)'
                 'URL' = 'https://takenote.dev/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=takenote.dev'
             }
         )
-        'Dev Utilities & CLI' = @(
+        'Dev Utilities and CLI' = @(
             @{
                 'Title' = 'GNU Coreutils - essential command-line utilities'
                 'URL' = 'https://www.gnu.org/software/coreutils/'
@@ -2840,7 +2860,7 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=zxing.org'
             },
             @{
-                'Title' = 'regexr - interactive regex tester & cheat sheet'
+                'Title' = 'regexr - interactive regex tester and cheat sheet'
                 'URL' = 'https://regexr.com/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=regexr.com'
             },
@@ -2860,14 +2880,14 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=github.com'
             }
         )
-        'Data, ML & Analytics' = @(
+        'Data, ML and Analytics' = @(
             @{
                 'Title' = 'TensorFlow - end-to-end open-source machine learning'
                 'URL' = 'https://www.tensorflow.org/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=tensorflow.org'
             },
             @{
-                'Title' = 'Datafold - data quality & comparison for SQL DBs'
+                'Title' = 'Datafold - data quality and comparison for SQL DBs'
                 'URL' = 'https://datafold.com/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=datafold.com'
             },
@@ -2877,7 +2897,7 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=streamlit.io'
             }
         )
-        'IDEs & Editors' = @(
+        'IDEs and Editors' = @(
             @{
                 'Title' = 'Visual Studio 2022 Community - full-featured IDE'
                 'URL' = 'https://visualstudio.microsoft.com/vs/community/'
@@ -3065,10 +3085,10 @@
             @{
                 'Title' = 'Manage Restore Points Log'
                 'URL' = 'file:///C:/Users/%USERNAME%/myTech.Today/logs/Manage-RestorePoints.md'
-                'Icon' = 'https://files.softicons.com/download/system-icons/windows-8-metro-invert-icons-by-dakirby309/ico/Folders%20&%20OS/System%20Restore.ico'
+                'Icon' = 'https://files.softicons.com/download/system-icons/windows-8-metro-invert-icons-by-dakirby309/ico/Folders%20 and %20OS/System%20Restore.ico'
             },
             @{
-                'Title' = 'O&O ShutUp10 Log'
+                'Title' = 'O and O ShutUp10 Log'
                 'URL' = 'file:///C:/Users/%USERNAME%/myTech.Today/logs/OOShutUp10.md'
                 'Icon' = 'https://www.oo-software.com/favicon.ico'
             },
@@ -3080,7 +3100,7 @@
         )
         'System Maintenance' = @(
             @{
-                'Title' = 'O&O ShutUp10 - Privacy Settings'
+                'Title' = 'O and O ShutUp10 - Privacy Settings'
                 'URL' = 'https://www.oo-software.com/en/shutup10'
                 'Icon' = 'https://www.oo-software.com/favicon.ico'
             },
@@ -3137,7 +3157,7 @@
         )
     }
     'Media Downloading' = @{
-        'News & Specialty Downloaders' = @(
+        'News and Specialty Downloaders' = @(
             @{
                 'Title' = 'Free Rumble Video Downloader HD Quality Fast'
                 'URL' = 'https://pastedownload.com/rumble-video-downloader/'
@@ -3171,14 +3191,14 @@
                 'Icon' = 'https://www.google.com/s2/favicons?domain=anyconv.com'
             },
             @{
-                'Title' = 'Online OCR - FREE OCR PDF Document Scanner & Converter - Soda PDF'
+                'Title' = 'Online OCR - FREE OCR PDF Document Scanner and Converter - Soda PDF'
                 'URL' = 'https://www.sodapdf.com/ocr-pdf/'
                 'Icon' = 'https://www.google.com/s2/favicons?domain=sodapdf.com'
             }
         )
         'Social Media Downloaders' = @(
             @{
-                'Title' = 'Twitter Video Downloader - Download twitter videos & GIF Online'
+                'Title' = 'Twitter Video Downloader - Download twitter videos and GIF Online'
                 'URL' = 'https://twittervideodownloader.com/'
                 'Icon' = 'https://twittervideodownloader.com/favicon.ico'
             },
@@ -3211,7 +3231,7 @@
             }
         )
     }
-    'Mockups & Wireframe' = @{
+    'Mockups and Wireframe' = @{
         'Design Tools' = @(
             @{
                 'Title' = 'Figma - Collaborative Design'

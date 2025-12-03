@@ -117,7 +117,7 @@ if (-not $script:LoggingModuleLoaded) {
 # Initialize logging
 # The logging module creates logs at %USERPROFILE%\myTech.Today\logs\bookmarks.md
 # and automatically archives them monthly as bookmarks.YYYY-MM.md
-$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.3.2"
+$logPath = Initialize-Log -ScriptName "Bookmarks-Manager" -ScriptVersion "1.4.0"
 Write-Log "=== Bookmarks Manager started (Mode=$Mode) ===" -Level INFO
 
 # Store performance flags as script-level variables for access in functions
@@ -376,13 +376,19 @@ function Get-DomainFromUrl {
 function Get-FaviconWithFallback {
     <#
     .SYNOPSIS
-        Attempts to fetch a favicon with multiple fallback strategies.
+        Attempts to fetch a favicon using parallel requests - first success wins.
     .DESCRIPTION
-        Tries the following sources in order:
-        1. Original icon URL from bookmark data
-        2. Common alternative paths on the same domain
-        3. Google's favicon service
-        4. DuckDuckGo's favicon service
+        Fires all favicon source requests IN PARALLEL and returns the first successful result.
+        This dramatically reduces fetch time by not waiting for sequential failures.
+
+        Sources tried simultaneously:
+        - https://www.<domain>.<tld>/favicon.ico
+        - https://<domain>.<tld>/favicon.ico
+        - https://www.google.com/s2/favicons?domain=<domain>.<tld>&sz=32
+        - https://icons.duckduckgo.com/ip3/<domain>.<tld>.ico
+        - https://<domain>.<tld>/favicon.png
+        - https://<domain>.<tld>/apple-touch-icon.png
+        - https://<domain>.<tld>/apple-touch-icon-precomposed.png
     #>
     param(
         [string]$IconUrl,
@@ -399,72 +405,168 @@ function Get-FaviconWithFallback {
         $domain = Get-DomainFromUrl -Url $IconUrl
     }
 
+    if (-not $domain) {
+        Write-Log "Unable to extract domain for favicon fetch" -Level WARNING
+        return $null
+    }
+
     # Check if we've already failed all fallbacks for this domain
-    if ($domain -and $script:DomainFaviconFailures.ContainsKey($domain)) {
+    if ($script:DomainFaviconFailures.ContainsKey($domain)) {
         Write-Log "Skipping favicon fetch for $domain - all fallbacks previously failed" -Level INFO
         return $null
     }
 
-    # Build list of URLs to try
-    $urlsToTry = @()
+    # Extract the base domain (without www prefix) for service URLs
+    $baseDomain = $domain -replace '^www\.', ''
 
-    # 1. Original icon URL (if provided and not already a fallback service)
-    if ($IconUrl -and $IconUrl -notmatch 'google\.com/s2/favicons|icons\.duckduckgo\.com') {
-        $urlsToTry += @{ Url = $IconUrl; Source = "Original" }
+    # Check cache first for any of the URLs we're about to try
+    $cacheKey = "domain:$baseDomain"
+    if ($script:FaviconCache.ContainsKey($cacheKey) -and $script:FaviconCache[$cacheKey]) {
+        Write-Log "Using cached favicon for domain: $baseDomain" -Level INFO
+        return $script:FaviconCache[$cacheKey]
     }
 
-    # 2. Common alternative paths on the domain
-    if ($domain) {
-        $baseUrl = "https://$domain"
-        $alternatives = @(
-            "/favicon.ico",
-            "/favicon.png",
-            "/apple-touch-icon.png",
-            "/apple-touch-icon-precomposed.png"
-        )
-        foreach ($alt in $alternatives) {
-            $altUrl = "$baseUrl$alt"
-            if ($altUrl -ne $IconUrl) {
-                $urlsToTry += @{ Url = $altUrl; Source = "Alternative path" }
+    # Build list of all URLs to try IN PARALLEL
+    $urlsToTry = @(
+        @{ Url = "https://www.$baseDomain/favicon.ico"; Source = "www favicon.ico" },
+        @{ Url = "https://$baseDomain/favicon.ico"; Source = "direct favicon.ico" },
+        @{ Url = "https://www.google.com/s2/favicons?domain=$baseDomain&sz=32"; Source = "Google" },
+        @{ Url = "https://icons.duckduckgo.com/ip3/$baseDomain.ico"; Source = "DuckDuckGo" },
+        @{ Url = "https://$baseDomain/favicon.png"; Source = "favicon.png" },
+        @{ Url = "https://$baseDomain/apple-touch-icon.png"; Source = "apple-touch-icon" },
+        @{ Url = "https://$baseDomain/apple-touch-icon-precomposed.png"; Source = "apple-touch-icon-precomposed" }
+    )
+
+    Write-Log "Fetching favicon for $baseDomain (7 sources in parallel)..." -Level INFO
+
+    # Thread-safe result container - first successful result wins
+    $resultFound = [System.Threading.ManualResetEventSlim]::new($false)
+    $winningResult = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
+
+    # Create runspace pool for parallel execution
+    $runspacePool = [runspacefactory]::CreateRunspacePool(1, 7)
+    $runspacePool.Open()
+
+    # Script block that each runspace will execute
+    $fetchScript = {
+        param($Url, $Source, $ResultFound, $WinningResult)
+
+        # Check if another thread already found a result
+        if ($ResultFound.IsSet) { return }
+
+        try {
+            $headers = @{
+                'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                'Accept' = 'image/*, */*'
+            }
+
+            $response = Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec 5 -Headers $headers -ErrorAction Stop
+            $imageBytes = $response.Content
+
+            # Validate response
+            if (-not $imageBytes -or $imageBytes.Length -lt 100) { return }
+
+            # Check for HTML content (not an image)
+            if ($imageBytes.Length -ge 5) {
+                $header = [System.Text.Encoding]::ASCII.GetString($imageBytes[0..4])
+                if ($header -match '^<[!?]|^<html|^<HTML') { return }
+            }
+
+            # Determine MIME type from magic bytes
+            $mimeType = 'image/x-icon'
+            if ($imageBytes.Length -ge 4) {
+                if ($imageBytes[0] -eq 0x89 -and $imageBytes[1] -eq 0x50) { $mimeType = 'image/png' }
+                elseif ($imageBytes[0] -eq 0xFF -and $imageBytes[1] -eq 0xD8) { $mimeType = 'image/jpeg' }
+                elseif ($imageBytes[0] -eq 0x47 -and $imageBytes[1] -eq 0x49) { $mimeType = 'image/gif' }
+            }
+
+            # Convert to data URI
+            $base64 = [Convert]::ToBase64String($imageBytes)
+            $dataUri = "data:$mimeType;base64,$base64"
+
+            # Try to be the first to set the result
+            if ($WinningResult.TryAdd('dataUri', $dataUri)) {
+                $WinningResult.TryAdd('source', $Source)
+                $WinningResult.TryAdd('url', $Url)
+                $WinningResult.TryAdd('bytes', $imageBytes.Length)
+                $ResultFound.Set()
             }
         }
-
-        # 3. Google's favicon service (reliable fallback)
-        $googleFavicon = "https://www.google.com/s2/favicons?domain=$domain&sz=32"
-        $urlsToTry += @{ Url = $googleFavicon; Source = "Google Favicon Service" }
-
-        # 4. DuckDuckGo's favicon service (another reliable fallback)
-        $ddgFavicon = "https://icons.duckduckgo.com/ip3/$domain.ico"
-        $urlsToTry += @{ Url = $ddgFavicon; Source = "DuckDuckGo Favicon Service" }
+        catch {
+            # Silently ignore failures - other parallel requests may succeed
+        }
     }
 
-    # Try each URL in order
+    # Launch all requests in parallel
+    $jobs = @()
     foreach ($urlInfo in $urlsToTry) {
-        $url = $urlInfo.Url
-        $source = $urlInfo.Source
+        $ps = [powershell]::Create()
+        $ps.RunspacePool = $runspacePool
+        [void]$ps.AddScript($fetchScript)
+        [void]$ps.AddArgument($urlInfo.Url)
+        [void]$ps.AddArgument($urlInfo.Source)
+        [void]$ps.AddArgument($resultFound)
+        [void]$ps.AddArgument($winningResult)
 
-        # Check cache first
-        if ($script:FaviconCache.ContainsKey($url)) {
-            $cached = $script:FaviconCache[$url]
-            if ($cached) {
-                Write-Log "Using cached favicon from $source for: $url" -Level INFO
-                return $cached
+        $jobs += @{
+            PowerShell = $ps
+            Handle = $ps.BeginInvoke()
+            Url = $urlInfo.Url
+            Source = $urlInfo.Source
+        }
+    }
+
+    # Wait for first success OR all to complete (max 6 seconds)
+    $timeout = 6000
+    $sw = [System.Diagnostics.Stopwatch]::StartNew()
+
+    while (-not $resultFound.IsSet -and $sw.ElapsedMilliseconds -lt $timeout) {
+        # Check if all jobs completed
+        $allComplete = $true
+        foreach ($job in $jobs) {
+            if (-not $job.Handle.IsCompleted) {
+                $allComplete = $false
+                break
             }
-            # Skip if we've already tried and failed this URL
-            continue
         }
-
-        $result = Get-FaviconFromUrl -Url $url -Source $source
-        if ($result) {
-            return $result
-        }
+        if ($allComplete) { break }
+        Start-Sleep -Milliseconds 50
     }
 
-    # All fallbacks failed - mark domain as failed to avoid future attempts
-    if ($domain) {
-        $script:DomainFaviconFailures[$domain] = $true
-        Write-Log "All favicon fallbacks failed for domain: $domain" -Level WARNING
+    # Clean up all jobs
+    foreach ($job in $jobs) {
+        try {
+            if ($job.Handle.IsCompleted) {
+                $job.PowerShell.EndInvoke($job.Handle)
+            }
+            $job.PowerShell.Dispose()
+        } catch { }
     }
+
+    $runspacePool.Close()
+    $runspacePool.Dispose()
+    $resultFound.Dispose()
+
+    # Check if we got a result
+    if ($winningResult.ContainsKey('dataUri')) {
+        $dataUri = $winningResult['dataUri']
+        $source = $winningResult['source']
+        $bytes = $winningResult['bytes']
+
+        # Cache the result for this domain
+        $script:FaviconCache[$cacheKey] = $dataUri
+
+        Write-Log "Favicon found for $baseDomain from $source ($bytes bytes) in $($sw.ElapsedMilliseconds)ms" -Level INFO
+        return $dataUri
+    }
+
+    # All requests failed - mark domain as failed to avoid future attempts
+    $script:DomainFaviconFailures[$domain] = $true
+    Write-Log "All 7 parallel favicon requests failed for: $baseDomain" `
+        -Level ERROR `
+        -Context "Parallel fetch attempted for $baseDomain with 6s timeout" `
+        -Solution "The website may not have a favicon, or all sources are temporarily unavailable" `
+        -Component "Favicon Fetcher"
 
     return $null
 }
@@ -883,12 +985,19 @@ function Load-ExternalDataSources {
     # Check for both .ps1 and .psd1 versions
     # MergePath: if specified, merge into that nested path (e.g., 'News/International News')
     #            if not specified, merge at root level
+    # RootKey: for sources that have a top-level wrapper key (e.g., 'Banned Links'), extract content from that key
     $externalSources = @(
+        # International News sources - merge into News/International News
         @{ Name = 'europe';          Extensions = @('.ps1', '.psd1'); MergePath = 'News/International News' }
         @{ Name = 'asia';            Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
         @{ Name = 'africa';          Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
         @{ Name = 'central_america'; Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
         @{ Name = 'middle_east';     Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'south_america';   Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'australasia';     Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        @{ Name = 'north_america';   Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
+        # OSINT sources - merge at root level (OSINT is now at root of banned-links.psd1)
+        @{ Name = 'banned-links';    Extensions = @('.psd1', '.ps1'); MergePath = '' }
     )
 
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
@@ -913,12 +1022,20 @@ function Load-ExternalDataSources {
                 $loadStart.Stop()
 
                 if ($externalData -is [hashtable]) {
+                    # If RootKey is specified, extract content from that wrapper key
+                    # (e.g., banned-links.psd1 has 'Banned Links' as wrapper, extract content from within)
+                    $dataToMerge = $externalData
+                    if ($source.RootKey -and $externalData.ContainsKey($source.RootKey)) {
+                        $dataToMerge = $externalData[$source.RootKey]
+                        Write-Log "Extracting content from RootKey '$($source.RootKey)'" -Level INFO
+                    }
+
                     # Determine merge target based on MergePath
                     $mergeTarget = $script:CuratedBookmarks
                     $mergePath = $source.MergePath
 
                     if ($mergePath) {
-                        # Navigate to the nested path (e.g., 'News/International News')
+                        # Navigate to the nested path (e.g., 'News/International News' or 'OSINT')
                         $pathParts = $mergePath -split '/'
                         foreach ($part in $pathParts) {
                             if (-not $mergeTarget.ContainsKey($part)) {
@@ -930,15 +1047,15 @@ function Load-ExternalDataSources {
 
                     # Merge the external data into the target location
                     $addedCount = 0
-                    foreach ($key in $externalData.Keys) {
+                    foreach ($key in $dataToMerge.Keys) {
                         if ($mergeTarget.ContainsKey($key)) {
                             if ($mergeTarget[$key] -is [hashtable] -and $mergeTarget[$key].Count -eq 0) {
-                                $mergeTarget[$key] = $externalData[$key]
+                                $mergeTarget[$key] = $dataToMerge[$key]
                                 $addedCount++
                             }
                         }
                         else {
-                            $mergeTarget[$key] = $externalData[$key]
+                            $mergeTarget[$key] = $dataToMerge[$key]
                             $addedCount++
                         }
                     }
@@ -965,136 +1082,95 @@ function Load-ExternalDataSources {
 }
 
 
+# Recursive helper function to convert hashtable/array data to bookmark nodes
+# Handles arbitrary nesting depth: hashtable = folder, array = bookmarks
+function ConvertTo-BookmarkNodes {
+    param(
+        [Parameter(Mandatory = $true)]
+        $Data,
+        [int]$Depth = 0
+    )
+
+    $year = (Get-Date).Year
+    $nodes = [System.Collections.ArrayList]::new()
+
+    if ($Data -is [array]) {
+        # This is an array of bookmarks - create bookmark URL nodes
+        foreach ($bookmark in $Data) {
+            if (-not $bookmark) { continue }
+
+            $title = $bookmark.Title
+            $url   = $bookmark.URL
+            # Handle both 'Icon' and 'icon' keys (case variation in different files)
+            $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
+
+            if ($null -eq $title -or $null -eq $url) { continue }
+
+            # Replace explicit year placeholder
+            $title = $title -replace '\b2025\b', $year.ToString()
+            $url   = $url   -replace '\b2025\b', $year.ToString()
+
+            # Expand environment variables in URL
+            $url = [Environment]::ExpandEnvironmentVariables($url)
+
+            # Fetch favicon and convert to data URI if icon URL is provided
+            $iconDataUri = $null
+            if ($iconUrl -or $url) {
+                $iconDataUri = Get-FaviconDataUri -IconUrl $iconUrl -BookmarkUrl $url
+            }
+
+            # Create bookmark node with icon if available
+            if ($iconDataUri) {
+                [void]$nodes.Add((New-BookmarkUrlNode -Name $title -Url $url -Icon $iconDataUri))
+            }
+            else {
+                [void]$nodes.Add((New-BookmarkUrlNode -Name $title -Url $url))
+            }
+        }
+    }
+    elseif ($Data -is [hashtable]) {
+        # This is a hashtable - each key becomes a subfolder, recurse into values
+        foreach ($key in $Data.Keys) {
+            $value = $Data[$key]
+            if (-not $value) { continue }
+
+            # Recursively convert the value
+            $childNodes = ConvertTo-BookmarkNodes -Data $value -Depth ($Depth + 1)
+
+            # Use @() to ensure array context for Count check
+            $childArray = @($childNodes)
+            if ($childArray.Count -gt 0) {
+                $subfolder = New-BookmarkSubfolder -Name $key -Children $childArray
+                if ($null -ne $subfolder) {
+                    [void]$nodes.Add($subfolder)
+                }
+            }
+        }
+    }
+    # If it's neither array nor hashtable, skip it
+
+    # Return as array to ensure consistent behavior
+    return @($nodes)
+}
+
 function Get-CategoryBookmarkNodes {
     param(
         [string]$Category
     )
 
-    $year = (Get-Date).Year
-
     # Use curated data from external hashtable (e.g., links-sample.psd1/ps1)
-    # Curated data is organized as: Category → Subfolder → Bookmarks
-    # OR: Category → Subfolder → Sub-subfolder → Bookmarks (for nested categories like News)
-    # Each subfolder becomes a child folder under the category
+    # Supports arbitrary nesting depth: hashtables become folders, arrays become bookmarks
     if ($script:CuratedBookmarks -is [hashtable] -and $script:CuratedBookmarks.ContainsKey($Category)) {
         $categoryTable = $script:CuratedBookmarks[$Category]
-        if ($categoryTable -is [hashtable]) {
-            $curatedNodes = @()
 
-            foreach ($subfolderName in $categoryTable.Keys) {
-                $bookmarkGroup = $categoryTable[$subfolderName]
-                if (-not $bookmarkGroup) { continue }
+        # Use recursive converter to handle any depth
+        $curatedNodes = ConvertTo-BookmarkNodes -Data $categoryTable -Depth 0
 
-                # Check if this is a nested subfolder (hashtable) or direct bookmarks (array)
-                if ($bookmarkGroup -is [hashtable]) {
-                    # This is a nested subfolder structure (e.g., News → Sports → Major Mens Leagues)
-                    $nestedSubfolderChildren = @()
-
-                    foreach ($nestedSubfolderName in $bookmarkGroup.Keys) {
-                        $nestedBookmarks = $bookmarkGroup[$nestedSubfolderName]
-                        if (-not $nestedBookmarks) { continue }
-
-                        $nestedBookmarkNodes = @()
-
-                        foreach ($bookmark in $nestedBookmarks) {
-                            if (-not $bookmark) { continue }
-
-                            $title = $bookmark.Title
-                            $url   = $bookmark.URL
-                            # Handle both 'Icon' (links-sample.psd1, europe.ps1) and 'icon' (asia.psd1) keys
-                            $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
-
-                            if ($null -eq $title -or $null -eq $url) { continue }
-
-                            # Replace explicit year placeholder
-                            $title = $title -replace '\b2025\b', $year.ToString()
-                            $url   = $url   -replace '\b2025\b', $year.ToString()
-
-                            # Expand environment variables in URL
-                            $url = [Environment]::ExpandEnvironmentVariables($url)
-
-                            # Fetch favicon and convert to data URI if icon URL is provided
-                            $iconDataUri = $null
-                            if ($iconUrl -or $url) {
-                                $iconDataUri = Get-FaviconDataUri -IconUrl $iconUrl -BookmarkUrl $url
-                            }
-
-                            # Create bookmark node with icon if available
-                            if ($iconDataUri) {
-                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url -Icon $iconDataUri
-                            }
-                            else {
-                                $nestedBookmarkNodes += New-BookmarkUrlNode -Name $title -Url $url
-                            }
-                        }
-
-                        # Create nested subfolder
-                        if ($nestedBookmarkNodes.Count -gt 0) {
-                            $nestedSubfolder = New-BookmarkSubfolder -Name $nestedSubfolderName -Children $nestedBookmarkNodes
-                            if ($null -ne $nestedSubfolder) {
-                                $nestedSubfolderChildren += $nestedSubfolder
-                            }
-                        }
-                    }
-
-                    # Create parent subfolder with nested subfolders
-                    if ($nestedSubfolderChildren.Count -gt 0) {
-                        $subfolder = New-BookmarkSubfolder -Name $subfolderName -Children $nestedSubfolderChildren
-                        if ($null -ne $subfolder) {
-                            $curatedNodes += $subfolder
-                        }
-                    }
-                }
-                else {
-                    # This is a direct bookmark array (e.g., News → General News → Bookmarks)
-                    $subfolderChildren = @()
-
-                    foreach ($bookmark in $bookmarkGroup) {
-                        if (-not $bookmark) { continue }
-
-                        $title = $bookmark.Title
-                        $url   = $bookmark.URL
-                        # Handle both 'Icon' (links-sample.psd1, europe.ps1) and 'icon' (asia.psd1) keys
-                        $iconUrl = if ($bookmark.Icon) { $bookmark.Icon } elseif ($bookmark.icon) { $bookmark.icon } else { $null }
-
-                        if ($null -eq $title -or $null -eq $url) { continue }
-
-                        # Replace explicit year placeholder (for example, 2025 -> current year)
-                        $title = $title -replace '\b2025\b', $year.ToString()
-                        $url   = $url   -replace '\b2025\b', $year.ToString()
-
-                        # Expand environment variables in URL (e.g., %USERNAME%, %USERPROFILE%)
-                        $url = [Environment]::ExpandEnvironmentVariables($url)
-
-                        # Fetch favicon and convert to data URI if icon URL is provided
-                        $iconDataUri = $null
-                        if ($iconUrl -or $url) {
-                            $iconDataUri = Get-FaviconDataUri -IconUrl $iconUrl -BookmarkUrl $url
-                        }
-
-                        # Create bookmark node with icon if available
-                        if ($iconDataUri) {
-                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url -Icon $iconDataUri
-                        }
-                        else {
-                            $subfolderChildren += New-BookmarkUrlNode -Name $title -Url $url
-                        }
-                    }
-
-                    # Create subfolder using the helper function
-                    if ($subfolderChildren.Count -gt 0) {
-                        $subfolder = New-BookmarkSubfolder -Name $subfolderName -Children $subfolderChildren
-                        if ($null -ne $subfolder) {
-                            $curatedNodes += $subfolder
-                        }
-                    }
-                }
-            }
-
-            if ($curatedNodes.Count -gt 0) {
-                Write-Log "Using curated bookmarks for category '$Category'." -Level INFO
-                return $curatedNodes
-            }
+        # Ensure array context for Count check (handles single-item returns)
+        $curatedArray = @($curatedNodes)
+        if ($curatedArray.Count -gt 0) {
+            Write-Log "Using curated bookmarks for category '$Category' ($($curatedArray.Count) nodes)." -Level INFO
+            return $curatedArray
         }
     }
 
@@ -1114,15 +1190,17 @@ function New-MyTechTodayFolder {
     $root.children += (New-BookmarkUrlNode -Name 'myTech.Today tools-2025' -Url 'https://mytech.today/tools-2025')
 
     # Special root-level categories that should appear directly under myTech.Today
-    $rootLevelCategories = @('News', 'Media Downloading')
+    $rootLevelCategories = @('News', 'Media Downloading', 'OSINT')
 
     foreach ($rc in $rootLevelCategories) {
         if ($Categories -contains $rc) {
             $links = Get-CategoryBookmarkNodes -Category $rc
+            # Ensure array context for Count check
+            $linksArray = @($links)
             # Only create category folder if there are curated bookmarks
-            if ($links.Count -gt 0) {
+            if ($linksArray.Count -gt 0) {
                 $catFolder = [PSCustomObject]@{ name = $rc; type = 'folder'; children = @() }
-                $catFolder.children += $links
+                $catFolder.children += $linksArray
                 $root.children += $catFolder
             }
         }
@@ -1148,10 +1226,12 @@ function New-MyTechTodayFolder {
 
         foreach ($cat in ($groupedCategories[$groupName] | Sort-Object -Unique)) {
             $links = Get-CategoryBookmarkNodes -Category $cat
+            # Ensure array context for Count check
+            $linksArray = @($links)
             # Only create category folder if there are curated bookmarks
-            if ($links.Count -gt 0) {
+            if ($linksArray.Count -gt 0) {
                 $catFolder = [PSCustomObject]@{ name = $cat; type = 'folder'; children = @() }
-                $catFolder.children += $links
+                $catFolder.children += $linksArray
                 $groupFolder.children += $catFolder
             }
         }
