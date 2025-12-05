@@ -1194,6 +1194,327 @@ function Repair-MismatchedBraceTypes {
     return $fixedLines
 }
 
+function Repair-MismatchedBraceClosures {
+    <#
+    .SYNOPSIS
+        Fix mismatched brace closures using stack-based tracking.
+
+        This handles cases where:
+        - @( is closed with } instead of )
+        - @{ is closed with ) instead of }
+
+        Uses a stack to track what type of brace was opened and ensures
+        the correct closing brace is used.
+    #>
+    param(
+        [string[]]$Lines,
+        [ref]$FixCount
+    )
+
+    $fixes = 0
+
+    # First pass: build a map of opening braces and their types
+    # Stack entries: @{ LineNumber = N; Type = 'array' or 'hashtable'; Indent = spaces }
+    $braceStack = [System.Collections.ArrayList]::new()
+    $mismatchFixes = @{}  # lineNumber -> correctBrace
+
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        $line = $Lines[$i]
+        $trimmed = $line.Trim()
+
+        # Count leading spaces for indent tracking
+        $indent = ($line -replace '^(\s*).*', '$1').Length
+
+        # Check for opening braces @( or @{
+        if ($line -match '@\(') {
+            [void]$braceStack.Add(@{
+                LineNumber = $i
+                Type = 'array'
+                Indent = $indent
+            })
+        }
+        elseif ($line -match '@\{') {
+            [void]$braceStack.Add(@{
+                LineNumber = $i
+                Type = 'hashtable'
+                Indent = $indent
+            })
+        }
+
+        # Check for closing braces - standalone ) or } (possibly with comma)
+        if ($trimmed -match '^[\)\}],?$') {
+            $closingBrace = if ($trimmed -match '^\)') { ')' } else { '}' }
+            $expectedType = if ($closingBrace -eq ')') { 'array' } else { 'hashtable' }
+
+            if ($braceStack.Count -gt 0) {
+                $lastOpen = $braceStack[$braceStack.Count - 1]
+                $actualType = $lastOpen.Type
+
+                # Check for mismatch
+                if ($actualType -ne $expectedType) {
+                    $correctBrace = if ($actualType -eq 'array') { ')' } else { '}' }
+                    $mismatchFixes[$i] = @{
+                        WrongBrace = $closingBrace
+                        CorrectBrace = $correctBrace
+                        OpenedAt = $lastOpen.LineNumber + 1
+                        Type = $actualType
+                    }
+                }
+
+                # Pop the stack
+                $braceStack.RemoveAt($braceStack.Count - 1)
+            }
+        }
+    }
+
+    # Second pass: apply fixes
+    $fixedLines = @()
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        $line = $Lines[$i]
+
+        if ($mismatchFixes.ContainsKey($i)) {
+            $fix = $mismatchFixes[$i]
+            $wrongBrace = [regex]::Escape($fix.WrongBrace)
+            $fixedLine = $line -replace $wrongBrace, $fix.CorrectBrace
+            if ($fixedLine -ne $line) {
+                $fixes++
+                Write-Host "    Line $($i + 1): Fixed $($fix.WrongBrace) to $($fix.CorrectBrace) (closing $($fix.Type) opened at line $($fix.OpenedAt))" -ForegroundColor Cyan
+                $line = $fixedLine
+            }
+        }
+
+        $fixedLines += $line
+    }
+
+    $FixCount.Value = $fixes
+    return $fixedLines
+}
+
+function Repair-InvalidHashtableCommas {
+    <#
+    .SYNOPSIS
+        Fix invalid commas after array/hashtable closures inside hashtables.
+
+        In PowerShell data files:
+        - Inside @{ } (hashtable): key-value pairs are separated by NEWLINES, not commas
+        - Inside @( ) (array): elements ARE separated by commas
+
+        This function fixes patterns where a value in a hashtable incorrectly
+        has a trailing comma before the next key:
+
+        WRONG (array value):
+            'Mainstream' = @(
+                @{...},
+                @{...}
+            ),                    # <-- Invalid comma after )
+            'Counter' = @(        # <-- This is a hashtable key, not an array element
+
+        WRONG (hashtable value):
+            'News' = @{
+                ...
+            },                    # <-- Invalid comma after }
+            'Sports' = @{         # <-- This is a hashtable key, not an array element
+
+        CORRECT:
+            'Mainstream' = @(
+                @{...},
+                @{...}
+            )                     # <-- No comma
+            'Counter' = @(        # <-- Correctly recognized as hashtable key
+
+        The error "The assignment expression is not valid" occurs because
+        the parser sees the comma and expects another array element, but
+        instead finds an assignment expression.
+    #>
+    param(
+        [string[]]$Lines,
+        [ref]$FixCount
+    )
+
+    $fixedLines = @()
+    $fixes = 0
+
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        $line = $Lines[$i]
+        $fixedLine = $line
+
+        # Pattern 1: line ends with ), (array close with trailing comma)
+        # Pattern 2: line ends with }, (hashtable close with trailing comma)
+        if ($line -match '^\s*[\)\}],\s*$') {
+            # Look at the next non-empty line
+            $nextLineIdx = $i + 1
+            while ($nextLineIdx -lt $Lines.Count -and $Lines[$nextLineIdx] -match '^\s*$') {
+                $nextLineIdx++
+            }
+
+            $shouldFix = $false
+
+            if ($nextLineIdx -lt $Lines.Count) {
+                $nextLine = $Lines[$nextLineIdx]
+
+                # Next line is a hashtable key assignment: 'Key' = @( or 'Key' = @{ or 'Key' = ( or 'Key' = {
+                # This means we're inside a hashtable, and the comma is invalid
+                # Note: Also match 'Key' = ( without @ (will be fixed by Repair-MissingArrayPrefix)
+                if ($nextLine -match "^\s*'[^']+'\s*=\s*@?[\(\{]") {
+                    $shouldFix = $true
+                }
+            }
+
+            if ($shouldFix) {
+                # Remove the trailing comma from ) or }
+                $fixedLine = $line -replace '([\)\}]),', '$1'
+                if ($fixedLine -ne $line) {
+                    $fixes++
+                    $braceType = if ($line -match '\),') { 'array' } else { 'hashtable' }
+                    Write-Host "    Line $($i + 1): Removed invalid comma after $braceType closure (before hashtable key)" -ForegroundColor Cyan
+                }
+            }
+        }
+
+        $fixedLines += $fixedLine
+    }
+
+    $FixCount.Value = $fixes
+    return $fixedLines
+}
+
+function Repair-DuplicateHashtableKeys {
+    <#
+    .SYNOPSIS
+        Fix duplicate keys within hashtable literals at any nesting level.
+
+        In PowerShell hashtables, each key must be unique. This function
+        detects and removes duplicate key assignments, keeping the last one
+        (which is typically the intended value in copy-paste errors).
+
+        Example:
+            @{
+                'Title' = 'Some Title'
+                'URL' = 'https://wrong-url.com/'    # <-- Duplicate, will be removed
+                'URL' = 'https://correct-url.com/'  # <-- Kept
+                'icon' = 'https://example.com/favicon.ico'
+            }
+    #>
+    param(
+        [string[]]$Lines,
+        [ref]$FixCount
+    )
+
+    $fixes = 0
+    $linesToRemove = @{}
+
+    # Use a stack to track keys at each hashtable depth level
+    $keyStack = [System.Collections.ArrayList]::new()
+
+    # First pass: identify duplicate keys
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        $line = $Lines[$i]
+
+        # Count opening and closing braces on this line
+        $openBraces = ([regex]::Matches($line, '@\{')).Count
+        $closeBraces = ([regex]::Matches($line, '\}')).Count
+
+        # Push new hashtable contexts for each @{
+        for ($j = 0; $j -lt $openBraces; $j++) {
+            [void]$keyStack.Add(@{})
+        }
+
+        # Check for key assignment if we're inside at least one hashtable
+        if ($keyStack.Count -gt 0 -and $line -match "^\s*'([^']+)'\s*=\s*") {
+            $key = $Matches[1]
+            $currentKeys = $keyStack[$keyStack.Count - 1]
+
+            if ($currentKeys.ContainsKey($key)) {
+                # Mark the previous occurrence for removal
+                $linesToRemove[$currentKeys[$key]] = $true
+                $fixes++
+                Write-Host "    Line $($currentKeys[$key] + 1): Removed duplicate key '$key' (keeping later occurrence at line $($i + 1))" -ForegroundColor Cyan
+            }
+            $currentKeys[$key] = $i
+        }
+
+        # Pop hashtable contexts for each }
+        for ($j = 0; $j -lt $closeBraces; $j++) {
+            if ($keyStack.Count -gt 0) {
+                $keyStack.RemoveAt($keyStack.Count - 1)
+            }
+        }
+    }
+
+    # Second pass: build output without removed lines
+    $fixedLines = @()
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        if (-not $linesToRemove.ContainsKey($i)) {
+            $fixedLines += $Lines[$i]
+        }
+    }
+
+    $FixCount.Value = $fixes
+    return $fixedLines
+}
+
+function Repair-MissingArrayPrefix {
+    <#
+    .SYNOPSIS
+        Fix missing @ symbol before array/hashtable literals in assignments.
+
+        In PowerShell data files, arrays and hashtables must be prefixed with @:
+        - @( ) for arrays
+        - @{ } for hashtables
+
+        This function fixes patterns like:
+            'Key' = (        # <-- Missing @
+            'Key' = {        # <-- Missing @
+
+        And converts them to:
+            'Key' = @(
+            'Key' = @{
+    #>
+    param(
+        [string[]]$Lines,
+        [ref]$FixCount
+    )
+
+    $fixedLines = @()
+    $fixes = 0
+
+    for ($i = 0; $i -lt $Lines.Count; $i++) {
+        $line = $Lines[$i]
+        $fixedLine = $line
+
+        # Pattern: 'Key' = ( or 'Key' = { without the @ prefix
+        # Match: 'SomeKey' = ( but NOT 'SomeKey' = @(
+        if ($line -match "^(\s*'[^']+'\s*=\s*)(\()(.*)$") {
+            $prefix = $Matches[1]
+            $brace = $Matches[2]
+            $suffix = $Matches[3]
+            $fixedLine = "${prefix}@${brace}${suffix}"
+            if ($fixedLine -ne $line) {
+                $fixes++
+                Write-Host "    Line $($i + 1): Added missing @ before array literal" -ForegroundColor Cyan
+            }
+        }
+        elseif ($line -match "^(\s*'[^']+'\s*=\s*)(\{)(.*)$") {
+            # Check it's not already @{
+            if ($line -notmatch "=\s*@\{") {
+                $prefix = $Matches[1]
+                $brace = $Matches[2]
+                $suffix = $Matches[3]
+                $fixedLine = "${prefix}@${brace}${suffix}"
+                if ($fixedLine -ne $line) {
+                    $fixes++
+                    Write-Host "    Line $($i + 1): Added missing @ before hashtable literal" -ForegroundColor Cyan
+                }
+            }
+        }
+
+        $fixedLines += $fixedLine
+    }
+
+    $FixCount.Value = $fixes
+    return $fixedLines
+}
+
 #endregion Brace Integrity Functions
 
 #region Tree Integrity Functions
@@ -2580,6 +2901,18 @@ if ($braceIntegrity.HasIssues -and ($FixBraces -or $FixSyntax)) {
         $report += ""
     }
 
+    # Fix mismatched brace closures using stack-based tracking
+    # This catches cases like @( closed with } instead of )
+    $braceClosureFixCount = [ref]0
+    $lines = Repair-MismatchedBraceClosures -Lines $lines -FixCount $braceClosureFixCount
+
+    if ($braceClosureFixCount.Value -gt 0) {
+        Write-Host "    Fixed $($braceClosureFixCount.Value) mismatched brace closure(s)" -ForegroundColor Cyan
+        $fixCount += $braceClosureFixCount.Value
+        $report += "Brace Closure Fixes: $($braceClosureFixCount.Value)"
+        $report += ""
+    }
+
     # Re-check brace balance after removing duplicates and fixing types
     $braceFixCount = [ref]0
     $lines = Repair-BraceBalance -Lines $lines -FixCount $braceFixCount
@@ -2588,6 +2921,47 @@ if ($braceIntegrity.HasIssues -and ($FixBraces -or $FixSyntax)) {
         Write-Host "    Applied $($braceFixCount.Value) brace balance fix(es)" -ForegroundColor Cyan
         $fixCount += $braceFixCount.Value
         $report += "Brace Balance Fixes: $($braceFixCount.Value)"
+        $report += ""
+    }
+}
+
+# Fix invalid commas after array closures inside hashtables
+# This fixes "The assignment expression is not valid" errors
+# Run this unconditionally when FixSyntax is enabled (not just when brace issues detected)
+if ($FixSyntax) {
+    # First, fix duplicate keys in hashtables
+    Write-Host "  Checking for duplicate hashtable keys..." -ForegroundColor Gray
+    $dupKeyFixCount = [ref]0
+    $lines = Repair-DuplicateHashtableKeys -Lines $lines -FixCount $dupKeyFixCount
+
+    if ($dupKeyFixCount.Value -gt 0) {
+        Write-Host "    Fixed $($dupKeyFixCount.Value) duplicate key(s)" -ForegroundColor Cyan
+        $fixCount += $dupKeyFixCount.Value
+        $report += "Duplicate Key Fixes: $($dupKeyFixCount.Value)"
+        $report += ""
+    }
+
+    # Second, fix missing @ prefix before ( or { in assignments
+    Write-Host "  Checking for missing @ prefix in array/hashtable literals..." -ForegroundColor Gray
+    $prefixFixCount = [ref]0
+    $lines = Repair-MissingArrayPrefix -Lines $lines -FixCount $prefixFixCount
+
+    if ($prefixFixCount.Value -gt 0) {
+        Write-Host "    Fixed $($prefixFixCount.Value) missing @ prefix(es)" -ForegroundColor Cyan
+        $fixCount += $prefixFixCount.Value
+        $report += "Missing @ Prefix Fixes: $($prefixFixCount.Value)"
+        $report += ""
+    }
+
+    # Then fix invalid commas
+    Write-Host "  Checking for invalid hashtable commas..." -ForegroundColor Gray
+    $commaFixCount = [ref]0
+    $lines = Repair-InvalidHashtableCommas -Lines $lines -FixCount $commaFixCount
+
+    if ($commaFixCount.Value -gt 0) {
+        Write-Host "    Fixed $($commaFixCount.Value) invalid hashtable comma(s)" -ForegroundColor Cyan
+        $fixCount += $commaFixCount.Value
+        $report += "Invalid Hashtable Comma Fixes: $($commaFixCount.Value)"
         $report += ""
     }
 }

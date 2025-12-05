@@ -3,8 +3,6 @@
     External data source for Middle East bookmarks.
 #>
 
-@{
-'Middle East' = @{
 # Middle East bookmark data - loaded by bookmarks.ps1
 # Structure: 'Middle East' key containing countries and their news sources
 @{
@@ -2837,7 +2835,7 @@
                     'URL' = 'https://www.jpost.com/business-and-innovation'
                     'icon' = 'https://www.jpost.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine - Independent perspectives on Israeli economic inequalities'
@@ -2855,7 +2853,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ILTV Israel News - Vlogs on Israeli startups and economic resilience'
@@ -2877,7 +2875,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCa0o7WvXj6O9ZxL1z7q2wQw'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Decision Points - Discussions on Israel''s wartime economy and recovery'
@@ -2895,7 +2893,7 @@
                 'icon' = 'https://www.jpost.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2919,7 +2917,7 @@
                     'URL' = 'https://www.timesofisrael.com/topic/sports/'
                     'icon' = 'https://www.timesofisrael.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sports Rabbi - Independent stories on athlete rights and sports politics'
@@ -2937,7 +2935,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Sports Rabbi - Vlogs on Israeli basketball and soccer highlights'
@@ -2959,7 +2957,7 @@
                 'URL' = 'https://www.youtube.com/@PiniGershon'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Sports Rabbi - Episodes on Israeli soccer and basketball leagues'
@@ -2977,7 +2975,7 @@
                 'icon' = 'https://thecjn.ca/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3001,7 +2999,7 @@
                     'URL' = 'https://www.timesofisrael.com/topic/culture/'
                     'icon' = 'https://www.timesofisrael.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine Culture - Independent critiques of Israeli cultural policies'
@@ -3019,7 +3017,7 @@
                     'icon' = 'https://jewishcurrents.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Piece of Hebrew - Vlogs on Israeli society culture and daily life'
@@ -3041,7 +3039,7 @@
                 'URL' = 'https://www.youtube.com/c/ILTVIsraelNews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Unpacking Israeli History - Episodes on cultural milestones and figures'
@@ -3059,7 +3057,7 @@
                 'icon' = 'https://israelstory.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3083,7 +3081,7 @@
                     'URL' = 'https://www.israelhayom.com/category/science-technology/'
                     'icon' = 'https://www.israelhayom.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine Tech - Critical analysis of Israeli surveillance technologies'
@@ -3101,7 +3099,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ILTV Israel News - Vlogs on Israeli biotech and innovation hubs'
@@ -3123,7 +3121,7 @@
                 'URL' = 'https://www.youtube.com/c/UnpackedMedia'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Invested by Aleph - Talks with Israeli tech founders and investors'
@@ -3141,7 +3139,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3165,7 +3163,7 @@
                     'URL' = 'https://www.ynetnews.com/category/3083'
                     'icon' = 'https://www.ynetnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine - Independent journalism on Israeli occupation policies'
@@ -3183,7 +3181,7 @@
                     'icon' = 'https://electronicintifada.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily - Vlogs explaining Israeli-Palestinian political dynamics'
@@ -3205,7 +3203,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=haviv+rettig+gur'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Unholy - Two journalists unpacking Israeli political news'
@@ -3223,7 +3221,7 @@
                 'icon' = 'https://israelpolicyforum.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3247,7 +3245,7 @@
                     'URL' = 'https://www.timesofisrael.com/topic/fashion/'
                     'icon' = 'https://www.timesofisrael.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine - Critiques of fashion industry and social issues'
@@ -3265,7 +3263,7 @@
                     'icon' = 'https://electronicintifada.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Cloe Feldman - Vlogs on Israeli beauty and fashion trends'
@@ -3287,7 +3285,7 @@
                 'URL' = 'https://www.youtube.com/c/ILTVIsraelNews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Undressing Fashion - Psychology of Israeli style and trends'
@@ -3305,7 +3303,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3329,7 +3327,7 @@
                     'URL' = 'https://www.i24news.tv/en/news/israel/defense'
                     'icon' = 'https://www.i24news.tv/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine Military - Investigative reports on IDF tactics'
@@ -3347,7 +3345,7 @@
                     'icon' = 'https://electronicintifada.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Israel Defense Forces - Official vlogs from IDF training and missions'
@@ -3369,7 +3367,7 @@
                 'URL' = 'https://www.youtube.com/c/ILTVIsraelNews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mission Brief - Behind-the-scenes of IDF operations and readiness'
@@ -3413,7 +3411,7 @@
                     'URL' = 'https://www.jordannews.jo/Section-72/Business'
                     'icon' = 'https://www.jordannews.jo/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber - Independent perspectives on Jordanian economic inequalities'
@@ -3431,7 +3429,7 @@
                     'icon' = 'http://en.ammonnews.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Roya News - Vlogs on Jordanian startups and economic resilience'
@@ -3453,7 +3451,7 @@
                 'URL' = 'https://www.youtube.com/c/BasilElhaj'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sowt Business - Discussions on Jordan''s economic recovery and policies'
@@ -3471,7 +3469,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3495,7 +3493,7 @@
                     'URL' = 'https://english.alarabiya.net/locations/jordan'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Sports - Independent stories on athlete rights and sports politics'
@@ -3513,7 +3511,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Abood Saadi - Vlogs on Jordanian football and soccer highlights'
@@ -3535,7 +3533,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=jordanian+sports+fan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sowt Sports - Episodes on Jordanian soccer and basketball leagues'
@@ -3553,7 +3551,7 @@
                 'icon' = 'https://deewaninstitute.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3577,7 +3575,7 @@
                     'URL' = 'http://jordantimes.com/'
                     'icon' = 'http://jordantimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Culture - Independent critiques of Jordanian cultural policies'
@@ -3595,7 +3593,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ibn Hattuta Travels - Vlogs on Jordanian society culture and daily life'
@@ -3617,7 +3615,7 @@
                 'URL' = 'https://www.youtube.com/@RoyaNewsTV'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Deewan Arabic Podcast - Episodes on cultural milestones and figures'
@@ -3635,7 +3633,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3659,7 +3657,7 @@
                     'URL' = 'https://english.alarabiya.net/locations/jordan'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Tech - Critical analysis of Jordanian surveillance technologies'
@@ -3677,7 +3675,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jordan University of Science and Technology - Vlogs on Jordanian biotech and innovation hubs'
@@ -3699,7 +3697,7 @@
                 'URL' = 'https://www.youtube.com/c/JoeHattab'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sowt Tech - Talks with Jordanian tech founders and investors'
@@ -3717,7 +3715,7 @@
                 'icon' = 'https://deewaninstitute.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3741,7 +3739,7 @@
                     'URL' = 'https://www.jordannews.jo/Section-106/Features'
                     'icon' = 'https://www.jordannews.jo/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Politics - Independent journalism on Jordanian governance policies'
@@ -3759,7 +3757,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mudar Zahran - Vlogs explaining Jordanian-Palestinian political dynamics'
@@ -3781,7 +3779,7 @@
                 'URL' = 'https://www.youtube.com/c/JoeHattab'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'On Jordan - Two experts unpacking Jordanian political news'
@@ -3799,7 +3797,7 @@
                 'icon' = 'https://deewaninstitute.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3823,7 +3821,7 @@
                     'URL' = 'https://english.alarabiya.net/locations/jordan'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Fashion - Critiques of fashion industry and social issues'
@@ -3841,7 +3839,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ghada Othman - Vlogs on Jordanian beauty and fashion trends'
@@ -3863,7 +3861,7 @@
                 'URL' = 'https://www.youtube.com/@RoyaNewsTV'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sowt Fashion - Psychology of Jordanian style and trends'
@@ -3881,7 +3879,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3905,7 +3903,7 @@
                     'URL' = 'https://english.alarabiya.net/locations/jordan'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '7iber Military - Investigative reports on JAF tactics'
@@ -3923,7 +3921,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jordan Armed Forces Official - Official vlogs from JAF training and missions'
@@ -3945,7 +3943,7 @@
                 'URL' = 'https://www.youtube.com/c/IbnHattutaTravels'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'On Jordan Military - Behind-the-scenes of JAF operations and readiness'
@@ -3989,7 +3987,7 @@
                     'URL' = 'https://www.arabianbusiness.com/gcc/kuwait'
                     'icon' = 'https://www.arabianbusiness.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Kuwait - Independent perspectives on Kuwaiti economic inequalities'
@@ -4007,7 +4005,7 @@
                     'icon' = 'https://gccbusinesswatch.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Neda Shadid - Vlogs on Kuwaiti startups and economic resilience'
@@ -4029,7 +4027,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLfjOw7vveQyXjWNGlFChzN_l7Usx4kcRW'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'KuwaitMart Podcast - Discussions on Kuwait''s economic recovery and policies'
@@ -4047,7 +4045,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4071,7 +4069,7 @@
                     'URL' = 'https://www.newsnow.co.uk/h/World+News/Middle+East/Kuwait/Sport'
                     'icon' = 'https://www.newsnow.co.uk/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'IIK Sports - Independent stories on athlete rights and sports politics'
@@ -4089,7 +4087,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'M12 ALFOUZAN - Vlogs on Kuwaiti football and soccer highlights'
@@ -4111,7 +4109,7 @@
                 'URL' = 'https://www.youtube.com/@MusaedAlfouzan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Jawla Podcast Sports - Episodes on Kuwaiti soccer and basketball leagues'
@@ -4129,7 +4127,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4153,7 +4151,7 @@
                     'URL' = 'https://www.arabtimesonline.com/'
                     'icon' = 'https://www.arabtimesonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Culture - Independent critiques of Kuwaiti cultural policies'
@@ -4171,7 +4169,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kuwait Vlogs Culture - Vlogs on Kuwaiti society culture and daily life'
@@ -4193,7 +4191,7 @@
                 'URL' = 'https://www.youtube.com/@alialbloushi'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'At My Kuwaiti Table - Episodes on cultural milestones and figures'
@@ -4211,7 +4209,7 @@
                 'icon' = 'https://rss.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4235,7 +4233,7 @@
                     'URL' = 'https://www.gust.edu.kw/news'
                     'icon' = 'https://www.gust.edu.kw/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Tech - Critical analysis of Kuwaiti surveillance technologies'
@@ -4253,7 +4251,7 @@
                     'icon' = 'https://research.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Omardizer - Vlogs on Kuwaiti biotech and innovation hubs'
@@ -4275,7 +4273,7 @@
                 'URL' = 'https://www.youtube.com/@WeldingSkills'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'KFAS Podcast - Talks with Kuwaiti tech founders and investors'
@@ -4293,7 +4291,7 @@
                 'icon' = 'https://www.leidos.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4317,7 +4315,7 @@
                     'URL' = 'https://www.aljazeera.com/where/kuwait/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Politics - Independent journalism on Kuwaiti governance policies'
@@ -4335,7 +4333,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Abdullah Bin JarAllah - Vlogs explaining Kuwaiti political dynamics'
@@ -4357,7 +4355,7 @@
                 'URL' = 'https://www.youtube.com/@AbdullahAlSalloum'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'POMEPS Kuwait Politics - Two experts unpacking Kuwaiti political news'
@@ -4375,7 +4373,7 @@
                 'icon' = 'https://meinus.podbean.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4399,7 +4397,7 @@
                     'URL' = 'https://graziamagazine.com/me/articles/kuwait-fashion-brands/'
                     'icon' = 'https://graziamagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vogue Arabia Kuwait - Critiques of fashion industry and social issues'
@@ -4417,7 +4415,7 @@
                     'icon' = 'https://sheerluxe.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NaturallyFashionable Fashion - Vlogs on Kuwaiti beauty and fashion trends'
@@ -4439,7 +4437,7 @@
                 'URL' = 'https://www.youtube.com/@BADERYOUSEF'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Lovin Kuwait Fashion - Psychology of Kuwaiti style and trends'
@@ -4457,7 +4455,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4481,7 +4479,7 @@
                     'URL' = 'https://www.al-monitor.com/kuwait'
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'EIN Presswire Military - Investigative reports on Kuwait Armed Forces tactics'
@@ -4499,7 +4497,7 @@
                     'icon' = 'https://www.counterextremism.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kuwait Armed Forces Official - Official vlogs from training and missions'
@@ -4521,7 +4519,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCWuZzfobWPQGnOtv2TdgSgg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'War and Trauma Kuwait - Behind-the-scenes of Kuwait Armed Forces operations and readiness'
@@ -4565,7 +4563,7 @@
                 'URL' = 'https://www.ft.com/lebanon'
                 'icon' = 'https://www.ft.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Lebanon - Independent views on Lebanese economic challenges'
@@ -4583,7 +4581,7 @@
                 'icon' = 'https://nowlebanon.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Bodi Budu - Entrepreneurial tips and Lebanese market insights'
@@ -4605,7 +4603,7 @@
             'URL' = 'https://www.youtube.com/@KamalNehme'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'BerytechBeat - Interviews with Lebanese founders and innovators'
@@ -4623,7 +4621,7 @@
             'icon' = 'https://spark.ngo/favicon.ico'
         }
     )
-},
+}
 'Sports' = @{
     'News' = @{
         'Mainstream' = @(
@@ -4647,7 +4645,7 @@
                 'URL' = 'https://www.mtv.com.lb/en/news/Sports'
                 'icon' = 'https://www.mtv.com.lb/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'This is Beirut Sports - Independent athlete rights and controversies'
@@ -4665,7 +4663,7 @@
                 'icon' = 'https://www.newsnow.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Lebanese Sports - Highlights and fan reactions to matches'
@@ -4687,7 +4685,7 @@
             'URL' = 'https://www.youtube.com/@AkramHalabi'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'The Whistlepodcast - Lebanese football discussions and insights'
@@ -4705,7 +4703,7 @@
             'icon' = 'https://unicbeirut.org/favicon.ico'
         }
     )
-},
+}
 'Culture' = @{
     'News' = @{
         'Mainstream' = @(
@@ -4715,7 +4713,7 @@
                 'icon' = 'https://www.naharnet.com/favicon.ico'
             },
             @{
-                'Title' = 'L'Orient Today Culture - Coverage of literature and traditions'
+                'Title' = 'L''Orient Today Culture - Coverage of literature and traditions'
                 'URL' = 'https://today.lorientlejour.com/'
                 'icon' = 'https://today.lorientlejour.com/favicon.ico'
             },
@@ -4729,7 +4727,7 @@
                 'URL' = 'https://www.nna-leb.gov.lb/en/'
                 'icon' = 'https://www.nna-leb.gov.lb/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Now Lebanon Culture - Independent critiques of arts policies'
@@ -4747,7 +4745,7 @@
                 'icon' = 'https://www.bbc.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Anthony Rahayel - Lebanese food and cultural traditions vlogs'
@@ -4769,7 +4767,7 @@
             'URL' = 'https://www.youtube.com/@TheTravelingZAM'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Levantine Arabic Made Easier - Facts about Lebanese culture'
@@ -4787,7 +4785,7 @@
             'icon' = 'https://www.the961.com/favicon.ico'
         }
     )
-},
+}
 'Science and Technology' = @{
     'News' = @{
         'Mainstream' = @(
@@ -4811,7 +4809,7 @@
                 'URL' = 'https://english.almanar.com.lb/'
                 'icon' = 'https://english.almanar.com.lb/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Tech Lebanon - Independent analysis of innovation ethics'
@@ -4829,7 +4827,7 @@
                 'icon' = 'https://al-fanarmedia.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Lebanese Tech - Curated tech ecosystem and innovations'
@@ -4851,7 +4849,7 @@
             'URL' = 'https://www.youtube.com/@the_eyeopener'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Aboard Podcast - Lebanese tech scene and future building'
@@ -4869,7 +4867,7 @@
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
     )
-},
+}
 'Politics' = @{
     'News' = @{
         'Mainstream' = @(
@@ -4893,7 +4891,7 @@
                 'URL' = 'https://www.nna-leb.gov.lb/en/'
                 'icon' = 'https://www.nna-leb.gov.lb/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Politics Lebanon - Independent opposition governance analysis'
@@ -4911,7 +4909,7 @@
                 'icon' = 'https://www.aljazeera.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Rayan Hayek - Political satire and commentary vlogs'
@@ -4933,7 +4931,7 @@
             'URL' = 'https://www.youtube.com/@JadGhosn'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'The Lebanese Politics Podcast - Nerdy discussions on governance'
@@ -4951,7 +4949,7 @@
             'icon' = 'https://www.lcps-lebanon.org/favicon.ico'
         }
     )
-},
+}
 'Fashion' = @{
     'News' = @{
         'Mainstream' = @(
@@ -4961,7 +4959,7 @@
                 'icon' = 'https://en.bellebeirut.com/favicon.ico'
             },
             @{
-                'Title' = 'Fédération Libanaise de la Mode - Official fashion events updates'
+                'Title' = 'Federation Libanaise de la Mode - Official fashion events updates'
                 'URL' = 'https://federationlibanaisedelamode.com/news/'
                 'icon' = 'https://federationlibanaisedelamode.com/favicon.ico'
             },
@@ -4975,7 +4973,7 @@
                 'URL' = 'https://maison123-lb.com/'
                 'icon' = 'https://maison123-lb.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'New Arab Fashion - Upcycled sustainable Lebanese designs'
@@ -4993,7 +4991,7 @@
                 'icon' = 'https://graziamagazine.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Cyrine Abdel Nour - Modest fashion hauls and styling'
@@ -5015,7 +5013,7 @@
             'URL' = 'https://www.youtube.com/@MyriamKlinkOfficial'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Business of Fashion - Rebuilding Lebanese fashion industry'
@@ -5033,7 +5031,7 @@
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
     )
-},
+}
 'Military' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5057,7 +5055,7 @@
                 'URL' = 'https://www.nna-leb.gov.lb/en/'
                 'icon' = 'https://www.nna-leb.gov.lb/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Breaking Defense Lebanon - Alternative analysis of strategies'
@@ -5075,7 +5073,7 @@
                 'icon' = 'https://thedefensepost.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'The Lebanese Army - Official training and operations vlogs'
@@ -5097,7 +5095,7 @@
             'URL' = 'https://www.youtube.com/c/DomingaShataun'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Beirut Banyan - Lebanese army role and limitations'
@@ -5115,7 +5113,7 @@
             'icon' = 'https://www.csis.org/favicon.ico'
         }
 
-}
+)
 }
 'Oman' = @{
 'Business_2' = @{
@@ -5141,7 +5139,7 @@
                 'URL' = 'https://www.muscatdaily.com/'
                 'icon' = 'https://www.muscatdaily.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Zawya Oman - Independent analysis of economic reforms and markets'
@@ -5159,7 +5157,7 @@
                 'icon' = 'https://economymiddleeast.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Ateeq Kamboh - Expat life and starting business in Oman'
@@ -5181,7 +5179,7 @@
             'URL' = 'https://www.youtube.com/@OmanImportExport'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Oman Observer Podcast - Interviews with Omani business leaders'
@@ -5199,7 +5197,7 @@
             'icon' = 'https://player.fm/favicon.ico'
         }
     )
-},
+}
 'Sports_2' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5223,7 +5221,7 @@
                 'URL' = 'https://omannews.gov.om/topics/en/82'
                 'icon' = 'https://omannews.gov.om/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Malaeeb Sports - Independent views on league governance'
@@ -5241,7 +5239,7 @@
                 'icon' = 'https://www.newsnow.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'OmanSportsTV - Football highlights and fan reactions'
@@ -5263,7 +5261,7 @@
             'URL' = 'https://www.youtube.com/@ishnummunshi'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Football in Oman - Discussions on national team strategies'
@@ -5281,7 +5279,7 @@
             'icon' = 'https://soundcloud.com/favicon.ico'
         }
     )
-},
+}
 'Culture_2' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5305,7 +5303,7 @@
                 'URL' = 'https://www.muscatdaily.com/category/lifestyle/culture/'
                 'icon' = 'https://www.muscatdaily.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Culture Oman - Independent critiques of arts policies'
@@ -5323,7 +5321,7 @@
                 'icon' = 'https://www.bbc.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'DesiGirl Traveller - First impressions and cultural explorations'
@@ -5345,7 +5343,7 @@
             'URL' = 'https://www.youtube.com/@SereneSimpleVlogsMuscatOman'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Oman Observer Podcast - Cultural heritage discussions'
@@ -5363,7 +5361,7 @@
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
     )
-},
+}
 'Science and Technology' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5387,7 +5385,7 @@
                 'URL' = 'https://www.muscatdaily.com/category/business/technology/'
                 'icon' = 'https://www.muscatdaily.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Tech Oman - Ethics and innovation challenges'
@@ -5405,7 +5403,7 @@
                 'icon' = 'https://al-fanarmedia.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'HUSAM TECH - Gadget reviews and tech trends'
@@ -5427,7 +5425,7 @@
             'URL' = 'https://www.youtube.com/@IntroductGroup'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Oman Observer Podcast - Nanotechnology heroes stories'
@@ -5445,7 +5443,7 @@
             'icon' = 'https://podchaser.com/favicon.ico'
         }
     )
-},
+}
 'Politics_2' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5469,7 +5467,7 @@
                 'URL' = 'https://www.aljazeera.com/where/oman/'
                 'icon' = 'https://www.aljazeera.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Politics Oman - Opposition analysis and governance'
@@ -5487,7 +5485,7 @@
                 'icon' = 'https://bti-project.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Oman News Center - Political news and debates'
@@ -5500,7 +5498,7 @@
             'icon' = 'https://www.youtube.com/favicon.ico'
         },
         @{
-            'Title' = 'الشبيبة Shabiba - Omani political discussions'
+            'Title' = 'Shabiba - Omani political discussions'
             'URL' = 'https://www.youtube.com/@ShabibaOman'
             'icon' = 'https://www.youtube.com/favicon.ico'
         },
@@ -5509,7 +5507,7 @@
             'URL' = 'https://www.youtube.com/c/OmanChannel'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'The Red Line Oman - Looming crisis and foreign policy'
@@ -5527,7 +5525,7 @@
             'icon' = 'https://www.rusi.org/favicon.ico'
         }
     )
-},
+}
 'Fashion_2' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5551,7 +5549,7 @@
                 'URL' = 'https://graziamagazine.com/me/articles/omani-fashion-influencers/'
                 'icon' = 'https://graziamagazine.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'New Arab Oman - Upcycled sustainable fashion revolution'
@@ -5569,7 +5567,7 @@
                 'icon' = 'https://www.thearabianstories.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Fashion Mumblr - Muscat outfits and travel style'
@@ -5591,7 +5589,7 @@
             'URL' = 'https://www.youtube.com/@AqsaUrduOfficial'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Oman Observer Fashion - Conscious and curious style talks'
@@ -5609,7 +5607,7 @@
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
     )
-},
+}
 'Military_2' = @{
     'News' = @{
         'Mainstream' = @(
@@ -5633,7 +5631,7 @@
                 'URL' = 'https://www.defaiya.com/news/subjects/Oman'
                 'icon' = 'https://www.defaiya.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Al-Monitor Security Oman - Independent policy analysis'
@@ -5651,7 +5649,7 @@
                 'icon' = 'https://military.einnews.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Oman Military - Equipment reviews and parades'
@@ -5673,7 +5671,7 @@
             'URL' = 'https://www.youtube.com/c/RangerMedia'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Land Sea Air Oman - Armed forces stories'
@@ -5716,7 +5714,7 @@
                     'URL' = 'https://www.qatar-tribune.com/business'
                     'icon' = 'https://www.qatar-tribune.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Doha News - Independent perspectives on Qatari economic inequalities'
@@ -5734,7 +5732,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Qatar Business Founders - Vlogs on Qatari startups and economic resilience'
@@ -5756,7 +5754,7 @@
                 'URL' = 'https://www.youtube.com/c/VisitQatar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Qatar - Discussions on Qatar''s economic recovery and policies'
@@ -5774,7 +5772,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5798,7 +5796,7 @@
                     'URL' = 'https://www.iloveqatar.net/news/sports'
                     'icon' = 'https://www.iloveqatar.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Doha News Sports - Independent stories on athlete rights and sports politics'
@@ -5816,7 +5814,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'beIN SPORTS - Vlogs on Qatari football and soccer highlights'
@@ -5838,7 +5836,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=jamal+al+sharif+qatar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'In The Game - Episodes on Qatari soccer and basketball leagues'
@@ -5856,7 +5854,7 @@
                 'icon' = 'https://dohadebates.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5880,7 +5878,7 @@
                     'URL' = 'https://qna.org.qa/en/home'
                     'icon' = 'https://qna.org.qa/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Doha News Culture - Independent critiques of Qatari cultural policies'
@@ -5898,7 +5896,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ILoveQatar.net - Vlogs on Qatari society culture and daily life'
@@ -5920,7 +5918,7 @@
                 'URL' = 'https://www.youtube.com/c/ArayaVlogs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Power of Culture - Episodes on cultural milestones and figures'
@@ -5938,7 +5936,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5962,7 +5960,7 @@
                     'URL' = 'https://www.qf.org.qa/stories/technology'
                     'icon' = 'https://www.qf.org.qa/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Doha News Tech - Critical analysis of Qatari surveillance technologies'
@@ -5980,7 +5978,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'QSTP YouTube - Vlogs on Qatari biotech and innovation hubs'
@@ -6002,7 +6000,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=haris+tech+travel+qatar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Impact Engine - Talks with Qatari tech founders and investors'
@@ -6020,7 +6018,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6044,7 +6042,7 @@
                     'URL' = 'https://www.aljazeera.com/where/qatar/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Doha News Politics - Independent journalism on Qatari governance policies'
@@ -6062,7 +6060,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'MOFA Qatar - Vlogs explaining Qatari political dynamics'
@@ -6084,7 +6082,7 @@
                 'URL' = 'https://www.youtube.com/@ZeihanonGeopolitics'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Doha Debates Podcast - Two experts unpacking Qatari political news'
@@ -6102,7 +6100,7 @@
                 'icon' = 'https://pomeps.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6126,7 +6124,7 @@
                     'URL' = 'https://www.qatar-tribune.com/lifestyle-fashion'
                     'icon' = 'https://www.qatar-tribune.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Fashion Revolution Qatar - Critiques of fashion industry and social issues'
@@ -6144,7 +6142,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ornate Store - Vlogs on Qatari beauty and fashion trends'
@@ -6166,7 +6164,7 @@
                 'URL' = 'https://www.youtube.com/iloveqatar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Business of Fashion Podcast - Psychology of Qatari style and trends'
@@ -6184,7 +6182,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6208,7 +6206,7 @@
                     'URL' = 'https://www.afcent.af.mil/News/Article/4340763/us-qatar-and-allies-enhance-regional-defense-during-exercise-ferocious-falcon-6/'
                     'icon' = 'https://www.afcent.af.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Military - Investigative reports on Qatari Armed Forces tactics'
@@ -6226,7 +6224,7 @@
                     'icon' = 'https://dohanews.co/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Qatar Armed Forces - Official vlogs from training and missions'
@@ -6248,7 +6246,7 @@
                 'URL' = 'https://www.youtube.com/iloveqatar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'General and the Ambassador - Behind-the-scenes of Qatari Armed Forces operations and readiness'
@@ -6292,7 +6290,7 @@
                     'URL' = 'https://english.alarabiya.net/business'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Zawya KSA - Independent perspectives on Saudi economic inequalities'
@@ -6310,7 +6308,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mmoshaya - Vlogs on Saudi startups and economic resilience'
@@ -6332,7 +6330,7 @@
                 'URL' = 'https://www.youtube.com/c/SaudChannel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Success Saudi - Discussions on Saudi economic recovery and policies'
@@ -6350,7 +6348,7 @@
                 'icon' = 'https://thetwenty30.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6374,7 +6372,7 @@
                     'URL' = 'https://alriyadhdaily.com/hotnews'
                     'icon' = 'https://alriyadhdaily.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Saudi Standard Sports - Independent stories on athlete rights and sports politics'
@@ -6392,7 +6390,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Bashar Arabi - Vlogs on Saudi football and soccer highlights'
@@ -6414,7 +6412,7 @@
                 'URL' = 'https://www.youtube.com/c/ArabGamesNetwork'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sports Politika - Episodes on Saudi soccer and basketball leagues'
@@ -6432,7 +6430,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6456,7 +6454,7 @@
                     'URL' = 'https://english.aawsat.com/'
                     'icon' = 'https://english.aawsat.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Culture - Independent critiques of Saudi cultural policies'
@@ -6474,7 +6472,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Living the Jo Life - Vlogs on Saudi society culture and daily life'
@@ -6496,7 +6494,7 @@
                 'URL' = 'https://www.youtube.com/c/mmoshaya'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vision Culture and Policy - Episodes on cultural milestones and figures'
@@ -6514,7 +6512,7 @@
                 'icon' = 'https://authenticite.me/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6538,7 +6536,7 @@
                     'URL' = 'https://innovation.kaust.edu.sa/all-news/'
                     'icon' = 'https://innovation.kaust.edu.sa/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Tech - Critical analysis of Saudi surveillance technologies'
@@ -6556,7 +6554,7 @@
                     'icon' = 'https://www.newarab.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'TariqTechs - Vlogs on Saudi biotech and innovation hubs'
@@ -6578,7 +6576,7 @@
                 'URL' = 'https://www.youtube.com/c/KAUST'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sciencetown - Talks with Saudi tech founders and investors'
@@ -6596,7 +6594,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6620,7 +6618,7 @@
                     'URL' = 'https://www.aljazeera.com/where/saudi-arabia/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Politics - Independent journalism on Saudi governance policies'
@@ -6638,7 +6636,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'TheSaudiReporters - Vlogs explaining Saudi political dynamics'
@@ -6660,7 +6658,7 @@
                 'URL' = 'https://www.youtube.com/c/HatoonKadi'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Middle East Focus - Two experts unpacking Saudi political news'
@@ -6678,7 +6676,7 @@
                 'icon' = 'https://www.csis.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6702,7 +6700,7 @@
                     'URL' = 'https://www.businessoffashion.com/tags/locations/saudi-arabia/'
                     'icon' = 'https://www.businessoffashion.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Fashion Revolution Saudi - Critiques of fashion industry and social issues'
@@ -6720,7 +6718,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Abha Shah - Vlogs on Saudi beauty and fashion trends'
@@ -6742,7 +6740,7 @@
                 'URL' = 'https://www.youtube.com/c/MaithaAbduljalil'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Business of Fashion Podcast - Psychology of Saudi style and trends'
@@ -6760,7 +6758,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6784,7 +6782,7 @@
                     'URL' = 'https://breakingdefense.com/tag/saudi-arabia/'
                     'icon' = 'https://breakingdefense.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Military - Investigative reports on Saudi Armed Forces tactics'
@@ -6802,7 +6800,7 @@
                     'icon' = 'https://thedefensepost.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Saudi Arabia Army Review - Official vlogs from training and missions'
@@ -6824,7 +6822,7 @@
                 'URL' = 'https://www.youtube.com/c/CovertCabal'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'On Defense Podcast - Behind-the-scenes of Saudi Armed Forces operations and readiness'
@@ -6868,7 +6866,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mondoweiss Business - Independent views on Palestinian economic inequalities'
@@ -6886,7 +6884,7 @@
                     'icon' = 'https://www.972mag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily - Vlogs on Palestinian startups and economic life'
@@ -6908,7 +6906,7 @@
                 'URL' = 'https://www.youtube.com/c/OoredooPalestine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine - Discussions on Palestinian economic resilience'
@@ -6926,7 +6924,7 @@
                 'icon' = 'https://imeu.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6950,7 +6948,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Sports - Independent stories on Palestinian athlete rights'
@@ -6968,7 +6966,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Sports for Life Palestine - Vlogs on Palestinian football highlights'
@@ -6990,7 +6988,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=al+bawwab+palestine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The End of Sport - Episodes on Palestinian soccer leagues'
@@ -7008,7 +7006,7 @@
                 'icon' = 'https://www.sportspolitika.news/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7032,7 +7030,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Culture - Critiques of Palestinian cultural policies'
@@ -7050,7 +7048,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Salukie - Vlogs on Palestinian society and daily culture'
@@ -7072,7 +7070,7 @@
                 'URL' = 'https://www.youtube.com/c/ArabAmbience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Culture - Episodes on cultural milestones'
@@ -7090,7 +7088,7 @@
                 'icon' = 'https://al-shabaka.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7114,7 +7112,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Scientists for Palestine - Critical analysis of tech under occupation'
@@ -7132,7 +7130,7 @@
                     'icon' = 'https://www.972mag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Scientists for Palestine - Vlogs on Palestinian biotech hubs'
@@ -7154,7 +7152,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=palestine+deep+dive+tech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Palestine Laboratory - Talks with Palestinian tech innovators'
@@ -7172,7 +7170,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7196,7 +7194,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Politics - Independent journalism on occupation policies'
@@ -7214,7 +7212,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily Politics - Vlogs explaining Palestinian dynamics'
@@ -7236,7 +7234,7 @@
                 'URL' = 'https://www.youtube.com/c/HasanAbi'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Politics - Unpacking Palestinian political news'
@@ -7249,12 +7247,12 @@
                 'icon' = 'https://al-shabaka.org/favicon.ico'
             },
             @{
-                'Title' = 'Let's Talk Palestine - Expert talks on Palestinian policy'
+                'Title' = 'Let''s Talk Palestine - Expert talks on Palestinian policy'
                 'URL' = 'https://open.spotify.com/show/7jPGgYybr0lrmIHcpQlj93'
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7278,7 +7276,7 @@
                     'URL' = 'https://www.arabnews.com/node/2613751/lifestyle'
                     'icon' = 'https://www.arabnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine Fashion - Critiques of fashion and social issues'
@@ -7296,7 +7294,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nour Arida - Vlogs on Palestinian beauty and fashion trends'
@@ -7318,7 +7316,7 @@
                 'URL' = 'https://www.youtube.com/@HamzahSaadah'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sumud Podcast Fashion - Psychology of Palestinian style trends'
@@ -7336,7 +7334,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7360,7 +7358,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Military - Investigative reports on resistance tactics'
@@ -7378,7 +7376,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily Military - Vlogs on Palestinian resistance stories'
@@ -7400,7 +7398,7 @@
                 'URL' = 'https://www.youtube.com/c/ArabAmbience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Military - Behind-the-scenes of resistance operations'
@@ -7444,7 +7442,7 @@
                     'URL' = 'https://www.ebrd.com/home/what-we-do/where-we-invest/west-bank-and-gaza.html'
                     'icon' = 'https://www.ebrd.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'US State Department Investment Climate West Bank - Reports on business environment and challenges'
@@ -7462,7 +7460,7 @@
                     'icon' = 'https://www.klp.no/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily - Vlogs on Palestinian startups and economic resilience in territories'
@@ -7484,7 +7482,7 @@
                 'URL' = 'https://www.youtube.com/c/OoredooPalestine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Business - Discussions on West Bank economic recovery and policies'
@@ -7502,7 +7500,7 @@
                 'icon' = 'https://imeu.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7526,7 +7524,7 @@
                     'URL' = 'https://www.tehrantimes.com/news/516656/Moe-than-660-Palestinian-athletes-sporting-officials-killed'
                     'icon' = 'https://www.tehrantimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'BDS Movement Sports Boycott - Independent stories on athlete rights and apartheid'
@@ -7544,7 +7542,7 @@
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Sports for Life Palestine - Vlogs on West Bank football and soccer highlights'
@@ -7566,7 +7564,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=al+bawwab+palestine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The End of Sport Palestine - Episodes on West Bank soccer and basketball leagues'
@@ -7584,7 +7582,7 @@
                 'icon' = 'https://www.sportspolitika.news/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7608,7 +7606,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Culture - Independent critiques of West Bank cultural policies'
@@ -7626,7 +7624,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Salukie - Vlogs on West Bank society culture and daily life'
@@ -7648,7 +7646,7 @@
                 'URL' = 'https://www.youtube.com/c/ArabAmbience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Culture - Episodes on West Bank cultural milestones and figures'
@@ -7666,7 +7664,7 @@
                 'icon' = 'https://al-shabaka.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7690,7 +7688,7 @@
                     'URL' = 'https://www.aljazeera.com/where/palestine/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Scientists for Palestine - Critical analysis of West Bank tech under occupation'
@@ -7708,7 +7706,7 @@
                     'icon' = 'https://www.972mag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Scientists for Palestine - Vlogs on West Bank biotech and innovation hubs'
@@ -7730,7 +7728,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=palestine+deep+dive+tech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Palestine Laboratory - Talks with West Bank tech founders and investors'
@@ -7748,7 +7746,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7772,7 +7770,7 @@
                     'URL' = 'https://www.aljazeera.com/tag/occupied-west-bank/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Politics - Independent journalism on West Bank governance policies'
@@ -7790,7 +7788,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily West Bank - Vlogs explaining Palestinian political dynamics'
@@ -7812,7 +7810,7 @@
                 'URL' = 'https://www.youtube.com/c/HasanAbi'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Politics - Unpacking West Bank political news and issues'
@@ -7830,7 +7828,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7854,7 +7852,7 @@
                     'URL' = 'https://www.arabnews.com/node/2613751/lifestyle'
                     'icon' = 'https://www.arabnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '+972 Magazine Fashion - Critiques of West Bank fashion industry issues'
@@ -7872,7 +7870,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nour Arida Fashion - Vlogs on West Bank beauty and fashion trends'
@@ -7894,7 +7892,7 @@
                 'URL' = 'https://www.youtube.com/@HamzahSaadah'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sumud Podcast Fashion - Psychology of West Bank style and trends'
@@ -7912,7 +7910,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7936,7 +7934,7 @@
                     'URL' = 'https://www.haaretz.com/'
                     'icon' = 'https://www.haaretz.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Electronic Intifada Military - Investigative reports on IDF tactics in West Bank'
@@ -7954,7 +7952,7 @@
                     'icon' = 'https://mondoweiss.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nas Daily Resistance - Vlogs on West Bank resistance stories and operations'
@@ -7976,7 +7974,7 @@
                 'URL' = 'https://www.youtube.com/c/ArabAmbience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Is Palestine Military - Behind-the-scenes of West Bank resistance operations'
@@ -8020,7 +8018,7 @@
                     'URL' = 'https://syrianobserver.com/'
                     'icon' = 'https://syrianobserver.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Syria - Independent views on Syrian economic challenges'
@@ -8038,7 +8036,7 @@
                     'icon' = 'https://syriadirect.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hungry Syrian Wanderer - Vlogs on Syrian entrepreneurial stories and markets'
@@ -8060,7 +8058,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=syrian+wanderer+business'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Syria''s Business Model - Discussions on Syrian economic policies and recovery'
@@ -8078,7 +8076,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8102,7 +8100,7 @@
                     'URL' = 'https://syrianobserver.com/'
                     'icon' = 'https://syrianobserver.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sports Politika Syria - Independent stories on athlete rights and politics'
@@ -8120,7 +8118,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Syria Pro Sport - Vlogs on Syrian football highlights and matches'
@@ -8142,7 +8140,7 @@
                 'URL' = 'https://www.youtube.com/@KoraReact'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Syria''s World Cup Dream - Episodes on Syrian soccer leagues and history'
@@ -8160,7 +8158,7 @@
                 'icon' = 'https://dohadebates.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8184,7 +8182,7 @@
                     'URL' = 'https://www.aljazeera.com/where/syria/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Enab Baladi Culture - Independent critiques of Syrian cultural policies'
@@ -8202,7 +8200,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hungry Syrian Wanderer - Vlogs on Syrian society culture and daily life'
@@ -8210,7 +8208,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             },
             @{
-                'Title' = 'Diala & Waref - Cultural explorations of Syrian traditions and history'
+                'Title' = 'Diala and Waref - Cultural explorations of Syrian traditions and history'
                 'URL' = 'https://www.youtube.com/results?search_query=diala+waref+syria'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             },
@@ -8224,7 +8222,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=syrian+wanderer+culture'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Syria''s Lost Generation - Episodes on cultural milestones and figures'
@@ -8232,7 +8230,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             },
             @{
-                'Title' = 'Syrian Culture & Spirituality - Conversations with Syrian artists and creators'
+                'Title' = 'Syrian Culture and Spirituality - Conversations with Syrian artists and creators'
                 'URL' = 'https://podcasts.apple.com/cz/podcast/episode-9-exploring-syrian-culture-spirituality-w-nour/id1657897064?i=1000624259651'
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             },
@@ -8242,7 +8240,7 @@
                 'icon' = 'https://syriadirect.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8266,7 +8264,7 @@
                     'URL' = 'https://syriadirect.org/'
                     'icon' = 'https://syriadirect.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Rest of World Syria - Critical analysis of Syrian surveillance technologies'
@@ -8284,7 +8282,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Syrian Science Council - Vlogs on Syrian biotech and innovation hubs'
@@ -8306,7 +8304,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=fatima+abu+salem+syria'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Noor Shaker AI - Talks with Syrian tech founders and investors'
@@ -8324,7 +8322,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8348,7 +8346,7 @@
                     'URL' = 'https://www.aljazeera.com/where/syria/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Syria Direct Politics - Independent journalism on Syrian governance policies'
@@ -8366,7 +8364,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ahmed al-Sharaa - Vlogs explaining Syrian political dynamics'
@@ -8374,7 +8372,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             },
             @{
-                'Title' = 'Diala & Waref - Political commentary through Syrian cultural lens'
+                'Title' = 'Diala and Waref - Political commentary through Syrian cultural lens'
                 'URL' = 'https://www.youtube.com/results?search_query=diala+waref+syria'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             },
@@ -8388,7 +8386,7 @@
                 'URL' = 'https://www.youtube.com/c/BaldandBankrupt'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'What''s Happening in Syria - Two experts unpacking Syrian political news'
@@ -8406,7 +8404,7 @@
                 'icon' = 'https://www.justiceinitiative.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8430,7 +8428,7 @@
                     'URL' = 'https://english.alarabiya.net/life-style/fashion-and-beauty'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Middle East Eye Fashion - Critiques of fashion industry and social issues'
@@ -8448,7 +8446,7 @@
                     'icon' = 'https://syriadirect.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Sandy''s World - Vlogs on Syrian beauty and fashion trends'
@@ -8470,7 +8468,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=rami+al+ali+fashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'SheerLuxe Middle East - Psychology of Syrian style and trends'
@@ -8488,7 +8486,7 @@
                 'icon' = 'https://themomentumpodcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8512,7 +8510,7 @@
                     'URL' = 'https://sana.sy/en/'
                     'icon' = 'https://sana.sy/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Enab Baladi Military - Investigative reports on Syrian tactics'
@@ -8530,7 +8528,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Syrian Army Review - Official vlogs from Syrian training and missions'
@@ -8552,7 +8550,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=ypg+syria+vlogs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Syrian Civil War Podcast - Behind-the-scenes of Syrian operations and readiness'
@@ -8596,7 +8594,7 @@
                     'URL' = 'https://www.trtworld.com/business'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Economy - Independent perspectives on Turkish economic inequalities'
@@ -8614,7 +8612,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Invest in Turkey - Vlogs on Turkish startups and economic resilience'
@@ -8636,7 +8634,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=ankara+entrepreneurs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkey Business Podcast - Discussions on Turkey''s economic recovery and policies'
@@ -8654,7 +8652,7 @@
                 'icon' = 'https://www.bloomberg.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8678,7 +8676,7 @@
                     'URL' = 'https://www.trtworld.com/sports'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Sports - Independent stories on athlete rights and sports politics'
@@ -8696,7 +8694,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Turkish Football - Vlogs on Turkish basketball and soccer highlights'
@@ -8718,7 +8716,7 @@
                 'URL' = 'https://www.youtube.com/c/Fenerbahce'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkish Football Podcast - Episodes on Turkish soccer and basketball leagues'
@@ -8736,7 +8734,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8760,7 +8758,7 @@
                     'URL' = 'https://www.trtworld.com/culture'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Culture - Independent critiques of Turkish cultural policies'
@@ -8778,7 +8776,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Istanbul Vlogs - Vlogs on Turkish society culture and daily life'
@@ -8800,7 +8798,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=cappadocia+explorer'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkish Tales - Episodes on cultural milestones and figures'
@@ -8818,7 +8816,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8842,7 +8840,7 @@
                     'URL' = 'https://www.trtworld.com/technology'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Tech - Critical analysis of Turkish surveillance technologies'
@@ -8860,7 +8858,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Tech Istanbul - Vlogs on Turkish biotech and innovation hubs'
@@ -8882,7 +8880,7 @@
                 'URL' = 'https://www.youtube.com/c/IzmirStartups'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkey Tech Talks - Talks with Turkish tech founders and investors'
@@ -8900,7 +8898,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8924,7 +8922,7 @@
                     'URL' = 'https://www.trtworld.com/politics'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Politics - Independent journalism on Turkish governance policies'
@@ -8942,7 +8940,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Turkish Politics Now - Vlogs explaining Turkish political dynamics'
@@ -8964,7 +8962,7 @@
                 'URL' = 'https://www.youtube.com/c/ErdoganWatch'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkey Untangled - Two journalists unpacking Turkish political news'
@@ -8982,7 +8980,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9006,7 +9004,7 @@
                     'URL' = 'https://www.trtworld.com/lifestyle/fashion'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Fashion - Critiques of fashion industry and social issues'
@@ -9024,7 +9022,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Turkish Fashionista - Vlogs on Turkish beauty and fashion trends'
@@ -9046,7 +9044,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=ankara+couture'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkish Threads - Psychology of Turkish style and trends'
@@ -9064,7 +9062,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9088,7 +9086,7 @@
                     'URL' = 'https://www.trtworld.com/defense'
                     'icon' = 'https://www.trtworld.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bianet Military - Investigative reports on Turkish Armed Forces tactics'
@@ -9106,7 +9104,7 @@
                     'icon' = 'https://www.duvarenglish.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Turkish Army Official - Official vlogs from training and missions'
@@ -9128,7 +9126,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=istanbul+defense'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Turkish Defense Review - Behind-the-scenes of Turkish Armed Forces operations'
@@ -9172,7 +9170,7 @@
                     'URL' = 'https://www.khaleejtimes.com/business'
                     'icon' = 'https://www.khaleejtimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Zawya - Independent perspectives on UAE economic inequalities'
@@ -9190,7 +9188,7 @@
                     'icon' = 'https://www.gccbusinessnews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Faisal Al Bannai - Vlogs on UAE startups and economic resilience'
@@ -9212,7 +9210,7 @@
                 'URL' = 'https://www.youtube.com/@ziadaboshaar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Bitesize Business Breakfast - Discussions on UAE''s economic recovery and policies'
@@ -9230,7 +9228,7 @@
                 'icon' = 'https://www.jpost.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9254,7 +9252,7 @@
                     'URL' = 'https://sport360.com/'
                     'icon' = 'https://sport360.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'BDS Movement Sports - Independent stories on athlete rights and sports politics'
@@ -9272,7 +9270,7 @@
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hashim Attili - Vlogs on UAE football and soccer highlights'
@@ -9294,7 +9292,7 @@
                 'URL' = 'https://www.youtube.com/@usmantimeworld'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Mettleset Podcast - Episodes on UAE soccer and basketball leagues'
@@ -9312,7 +9310,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9336,7 +9334,7 @@
                     'URL' = 'https://english.alarabiya.net/life-style/art-and-culture'
                     'icon' = 'https://english.alarabiya.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor Culture - Independent critiques of UAE cultural policies'
@@ -9354,7 +9352,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mo Vlogs - Vlogs on UAE society culture and daily life'
@@ -9376,7 +9374,7 @@
                 'URL' = 'https://www.youtube.com/c/VisitDubai'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Afternoons with Helen Farmer - Episodes on cultural milestones and figures'
@@ -9394,7 +9392,7 @@
                 'icon' = 'https://www.trtworld.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9418,7 +9416,7 @@
                     'URL' = 'https://www.tii.ae/news'
                     'icon' = 'https://www.tii.ae/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Rest of World UAE - Critical analysis of UAE surveillance technologies'
@@ -9436,7 +9434,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'TAQATOUAE - Vlogs on UAE biotech and innovation hubs'
@@ -9458,7 +9456,7 @@
                 'URL' = 'https://www.youtube.com/@ConversationswithLoulou'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'UAE Tech Podcast - Talks with UAE tech founders and investors'
@@ -9476,7 +9474,7 @@
                 'icon' = 'https://www.sitelogicmarketing.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9500,7 +9498,7 @@
                     'URL' = 'https://www.aljazeera.com/where/united-arab-emirates/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Al-Monitor UAE - Independent journalism on UAE governance policies'
@@ -9518,7 +9516,7 @@
                     'icon' = 'https://www.bbc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Amjad Taha - Vlogs explaining UAE political dynamics'
@@ -9540,7 +9538,7 @@
                 'URL' = 'https://www.youtube.com/c/JoeHattab'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Rest Is Politics - Two experts unpacking UAE political news'
@@ -9558,7 +9556,7 @@
                 'icon' = 'https://www.csis.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9582,7 +9580,7 @@
                     'URL' = 'https://www.savoirflair.com/'
                     'icon' = 'https://www.savoirflair.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Fashion Revolution UAE - Critiques of fashion industry and social issues'
@@ -9600,7 +9598,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Joelle Mardinian - Vlogs on UAE beauty and fashion trends'
@@ -9622,7 +9620,7 @@
                 'URL' = 'https://www.youtube.com/@rawanbinhussain'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Dubai Fashion News - Psychology of UAE style and trends'
@@ -9640,7 +9638,7 @@
                 'icon' = 'https://authenticite.me/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9664,7 +9662,7 @@
                     'URL' = 'https://www.defaiya.com/'
                     'icon' = 'https://www.defaiya.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'TURDEF UAE - Investigative reports on UAE Armed Forces tactics'
@@ -9682,7 +9680,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UAE Armed Forces - Official vlogs from UAE training and missions'
@@ -9704,7 +9702,7 @@
                 'URL' = 'https://www.youtube.com/c/CovertCabal'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Voices from DARPA - Behind-the-scenes of UAE Armed Forces operations and readiness'
@@ -9748,7 +9746,7 @@
                     'URL' = 'https://sanaacenter.org/the-yemen-review'
                     'icon' = 'https://sanaacenter.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hodhod Yemen News - Independent perspectives on Yemeni economic inequalities'
@@ -9766,7 +9764,7 @@
                     'icon' = 'https://www.newarab.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Vlogs - Insights into Yemeni startups and entrepreneurial resilience'
@@ -9788,7 +9786,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=hassan+al+kharraz+tech+yemen'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Radio Davos Yemen Business - Discussions on operating amid conflict and recovery'
@@ -9801,12 +9799,12 @@
                 'icon' = 'https://www.bbc.com/favicon.ico'
             },
             @{
-                'Title' = 'What's Unsaid Yemen Economy - Insights into profit and peace prevention factors'
+                'Title' = 'What''s Unsaid Yemen Economy - Insights into profit and peace prevention factors'
                 'URL' = 'https://www.thenewhumanitarian.org/podcast/whats-unsaid/2023/10/12/whats-unsaid-how-profit-preventing-peace-yemen'
                 'icon' = 'https://www.thenewhumanitarian.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9830,7 +9828,7 @@
                     'URL' = 'https://south24.net/news/newse.php?nid=3216'
                     'icon' = 'https://south24.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'BDS Movement Sports Yemen - Independent stories on athlete rights and boycotts'
@@ -9848,7 +9846,7 @@
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Sport News Channel - Vlogs on Yemeni football and soccer highlights'
@@ -9870,7 +9868,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=timkoora7+yemen'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Indo Sport Yemen - Episodes on Yemeni soccer and basketball leagues'
@@ -9883,12 +9881,12 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             },
             @{
-                'Title' = 'Yemen's Cinderella Story - Discussions on Yemeni athletes and competitions'
+                'Title' = 'Yemen''s Cinderella Story - Discussions on Yemeni athletes and competitions'
                 'URL' = 'https://www.youtube.com/watch?v=OvreZMywTO4'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9912,7 +9910,7 @@
                     'URL' = 'https://www.aljazeera.com/where/yemen/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Enab Baladi Culture - Independent critiques of Yemeni cultural policies'
@@ -9930,7 +9928,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Vlogs Culture - Vlogs on Yemeni society culture and daily life'
@@ -9952,7 +9950,7 @@
                 'URL' = 'https://www.youtube.com/user/thekingalex2'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mafraj Radio Yemen - Episodes on cultural milestones and figures'
@@ -9970,7 +9968,7 @@
                 'icon' = 'https://syriadirect.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9994,7 +9992,7 @@
                     'URL' = 'https://www.yemenonline.info/'
                     'icon' = 'https://www.yemenonline.info/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Yemen Research YOSTR - Critical analysis of Yemeni surveillance technologies'
@@ -10012,7 +10010,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Anwer Senan Science - Vlogs on Yemeni biotech and innovation hubs'
@@ -10034,7 +10032,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=ULKQiARO6y4'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Science in Exile Yemen - Talks with Yemeni tech founders and innovators'
@@ -10052,7 +10050,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10076,7 +10074,7 @@
                     'URL' = 'https://apnews.com/hub/yemen'
                     'icon' = 'https://apnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Syria Direct Yemen - Independent journalism on Yemeni governance policies'
@@ -10094,7 +10092,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Vlogs Politics - Vlogs explaining Yemeni political dynamics'
@@ -10116,7 +10114,7 @@
                 'URL' = 'https://www.youtube.com/c/BaldandBankrupt'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Yemen From Revolution - Two experts unpacking Yemeni political news'
@@ -10134,7 +10132,7 @@
                 'icon' = 'https://sanaacenter.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10158,7 +10156,7 @@
                     'URL' = 'https://fashiongtonpost.com/yemen-traditional-clothing/'
                     'icon' = 'https://fashiongtonpost.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Global Issues Yemen Fashion - Critiques of industry amid economic crisis'
@@ -10176,7 +10174,7 @@
                     'icon' = 'https://www.newarab.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Vlogs Fashion - Vlogs on Yemeni beauty and fashion trends'
@@ -10198,7 +10196,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=modest+sultanaa+yemen'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fi2W Podcast Yemen Fashion - Psychology of Yemeni style and trends'
@@ -10216,7 +10214,7 @@
                 'icon' = 'https://www.service95.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10240,7 +10238,7 @@
                     'URL' = 'https://www.aljazeera.com/where/yemen/'
                     'icon' = 'https://www.aljazeera.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Enab Baladi Yemen Military - Investigative reports on Yemeni tactics and escalations'
@@ -10258,7 +10256,7 @@
                     'icon' = 'https://www.al-monitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yemen Vlogs Military - Vlogs on Yemeni resistance stories and operations'
@@ -10280,7 +10278,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=W1aASjoaz4Y'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Houthis Part 1 Podcast - Behind-the-scenes of Yemeni Armed Forces and rise'
@@ -10299,7 +10297,6 @@
             }
         )
     }
-}
 }
 }
 }

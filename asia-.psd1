@@ -13623,7 +13623,7 @@
         )
         'Counter News Sites' = @(
             @{
-                'Title' = 'Iraq Football - Wait, no: Kazakhstan Football News - Independent soccer politics'
+                'Title' = 'Iraq Football -'
                 'URL' = 'https://www.kazfootball.kz/en/'
                 'icon' = 'https://www.kazfootball.kz/favicon.ico'
             },

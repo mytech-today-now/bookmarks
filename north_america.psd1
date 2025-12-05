@@ -34,7 +34,7 @@
                     'URL' = 'https://financialpost.com/'
                     'icon' = 'https://financialpost.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Logic - Independent journalism on Canadian tech and business innovation'
@@ -52,7 +52,7 @@
                     'icon' = 'https://rabble.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'David C. Barnett - Practical advice for Canadian small business owners and deals'
@@ -74,7 +74,7 @@
                 'URL' = 'https://www.youtube.com/user/SmallBusinessBC'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Six Pixels of Separation - Conversations with Canadian business leaders and innovators'
@@ -92,7 +92,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -116,7 +116,7 @@
                     'URL' = 'https://www.theglobeandmail.com/sports/'
                     'icon' = 'https://www.theglobeandmail.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '3DownNation - Independent CFL and football news with fan perspectives'
@@ -134,7 +134,7 @@
                     'icon' = 'https://sportforlife.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CBC Sports - Highlights and behind-the-scenes of Canadian athletes'
@@ -156,7 +156,7 @@
                 'URL' = 'https://www.youtube.com/user/CFL'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = '32 Thoughts - Deep dives into Canadian hockey and NHL trades'
@@ -174,7 +174,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -198,7 +198,7 @@
                     'URL' = 'https://www.straight.com/'
                     'icon' = 'https://www.straight.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'rabble.ca Culture - Independent critiques of Canadian arts policies'
@@ -216,7 +216,7 @@
                     'icon' = 'https://www.readthemaple.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'J.J. McCullough - Explorations of Canadian cultural quirks and history'
@@ -238,7 +238,7 @@
                 'URL' = 'https://www.youtube.com/user/CBCArts'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Canadian Culture - Discussions on artists and heritage across Canada'
@@ -256,7 +256,7 @@
                 'icon' = 'https://nac-cna.ca/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -280,7 +280,7 @@
                     'URL' = 'https://globalnews.ca/science/'
                     'icon' = 'https://globalnews.ca/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'rabble.ca Tech - Critical analysis of surveillance and ethics in Canada'
@@ -298,7 +298,7 @@
                     'icon' = 'https://thelogic.co/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Linus Tech Tips - Reviews of Canadian-developed hardware and gadgets'
@@ -320,7 +320,7 @@
                 'URL' = 'https://www.youtube.com/user/CBCScience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Quirks and Quarks - Weekly explorations of Canadian scientific discoveries'
@@ -338,7 +338,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -362,7 +362,7 @@
                     'URL' = 'https://www.nationalnewswatch.com/'
                     'icon' = 'https://www.nationalnewswatch.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'rabble.ca Politics - Grassroots critiques of federal power structures'
@@ -380,7 +380,7 @@
                     'icon' = 'https://www.readthemaple.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'J.J. McCullough - Commentary on Canadian identity and political history'
@@ -402,7 +402,7 @@
                 'URL' = 'https://www.youtube.com/c/TrueNorthCentre'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Power and Politics - Daily interviews with Canadian decision-makers'
@@ -420,7 +420,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -444,7 +444,7 @@
                     'URL' = 'https://www.vanmag.com/style/fashion/'
                     'icon' = 'https://www.vanmag.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sustain This! - Critiques of fast fashion and ethical alternatives'
@@ -462,7 +462,7 @@
                     'icon' = 'https://rabble.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Allana Davison - Hauls and tips for Canadian wardrobe essentials'
@@ -484,7 +484,7 @@
                 'URL' = 'https://www.youtube.com/@violaborealis2438'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'FashionTalks - Conversations with Canadian designers and influencers'
@@ -502,7 +502,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -526,7 +526,7 @@
                     'URL' = 'https://vanguardcanada.com/'
                     'icon' = 'https://vanguardcanada.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Defence Observer - Critical analysis of Canadian military spending'
@@ -544,7 +544,7 @@
                     'icon' = 'https://thetyee.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Canadian Armed Forces - Official videos of exercises and missions'
@@ -566,7 +566,7 @@
                 'URL' = 'https://www.youtube.com/c/Taskandpurpose'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Canadian Army Podcast - Discussions on leadership and operations'
@@ -610,7 +610,7 @@
                     'URL' = 'https://mexicobusiness.news/'
                     'icon' = 'https://mexicobusiness.news/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Proceso - Investigative journalism on Mexican corporate corruption'
@@ -628,7 +628,7 @@
                     'icon' = 'https://aristeguinoticias.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Luisito Comunica - Vlogs exploring Mexican startups and economic resilience'
@@ -650,7 +650,7 @@
                 'URL' = 'https://www.youtube.com/user/Yuya'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Cracks Podcast - Interviews with Mexico''s business and tech leaders'
@@ -668,7 +668,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -692,7 +692,7 @@
                     'URL' = 'https://www.tudn.com/'
                     'icon' = 'https://www.tudn.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '3DownNation - Independent views on Mexican football politics'
@@ -710,7 +710,7 @@
                     'icon' = 'https://sportforlife.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ESPN Deportes - Vlogs on Liga MX matches and player stories'
@@ -732,7 +732,7 @@
                 'URL' = 'https://www.youtube.com/user/FoxSportsMexico'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Futbol Picante - Heated debates on Mexican soccer leagues'
@@ -750,7 +750,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -774,7 +774,7 @@
                     'URL' = 'https://mexiconewsdaily.com/category/culture/'
                     'icon' = 'https://mexiconewsdaily.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'La Jornada Culture - Independent critiques of cultural policies'
@@ -792,7 +792,7 @@
                     'icon' = 'https://rabble.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Luisito Comunica - Cultural explorations of Mexican traditions'
@@ -814,7 +814,7 @@
                 'URL' = 'https://www.youtube.com/user/Yuya'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'La Magia del Caos - Narratives on Mexican folklore and history'
@@ -832,7 +832,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -856,7 +856,7 @@
                     'URL' = 'https://www.eluniversal.com.mx/tendencias/tecnologia/'
                     'icon' = 'https://www.eluniversal.com.mx/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'rabble.ca Tech - Critical analysis of tech ethics in Mexico'
@@ -874,7 +874,7 @@
                     'icon' = 'https://www.sinembargo.mx/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AutoDinmico - Reviews of Mexican automotive tech and gadgets'
@@ -896,7 +896,7 @@
                 'URL' = 'https://www.youtube.com/c/QuantumFracture'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Jefillysh Ciencia Simplificada - Simplified explanations of Mexican discoveries'
@@ -914,7 +914,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -938,7 +938,7 @@
                     'URL' = 'https://www.milenio.com/politica'
                     'icon' = 'https://www.milenio.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'La Jornada - Independent reporting on social justice issues'
@@ -956,7 +956,7 @@
                     'icon' = 'https://www.animalpolitico.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'El Pulso de la Republica - Satirical commentary on Mexican politics'
@@ -978,7 +978,7 @@
                 'URL' = 'https://www.youtube.com/c/SoberaniaPodcast'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Soberana - Leftist analysis of Mexican political news'
@@ -996,7 +996,7 @@
                 'icon' = 'https://www.csis.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1020,7 +1020,7 @@
                     'URL' = 'https://chicmagazine.com.mx/'
                     'icon' = 'https://chicmagazine.com.mx/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sentimiento - Critiques of fast fashion and upcycling'
@@ -1038,7 +1038,7 @@
                     'icon' = 'https://rabble.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Yuya - Hauls and tips for Mexican wardrobe trends'
@@ -1060,7 +1060,7 @@
                 'URL' = 'https://www.youtube.com/c/LuannDiez'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hablemos de Moda - Conversations with Mexican designers'
@@ -1078,7 +1078,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1102,7 +1102,7 @@
                     'URL' = 'https://www.excelsior.com.mx/nacional/defensa'
                     'icon' = 'https://www.excelsior.com.mx/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'La Jornada Military - Investigative reports on human rights abuses'
@@ -1120,7 +1120,7 @@
                     'icon' = 'https://www.proceso.com.mx/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ejercito Mexicano - Official videos of training and missions'
@@ -1142,7 +1142,7 @@
                 'URL' = 'https://www.youtube.com/c/MilitaryChannelMX'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Manifiesto Radio - Stories from Mexican special forces veterans'
@@ -1187,7 +1187,7 @@
                     'URL' = 'https://www.madeinalabama.com/news/'
                     'icon' = 'https://www.madeinalabama.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alabama Reflector - Independent journalism on Alabama economic inequalities'
@@ -1205,7 +1205,7 @@
                     'icon' = 'https://thebusinessview.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This Is Alabama - Insights into Alabama startups and innovation'
@@ -1227,7 +1227,7 @@
                 'URL' = 'https://www.youtube.com/user/ALABAMATourism'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Business Alabama Podcast - Discussions on Alabama''s movers and shakers'
@@ -1245,7 +1245,7 @@
                 'icon' = 'https://culverhouse.ua.edu/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1269,7 +1269,7 @@
                     'URL' = 'https://www.on3.com/teams/alabama-crimson-tide/'
                     'icon' = 'https://www.on3.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Roll Tide Wire - Alternative fan perspectives on Tide games'
@@ -1287,7 +1287,7 @@
                     'icon' = 'https://tidefans.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Alabama Crimson Tide - Official highlights and athlete stories'
@@ -1309,7 +1309,7 @@
                 'URL' = 'https://www.youtube.com/c/TouchdownAlabamaMag'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Locked On Bama - Daily Crimson Tide sports analysis'
@@ -1327,7 +1327,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1351,7 +1351,7 @@
                     'URL' = 'https://kentuck.org/'
                     'icon' = 'https://kentuck.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Bitter Southerner - Progressive takes on Southern cultural identity'
@@ -1369,7 +1369,7 @@
                     'icon' = 'https://1819news.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This Is Alabama - Cultural explorations of Alabama traditions'
@@ -1391,7 +1391,7 @@
                 'URL' = 'https://www.youtube.com/user/WHNT'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Alabama Short Stories - Narratives on cultural milestones'
@@ -1409,7 +1409,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1433,7 +1433,7 @@
                     'URL' = 'https://www.uah.edu/science/science-news'
                     'icon' = 'https://www.uah.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alabama Reflector Tech - Critical analysis of innovation policies'
@@ -1451,7 +1451,7 @@
                     'icon' = 'https://yellowhammernews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Smarter Every Day - Explainers on Alabama-based science experiments'
@@ -1473,7 +1473,7 @@
                 'URL' = 'https://www.youtube.com/user/UAHuntsville'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Hatch Podcast - Bioscience innovation stories from Alabama'
@@ -1491,7 +1491,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1515,7 +1515,7 @@
                     'URL' = 'https://aldailynews.com/'
                     'icon' = 'https://aldailynews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Yellowhammer News - Independent reporting on governance issues'
@@ -1533,7 +1533,7 @@
                     'icon' = 'https://bittersoutherner.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Senator Tommy Tuberville - Commentary on Alabama political dynamics'
@@ -1555,7 +1555,7 @@
                 'URL' = 'https://www.youtube.com/c/TheAlabamaChannel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Capitol Journal - Weekly breakdowns of Alabama political news'
@@ -1573,7 +1573,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1597,7 +1597,7 @@
                     'URL' = 'https://alabamafashionalliance.com/'
                     'icon' = 'https://alabamafashionalliance.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alabama Chanin - Critiques of fast fashion and sustainability'
@@ -1615,7 +1615,7 @@
                     'icon' = 'https://semanariodemoda.substack.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Laura Lee - Makeup and fashion tutorials from Alabama'
@@ -1637,7 +1637,7 @@
                 'URL' = 'https://www.instagram.com/shontiamonae/'
                 'icon' = 'https://www.instagram.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Dressed - Fashion history with Alabama Chanin focus'
@@ -1655,7 +1655,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1679,7 +1679,7 @@
                     'URL' = 'https://www.waff.com/news/military/'
                     'icon' = 'https://www.waff.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alabama Reflector Military - Investigative reports on policies'
@@ -1697,7 +1697,7 @@
                     'icon' = 'https://yellowhammernews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Alabama National Guard - Official training and mission vlogs'
@@ -1719,7 +1719,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=5fs66YNV-HM'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Alabama Guard Radio - Stories from Alabama Guardsmen'
@@ -1763,7 +1763,7 @@
                     'URL' = 'https://alaskapublic.org/news/economy'
                     'icon' = 'https://alaskapublic.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alaska Beacon - Independent analysis of Alaska business policies'
@@ -1781,7 +1781,7 @@
                     'icon' = 'https://mustreadalaska.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This Alaska Life - Family business insights from Alaska entrepreneurs'
@@ -1803,7 +1803,7 @@
                 'URL' = 'https://www.youtube.com/@ViolettVlogs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Real Alaska Podcast - Interviews with Alaska business leaders'
@@ -1821,7 +1821,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1845,7 +1845,7 @@
                     'URL' = 'https://www.newsminer.com/sports/'
                     'icon' = 'https://www.newsminer.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alaska Sports Talk - Independent perspectives on Alaska sports'
@@ -1863,7 +1863,7 @@
                     'icon' = 'https://mushingalaska.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Alaska Sports Talk - Vlogs on high school and college sports'
@@ -1885,7 +1885,7 @@
                 'URL' = 'https://www.youtube.com/@TanalianCentralSchool'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Alaska Sports Talk - Deep dives into Alaska hockey and leagues'
@@ -1903,7 +1903,7 @@
                 'icon' = 'https://iditapod.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -1927,7 +1927,7 @@
                     'URL' = 'https://www.nomenugget.com/'
                     'icon' = 'https://www.nomenugget.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Alaska Current - Nonprofit journalism on Alaska communities'
@@ -1945,7 +1945,7 @@
                     'icon' = 'https://mustreadalaska.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This Alaska Life - Family vlogs on Alaskan culture and traditions'
@@ -1967,7 +1967,7 @@
                 'URL' = 'https://www.youtube.com/c/HowtoAlaska'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hometown, Alaska - Personal stories from across the state'
@@ -1985,7 +1985,7 @@
                 'icon' = 'https://www.alaskapublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2009,7 +2009,7 @@
                     'URL' = 'https://www.gi.alaska.edu/news'
                     'icon' = 'https://www.gi.alaska.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alaska Beacon Tech - Critical analysis of innovation policies'
@@ -2027,7 +2027,7 @@
                     'icon' = 'https://substackcdn.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UAF YouTube - University science experiments and breakthroughs'
@@ -2049,7 +2049,7 @@
                 'URL' = 'https://www.youtube.com/c/SimpleLivingAlaska'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Alaska Science Pod - Firsthand accounts of Alaska discoveries'
@@ -2067,7 +2067,7 @@
                 'icon' = 'https://www.usgs.gov/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2091,7 +2091,7 @@
                     'URL' = 'https://www.adn.com/politics/'
                     'icon' = 'https://www.adn.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Must Read Alaska - Conservative commentary on governance'
@@ -2109,7 +2109,7 @@
                     'icon' = 'https://dermotcole.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Senator Murkowski - Vlogs on Alaska political priorities'
@@ -2131,7 +2131,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PL620zd1lpPesqXiHXJcET-d19O7v_tUxj'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Must Read Alaska Show - Conservative takes on Alaska politics'
@@ -2149,7 +2149,7 @@
                 'icon' = 'https://www.adn.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2173,7 +2173,7 @@
                     'URL' = 'https://www.akstarfish.com/'
                     'icon' = 'https://www.akstarfish.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Far North Fashion Blog - Critiques of sustainable Alaskan style'
@@ -2191,7 +2191,7 @@
                     'icon' = 'https://www.arcticencounter.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Somers In Alaska - Alaskan fashion hauls and trends'
@@ -2213,7 +2213,7 @@
                 'URL' = 'https://www.youtube.com/c/ThisAlaskaLife'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Redemption Podcast - Conversations with Alaskan fashion designers'
@@ -2231,7 +2231,7 @@
                 'icon' = 'https://www.alaskapublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2255,7 +2255,7 @@
                     'URL' = 'https://ak.ng.mil/Media/News/'
                     'icon' = 'https://ak.ng.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Alaska Beacon Defense - Investigative reports on policies'
@@ -2273,7 +2273,7 @@
                     'icon' = 'https://dermotcole.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Alaska National Guard - Official training and mission vlogs'
@@ -2295,7 +2295,7 @@
                 'URL' = 'https://www.youtube.com/@AlaskaArmyNationalGuard'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Cleared Hot - Alaskan veteran stories and redemption'
@@ -2339,7 +2339,7 @@
                     'URL' = 'https://inbusinessphx.com/'
                     'icon' = 'https://inbusinessphx.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Phoenix New Times Business - Independent Arizona business courts and environment news'
@@ -2357,7 +2357,7 @@
                     'icon' = 'https://www.tucsonweekly.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Finding Arizona Podcast - Interviews with Arizona entrepreneurs and innovators'
@@ -2379,7 +2379,7 @@
                 'URL' = 'https://www.youtube.com/user/ArizonaChamber'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arizona Business Podcast - Conversations with top Arizona entrepreneurs'
@@ -2397,7 +2397,7 @@
                 'icon' = 'https://www.scottsdalechamber.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2421,7 +2421,7 @@
                     'URL' = 'https://allsportstucson.com/'
                     'icon' = 'https://allsportstucson.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Burn City Sports - Independent Phoenix sports coverage and analysis'
@@ -2439,7 +2439,7 @@
                     'icon' = 'https://www.azdesertswarm.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Arizona Sports - Morning shows and game highlights from Phoenix'
@@ -2461,7 +2461,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCvzH4mr87gWLz1Y1xiE550w'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Bickley and Marotta - Daily opinions on Valley sports teams'
@@ -2479,7 +2479,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2503,7 +2503,7 @@
                     'URL' = 'https://www.phoenixnewtimes.com/arts-culture/'
                     'icon' = 'https://www.phoenixnewtimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Copper Courier - Modern Arizona cultural stories and community news'
@@ -2521,7 +2521,7 @@
                     'icon' = 'https://www.nhonews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Living in Arizona Now - Arizona small towns culture and daily life'
@@ -2543,7 +2543,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=-aLC83KqFTE'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arizona Spotlight - Cultural criticism dance and arts funding discussions'
@@ -2561,7 +2561,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2585,7 +2585,7 @@
                     'URL' = 'https://news.asu.edu/saf/science-and-technology'
                     'icon' = 'https://news.asu.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tucson Sentinel Sci Tech - Independent Arizona innovation critiques'
@@ -2603,7 +2603,7 @@
                     'icon' = 'https://tucson.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AZ Tech Podcast - Emerging tech trends and Arizona innovators'
@@ -2625,7 +2625,7 @@
                 'URL' = 'https://www.youtube.com/user/uafairbanks'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arizona Science - Short updates on UA research and innovations'
@@ -2643,7 +2643,7 @@
                 'icon' = 'https://bio5.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2667,7 +2667,7 @@
                     'URL' = 'https://www.azfamily.com/politics/'
                     'icon' = 'https://www.azfamily.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Arizona Mirror - Independent investigative policy journalism'
@@ -2685,7 +2685,7 @@
                     'icon' = 'https://www.phoenixnewtimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Politics Unplugged - Arizona political editor deep dives'
@@ -2707,7 +2707,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLjk-Nxa5HqPvzfq7IKwcT3ytUswN8kD16'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Gaggle - Weekly Arizona politics issue breakdowns'
@@ -2725,7 +2725,7 @@
                 'icon' = 'https://www.kjzz.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2749,7 +2749,7 @@
                     'URL' = 'https://www.fashionsquare.com/Press'
                     'icon' = 'https://www.fashionsquare.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Phoenix New Times Alt Fashion - Edgy alternative style and gear'
@@ -2767,7 +2767,7 @@
                     'icon' = 'https://cronkitenews.azpbs.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Fashion Citizen - Phoenix twins style hauls and vlogs'
@@ -2789,7 +2789,7 @@
                 'URL' = 'https://www.youtube.com/@aieshabeasley'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Finding Arizona Fashion Episodes - Local designers and style stories'
@@ -2807,7 +2807,7 @@
                 'icon' = 'https://www.statepress.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2831,7 +2831,7 @@
                     'URL' = 'https://www.nationalguard.mil/News/Tag/94088/arizona-national-guard/'
                     'icon' = 'https://www.nationalguard.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tucson Sentinel Military - Investigative veteran and policy reports'
@@ -2849,7 +2849,7 @@
                     'icon' = 'https://taskandpurpose.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Arizona Army National Guard - Training missions and West Point stories'
@@ -2871,7 +2871,7 @@
                 'URL' = 'https://www.youtube.com/@aztacticaladventures'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Veterans AZ - Stories of Arizona veterans and support organizations'
@@ -2915,7 +2915,7 @@
                     'URL' = 'https://armoneyandpolitics.com/business/'
                     'icon' = 'https://armoneyandpolitics.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Arkansas Times - Independent perspectives on Arkansas economic inequalities'
@@ -2933,7 +2933,7 @@
                     'icon' = 'https://thebusinessview.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Arkansas Business - Vlogs on Arkansas business awards and leaders'
@@ -2955,7 +2955,7 @@
                 'URL' = 'https://www.youtube.com/user/KATVchannel7'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talk Business and Politics - Discussions on Arkansas business leaders and innovators'
@@ -2973,7 +2973,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -2997,7 +2997,7 @@
                     'URL' = 'https://www.5newsonline.com/sports'
                     'icon' = 'https://www.5newsonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Whole Hog Sports - Independent analysis of Arkansas Razorbacks'
@@ -3015,7 +3015,7 @@
                     'icon' = 'https://www.si.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Inside Arkansas - Vlogs on Arkansas Razorbacks highlights and stories'
@@ -3037,7 +3037,7 @@
                 'URL' = 'https://www.youtube.com/user/5NEWS'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'HawgSports Live - Deep dives into Arkansas Razorbacks sports'
@@ -3055,7 +3055,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3079,7 +3079,7 @@
                     'URL' = 'https://talkbusiness.net/'
                     'icon' = 'https://talkbusiness.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Free Weekly - Independent critiques of Arkansas cultural policies'
@@ -3097,7 +3097,7 @@
                     'icon' = 'http://eureka.news/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jessica Sowards - Vlogs on Arkansas homesteading culture and daily life'
@@ -3119,7 +3119,7 @@
                 'URL' = 'https://www.youtube.com/user/KATVchannel7'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Ozarks at Large - Discussions on Arkansas cultural milestones and figures'
@@ -3128,7 +3128,6 @@
             },
             @{
                 'Title' = 'Hometown, Arkansas - Narrative tales of Arkansas culture and personal stories'
-                'URL' = 'https://www.alaskapublic.org/podcasts/hometown-alaska/'
                 'URL' = 'https://arktimes.com/podcast'
                 'icon' = 'https://arktimes.com/favicon.ico'
             },
@@ -3138,7 +3137,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3162,7 +3161,7 @@
                     'URL' = 'https://www.arkansasedc.com/science-technology/'
                     'icon' = 'https://www.arkansasedc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Arkansas Advocate Science - Critical analysis of Arkansas innovation policies'
@@ -3180,7 +3179,7 @@
                     'icon' = 'https://arktimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'University of Arkansas - Vlogs on Arkansas biotech and innovation hubs'
@@ -3202,7 +3201,7 @@
                 'URL' = 'https://www.youtube.com/user/5NEWS'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arkansas Technology and Teaching - Talks with Arkansas tech educators and innovators'
@@ -3220,7 +3219,7 @@
                 'icon' = 'https://www.arkansasedc.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3244,7 +3243,7 @@
                     'URL' = 'https://www.thv11.com/politics'
                     'icon' = 'https://www.thv11.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Arkansas Advocate - Independent reporting on Arkansas occupation policies'
@@ -3262,7 +3261,7 @@
                     'icon' = 'https://arknews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Roby Brock - Vlogs explaining Arkansas political dynamics'
@@ -3284,7 +3283,7 @@
                 'URL' = 'https://www.youtube.com/user/KARK4News'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talk Business and Politics - Two journalists unpacking Arkansas political news'
@@ -3302,7 +3301,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3326,7 +3325,7 @@
                     'URL' = 'https://www.athomearkansas.com/category/life/fashion-and-beauty/'
                     'icon' = 'https://www.athomearkansas.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Free Weekly Fashion - Critiques of Arkansas fashion industry and social issues'
@@ -3344,7 +3343,7 @@
                     'icon' = 'https://www.kuaf.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Fashion Citizen - Vlogs on Arkansas beauty and fashion trends'
@@ -3366,7 +3365,7 @@
                 'URL' = 'https://www.youtube.com/@aieshabeasley'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'I Am Northwest Arkansas - Conversations with Arkansas designers and influencers'
@@ -3384,7 +3383,7 @@
                 'icon' = 'https://www.azfamily.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3408,7 +3407,7 @@
                     'URL' = 'https://www.arkansasedc.com/aerospace-defense/'
                     'icon' = 'https://www.arkansasedc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Arkansas Leader Military - Investigative reports on Arkansas military tactics'
@@ -3426,7 +3425,7 @@
                     'icon' = 'https://www.armytimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Arkansas National Guard - Official vlogs from Arkansas training and missions'
@@ -3448,7 +3447,7 @@
                 'URL' = 'https://www.youtube.com/user/5NEWS'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'WeARtheGuard - Behind-the-scenes of Arkansas National Guard operations'
@@ -3506,7 +3505,7 @@
                 'URL' = 'https://www.fresnobee.com/'
                 'icon' = 'https://www.fresnobee.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'CalMatters - Nonprofit journalism on California policy and politics'
@@ -3533,7 +3532,7 @@
                 'URL' = 'https://www.californiasun.co/'
                 'icon' = 'https://www.californiasun.co/favicon.ico'
             }
-        ),
+        )
         'CounterCulture' = @(
             @{
                 'Title' = 'SF Bay View - Radical Black news and views from Bay Area'
@@ -3551,7 +3550,7 @@
                 'icon' = 'https://48hills.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @{
         'Mainstream' = @(
             @{
@@ -3579,7 +3578,7 @@
                 'URL' = 'https://www.youtube.com/user/CollinsKey'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Safiya Nygaard - Deep dives into weird products and trends'
@@ -3602,7 +3601,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Podcasts' = @{
         'Mainstream' = @(
             @{
@@ -3630,7 +3629,7 @@
                 'URL' = 'https://laist.com/podcasts'
                 'icon' = 'https://laist.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Ear Hustle - Prison stories from San Quentin inmates'
@@ -3653,7 +3652,7 @@
                 'icon' = 'https://99percentinvisible.org/favicon.ico'
             }
         )
-    },
+    }
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3677,7 +3676,7 @@
                     'URL' = 'https://calbizjournal.com/'
                     'icon' = 'https://calbizjournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'LA Weekly Business - Critiques of corporate influence in California'
@@ -3695,7 +3694,7 @@
                     'icon' = 'https://voiceofoc.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'a16z - Vlogs on California venture capital and startups'
@@ -3717,7 +3716,7 @@
                 'URL' = 'https://www.youtube.com/c/EquitableGrowth'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'a16z Podcast - Talks with California tech founders and investors'
@@ -3735,7 +3734,7 @@
                 'icon' = 'https://mastersofscale.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3759,7 +3758,7 @@
                     'URL' = 'https://www.foxsports.com/san-diego'
                     'icon' = 'https://www.foxsports.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Burn City Sports - Independent views on California sports politics'
@@ -3777,7 +3776,7 @@
                     'icon' = 'https://sportforlife.ca/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Lakers Nation - Vlogs on NBA matches and player stories'
@@ -3799,7 +3798,7 @@
                 'URL' = 'https://www.youtube.com/c/ChargersWire'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Locked On Lakers - Heated debates on California basketball leagues'
@@ -3817,7 +3816,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3841,7 +3840,7 @@
                     'URL' = 'https://californiaglobe.com/section/culture/'
                     'icon' = 'https://californiaglobe.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'LA Weekly Culture - Independent critiques of California cultural policies'
@@ -3859,7 +3858,7 @@
                     'icon' = 'https://voiceofoc.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'California Through My Lens - Cultural explorations of California traditions'
@@ -3881,7 +3880,7 @@
                 'URL' = 'https://www.youtube.com/c/TheTravelVlogger'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The California Report - Narratives on California folklore and history'
@@ -3899,7 +3898,7 @@
                 'icon' = 'https://www.kcrw.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -3923,7 +3922,7 @@
                     'URL' = 'https://www.caltech.edu/about/news'
                     'icon' = 'https://www.caltech.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Voice of OC Tech - Critical analysis of tech ethics in California'
@@ -3941,7 +3940,7 @@
                     'icon' = 'https://www.laweekly.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Marques Brownlee - Reviews of California-developed hardware and gadgets'
@@ -3963,7 +3962,7 @@
                 'URL' = 'https://www.youtube.com/c/ExplorationFilms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Science Vs - Simplified explanations of California discoveries'
@@ -3981,7 +3980,7 @@
                 'icon' = 'https://a16z.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4005,7 +4004,7 @@
                     'URL' = 'https://www.sacbee.com/news/politics-government/'
                     'icon' = 'https://www.sacbee.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'LA Progressive - Independent reporting on California social justice issues'
@@ -4023,7 +4022,7 @@
                     'icon' = 'https://voiceofoc.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Young Turks - Satirical commentary on California politics'
@@ -4045,7 +4044,7 @@
                 'URL' = 'https://www.youtube.com/c/Politizoom'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The California Report - Leftist analysis of California political news'
@@ -4063,7 +4062,7 @@
                 'icon' = 'https://capitolweekly.net/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4087,7 +4086,7 @@
                     'URL' = 'https://www.harpersbazaar.com/fashion/'
                     'icon' = 'https://www.harpersbazaar.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sustainable Brands - Critiques of fast fashion and upcycling'
@@ -4105,7 +4104,7 @@
                     'icon' = 'https://www.sfweekly.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Style Shaker - Hauls and tips for California wardrobe trends'
@@ -4127,7 +4126,7 @@
                 'URL' = 'https://www.youtube.com/c/JuliaDoulgerof'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Business of Fashion Podcast - Conversations with California designers'
@@ -4145,7 +4144,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4169,7 +4168,7 @@
                     'URL' = 'https://calguard.ca.gov/press-releases/'
                     'icon' = 'https://calguard.ca.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Voice of OC Military - Investigative reports on human rights abuses'
@@ -4187,7 +4186,7 @@
                     'icon' = 'https://www.laprogressive.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'California National Guard - Official videos of training and missions'
@@ -4209,7 +4208,7 @@
                 'URL' = 'https://www.youtube.com/c/MilitaryArmsChannel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Team House - Stories from California special forces veterans'
@@ -4267,7 +4266,7 @@
                 'URL' = 'https://www.kunc.org/'
                 'icon' = 'https://www.kunc.org/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Colorado Independent - Nonprofit journalism on state issues'
@@ -4294,7 +4293,7 @@
                 'URL' = 'https://denverite.com/'
                 'icon' = 'https://denverite.com/favicon.ico'
             }
-        ),
+        )
         'CounterCulture' = @(
             @{
                 'Title' = 'Colorado Free Press - LGBTQ+ and progressive community news'
@@ -4312,7 +4311,7 @@
                 'icon' = 'https://coloradotimesrecorder.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @{
         'Mainstream' = @(
             @{
@@ -4340,7 +4339,7 @@
                 'URL' = 'https://www.youtube.com/c/VisitPikesPeak'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Gardener Scott - Gardening tips and sustainable living in Colorado'
@@ -4363,7 +4362,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Podcasts' = @{
         'Mainstream' = @(
             @{
@@ -4391,7 +4390,7 @@
                 'URL' = 'https://coloradosun.com/podcast/colorado-sun-daily/'
                 'icon' = 'https://coloradosun.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Ozarks at Large - Cultural and environmental insights from Colorado'
@@ -4414,7 +4413,7 @@
                 'icon' = 'https://www.cpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4438,7 +4437,7 @@
                     'URL' = 'https://bizwest.com/'
                     'icon' = 'https://bizwest.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Colorado Sun Business - Nonprofit analysis of economic policies'
@@ -4455,7 +4454,7 @@
                     'URL' = 'https://www.coloradoindependent.com/economy/'
                     'icon' = 'https://www.coloradoindependent.com/favicon.ico'
             }
-        ),
+        )
         'Vloggers' = @(
             @{
                 'Title' = 'ColoradoBiz Magazine - Success stories and entrepreneur journeys'
@@ -4477,7 +4476,7 @@
                 'URL' = 'https://www.youtube.com/@findingarizonapodcast'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Colorado Springs Business Podcast - Chats with local leaders and innovators'
@@ -4495,7 +4494,7 @@
                 'icon' = 'https://startupcolorado.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4519,7 +4518,7 @@
                     'URL' = 'https://www.denver7.com/sports'
                     'icon' = 'https://www.denver7.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sentinel Preps - Independent high school sports reporting'
@@ -4537,7 +4536,7 @@
                     'icon' = 'https://www.guerillasports.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Guerilla Sports - Ultimate destination for Colorado sports coverage'
@@ -4559,7 +4558,7 @@
                 'URL' = 'https://www.youtube.com/@bernardwatts57'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hockey Mountain High - Deep dives into Avalanche hockey'
@@ -4577,7 +4576,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4601,7 +4600,7 @@
                     'URL' = 'https://csindy.com/'
                     'icon' = 'https://csindy.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Westword Culture - Independent critiques of Denver arts policies'
@@ -4619,7 +4618,7 @@
                     'icon' = 'https://www.yellowscene.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Living in Colorado Springs - Adventure and cultural explorations'
@@ -4641,7 +4640,7 @@
                 'URL' = 'https://www.youtube.com/c/KatieGonzales'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'History Colorado Podcasts - Oral histories and cultural lectures'
@@ -4659,7 +4658,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4683,7 +4682,7 @@
                     'URL' = 'https://www.cobioinstitute.org/news/'
                     'icon' = 'https://www.cobioinstitute.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Colorado Sun Tech - Critical views on innovation and policy'
@@ -4701,7 +4700,7 @@
                     'icon' = 'https://www.westword.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SpanglerScienceTV - Emmy-winning experiments from Colorado'
@@ -4723,7 +4722,7 @@
                 'URL' = 'https://www.youtube.com/cleoabram'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'CO Tech Podcast - Insights from Colorado tech leaders'
@@ -4741,7 +4740,7 @@
                 'icon' = 'https://csuspur.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4765,7 +4764,7 @@
                     'URL' = 'https://www.denver7.com/news/politics'
                     'icon' = 'https://www.denver7.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Colorado Independent Politics - Investigative progressive journalism'
@@ -4783,7 +4782,7 @@
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Colorado Point of View - Weekly show on politics and elections'
@@ -4805,7 +4804,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCy9OxTXxC5bYP4hVXqZrlCQ'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Purplish - State politics policy and elections discussions'
@@ -4823,7 +4822,7 @@
                 'icon' = 'https://www.cpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4847,7 +4846,7 @@
                     'URL' = 'https://5280.com/category/culture/style/'
                     'icon' = 'https://5280.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'FashioNation - Alternative punk and goth fashion hub'
@@ -4865,7 +4864,7 @@
                     'icon' = 'https://www.coloradoexpression.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Outfits of the Week - Colorado fall fashion and markets'
@@ -4887,7 +4886,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=NpbleqgWwCY'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Behind Fashion with Mary Spicer - Designer and event insights'
@@ -4905,7 +4904,7 @@
                 'icon' = 'https://thegetthriftypodcast.libsyn.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -4929,7 +4928,7 @@
                     'URL' = 'https://www.petersonschriever.spaceforce.mil/Newsroom/News/'
                     'icon' = 'https://www.petersonschriever.spaceforce.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Colorado - Independent service member news'
@@ -4947,7 +4946,7 @@
                     'icon' = 'https://coloradosun.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Army Vlog Fort Carson - Daily life in 92A series'
@@ -4969,7 +4968,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCIQYGsyTh6WOJ-k5kxj4NVA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Veterans Voice - Resources and stories from Colorado vets'
@@ -5027,7 +5026,7 @@
                 'URL' = 'https://www.wfsb.com/'
                 'icon' = 'https://www.wfsb.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'CT Mirror - Nonprofit journalism on state policy and politics'
@@ -5054,7 +5053,7 @@
                 'URL' = 'https://www.wtnh.com/'
                 'icon' = 'https://www.wtnh.com/favicon.ico'
             }
-        ),
+        )
         'CounterCulture' = @(
             @{
                 'Title' = 'La Voz Hispana - Latino community news and cultural perspectives'
@@ -5072,7 +5071,7 @@
                 'icon' = 'https://valley.newhavenindependent.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @{
         'Mainstream' = @(
             @{
@@ -5100,7 +5099,7 @@
                 'URL' = 'https://www.youtube.com/c/caseyneistat'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Lemon Stripes - Julia Dzafic on style motherhood and CT living'
@@ -5123,7 +5122,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Podcasts' = @{
         'Mainstream' = @(
             @{
@@ -5151,7 +5150,7 @@
                 'URL' = 'https://www.ctpublic.org/show/audacious-with-chion-wolf'
                 'icon' = 'https://www.ctpublic.org/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Cult in Connecticut - True crime and cult stories from CT'
@@ -5174,7 +5173,7 @@
                 'icon' = 'https://www.ctpublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5198,7 +5197,7 @@
                     'URL' = 'https://www.ctinsider.com/business/'
                     'icon' = 'https://www.ctinsider.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'We-Ha.com - West Hartford independent business and community news'
@@ -5216,7 +5215,7 @@
                     'icon' = 'https://business.ct.gov/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jessica Bueno - Lifestyle and entrepreneurship in Stamford'
@@ -5238,7 +5237,7 @@
                 'URL' = 'https://www.youtube.com/user/CBIAConnecticut'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'CBIA BizCast - Conversations with Connecticut business influencers'
@@ -5256,7 +5255,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5280,7 +5279,7 @@
                     'URL' = 'https://www.wfsb.com/sports/'
                     'icon' = 'https://www.wfsb.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The UConn Blog - Fan analysis of Huskies basketball'
@@ -5298,7 +5297,7 @@
                     'icon' = 'https://collinsvillepress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'GameDay Connecticut Sports - High school football and highlights'
@@ -5320,7 +5319,7 @@
                 'URL' = 'https://www.youtube.com/uconnhuskies'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Connecticut Scoreboard - All things CT sports coverage'
@@ -5338,7 +5337,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5362,7 +5361,7 @@
                     'URL' = 'https://www.nenc.news/news/arts-culture'
                     'icon' = 'https://www.nenc.news/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'CT Arts Alliance News - Advocacy for local artists'
@@ -5380,7 +5379,7 @@
                     'icon' = 'https://www.ctmakeithere.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Afternoon in Connecticut - Cultural daily life and traditions'
@@ -5402,7 +5401,7 @@
                 'URL' = 'https://www.youtube.com/c/BrunchWithBabs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Grating the Nutmeg - CT history and cultural narratives'
@@ -5420,7 +5419,7 @@
                 'icon' = 'http://www.historycolorado.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5444,7 +5443,7 @@
                     'URL' = 'https://today.uconn.edu/category/all-topics/research/'
                     'icon' = 'https://today.uconn.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'BioCT In The News - Life sciences ethical and industry views'
@@ -5462,7 +5461,7 @@
                     'icon' = 'https://ctcase.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SpanglerScienceTV - Fun science experiments from CT labs'
@@ -5484,7 +5483,7 @@
                 'URL' = 'https://www.youtube.com/cleoabram'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Learning Living STEMM in CT - Academy science discussions'
@@ -5502,7 +5501,7 @@
                 'icon' = 'https://uconn.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5526,7 +5525,7 @@
                     'URL' = 'https://www.ctpost.com/politics/'
                     'icon' = 'https://www.ctpost.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'CT Examiner Politics - Investigative governance reporting'
@@ -5544,7 +5543,7 @@
                     'icon' = 'https://www.nbcconnecticut.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CT Senate Republicans - Commentary on state legislation'
@@ -5566,7 +5565,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=KjB62Ne2Bmk'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Wheelhouse - CT politics noise turned down insights'
@@ -5584,7 +5583,7 @@
                 'icon' = 'https://ctdems.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5608,7 +5607,7 @@
                     'URL' = 'https://ctvisit.com/articles/ct-fashion'
                     'icon' = 'https://ctvisit.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Neville Wisdom - Sustainable and ethical CT fashion views'
@@ -5626,7 +5625,7 @@
                     'icon' = 'https://www.nbcconnecticut.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Paige Lorenze - CT wardrobe hauls and seasonal styles'
@@ -5648,7 +5647,7 @@
                 'URL' = 'https://www.youtube.com/c/CoveringtheBases'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Fashion Department - Style trends and closet curation'
@@ -5666,7 +5665,7 @@
                 'icon' = 'https://www.marist.edu/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5690,7 +5689,7 @@
                     'URL' = 'https://portal.ct.gov/oma'
                     'icon' = 'https://portal.ct.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'National Guard News CT - Deployment and policy critiques'
@@ -5708,7 +5707,7 @@
                     'icon' = 'https://world.einnews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CT National Guard - Official training and mission videos'
@@ -5730,7 +5729,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=ZY1C9a-EdbQ'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Stand Guard - Untold military history and service stories'
@@ -5788,7 +5787,7 @@
                 'URL' = 'https://baytobaynews.com/'
                 'icon' = 'https://baytobaynews.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Spotlight Delaware - Nonprofit investigative reporting on state policies and impacts'
@@ -5815,7 +5814,7 @@
                 'URL' = 'https://blde.org/'
                 'icon' = 'https://blde.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'A Better Delaware Blog - Advocacy for nonpartisan political and social change'
@@ -5833,7 +5832,7 @@
                 'icon' = 'https://delawareblack.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Delaware Online - Video features on breaking news and local stories'
@@ -5860,7 +5859,7 @@
             'URL' = 'https://www.youtube.com/user/WBOCTV'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Reinvented Delaware - Repurposing local items and community stories'
@@ -5882,7 +5881,7 @@
             'URL' = 'https://www.youtube.com/@delawaresportsmedia7689'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Delaware Deep Dive - Candid talks on state business and trends'
@@ -5909,7 +5908,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/for-the-record/id1668499002'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Beyond the Headlines - Reporter perspectives on investigative stories'
@@ -5931,7 +5930,7 @@
             'URL' = 'https://history.delaware.gov/podcast/'
             'icon' = 'https://history.delaware.gov/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -5955,7 +5954,7 @@
                     'URL' = 'https://www.dscc.com/delawarebusiness.html'
                     'icon' = 'https://www.dscc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Spotlight Delaware Business - Critical views on economic inequalities'
@@ -5973,7 +5972,7 @@
                     'icon' = 'https://www.caesarrodney.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Delaware Division of Small Business - Support for entrepreneurs and startups'
@@ -5995,7 +5994,7 @@
                 'URL' = 'https://www.youtube.com/c/DETVCH'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Delaware Deep Dive - Discussions on business topics and innovations'
@@ -6013,7 +6012,7 @@
                 'icon' = 'http://standbymede.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6037,7 +6036,7 @@
                     'URL' = 'https://baytobaynews.com/sports/'
                     'icon' = 'https://baytobaynews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Newark Post Sports - Independent high school sports politics'
@@ -6055,7 +6054,7 @@
                     'icon' = 'https://www.sussexcountypost.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = '302Sports - Promotion of local Delaware athletes and coaches'
@@ -6077,7 +6076,7 @@
                 'URL' = 'https://www.youtube.com/c/DETVCH'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'THE Delaware High School Football POD - Exclusive HS league coverage'
@@ -6095,7 +6094,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6119,7 +6118,7 @@
                     'URL' = 'https://delawaretoday.com/things-to-do/arts-culture/'
                     'icon' = 'https://delawaretoday.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Delaware Contemporary Newsroom - Critiques of art policies'
@@ -6137,7 +6136,7 @@
                     'icon' = 'https://spotlightdelaware.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Delaware Division of the Arts - Showcasing artists and events'
@@ -6159,7 +6158,7 @@
                 'URL' = 'https://www.youtube.com/univdelaware'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Delaware Humanities Podcasts - Interviews on cultural history topics'
@@ -6177,7 +6176,7 @@
                 'icon' = 'https://www.delawarepublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6201,7 +6200,7 @@
                     'URL' = 'https://delawarebusinesstimes.com/news/technology-it/'
                     'icon' = 'https://delawarebusinesstimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Innovation Space Press - Views on tech ethics and communities'
@@ -6219,7 +6218,7 @@
                     'icon' = 'https://techcouncilofdelaware.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'University of Delaware - Videos on research and tech advancements'
@@ -6241,7 +6240,7 @@
                 'URL' = 'https://www.youtube.com/univdelaware'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Research at University of Delaware - Stories of discoveries and impacts'
@@ -6259,7 +6258,7 @@
                 'icon' = 'https://www.delawarepublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6283,7 +6282,7 @@
                     'URL' = 'https://detvch.com/politics/'
                     'icon' = 'https://detvch.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Delaware Liberal - Progressive commentary on political decisions'
@@ -6301,7 +6300,7 @@
                     'icon' = 'https://www.abetterdelaware.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Governor Matt Meyer - Vlogs on policy initiatives and leadership'
@@ -6323,7 +6322,7 @@
                 'URL' = 'https://www.youtube.com/@SpotlightDelaware'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Spotlight Delaware Podcasts - Discussions on policy impacts'
@@ -6341,7 +6340,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6365,7 +6364,7 @@
                     'URL' = 'https://delawarelive.com/lifestyle/'
                     'icon' = 'https://delawarelive.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Spotlight Delaware Fashion - Views on industry social issues'
@@ -6383,7 +6382,7 @@
                     'icon' = 'https://dedivahdeals.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Annabelle Brame - College fashion and small business vlogs'
@@ -6405,7 +6404,7 @@
                 'URL' = 'https://www.youtube.com/user/DeDivahDeals'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Dela Darlings - Discussions on apparel and Delaware culture'
@@ -6423,7 +6422,7 @@
                 'icon' = 'https://www.udel.edu/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6447,7 +6446,7 @@
                     'URL' = 'https://www.militarytimes.com/'
                     'icon' = 'https://www.militarytimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Breaking Defense - Analysis of defense policies and sales'
@@ -6465,7 +6464,7 @@
                     'icon' = 'https://defensescoop.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Delaware Military Academy - Vlogs on training and events'
@@ -6487,7 +6486,7 @@
                 'URL' = 'https://www.youtube.com/c/CombatArmsChannel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Delaware Podcast - Legislation and veteran assistance'
@@ -6545,7 +6544,7 @@
                 'URL' = 'https://mynews13.com/'
                 'icon' = 'https://mynews13.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Miami New Times - Independent voice on Miami arts culture and local controversies'
@@ -6572,7 +6571,7 @@
                 'URL' = 'https://floridaphoenix.com/'
                 'icon' = 'https://floridaphoenix.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Truthout - Progressive analysis of Florida social justice and environmental issues'
@@ -6590,7 +6589,7 @@
                 'icon' = 'https://jaxtrib.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'FOX 13 Tampa Bay - Breaking news weather and local stories from Tampa Bay'
@@ -6617,7 +6616,7 @@
             'URL' = 'https://www.youtube.com/user/WPLGLocal10'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Florida Travel Vlogs - Authentic tours of Florida towns residential areas and hidden gems'
@@ -6639,7 +6638,7 @@
             'URL' = 'https://www.youtube.com/c/CraigCunha'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Your Florida Daily - Daily news updates on Florida politics economy and headlines'
@@ -6666,7 +6665,7 @@
             'URL' = 'https://player.fm/podcasts/south-florida'
             'icon' = 'https://player.fm/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Welcome to Florida - Stories on state history people politics and quirky events'
@@ -6688,7 +6687,7 @@
             'URL' = 'https://floridasilc.org/the-independent-life-podcast/'
             'icon' = 'https://floridasilc.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6712,7 +6711,7 @@
                     'URL' = 'https://sfbwmag.com/'
                     'icon' = 'https://sfbwmag.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Miami New Times Business - Critical views on South Florida corporate inequalities'
@@ -6730,7 +6729,7 @@
                     'icon' = 'https://floridaphoenix.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Florida Business TV - Insights into startups entrepreneurs and economic trends'
@@ -6752,7 +6751,7 @@
                 'URL' = 'https://www.youtube.com/@OrlandoMeansBusiness'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The How of Business - Practical advice for starting running small businesses in Florida'
@@ -6770,7 +6769,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6794,7 +6793,7 @@
                     'URL' = 'https://www.miamiherald.com/sports/'
                     'icon' = 'https://www.miamiherald.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tomahawk Nation - Independent FSU Seminoles analysis and fan perspectives'
@@ -6812,7 +6811,7 @@
                     'icon' = 'https://www.firstcoastsportsmedia.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Florida Gators - Official highlights interviews and game day vlogs from Gainesville'
@@ -6834,7 +6833,7 @@
                 'URL' = 'https://www.youtube.com/@warchantcom'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hear the Spear - FSU sports deep dives on football basketball and recruiting'
@@ -6852,7 +6851,7 @@
                 'icon' = 'https://lockedonpodcasts.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6876,7 +6875,7 @@
                     'URL' = 'https://www.orlandosentinel.com/'
                     'icon' = 'https://www.orlandosentinel.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Creative Loafing Tampa Culture - Edgy critiques of Tampa Bay arts and society'
@@ -6894,7 +6893,7 @@
                     'icon' = 'https://www.cfpublic.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Florida Travel Vlogs - Cultural explorations of Florida festivals and daily traditions'
@@ -6916,7 +6915,7 @@
                 'URL' = 'https://www.youtube.com/c/ChrissaKarnes'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Welcome to Florida - Narrative tales of state culture history and personalities'
@@ -6934,7 +6933,7 @@
                 'icon' = 'https://floridahumanities.online/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -6958,7 +6957,7 @@
                     'URL' = 'https://www.wgcu.org/science-tech'
                     'icon' = 'https://www.wgcu.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Florida Tech News - Critical analysis of university tech ethics and impacts'
@@ -6976,7 +6975,7 @@
                     'icon' = 'https://news.fiu.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Florida Tech Official - Campus tours and stories of research and innovation'
@@ -6998,7 +6997,7 @@
                 'URL' = 'https://www.youtube.com/mpfiflorida'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The New Techs Potential - Discussions on Florida universities role in innovation'
@@ -7016,7 +7015,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7040,7 +7039,7 @@
                     'URL' = 'https://www.sun-sentinel.com/news/politics/'
                     'icon' = 'https://www.sun-sentinel.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sayfie Review - Influential commentary on Florida political news and insiders'
@@ -7058,7 +7057,7 @@
                     'icon' = 'https://truthout.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Full Circle Florida - Discussions on state politics leadership and divisions'
@@ -7080,7 +7079,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLwkfRlCHDvz0hO9vXO2jC2GHnKj0qlz2o'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hunkering Down with Peter Schorsch - Candid talks on Florida campaigns and lobbying'
@@ -7098,7 +7097,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7122,7 +7121,7 @@
                     'URL' = 'https://www.nbcmiami.com/tag/fashion/'
                     'icon' = 'https://www.nbcmiami.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Miami New Times Fashion - Critiques of industry ethics and cultural influences'
@@ -7140,7 +7139,7 @@
                     'icon' = 'https://lmgfl.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maria Valeria Urdaneta - Miami fashion hauls styling tips and trend breakdowns'
@@ -7162,7 +7161,7 @@
                 'URL' = 'https://www.youtube.com/@LolaPfaehler'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Miami Poshcast - Trends in fashion beauty art and South Florida lifestyle'
@@ -7180,7 +7179,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7204,7 +7203,7 @@
                     'URL' = 'https://www.bizjournals.com/southflorida/news/government-and-regulations/military--defense'
                     'icon' = 'https://www.bizjournals.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times - Independent scrutiny of Florida veteran affairs and deployments'
@@ -7222,7 +7221,7 @@
                     'icon' = 'https://www.armytimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Florida National Guard - Official vlogs of training missions and community service'
@@ -7244,7 +7243,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=vETEHGOUBWM'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Florida Podcast - Discussions on veteran legislation and state assistance'
@@ -7302,7 +7301,7 @@
                 'URL' = 'https://www.atlantanewsfirst.com/'
                 'icon' = 'https://www.atlantanewsfirst.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Georgia Recorder - Nonprofit journalism connecting policies to community impacts'
@@ -7329,7 +7328,7 @@
                 'URL' = 'https://atlanta.capitalbnews.org/'
                 'icon' = 'https://atlanta.capitalbnews.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Atlanta Community Press Collective - Community-rooted journalism on transparency and accountability'
@@ -7347,7 +7346,7 @@
                 'icon' = 'https://atlantaprognews.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'FOX 5 Atlanta - Video features on breaking news and local investigations'
@@ -7374,7 +7373,7 @@
             'URL' = 'https://www.youtube.com/channel/UC3NzuzB5MnEWTXAdv42cu4A'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Grady Newsource - Student journalism on Athens and UGA community stories'
@@ -7396,7 +7395,7 @@
             'URL' = 'https://www.youtube.com/results?search_query=georgia+recorder'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Politically Georgia - Fact-based analysis of state elections and governance'
@@ -7423,7 +7422,7 @@
             'URL' = 'https://www.ajc.com/podcasts/breakdown/'
             'icon' = 'https://www.ajc.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Ron Show - Progressive commentary on Georgia politics and media'
@@ -7445,7 +7444,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-free-georgia-podcast/id1500000000'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7469,7 +7468,7 @@
                     'URL' = 'https://www.ajc.com/business/'
                     'icon' = 'https://www.ajc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Georgia Recorder Business - Scrutiny of economic policies and inequalities'
@@ -7487,7 +7486,7 @@
                     'icon' = 'https://atlanta.capitalbnews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Georgia Chamber of Commerce - Interviews with business leaders and strategies'
@@ -7509,7 +7508,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=gbj+georgia+business+journal'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Georgia Business Minds - Conversations with executives on state trends'
@@ -7527,7 +7526,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7551,7 +7550,7 @@
                     'URL' = 'https://www.dawgnation.com/'
                     'icon' = 'https://www.dawgnation.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Dawg Post - Independent fan perspectives on UGA recruiting and performance'
@@ -7569,7 +7568,7 @@
                     'icon' = 'https://www.dawgsports.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Georgia Bulldogs Athletics - Official highlights and game day behind-the-scenes'
@@ -7591,7 +7590,7 @@
                 'URL' = 'https://www.youtube.com/@ajgreene15'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'DawgNation Daily - Daily breakdowns of Georgia Bulldogs news and games'
@@ -7609,7 +7608,7 @@
                 'icon' = 'https://lockedonpodcasts.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7633,7 +7632,7 @@
                     'URL' = 'https://www.gpb.org/arts-culture'
                     'icon' = 'https://www.gpb.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Atlanta Community Press Collective Culture - Critiques of arts policies and access'
@@ -7651,7 +7650,7 @@
                     'icon' = 'https://atlanta.capitalbnews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Atlanta Magazine - Videos on local festivals arts and lifestyle explorations'
@@ -7673,7 +7672,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=georgia+humanities'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Salvation South - Explorations of Southern culture values and traditions'
@@ -7691,7 +7690,7 @@
                 'icon' = 'https://www.atlantahistorycenter.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7715,7 +7714,7 @@
                     'URL' = 'https://www.gpb.org/science'
                     'icon' = 'https://www.gpb.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'From The Rumble Seat - Critical views on Georgia Tech ethics and research'
@@ -7733,7 +7732,7 @@
                     'icon' = 'https://georgiarecorder.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Georgia Tech College of Sciences - Demonstrations of research and student projects'
@@ -7755,7 +7754,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=gtri+georgia+tech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Georgia Tech Research Podcast - Interviews on innovations and discoveries'
@@ -7773,7 +7772,7 @@
                 'icon' = 'https://www.gtri.gatech.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7797,7 +7796,7 @@
                     'URL' = 'https://www.gpb.org/news/articles/georgia-politics'
                     'icon' = 'https://www.gpb.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Atlanta Progressive News Politics - Critiques of power structures and reforms'
@@ -7815,7 +7814,7 @@
                     'icon' = 'https://thecurrentga.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = '11Alive The Georgia Vote - Discussions on elections and policy debates'
@@ -7837,7 +7836,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=georgia+recorder'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Politically Georgia - Insights from AJC team on state and national races'
@@ -7855,7 +7854,7 @@
                 'icon' = 'https://georgiapolitics.libsyn.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7879,7 +7878,7 @@
                     'URL' = 'https://www.atlantafashionweek.co/'
                     'icon' = 'https://www.atlantafashionweek.co/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Atlanta Progressive News Fashion - Critiques of industry ethics and diversity'
@@ -7897,7 +7896,7 @@
                     'icon' = 'https://bittersoutherner.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Glam Twinz - Lifestyle beauty and Georgia fashion hauls'
@@ -7919,7 +7918,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=atl+plus+magazine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talking Fashion - Conversations with Georgia designers and stylists'
@@ -7937,7 +7936,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -7961,7 +7960,7 @@
                     'URL' = 'https://www.gpb.org/news/tags/military'
                     'icon' = 'https://www.gpb.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Georgia - Independent analysis of veteran affairs and bases'
@@ -7979,7 +7978,7 @@
                     'icon' = 'https://georgiarecorder.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Georgia Military College - Videos on training events and cadet life'
@@ -8001,7 +8000,7 @@
                 'URL' = 'https://www.youtube.com/@SigourneyRosario'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Georgia Guard Fencepost - Discussions on guard operations and leadership'
@@ -8059,7 +8058,7 @@
                 'URL' = 'https://spectrumlocalnews.com/hi/hawaii'
                 'icon' = 'https://spectrumlocalnews.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Honolulu Civil Beat - Nonprofit investigative journalism on public affairs and accountability'
@@ -8086,7 +8085,7 @@
                 'URL' = 'https://alohastatedaily.com/'
                 'icon' = 'https://alohastatedaily.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Overstory Hawaii - Progressive perspectives on Hawaii social justice and reforms'
@@ -8104,7 +8103,7 @@
                 'icon' = 'http://www.ililani.media/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Bretman Rock - Whimsical lifestyle vlogs on beauty culture and Hawaiian roots'
@@ -8131,7 +8130,7 @@
             'URL' = 'https://www.youtube.com/c/onhawaiitime'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'The Everywhere Blonde - Solo travel positivity and Hawaii hidden gems'
@@ -8153,7 +8152,7 @@
             'URL' = 'https://www.youtube.com/results?search_query=alternative+hawaii+vlogger'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Hawaii News Now - Daily updates on politics economy and island headlines'
@@ -8180,7 +8179,7 @@
             'URL' = 'https://www.hawaiipublicradio.org/podcasts/bytmarks-cafe'
             'icon' = 'https://www.hawaiipublicradio.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Muthaship with Stephanie Lum - Candid conversations on Hawaii social issues'
@@ -8202,7 +8201,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/ka-alala/id1493089497'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8226,7 +8225,7 @@
                     'URL' = 'https://www.hawaiinewsnow.com/business/'
                     'icon' = 'https://www.hawaiinewsnow.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Honolulu Civil Beat Business - Investigative economy and policy accountability'
@@ -8244,7 +8243,7 @@
                     'icon' = 'https://overstoryhawaii.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hawaii Entrepreneurs - Inspiring stories for island business owners and creators'
@@ -8266,7 +8265,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=9YDXHyU--Dc'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Voice of Business - Interviews on Hawaii commerce success and strategies'
@@ -8284,7 +8283,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8308,7 +8307,7 @@
                     'URL' = 'https://spectrumlocalnews.com/hi/hawaii/sports'
                     'icon' = 'https://spectrumlocalnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hawaii Sports Radio Network - Independent analysis of UH and local teams'
@@ -8326,7 +8325,7 @@
                     'icon' = 'https://www.kitv.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'J Vlogs Hawaii - Basketball hype and local sports shorts from islands'
@@ -8348,7 +8347,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=1Y7edS80xlA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hawaii Sports Radio Network - Coverage of high school to pro ocean sports'
@@ -8366,7 +8365,7 @@
                 'icon' = 'https://www.hawaiinewsnow.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8390,7 +8389,7 @@
                     'URL' = 'https://www.hawaiimagazine.com/hawaii-island/arts-culture/'
                     'icon' = 'https://www.hawaiimagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Honolulu Civil Beat Culture - Critiques of cultural policies and access'
@@ -8408,7 +8407,7 @@
                     'icon' = 'https://www.thehawaiiindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'On Hawaii Time - Cultural explorations festivals and respectful island life'
@@ -8430,7 +8429,7 @@
                 'URL' = 'https://www.youtube.com/HawaiiOnTV'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Salvation South - Southern Hawaiian culture values and traditions narratives'
@@ -8448,7 +8447,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8472,7 +8471,7 @@
                     'URL' = 'https://nelha.hawaii.gov/news/'
                     'icon' = 'https://nelha.hawaii.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hawaii Tech News - Independent views on startups science and ethics'
@@ -8490,7 +8489,7 @@
                     'icon' = 'https://datascience.hawaii.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hawaii Tech - News opinions on startups and Hawaii tech intersections'
@@ -8512,7 +8511,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PL6yBWfiJn9Ub92pXcxlWbBWIq_LbUBNZB'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Science Hawaii - Educators scientists and community science spotlights'
@@ -8530,7 +8529,7 @@
                 'icon' = 'https://www.nps.gov/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8554,7 +8553,7 @@
                     'URL' = 'https://www.hawaiipublicradio.org/government-politics'
                     'icon' = 'https://www.hawaiipublicradio.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hawaii Free Press Politics - Watchdog on government transparency and decisions'
@@ -8572,7 +8571,7 @@
                     'icon' = 'http://www.ililani.media/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Chris Lee Hawaii - Community leader discussions on local elections and issues'
@@ -8594,7 +8593,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=D2b1j0Befg0'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Conversation - Panel debates on Hawaii government and elections'
@@ -8612,7 +8611,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8636,7 +8635,7 @@
                     'URL' = 'https://www.hawaiifashionmonth.com/'
                     'icon' = 'https://www.hawaiifashionmonth.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Honolulu Civil Beat Fashion - Critiques of cultural appropriation in style'
@@ -8654,7 +8653,7 @@
                     'icon' = 'https://overstoryhawaii.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hannah Meloche - Travel lifestyle and Hawaii fashion hauls'
@@ -8676,7 +8675,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=J6AtBArlj6U'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talking Fashion - Conversations with Hawaii designers and stylists'
@@ -8694,7 +8693,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8718,7 +8717,7 @@
                     'URL' = 'https://cnrh.cnic.navy.mil/hookele/'
                     'icon' = 'https://cnrh.cnic.navy.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Prism Reports Hawaii Military - Native Hawaiian challenges to sacred land leases'
@@ -8736,7 +8735,7 @@
                     'icon' = 'https://www.hawaiifreepress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'USAG Hawaii - Safety tips and military community life in paradise'
@@ -8758,7 +8757,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=nG5sEycOD34'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'MACRO Podcast - Land use defense and Hawaii military community dialogues'
@@ -8816,7 +8815,7 @@
                 'URL' = 'https://www.boisestatepublicradio.org/'
                 'icon' = 'https://www.boisestatepublicradio.org/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Idaho Capital Sun - Nonprofit accountability journalism on state politics and impacts'
@@ -8843,7 +8842,7 @@
                 'URL' = 'https://boisedev.com/'
                 'icon' = 'https://boisedev.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Boise Weekly - Progressive commentary on Idaho social justice and reforms'
@@ -8861,7 +8860,7 @@
                 'icon' = 'https://idahocapitalsun.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'East Idaho News - Video features on breaking news and local investigations'
@@ -8888,7 +8887,7 @@
             'URL' = 'https://www.youtube.com/@IdahoPress'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Living Life In North Idaho - Raw perspectives on local politics and social issues'
@@ -8910,7 +8909,7 @@
             'URL' = 'https://www.youtube.com/playlist?list=PLjshkjkLoRSIEL4fmvX6JCJAbNgduthil'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The Connector Idaho Daily News - Essentials on Idaho headlines and local stories'
@@ -8937,7 +8936,7 @@
             'URL' = 'https://podcast.feedspot.com/idaho_news_podcasts/'
             'icon' = 'https://podcast.feedspot.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'True Idaho News - Counter to mainstream spin on state politics and media'
@@ -8959,7 +8958,7 @@
             'URL' = 'https://open.spotify.com/show/548B54UzyBxYHHTytr9pfG'
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -8983,7 +8982,7 @@
                     'URL' = 'https://www.idahostatejournal.com/business_journal/'
                     'icon' = 'https://www.idahostatejournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise Guardian Business - Critical analysis of local business policies and challenges'
@@ -9001,7 +9000,7 @@
                     'icon' = 'https://sandpointreader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Idaho Business Podcast - Interviews with local business leaders and strategies'
@@ -9023,7 +9022,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=idaho+business+review'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Idaho Business Podcast - Fun interviews with Idaho small business legends'
@@ -9041,7 +9040,7 @@
                 'icon' = 'https://nucleane.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9065,7 +9064,7 @@
                     'URL' = 'https://idahonews.com/sports'
                     'icon' = 'https://idahonews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hawaii Sports Radio wait no, Idaho Sports Radio Network - Independent analysis of local teams'
@@ -9083,7 +9082,7 @@
                     'icon' = 'https://www.idahosports.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'IdahoSports.com - Highlights and game day behind-the-scenes for high school'
@@ -9105,7 +9104,7 @@
                 'URL' = 'https://www.idahosports.com/content/?contentid=1913'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'North Idaho Prepcast - Weekly discussions on district 1 athletics and stories'
@@ -9123,7 +9122,7 @@
                 'icon' = 'https://www.idahosports.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9147,7 +9146,7 @@
                     'URL' = 'https://www.boisestatepublicradio.org/arts-culture'
                     'icon' = 'https://www.boisestatepublicradio.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise Guardian Culture - Critiques of local arts policies and access'
@@ -9165,7 +9164,7 @@
                     'icon' = 'https://sandpointreader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'North Idaho Experience - Videos on local festivals arts and lifestyle'
@@ -9187,7 +9186,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=go+idaho+podcast'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Idaho Podcast - Narrative tales of Idaho culture and personal stories'
@@ -9205,7 +9204,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9229,7 +9228,7 @@
                     'URL' = 'https://stem.idaho.gov/newsroom/'
                     'icon' = 'https://stem.idaho.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise State News Science - Critical analysis of tech ethics and impacts'
@@ -9247,7 +9246,7 @@
                     'icon' = 'https://boiseguardian.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Idaho Tech Talks - Videos on state tech scene and industry leaders'
@@ -9269,7 +9268,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=idaho+stem+action'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Idaho Science Journal - Talks with researchers on state scientific discoveries'
@@ -9287,7 +9286,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9311,7 +9310,7 @@
                     'URL' = 'https://blog.idahoreports.idahoptv.org/'
                     'icon' = 'https://www.idahoptv.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise Weekly Politics - Progressive commentary on political decisions and reforms'
@@ -9329,7 +9328,7 @@
                     'icon' = 'https://boiseguardian.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Future Republican Leaders Idaho - Discussions on elections and policy debates'
@@ -9351,7 +9350,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=WeAu1ijlnC0'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Idaho Matters - Panel debates on state government and elections'
@@ -9369,7 +9368,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9393,7 +9392,7 @@
                     'URL' = 'https://www.eastidnews.com/'
                     'icon' = 'https://www.eastidnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise Weekly Fashion - Critiques of industry ethics and diversity'
@@ -9411,7 +9410,7 @@
                     'icon' = 'https://sandpointreader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'City Cast Boise - Vlogs on local stylists and fall fashion tips'
@@ -9433,7 +9432,7 @@
                 'URL' = 'https://www.youtube.com/results?search_query=voxn+clothing+idaho'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'City Cast Boise - Discussions on Boise fashion scene and trends'
@@ -9451,7 +9450,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9475,7 +9474,7 @@
                     'URL' = 'https://www.idahopress.com/news/military/'
                     'icon' = 'https://www.idahopress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Idaho - Independent analysis of veteran affairs and bases'
@@ -9493,7 +9492,7 @@
                     'icon' = 'https://idahocapitalsun.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'North Idaho Experience - Videos on veteran transitions and military life'
@@ -9515,7 +9514,7 @@
                 'URL' = 'https://www.youtube.com/@thefergilefamily'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mission43 Podcast - Stories from Idaho military service and transitions'
@@ -9573,7 +9572,7 @@
                 'URL' = 'https://www.cbsnews.com/chicago/'
                 'icon' = 'https://www.cbsnews.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Chicago Reader - Independent voice on Chicago arts culture and controversies'
@@ -9600,7 +9599,7 @@
                 'URL' = 'https://capitolnewsillinois.com/'
                 'icon' = 'https://capitolnewsillinois.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Windy City Times - Progressive coverage of LGBTQ news and culture in Chicago'
@@ -9618,7 +9617,7 @@
                 'icon' = 'https://southsideweekly.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'FOX 32 Chicago - Breaking news weather and local stories from Illinois'
@@ -9645,7 +9644,7 @@
             'URL' = 'https://www.youtube.com/user/cbschicago'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Chicago Reader - Videos on arts events and independent Chicago stories'
@@ -9667,7 +9666,7 @@
             'URL' = 'https://www.youtube.com/user/WBEZ'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The 217 Today Podcast - Daily headlines and deeper dives on Illinois news'
@@ -9694,7 +9693,7 @@
             'URL' = 'https://will.illinois.edu/21stshow'
             'icon' = 'https://will.illinois.edu/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Crashing the Political Party - Curious takes on Illinois political system'
@@ -9716,7 +9715,7 @@
             'URL' = 'https://www.indivisibleillinois.org/podcasts/'
             'icon' = 'https://www.indivisibleillinois.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9740,7 +9739,7 @@
                     'URL' = 'https://www.news-gazette.com/business/'
                     'icon' = 'https://www.news-gazette.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Daily Business Review - Investigative analysis of Illinois legal markets'
@@ -9758,7 +9757,7 @@
                     'icon' = 'https://www.thedailyline.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Northern Illinois Biz Chats - Conversations with local business leaders'
@@ -9780,7 +9779,7 @@
                 'URL' = 'https://www.youtube.com/user/CrainsChicago'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Gies Download - Insights on business trends and leadership'
@@ -9798,7 +9797,7 @@
                 'icon' = 'https://www.chicagobusiness.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9822,7 +9821,7 @@
                     'URL' = 'https://www.advantagenews.com/sports/'
                     'icon' = 'https://www.advantagenews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Illini Sports News-Gazette - Independent takes on Illini recruiting'
@@ -9840,7 +9839,7 @@
                     'icon' = 'https://www.wandtv.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'IlliniGuys - Highlights and reactions to Illinois sports games'
@@ -9862,7 +9861,7 @@
                 'URL' = 'https://www.youtube.com/c/CentralIllinoisSports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Illini Inquirer Podcast - Analysis of Illinois Fighting Illini athletics'
@@ -9880,7 +9879,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9904,7 +9903,7 @@
                     'URL' = 'https://www.chicagomag.com/chicago-magazine/'
                     'icon' = 'https://www.chicagomag.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Chicago Reader Culture - Critiques of arts policies and society'
@@ -9922,7 +9921,7 @@
                     'icon' = 'https://www.newcity.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Discover Illinois with Dilla - Explorations of Chicago culture and history'
@@ -9944,7 +9943,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=wnY-VOn8EY0'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Chicago Podcasts Sampler - Introductions to diverse Windy City communities'
@@ -9962,7 +9961,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -9986,7 +9985,7 @@
                     'URL' = 'https://www.istcoalition.org/press/in-the-news/'
                     'icon' = 'https://www.istcoalition.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boise State'
@@ -10004,7 +10003,7 @@
                     'icon' = 'https://capitolnewsillinois.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Illinois Science and Technology Coalition - Insights on state innovation hubs'
@@ -10026,7 +10025,7 @@
                 'URL' = 'https://www.youtube.com/user/IllinoisTech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'State of Innovation - Conversations on Illinois tech ecosystem'
@@ -10044,7 +10043,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10068,7 +10067,7 @@
                     'URL' = 'https://www.politico.com/newsletters/illinoisplaybook'
                     'icon' = 'https://www.politico.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Daily Line Politics - Independent commentary on Chicago political insiders'
@@ -10086,7 +10085,7 @@
                     'icon' = 'https://chicagoreader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Illinois Policy - Discussions on state politics and leadership'
@@ -10108,7 +10107,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=1Zv5oGEvPVI'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Illinois in Focus - Insightful dives into state political headlines'
@@ -10126,7 +10125,7 @@
                 'icon' = 'https://www.nprillinois.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10150,7 +10149,7 @@
                     'URL' = 'https://www.vogue.com/tag/city/chicago'
                     'icon' = 'https://www.vogue.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Chicago Reader Fashion - Critiques of industry ethics and diversity'
@@ -10168,7 +10167,7 @@
                     'icon' = 'https://www.newcity.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Just a Fashion Girl from Chicago - Hauls styling and trend breakdowns'
@@ -10190,7 +10189,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=zOu0qR7bE4c'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Chicago Building Fashion Capital - Talks on city design and weeks'
@@ -10208,7 +10207,7 @@
                 'icon' = 'https://www.instagram.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10232,7 +10231,7 @@
                     'URL' = 'https://www.hpherald.com/evening_digest/former-military-leaders-decry-national-guard-deployment-in-illinois/article_7ca23873-b674-40ad-9a3b-2c8e8bff683a.html'
                     'icon' = 'https://www.hpherald.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Illinois - Independent scrutiny of veteran deployments'
@@ -10250,7 +10249,7 @@
                     'icon' = 'https://capitolnewsillinois.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Illinois National Guard - Official training and community service videos'
@@ -10272,7 +10271,7 @@
                 'URL' = 'https://www.youtube.com/@thefergilefamily'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Illinois Podcast - Discussions on veteran legislation and assistance'
@@ -10330,7 +10329,7 @@
                 'URL' = 'https://www.nwitimes.com/'
                 'icon' = 'https://www.nwitimes.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Mirror Indy - Nonprofit coverage of Indianapolis neighborhoods and events'
@@ -10357,7 +10356,7 @@
                 'URL' = 'https://www.freepressindiana.org/'
                 'icon' = 'https://www.freepressindiana.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Indianapolis Recorder - Progressive coverage of Black news and culture in Indy'
@@ -10375,7 +10374,7 @@
                 'icon' = 'https://indianacitizen.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WTHR - Breaking news weather and local stories from Indiana'
@@ -10402,7 +10401,7 @@
             'URL' = 'https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'WFYI - Videos on arts events and independent Indiana stories'
@@ -10424,7 +10423,7 @@
             'URL' = 'https://www.youtube.com/user/IndianaPublicMedia'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Indiana Week in Review - Weekly commentary on Indiana politics and policy'
@@ -10451,7 +10450,7 @@
             'URL' = 'https://indianapublicmedia.org/series/indiana-newsdesk/'
             'icon' = 'https://indianapublicmedia.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'HoosLeft Podcast - Curious takes on Indiana political system'
@@ -10473,7 +10472,7 @@
             'URL' = 'https://indianacitizen.org/plain-civics-podcast/'
             'icon' = 'https://indianacitizen.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10497,7 +10496,7 @@
                     'URL' = 'https://www.nwitimes.com/business/'
                     'icon' = 'https://www.nwitimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Indiana Capital Chronicle Business - Scrutiny of state economic policies'
@@ -10515,7 +10514,7 @@
                     'icon' = 'https://www.freepressindiana.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Inside INdiana Business - Conversations with local business leaders'
@@ -10537,7 +10536,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCnwiBizChats'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Business and Beyond with Gerry Dick - Insights on business trends and leadership'
@@ -10555,7 +10554,7 @@
                 'icon' = 'https://getindiana.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10579,7 +10578,7 @@
                     'URL' = 'https://www.wishtv.com/sports/'
                     'icon' = 'https://www.wishtv.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Network Indiana Sports - Independent takes on Hoosier recruiting'
@@ -10597,7 +10596,7 @@
                     'icon' = 'https://www.crimsonquarry.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Indiana Sports Connection - Highlights and reactions to Indiana sports games'
@@ -10619,7 +10618,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=aYKl_WQa9SQ'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Trackside Podcast - Analysis of Indiana Pacers and Colts athletics'
@@ -10637,7 +10636,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10661,7 +10660,7 @@
                     'URL' = 'https://www.ibj.com/topics/arts-culture'
                     'icon' = 'https://www.ibj.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mirror Indy Culture - Critiques of arts policies and society'
@@ -10679,7 +10678,7 @@
                     'icon' = 'https://indianacapitalchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Journey Indiana - Explorations of Hoosier culture and history'
@@ -10701,7 +10700,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCPUSerdS4CEkmyC-GWdG_Ug'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Pop of Culture - Introductions to diverse Hoosier communities'
@@ -10719,7 +10718,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10743,7 +10742,7 @@
                     'URL' = 'https://techpoint.org/category/innovation/'
                     'icon' = 'https://techpoint.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'BioPharma Dive Indiana - Critical views on research ethics'
@@ -10761,7 +10760,7 @@
                     'icon' = 'https://elevateventures.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Luddy School Vlog - Insights on state innovation hubs'
@@ -10783,7 +10782,7 @@
                 'URL' = 'https://www.youtube.com/@indianainnovate'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Agbioscience - Conversations on Indiana tech ecosystem'
@@ -10801,7 +10800,7 @@
                 'icon' = 'https://www.techpointyouth.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10825,7 +10824,7 @@
                     'URL' = 'https://www.indystar.com/news/politics/'
                     'icon' = 'https://www.indystar.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Indiana Citizen - Independent commentary on Indiana political insiders'
@@ -10843,7 +10842,7 @@
                     'icon' = 'https://mirrorindy.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'All INdiana Politics - Discussions on state politics and leadership'
@@ -10865,7 +10864,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=NDHyxlal-kY'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Indiana Week in Review - Insightful dives into state political headlines'
@@ -10883,7 +10882,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10907,7 +10906,7 @@
                     'URL' = 'https://www.indianapolismonthly.com/arts-and-culture/what-are-you-wearing-and-why-isnt-it-made-in-indy/'
                     'icon' = 'https://www.indianapolismonthly.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NUVO Fashion - Critiques of industry ethics and diversity'
@@ -10925,7 +10924,7 @@
                     'icon' = 'https://www.ibj.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Indiana Fashion Week - Hauls styling and trend breakdowns'
@@ -10947,7 +10946,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=lizHkVvSrEs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fashion and Ethics - Talks on city design and weeks'
@@ -10965,7 +10964,7 @@
                 'icon' = 'https://bethdivinestyle.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -10989,7 +10988,7 @@
                     'URL' = 'https://www.nationalguard.mil/News/Tag/96002/indiana-national-guard/'
                     'icon' = 'https://www.nationalguard.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'National Network Opposing Militarization - Independent scrutiny of veteran deployments'
@@ -11007,7 +11006,7 @@
                     'icon' = 'https://www.militarytimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Indiana National Guard - Official training and community service videos'
@@ -11029,7 +11028,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=Vh9rj7T7xNQ'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Blacksnake Bytes - Discussions on veteran legislation and assistance'
@@ -11087,7 +11086,7 @@
                 'URL' = 'https://wcfcourier.com/'
                 'icon' = 'https://wcfcourier.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Iowa Capital Dispatch - Nonprofit journalism on state government and policy'
@@ -11114,7 +11113,7 @@
                 'URL' = 'https://www.bleedingheartland.com/'
                 'icon' = 'https://www.bleedingheartland.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'MainStream MultiMedia - Progressive LGBTQ affirming news and culture in Iowa'
@@ -11132,7 +11131,7 @@
                 'icon' = 'https://www.iowasource.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'We Are Iowa Local 5 - Breaking news weather and local stories from Iowa'
@@ -11159,7 +11158,7 @@
             'URL' = 'https://www.youtube.com/user/KCRG'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Iowa Starting Line - Videos on politics events and independent Iowa stories'
@@ -11181,7 +11180,7 @@
             'URL' = 'https://www.youtube.com/user/iowapublicradio'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Here First - Daily headlines and deeper dives on Iowa news'
@@ -11208,7 +11207,7 @@
             'URL' = 'https://www.thegazette.com/on-iowa-politics-podcast/'
             'icon' = 'https://www.thegazette.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Iowa Informer - Curious takes on Iowa political system'
@@ -11230,7 +11229,7 @@
             'URL' = 'https://iowapodcast.com/the-iowa-podcast/'
             'icon' = 'https://iowapodcast.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11254,7 +11253,7 @@
                     'URL' = 'https://www.desmoinesregister.com/business/'
                     'icon' = 'https://www.desmoinesregister.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Iowa Capital Dispatch Business - Scrutiny of state economic policies'
@@ -11272,7 +11271,7 @@
                     'icon' = 'https://www.iowaabi.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Tippie College of Business - Conversations with local business leaders'
@@ -11294,7 +11293,7 @@
                 'URL' = 'https://www.youtube.com/@corridorbusiness'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Made in Iowa Podcast - Insights on business trends and leadership'
@@ -11312,7 +11311,7 @@
                 'icon' = 'https://iowabusinessreport.buzzsprout.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11336,7 +11335,7 @@
                     'URL' = 'https://who13.com/sports/'
                     'icon' = 'https://who13.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Black Heart Gold Pants - Independent takes on Hawkeyes recruiting'
@@ -11354,7 +11353,7 @@
                     'icon' = 'https://hawkfanatic.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Iowa Hawkeyes - Highlights and reactions to Iowa sports games'
@@ -11376,7 +11375,7 @@
                 'URL' = 'https://www.youtube.com/@iowaeverywhere'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Locked On Hawkeyes - Analysis of Iowa Hawkeyes athletics'
@@ -11394,7 +11393,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11418,7 +11417,7 @@
                     'URL' = 'https://www.desmoinesregister.com/entertainment/'
                     'icon' = 'https://www.desmoinesregister.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'MainStream MultiMedia Culture - Critiques of arts policies and society'
@@ -11436,7 +11435,7 @@
                     'icon' = 'https://iowastartingline.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Journey Iowa - Explorations of Hawkeye culture and history'
@@ -11458,7 +11457,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=3oU9H53Gqrk'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talk of Iowa - Introductions to diverse Hawkeye communities'
@@ -11476,7 +11475,7 @@
                 'icon' = 'https://www.iowapublicradio.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11500,7 +11499,7 @@
                     'URL' = 'https://www.news.uiowa.edu/'
                     'icon' = 'https://www.news.uiowa.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Stemosphere - Critical views on research ethics'
@@ -11518,7 +11517,7 @@
                     'icon' = 'https://iowacapitaldispatch.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Science Center of Iowa - Insights on state innovation hubs'
@@ -11540,7 +11539,7 @@
                 'URL' = 'https://www.youtube.com/user/AmesLaboratory'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'STEM Essential - Conversations on Iowa tech ecosystem'
@@ -11558,7 +11557,7 @@
                 'icon' = 'https://www.iowamfg.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11582,7 +11581,7 @@
                     'URL' = 'https://www.iowapublicradio.org/iowa-politics'
                     'icon' = 'https://www.iowapublicradio.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Iowa Starting Line - Independent commentary on Iowa political insiders'
@@ -11600,7 +11599,7 @@
                     'icon' = 'https://theiowastandard.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'On Iowa Politics - Discussions on state politics and leadership'
@@ -11622,7 +11621,7 @@
                 'URL' = 'https://www.youtube.com/user/IowaDemocrats'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'On Iowa Politics Podcast - Insightful dives into state political headlines'
@@ -11640,7 +11639,7 @@
                 'icon' = 'https://www.iowapublicradio.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11664,7 +11663,7 @@
                     'URL' = 'https://www.desmoinesregister.com/entertainment/fashion/'
                     'icon' = 'https://www.desmoinesregister.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Iowa Source Fashion - Critiques of industry ethics and diversity'
@@ -11682,7 +11681,7 @@
                     'icon' = 'https://blackiowanews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'McKaylee Palmer - Hauls styling and trend breakdowns'
@@ -11704,7 +11703,7 @@
                 'URL' = 'https://www.youtube.com/@AESHM_ISU'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'TFS Insider - Talks on city design and weeks'
@@ -11722,7 +11721,7 @@
                 'icon' = 'https://dailyiowan.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -11746,7 +11745,7 @@
                     'URL' = 'https://homelandsecurity.iowa.gov/about/newsroom'
                     'icon' = 'https://homelandsecurity.iowa.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Iowa - Independent scrutiny of veteran deployments'
@@ -11764,7 +11763,7 @@
                     'icon' = 'https://iowacapitaldispatch.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Iowa National Guard - Official training and community service videos'
@@ -11786,7 +11785,7 @@
                 'URL' = 'https://www.youtube.com/user/VFWNational'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Iowa Podcast - Discussions on veteran legislation and assistance'
@@ -11844,7 +11843,7 @@
                 'URL' = 'https://www.kansascity.com/'
                 'icon' = 'https://www.kansascity.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Kansas Reflector - Nonprofit journalism on state government and policy'
@@ -11871,7 +11870,7 @@
                 'URL' = 'https://flatlandkc.org/'
                 'icon' = 'https://flatlandkc.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Kansas City Pitch - Edgy insights on Kansas City arts music and controversies'
@@ -11889,7 +11888,7 @@
                 'icon' = 'https://sentinelksmo.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KAKE News - Breaking news weather and local stories from Kansas'
@@ -11916,7 +11915,7 @@
             'URL' = 'https://www.youtube.com/channel/UCie7RmdcnvXA1FXHRJa7WtA'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Kansas Reflector - Videos on arts events and independent Kansas stories'
@@ -11938,7 +11937,7 @@
             'URL' = 'https://www.youtube.com/user/kcur'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The Kansas Reflector Podcast - Daily headlines and deeper dives on Kansas news'
@@ -11965,7 +11964,7 @@
             'URL' = 'https://www.wibw.com/page/eye-on-northeast-kansas-podcast/'
             'icon' = 'https://www.wibw.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'My Fellow Kansans - Curious takes on Kansas political system'
@@ -11987,7 +11986,7 @@
             'URL' = 'https://kansaspolicy.org/podcast/'
             'icon' = 'https://kansaspolicy.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12011,7 +12010,7 @@
                     'URL' = 'https://kansaschamber.org/news/'
                     'icon' = 'https://kansaschamber.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kansas Reflector Business - Scrutiny of state economic policies'
@@ -12029,7 +12028,7 @@
                     'icon' = 'https://www.startlandnews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kansas Business Council - Conversations with local business leaders'
@@ -12051,7 +12050,7 @@
                 'URL' = 'https://www.youtube.com/@KansasCommerce'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Made in Kansas - Insights on business trends and leadership'
@@ -12069,7 +12068,7 @@
                 'icon' = 'https://kansaschamber.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12093,7 +12092,7 @@
                     'URL' = 'https://www.wibw.com/sports/'
                     'icon' = 'https://www.wibw.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Phog.net - Independent takes on Jayhawks recruiting'
@@ -12111,7 +12110,7 @@
                     'icon' = 'https://www.bringonthecats.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kansas Jayhawks - Highlights and reactions to Kansas sports games'
@@ -12133,7 +12132,7 @@
                 'URL' = 'https://www.youtube.com/@KSportsChatter'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Powercat Podcast - Analysis of Kansas State Wildcats athletics'
@@ -12151,7 +12150,7 @@
                 'icon' = 'https://www.phog.net/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12175,7 +12174,7 @@
                     'URL' = 'https://www.cjonline.com/entertainment/'
                     'icon' = 'https://www.cjonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kansas City Pitch Culture - Critiques of arts policies and society'
@@ -12193,7 +12192,7 @@
                     'icon' = 'https://kcindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kansas Arts Council - Explorations of Sunflower State culture and history'
@@ -12215,7 +12214,7 @@
                 'URL' = 'https://www.youtube.com/@KansasCultureTours'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'After Hours with Jeff and Julia - Introductions to diverse Kansas communities'
@@ -12233,7 +12232,7 @@
                 'icon' = 'https://www.kcur.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12257,7 +12256,7 @@
                     'URL' = 'https://www.wbjournal.com/technology/'
                     'icon' = 'https://www.wbjournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Flagship Kansas Tech - Critical views on research ethics'
@@ -12275,7 +12274,7 @@
                     'icon' = 'https://thebeaconnews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'K-State Engineering - Insights on state innovation hubs'
@@ -12297,7 +12296,7 @@
                 'URL' = 'https://www.youtube.com/@KansasTech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'ICT Podcast - Conversations on Kansas tech ecosystem'
@@ -12315,7 +12314,7 @@
                 'icon' = 'https://www.ksre.k-state.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12339,7 +12338,7 @@
                     'URL' = 'https://www.wibw.com/news/politics/'
                     'icon' = 'https://www.wibw.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Beacon Politics - Independent commentary on Kansas political insiders'
@@ -12357,7 +12356,7 @@
                     'icon' = 'https://www.thepitchkc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Inside Kansas Politics - Discussions on state politics and leadership'
@@ -12379,7 +12378,7 @@
                 'URL' = 'https://www.youtube.com/@KansasReflector'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Statehouse Blend Kansas - Insightful dives into state political headlines'
@@ -12397,7 +12396,7 @@
                 'icon' = 'https://www.kslpa.gov/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12421,7 +12420,7 @@
                     'URL' = 'https://www.cjonline.com/entertainment/fashion/'
                     'icon' = 'https://www.cjonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kansas City Pitch Fashion - Critiques of industry ethics and diversity'
@@ -12439,7 +12438,7 @@
                     'icon' = 'https://kcindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'KC Fashion Influencers - Hauls styling and trend breakdowns'
@@ -12461,7 +12460,7 @@
                 'URL' = 'https://www.youtube.com/@SustainableKCStyle'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fashion Hive Podcast - Talks on city design and weeks'
@@ -12479,7 +12478,7 @@
                 'icon' = 'https://www.kcur.org/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12503,7 +12502,7 @@
                     'URL' = 'https://www.kovs.ks.gov/'
                     'icon' = 'https://www.kovs.ks.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Military Times Kansas - Independent scrutiny of veteran deployments'
@@ -12521,7 +12520,7 @@
                     'icon' = 'https://kansasreflector.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kansas National Guard - Official training and community service videos'
@@ -12543,7 +12542,7 @@
                 'URL' = 'https://www.youtube.com/@WarriorsAscent'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Kansas Podcast - Discussions on veteran legislation and assistance'
@@ -12601,7 +12600,7 @@
                 'URL' = 'https://www.wbko.com/'
                 'icon' = 'https://www.wbko.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Kentucky Lantern - Nonprofit journalism on state government and policy'
@@ -12628,7 +12627,7 @@
                 'URL' = 'https://nkytribune.com/'
                 'icon' = 'https://nkytribune.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Queer Kentucky - Progressive coverage of LGBTQ news and culture in Kentucky'
@@ -12646,7 +12645,7 @@
                 'icon' = 'https://lexingtonky.news/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WHAS11 - Breaking news weather and local stories from Kentucky'
@@ -12673,7 +12672,7 @@
             'URL' = 'https://www.youtube.com/@27newsfirst'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'LEO Weekly - Videos on arts events and independent Kentucky stories'
@@ -12695,7 +12694,7 @@
             'URL' = 'https://www.youtube.com/@ProgressKentucky'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Eastern Standard - Daily headlines and deeper dives on Kentucky news'
@@ -12722,7 +12721,7 @@
             'URL' = 'https://indianapublicmedia.org/series/kentucky-newsdesk/'
             'icon' = 'https://www.wfpl.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Kentucky Politics Weekly - Curious takes on Kentucky political system'
@@ -12744,7 +12743,7 @@
             'URL' = 'https://progressky.org/podcasts/'
             'icon' = 'https://progressky.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12768,7 +12767,7 @@
                     'URL' = 'https://www.kychamber.com/news'
                     'icon' = 'https://www.kychamber.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kentucky Lantern Business - Scrutiny of state economic policies'
@@ -12786,7 +12785,7 @@
                     'icon' = 'https://linknky.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kentucky Business Council - Conversations with local business leaders'
@@ -12808,7 +12807,7 @@
                 'URL' = 'https://www.youtube.com/@CommerceLexington'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Northern Kentucky Spotlight - Insights on business trends and leadership'
@@ -12826,7 +12825,7 @@
                 'icon' = 'https://fuelingky.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12850,7 +12849,7 @@
                     'URL' = 'https://www.wkyt.com/sports/'
                     'icon' = 'https://www.wkyt.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'KSR - Independent takes on Wildcats recruiting'
@@ -12868,7 +12867,7 @@
                     'icon' = 'https://kykernel.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kentucky Sports Radio - Highlights and reactions to Kentucky sports games'
@@ -12890,7 +12889,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCA0m2HDyoTvx2vXoYSdsJsA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'KSR - Analysis of Kentucky Wildcats athletics'
@@ -12908,7 +12907,7 @@
                 'icon' = 'https://ukathletics.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -12932,7 +12931,7 @@
                     'URL' = 'https://www.lpm.org/news/arts-and-culture'
                     'icon' = 'https://www.lpm.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Queer Kentucky Culture - Critiques of arts policies and society'
@@ -12950,7 +12949,7 @@
                     'icon' = 'https://linknky.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Journey Kentucky - Explorations of Bluegrass culture and history'
@@ -12972,7 +12971,7 @@
                 'URL' = 'https://www.youtube.com/user/leoweekly'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Kentucky History Podcast - Introductions to diverse Bluegrass communities'
@@ -12990,7 +12989,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13014,7 +13013,7 @@
                     'URL' = 'https://accelerateky.org/news/'
                     'icon' = 'https://accelerateky.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kentucky Lantern Tech - Critical views on research ethics'
@@ -13032,7 +13031,7 @@
                     'icon' = 'https://lifesciky.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kentucky Science Center - Insights on state innovation hubs'
@@ -13054,7 +13053,7 @@
                 'URL' = 'https://www.youtube.com/@AccelerateKY'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Middle Tech Podcast - Conversations on Kentucky tech ecosystem'
@@ -13072,7 +13071,7 @@
                 'icon' = 'https://www.kyscience.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13096,7 +13095,7 @@
                     'URL' = 'https://www.kentucky.com/news/politics-government/'
                     'icon' = 'https://www.kentucky.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'LEO Weekly Politics - Independent commentary on Kentucky political insiders'
@@ -13114,7 +13113,7 @@
                     'icon' = 'https://www.lpm.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kentucky Politics Weekly - Discussions on state politics and leadership'
@@ -13136,7 +13135,7 @@
                 'URL' = 'https://www.youtube.com/@ProgressKentucky'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Kentucky Politics Weekly - Insightful dives into state political headlines'
@@ -13154,7 +13153,7 @@
                 'icon' = 'https://myoldkentuckypodcast.podbean.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13178,7 +13177,7 @@
                     'URL' = 'https://www.vogue.com/tag/event/kentucky-derby'
                     'icon' = 'https://www.vogue.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'LEO Weekly Fashion - Critiques of industry ethics and diversity'
@@ -13196,7 +13195,7 @@
                     'icon' = 'https://www.kentuckymonthly.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mallory Ervin - Hauls styling and trend breakdowns'
@@ -13218,7 +13217,7 @@
                 'URL' = 'https://www.youtube.com/@HotMessMommaMD'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'KRNL Talks Fashion - Talks on city design and weeks'
@@ -13236,7 +13235,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13260,7 +13259,7 @@
                     'URL' = 'https://home.army.mil/knox/'
                     'icon' = 'https://home.army.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Kentucky Lantern Military - Independent scrutiny of veteran deployments'
@@ -13278,7 +13277,7 @@
                     'icon' = 'https://vfwky.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Kentucky Guard - Official training and community service videos'
@@ -13300,7 +13299,7 @@
                 'URL' = 'https://www.youtube.com/@FortCampbellMWR'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'KCMA Podcast - Discussions on veteran legislation and assistance'
@@ -13358,7 +13357,7 @@
                 'URL' = 'https://www.theadvertiser.com/'
                 'icon' = 'https://www.theadvertiser.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Louisiana Illuminator - Nonprofit journalism on state government and policy'
@@ -13385,7 +13384,7 @@
                 'URL' = 'https://www.bestofneworleans.com/'
                 'icon' = 'https://www.bestofneworleans.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Verite News - Community-focused journalism centering Black voices in New Orleans'
@@ -13403,7 +13402,7 @@
                 'icon' = 'https://louisianalefty.rocks/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WWL-TV - Breaking news weather and local stories from Louisiana'
@@ -13430,7 +13429,7 @@
             'URL' = 'https://www.youtube.com/user/WGNOtv'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Verite News - Videos on arts events and independent Louisiana stories'
@@ -13452,7 +13451,7 @@
             'URL' = 'https://www.youtube.com/channel/UCik6MvH0olsFh5DXb9OUiLg'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Louisiana Considered - Daily headlines and deeper dives on Louisiana news'
@@ -13479,7 +13478,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-state-of-freedom/id1554148717'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Louisiana Lefty - Curious takes on Louisiana political system'
@@ -13501,7 +13500,7 @@
             'URL' = 'https://pelicanbriefpodcast.com/'
             'icon' = 'https://pelicanbriefpodcast.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13525,7 +13524,7 @@
                     'URL' = 'https://www.nola.com/news/business/'
                     'icon' = 'https://www.nola.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Louisiana Illuminator Business - Scrutiny of state economic policies'
@@ -13543,7 +13542,7 @@
                     'icon' = 'https://www.louisianaweekly.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Louisiana Business Council - Conversations with local business leaders'
@@ -13565,7 +13564,7 @@
                 'URL' = 'https://www.youtube.com/@GNOInc'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Local Leaders The Podcast - Insights on business trends and leadership'
@@ -13583,7 +13582,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13607,7 +13606,7 @@
                     'URL' = 'https://www.louisianasports.net/'
                     'icon' = 'https://www.louisianasports.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'And The Valley Shook - Independent takes on LSU recruiting'
@@ -13625,7 +13624,7 @@
                     'icon' = 'https://www.canalstreetchronicles.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'LSU Sports - Highlights and reactions to LSU sports games'
@@ -13647,7 +13646,7 @@
                 'URL' = 'https://www.youtube.com/c/thejordyculottashow20'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hannycast - Analysis of LSU Tigers athletics'
@@ -13665,7 +13664,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13689,7 +13688,7 @@
                     'URL' = 'https://www.bestofneworleans.com/arts-culture/'
                     'icon' = 'https://www.bestofneworleans.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Verite News Culture - Critiques of arts policies and society'
@@ -13707,7 +13706,7 @@
                     'icon' = 'https://antigravitymagazine.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Dat Louisiana Life - Explorations of Cajun culture and history'
@@ -13729,7 +13728,7 @@
                 'URL' = 'https://www.youtube.com/@CajunLife'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Louisiana Anthology - Introductions to diverse Louisiana communities'
@@ -13747,7 +13746,7 @@
                 'icon' = 'https://www.scottvicknair.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13771,7 +13770,7 @@
                     'URL' = 'https://www.opportunitylouisiana.gov/key-industry/technology'
                     'icon' = 'https://www.opportunitylouisiana.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Louisiana Illuminator Tech - Critical views on research ethics'
@@ -13789,7 +13788,7 @@
                     'icon' = 'https://pelicanpolicy.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'STEM NOLA - Insights on state innovation hubs'
@@ -13811,7 +13810,7 @@
                 'URL' = 'https://www.youtube.com/@NexusLouisiana'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Makin'' Energy - Conversations on Louisiana tech ecosystem'
@@ -13829,7 +13828,7 @@
                 'icon' = 'https://community.latech.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13853,7 +13852,7 @@
                     'URL' = 'https://www.wwltv.com/politics'
                     'icon' = 'https://www.wwltv.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Hayride - Independent commentary on Louisiana political insiders'
@@ -13871,7 +13870,7 @@
                     'icon' = 'https://betweenthelinesnews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Louisiana First News Politics - Discussions on state politics and leadership'
@@ -13893,7 +13892,7 @@
                 'URL' = 'https://www.youtube.com/@ProgressLouisiana'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Light Switch - Insightful dives into state political headlines'
@@ -13911,7 +13910,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -13935,7 +13934,7 @@
                     'URL' = 'https://www.nola.com/entertainment_and_culture/fashion/'
                     'icon' = 'https://www.nola.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Data News Weekly Fashion - Critiques of industry ethics and diversity'
@@ -13953,7 +13952,7 @@
                     'icon' = 'https://www.bestofneworleans.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Birch Family - Hauls styling and trend breakdowns'
@@ -13975,7 +13974,7 @@
                 'URL' = 'https://www.youtube.com/@LouisianaStyle'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Style Chat - Talks on city design and weeks'
@@ -13993,7 +13992,7 @@
                 'icon' = 'https://krnltalks.podbean.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14017,7 +14016,7 @@
                     'URL' = 'https://www.louisianafirstnews.com/news/military/'
                     'icon' = 'https://www.louisianafirstnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Louisiana Illuminator Military - Independent scrutiny of veteran deployments'
@@ -14035,7 +14034,7 @@
                     'icon' = 'https://thelensnola.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Louisiana National Guard - Official training and community service videos'
@@ -14057,7 +14056,7 @@
                 'URL' = 'https://www.youtube.com/@LAMilitaryFamily'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Oral History Louisiana Veterans - Discussions on veteran legislation and assistance'
@@ -14115,7 +14114,7 @@
                 'URL' = 'https://www.wabi.tv/'
                 'icon' = 'https://www.wabi.tv/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Maine Morning Star - Nonprofit journalism on state government and policy'
@@ -14142,7 +14141,7 @@
                 'URL' = 'https://mainebeacon.com/'
                 'icon' = 'https://mainebeacon.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Maine Beacon - Progressive coverage of Maine social justice'
@@ -14160,7 +14159,7 @@
                 'icon' = 'https://thewestendnews.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NEWS CENTER Maine - Breaking news weather and local stories from Maine'
@@ -14187,7 +14186,7 @@
             'URL' = 'https://www.youtube.com/user/BangorDailyNews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Maine Public - Videos on arts events and independent Maine stories'
@@ -14209,7 +14208,7 @@
             'URL' = 'https://www.youtube.com/@mainebeacon'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'This Day in Maine - Daily headlines and deeper dives on Maine news'
@@ -14236,7 +14235,7 @@
             'URL' = 'https://www.npr.org/podcasts/organizations/s495'
             'icon' = 'https://www.npr.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'WERU 89.9 FM - Curious takes on Maine political system'
@@ -14258,7 +14257,7 @@
             'URL' = 'https://darkdowneast.com/'
             'icon' = 'https://darkdowneast.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14282,7 +14281,7 @@
                     'URL' = 'https://www.bangordailynews.com/business/'
                     'icon' = 'https://www.bangordailynews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Maine Morning Star Business - Scrutiny of state economic policies'
@@ -14300,7 +14299,7 @@
                     'icon' = 'https://mainebeacon.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine Small Business Development Centers - Conversations with local business leaders'
@@ -14322,7 +14321,7 @@
                 'URL' = 'https://www.youtube.com/@MaineCo'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fast Forward Maine - Insights on business trends and leadership'
@@ -14340,7 +14339,7 @@
                 'icon' = 'https://www.mainechamber.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14364,7 +14363,7 @@
                     'URL' = 'https://www.wabi.tv/sports/'
                     'icon' = 'https://www.wabi.tv/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Central Maine Sports - Independent takes on high school recruiting'
@@ -14382,7 +14381,7 @@
                     'icon' = 'https://www.sportsnetmaine.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Central Maine Sports - Highlights and reactions to Maine sports games'
@@ -14404,7 +14403,7 @@
                 'URL' = 'https://www.youtube.com/@wabi-tv5'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Maine Sports Today - Analysis of Maine athletics'
@@ -14422,7 +14421,7 @@
                 'icon' = 'https://goblackbears.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14446,7 +14445,7 @@
                     'URL' = 'https://www.mainepublic.org/arts-and-culture'
                     'icon' = 'https://www.mainepublic.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Maine Art Scene - Critiques of arts policies and society'
@@ -14464,7 +14463,7 @@
                     'icon' = 'https://www.culturalmaine.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine Historical Society - Explorations of Maine culture and history'
@@ -14486,7 +14485,7 @@
                 'URL' = 'https://www.youtube.com/@TheMaineMag'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Essential Salt - Introductions to diverse Maine communities'
@@ -14504,7 +14503,7 @@
                 'icon' = 'https://www.groundedinmaine.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14528,7 +14527,7 @@
                     'URL' = 'https://umaine.edu/news/'
                     'icon' = 'https://umaine.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Maine Mathematics and Science Alliance - Critical views on research ethics'
@@ -14546,7 +14545,7 @@
                     'icon' = 'https://usm.maine.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine Mathematics and Science Alliance - Insights on state innovation hubs'
@@ -14568,7 +14567,7 @@
                 'URL' = 'https://www.youtube.com/@TechMaine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Maine Science Podcast - Conversations on Maine tech ecosystem'
@@ -14586,7 +14585,7 @@
                 'icon' = 'https://www.mainediscoverymuseum.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14610,7 +14609,7 @@
                     'URL' = 'https://www.bangordailynews.com/section/politics/'
                     'icon' = 'https://www.bangordailynews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Maine Monitor - Independent commentary on Maine political insiders'
@@ -14628,7 +14627,7 @@
                     'icon' = 'https://www.themainewire.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine State Legislature - Discussions on state politics and leadership'
@@ -14650,7 +14649,7 @@
                 'URL' = 'https://www.youtube.com/@MaineMorningStar'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Maine''s Political Pulse - Insightful dives into state political headlines'
@@ -14668,7 +14667,7 @@
                 'icon' = 'https://mainepolicy.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14692,7 +14691,7 @@
                     'URL' = 'https://www.pressherald.com/tag/fashion/'
                     'icon' = 'https://www.pressherald.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Green Healthy Maine - Critiques of industry ethics and diversity'
@@ -14710,7 +14709,7 @@
                     'icon' = 'https://meca.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine Fashion - Hauls styling and trend breakdowns'
@@ -14732,7 +14731,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=bDfiNHdzo00'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Grounded in Maine - Talks on city design and weeks'
@@ -14750,7 +14749,7 @@
                 'icon' = 'https://makersoftheusa.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -14774,7 +14773,7 @@
                     'URL' = 'https://www.maine.gov/veterans/about/news'
                     'icon' = 'https://www.maine.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Maine Military Community Network - Independent scrutiny of veteran deployments'
@@ -14792,7 +14791,7 @@
                     'icon' = 'https://vfw.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Maine Army National Guard - Official training and community service videos'
@@ -14814,7 +14813,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCkwG2J6MyuHhgYVUex4zjFg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Military Voices of Maine - Discussions on veteran legislation and assistance'
@@ -14872,7 +14871,7 @@
                 'URL' = 'https://www.necn.com/'
                 'icon' = 'https://www.necn.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'CommonWealth Beacon - Nonprofit journalism on state government and policy'
@@ -14899,7 +14898,7 @@
                 'URL' = 'https://baystatebanner.com/'
                 'icon' = 'https://baystatebanner.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'DigBoston - Progressive coverage of Boston music arts and activism'
@@ -14917,7 +14916,7 @@
                 'icon' = 'https://yourarlington.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WCVB - Breaking news weather and local stories from Massachusetts'
@@ -14944,7 +14943,7 @@
             'URL' = 'https://www.youtube.com/user/NECN'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'GBH News - Videos on arts events and independent Massachusetts stories'
@@ -14966,7 +14965,7 @@
             'URL' = 'https://www.youtube.com/user/MassLiveNews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'GBH On Point - Daily headlines and deeper dives on Massachusetts news'
@@ -14993,7 +14992,7 @@
             'URL' = 'https://www.bostonglobe.com/multimedia/podcasts/'
             'icon' = 'https://www.bostonglobe.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Dig - Curious takes on Massachusetts political system'
@@ -15015,7 +15014,7 @@
             'URL' = 'https://baystatebanner.com/podcasts/'
             'icon' = 'https://baystatebanner.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15039,7 +15038,7 @@
                     'URL' = 'https://commonwealthbeacon.org/tag/business/'
                     'icon' = 'https://commonwealthbeacon.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boston Magazine Business - Scrutiny of state economic policies'
@@ -15057,7 +15056,7 @@
                     'icon' = 'https://www.wgbh.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Boston Business Journal - Conversations with local business leaders'
@@ -15079,7 +15078,7 @@
                 'URL' = 'https://www.youtube.com/@MassChallenge'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Boston Public Radio - Insights on business trends and leadership'
@@ -15097,7 +15096,7 @@
                 'icon' = 'https://www.wbur.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15121,7 +15120,7 @@
                     'URL' = 'https://nesn.com/'
                     'icon' = 'https://nesn.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boston Sports Journal - Independent takes on Patriots recruiting'
@@ -15139,7 +15138,7 @@
                     'icon' = 'https://www.blackwhitereadallover.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NESN - Highlights and reactions to Massachusetts sports games'
@@ -15161,7 +15160,7 @@
                 'URL' = 'https://www.youtube.com/@WEEINetwork'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Greg Hill Show - Analysis of Patriots and Celtics athletics'
@@ -15179,7 +15178,7 @@
                 'icon' = 'https://www.weei.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15203,7 +15202,7 @@
                     'URL' = 'https://www.boston.com/culture/'
                     'icon' = 'https://www.boston.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'DigBoston Culture - Critiques of arts policies and society'
@@ -15221,7 +15220,7 @@
                     'icon' = 'https://baystatebanner.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Boston Cultural Highlights - Explorations of Bay State culture and history'
@@ -15243,7 +15242,7 @@
                 'URL' = 'https://www.youtube.com/@GBHNews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Common - Introductions to diverse Massachusetts communities'
@@ -15261,7 +15260,7 @@
                 'icon' = 'https://www.wbur.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15285,7 +15284,7 @@
                     'URL' = 'https://news.harvard.edu/gazette/section/science-technology/'
                     'icon' = 'https://news.harvard.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boston Magazine Tech - Critical views on research ethics'
@@ -15303,7 +15302,7 @@
                     'icon' = 'https://www.wgbh.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'MIT OpenCourseWare - Insights on state innovation hubs'
@@ -15325,7 +15324,7 @@
                 'URL' = 'https://www.youtube.com/@MassRobotics'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'MIT Technology Review - Conversations on Massachusetts tech ecosystem'
@@ -15343,7 +15342,7 @@
                 'icon' = 'https://www.masshightech.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15367,7 +15366,7 @@
                     'URL' = 'https://www.wgbh.org/politics'
                     'icon' = 'https://www.wgbh.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Boston Magazine Politics - Independent commentary on Massachusetts political insiders'
@@ -15385,7 +15384,7 @@
                     'icon' = 'https://baystatebanner.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Massachusetts State House - Discussions on state politics and leadership'
@@ -15407,7 +15406,7 @@
                 'URL' = 'https://www.youtube.com/@CommonWealthBeacon'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Massachusetts Report - Insightful dives into state political headlines'
@@ -15425,7 +15424,7 @@
                 'icon' = 'https://commonwealthbeacon.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15449,7 +15448,7 @@
                     'URL' = 'https://www.vogue.com/tag/boston'
                     'icon' = 'https://www.vogue.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'DigBoston Fashion - Critiques of industry ethics and diversity'
@@ -15467,7 +15466,7 @@
                     'icon' = 'https://baystatebanner.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Boston Fashion Vlogs - Hauls styling and trend breakdowns'
@@ -15489,7 +15488,7 @@
                 'URL' = 'https://www.youtube.com/@SustainableBostonStyle'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fashion Hive Boston - Talks on city design and weeks'
@@ -15507,7 +15506,7 @@
                 'icon' = 'https://www.businessoffashion.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15531,7 +15530,7 @@
                     'URL' = 'https://www.hanscom.af.mil/News/'
                     'icon' = 'https://www.hanscom.af.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'CommonWealth Beacon Military - Independent scrutiny of veteran deployments'
@@ -15549,7 +15548,7 @@
                     'icon' = 'https://www.wgbh.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Massachusetts National Guard - Official training and community service videos'
@@ -15571,7 +15570,7 @@
                 'URL' = 'https://www.youtube.com/@MilitaryRelocationBoston'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Massachusetts Podcast - Discussions on veteran legislation and assistance'
@@ -15629,7 +15628,7 @@
                 'URL' = 'https://wwmt.com/'
                 'icon' = 'https://wwmt.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Bridge Michigan - Nonprofit journalism on state government and policy'
@@ -15656,7 +15655,7 @@
                 'URL' = 'https://gandernewsroom.com/'
                 'icon' = 'https://gandernewsroom.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Detroit Metro Times - Progressive coverage of Detroit music arts and activism'
@@ -15674,7 +15673,7 @@
                 'icon' = 'https://www.northernexpress.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'FOX 2 Detroit - Breaking news weather and local stories from Michigan'
@@ -15701,7 +15700,7 @@
             'URL' = 'https://www.youtube.com/channel/UCiO61Z2BTd18ovzJ4syJJpQ'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'WKAR News - Videos on arts events and independent Michigan stories'
@@ -15723,7 +15722,7 @@
             'URL' = 'https://www.youtube.com/@MichiganAdvance'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Stateside - Daily headlines and deeper dives on Michigan news'
@@ -15750,7 +15749,7 @@
             'URL' = 'https://wdet.org/podcasts/detroit-evening-report/'
             'icon' = 'https://wdet.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Left of Lansing - Curious takes on Michigan political system'
@@ -15772,7 +15771,7 @@
             'URL' = 'https://michiganindependent.com/podcast'
             'icon' = 'https://michiganindependent.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15796,7 +15795,7 @@
                     'URL' = 'https://www.dbusiness.com/'
                     'icon' = 'https://www.dbusiness.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bridge Michigan Business - Scrutiny of state economic policies'
@@ -15814,7 +15813,7 @@
                     'icon' = 'https://outliermedia.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Michigan Creative - Conversations with local business leaders'
@@ -15836,7 +15835,7 @@
                 'URL' = 'https://www.youtube.com/user/MichiganBiz'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Michigan Opportunity Podcast - Insights on business trends and leadership'
@@ -15854,7 +15853,7 @@
                 'icon' = 'https://michiganross.umich.edu/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15878,7 +15877,7 @@
                     'URL' = 'https://www.maizenbrew.com/'
                     'icon' = 'https://www.maizenbrew.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Wolverines Wire - Independent takes on Wolverines recruiting'
@@ -15896,7 +15895,7 @@
                     'icon' = 'https://theathletic.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Michigan Athletics - Highlights and reactions to Michigan sports games'
@@ -15918,7 +15917,7 @@
                 'URL' = 'https://www.youtube.com/@ChampMediaCo'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'MGoBlue Podcasts - Analysis of Michigan Wolverines athletics'
@@ -15936,7 +15935,7 @@
                 'icon' = 'https://www.themichiganmanpodcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -15960,7 +15959,7 @@
                     'URL' = 'https://www.hourdetroit.com/'
                     'icon' = 'https://www.hourdetroit.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Second Wave Media - Critiques of arts policies and society'
@@ -15978,7 +15977,7 @@
                     'icon' = 'https://michiganchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ryan Redoute - Explorations of Michigan culture and history'
@@ -16000,7 +15999,7 @@
                 'URL' = 'https://www.youtube.com/@JourneyMichigan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Total Michigan Podcast - Introductions to diverse Michigan communities'
@@ -16018,7 +16017,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16042,7 +16041,7 @@
                     'URL' = 'https://msutoday.msu.edu/news/category/science-technology'
                     'icon' = 'https://msutoday.msu.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bioscience Association of Michigan - Critical views on research ethics'
@@ -16060,7 +16059,7 @@
                     'icon' = 'https://semcog.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Michigan Engineering - Insights on state innovation hubs'
@@ -16082,7 +16081,7 @@
                 'URL' = 'https://www.youtube.com/@UMichEngineering'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Michigan Minds - Conversations on Michigan tech ecosystem'
@@ -16100,7 +16099,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16124,7 +16123,7 @@
                     'URL' = 'https://michiganadvance.com/'
                     'icon' = 'https://michiganadvance.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Michigan Independent - Independent commentary on Michigan political insiders'
@@ -16142,7 +16141,7 @@
                     'icon' = 'https://michiganvoice.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WKAR News - Discussions on state politics and leadership'
@@ -16164,7 +16163,7 @@
                 'URL' = 'https://www.youtube.com/@BridgeMichigan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'It''s Just Politics - Insightful dives into state political headlines'
@@ -16182,7 +16181,7 @@
                 'icon' = 'https://mirsnews.podbean.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16206,7 +16205,7 @@
                     'URL' = 'https://www.hourdetroit.com/style-shopping/'
                     'icon' = 'https://www.hourdetroit.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Detroit Metro Times Fashion - Critiques of industry ethics and diversity'
@@ -16224,7 +16223,7 @@
                     'icon' = 'https://www.northernexpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Hannah Meloche - Hauls styling and trend breakdowns'
@@ -16246,7 +16245,7 @@
                 'URL' = 'https://www.youtube.com/@LIVINGINDETROIT'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'On and Off The Stitch - Talks on city design and weeks'
@@ -16264,7 +16263,7 @@
                 'icon' = 'https://www.michiganpublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16288,7 +16287,7 @@
                     'URL' = 'https://www.110wg.ang.af.mil/'
                     'icon' = 'https://www.110wg.ang.af.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW Michigan - Independent scrutiny of veteran deployments'
@@ -16306,7 +16305,7 @@
                     'icon' = 'https://www.michigan.gov/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Michigan National Guard - Official training and community service videos'
@@ -16328,7 +16327,7 @@
                 'URL' = 'https://www.youtube.com/@VFWMichigan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Michigan Podcast - Discussions on veteran legislation and assistance'
@@ -16386,7 +16385,7 @@
                 'URL' = 'https://www.sctimes.com/'
                 'icon' = 'https://www.sctimes.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'MinnPost - Nonprofit journalism on Minnesota civic and cultural affairs'
@@ -16413,7 +16412,7 @@
                 'URL' = 'https://racketmn.com/'
                 'icon' = 'https://racketmn.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Insight News - Amplifying Black perspectives and community stories in Minnesota'
@@ -16431,7 +16430,7 @@
                 'icon' = 'https://www.womenspress.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KARE 11 - Breaking news weather and local stories from Minnesota'
@@ -16458,7 +16457,7 @@
             'URL' = 'https://www.youtube.com/user/bringmethenews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Alpha News - Videos on politics events and independent Minnesota stories'
@@ -16480,7 +16479,7 @@
             'URL' = 'https://www.youtube.com/@racketmn'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'MPR News with Angela Davis - Daily headlines and deeper dives on Minnesota news'
@@ -16507,7 +16506,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/brainerd-dispatch-minute/id1437672957'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Reformer Radio - Curious takes on Minnesota political system'
@@ -16529,7 +16528,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/dr-scott-jensen-podcast/id1467437212'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16553,7 +16552,7 @@
                     'URL' = 'https://www.bizjournals.com/twincities'
                     'icon' = 'https://www.bizjournals.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bridge Michigan Business - Scrutiny of state economic policies'
@@ -16571,7 +16570,7 @@
                     'icon' = 'https://www.minnpost.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Michigan Creative wait Minnesota Chamber - Conversations with local business leaders'
@@ -16593,7 +16592,7 @@
                 'URL' = 'https://www.youtube.com/@MichiganBiz'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Shining Light on Minnesota - Insights on business trends and leadership'
@@ -16611,7 +16610,7 @@
                 'icon' = 'https://www.mnchamber.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16635,7 +16634,7 @@
                     'URL' = 'https://www.fox9.com/sports'
                     'icon' = 'https://www.fox9.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Minnesota Sports Fan - Independent takes on Gophers recruiting'
@@ -16653,7 +16652,7 @@
                     'icon' = 'https://zonecoverage.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SKOR North - Highlights and reactions to Minnesota sports games'
@@ -16675,7 +16674,7 @@
                 'URL' = 'https://www.youtube.com/@ChampMediaCo'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Minnesota Sports with Mackey and Judd - Analysis of Minnesota sports athletics'
@@ -16693,7 +16692,7 @@
                 'icon' = 'https://gamutpodcasts.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16717,7 +16716,7 @@
                     'URL' = 'https://sahanjournal.com/topics/arts-culture/'
                     'icon' = 'https://sahanjournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Racket Culture - Critiques of arts policies and society'
@@ -16735,7 +16734,7 @@
                     'icon' = 'https://www.mnhum.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ryan Redoute - Explorations of Minnesota culture and history'
@@ -16757,7 +16756,7 @@
                 'URL' = 'https://www.youtube.com/@JourneyMinnesota'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Curious Minnesota - Introductions to diverse Minnesota communities'
@@ -16775,7 +16774,7 @@
                 'icon' = 'https://badmouthtc.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16799,7 +16798,7 @@
                     'URL' = 'https://twincitiesgeek.com/category/news/sci-tech/'
                     'icon' = 'https://twincitiesgeek.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bioscience Association of Minnesota - Critical views on research ethics'
@@ -16817,7 +16816,7 @@
                     'icon' = 'https://www.twincities.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Minnesota Science Center - Insights on state innovation hubs'
@@ -16839,7 +16838,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC0uRk0LI6fRqZBqpGJ2nFsw'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The tech.mn Podcast - Conversations on Minnesota tech ecosystem'
@@ -16857,7 +16856,7 @@
                 'icon' = 'https://brainson.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16881,7 +16880,7 @@
                     'URL' = 'https://www.cbsnews.com/minnesota/politics/'
                     'icon' = 'https://www.cbsnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Minnesota Reformer - Independent commentary on Minnesota political insiders'
@@ -16899,7 +16898,7 @@
                     'icon' = 'https://alphanews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WKAR News - Discussions on state politics and leadership'
@@ -16921,7 +16920,7 @@
                 'URL' = 'https://www.youtube.com/@BridgeMichigan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Politics Friday - Insightful dives into state political headlines'
@@ -16939,7 +16938,7 @@
                 'icon' = 'https://www.wrongabouteverything-podcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -16963,7 +16962,7 @@
                     'URL' = 'https://www.postbulletin.com/topics/fashion'
                     'icon' = 'https://www.postbulletin.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Metro Times Fashion - Critiques of industry ethics and diversity'
@@ -16981,7 +16980,7 @@
                     'icon' = 'https://www.northernexpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Colette - Hauls styling and trend breakdowns'
@@ -17003,7 +17002,7 @@
                 'URL' = 'https://www.youtube.com/@RoyalSlaybyShay'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Shop Girls on MyTalk - Talks on city design and weeks'
@@ -17021,7 +17020,7 @@
                 'icon' = 'https://www.instagram.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17045,7 +17044,7 @@
                     'URL' = 'https://legionnaire.org/'
                     'icon' = 'https://legionnaire.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Minnesota Military Radio - Independent scrutiny of veteran deployments'
@@ -17063,7 +17062,7 @@
                     'icon' = 'https://vfw.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Minnesota National Guard - Official training and community service videos'
@@ -17085,7 +17084,7 @@
                 'URL' = 'https://www.youtube.com/@MNvetmuseum'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Minnesota Military Radio - Discussions on veteran legislation and assistance'
@@ -17143,7 +17142,7 @@
                 'URL' = 'https://www.wtok.com/'
                 'icon' = 'https://www.wtok.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Mississippi Free Press - Nonprofit solutions journalism on state issues and events'
@@ -17170,7 +17169,7 @@
                 'URL' = 'https://darkhorsepressnow.com/'
                 'icon' = 'https://darkhorsepressnow.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Jackson Advocate - Progressive coverage of Black news and social justice'
@@ -17188,7 +17187,7 @@
                 'icon' = 'https://www.mississippifreepress.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Mississippi Today - Breaking news weather and local stories from Mississippi'
@@ -17215,7 +17214,7 @@
             'URL' = 'https://www.youtube.com/user/wlox'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Mississippi Free Press - Videos on arts events and independent Mississippi stories'
@@ -17237,7 +17236,7 @@
             'URL' = 'https://www.youtube.com/@magnoliatribune'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The Other Side Mississippi Today - Daily headlines and deeper dives on Mississippi news'
@@ -17264,7 +17263,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-clay-travis-and-buck-sexton-show/id1552128937'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Empower Podcast - Curious takes on Mississippi political system'
@@ -17286,7 +17285,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/mississippi-matters/id1437672957'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17310,7 +17309,7 @@
                     'URL' = 'https://deltabusinessjournal.com/'
                     'icon' = 'https://deltabusinessjournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mississippi Free Press Business - Scrutiny of state economic policies'
@@ -17328,7 +17327,7 @@
                     'icon' = 'https://www.clarionledger.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mississippi Dashing - Conversations with local business leaders'
@@ -17350,7 +17349,7 @@
                 'URL' = 'https://www.youtube.com/c/MsSabrinaSeoul'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Punch Bowl Diaries - Insights on business trends and leadership'
@@ -17368,7 +17367,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17392,7 +17391,7 @@
                     'URL' = 'https://sportsmississippi.com/'
                     'icon' = 'https://sportsmississippi.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mississippi Sports Report - Independent takes on recruiting and games'
@@ -17410,7 +17409,7 @@
                     'icon' = 'https://theathletic.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mississippi Sports - Highlights and reactions to Mississippi sports games'
@@ -17432,7 +17431,7 @@
                 'URL' = 'https://www.youtube.com/@MaxxSouthSports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Thunder and Lightning - Analysis of Mississippi State Bulldogs athletics'
@@ -17450,7 +17449,7 @@
                 'icon' = 'https://www.supertalk.fm/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17474,7 +17473,7 @@
                     'URL' = 'https://www.jacksonfreepress.com/culture/'
                     'icon' = 'https://www.jacksonfreepress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mississippi Free Press Culture - Critiques of arts policies and society'
@@ -17492,7 +17491,7 @@
                     'icon' = 'https://magnoliatribune.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = '3 MISSISSIPPI - Explorations of Mississippi culture and history'
@@ -17514,7 +17513,7 @@
                 'URL' = 'https://www.youtube.com/@JourneyMississippi'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mississippi Moments Podcast - Introductions to diverse Mississippi communities'
@@ -17532,7 +17531,7 @@
                 'icon' = 'https://www.ourtownsfoundation.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17556,7 +17555,7 @@
                     'URL' = 'https://www.mssciencefestival.com/'
                     'icon' = 'https://www.mssciencefestival.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bioscience Association of Mississippi - Critical views on research ethics'
@@ -17574,7 +17573,7 @@
                     'icon' = 'https://www.innovatems.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mississippi State University - Insights on state innovation hubs'
@@ -17596,7 +17595,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=A7D8-PXNrPk'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Ongoing Transformation - Conversations on Mississippi tech ecosystem'
@@ -17614,7 +17613,7 @@
                 'icon' = 'http://nrupodcast.extension.msstate.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17638,7 +17637,7 @@
                     'URL' = 'https://www.wapt.com/politics'
                     'icon' = 'https://www.wapt.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Magnolia Tribune Politics - Independent commentary on Mississippi political insiders'
@@ -17656,7 +17655,7 @@
                     'icon' = 'https://msindy.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SuperTalk Mississippi - Discussions on state politics and leadership'
@@ -17678,7 +17677,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLarqgN5JT6LbgwGbmOPtzAURkpQpbPh-G'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Other Side Mississippi Today - Insightful dives into state political headlines'
@@ -17696,7 +17695,7 @@
                 'icon' = 'https://www.supertalk.fm/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17720,7 +17719,7 @@
                     'URL' = 'https://stagesmississippi.com/'
                     'icon' = 'https://stagesmississippi.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mississippi Free Press Fashion - Critiques of industry ethics and diversity'
@@ -17738,7 +17737,7 @@
                     'icon' = 'https://stagesmississippi.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Alisha Swanier - Hauls styling and trend breakdowns'
@@ -17760,7 +17759,7 @@
                 'URL' = 'https://www.youtube.com/@mrs.mississippi5035'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'GET LACED LET''S TALK - Talks on city design and weeks'
@@ -17778,7 +17777,7 @@
                 'icon' = 'https://www.visitjackson.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -17802,7 +17801,7 @@
                     'URL' = 'https://www.nationalguard.mil/News/Tag/166750/mississippi-national-guard/'
                     'icon' = 'https://www.nationalguard.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW Mississippi - Independent scrutiny of veteran deployments'
@@ -17820,7 +17819,7 @@
                     'icon' = 'https://www.msva.ms.gov/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Mississippi Army National Guard - Official training and community service videos'
@@ -17842,7 +17841,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=RUX_AEbU0eg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mississippi Salute Podcast - Discussions on veteran legislation and assistance'
@@ -17900,7 +17899,7 @@
                 'URL' = 'https://www.semissourian.com/'
                 'icon' = 'https://www.semissourian.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Missouri Independent - Nonprofit journalism on state government and policy'
@@ -17927,7 +17926,7 @@
                 'URL' = 'https://www.voxmagazine.com/'
                 'icon' = 'https://www.voxmagazine.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Riverfront Times - Progressive coverage of St. Louis music arts and activism'
@@ -17945,7 +17944,7 @@
                 'icon' = 'https://www.stlamerican.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KSDK News - Breaking news weather and local stories from Missouri'
@@ -17972,7 +17971,7 @@
             'URL' = 'https://www.youtube.com/channel/UCwHKLYLfz6M14SbBahFH5VA'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Springfield Daily Citizen - Videos on arts events and independent Missouri stories'
@@ -17994,7 +17993,7 @@
             'URL' = 'https://www.youtube.com/@VoxMagazine'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Politically Speaking - Daily headlines and deeper dives on Missouri news'
@@ -18021,7 +18020,7 @@
             'URL' = 'https://www.missouribusinessalert.com/multimedia/podcasts/'
             'icon' = 'https://www.missouribusinessalert.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Missouri Made - Curious takes on Missouri political system'
@@ -18043,7 +18042,7 @@
             'URL' = 'https://mochamber.com/news/capitol-chat/'
             'icon' = 'https://mochamber.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18067,7 +18066,7 @@
                     'URL' = 'https://sbj.net/'
                     'icon' = 'https://sbj.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Missouri Independent Business - Scrutiny of state economic policies'
@@ -18085,7 +18084,7 @@
                     'icon' = 'https://www.riverfronttimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Missouri Star Quilt Company - Conversations with local business leaders'
@@ -18107,7 +18106,7 @@
                 'URL' = 'https://www.youtube.com/@StLouisRegionalChamber'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Business Brief - Insights on business trends and leadership'
@@ -18125,7 +18124,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18149,7 +18148,7 @@
                     'URL' = 'https://www.columbiamissourian.com/sports/'
                     'icon' = 'https://www.columbiamissourian.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Rock M Nation - Independent takes on Mizzou recruiting'
@@ -18167,7 +18166,7 @@
                     'icon' = 'https://theathletic.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Missouri Sports Talk - Highlights and reactions to Missouri sports games'
@@ -18189,7 +18188,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC5-SkCbUZfVfpwDKOMXW3Zw'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Locked On Mizzou - Analysis of Missouri Tigers athletics'
@@ -18207,7 +18206,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18231,7 +18230,7 @@
                     'URL' = 'https://www.thepitchkc.com/arts-culture/'
                     'icon' = 'https://www.thepitchkc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Riverfront Times Culture - Critiques of arts policies and society'
@@ -18249,7 +18248,7 @@
                     'icon' = 'https://www.stlamerican.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'What''s Your M-O? - Explorations of Missouri culture and history'
@@ -18271,7 +18270,7 @@
                 'URL' = 'https://www.youtube.com/@midwestamericans3806'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Our Missouri - Introductions to diverse Missouri communities'
@@ -18289,7 +18288,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18313,7 +18312,7 @@
                     'URL' = 'https://www.slsc.org/news'
                     'icon' = 'https://www.slsc.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Missouri Independent Tech - Critical views on research ethics'
@@ -18331,7 +18330,7 @@
                     'icon' = 'https://www.riverfronttimes.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Missouri S and T - Insights on state innovation hubs'
@@ -18353,7 +18352,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=woZY-t8ZE2M'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'S and T Unlocked - Conversations on Missouri tech ecosystem'
@@ -18371,7 +18370,7 @@
                 'icon' = 'https://econnection.mst.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18395,7 +18394,7 @@
                     'URL' = 'https://www.missourinet.com/category/politics-government/'
                     'icon' = 'https://www.missourinet.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Beacon Politics - Independent commentary on Missouri political insiders'
@@ -18413,7 +18412,7 @@
                     'icon' = 'https://www.thepitchkc.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This Week in Missouri Politics - Discussions on state politics and leadership'
@@ -18435,7 +18434,7 @@
                 'URL' = 'https://www.youtube.com/@mississippipolitics1426'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Politically Speaking - Insightful dives into state political headlines'
@@ -18453,7 +18452,7 @@
                 'icon' = 'https://themissouritimes.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18477,7 +18476,7 @@
                     'URL' = 'https://www.voxmagazine.com/fashion/'
                     'icon' = 'https://www.voxmagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Riverfront Times Fashion - Critiques of industry ethics and diversity'
@@ -18495,7 +18494,7 @@
                     'icon' = 'https://www.stlamerican.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Bringing My Brand Home To St. Louis - Hauls styling and trend breakdowns'
@@ -18517,7 +18516,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=s9CpXW4dGD4'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'House of Lou - Talks on city design and weeks'
@@ -18535,7 +18534,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18559,7 +18558,7 @@
                     'URL' = 'https://ftleonardwoodpresscenter.com/'
                     'icon' = 'https://ftleonardwoodpresscenter.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW Missouri - Independent scrutiny of veteran deployments'
@@ -18577,7 +18576,7 @@
                     'icon' = 'https://www.mva.mo.gov/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Missouri Military Academy - Official training and community service videos'
@@ -18599,7 +18598,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=NcOlUgSW7a8'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Beyond the Frontlines - Discussions on veteran legislation and assistance'
@@ -18657,7 +18656,7 @@
                 'URL' = 'https://helenair.com/'
                 'icon' = 'https://helenair.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Montana Free Press - Nonprofit journalism on state government and policy'
@@ -18684,7 +18683,7 @@
                 'URL' = 'https://flatheadbeacon.com/'
                 'icon' = 'https://flatheadbeacon.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Last Best News - Progressive coverage of Billings social justice and culture'
@@ -18702,7 +18701,7 @@
                 'icon' = 'https://tobaccovalleynews.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NBC Montana - Breaking news weather and local stories from Montana'
@@ -18729,7 +18728,7 @@
             'URL' = 'https://www.youtube.com/channel/UCTzyhRW8LDZiKBIXfYU7dIQ'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Montana Right Now - Videos on politics events and independent Montana stories'
@@ -18751,7 +18750,7 @@
             'URL' = 'https://www.youtube.com/user/hcn'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Montana News - Daily headlines and deeper dives on Montana news'
@@ -18778,7 +18777,7 @@
             'URL' = 'https://www.mtpr.org/podcast/capitol-talk'
             'icon' = 'https://www.mtpr.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Montana Lowdown - Curious takes on Montana political system'
@@ -18800,7 +18799,7 @@
             'URL' = 'https://www.mtpr.org/podcast/the-big-why'
             'icon' = 'https://www.mtpr.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18824,7 +18823,7 @@
                     'URL' = 'https://montanachamber.com/news/'
                     'icon' = 'https://montanachamber.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Montana Free Press Business - Scrutiny of state economic policies'
@@ -18842,7 +18841,7 @@
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana Business Vlog - Conversations with local business leaders'
@@ -18864,7 +18863,7 @@
                 'URL' = 'https://www.youtube.com/@UMontanaBber'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Montana Business Podcast - Insights on business trends and leadership'
@@ -18882,7 +18881,7 @@
                 'icon' = 'https://kalispellchamber.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18906,7 +18905,7 @@
                     'URL' = 'https://www.swxlocalsports.com/montana/'
                     'icon' = 'https://www.swxlocalsports.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Montana Sports Fan - Independent takes on Grizzlies recruiting'
@@ -18924,7 +18923,7 @@
                     'icon' = 'https://montanamintsports.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana Sports - Highlights and reactions to Montana sports games'
@@ -18946,7 +18945,7 @@
                 'URL' = 'https://www.youtube.com/@406mtsports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Montana Mint Sports Pod - Analysis of Grizzlies and Bobcats athletics'
@@ -18964,7 +18963,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -18988,7 +18987,7 @@
                     'URL' = 'https://lastbestnews.com/category/culture/'
                     'icon' = 'https://lastbestnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Pulp Culture - Critiques of arts policies and society'
@@ -19006,7 +19005,7 @@
                     'icon' = 'https://flatheadbeacon.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Living in Montana - Explorations of Montana culture and history'
@@ -19028,7 +19027,7 @@
                 'URL' = 'https://www.youtube.com/@MontanaFWP'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Last Best Stories - Introductions to diverse Montana communities'
@@ -19046,7 +19045,7 @@
                 'icon' = 'https://www.mtpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19070,7 +19069,7 @@
                     'URL' = 'https://mus.edu/che/arsa/Research/research.html'
                     'icon' = 'https://mus.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Montana Space Grant Consortium STEM News - Critical views on research ethics'
@@ -19088,7 +19087,7 @@
                     'icon' = 'https://msutoday.msu.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana Science Center - Insights on state innovation hubs'
@@ -19110,7 +19109,7 @@
                 'URL' = 'https://www.youtube.com/@mthightech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Maine Science Podcast wait Montana Science - Conversations on Montana tech ecosystem'
@@ -19128,7 +19127,7 @@
                 'icon' = 'https://www.mainediscoverymuseum.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19152,7 +19151,7 @@
                     'URL' = 'https://www.ktvq.com/news/montana-politics'
                     'icon' = 'https://www.ktvq.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Pulp Politics - Independent commentary on Montana political insiders'
@@ -19170,7 +19169,7 @@
                     'icon' = 'https://flatheadbeacon.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana Public Radio Politics - Discussions on state politics and leadership'
@@ -19192,7 +19191,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLarqgN5JT6LbgwGbmOPtzAURkpQpbPh-G'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Montana Lowdown - Insightful dives into state political headlines'
@@ -19210,7 +19209,7 @@
                 'icon' = 'https://www.mtpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19234,7 +19233,7 @@
                     'URL' = 'https://www.umt.edu/news/blogs/arts_and_culture/posts/2013/09/04/what-do-you-think-about-fashion.php'
                     'icon' = 'https://www.umt.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Montana Fashion Designer KBecker - Critiques of industry ethics and diversity'
@@ -19252,7 +19251,7 @@
                     'icon' = 'https://www.greenhealthymaine.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana Fashion - Hauls styling and trend breakdowns'
@@ -19274,7 +19273,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=bDfiNHdzo00'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Grounded in Montana - Talks on city design and weeks'
@@ -19292,7 +19291,7 @@
                 'icon' = 'https://makersoftheusa.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19316,7 +19315,7 @@
                     'URL' = 'https://www.malmstrom.af.mil/News/'
                     'icon' = 'https://www.malmstrom.af.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Montana Military Community Network - Independent scrutiny of veteran deployments'
@@ -19334,7 +19333,7 @@
                     'icon' = 'https://vfw.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Montana National Guard - Official training and community service videos'
@@ -19356,7 +19355,7 @@
                 'URL' = 'https://www.youtube.com/@minnesotavets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Military Voices of Montana - Discussions on veteran legislation and assistance'
@@ -19414,7 +19413,7 @@
                 'URL' = 'https://fremonttribune.com/'
                 'icon' = 'https://fremonttribune.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Flatwater Free Press - Nonprofit investigations on Nebraska issues and stories'
@@ -19441,7 +19440,7 @@
                 'URL' = 'https://www.omahadailyrecord.com/'
                 'icon' = 'https://www.omahadailyrecord.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Reader - Progressive voice on Omaha arts music and social issues'
@@ -19459,7 +19458,7 @@
                 'icon' = 'https://www.dailynebraskan.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KETV NewsWatch 7 - Breaking news weather and local stories from Nebraska'
@@ -19486,7 +19485,7 @@
             'URL' = 'https://www.youtube.com/newschannelnebraska'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Nebraska News Service - Videos on arts events and independent Nebraska stories'
@@ -19508,7 +19507,7 @@
             'URL' = 'https://www.youtube.com/@TheReaderOmaha'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Nebraska Update - Daily headlines and deeper dives on Nebraska news'
@@ -19535,7 +19534,7 @@
             'URL' = 'https://nebraskapublicmedia.org/listen/podcasts/all-about-books/'
             'icon' = 'https://nebraskapublicmedia.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Picking Corn - Curious takes on Nebraska political system'
@@ -19557,7 +19556,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/unicameral-update/id1615302287'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19581,7 +19580,7 @@
                     'URL' = 'https://siliconprairienews.com/'
                     'icon' = 'https://siliconprairienews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nebraska Examiner Business - Scrutiny of state economic policies'
@@ -19599,7 +19598,7 @@
                     'icon' = 'https://thereader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Xoxo Charley - Conversations with local business leaders'
@@ -19621,7 +19620,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=yPi6CpaO-QY'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Good Life Small Business Podcast - Insights on business trends and leadership'
@@ -19639,7 +19638,7 @@
                 'icon' = 'https://theomahapodcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19663,7 +19662,7 @@
                     'URL' = 'https://huskers.com/'
                     'icon' = 'https://huskers.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'HuskerOnline - Independent takes on Huskers recruiting and coaching'
@@ -19681,7 +19680,7 @@
                     'icon' = 'https://www.huskermax.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nebraska Cornhuskers - Highlights and reactions to Huskers sports games'
@@ -19703,7 +19702,7 @@
                 'URL' = 'https://www.youtube.com/InsideNebraska'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'HuskerOnline Podcast - Analysis of Nebraska Cornhuskers athletics'
@@ -19721,7 +19720,7 @@
                 'icon' = 'https://rss.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19745,7 +19744,7 @@
                     'URL' = 'https://news.unl.edu/section/society-culture'
                     'icon' = 'https://news.unl.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Reader Culture - Critiques of arts policies and society'
@@ -19763,7 +19762,7 @@
                     'icon' = 'https://nebraskaexaminer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nebraska Tourism - Explorations of Nebraska culture and history'
@@ -19785,7 +19784,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=uf0mKWOmLLA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Curious Nebraska - Introductions to diverse Nebraska communities'
@@ -19803,7 +19802,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19827,7 +19826,7 @@
                     'URL' = 'https://www.unomaha.edu/college-of-information-science-and-technology/news/index.php'
                     'icon' = 'https://www.unomaha.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nebraska Examiner Tech - Critical views on research ethics'
@@ -19845,7 +19844,7 @@
                     'icon' = 'https://thereader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nebraska Engineering - Insights on state innovation hubs'
@@ -19867,7 +19866,7 @@
                 'URL' = 'https://www.youtube.com/@nebraskacombine3204'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Leading Nebraska Podcast - Conversations on Nebraska tech ecosystem'
@@ -19885,7 +19884,7 @@
                 'icon' = 'https://cehs.unl.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19909,7 +19908,7 @@
                     'URL' = 'https://nebraskalegislature.gov/news/news.php'
                     'icon' = 'https://nebraskalegislature.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Flatwater Free Press Politics - Independent commentary on Nebraska political insiders'
@@ -19927,7 +19926,7 @@
                     'icon' = 'https://thenebraskasignal.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Dan Parsons Show - Discussions on state politics and leadership'
@@ -19949,7 +19948,7 @@
                 'URL' = 'https://www.youtube.com/@mississippipolitics1426'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Picking Corn - Insightful dives into state political headlines'
@@ -19967,7 +19966,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -19991,7 +19990,7 @@
                     'URL' = 'https://www.facebook.com/fashiontrend402/'
                     'icon' = 'https://www.facebook.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Daily Nebraskan Fashion - Critiques of industry ethics and diversity'
@@ -20009,7 +20008,7 @@
                     'icon' = 'https://www.instagram.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Emily Omaha Fashion Week - Hauls styling and trend breakdowns'
@@ -20031,7 +20030,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=xyU3d9aoeKg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sustainably LB Podcast - Talks on city design and weeks'
@@ -20049,7 +20048,7 @@
                 'icon' = 'https://www.growingsmalltownne.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20073,7 +20072,7 @@
                     'URL' = 'https://www.nationalguard.mil/News/Tag/134511/nebraska-national-guard/'
                     'icon' = 'https://www.nationalguard.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW Nebraska - Independent scrutiny of veteran deployments'
@@ -20091,7 +20090,7 @@
                     'icon' = 'https://nebraskaexaminer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nebraska Army National Guard - Official training and community service videos'
@@ -20113,7 +20112,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLsFdSlbRBQJ0lGwkNxh0Ja_FDigS2woJI'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Nebraska Podcast - Discussions on veteran legislation and assistance'
@@ -20171,7 +20170,7 @@
                 'URL' = 'https://www.nevadaappeal.com/'
                 'icon' = 'https://www.nevadaappeal.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'The Nevada Independent - Nonpartisan nonprofit statewide news opinions'
@@ -20198,7 +20197,7 @@
                 'URL' = 'https://lasvegasweekly.com/'
                 'icon' = 'https://lasvegasweekly.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Sierra Nevada Ally - Independent culture publication without paywall'
@@ -20216,7 +20215,7 @@
                 'icon' = 'https://burningman.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KTVN 2 News Nevada - Breaking news weather local Reno stories'
@@ -20243,7 +20242,7 @@
             'URL' = 'https://www.youtube.com/c/fox5lasvegas'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'The Nevada Independent - In-depth political policy video breakdowns'
@@ -20265,7 +20264,7 @@
             'URL' = 'https://www.youtube.com/user/LasVegasWeekly'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'City Cast Las Vegas - Daily Vegas headlines community insights'
@@ -20292,7 +20291,7 @@
             'URL' = 'https://www.renoites.com/'
             'icon' = 'https://www.renoites.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'All Things Northern Nevada - History culture mining local events'
@@ -20314,7 +20313,7 @@
             'URL' = 'https://thisisreno.com/podcast/'
             'icon' = 'https://thisisreno.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20338,7 +20337,7 @@
                     'URL' = 'https://www.nnbw.com/'
                     'icon' = 'https://www.nnbw.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nevada Current Business - Scrutiny economic policies state impacts'
@@ -20356,7 +20355,7 @@
                     'icon' = 'https://thenevadaindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Living in Las Vegas Henderson NV - Business owners entrepreneurs startups stories'
@@ -20378,7 +20377,7 @@
                 'URL' = 'https://www.youtube.com/c/SimonWilson'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Through the Door Podcast - Insider running Nevada business perspectives'
@@ -20396,7 +20395,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20420,7 +20419,7 @@
                     'URL' = 'https://www.kolotv.com/sports/'
                     'icon' = 'https://www.kolotv.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sports Handle Nevada - Betting futures contracts legal analysis'
@@ -20438,7 +20437,7 @@
                     'icon' = 'https://nevadasportsnet.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nevada Sports Net - Game highlights analysis reporter features'
@@ -20460,7 +20459,7 @@
                 'URL' = 'https://www.youtube.com/c/Raiders'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Inside the Den Podcast - Nevada football basketball breakdowns analysis'
@@ -20478,7 +20477,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20502,7 +20501,7 @@
                     'URL' = 'https://nevadamagazine.com/news/'
                     'icon' = 'https://nevadamagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Sierra Nevada Ally Culture - Progressive arts identities perspectives'
@@ -20520,7 +20519,7 @@
                     'icon' = 'https://nevadacurrent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nevada Stories - Folk traditional artists landscape videos'
@@ -20542,7 +20541,7 @@
                 'URL' = 'https://www.youtube.com/user/TravelNevada'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Native Nevada - Indigenous peoples culture perseverance series'
@@ -20560,7 +20559,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20584,7 +20583,7 @@
                     'URL' = 'https://nnss.gov/nnss-news/'
                     'icon' = 'https://nnss.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Cybernews Nevada - Cyber threats ethics critical views'
@@ -20602,7 +20601,7 @@
                     'icon' = 'https://nevadacurrent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nevada Science Center - Virtual field trips science experiments'
@@ -20624,7 +20623,7 @@
                 'URL' = 'https://www.youtube.com/user/UNR'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Discover Science Podcast - Leading scientists researchers conversations'
@@ -20642,7 +20641,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20666,7 +20665,7 @@
                     'URL' = 'https://www.kolotv.com/politics/'
                     'icon' = 'https://www.kolotv.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Politico Nevada - Independent political insiders commentary'
@@ -20684,7 +20683,7 @@
                     'icon' = 'https://thenevadaglobe.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'The Nevada Independent - Political leadership profiles discussions'
@@ -20706,7 +20705,7 @@
                 'URL' = 'https://www.youtube.com/@NVPolitics'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Ballot Battleground Nevada - Issues policies shaping swing state'
@@ -20724,7 +20723,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20748,7 +20747,7 @@
                     'URL' = 'https://lasvegasweekly.com/news/tagged/fashion/'
                     'icon' = 'https://lasvegasweekly.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nevada Current Fashion - Industry ethics diversity critiques'
@@ -20766,7 +20765,7 @@
                     'icon' = 'https://doublescoop.art/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Lindsey Gurk - Las Vegas fashion hauls styling tips'
@@ -20788,7 +20787,7 @@
                 'URL' = 'https://www.youtube.com/user/CaitlinEliza'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Las Vegas Fashion Council - Eco couture industry discussions'
@@ -20806,7 +20805,7 @@
                 'icon' = 'https://theimpression.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -20830,7 +20829,7 @@
                     'URL' = 'https://veterans.nv.gov/news/'
                     'icon' = 'https://veterans.nv.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW Nevada - Veteran deployments assistance independent scrutiny'
@@ -20848,7 +20847,7 @@
                     'icon' = 'https://nevadacurrent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nevada Army National Guard - Official training community service videos'
@@ -20870,7 +20869,7 @@
                 'URL' = 'https://www.youtube.com/@NevadaAirNationalGuard'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Department Nevada Podcast - Legislation assistance veteran conversations'
@@ -20928,7 +20927,7 @@
                 'URL' = 'https://www.seacoastonline.com/'
                 'icon' = 'https://www.seacoastonline.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'InDepthNH.org - Investigative nonprofit journalism on NH government and policy'
@@ -20955,7 +20954,7 @@
                 'URL' = 'https://www.vnews.com/'
                 'icon' = 'https://www.vnews.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'New Hampshire Gazette - Progressive commentary on NH politics and social justice'
@@ -20973,7 +20972,7 @@
                 'icon' = 'https://www.603equality.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WMUR-TV - Breaking news weather and investigative reports from New Hampshire'
@@ -21000,7 +20999,7 @@
             'URL' = 'https://www.youtube.com/@CBS13News'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Living In Southern New Hampshire - Neighborhood tours daily life and relocations'
@@ -21022,7 +21021,7 @@
             'URL' = 'https://www.youtube.com/user/FreeKeene'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'New Hampshire Public Radio Podcasts - Daily headlines deeper dives and investigations'
@@ -21049,7 +21048,7 @@
             'URL' = 'https://www.nhpr.org/podcasts/bear-brook'
             'icon' = 'https://www.nhpr.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Radical Centrist - Balanced takes on NH political extremes and reforms'
@@ -21071,7 +21070,7 @@
             'URL' = 'https://www.nhpr.org/podcasts/stranglehold'
             'icon' = 'https://www.nhpr.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21095,7 +21094,7 @@
                     'URL' = 'https://www.bostonglobe.com/metro/new-england/new-hampshire/business/'
                     'icon' = 'https://www.bostonglobe.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New Hampshire Bulletin Business - Scrutiny of economic policies and inequalities'
@@ -21113,7 +21112,7 @@
                     'icon' = 'https://nhfpi.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NH Business Show - Behind-the-scenes tours of local entrepreneurs and operations'
@@ -21135,7 +21134,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=uPWk9XbrCC4'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'BizCastNH - Stories from NH executives on innovation and success'
@@ -21153,7 +21152,7 @@
                 'icon' = 'https://www.nhsbdc.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21177,7 +21176,7 @@
                     'URL' = 'https://www.nsnsports.net/'
                     'icon' = 'https://www.nsnsports.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Eagle Tribune Local Sports - Independent analysis of NH team performances'
@@ -21195,7 +21194,7 @@
                     'icon' = 'https://www.nhpr.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UNH Athletics - Wildcats game highlights behind-the-scenes and fan content'
@@ -21217,7 +21216,7 @@
                 'URL' = 'https://www.youtube.com/@NHXC'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'NH Sportspage Podcast - High school sports analysis and interviews'
@@ -21235,7 +21234,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21259,7 +21258,7 @@
                     'URL' = 'https://www.nhhumanities.org/'
                     'icon' = 'https://www.nhhumanities.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NH Gazette Culture - Critiques of arts policies and social narratives'
@@ -21277,7 +21276,7 @@
                     'icon' = 'https://indepthnh.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Hampshire Life - Explorations of local traditions festivals and heritage'
@@ -21299,7 +21298,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=Yfg5df7tK08'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'NH Secrets Legends and Lore - Stories of NH folklore and hidden histories'
@@ -21317,7 +21316,7 @@
                 'icon' = 'https://www.nhpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21341,7 +21340,7 @@
                     'URL' = 'https://www.nhepscor.org/news-announcements'
                     'icon' = 'https://www.nhepscor.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NH Bulletin Tech - Critical views on research ethics and equity'
@@ -21359,7 +21358,7 @@
                     'icon' = 'https://www.nhgazette.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Hampshire Academy of Science - Student research projects and experiments'
@@ -21381,7 +21380,7 @@
                 'URL' = 'https://www.youtube.com/@NHSeaGrant'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Time and Tide - Coastal science stories and climate change discussions'
@@ -21399,7 +21398,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21423,7 +21422,7 @@
                     'URL' = 'https://www.nhpr.org/tags/nh-politics'
                     'icon' = 'https://www.nhpr.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NH Journal Politics - Conservative commentary on NH power dynamics'
@@ -21441,7 +21440,7 @@
                     'icon' = 'https://www.unionleader.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WMUR-TV Politics - Candidate debates town halls and election breakdowns'
@@ -21463,7 +21462,7 @@
                 'URL' = 'https://www.youtube.com/@LegislativeLenses'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'New Hampshire Live - Interviews with politicians and policy experts'
@@ -21481,7 +21480,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21505,7 +21504,7 @@
                     'URL' = 'https://www.keenesentinel.com/news/local/economy/'
                     'icon' = 'https://www.keenesentinel.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NH Bulletin Fashion - Critiques of industry ethics and diversity'
@@ -21523,7 +21522,7 @@
                     'icon' = 'https://tnhdigital.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Sincerely Molly - New England fashion hauls styling and inspirations'
@@ -21545,7 +21544,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=MbUYVvrvrLI'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Who Are You Wearing - NH stories on personal style and closets'
@@ -21563,7 +21562,7 @@
                 'icon' = 'https://freitagmarketing.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21587,7 +21586,7 @@
                     'URL' = 'https://www.nhveterans.nh.gov/'
                     'icon' = 'https://www.nhveterans.nh.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW NH News - Independent scrutiny of veteran benefits and deployments'
@@ -21605,7 +21604,7 @@
                     'icon' = 'https://newhampshirebulletin.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NH Army National Guard - Official training community service and stories'
@@ -21627,7 +21626,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=GjH-EriMGAE'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Your New Hampshire National Guard Podcast - Guardsmen perspectives and resilience'
@@ -21685,7 +21684,7 @@
                 'URL' = 'https://pressofatlanticcity.com/'
                 'icon' = 'https://pressofatlanticcity.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'New Jersey Monitor - Nonprofit watchdog on state policy and corruption'
@@ -21712,7 +21711,7 @@
                 'URL' = 'https://savejersey.com/'
                 'icon' = 'https://savejersey.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Jersey Vindicator - Nonprofit investigative journalism on social issues'
@@ -21730,7 +21729,7 @@
                 'icon' = 'https://www.sliceofculture.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NJ.com - Breaking news investigations and local NJ stories'
@@ -21757,7 +21756,7 @@
             'URL' = 'https://www.youtube.com/@onnewjersey'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'New Jersey Outdoor Adventures - Nature explorations hiking and state parks'
@@ -21779,7 +21778,7 @@
             'URL' = 'https://www.youtube.com/@rusticventures'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'New Jersey Is The World - Hilarious exploration of NJ culture and quirks'
@@ -21806,7 +21805,7 @@
             'URL' = 'https://www.njspotlightnews.org/dead-end-podcast/'
             'icon' = 'https://www.njspotlightnews.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Father Wants Us Dead - Chilling NJ true crime and mysteries'
@@ -21828,7 +21827,7 @@
             'URL' = 'https://cfnj.org/jerseygivesadamn/'
             'icon' = 'https://cfnj.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21852,7 +21851,7 @@
                     'URL' = 'https://www.roi-nj.com/'
                     'icon' = 'https://www.roi-nj.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New Jersey Monitor Business - Scrutiny of economic policies and impacts'
@@ -21870,7 +21869,7 @@
                     'icon' = 'https://www.njspotlightnews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Jersey Business Media - Stories ideas and entrepreneur conversations'
@@ -21892,7 +21891,7 @@
                 'URL' = 'https://www.youtube.com/c/VegasAgents'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'New Jersey Business Podcast - Thriving owners entrepreneurs and positivity'
@@ -21910,7 +21909,7 @@
                 'icon' = 'https://www.businessnhmagazine.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -21934,7 +21933,7 @@
                     'URL' = 'https://www.courierpostonline.com/sports/'
                     'icon' = 'https://www.courierpostonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'All About The Jersey - Independent NJ Devils and hockey analysis'
@@ -21952,7 +21951,7 @@
                     'icon' = 'https://www.jerseysportszone.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jersey Sports Zone - High school highlights features and stars'
@@ -21974,7 +21973,7 @@
                 'URL' = 'https://www.youtube.com/@njsportsmedia'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Jersey Guy Sports - Yankees Rangers Giants and Rutgers commentary'
@@ -21992,7 +21991,7 @@
                 'icon' = 'https://foxsportsradionewjersey.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22016,7 +22015,7 @@
                     'URL' = 'https://stateoftheartsnj.com/'
                     'icon' = 'https://stateoftheartsnj.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Slice of Culture - Progressive Hudson County arts and heritage'
@@ -22034,7 +22033,7 @@
                     'icon' = 'https://newjerseymonitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Jersey Life - Traditions festivals and heritage explorations'
@@ -22056,7 +22055,7 @@
                 'URL' = 'https://www.youtube.com/@thewanderingwoodsman'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'New Jersey Is The World - Loving exploration of state quirks and lore'
@@ -22074,7 +22073,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22098,7 +22097,7 @@
                     'URL' = 'https://rdnj.org/news/'
                     'icon' = 'https://rdnj.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NJ Tech Weekly - Critical views on startup ethics and equity'
@@ -22116,7 +22115,7 @@
                     'icon' = 'https://newjerseymonitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Tucker Time - Kid-led science experiments and educational fun'
@@ -22138,7 +22137,7 @@
                 'URL' = 'https://www.youtube.com/@marquesbrownlee'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'From Lab to Patient - AI pharma clean tech in NJ innovation'
@@ -22156,7 +22155,7 @@
                 'icon' = 'https://engineering.princeton.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22180,7 +22179,7 @@
                     'URL' = 'https://www.northjersey.com/news/new-jersey/'
                     'icon' = 'https://www.northjersey.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New Jersey Monitor Politics - Watchdog on corruption and transparency'
@@ -22198,7 +22197,7 @@
                     'icon' = 'https://jerseyindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NJ Spotlight News - Candidate debates town halls and breakdowns'
@@ -22220,7 +22219,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLF6lJG23MzuLMTF93jqYcuf321OAKsqOf'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'New Jersey Politics - Interviews with Garden State newsmakers'
@@ -22238,7 +22237,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22262,7 +22261,7 @@
                     'URL' = 'https://www.jerseysbest.com/category/style-fashion/'
                     'icon' = 'https://www.jerseysbest.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NJ Monitor Fashion - Critiques of industry ethics and sustainability'
@@ -22280,7 +22279,7 @@
                     'icon' = 'https://www.sliceofculture.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'bestdressed - NYC NJ thrifting fashion and misadventures'
@@ -22302,7 +22301,7 @@
                 'URL' = 'https://www.youtube.com/@Thestyleinsider'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Man of Style - Men''s fashion business and dating talks'
@@ -22320,7 +22319,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22344,7 +22343,7 @@
                     'URL' = 'https://www.dvidshub.net/unit/NJ-NG'
                     'icon' = 'https://www.dvidshub.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'VFW NJ News - Scrutiny of benefits deployments and assistance'
@@ -22362,7 +22361,7 @@
                     'icon' = 'https://newjerseymonitor.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NJ Army National Guard - Training community service and soldier stories'
@@ -22384,7 +22383,7 @@
                 'URL' = 'https://www.youtube.com/@battleshipnewjersey'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'WETSU A Battleship NJ Podcast - Veterans historians and ship legacy'
@@ -22442,7 +22441,7 @@
                 'URL' = 'https://www.currentargus.com/'
                 'icon' = 'https://www.currentargus.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Searchlight New Mexico - Nonprofit investigative journalism on state issues'
@@ -22469,7 +22468,7 @@
                 'URL' = 'https://alibi.com/'
                 'icon' = 'https://alibi.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Weekly Alibi - Counterculture voice on Albuquerque music and activism'
@@ -22487,7 +22486,7 @@
                 'icon' = 'https://www.hcn.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KOB 4 Eyewitness News - Breaking stories weather and NM updates'
@@ -22514,7 +22513,7 @@
             'URL' = 'https://www.youtube.com/c/SourceNewMexico'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Eclectic Videos Vlogs - Albuquerque explorations and NM landscapes'
@@ -22536,7 +22535,7 @@
             'URL' = 'https://www.youtube.com/@JohnnyJamesNM'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'New Mexico News Insiders - Weekly dives into state headlines'
@@ -22563,7 +22562,7 @@
             'URL' = 'https://www.iheart.com/podcast/kkob-morning-briefing-47961064/'
             'icon' = 'https://www.iheart.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'City on the Edge - Albuquerque history and untold stories'
@@ -22585,7 +22584,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/tres-leches-new-mexico/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22609,7 +22608,7 @@
                     'URL' = 'https://nmpartnership.com/news/'
                     'icon' = 'https://nmpartnership.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Source New Mexico Business - Scrutiny of economic policies and equity'
@@ -22627,7 +22626,7 @@
                     'icon' = 'https://alibi.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Local Albuquerque Businesses Vlog - Entrepreneur stories and operations tours'
@@ -22649,7 +22648,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCJtrxoXHPWyVID8BJjKqs4Q'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = '3Q New Mexico''s Business Podcast - Leaders on innovation and success'
@@ -22667,7 +22666,7 @@
                 'icon' = 'https://bber.unm.edu/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22691,7 +22690,7 @@
                     'URL' = 'https://www.dailylobo.com/section/sports'
                     'icon' = 'https://www.dailylobo.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NM Sports Page - Independent high school recruiting analysis'
@@ -22709,7 +22708,7 @@
                     'icon' = 'https://www.rdrnews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Mexico Lobos - Game highlights and behind-the-scenes'
@@ -22731,7 +22730,7 @@
                 'URL' = 'https://www.youtube.com/user/NMSUAggies'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'United Front Sports - Progressive analysis of NM athletics'
@@ -22749,7 +22748,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22773,7 +22772,7 @@
                     'URL' = 'https://www.newmexicomagazine.org/'
                     'icon' = 'https://www.newmexicomagazine.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Weekly Alibi Culture - Critiques of arts policies and narratives'
@@ -22791,7 +22790,7 @@
                     'icon' = 'https://sourcenm.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Eclectic Videos Vlogs - NM traditions festivals and explorations'
@@ -22813,7 +22812,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC3Vuq4Q1bKFtAiKYlwRv3oA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Encounter Culture - Artists historians and NM traditions talks'
@@ -22831,7 +22830,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22855,7 +22854,7 @@
                     'URL' = 'https://www.nmepscor.org/news-announcements'
                     'icon' = 'https://www.nmepscor.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Source New Mexico Tech - Critical research ethics and impacts'
@@ -22873,7 +22872,7 @@
                     'icon' = 'https://alibi.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'New Mexico Tech - Campus labs and STEM breakthroughs'
@@ -22895,7 +22894,7 @@
                 'URL' = 'https://www.youtube.com/user/unm'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'It''s Probably Not Rocket Science - UNM hot topics and research'
@@ -22913,7 +22912,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -22937,7 +22936,7 @@
                 'URL' = 'https://www.santafenewmexican.com/news/local_politics/'
                 'icon' = 'https://www.santafenewmexican.com/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Searchlight NM Politics - Watchdog on corruption and transparency'
@@ -22955,7 +22954,7 @@
                 'icon' = 'https://www.newmexicopoliticaljournal.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NM News Insiders - Candidate debates and election breakdowns'
@@ -22977,7 +22976,7 @@
             'URL' = 'https://www.youtube.com/channel/UCJtrxoXHPWyVID8BJjKqs4Q'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'New Mexico News Insiders Politics - State government and elections'
@@ -22995,7 +22994,7 @@
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
     )
-},
+}
 'Fashion' = @{
     'News' = @{
         'Mainstream' = @(
@@ -23019,7 +23018,7 @@
                 'URL' = 'https://www.swaia.org/swaia-native-fashion-week'
                 'icon' = 'https://www.swaia.org/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'NM In Depth Fashion - Critiques of fast fashion and ethics'
@@ -23037,7 +23036,7 @@
                 'icon' = 'https://www.ilovenewmexicoblog.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'New Mexico Fashion Week - Runway hauls and styling tips'
@@ -23059,7 +23058,7 @@
             'URL' = 'https://www.youtube.com/watch?v=jnApfDK0oQQ'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'The Real Santa Fe Fashion - Community style and self-expression'
@@ -23077,7 +23076,7 @@
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
     )
-},
+}
 'Military' = @{
     'News' = @{
         'Mainstream' = @(
@@ -23101,7 +23100,7 @@
                 'URL' = 'https://www.nj.gov/military/'
                 'icon' = 'https://www.nj.gov/favicon.ico'
             }
-        ),
+        )
         'Counter' = @(
             @{
                 'Title' = 'Source NM Military - Scrutiny of deployments and impacts'
@@ -23119,7 +23118,7 @@
                 'icon' = 'https://alibi.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'New Mexico Military Institute - Cadet life and training videos'
@@ -23141,7 +23140,7 @@
             'URL' = 'https://www.youtube.com/watch?v=2GyMxUgw8tU'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasts' = @(
         @{
             'Title' = 'Wartime Stories NM - Soldier experiences and military history'
@@ -23199,7 +23198,7 @@
                 'URL' = 'https://buffalonews.com/'
                 'icon' = 'https://buffalonews.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'THE CITY - Independent NYC investigative journalism and service reporting'
@@ -23226,7 +23225,7 @@
                 'URL' = 'https://www.nysun.com/'
                 'icon' = 'https://www.nysun.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Village Voice - Award-winning coverage of NYC culture politics and life'
@@ -23244,7 +23243,7 @@
                 'icon' = 'https://hyperallergic.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'The New York Times - Investigative journalism videos and breaking stories'
@@ -23271,7 +23270,7 @@
             'URL' = 'https://www.youtube.com/channel/UCrlIS7z20CnVaCrMvdkig_g'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'newyorkplease - Weekly vlogs on NYC life neighborhoods and events'
@@ -23293,7 +23292,7 @@
             'URL' = 'https://www.youtube.com/c/TaylorBell'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The Daily - NYT biggest stories told by top journalists daily'
@@ -23320,7 +23319,7 @@
             'URL' = 'https://www.newyorker.com/podcast/the-new-yorker-radio-hour'
             'icon' = 'https://www.newyorker.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Bowery Boys - NYC history adventures and untold stories'
@@ -23342,7 +23341,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-hell-gate-podcast/id1670772496'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23366,7 +23365,7 @@
                     'URL' = 'https://libn.com/'
                     'icon' = 'https://libn.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New York Focus Business - Scrutiny of economic policies and transparency'
@@ -23384,7 +23383,7 @@
                     'icon' = 'https://gothamist.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Taylor Bell - NYC entrepreneur deep dives on finance and careers'
@@ -23406,7 +23405,7 @@
                 'URL' = 'https://www.youtube.com/user/chrisfix8'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'New York''s Business Podcast - Stories of NYC brightest business minds'
@@ -23424,7 +23423,7 @@
                 'icon' = 'https://www.nylaunchpod.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23448,7 +23447,7 @@
                     'URL' = 'https://sny.tv/'
                     'icon' = 'https://sny.tv/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Deadspin - Independent sports news without fear or compromise'
@@ -23466,7 +23465,7 @@
                     'icon' = 'https://www.allaboutthejersey.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jersey Sports Zone - High school highlights and NY stars'
@@ -23488,7 +23487,7 @@
                 'URL' = 'https://www.youtube.com/@nysportsmedia'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'DiPietro and Rothenberg - WFAN daily NY sports talk and debates'
@@ -23506,7 +23505,7 @@
                 'icon' = 'https://www.audacy.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23530,7 +23529,7 @@
                     'URL' = 'https://gothamist.com/'
                     'icon' = 'https://gothamist.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Village Voice Arts - Progressive critiques of NYC cultural policies'
@@ -23548,7 +23547,7 @@
                     'icon' = 'https://www.papermag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'newyorkplease - NYC cultural explorations festivals and traditions'
@@ -23570,7 +23569,7 @@
                 'URL' = 'https://www.youtube.com/@sarahfunk'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Bowery Boys - Action-packed NYC history and cultural adventures'
@@ -23588,7 +23587,7 @@
                 'icon' = 'https://www.wnyc.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23612,7 +23611,7 @@
                     'URL' = 'https://www.nyit.edu/news/'
                     'icon' = 'https://www.nyit.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New York Focus Tech - Critical views on innovation ethics and equity'
@@ -23630,7 +23629,7 @@
                     'icon' = 'https://gothamist.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Cleo Abram - Optimistic tech videos on future innovations and science'
@@ -23652,7 +23651,7 @@
                 'URL' = 'https://www.youtube.com/c/newyorkhallofscience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hard Fork - NYT future of tech AI and digital world discussions'
@@ -23670,7 +23669,7 @@
                 'icon' = 'https://www.sciencefriday.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23694,7 +23693,7 @@
                     'URL' = 'https://www.nysun.com/'
                     'icon' = 'https://www.nysun.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'New York Focus Politics - Nonprofit transparency and government accountability'
@@ -23712,7 +23711,7 @@
                     'icon' = 'https://www.villagevoice.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'MeidasTouch - Pro-democracy breaking news politics and law videos'
@@ -23734,7 +23733,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLcuHpcV2MbFhA0Ed6W2GbT5QryGTZEEte'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Max Politics - In-depth NY officials candidates and advocates interviews'
@@ -23752,7 +23751,7 @@
                 'icon' = 'https://www.wnycstudios.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23776,7 +23775,7 @@
                     'URL' = 'https://www.harpersbazaar.com/'
                     'icon' = 'https://www.harpersbazaar.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Primadonna Zine - Inclusive self-expression and alternative fashion'
@@ -23794,7 +23793,7 @@
                     'icon' = 'https://gothicrenaissance.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Monroe Steele - Fashion week vlogs parties and styling tips'
@@ -23816,7 +23815,7 @@
                 'URL' = 'https://www.youtube.com/@laurennorris'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Dressed: The History of Fashion - Stories on clothing evolution and culture'
@@ -23834,7 +23833,7 @@
                 'icon' = 'https://www.glossy.co/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -23858,7 +23857,7 @@
                     'URL' = 'https://breakingdefense.com/'
                     'icon' = 'https://breakingdefense.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Task and Purpose - Military news culture and veteran analysis'
@@ -23876,7 +23875,7 @@
                     'icon' = 'https://www.thecity.nyc/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nikko Ortiz - Army veteran daily fun laughter and insights'
@@ -23898,7 +23897,7 @@
                 'URL' = 'https://www.youtube.com/jamesonstravels'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'SITREP NYC - NYC veterans stories inspiration and information'
@@ -23956,7 +23955,7 @@
                 'URL' = 'https://www.wral.com/'
                 'icon' = 'https://www.wral.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'INDY Week - Progressive commentary on Raleigh-Durham culture and politics'
@@ -23983,7 +23982,7 @@
                 'URL' = 'https://www.yesweekly.com/'
                 'icon' = 'https://www.yesweekly.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'NC Newsline - Progressive voice on NC politics and social issues'
@@ -24001,7 +24000,7 @@
                 'icon' = 'https://www.peacemakeronline.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WCNC Charlotte - Breaking news weather and local stories from North Carolina'
@@ -24028,7 +24027,7 @@
             'URL' = 'https://www.youtube.com/user/newsobserver'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Threadbanger - Videos on Asheville arts events and independent NC stories'
@@ -24050,7 +24049,7 @@
             'URL' = 'https://www.youtube.com/@DrexLee'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'WRAL Daily Download - Daily headlines and deeper dives on NC news'
@@ -24077,7 +24076,7 @@
             'URL' = 'https://www.wunc.org/podcast/podcast-wuncpolitics'
             'icon' = 'https://www.wunc.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The NC Everything Podcast - Curious takes on NC political system'
@@ -24099,7 +24098,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-legal-eagle-review/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24123,7 +24122,7 @@
                     'URL' = 'https://www.commerce.nc.gov/news'
                     'icon' = 'https://www.commerce.nc.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NC Newsline Business - Scrutiny of state economic policies'
@@ -24141,7 +24140,7 @@
                     'icon' = 'https://www.theassemblync.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NC Department of Commerce - Conversations with local business leaders'
@@ -24163,7 +24162,7 @@
                 'URL' = 'https://www.youtube.com/@EDPNC'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Business North Carolina Podcast - Insights on business trends and leadership'
@@ -24181,7 +24180,7 @@
                 'icon' = 'https://www.commerce.nc.gov/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24205,7 +24204,7 @@
                     'URL' = 'https://www.charlotteobserver.com/sports/'
                     'icon' = 'https://www.charlotteobserver.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Inside Carolina - Independent takes on Tar Heels recruiting and coaching'
@@ -24223,7 +24222,7 @@
                     'icon' = 'https://www.accsports.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UNC Athletics - Highlights and reactions to Tar Heels sports games'
@@ -24245,7 +24244,7 @@
                 'URL' = 'https://www.youtube.com/user/ACCDN'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Inside Carolina Podcast - Analysis of UNC Tar Heels athletics'
@@ -24263,7 +24262,7 @@
                 'icon' = 'https://goheels.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24287,7 +24286,7 @@
                     'URL' = 'https://mountainx.com/arts'
                     'icon' = 'https://mountainx.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Assembly Culture - Critiques of arts policies and society'
@@ -24305,7 +24304,7 @@
                     'icon' = 'https://carolinapublicpress.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NC Travel and Tourism - Explorations of NC culture and history'
@@ -24327,7 +24326,7 @@
                 'URL' = 'https://www.youtube.com/@indyweek'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arts Across NC - Introductions to diverse NC communities'
@@ -24345,7 +24344,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24369,7 +24368,7 @@
                     'URL' = 'https://www.rtp.org/news'
                     'icon' = 'https://www.rtp.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NC Newsline Tech - Critical views on research ethics'
@@ -24387,7 +24386,7 @@
                     'icon' = 'https://www.theassemblync.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NC State Engineering - Insights on state innovation hubs'
@@ -24409,7 +24408,7 @@
                 'URL' = 'https://www.youtube.com/user/PBSNorthCarolina'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Audio Abstract - Conversations on NC tech ecosystem'
@@ -24427,7 +24426,7 @@
                 'icon' = 'https://www.riotnc.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24451,7 +24450,7 @@
                     'URL' = 'https://www.carolinajournal.com/'
                     'icon' = 'https://www.carolinajournal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NC Newsline Politics - Independent commentary on NC political insiders'
@@ -24469,7 +24468,7 @@
                     'icon' = 'https://carolinapublicpress.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WRAL Capitol Bureau - Discussions on state politics and leadership'
@@ -24491,7 +24490,7 @@
                 'URL' = 'https://www.youtube.com/@DoPoliticsBetter'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Do Politics Better - Insightful dives into state political headlines'
@@ -24509,7 +24508,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24533,7 +24532,7 @@
                     'URL' = 'https://mountainx.com/tag/fashion/'
                     'icon' = 'https://mountainx.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NC Newsline Fashion - Critiques of industry ethics and diversity'
@@ -24551,7 +24550,7 @@
                     'icon' = 'https://carolinapublicpress.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NC Fashion Week Vlog - Hauls styling and trend breakdowns'
@@ -24573,7 +24572,7 @@
                 'URL' = 'https://www.youtube.com/@ashevillestyle'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Arts Across NC Fashion - Talks on city design and weeks'
@@ -24591,7 +24590,7 @@
                 'icon' = 'https://www.wunc.org/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24615,7 +24614,7 @@
                     'URL' = 'https://www.fayobserver.com/news/military/'
                     'icon' = 'https://www.fayobserver.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NC Newsline Military - Independent scrutiny of veteran deployments'
@@ -24633,7 +24632,7 @@
                     'icon' = 'https://www.theassemblync.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NC Army National Guard - Official training and community service videos'
@@ -24655,7 +24654,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexampleNCVets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fayetteville 411 - Discussions on veteran legislation and assistance'
@@ -24713,7 +24712,7 @@
                 'URL' = 'https://www.grandforksherald.com/'
                 'icon' = 'https://www.grandforksherald.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'North Dakota Monitor - Nonprofit nonpartisan statewide news commentary insight'
@@ -24740,7 +24739,7 @@
                 'URL' = 'https://www.inforum.com/'
                 'icon' = 'https://www.inforum.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'High Plains Reader - Progressive arts music social issues voice Fargo ND'
@@ -24758,7 +24757,7 @@
                 'icon' = 'https://www.prairiepublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KX News - Breaking news weather local Bismarck Minot stories'
@@ -24785,7 +24784,7 @@
             'URL' = 'https://www.youtube.com/user/inforum'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Living in North Dakota with Alyssa - In-depth political policy video breakdowns'
@@ -24807,7 +24806,7 @@
             'URL' = 'https://www.youtube.com/channel/UCexampleNDVlog'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Plain Talk - Daily ND headlines community insights'
@@ -24834,7 +24833,7 @@
             'URL' = 'https://www.iheart.com/podcast/news-views-with-joel-heitkamp-47961064/'
             'icon' = 'https://www.iheart.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Dakota Spotlight - History culture mining local events'
@@ -24856,7 +24855,7 @@
             'URL' = 'https://lesserknownnmpod.substack.com/'
             'icon' = 'https://substack.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24880,7 +24879,7 @@
                     'URL' = 'https://www.commerce.nd.gov/news'
                     'icon' = 'https://www.commerce.nd.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'North Dakota Monitor Business - Scrutiny economic policies state impacts'
@@ -24898,7 +24897,7 @@
                     'icon' = 'https://hpr1.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Williston Works - Business owners entrepreneurs startups stories'
@@ -24920,7 +24919,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC1iFF0M7xXVXhkfeUrjbATg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Williston Works - Insider running ND business perspectives'
@@ -24938,7 +24937,7 @@
                 'icon' = 'https://dakotabusinesslending.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -24962,7 +24961,7 @@
                     'URL' = 'https://www.grandforksherald.com/sports'
                     'icon' = 'https://www.grandforksherald.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Midco Sports ND - Betting futures contracts legal analysis'
@@ -24980,7 +24979,7 @@
                     'icon' = 'https://www.minotdailynews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UND Insider - Game highlights analysis reporter features'
@@ -25002,7 +25001,7 @@
                 'URL' = 'https://www.youtube.com/user/fightinghawks'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'UND Hockey Podcast - Analysis of North Dakota Fighting Hawks athletics'
@@ -25020,7 +25019,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25044,7 +25043,7 @@
                     'URL' = 'https://www.hcn.org/topic/north-dakota'
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Plains Reader Culture - Progressive arts identities perspectives'
@@ -25062,7 +25061,7 @@
                     'icon' = 'https://www.newscoopnd.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Travel North Dakota - Folk traditional artists landscape videos'
@@ -25084,7 +25083,7 @@
                 'URL' = 'https://www.youtube.com/user/scottcramer'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Dakota Datebook - Indigenous peoples culture perseverance series'
@@ -25102,7 +25101,7 @@
                 'icon' = 'https://www.history.nd.gov/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25126,7 +25125,7 @@
                     'URL' = 'https://ndepscor.ndus.edu/news-and-notes'
                     'icon' = 'https://ndepscor.ndus.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'North Dakota Monitor Tech - Critical views on research ethics'
@@ -25144,7 +25143,7 @@
                     'icon' = 'https://hpr1.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NDSU Research - Insights on state innovation hubs'
@@ -25166,7 +25165,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCexampleNDEPSCoR'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'NSF Engines FARMS - Conversations on ND tech ecosystem'
@@ -25184,7 +25183,7 @@
                 'icon' = 'https://blogs.und.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25208,7 +25207,7 @@
                     'URL' = 'https://bismarcktribune.com/news/local/government-politics/'
                     'icon' = 'https://bismarcktribune.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'ND News Cooperative Politics - Independent political insiders commentary'
@@ -25226,7 +25225,7 @@
                     'icon' = 'https://www.prairiepublic.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ND Secretary of State - Political leadership profiles discussions'
@@ -25248,7 +25247,7 @@
                 'URL' = 'https://www.youtube.com/c/SenatorJohnHoeven'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Plain Talk - Issues policies shaping ND state'
@@ -25266,7 +25265,7 @@
                 'icon' = 'https://www.iheart.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25290,7 +25289,7 @@
                     'URL' = 'https://www.kfyrtv.com/2024/05/02/up-hear-gear-proves-being-north-dakota-proud-is-fashion-statement/'
                     'icon' = 'https://www.kfyrtv.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'ND Monitor Fashion - Industry ethics diversity critiques'
@@ -25308,7 +25307,7 @@
                     'icon' = 'https://www.prairiepublic.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Olivia Simone Vlogs - Hauls styling and trend breakdowns'
@@ -25330,7 +25329,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC1iFF0M7xXVXhkfeUrjbATg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'AthenaStirs Aprons - Talks on city design and weeks'
@@ -25348,7 +25347,7 @@
                 'icon' = 'https://feelingsand.co/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25372,7 +25371,7 @@
                     'URL' = 'https://www.minotdailynews.com/life/military/'
                     'icon' = 'https://www.minotdailynews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Task and Purpose - Independent scrutiny of veteran deployments'
@@ -25390,7 +25389,7 @@
                     'icon' = 'https://www.newscoopnd.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'ND National Guard - Official training community service videos'
@@ -25412,7 +25411,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexampleNDMilitary'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Da Guards - Discussions on veteran legislation and assistance'
@@ -25470,7 +25469,7 @@
                 'URL' = 'https://www.wkyc.com/'
                 'icon' = 'https://www.wkyc.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Ohio Capital Journal - Nonprofit investigations on Ohio issues and stories'
@@ -25497,7 +25496,7 @@
                 'URL' = 'https://matternews.org/'
                 'icon' = 'https://matternews.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Cleveland Scene - Progressive voice on Cleveland arts music and social issues'
@@ -25515,7 +25514,7 @@
                 'icon' = 'https://www.citybeat.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = '10TV WBNS - Breaking news weather and local stories from Ohio'
@@ -25542,7 +25541,7 @@
             'URL' = 'https://www.youtube.com/user/WCPO'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Ohio Capital Journal - Videos on arts events and independent Ohio stories'
@@ -25564,7 +25563,7 @@
             'URL' = 'https://www.youtube.com/@MatterNews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Today in Ohio - Daily headlines and deeper dives on Ohio news'
@@ -25591,7 +25590,7 @@
             'URL' = 'https://www.statenews.org/podcast/today-from-the-ohio-newsroom'
             'icon' = 'https://www.statenews.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Ohio Politics Explained - Curious takes on Ohio political system'
@@ -25613,7 +25612,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/news-in-focus-with-chris-long/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25637,7 +25636,7 @@
                     'URL' = 'https://sbnonline.com/'
                     'icon' = 'https://sbnonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Ohio Capital Journal Business - Scrutiny of state economic policies'
@@ -25655,7 +25654,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio Business Media - Conversations with local business leaders'
@@ -25677,7 +25676,7 @@
                 'URL' = 'https://www.youtube.com/@smartbusiness'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Down To Business - Insights on business trends and leadership'
@@ -25695,7 +25694,7 @@
                 'icon' = 'https://www.ohiochamber.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25719,7 +25718,7 @@
                     'URL' = 'https://ohiostatebuckeyes.com/'
                     'icon' = 'https://ohiostatebuckeyes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '247Sports Ohio State - Independent takes on Buckeyes recruiting and coaching'
@@ -25737,7 +25736,7 @@
                     'icon' = 'https://lettermenrow.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio State Buckeyes - Highlights and reactions to Buckeyes sports games'
@@ -25759,7 +25758,7 @@
                 'URL' = 'https://www.youtube.com/@ohiosportsradio'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Locked On Buckeyes - Analysis of Ohio State Buckeyes athletics'
@@ -25777,7 +25776,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25801,7 +25800,7 @@
                     'URL' = 'https://www.ideastream.org/arts-culture'
                     'icon' = 'https://www.ideastream.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Cleveland Scene Culture - Critiques of arts policies and society'
@@ -25819,7 +25818,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio Travel - Explorations of Ohio culture and history'
@@ -25841,7 +25840,7 @@
                 'URL' = 'https://www.youtube.com/@citybeatcincinnati'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Ohio Country - Introductions to diverse Ohio communities'
@@ -25859,7 +25858,7 @@
                 'icon' = 'https://evergreenpodcasts.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25883,7 +25882,7 @@
                     'URL' = 'https://www.osc.edu/press'
                     'icon' = 'https://www.osc.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Ohio Capital Journal Tech - Critical views on research ethics'
@@ -25901,7 +25900,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio State IT - Insights on state innovation hubs'
@@ -25923,7 +25922,7 @@
                 'URL' = 'https://www.youtube.com/user/case'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Built in Ohio - Conversations on Ohio tech ecosystem'
@@ -25941,7 +25940,7 @@
                 'icon' = 'https://nerctechprep.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -25965,7 +25964,7 @@
                     'URL' = 'https://www.dispatch.com/news/politics/'
                     'icon' = 'https://www.dispatch.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Signal Ohio Politics - Independent commentary on Ohio political insiders'
@@ -25983,7 +25982,7 @@
                     'icon' = 'https://www.clevescene.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio Capital Journal - Discussions on state politics and leadership'
@@ -26005,7 +26004,7 @@
                 'URL' = 'https://www.youtube.com/@OhioPoliticsExplained'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Snollygoster - Insightful dives into state political headlines'
@@ -26023,7 +26022,7 @@
                 'icon' = 'https://www.statenews.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26047,8 +26046,8 @@
                     'URL' = 'https://columbusfashion.org/'
                     'icon' = 'https://columbusfashion.org/favicon.ico'
                 }
-            ),
-            'Counter' = (
+            )
+            'Counter' = @(
                 @{
                     'Title' = 'Ohio Capital Journal Fashion - Critiques of industry ethics and diversity'
                     'URL' = 'https://ohiocapitaljournal.com/tag/fashion/'
@@ -26065,7 +26064,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Fashion Week Columbus - Hauls styling and trend breakdowns'
@@ -26087,7 +26086,7 @@
                 'URL' = 'https://www.youtube.com/@clevelandstyle'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'What Matters with Mindy - Talks on city design and weeks'
@@ -26105,7 +26104,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26129,7 +26128,7 @@
                     'URL' = 'https://www.militarytimes.com/tag/ohio/'
                     'icon' = 'https://www.militarytimes.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Ohio Capital Journal Military - Independent scrutiny of veteran deployments'
@@ -26147,7 +26146,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ohio Army National Guard - Official training and community service videos'
@@ -26169,7 +26168,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexampleOhioMilitary'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Ohio Podcast - Discussions on veteran legislation and assistance'
@@ -26227,7 +26226,7 @@
                 'URL' = 'https://www.kjrh.com/'
                 'icon' = 'https://www.kjrh.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Oklahoma Voice - Nonprofit investigations on Oklahoma issues and stories'
@@ -26254,7 +26253,7 @@
                 'URL' = 'https://www.readfrontier.org/'
                 'icon' = 'https://www.readfrontier.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Oklahoma Gazette - Progressive voice on Oklahoma arts music and social issues'
@@ -26272,7 +26271,7 @@
                 'icon' = 'https://freepressokc.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KFOR Oklahoma''s News 4 - Breaking news weather and local Oklahoma stories'
@@ -26299,7 +26298,7 @@
             'URL' = 'https://www.youtube.com/channel/UChrpaYlmaVsVyEF0bTqmuHw'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Oklahoma Voice - In-depth political policy video breakdowns'
@@ -26321,7 +26320,7 @@
             'URL' = 'https://www.youtube.com/@thefrontierok'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The KOSU Daily - Daily Oklahoma headlines community insights'
@@ -26348,7 +26347,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/trumpet-daily/id1449473116'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Voices of Oklahoma - History culture mining local events'
@@ -26370,7 +26369,7 @@
             'URL' = 'https://www.npr.org/podcasts/595237233/how-curious'
             'icon' = 'https://www.npr.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26394,7 +26393,7 @@
                     'URL' = 'https://www.velocityokc.com/'
                     'icon' = 'https://www.velocityokc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oklahoma Voice Business - Scrutiny economic policies state impacts'
@@ -26412,7 +26411,7 @@
                     'icon' = 'https://www.readfrontier.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oklahoma Business Show - Business owners entrepreneurs startups stories'
@@ -26434,7 +26433,7 @@
                 'URL' = 'https://www.youtube.com/@thisisoklahoma'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Oklahoma Business Show - Insider running Oklahoma business perspectives'
@@ -26452,7 +26451,7 @@
                 'icon' = 'https://www.michaeldmorrison.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26476,7 +26475,7 @@
                     'URL' = 'https://kfor.com/sports/'
                     'icon' = 'https://kfor.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pistols Firing - Independent OSU Cowboys recruiting and coaching'
@@ -26494,7 +26493,7 @@
                     'icon' = 'https://okcthunderwire.usatoday.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oklahoma Sooners - Highlights and reactions to Sooners sports games'
@@ -26516,7 +26515,7 @@
                 'URL' = 'https://www.youtube.com/@soonersports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sooner Sports Podcast - Analysis of Oklahoma Sooners athletics'
@@ -26534,7 +26533,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26558,7 +26557,7 @@
                     'URL' = 'https://www.405magazine.com/category/culture-events/arts-culture/'
                     'icon' = 'https://www.405magazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NonDoc Culture - Critiques of arts policies and society'
@@ -26576,7 +26575,7 @@
                     'icon' = 'https://oklahomavoice.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'This is Oklahoma - Explorations of Oklahoma culture and history'
@@ -26598,7 +26597,7 @@
                 'URL' = 'https://www.youtube.com/@okgazette'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This is Oklahoma - Introductions to diverse Oklahoma communities'
@@ -26616,7 +26615,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26640,7 +26639,7 @@
                     'URL' = 'https://www.kgou.org/science-technology-and-environment'
                     'icon' = 'https://www.kgou.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oklahoma Voice Tech - Critical views on research ethics'
@@ -26658,7 +26657,7 @@
                     'icon' = 'https://www.readfrontier.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'OU Innovation - Insights on state innovation hubs'
@@ -26680,7 +26679,7 @@
                 'URL' = 'https://www.youtube.com/@kgou'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Innovate That - Conversations on Oklahoma tech ecosystem'
@@ -26698,7 +26697,7 @@
                 'icon' = 'https://oklahoma.gov/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26722,7 +26721,7 @@
                     'URL' = 'https://nondoc.com/tag/politics/'
                     'icon' = 'https://nondoc.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Frontier Politics - Independent commentary on Oklahoma political insiders'
@@ -26740,7 +26739,7 @@
                     'icon' = 'https://www.okgazette.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oklahoma Voice - Discussions on state politics and leadership'
@@ -26762,7 +26761,7 @@
                 'URL' = 'https://www.youtube.com/@capitolbeatok'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'This Week in Oklahoma Politics - Insightful dives into state political headlines'
@@ -26780,7 +26779,7 @@
                 'icon' = 'https://ocpathink.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26804,7 +26803,7 @@
                     'URL' = 'http://www.hauteohio.com/'
                     'icon' = 'http://www.hauteohio.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'NonDoc Fashion - Critiques of industry ethics and diversity'
@@ -26822,7 +26821,7 @@
                     'icon' = 'https://www.readfrontier.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Fashion Friday with Courtney - Hauls styling and trend breakdowns'
@@ -26844,7 +26843,7 @@
                 'URL' = 'https://www.youtube.com/@okcfashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Oklahoma Today Podcast - Talks on city design and weeks'
@@ -26862,7 +26861,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -26886,7 +26885,7 @@
                     'URL' = 'https://www.kswo.com/news/military/'
                     'icon' = 'https://www.kswo.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oklahoma Voice Military - Independent scrutiny of veteran deployments'
@@ -26904,7 +26903,7 @@
                     'icon' = 'https://www.readfrontier.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oklahoma National Guard - Official training and community service videos'
@@ -26926,7 +26925,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCMvoX5J1eNuge4UAZHySFrA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The OK Guard Show - Discussions on veteran legislation and assistance'
@@ -26984,7 +26983,7 @@
                 'URL' = 'https://www.kgw.com/'
                 'icon' = 'https://www.kgw.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Portland Mercury - Progressive commentary on Portland culture and politics'
@@ -27011,7 +27010,7 @@
                 'URL' = 'https://www.bendsource.com/'
                 'icon' = 'https://www.bendsource.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Portland Mercury - Progressive voice on Portland arts music and social issues'
@@ -27029,7 +27028,7 @@
                 'icon' = 'https://www.streetroots.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KGW News - Breaking news weather and local stories from Oregon'
@@ -27056,7 +27055,7 @@
             'URL' = 'https://www.youtube.com/channel/UCW_2j6G1Kx1x2x3x4x5x6x7'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Oregon Capital Chronicle - Videos on arts events and independent Oregon stories'
@@ -27078,7 +27077,7 @@
             'URL' = 'https://www.youtube.com/@streetroots'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Beat Check with The Oregonian - Daily headlines and deeper dives on Oregon news'
@@ -27105,7 +27104,7 @@
             'URL' = 'https://oregonbridgepodcast.podbean.com/'
             'icon' = 'https://podbean.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Welcome To Oregon - Curious takes on Oregon political system'
@@ -27127,7 +27126,7 @@
             'URL' = 'https://oregonhumanities.org/rll/podcast/'
             'icon' = 'https://oregonhumanities.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27151,7 +27150,7 @@
                     'URL' = 'https://www.oregon.gov/biz/newsroom/pages/default.aspx'
                     'icon' = 'https://www.oregon.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oregon Capital Chronicle Business - Scrutiny of state economic policies'
@@ -27169,7 +27168,7 @@
                     'icon' = 'https://www.portlandmercury.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oregon Entrepreneurs Network - Conversations with local business leaders'
@@ -27191,7 +27190,7 @@
                 'URL' = 'https://www.youtube.com/@oregonbusinessindustry7097'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Oregon Business Matters - Insights on business trends and leadership'
@@ -27209,7 +27208,7 @@
                 'icon' = 'https://www.npr.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27233,7 +27232,7 @@
                     'URL' = 'https://goducks.com/'
                     'icon' = 'https://goducks.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'DuckTerritory - Independent takes on Ducks recruiting and coaching'
@@ -27251,7 +27250,7 @@
                     'icon' = 'https://fishduck.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'GoDucks - Highlights and reactions to Ducks sports games'
@@ -27273,7 +27272,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCra-NCIxn2Xl3Ssr5kqvuYA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Oregon Sports Network - Analysis of Oregon Ducks athletics'
@@ -27291,7 +27290,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27315,7 +27314,7 @@
                     'URL' = 'https://www.bendsource.com/'
                     'icon' = 'https://www.bendsource.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Portland Mercury Culture - Critiques of arts policies and society'
@@ -27333,7 +27332,7 @@
                     'icon' = 'https://www.wweek.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Here is Oregon - Explorations of Oregon culture and history'
@@ -27355,7 +27354,7 @@
                 'URL' = 'https://www.youtube.com/@portlandunderground'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Welcome To Oregon - Introductions to diverse Oregon communities'
@@ -27373,7 +27372,7 @@
                 'icon' = 'https://oregonhumanities.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27397,7 +27396,7 @@
                     'URL' = 'https://www.techoregon.org/'
                     'icon' = 'https://www.techoregon.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oregon Capital Chronicle Tech - Critical views on research ethics'
@@ -27415,7 +27414,7 @@
                     'icon' = 'https://www.portlandmercury.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oregon Tech - Insights on state innovation hubs'
@@ -27437,7 +27436,7 @@
                 'URL' = 'https://www.youtube.com/c/TechOregon'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Techlandia - Conversations on Oregon tech ecosystem'
@@ -27455,7 +27454,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27479,7 +27478,7 @@
                     'URL' = 'https://oregoncapitalinsider.com/'
                     'icon' = 'https://oregoncapitalinsider.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Willamette Week Politics - Independent commentary on Oregon political insiders'
@@ -27497,7 +27496,7 @@
                     'icon' = 'https://www.streetroots.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'OPB Politics Now - Discussions on state politics and leadership'
@@ -27519,7 +27518,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=OHfk2vfSGac'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'OPB Politics Now - Insightful dives into state political headlines'
@@ -27537,7 +27536,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27561,7 +27560,7 @@
                     'URL' = 'https://www.opb.org/tag/fashion/'
                     'icon' = 'https://www.opb.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Portland Mercury Fashion - Critiques of industry ethics and diversity'
@@ -27579,7 +27578,7 @@
                     'icon' = 'https://www.streetroots.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Portland Fashion Institute - Hauls styling and trend breakdowns'
@@ -27601,7 +27600,7 @@
                 'URL' = 'https://www.youtube.com/user/alwaysfreshapparel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Align on Air - Talks on city design and weeks'
@@ -27619,7 +27618,7 @@
                 'icon' = 'https://clotheshorsepodcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27643,7 +27642,7 @@
                     'URL' = 'https://www.dvidshub.net/publication/204/oregon-sentinel'
                     'icon' = 'https://www.dvidshub.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Oregon Capital Chronicle Military - Independent scrutiny of veteran deployments'
@@ -27661,7 +27660,7 @@
                     'icon' = 'https://www.portlandmercury.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Oregon National Guard - Official training and community service videos'
@@ -27683,7 +27682,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCMvoX5J1eNuge4UAZHySFrA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hope in the Trenches - Discussions on veteran legislation and assistance'
@@ -27741,7 +27740,7 @@
                 'URL' = 'https://www.goerie.com/'
                 'icon' = 'https://www.goerie.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Spotlight PA - Nonprofit investigations on Pennsylvania issues and stories'
@@ -27768,7 +27767,7 @@
                 'URL' = 'https://www.witf.org/'
                 'icon' = 'https://www.witf.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Philadelphia City Paper - Progressive voice on Philadelphia arts music and social issues'
@@ -27786,7 +27785,7 @@
                 'icon' = 'https://pennsylvaniaindependent.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = '6ABC Philadelphia - Breaking news weather and local stories from Pennsylvania'
@@ -27813,7 +27812,7 @@
             'URL' = 'https://www.youtube.com/@WHYY'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Pennsylvania Capital-Star - Videos on arts events and independent Pennsylvania stories'
@@ -27835,7 +27834,7 @@
             'URL' = 'https://www.youtube.com/user/witf'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Spotlight PA - Daily headlines and deeper dives on Pennsylvania news'
@@ -27862,7 +27861,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/pennsylvania-newsroom/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Pennsylvania Capital-Star - Curious takes on Pennsylvania political system'
@@ -27884,7 +27883,7 @@
             'URL' = 'https://witf.org/podcasts/smart-talk/'
             'icon' = 'https://witf.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27908,7 +27907,7 @@
                     'URL' = 'https://dced.pa.gov/newsroom/'
                     'icon' = 'https://dced.pa.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Spotlight PA Business - Scrutiny of state economic policies'
@@ -27926,7 +27925,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Philadelphia Business Journal - Conversations with local business leaders'
@@ -27948,7 +27947,7 @@
                 'URL' = 'https://www.youtube.com/@DCEDPA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Philadelphia Business Journal Podcast - Insights on business trends and leadership'
@@ -27966,7 +27965,7 @@
                 'icon' = 'https://www.cpbj.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -27990,7 +27989,7 @@
                     'URL' = 'https://www.inquirer.com/sports/'
                     'icon' = 'https://www.inquirer.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Liberty Ballers - Independent takes on Sixers recruiting and coaching'
@@ -28008,7 +28007,7 @@
                     'icon' = 'https://www.blackshoediaries.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Philadelphia Eagles - Highlights and reactions to Eagles sports games'
@@ -28030,7 +28029,7 @@
                 'URL' = 'https://www.youtube.com/@PhillySportsNation'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Bleeding Green Nation - Analysis of Philadelphia Eagles athletics'
@@ -28048,7 +28047,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28072,7 +28071,7 @@
                     'URL' = 'https://witf.org/arts-culture/'
                     'icon' = 'https://witf.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Philadelphia City Paper Culture - Critiques of arts policies and society'
@@ -28090,7 +28089,7 @@
                     'icon' = 'https://pennsylvaniaindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Visit Philly - Explorations of Pennsylvania culture and history'
@@ -28112,7 +28111,7 @@
                 'URL' = 'https://www.youtube.com/user/witf'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Pennsylvania Humanities Council - Introductions to diverse Pennsylvania communities'
@@ -28130,7 +28129,7 @@
                 'icon' = 'https://witf.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28154,7 +28153,7 @@
                     'URL' = 'https://dced.pa.gov/technology-innovation/'
                     'icon' = 'https://dced.pa.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Spotlight PA Tech - Critical views on research ethics'
@@ -28172,7 +28171,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Penn State Engineering - Insights on state innovation hubs'
@@ -28194,7 +28193,7 @@
                 'URL' = 'https://www.youtube.com/@DCEDPA'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Penn State Podcast - Conversations on Pennsylvania tech ecosystem'
@@ -28212,7 +28211,7 @@
                 'icon' = 'https://innovation.temple.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28236,7 +28235,7 @@
                     'URL' = 'https://www.post-gazette.com/news/politics-state/'
                     'icon' = 'https://www.post-gazette.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Matter News Politics - Independent commentary on Pennsylvania political insiders'
@@ -28254,7 +28253,7 @@
                     'icon' = 'https://www.pghcitypaper.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Spotlight PA - Discussions on state politics and leadership'
@@ -28276,7 +28275,7 @@
                 'URL' = 'https://www.youtube.com/@PennsylvaniaPressroom'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Spotlight PA - Insightful dives into state political headlines'
@@ -28294,7 +28293,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28318,7 +28317,7 @@
                     'URL' = 'https://columbusfashion.org/'
                     'icon' = 'https://columbusfashion.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Philadelphia City Paper Fashion - Critiques of industry ethics and diversity'
@@ -28336,7 +28335,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Pennsylvania Fashion Week - Hauls styling and trend breakdowns'
@@ -28358,7 +28357,7 @@
                 'URL' = 'https://www.youtube.com/@harrisburgfashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Philly Mag Style Podcast - Talks on city design and weeks'
@@ -28376,7 +28375,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28400,7 +28399,7 @@
                     'URL' = 'https://www.post-gazette.com/news/military/'
                     'icon' = 'https://www.post-gazette.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Spotlight PA Military - Independent scrutiny of veteran deployments'
@@ -28418,7 +28417,7 @@
                     'icon' = 'https://matternews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Pennsylvania Army National Guard - Official training and community service videos'
@@ -28440,7 +28439,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexamplePAVets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VFW Pennsylvania Podcast - Discussions on veteran legislation and assistance'
@@ -28498,7 +28497,7 @@
                 'URL' = 'https://www.valleybreeze.com/'
                 'icon' = 'https://www.valleybreeze.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Rhode Island Current - Independent nonprofit state government policy news'
@@ -28525,7 +28524,7 @@
                 'URL' = 'https://upriseri.com/'
                 'icon' = 'https://upriseri.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Portland Mercury - Progressive Portland arts music social issues voice'
@@ -28543,7 +28542,7 @@
                 'icon' = 'https://www.streetroots.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WPRI 12 News - Breaking news weather local Rhode Island stories'
@@ -28570,7 +28569,7 @@
             'URL' = 'https://www.youtube.com/@GoLocalProv'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Where is 401 - In-depth political policy video breakdowns'
@@ -28592,7 +28591,7 @@
             'URL' = 'https://www.youtube.com/@rhodeislandnative'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Newsmakers WPRI - Daily headlines deeper dives RI news'
@@ -28619,7 +28618,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/warwick-radio-online/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Weird Island - Curious takes RI political system'
@@ -28641,7 +28640,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-other-side-of-midnight/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28665,7 +28664,7 @@
                     'URL' = 'https://whatsgoingoninrhodeisland.com/category/business/'
                     'icon' = 'https://whatsgoingoninrhodeisland.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'RI Current Business - Nonprofit RI business policy news'
@@ -28683,7 +28682,7 @@
                     'icon' = 'https://www.independentri.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Meet RI Businesses - Shop local RI business videos'
@@ -28705,7 +28704,7 @@
                 'URL' = 'https://www.youtube.com/@Whereis401'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Rhode Island Small Business Forum - RI small business topics'
@@ -28723,7 +28722,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28747,7 +28746,7 @@
                     'URL' = 'https://www.abc6.com/sports/'
                     'icon' = 'https://www.abc6.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Independent RI Sports - Independent RI high school recruiting analysis'
@@ -28765,7 +28764,7 @@
                     'icon' = 'https://www.thewesterlysun.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'URI Athletics - Game highlights behind-scenes fan content'
@@ -28787,7 +28786,7 @@
                 'URL' = 'https://www.youtube.com/@RhodeIslandFC'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The 401 Podcast - RI sports analysis interviews'
@@ -28805,7 +28804,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28829,7 +28828,7 @@
                     'URL' = 'https://rihumanities.org/news/'
                     'icon' = 'https://rihumanities.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Motif Magazine Culture - Critiques arts policies society'
@@ -28847,7 +28846,7 @@
                     'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Where is 401 - RI cultural explorations festivals traditions'
@@ -28869,7 +28868,7 @@
                 'URL' = 'https://www.youtube.com/@RhodyFoody'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Rhode Island History Podcast - Introductions diverse RI communities'
@@ -28887,7 +28886,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28911,7 +28910,7 @@
                     'URL' = 'https://stac.ri.gov/news-events/'
                     'icon' = 'https://stac.ri.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'RI Current Tech - Critical views RI research ethics'
@@ -28929,7 +28928,7 @@
                     'icon' = 'https://upriseri.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'RI Life Science Hub - Insights state innovation hubs'
@@ -28951,7 +28950,7 @@
                 'URL' = 'https://www.youtube.com/@BrownUniversity'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'RI Life Science Hub - Conversations RI tech ecosystem'
@@ -28969,7 +28968,7 @@
                 'icon' = 'https://digitalcommons.risd.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -28993,7 +28992,7 @@
                     'URL' = 'https://www.wpri.com/news/politics/'
                     'icon' = 'https://www.wpri.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Uprise RI Politics - Independent commentary RI political insiders'
@@ -29011,7 +29010,7 @@
                     'icon' = 'https://ri.gop/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'State Sen David Tikoian - Discussions state politics leadership'
@@ -29033,7 +29032,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=AJKBdY9Nyic'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Rhode Island Report - Insightful dives state political headlines'
@@ -29051,7 +29050,7 @@
                 'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29075,7 +29074,7 @@
                     'URL' = 'https://fashionweekri.com/'
                     'icon' = 'https://fashionweekri.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Hey Rhody Fashion - Critiques industry ethics diversity'
@@ -29093,7 +29092,7 @@
                     'icon' = 'https://www.styleweeknortheast.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jackie Ignall - Hauls styling trend breakdowns'
@@ -29115,7 +29114,7 @@
                 'URL' = 'https://www.youtube.com/@sarahpatrick'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Styleweek Northeast - Talks city design weeks'
@@ -29133,7 +29132,7 @@
                 'icon' = 'https://heyrhody.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29157,7 +29156,7 @@
                     'URL' = 'https://ri.ng.mil/Press-Releases/'
                     'icon' = 'https://ri.ng.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'RI Current Military - Independent scrutiny veteran deployments'
@@ -29175,7 +29174,7 @@
                     'icon' = 'https://upriseri.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Rhode Island National Guard - Official training community videos'
@@ -29197,7 +29196,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=oaOsRujBv0I'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'RING Podcast - Discussions veteran legislation assistance'
@@ -29255,7 +29254,7 @@
                 'URL' = 'https://wpde.com/'
                 'icon' = 'https://wpde.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'FITSNews - Independent unapologetic SC news politics'
@@ -29282,7 +29281,7 @@
                 'URL' = 'https://www.palmettostatenews.net/'
                 'icon' = 'https://www.palmettostatenews.net/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Free Times - Progressive Columbia SC arts activism'
@@ -29300,7 +29299,7 @@
                 'icon' = 'https://towncarolina.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WIS News 10 - Columbia SC breaking news vlogs'
@@ -29327,7 +29326,7 @@
             'URL' = 'https://www.youtube.com/user/Live5News'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'SC Daily Gazette - SC investigative journalism videos'
@@ -29349,7 +29348,7 @@
             'URL' = 'https://www.youtube.com/@CarolinaPanorama'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'South Carolina Lede - Weekly SC news issues discussions'
@@ -29376,7 +29375,7 @@
             'URL' = 'https://holycitysinner.com/podcast/'
             'icon' = 'https://holycitysinner.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Bourbon in the Back Room - SC history politics insights'
@@ -29398,7 +29397,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/upstate-trail-talks/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29422,7 +29421,7 @@
                     'URL' = 'https://www.columbiabusinessmonthly.com/'
                     'icon' = 'https://www.columbiabusinessmonthly.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'SC Daily Gazette Business - Nonprofit SC economic policy scrutiny'
@@ -29440,7 +29439,7 @@
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SC Department of Commerce - Local business leaders conversations'
@@ -29462,7 +29461,7 @@
                 'URL' = 'https://www.youtube.com/@scbiznews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'SC Biz News Podcast - Business trends leadership insights'
@@ -29480,7 +29479,7 @@
                 'icon' = 'https://www.greenvillebusinessmag.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29504,7 +29503,7 @@
                     'URL' = 'https://www.postandcourier.com/sports/'
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'TheBigSpur Sports - Independent Gamecocks recruiting analysis'
@@ -29522,7 +29521,7 @@
                     'icon' = 'https://www.wistv.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Gamecocks Central - Gamecocks highlights reactions videos'
@@ -29544,7 +29543,7 @@
                 'URL' = 'https://www.youtube.com/@TheBigSpur'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'TheBigSpur Podcast - Gamecocks athletics analysis'
@@ -29562,7 +29561,7 @@
                 'icon' = 'https://sportstalksc.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29586,7 +29585,7 @@
                     'URL' = 'https://www.southcarolinaarts.com/'
                     'icon' = 'https://www.southcarolinaarts.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Free Times Culture - Progressive SC arts policy critiques'
@@ -29604,7 +29603,7 @@
                     'icon' = 'https://carolinanewsandreporter.cic.sc.edu/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SC Travel - SC culture history explorations'
@@ -29626,7 +29625,7 @@
                 'URL' = 'https://www.youtube.com/@greenvillejournal'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Charleston Time Machine - Diverse SC communities introductions'
@@ -29644,7 +29643,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29668,7 +29667,7 @@
                     'URL' = 'https://sc.edu/study/colleges_schools/engineering_and_computing/news_events/news/'
                     'icon' = 'https://sc.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'SC Daily Gazette Tech - Critical SC research ethics views'
@@ -29686,7 +29685,7 @@
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SC Department of Commerce Tech - State innovation hubs insights'
@@ -29708,7 +29707,7 @@
                 'URL' = 'https://www.youtube.com/@uscengineering'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'SCbio Podcast - SC tech ecosystem conversations'
@@ -29726,7 +29725,7 @@
                 'icon' = 'https://scra.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29750,7 +29749,7 @@
                     'URL' = 'https://www.statehousereport.com/'
                     'icon' = 'https://www.statehousereport.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'FITSNews Politics - Independent SC political commentary'
@@ -29768,7 +29767,7 @@
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WYFF Politics - SC politics leadership discussions'
@@ -29790,7 +29789,7 @@
                 'URL' = 'https://www.youtube.com/@SCDailyGazette'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'South Carolina Lede - State political headlines insightful dives'
@@ -29808,7 +29807,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29832,7 +29831,7 @@
                     'URL' = 'https://mountpleasantmagazine.com/style/'
                     'icon' = 'https://mountpleasantmagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Free Times Fashion - SC industry ethics diversity critiques'
@@ -29850,7 +29849,7 @@
                     'icon' = 'https://www.fitsnews.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Columbia Fashion Week - Hauls styling trend breakdowns'
@@ -29872,7 +29871,7 @@
                 'URL' = 'https://www.youtube.com/@scfashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'TOWN Carolina Style - City design weeks talks'
@@ -29890,7 +29889,7 @@
                 'icon' = 'https://www.postandcourier.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -29914,7 +29913,7 @@
                     'URL' = 'https://www.postandcourier.com/militarydigest/'
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'SC Daily Gazette Military - Veteran deployments independent scrutiny'
@@ -29932,7 +29931,7 @@
                     'icon' = 'https://www.postandcourier.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SC Army National Guard - Official training community videos'
@@ -29954,7 +29953,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexampleSCVets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'SC Guard Podcast - Veteran legislation assistance discussions'
@@ -30012,7 +30011,7 @@
                 'URL' = 'https://www.wate.com/'
                 'icon' = 'https://www.wate.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Nashville Scene - Alternative weekly arts politics and culture'
@@ -30039,7 +30038,7 @@
                 'URL' = 'https://tntribune.com/'
                 'icon' = 'https://tntribune.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Nashville Scene - Progressive voice on arts activism and issues'
@@ -30057,7 +30056,7 @@
                 'icon' = 'https://www.knoxmercury.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NewsChannel 5 Nashville - Breaking news weather and investigations'
@@ -30084,7 +30083,7 @@
             'URL' = 'https://www.youtube.com/user/WPLNNews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Move to Nashville Franklin - Tennessee lifestyle and relocation guides'
@@ -30106,7 +30105,7 @@
             'URL' = 'https://www.youtube.com/@NashvilleLifeVlogs'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'This Is Nashville - WPLN daily community driven news discussions'
@@ -30133,7 +30132,7 @@
             'URL' = 'https://www.wnpt.org/productions/tennessee-crossroads/'
             'icon' = 'https://www.wnpt.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Nashville Scene Podcast - Arts politics and culture deep dives'
@@ -30155,7 +30154,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/the-99-local-podcast/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30179,7 +30178,7 @@
                     'URL' = 'https://www.bizjournals.com/chattanooga'
                     'icon' = 'https://www.bizjournals.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tennessee Lookout Business - Scrutiny of economic policies and equity'
@@ -30197,7 +30196,7 @@
                     'icon' = 'https://www.memphisflyer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Nashville Entrepreneur - Middle Tennessee startup journeys and tours'
@@ -30219,7 +30218,7 @@
                 'URL' = 'https://www.youtube.com/@ChattanoogaChamber'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mostly Middle Tennessee Business Podcast - Entrepreneurs stories and success'
@@ -30237,7 +30236,7 @@
                 'icon' = 'https://www.gscipodcast.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30261,7 +30260,7 @@
                     'URL' = 'https://www.commercialappeal.com/sports/'
                     'icon' = 'https://www.commercialappeal.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Rocky Top Talk - Independent Vols fan analysis and recruiting'
@@ -30279,7 +30278,7 @@
                     'icon' = 'https://www.volreport.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Tennessee Athletics - Vols game highlights and behind-the-scenes'
@@ -30301,7 +30300,7 @@
                 'URL' = 'https://www.youtube.com/@KnoxvilleSports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'GoVols247 - Tennessee Volunteers athletics deep dives'
@@ -30319,7 +30318,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30343,7 +30342,7 @@
                     'URL' = 'https://www.pulsechattanooga.com/'
                     'icon' = 'https://www.pulsechattanooga.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nashville Scene Culture - Critiques of arts policies and narratives'
@@ -30361,7 +30360,7 @@
                     'icon' = 'https://tennesseelookout.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Move to Nashville - Tennessee traditions festivals and explorations'
@@ -30383,7 +30382,7 @@
                 'URL' = 'https://www.youtube.com/@YankeeintheSouth'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'StoryTown Radio - Tennessee history folklore and traditions'
@@ -30401,7 +30400,7 @@
                 'icon' = 'https://nashvillelifestyles.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30425,7 +30424,7 @@
                     'URL' = 'https://www.tntech.edu/engineering/news/'
                     'icon' = 'https://www.tntech.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tennessee Lookout Tech - Critical research ethics and impacts'
@@ -30443,7 +30442,7 @@
                     'icon' = 'https://www.memphisflyer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UT Knoxville Engineering - Campus labs and STEM breakthroughs'
@@ -30465,7 +30464,7 @@
                 'URL' = 'https://www.youtube.com/user/tennesseetech'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'UT Knoxville Science Podcast - Hot topics and research stories'
@@ -30483,7 +30482,7 @@
                 'icon' = 'https://www.ornl.gov/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30507,7 +30506,7 @@
                     'URL' = 'https://www.timesfreepress.com/news/politics/'
                     'icon' = 'https://www.timesfreepress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'FITSNews Politics - Independent watchdog on corruption and transparency'
@@ -30525,7 +30524,7 @@
                     'icon' = 'https://www.tennesseholler.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WKRN Politics - Tennessee candidate debates and breakdowns'
@@ -30547,7 +30546,7 @@
                 'URL' = 'https://www.youtube.com/@NashvilleBanner'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Outspoken With Pastor Bristol Smith - Tennessee political headlines and dives'
@@ -30565,7 +30564,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30589,7 +30588,7 @@
                     'URL' = 'https://chattanoogafashionweek.com/'
                     'icon' = 'https://chattanoogafashionweek.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Nashville Scene Fashion - Critiques of industry ethics and diversity'
@@ -30607,7 +30606,7 @@
                     'icon' = 'https://tennesseelookout.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Britt Shaheen - Nashville fashion hauls and styling tips'
@@ -30629,7 +30628,7 @@
                 'URL' = 'https://www.youtube.com/@alleesutton'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Nashville Lifestyles The Podcast - Fashion trends and city style'
@@ -30647,7 +30646,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30671,7 +30670,7 @@
                     'URL' = 'https://www.tennessean.com/news/military/'
                     'icon' = 'https://www.tennessean.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Tennessee Lookout Military - Independent scrutiny of deployments'
@@ -30689,7 +30688,7 @@
                     'icon' = 'https://www.memphisflyer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Tennessee National Guard - Official training and mission videos'
@@ -30711,7 +30710,7 @@
                 'URL' = 'https://www.youtube.com/@TennesseeVets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The 1796 Podcast - Tennessee Guard news and interviews'
@@ -30769,7 +30768,7 @@
                 'URL' = 'https://www.kxan.com/'
                 'icon' = 'https://www.kxan.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Texas Tribune - Nonprofit investigative journalism on Texas policy and issues'
@@ -30796,7 +30795,7 @@
                 'URL' = 'https://www.texasobserver.org/'
                 'icon' = 'https://www.texasobserver.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Dallas Observer - Progressive voice on Dallas arts music and social issues'
@@ -30814,7 +30813,7 @@
                 'icon' = 'https://www.texasobserver.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WFAA - Dallas-Fort Worth breaking news and investigations'
@@ -30841,7 +30840,7 @@
             'URL' = 'https://www.youtube.com/user/TexasStandard'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Texas Tribune - Videos on arts events and independent Texas stories'
@@ -30863,7 +30862,7 @@
             'URL' = 'https://www.youtube.com/@AustinChronicle'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Texas Tribune Daily - Headlines and deeper dives on Texas news'
@@ -30890,7 +30889,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/yall-itics/id1486881900'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Texas Observer Podcast - Independent investigative reporting discussions'
@@ -30912,7 +30911,7 @@
             'URL' = 'https://www.houstonpress.com/podcasts/'
             'icon' = 'https://www.houstonpress.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -30936,7 +30935,7 @@
                     'URL' = 'https://www.bizjournals.com/sanantonio'
                     'icon' = 'https://www.bizjournals.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Tribune Business - Scrutiny of economic policies and impacts'
@@ -30954,7 +30953,7 @@
                     'icon' = 'https://www.dallasobserver.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Texas Entrepreneur - Behind-the-scenes tours of Texas operations'
@@ -30976,7 +30975,7 @@
                 'URL' = 'https://www.youtube.com/@austinchamber'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Texas Business Matters - Stories from Texas executives on innovation'
@@ -30994,7 +30993,7 @@
                 'icon' = 'https://dallasinnovates.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31018,7 +31017,7 @@
                     'URL' = 'https://www.expressnews.com/sports/'
                     'icon' = 'https://www.expressnews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Monthly Sports - Independent analysis of Texas team performances'
@@ -31036,7 +31035,7 @@
                     'icon' = 'https://www.austinchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Dallas Cowboys - Official game recaps and fan content'
@@ -31058,7 +31057,7 @@
                 'URL' = 'https://www.youtube.com/saspurs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talk of Titans - Houston Texans analysis and interviews'
@@ -31076,7 +31075,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31100,7 +31099,7 @@
                     'URL' = 'https://www.dallasobserver.com/arts/'
                     'icon' = 'https://www.dallasobserver.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Observer Culture - Critiques of arts policies and narratives'
@@ -31118,7 +31117,7 @@
                     'icon' = 'https://www.houstonpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Texas Recess - State traditions festivals and explorations'
@@ -31140,7 +31139,7 @@
                 'URL' = 'https://www.youtube.com/@evazubeck'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Texas Country Reporter - Folklore hidden histories and lore'
@@ -31158,7 +31157,7 @@
                 'icon' = 'https://www.lonestarplate.show/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31182,7 +31181,7 @@
                     'URL' = 'https://agrilifetoday.tamu.edu/science-tech/'
                     'icon' = 'https://agrilifetoday.tamu.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Monthly Technology - Critical views on research ethics'
@@ -31200,7 +31199,7 @@
                     'icon' = 'https://www.txie.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Texas Science - Campus labs and STEM breakthroughs'
@@ -31222,7 +31221,7 @@
                 'URL' = 'https://www.youtube.com/user/texasamscience'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Houston We Have a Podcast - Spaceflight and human exploration stories'
@@ -31240,7 +31239,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31264,7 +31263,7 @@
                     'URL' = 'https://www.statesman.com/news/politics/'
                     'icon' = 'https://www.statesman.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Observer Politics - Independent watchdog on corruption and transparency'
@@ -31282,7 +31281,7 @@
                     'icon' = 'https://www.austinchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Brian Tyler Cohen - Texas candidate debates and breakdowns'
@@ -31304,7 +31303,7 @@
                 'URL' = 'https://www.youtube.com/@thetexannews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Point of Order with Evan Smith - Texas political headlines and dives'
@@ -31322,7 +31321,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31346,7 +31345,7 @@
                     'URL' = 'https://tfc.cvad.unt.edu/index.html'
                     'icon' = 'https://tfc.cvad.unt.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Daily Texan Fashion - Critiques of industry ethics diversity'
@@ -31364,7 +31363,7 @@
                     'icon' = 'https://texasfashionindustry.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Peyton Maree Charles - Texas fashion hauls and trend breakdowns'
@@ -31386,7 +31385,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCiLnjs7b0ohzJibcKBqjK0g'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Western Fashion Behind The Scenes - City design weeks talks'
@@ -31404,7 +31403,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31428,7 +31427,7 @@
                     'URL' = 'https://www.nationalguard.mil/News/Tag/47988/texas-national-guard/'
                     'icon' = 'https://www.nationalguard.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Texas Observer Military - Independent scrutiny of veteran issues'
@@ -31446,7 +31445,7 @@
                     'icon' = 'https://www.austinchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Texas Military Department - Official training and community service'
@@ -31468,7 +31467,7 @@
                 'URL' = 'https://www.youtube.com/c/ArmyBarbie'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Voice of Texas Veterans - Veteran legislation and assistance discussions'
@@ -31526,7 +31525,7 @@
                 'URL' = 'https://www.standard.net/'
                 'icon' = 'https://www.standard.net/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'City Weekly - Salt Lake alternative news arts dining and events'
@@ -31553,7 +31552,7 @@
                 'URL' = 'https://www.parkrecord.com/'
                 'icon' = 'https://www.parkrecord.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'City Weekly - Underground perspectives on social justice and arts'
@@ -31571,7 +31570,7 @@
                 'icon' = 'https://utahstories.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KSL News Utah - Breaking news investigations and community videos'
@@ -31598,7 +31597,7 @@
             'URL' = 'https://www.youtube.com/user/StGeorgeNews'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'PBS Utah - In-depth stories on Utah culture and issues'
@@ -31620,7 +31619,7 @@
             'URL' = 'https://www.youtube.com/@CityWeekly'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'KSL Podcasts - Daily news traffic weather and analysis'
@@ -31647,7 +31646,7 @@
             'URL' = 'https://kslpodcasts.com/podcast/utahs-noon-news/'
             'icon' = 'https://kslpodcasts.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'RadioWest - Cultural historical and social explorations'
@@ -31669,7 +31668,7 @@
             'URL' = 'https://kslpodcasts.com/podcast/cold/'
             'icon' = 'https://kslpodcasts.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31693,7 +31692,7 @@
                     'URL' = 'https://www.deseret.com/business/'
                     'icon' = 'https://www.deseret.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Utah News Dispatch Business - Scrutiny of corporate policies impacts'
@@ -31711,7 +31710,7 @@
                     'icon' = 'https://www.cityweekly.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UtahPreneur - Behind scenes with Utah business leaders tours'
@@ -31733,7 +31732,7 @@
                 'URL' = 'https://www.youtube.com/@deseretnews'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Business Elevated - Insights on Utah living working and innovation'
@@ -31751,7 +31750,7 @@
                 'icon' = 'https://eccles.utah.edu/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31775,7 +31774,7 @@
                     'URL' = 'https://espn700sports.com/'
                     'icon' = 'https://espn700sports.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'City Weekly Sports - Critical takes on team equity issues'
@@ -31793,7 +31792,7 @@
                     'icon' = 'https://utahstories.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'KSL Sports - Game highlights player interviews and recaps'
@@ -31815,7 +31814,7 @@
                 'URL' = 'https://www.youtube.com/user/RealSaltLake'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Hans and Scotty G - Utes Cougars Jazz insider talks'
@@ -31833,7 +31832,7 @@
                 'icon' = 'https://theutahcheckdown.podbean.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31857,7 +31856,7 @@
                     'URL' = 'https://kslnewsradio.com/arts-entertainment/'
                     'icon' = 'https://kslnewsradio.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'City Weekly Culture - Progressive arts social justice stories'
@@ -31875,7 +31874,7 @@
                     'icon' = 'https://utahstories.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'PBS Utah - Cultural stories artists and community portraits'
@@ -31897,7 +31896,7 @@
                 'URL' = 'https://www.youtube.com/@CityWeekly'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Utah Folklife - Traditional expressions and artist stories'
@@ -31915,7 +31914,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -31939,7 +31938,7 @@
                     'URL' = 'https://science.utah.edu/tag/news/'
                     'icon' = 'https://science.utah.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Daily Utah Chronicle Science - Critiques on research ethics impacts'
@@ -31957,7 +31956,7 @@
                     'icon' = 'https://utahstories.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SmarterEveryDay - Science experiments and Utah explorations'
@@ -31979,7 +31978,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCSrPuHtKbst7Zy8pyWn_3Cg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Wilkes Center Podcast - Climate science policy discussions'
@@ -31997,7 +31996,7 @@
                 'icon' = 'https://www.utahsciencecommunicators.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32021,7 +32020,7 @@
                     'URL' = 'https://utahnewsdispatch.com/'
                     'icon' = 'https://utahnewsdispatch.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Utah Political Watch - Independent scrutiny of officials accountability'
@@ -32039,7 +32038,7 @@
                     'icon' = 'https://dailyutahchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Inside Utah Politics - Weekly dives into state and local issues'
@@ -32061,7 +32060,7 @@
                 'URL' = 'https://www.youtube.com/@UtahPolicy'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Both Sides of the Aisle - Debates on Utah policy issues'
@@ -32079,7 +32078,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32103,7 +32102,7 @@
                     'URL' = 'https://www.deseret.com/topic/fashion/'
                     'icon' = 'https://www.deseret.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Daily Utah Chronicle Fashion - Critiques on industry ethics diversity'
@@ -32121,7 +32120,7 @@
                     'icon' = 'https://utahstories.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Marla Catherine - Outfit ideas basic clothes transformations'
@@ -32143,7 +32142,7 @@
                 'URL' = 'https://www.youtube.com/glitterandlazers'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Roots Race Culture - Fashion designers and Utah creatives'
@@ -32161,7 +32160,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32185,7 +32184,7 @@
                     'URL' = 'https://www.standard.net/news/military/'
                     'icon' = 'https://www.standard.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Utah News Dispatch Military - Scrutiny of veteran services impacts'
@@ -32203,7 +32202,7 @@
                     'icon' = 'https://dailyutahchronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Utah National Guard - Training missions and community service'
@@ -32225,7 +32224,7 @@
                 'URL' = 'https://www.youtube.com/user/abc4utah'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Utah Heroes - Stories of service and recognition'
@@ -32283,7 +32282,7 @@
                 'URL' = 'https://www.timesargus.com/'
                 'icon' = 'https://www.timesargus.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Vermont Daily Chronicle - Conservative commentary on state affairs'
@@ -32310,7 +32309,7 @@
                 'URL' = 'https://www.commonsnews.org/'
                 'icon' = 'https://www.commonsnews.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Seven Days - Alternative voice on social justice and underground scenes'
@@ -32328,7 +32327,7 @@
                 'icon' = 'https://vermontindependent.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WCAX-TV Channel 3 News - Vermont local headlines weather and investigations'
@@ -32355,7 +32354,7 @@
             'URL' = 'https://www.youtube.com/user/burlingtonfreepress'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'StuckinVermont - Arts obsessions and Vermont outsider stories'
@@ -32377,7 +32376,7 @@
             'URL' = 'https://www.youtube.com/user/802outdooradventures'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'The Frequency - Daily Vermont news updates and analysis'
@@ -32404,7 +32403,7 @@
             'URL' = 'https://open.spotify.com/show/257rnZurAG1LwYKrCXwoXn'
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Happy Vermont - Lifestyle community and relocation stories'
@@ -32426,7 +32425,7 @@
             'URL' = 'https://start-here-vermont.simplecast.com/'
             'icon' = 'https://start-here-vermont.simplecast.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32450,7 +32449,7 @@
                     'URL' = 'https://www.vtchamber.com/news/'
                     'icon' = 'https://www.vtchamber.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vermont Daily Chronicle Business - Critiques of corporate policies'
@@ -32468,7 +32467,7 @@
                     'icon' = 'https://www.vtcommons.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Vermont Business Magazine - Entrepreneur interviews and spotlights'
@@ -32490,7 +32489,7 @@
                 'URL' = 'https://www.youtube.com/@vermontpreneurs'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VTDigger Business Matters - Policy effects on Vermont enterprises'
@@ -32508,7 +32507,7 @@
                 'icon' = 'https://www.vtchamber.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32532,7 +32531,7 @@
                     'URL' = 'https://www.nsnsports.net/'
                     'icon' = 'https://www.nsnsports.net/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Seven Days Sports - Critical analysis of team equity'
@@ -32550,7 +32549,7 @@
                     'icon' = 'https://thebridgevt.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Jack Main - Champlain Valley sports stories and anchors'
@@ -32572,7 +32571,7 @@
                 'URL' = 'https://www.youtube.com/@vermontsportsmag'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'NSN Sports - Live game analysis and interviews'
@@ -32590,7 +32589,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32614,7 +32613,7 @@
                     'URL' = 'https://www.commonsnews.org/categories/arts'
                     'icon' = 'https://www.commonsnews.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vermont Commons Culture - Critiques of arts policies narratives'
@@ -32632,7 +32631,7 @@
                     'icon' = 'https://thebridgevt.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'StuckinVermont - Vermont traditions festivals and explorations'
@@ -32654,7 +32653,7 @@
                 'URL' = 'https://www.youtube.com/@happyvermont'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vermont Folklife - Traditional expressions and artist stories'
@@ -32672,7 +32671,7 @@
                 'icon' = 'https://www.sevendaysvt.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32696,7 +32695,7 @@
                     'URL' = 'https://www.sevendaysvt.com/tag/science/'
                     'icon' = 'https://www.sevendaysvt.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Bridge Science - Critiques on research ethics impacts'
@@ -32714,7 +32713,7 @@
                     'icon' = 'https://vermontdailychronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'UVM Science - Campus labs and STEM breakthroughs'
@@ -32736,7 +32735,7 @@
                 'URL' = 'https://www.youtube.com/@vermonttechtalks'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vermont Science Communicators - Research stories and outreach'
@@ -32754,7 +32753,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32778,7 +32777,7 @@
                     'URL' = 'https://www.vermont.gov/latest-news'
                     'icon' = 'https://www.vermont.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vermont Daily Chronicle Politics - Independent watchdog on corruption'
@@ -32796,7 +32795,7 @@
                     'icon' = 'https://thebridgevt.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Vermont This Week - Panel discussions on state politics'
@@ -32818,7 +32817,7 @@
                 'URL' = 'https://www.youtube.com/@vtdigger'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vermont Viewpoint - Bipartisan commentary on state government'
@@ -32836,7 +32835,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32860,7 +32859,7 @@
                     'URL' = 'https://www.commonsnews.org/tag/fashion/'
                     'icon' = 'https://www.commonsnews.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vermont Commons Fashion - Critiques on industry ethics diversity'
@@ -32878,7 +32877,7 @@
                     'icon' = 'https://vermontdailychronicle.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Paige Lorenze - Vermont fashion hauls and trend breakdowns'
@@ -32900,7 +32899,7 @@
                 'URL' = 'https://www.youtube.com/@sustainablevtfashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vermont Fashion Files - Designer interviews and industry talks'
@@ -32918,7 +32917,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -32942,7 +32941,7 @@
                     'URL' = 'https://www.wcax.com/topic/Military/'
                     'icon' = 'https://www.wcax.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Vermont Commons Military - Scrutiny of veteran issues impacts'
@@ -32960,7 +32959,7 @@
                     'icon' = 'https://thebridgevt.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Vermont National Guard - Official training and missions'
@@ -32982,7 +32981,7 @@
                 'URL' = 'https://www.youtube.com/@greenmountainvets'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Vermont Heroes - Stories of service and recognition'
@@ -33040,7 +33039,7 @@
                 'URL' = 'https://www.roanoke.com/'
                 'icon' = 'https://www.roanoke.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Virginia Mercury - Nonprofit journalism on state policy and issues'
@@ -33067,7 +33066,7 @@
                 'URL' = 'https://c-ville.com/'
                 'icon' = 'https://c-ville.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'RVA Mag - Progressive Richmond arts music and social issues'
@@ -33085,7 +33084,7 @@
                 'icon' = 'https://vadogwood.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = '12 On Your Side - Richmond breaking news weather and investigations'
@@ -33112,7 +33111,7 @@
             'URL' = 'https://www.youtube.com/channel/UC9ha3sh4YTCSK83dH6OlWTw'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'VPM - In-depth Virginia culture policy and community videos'
@@ -33134,7 +33133,7 @@
             'URL' = 'https://www.youtube.com/@RVAMag'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'VPM Daily Newscast - Quick Central Virginia headlines and analysis'
@@ -33161,7 +33160,7 @@
             'URL' = 'https://www.millionpodcasts.com/virginia-news-podcasts/'
             'icon' = 'https://www.millionpodcasts.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'The Cardinal - Headlines on education economy and culture'
@@ -33183,7 +33182,7 @@
             'URL' = 'https://bolddominion.org/'
             'icon' = 'https://bolddominion.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33207,7 +33206,7 @@
                     'URL' = 'https://covabizmag.com/'
                     'icon' = 'https://covabizmag.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Virginia Mercury Business - Scrutiny of economic policies and equity'
@@ -33225,7 +33224,7 @@
                     'icon' = 'https://www.vpm.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WRIC Business - Tours of Virginia companies and leader interviews'
@@ -33247,7 +33246,7 @@
                 'URL' = 'https://www.youtube.com/@insidebusinessva'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'We Are Business - Fredericksburg community leaders and growth stories'
@@ -33265,7 +33264,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33289,7 +33288,7 @@
                     'URL' = 'https://www.13newsnow.com/sports'
                     'icon' = 'https://www.13newsnow.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Streaking The Lawn - Fan analysis of UVA team performances'
@@ -33307,7 +33306,7 @@
                     'icon' = 'https://virginia.sportswar.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Virginia Sports TV - Game recaps athlete interviews and highlights'
@@ -33329,7 +33328,7 @@
                 'URL' = 'https://www.youtube.com/user/hokiesports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Wahoo Central - UVA coaches athletes and staff conversations'
@@ -33347,7 +33346,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33371,7 +33370,7 @@
                     'URL' = 'https://virginialiving.com/'
                     'icon' = 'https://virginialiving.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'RVA Mag Culture - Critiques of arts policies and narratives'
@@ -33389,7 +33388,7 @@
                     'icon' = 'https://northernvirginiamag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Southwest Virginia - Traditions festivals and regional explorations'
@@ -33411,7 +33410,7 @@
                 'URL' = 'https://www.youtube.com/@coastalvirginiamag'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Virginia History Podcast - Folklore hidden histories and lore'
@@ -33429,7 +33428,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33453,7 +33452,7 @@
                     'URL' = 'https://virginia.gwu.edu/'
                     'icon' = 'https://virginia.gwu.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Newswise Virginia Tech - Critical views on research ethics and impacts'
@@ -33471,7 +33470,7 @@
                     'icon' = 'https://www.vpm.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Virginia Tech College Science - Campus labs and STEM breakthroughs'
@@ -33493,7 +33492,7 @@
                 'URL' = 'https://www.youtube.com/user/uvaengineering'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Curious Conversations - World-class research and everyday intersections'
@@ -33511,7 +33510,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33535,7 +33534,7 @@
                     'URL' = 'https://www.politico.com/news/virginia'
                     'icon' = 'https://www.politico.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Virginia Scope Politics - Independent watchdog on corruption transparency'
@@ -33553,7 +33552,7 @@
                     'icon' = 'https://www.vpm.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WRIC Politics - Candidate debates and policy breakdowns'
@@ -33575,7 +33574,7 @@
                 'URL' = 'https://www.youtube.com/@virginiamercury'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Virginia Press Room - Political headlines and expert dives'
@@ -33593,7 +33592,7 @@
                 'icon' = 'https://bolddominion.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33617,7 +33616,7 @@
                     'URL' = 'https://www.styleweekly.com/'
                     'icon' = 'https://www.styleweekly.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Richmond Magazine Clothing - Critiques on industry ethics diversity'
@@ -33635,7 +33634,7 @@
                     'icon' = 'https://coastalvirginiamag.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Coastal Virginia Fashion Week - Hauls trends and designer spotlights'
@@ -33657,7 +33656,7 @@
                 'URL' = 'https://www.youtube.com/@sustainablevafashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fabulous Women Over 40 - Empowerment fashion and lifestyle journeys'
@@ -33675,7 +33674,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33699,7 +33698,7 @@
                     'URL' = 'https://va.ng.mil/News/'
                     'icon' = 'https://va.ng.mil/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'InsideNoVa Military - Scrutiny of veteran services and impacts'
@@ -33717,7 +33716,7 @@
                     'icon' = 'https://www.13newsnow.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Virginia Military Institute - Official training and cadet life'
@@ -33739,7 +33738,7 @@
                 'URL' = 'https://www.youtube.com/user/VirginiaNationalGuard'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'VMI Leader Journey - Honor character and military development'
@@ -33797,7 +33796,7 @@
                 'URL' = 'https://www.columbian.com/'
                 'icon' = 'https://www.columbian.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'The Stranger - Alternative journalism for Seattle arts and culture'
@@ -33824,7 +33823,7 @@
                 'URL' = 'https://publicola.com/'
                 'icon' = 'https://publicola.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Stranger - Progressive voice on Seattle arts music and social issues'
@@ -33842,7 +33841,7 @@
                 'icon' = 'https://southseattleemerald.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KOMO News - Seattle local headlines and community videos'
@@ -33869,7 +33868,7 @@
             'URL' = 'https://www.youtube.com/user/KUOW'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'The Stranger - Videos on arts events and independent stories'
@@ -33891,7 +33890,7 @@
             'URL' = 'https://www.youtube.com/user/seattleweekly'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Seattle Now - Headlines and deeper dives on Seattle news'
@@ -33918,7 +33917,7 @@
             'URL' = 'https://www.cascadepbs.org/podcasts/'
             'icon' = 'https://www.cascadepbs.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'PolitiCoast - Independent investigative reporting discussions'
@@ -33940,7 +33939,7 @@
             'URL' = 'https://startherewashington.simplecast.com/'
             'icon' = 'https://startherewashington.simplecast.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -33964,7 +33963,7 @@
                     'URL' = 'https://www.geekwire.com/'
                     'icon' = 'https://www.geekwire.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Washington State Standard Business - Scrutiny of economic policies and impacts'
@@ -33982,7 +33981,7 @@
                     'icon' = 'https://www.thestranger.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Puget Sound Business Journal - Interviews with leaders on growth challenges'
@@ -34004,7 +34003,7 @@
                 'URL' = 'https://www.youtube.com/@washingtonceo'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Weekly - Stories from Washington executives on innovation'
@@ -34022,7 +34021,7 @@
                 'icon' = 'https://www.awb.org/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34046,7 +34045,7 @@
                     'URL' = 'https://www.king5.com/sports'
                     'icon' = 'https://www.king5.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Coug Center - Independent analysis of WSU team performances'
@@ -34064,7 +34063,7 @@
                     'icon' = 'https://crosscut.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Seattle Sports - Game highlights player interviews and recaps'
@@ -34086,7 +34085,7 @@
                 'URL' = 'https://www.youtube.com/user/Mariners'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Brock and Salk - Seahawks analysis and interviews'
@@ -34104,7 +34103,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34128,7 +34127,7 @@
                     'URL' = 'https://www.seattle.gov/arts'
                     'icon' = 'https://www.seattle.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Stranger Culture - Critiques of arts policies and narratives'
@@ -34146,7 +34145,7 @@
                     'icon' = 'https://www.whereweconverge.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Exploring Washington - State traditions festivals and explorations'
@@ -34168,7 +34167,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLgW8QSN9WIdTmhuRxdUaXoe8qU989MbkG'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Exploring Washington State - Folklore hidden histories and lore'
@@ -34186,7 +34185,7 @@
                 'icon' = 'https://askdruniverse.wsu.edu/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34210,7 +34209,7 @@
                     'URL' = 'https://lifesciencewa.org/'
                     'icon' = 'https://lifesciencewa.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Crosscut Science - Critiques on research ethics and impacts'
@@ -34228,7 +34227,7 @@
                     'icon' = 'https://washingtonstatestandard.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Plasma Channel - Science experiments and Washington explorations'
@@ -34250,7 +34249,7 @@
                 'URL' = 'https://www.youtube.com/user/PNNL'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Seattle Science Tech - World-class research and everyday intersections'
@@ -34268,7 +34267,7 @@
                 'icon' = 'https://askdruniverse.wsu.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34292,7 +34291,7 @@
                     'URL' = 'https://www.fox13seattle.com/tag/politics/wa-politics'
                     'icon' = 'https://www.fox13seattle.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Stranger Politics - Independent watchdog on corruption and transparency'
@@ -34310,7 +34309,7 @@
                     'icon' = 'https://publicola.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'TVW Politics - Weekly dives into state and local issues'
@@ -34332,7 +34331,7 @@
                 'URL' = 'https://www.youtube.com/@washingtonstatestandard'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Sound Politics - Political headlines and expert dives'
@@ -34350,7 +34349,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34374,7 +34373,7 @@
                     'URL' = 'https://www.thestranger.com/collections/21584205/fashion'
                     'icon' = 'https://www.thestranger.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Crosscut Fashion - Critiques of industry ethics diversity'
@@ -34392,7 +34391,7 @@
                     'icon' = 'https://washingtonstatestandard.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Gossip Glamour - Washington fashion hauls and trend breakdowns'
@@ -34414,7 +34413,7 @@
                 'URL' = 'https://www.youtube.com/@sustainablewafashion'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Gossip Glamour - Designer interviews and industry talks'
@@ -34432,7 +34431,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34456,7 +34455,7 @@
                     'URL' = 'https://www.theolympian.com/news/local/military/'
                     'icon' = 'https://www.theolympian.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Crosscut Military - Independent scrutiny of veteran issues'
@@ -34474,7 +34473,7 @@
                     'icon' = 'https://washingtonstatestandard.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Washington National Guard - Official training and community service'
@@ -34496,7 +34495,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=sFy2ktFgT-U'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Raven Conversations - Veteran legislation and assistance discussions'
@@ -34554,7 +34553,7 @@
                 'URL' = 'https://www.dominionpost.com/'
                 'icon' = 'https://www.dominionpost.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Mountain State Spotlight - Nonprofit investigative journalism on West Virginia policy and issues'
@@ -34581,7 +34580,7 @@
                 'URL' = 'https://www.theet.com/'
                 'icon' = 'https://www.theet.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Wild Dodger - Progressive voice on West Virginia arts music and social issues'
@@ -34599,7 +34598,7 @@
                 'icon' = 'https://wvfree.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WOWK 13 News - Charleston-Huntington breaking news and investigations'
@@ -34626,7 +34625,7 @@
             'URL' = 'https://www.youtube.com/@heralddispatch'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Mountain State Spotlight - In-depth stories on West Virginia culture and issues'
@@ -34648,7 +34647,7 @@
             'URL' = 'https://www.youtube.com/c/WildWonderfulOffGrid'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'West Virginia Morning - Headlines and deeper dives on state news'
@@ -34675,7 +34674,7 @@
             'URL' = 'https://wvpublic.org/podcasts/west-virginia-week/'
             'icon' = 'https://wvpublic.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Us and Them - Independent investigative reporting discussions'
@@ -34697,7 +34696,7 @@
             'URL' = 'https://www.appodlachia.com/podcast/'
             'icon' = 'https://www.appodlachia.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34721,7 +34720,7 @@
                     'URL' = 'https://wvchamber.com/communications/news-releases/'
                     'icon' = 'https://wvchamber.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'West Virginia Watch Business - Scrutiny of economic policies and impacts'
@@ -34739,7 +34738,7 @@
                     'icon' = 'https://www.100daysinappalachia.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WV Department of Commerce - Tours of West Virginia companies and leader interviews'
@@ -34761,7 +34760,7 @@
                 'URL' = 'https://www.youtube.com/@wvexecutivemagazine'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Positively West Virginia Podcast - Stories from West Virginia executives on innovation'
@@ -34779,7 +34778,7 @@
                 'icon' = 'https://transportation.wv.gov/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34803,7 +34802,7 @@
                     'URL' = 'https://wvusports.com/'
                     'icon' = 'https://wvusports.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'The Smoking Musket - Independent analysis of WVU team performances'
@@ -34821,7 +34820,7 @@
                     'icon' = 'https://voiceofmotown.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WVU Sports - Game highlights player interviews and recaps'
@@ -34843,7 +34842,7 @@
                 'URL' = 'https://www.youtube.com/@MountaineersNow'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mountaineer Insider - WVU coaches athletes and staff conversations'
@@ -34861,7 +34860,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34885,7 +34884,7 @@
                     'URL' = 'https://www.alliedartistswv.org/'
                     'icon' = 'https://www.alliedartistswv.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Inside Appalachia Culture - Critiques of arts policies and narratives'
@@ -34903,7 +34902,7 @@
                     'icon' = 'https://wvpublic.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WV Archives and History - State traditions festivals and explorations'
@@ -34925,7 +34924,7 @@
                 'URL' = 'https://www.youtube.com/@MysteriousWV'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mysterious Mountains - Folklore hidden histories and lore'
@@ -34943,7 +34942,7 @@
                 'icon' = 'https://wvpublic.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -34967,7 +34966,7 @@
                     'URL' = 'https://westvirginia.gov/techhub/'
                     'icon' = 'https://westvirginia.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'West Virginia Watch Science Tech - Critiques on research ethics impacts'
@@ -34985,7 +34984,7 @@
                     'icon' = 'https://appvoices.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'STaR Division Science Tech - Campus labs and STEM breakthroughs'
@@ -35007,7 +35006,7 @@
                 'URL' = 'https://www.youtube.com/user/wvuengineering'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'STEM Our State - World-class research and everyday intersections'
@@ -35025,7 +35024,7 @@
                 'icon' = 'https://www.wvhepc.edu/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35049,7 +35048,7 @@
                     'URL' = 'https://governor.wv.gov/news'
                     'icon' = 'https://governor.wv.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Mountain State Spotlight Politics - Independent watchdog on corruption transparency'
@@ -35067,7 +35066,7 @@
                     'icon' = 'https://thewilddodger.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Inside West Virginia Politics - Weekly dives into state and local issues'
@@ -35089,7 +35088,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCW84nM-EAuCsIO7jHRtnOwg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Inside West Virginia Politics - Political headlines and expert dives'
@@ -35107,7 +35106,7 @@
                 'icon' = 'https://wvmetronews.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35131,7 +35130,7 @@
                     'URL' = 'https://ashandtin.com/'
                     'icon' = 'https://ashandtin.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WVU Student Fashion - Critiques of industry ethics diversity'
@@ -35149,7 +35148,7 @@
                     'icon' = 'https://www.wowktv.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WV Fashion Week - Fashion hauls and trend breakdowns'
@@ -35171,7 +35170,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=FcgfJKYSrGI'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Folkways Fashion - Designer interviews and industry talks'
@@ -35189,7 +35188,7 @@
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35213,7 +35212,7 @@
                     'URL' = 'https://www.wtap.com/politics/'
                     'icon' = 'https://www.wtap.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'West Virginia Watch Military - Scrutiny of veteran services impacts'
@@ -35231,7 +35230,7 @@
                     'icon' = 'https://appvoices.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'West Virginia National Guard - Official training and missions'
@@ -35253,7 +35252,7 @@
                 'URL' = 'https://www.youtube.com/watch?v=5Ba8x3wzz7s'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Beeline - Stories of service and recognition'
@@ -35311,7 +35310,7 @@
                 'URL' = 'https://www.lacrossetribune.com/'
                 'icon' = 'https://www.lacrossetribune.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Wisconsin Watch - Independent nonprofit journalism on state policy and issues'
@@ -35338,7 +35337,7 @@
                 'URL' = 'http://www.milwaukeeindependent.com/'
                 'icon' = 'http://www.milwaukeeindependent.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Shepherd Express - Underground perspectives on social justice and arts'
@@ -35356,7 +35355,7 @@
                 'icon' = 'https://isthmus.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'WISN 12 News - Milwaukee breaking news investigations and community videos'
@@ -35383,7 +35382,7 @@
             'URL' = 'https://www.youtube.com/user/WisconsinPublicRadio'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Charlie Berens - Manitowoc Minute comedy sketches and Wisconsin satire'
@@ -35405,7 +35404,7 @@
             'URL' = 'https://www.youtube.com/user/kirstendirksen'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Wisconsin Today Morning News - Daily headlines and state updates'
@@ -35432,7 +35431,7 @@
             'URL' = 'https://open.spotify.com/show/24XRbB9u7YrEhOzi1uB6Zl'
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Wisconsin Life - Stories on people places history and culture'
@@ -35454,7 +35453,7 @@
             'URL' = 'https://www.wpr.org/shows/battleground-wisconsin'
             'icon' = 'https://www.wpr.org/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35478,7 +35477,7 @@
                     'URL' = 'https://www.ibmadison.com/'
                     'icon' = 'https://www.ibmadison.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Wisconsin Examiner Business - Scrutiny of economic policies and impacts'
@@ -35496,7 +35495,7 @@
                     'icon' = 'https://shepherdexpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'BizTimes Media - Interviews with leaders on growth challenges'
@@ -35518,7 +35517,7 @@
                 'URL' = 'https://www.youtube.com/@WisBusiness'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Insight on Business - Stories from Wisconsin executives on innovation'
@@ -35536,7 +35535,7 @@
                 'icon' = 'https://www.wisbusiness.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35560,7 +35559,7 @@
                     'URL' = 'https://www.espnmilwaukee.com/'
                     'icon' = 'https://www.espnmilwaukee.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Bleav in Badgers - Independent analysis of Wisconsin team performances'
@@ -35578,7 +35577,7 @@
                     'icon' = 'https://www.brewcrewball.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Locked On Badgers - Game highlights player interviews and recaps'
@@ -35600,7 +35599,7 @@
                 'URL' = 'https://www.youtube.com/user/Brewers'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Wisconsin Sportscast - Badgers Packers Brewers and Bucks analysis'
@@ -35618,7 +35617,7 @@
                 'icon' = 'https://lockedonpodcasts.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35642,7 +35641,7 @@
                     'URL' = 'https://www.mkmagazine.com/'
                     'icon' = 'https://www.mkmagazine.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Volume One Culture - Critiques of arts policies and narratives'
@@ -35660,7 +35659,7 @@
                     'icon' = 'https://upnorthnewswi.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Discover Wisconsin - State traditions festivals and explorations'
@@ -35682,7 +35681,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLexamplebadgertalks'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Cabin - Folklore hidden histories and lore'
@@ -35700,7 +35699,7 @@
                 'icon' = 'https://doorcountypulse.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35724,7 +35723,7 @@
                     'URL' = 'https://news.wisc.edu/topics/science-technology/'
                     'icon' = 'https://news.wisc.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Isthmus Science - Critiques on research ethics and impacts'
@@ -35742,7 +35741,7 @@
                     'icon' = 'https://wisconsinexaminer.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Startup Wisconsin - Campus labs and STEM breakthroughs'
@@ -35764,7 +35763,7 @@
                 'URL' = 'https://www.youtube.com/user/MorgridgeInstitute'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Badger Talks - World-class research and everyday intersections'
@@ -35782,7 +35781,7 @@
                 'icon' = 'https://www.wpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35806,7 +35805,7 @@
                     'URL' = 'https://www.jsonline.com/news/politics/'
                     'icon' = 'https://www.jsonline.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Up North News Politics - Independent watchdog on corruption and transparency'
@@ -35824,7 +35823,7 @@
                     'icon' = 'https://wisconsinwatch.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'WisconsinEye - Weekly dives into state and local issues'
@@ -35846,7 +35845,7 @@
                 'URL' = 'https://www.youtube.com/@matenaeronair'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Battleground Wisconsin - Political headlines and expert dives'
@@ -35864,7 +35863,7 @@
                 'icon' = 'https://wiseye.org/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35888,7 +35887,7 @@
                     'URL' = 'https://www.lestylorouge.com/'
                     'icon' = 'https://www.lestylorouge.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Brava Magazine Fashion - Critiques on industry ethics diversity'
@@ -35906,7 +35905,7 @@
                     'icon' = 'https://shepherdexpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Brooke Taryn - Wisconsin fashion hauls and trend breakdowns'
@@ -35928,7 +35927,7 @@
                 'URL' = 'https://www.youtube.com/@cierra_robin'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Fashion Pulse - Designer interviews and industry talks'
@@ -35946,7 +35945,7 @@
                 'icon' = 'https://madison.citycast.fm/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -35970,7 +35969,7 @@
                     'URL' = 'https://www.wisn.com/topic/Military/'
                     'icon' = 'https://www.wisn.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Wisconsin Watch Military - Scrutiny of veteran services and impacts'
@@ -35988,7 +35987,7 @@
                     'icon' = 'https://shepherdexpress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Wisconsin National Guard - Official training and missions'
@@ -36010,7 +36009,7 @@
                 'URL' = 'https://www.youtube.com/@VFWWisconsin'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Fragout Podcast - Stories of service and recognition'
@@ -36068,7 +36067,7 @@
                 'URL' = 'https://oilcity.news/'
                 'icon' = 'https://oilcity.news/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'WyoFile - Independent reader-funded journalism on Wyoming policy'
@@ -36095,7 +36094,7 @@
                 'URL' = 'https://www.wyomingpublicmedia.org/'
                 'icon' = 'https://www.wyomingpublicmedia.org/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Wyoming Truth - Progressive coverage of Wyoming social issues'
@@ -36113,7 +36112,7 @@
                 'icon' = 'https://thewilddodger.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Wyoming Public Media - Statewide news investigations and community videos'
@@ -36140,7 +36139,7 @@
             'URL' = 'https://www.youtube.com/channel/UC5wmKnyneFebKO5hqXw5Hnw'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Our Wyoming Life - Rural ranch life adventures and explorations'
@@ -36162,7 +36161,7 @@
             'URL' = 'https://www.youtube.com/user/TravelWyoming'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Open Spaces - Wyoming news public affairs and analysis'
@@ -36189,7 +36188,7 @@
             'URL' = 'https://open.spotify.com/show/6dRL3uYhPvafYIYONU0G68'
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Wyoming My 307 - People culture wildlife and history explorations'
@@ -36211,7 +36210,7 @@
             'URL' = 'https://player.fm/series/godspeed-wyoming'
             'icon' = 'https://player.fm/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36235,7 +36234,7 @@
                     'URL' = 'https://www.jhnewsandguide.com/news/business/'
                     'icon' = 'https://www.jhnewsandguide.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Business - Scrutiny of economic policies and impacts'
@@ -36253,7 +36252,7 @@
                     'icon' = 'https://www.wyomingpublicmedia.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Wyoming Business Council - Tours of Wyoming companies and leader interviews'
@@ -36275,7 +36274,7 @@
                 'URL' = 'https://www.youtube.com/c/ourwyominglife'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Voices of Business - Stories from Wyoming executives on innovation'
@@ -36293,7 +36292,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36317,7 +36316,7 @@
                     'URL' = 'https://7220sports.com/'
                     'icon' = 'https://7220sports.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Wyoming Public Media Sports - Independent analysis of team performances'
@@ -36335,7 +36334,7 @@
                     'icon' = 'https://wyofile.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'University of Wyoming Athletics - Game recaps athlete interviews and highlights'
@@ -36357,7 +36356,7 @@
                 'URL' = 'https://www.youtube.com/@7220sports'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Roaring Repeater - University of Wyoming sports analysis and interviews'
@@ -36375,7 +36374,7 @@
                 'icon' = 'https://thewyocast.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36399,7 +36398,7 @@
                     'URL' = 'https://wyospcr.wyo.gov/index.php/news-events'
                     'icon' = 'https://wyospcr.wyo.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Culture - Critiques of arts policies and narratives'
@@ -36417,7 +36416,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Travel Wyoming - State traditions festivals and explorations'
@@ -36439,7 +36438,7 @@
                 'URL' = 'https://www.youtube.com/c/WyomingPBS'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Winds of Change - Folklore hidden histories and lore'
@@ -36457,7 +36456,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36481,7 +36480,7 @@
                     'URL' = 'https://www.uwyo.edu/news/science_technology/'
                     'icon' = 'https://www.uwyo.edu/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Science - Critiques on research ethics and impacts'
@@ -36499,7 +36498,7 @@
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'University of Wyoming Science - Campus labs and STEM breakthroughs'
@@ -36521,7 +36520,7 @@
                 'URL' = 'https://www.youtube.com/user/TravelWyoming'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Energy Frontier Wyoming - World-class research and everyday intersections'
@@ -36539,7 +36538,7 @@
                 'icon' = 'https://www.wyomingpublicmedia.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36563,7 +36562,7 @@
                     'URL' = 'https://wyofile.com/tag/politics/'
                     'icon' = 'https://wyofile.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Wyoming Truth Politics - Independent watchdog on corruption transparency'
@@ -36581,7 +36580,7 @@
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Wyoming Legislature - Weekly dives into state and local issues'
@@ -36603,7 +36602,7 @@
                 'URL' = 'https://www.youtube.com/@wyofile'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Cowboy State Politics - Political headlines and expert dives'
@@ -36621,7 +36620,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36645,7 +36644,7 @@
                     'URL' = 'https://www.jhnewsandguide.com/lifestyles/fashion/'
                     'icon' = 'https://www.jhnewsandguide.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Fashion - Critiques on industry ethics and diversity'
@@ -36663,7 +36662,7 @@
                     'icon' = 'https://planetjh.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Our Wyoming Life Fashion - Wyoming fashion hauls and trend breakdowns'
@@ -36685,7 +36684,7 @@
                 'URL' = 'https://www.youtube.com/channel/UC8P22Y71jVIu2NbydhDN2mg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Beyond the Front Door Fashion - Designer interviews and industry talks'
@@ -36703,7 +36702,7 @@
                 'icon' = 'https://pod.link/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36727,7 +36726,7 @@
                     'URL' = 'https://cowboystatedaily.com/tag/military/'
                     'icon' = 'https://cowboystatedaily.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Military - Scrutiny of veteran services and impacts'
@@ -36745,7 +36744,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Wyoming National Guard - Official training and community service'
@@ -36767,7 +36766,7 @@
                 'URL' = 'https://www.youtube.com/c/WyomingPBS'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Behind the Uniform - Stories of service and recognition'
@@ -36825,7 +36824,7 @@
                 'URL' = 'https://www.abc.net.au/pacific/'
                 'icon' = 'https://www.abc.net.au/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Samoa Times - Independent daily on American Samoa policy and community'
@@ -36852,7 +36851,7 @@
                 'URL' = 'https://matangitonga.to/'
                 'icon' = 'https://matangitonga.to/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'High Country News Pacific - Progressive environmental and social justice coverage'
@@ -36870,7 +36869,7 @@
                 'icon' = 'https://www.samoanvoices.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'Samoa News - American Samoa breaking news and community videos'
@@ -36897,7 +36896,7 @@
             'URL' = 'https://www.youtube.com/@abcpacific'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'AmSamFam - Life in American Samoa daily vlogs and insights'
@@ -36919,7 +36918,7 @@
             'URL' = 'https://www.youtube.com/@laughingmoms'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'KHJ News in English - Daily American Samoa headlines and analysis'
@@ -36946,7 +36945,7 @@
             'URL' = 'https://www.sbs.com.au/language/samoan/en/podcast'
             'icon' = 'https://www.sbs.com.au/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Pacific Pathways - Independent discussions on cultural and social issues'
@@ -36968,7 +36967,7 @@
             'URL' = 'https://podcast.feedspot.com/samoa_podcasts/'
             'icon' = 'https://podcast.feedspot.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -36992,7 +36991,7 @@
                     'URL' = 'https://www.samoanews.com/business/'
                     'icon' = 'https://www.samoanews.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Samoa Observer Business - Scrutiny of economic policies and impacts'
@@ -37010,7 +37009,7 @@
                     'icon' = 'https://matangitonga.to/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Business - Tours of local enterprises and entrepreneur spotlights'
@@ -37032,7 +37031,7 @@
                 'URL' = 'https://www.youtube.com/@jamilytv'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Talanoa Talk Business - Stories from American Samoa executives on innovation'
@@ -37050,7 +37049,7 @@
                 'icon' = 'https://podcast.feedspot.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37074,7 +37073,7 @@
                     'URL' = 'https://www.abc.net.au/pacific/programs/sports'
                     'icon' = 'https://www.abc.net.au/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Sports - Independent analysis of team performances'
@@ -37092,7 +37091,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'SamoanRaider Sports - Game recaps and athlete interviews'
@@ -37114,7 +37113,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Tama Samoa NRL - Samoan rugby league analysis and interviews'
@@ -37132,7 +37131,7 @@
                 'icon' = 'https://www.podash.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37156,7 +37155,7 @@
                     'URL' = 'https://www.abc.net.au/pacific/programs/culture'
                     'icon' = 'https://www.abc.net.au/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Culture - Critiques of arts policies and narratives'
@@ -37174,7 +37173,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Culture - Traditions festivals and explorations'
@@ -37196,7 +37195,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'NOAA Ocean Fa''a Samoa - Folklore hidden histories and lore'
@@ -37214,7 +37213,7 @@
                 'icon' = 'https://open.spotify.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37238,7 +37237,7 @@
                     'URL' = 'https://www.rnz.co.nz/programmes/science'
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Science - Critiques on research ethics impacts'
@@ -37256,7 +37255,7 @@
                     'icon' = 'https://www.samoanscientist.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Science - Campus labs and STEM explorations'
@@ -37278,7 +37277,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Samoan Scientist Podcast - World-class research and everyday intersections'
@@ -37296,7 +37295,7 @@
                 'icon' = 'https://oceanservice.noaa.gov/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37320,7 +37319,7 @@
                     'URL' = 'https://www.abc.net.au/pacific/programs/politics'
                     'icon' = 'https://www.abc.net.au/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Politics - Independent watchdog on corruption'
@@ -37338,7 +37337,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Politics - Candidate debates and policy breakdowns'
@@ -37360,7 +37359,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'American Samoa Politics - Political headlines and expert dives'
@@ -37378,7 +37377,7 @@
                 'icon' = 'https://www.talanei.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37402,7 +37401,7 @@
                     'URL' = 'https://www.abc.net.au/pacific/programs/fashion'
                     'icon' = 'https://www.abc.net.au/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Fashion - Critiques on industry ethics diversity'
@@ -37420,7 +37419,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Fashion - American Samoa hauls and trend breakdowns'
@@ -37442,7 +37441,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Not Another Talanoa Fashion - Designer interviews and industry talks'
@@ -37460,7 +37459,7 @@
                 'icon' = 'https://lemonadamedia.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37484,7 +37483,7 @@
                     'URL' = 'https://www.rnz.co.nz/programmes/military'
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Military - Scrutiny of veteran issues impacts'
@@ -37502,7 +37501,7 @@
                     'icon' = 'https://www.samoanvoices.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'AmSamFam Military - Official training and community service'
@@ -37524,7 +37523,7 @@
                 'URL' = 'https://www.youtube.com/@laughingmoms'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Behind the LavaLava - Veteran legislation and assistance discussions'
@@ -37582,7 +37581,7 @@
                 'URL' = 'https://www.pncguam.com/'
                 'icon' = 'https://www.pncguam.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Kandit News - Independent investigative journalism on Guam policy issues'
@@ -37609,7 +37608,7 @@
                 'URL' = 'https://www.mbjguam.com/'
                 'icon' = 'https://www.mbjguam.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'High Country News - Progressive environmental and social justice coverage'
@@ -37627,7 +37626,7 @@
                 'icon' = 'https://350pacific.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'KUAM News - Guam breaking news investigations and community videos'
@@ -37654,7 +37653,7 @@
             'URL' = 'https://www.youtube.com/c/guamlegislaturemedia'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Dani Adams Guam Girl - Daily life culture and island explorations'
@@ -37676,7 +37675,7 @@
             'URL' = 'https://www.youtube.com/@guambikiniislandclub'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'KUAM News Bytes - Extended interviews and in-depth Guam discussions'
@@ -37703,7 +37702,7 @@
             'URL' = 'https://khmg.org/ltf/'
             'icon' = 'https://khmg.org/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Fanachu Podcast - Chamoru stories history and identity'
@@ -37725,7 +37724,7 @@
             'URL' = 'https://podcasts.apple.com/us/podcast/life-in-the-son-guam/idexample'
             'icon' = 'https://podcasts.apple.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37749,7 +37748,7 @@
                     'URL' = 'https://www.postguam.com/business/'
                     'icon' = 'https://www.postguam.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Economy - Scrutiny of regional business policies'
@@ -37767,7 +37766,7 @@
                     'icon' = 'https://guamindependent.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Abi Marquez Lumpia Queen - Entrepreneur spotlights and business hauls'
@@ -37789,7 +37788,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLZeQhc4Pls-O0chYam8Rx7rZ_sTGusfVP'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Guampreneurs - Interviews with Guam entrepreneurs and innovators'
@@ -37807,7 +37806,7 @@
                 'icon' = 'https://www.titleguam.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37831,7 +37830,7 @@
                     'URL' = 'https://www.kuam.com/category/164101/sports'
                     'icon' = 'https://www.kuam.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Sports - Independent regional team analysis'
@@ -37849,7 +37848,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Guam Sports Network - Championship highlights and game recaps'
@@ -37871,7 +37870,7 @@
                 'URL' = 'https://www.youtube.com/c/AmSamFam'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'The Rundown GSPN - Guam sports analysis and interviews'
@@ -37889,7 +37888,7 @@
                 'icon' = 'https://soundcloud.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37913,7 +37912,7 @@
                     'URL' = 'https://www.visitguam.com/culture/'
                     'icon' = 'https://www.visitguam.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Pacific - Critiques of cultural policies'
@@ -37931,7 +37930,7 @@
                     'icon' = 'https://350pacific.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Dani Adams Guam Girl - Island traditions and daily culture'
@@ -37953,7 +37952,7 @@
                 'URL' = 'https://www.youtube.com/playlist?list=PLEpqIU9EB4PZ5pr6Hx2YMiToMTn10vVzZ'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Taotaomona Tales - Guam folklore myths and legends'
@@ -37971,7 +37970,7 @@
                 'icon' = 'https://www.wpr.org/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -37995,7 +37994,7 @@
                     'URL' = 'https://astroa.org/news/'
                     'icon' = 'https://astroa.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Science - Critiques on research ethics impacts'
@@ -38013,7 +38012,7 @@
                     'icon' = 'https://www.samoanscientist.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Innovate Guam Podcast - Tech ecosystem and future visions'
@@ -38035,7 +38034,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCyWiacfiGipWmjppWEzJAhg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Samoan Scientist Podcast - Pacific research and everyday science'
@@ -38053,7 +38052,7 @@
                 'icon' = 'https://www.abc.net.au/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38077,7 +38076,7 @@
                     'URL' = 'https://governor.guam.gov/news/'
                     'icon' = 'https://governor.guam.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Politics - Independent watchdog on corruption'
@@ -38095,7 +38094,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Office of the Governor - Live sessions and policy discussions'
@@ -38117,7 +38116,7 @@
                 'URL' = 'https://www.youtube.com/@RepJamesMoylan'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'After Party Podcast - Guam politics and leadership discussions'
@@ -38135,7 +38134,7 @@
                 'icon' = 'https://www.wispolitics.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38159,7 +38158,7 @@
                     'URL' = 'https://crownsguam.com/'
                     'icon' = 'https://crownsguam.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Fashion - Critiques on industry ethics'
@@ -38177,7 +38176,7 @@
                     'icon' = 'https://www.rnz.co.nz/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Dani Adams Fashion - Guam hauls and trend breakdowns'
@@ -38199,7 +38198,7 @@
                 'URL' = 'https://www.youtube.com/@missnortherner'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Between The Cheeks - Guam clothing brands and fashion talks'
@@ -38217,7 +38216,7 @@
                 'icon' = 'https://www.facebook.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38241,7 +38240,7 @@
                     'URL' = 'https://news.usni.org/tag/guam'
                     'icon' = 'https://news.usni.org/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Pacific Islands Report Military - Scrutiny of defense impacts'
@@ -38259,7 +38258,7 @@
                     'icon' = 'https://www.samoanvoices.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Adam Koralik Bases - US military installations explorations'
@@ -38281,7 +38280,7 @@
                 'URL' = 'https://www.youtube.com/@guamarmynationalguard'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Timeless Patriotism - Guam WWII history and liberation'
@@ -38339,7 +38338,7 @@
                 'URL' = 'https://www.newsnow.com/us/US/States/Northern%2BMariana%2BIslands'
                 'icon' = 'https://www.newsnow.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'CNMI News - Independent coverage of Northern Mariana policy issues'
@@ -38366,7 +38365,7 @@
                 'URL' = 'https://pina.com.fj/cnmi-news/'
                 'icon' = 'https://pina.com.fj/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'The Wyoming Truth - Progressive social justice and equity coverage'
@@ -38384,7 +38383,7 @@
                 'icon' = 'https://350pacific.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'NMI News Service - Saipan breaking news and community videos'
@@ -38411,7 +38410,7 @@
             'URL' = 'https://www.youtube.com/c/WyomingPBS'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Yes Theory Saipan - Travel adventures and cultural explorations'
@@ -38433,7 +38432,7 @@
             'URL' = 'https://www.youtube.com/@frontiervanlife'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Around the Islands - Marianas Variety local issues discussions'
@@ -38460,7 +38459,7 @@
             'URL' = 'https://open.spotify.com/show/019eLXIQvN5w5tqCYLVQ1q'
             'icon' = 'https://open.spotify.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'Fanachu Podcast - Chamoru stories and identity discussions'
@@ -38482,7 +38481,7 @@
             'URL' = 'https://podcast.feedspot.com/pacific_islander_podcasts/'
             'icon' = 'https://podcast.feedspot.com/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38506,7 +38505,7 @@
                     'URL' = 'https://www.mvariety.com/news/business/'
                     'icon' = 'https://www.mvariety.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'WyoFile Business - Scrutiny of economic policies impacts'
@@ -38524,7 +38523,7 @@
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CNMI Department of Commerce - Behind scenes business tours'
@@ -38546,7 +38545,7 @@
                 'URL' = 'https://www.youtube.com/@nminews670'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Guam Chamber Spotlight - CNMI business leaders and innovations'
@@ -38564,7 +38563,7 @@
                 'icon' = 'https://www.commerce.gov.mp/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38588,7 +38587,7 @@
                     'URL' = 'https://marianaspress.com/sports/'
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Inside the Games CNMI - Independent team performances analysis'
@@ -38606,7 +38605,7 @@
                     'icon' = 'https://www.hcn.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NMI Sports Zone - Game recaps and athlete interviews'
@@ -38628,7 +38627,7 @@
                 'URL' = 'https://www.youtube.com/@nmifa'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Marianas Sports Talk - CNMI athletics analysis and interviews'
@@ -38646,7 +38645,7 @@
                 'icon' = 'https://athletics-oceania.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38670,7 +38669,7 @@
                     'URL' = 'https://marianaspress.com/category/arts/'
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Culture - Critiques arts policies narratives'
@@ -38688,7 +38687,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Discover Saipan Culture - Traditions festivals and explorations'
@@ -38710,7 +38709,7 @@
                 'URL' = 'https://www.youtube.com/@frontiervanlife'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Your Humanities Half-hour - Folklore hidden histories lore'
@@ -38728,7 +38727,7 @@
                 'icon' = 'https://www.mvariety.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38752,7 +38751,7 @@
                     'URL' = 'https://marianaspress.com/science-tech/'
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Science - Critiques research ethics impacts'
@@ -38770,7 +38769,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'NMI Science Channel - Campus labs and STEM breakthroughs'
@@ -38792,7 +38791,7 @@
                 'URL' = 'https://www.youtube.com/@cnmi research'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Marianas Science Talks - World-class research everyday intersections'
@@ -38810,7 +38809,7 @@
                 'icon' = 'https://athletics-oceania.com/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38834,7 +38833,7 @@
                     'URL' = 'https://governor.cnmi.gov/news/'
                     'icon' = 'https://governor.cnmi.gov/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Politics - Independent corruption watchdog'
@@ -38852,7 +38851,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CNMI Legislature - Weekly state local issues dives'
@@ -38874,7 +38873,7 @@
                 'URL' = 'https://www.youtube.com/@nminews670'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Cowboy State Politics CNMI - Political headlines expert dives'
@@ -38892,7 +38891,7 @@
                 'icon' = 'https://marianaspress.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38916,7 +38915,7 @@
                     'URL' = 'https://marianaspress.com/fashion/'
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Fashion - Industry ethics diversity critiques'
@@ -38934,7 +38933,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Discover Saipan Fashion - CNMI hauls and trend breakdowns'
@@ -38956,7 +38955,7 @@
                 'URL' = 'https://www.youtube.com/@frontiervanlife'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Marianas Fashion Files - Designer interviews and industry talks'
@@ -38974,7 +38973,7 @@
                 'icon' = 'https://www.saipantribune.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -38998,7 +38997,7 @@
                     'URL' = 'https://marianaspress.com/military/'
                     'icon' = 'https://marianaspress.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'High Country News Military - Scrutiny veteran issues impacts'
@@ -39016,7 +39015,7 @@
                     'icon' = 'https://wyomingtruth.org/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'CNMI National Guard - Official training and missions'
@@ -39038,7 +39037,7 @@
                 'URL' = 'https://www.youtube.com/@nminews670'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Tip of the Spear - US military Marianas impacts discussions'
@@ -39096,7 +39095,7 @@
                 'URL' = 'https://www.telemundopr.com/'
                 'icon' = 'https://www.telemundopr.com/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = '9 Millones - Independent solutions journalism on Puerto Rico climate equity'
@@ -39123,7 +39122,7 @@
                 'URL' = 'https://www.noticiassurpr.com/'
                 'icon' = 'https://www.noticiassurpr.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'Kilombo - Progressive Puerto Rico arts activism and social justice platform'
@@ -39141,7 +39140,7 @@
                 'icon' = 'https://remezcla.com/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'El Nuevo Da - Puerto Rico breaking news investigations and features'
@@ -39168,7 +39167,7 @@
             'URL' = 'https://www.youtube.com/user/PrimeraHoraPR'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Chente Ydrach - Satirical takes on Puerto Rico news and culture'
@@ -39190,7 +39189,7 @@
             'URL' = 'https://www.youtube.com/channel/UCCYYZjp9Xh7tH0wBJWe7P8w'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Chente Ydrach - Satirical Puerto Rico news and political commentary'
@@ -39217,7 +39216,7 @@
             'URL' = 'https://www.wkaq.com/podcasts/las-mananas-de-wkaq/'
             'icon' = 'https://www.wkaq.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Podcasters' = @(
         @{
             'Title' = 'La Brega - Puerto Rico stories on resilience and culture'
@@ -39239,7 +39238,7 @@
             'URL' = 'https://el-hilo.audio/'
             'icon' = 'https://el-hilo.audio/favicon.ico'
         }
-    ),
+    )
     'Business' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39263,7 +39262,7 @@
                     'URL' = 'https://www.primerahora.com/noticias/economia-negocios/'
                     'icon' = 'https://www.primerahora.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Centro de Periodismo Investigativo Negocios - Scrutiny of corporate policies impacts'
@@ -39281,7 +39280,7 @@
                     'icon' = 'https://80grados.net/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'News is My Business - Entrepreneur interviews and growth challenges'
@@ -39303,7 +39302,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCexampleinvestpr'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'News is My Business Podcast - Stories from Puerto Rico executives innovation'
@@ -39321,7 +39320,7 @@
                 'icon' = 'https://noticel.com/favicon.ico'
             }
         )
-    },
+    }
     'Sports' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39345,7 +39344,7 @@
                     'URL' = 'https://www.metro.pr/deportes/'
                     'icon' = 'https://www.metro.pr/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '80 Grados Deportes - Independent analysis of team performances'
@@ -39363,7 +39362,7 @@
                     'icon' = 'https://www.9millones.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'El Nuevo Da Deportes - Game highlights player interviews recaps'
@@ -39385,7 +39384,7 @@
                 'URL' = 'https://www.youtube.com/user/MetroPR'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Puerto Rico Sports Nation - Island teams analysis and interviews'
@@ -39403,7 +39402,7 @@
                 'icon' = 'https://www.iheart.com/favicon.ico'
             }
         )
-    },
+    }
     'Culture' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39427,7 +39426,7 @@
                     'URL' = 'https://www.metro.pr/cultura/'
                     'icon' = 'https://www.metro.pr/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = '80 Grados Cultura - Critiques of arts policies narratives'
@@ -39445,7 +39444,7 @@
                     'icon' = 'https://kilombo.co/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'El Nuevo Da Cultura - Traditions festivals and explorations'
@@ -39467,7 +39466,7 @@
                 'URL' = 'https://www.youtube.com/user/MetroPR'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'La Brega - Folklore hidden histories and lore'
@@ -39485,7 +39484,7 @@
                 'icon' = 'https://www.atlasobscura.com/favicon.ico'
             }
         )
-    },
+    }
     'Science and Technology' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39509,7 +39508,7 @@
                     'URL' = 'https://www.metro.pr/ciencia/'
                     'icon' = 'https://www.metro.pr/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Ciencia Puerto Rico - Critiques on research ethics impacts'
@@ -39527,7 +39526,7 @@
                     'icon' = 'https://periodismoinvestigativo.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Ciencia Puerto Rico - Campus labs and STEM breakthroughs'
@@ -39549,7 +39548,7 @@
                 'URL' = 'https://www.youtube.com/user/UPRMayaguez'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mirada Cientfica - World-class research everyday intersections'
@@ -39567,7 +39566,7 @@
                 'icon' = 'https://www.cienciapr.org/favicon.ico'
             }
         )
-    },
+    }
     'Politics' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39591,7 +39590,7 @@
                     'URL' = 'https://www.elvocero.com/politica/'
                     'icon' = 'https://www.elvocero.com/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Centro de Periodismo investigativo Poltica - independent watchdog on corruption transparency'
@@ -39609,7 +39608,7 @@
                     'icon' = 'https://www.9millones.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Chente Ydrach - Candidate debates and policy breakdowns'
@@ -39631,7 +39630,7 @@
                 'URL' = 'https://www.youtube.com/channel/UCjViKyTQUc-f3jltGWg9BMg'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Mano a Mano - Political headlines and expert dives'
@@ -39649,7 +39648,7 @@
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
         )
-    },
+    }
     'Fashion' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39673,7 +39672,7 @@
                     'URL' = 'https://www.metro.pr/moda/'
                     'icon' = 'https://www.metro.pr/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Remezcla Moda - Critiques on industry ethics diversity'
@@ -39691,7 +39690,7 @@
                     'icon' = 'https://kilombo.co/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Paola Penton - Puerto Rico fashion hauls and trend breakdowns'
@@ -39713,7 +39712,7 @@
                 'URL' = 'https://www.youtube.com/user/YizetteCifredo'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Between The Cheeks - Designer interviews and industry talks'
@@ -39731,7 +39730,7 @@
                 'icon' = 'https://www.facebook.com/favicon.ico'
             }
         )
-    },
+    }
     'Military' = @{
         'News' = @{
             'Mainstream' = @(
@@ -39755,7 +39754,7 @@
                     'URL' = 'https://www.metro.pr/militar/'
                     'icon' = 'https://www.metro.pr/favicon.ico'
                 }
-            ),
+            )
             'Counter' = @(
                 @{
                     'Title' = 'Centro de Periodismo Investigativo Militar - Scrutiny of veteran services impacts'
@@ -39773,7 +39772,7 @@
                     'icon' = 'https://www.9millones.com/favicon.ico'
                 }
             )
-        },
+        }
         'Vloggers' = @(
             @{
                 'Title' = 'Puerto Rico National Guard - Official training and missions'
@@ -39795,7 +39794,7 @@
                 'URL' = 'https://www.youtube.com/user/NotiCel'
                 'icon' = 'https://www.youtube.com/favicon.ico'
             }
-        ),
+        )
         'Podcasts' = @(
             @{
                 'Title' = 'Timeless Patriotism - Stories of service and recognition'
@@ -39853,7 +39852,7 @@
                 'URL' = 'https://usvinews.tv/'
                 'icon' = 'https://usvinews.tv/favicon.ico'
             }
-        ),
+        )
         'Alternative' = @(
             @{
                 'Title' = 'Virgin Islands News Online - Independent reporting on USVI community politics'
@@ -39880,7 +39879,7 @@
                 'URL' = 'https://www.stcroixsource.com/st-croix-avis'
                 'icon' = 'https://www.stcroixsource.com/favicon.ico'
             }
-        ),
+        )
         'Counter Culture' = @(
             @{
                 'Title' = 'High Country News - Progressive voice on USVI environment social issues'
@@ -39898,7 +39897,7 @@
                 'icon' = 'https://www.samoanvoices.org/favicon.ico'
             }
         )
-    },
+    }
     'Vloggers' = @(
         @{
             'Title' = 'mBlyden vLogs - USVI lifestyle explorations and community videos'
@@ -39925,7 +39924,7 @@
             'URL' = 'https://www.youtube.com/@JDNatlady'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Alternative Vloggers' = @(
         @{
             'Title' = 'Cate Poole - Snorkeling adventures and St. John explorations'
@@ -39947,7 +39946,7 @@
             'URL' = 'https://www.youtube.com/c/EdtheDiver'
             'icon' = 'https://www.youtube.com/favicon.ico'
         }
-    ),
+    )
     'Podcasters' = @(
         @{
             'Title' = 'Analyze This with Neville James - USVI headlines and deeper analysis'
@@ -39974,7 +39973,7 @@
                 'URL' = 'https://podcasts.apple.com/us/podcast/mr-grim-s-beachside-chats/idexample'
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
-        ),
+        )
         'Alternative Podcasters' = @(
             @{
                 'Title' = 'Rooted and Resilient - Independent investigative reporting discussions'
@@ -39996,7 +39995,7 @@
                 'URL' = 'https://podcasts.apple.com/us/podcast/national-park-after-dark/idexample'
                 'icon' = 'https://podcasts.apple.com/favicon.ico'
             }
-        ),
+        )
         'Business' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40020,7 +40019,7 @@
                         'URL' = 'https://viconsortium.com/vi-business'
                         'icon' = 'https://viconsortium.com/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'Business View Caribbean - Scrutiny of regional economic policies impacts'
@@ -40038,7 +40037,7 @@
                         'icon' = 'https://stcroixsource.com/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'JDNatlady''s Creations - Artisan business tours and craft spotlights'
@@ -40060,7 +40059,7 @@
                     'URL' = 'https://www.youtube.com/@tamekaduncan'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'USVI Works for Success - Stories from USVI executives on innovation'
@@ -40078,7 +40077,7 @@
                     'icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
             )
-        },
+        }
         'Sports' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40102,7 +40101,7 @@
                         'URL' = 'https://www.usvisf.com/'
                         'icon' = 'https://www.usvisf.com/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'Inside the Games USVI - Independent analysis of team performances'
@@ -40120,7 +40119,7 @@
                         'icon' = 'https://www.hcn.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'The Process Basketball VI - Game recaps and athlete interviews'
@@ -40142,7 +40141,7 @@
                     'URL' = 'https://www.youtube.com/@usvisoccerhighlights'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'Cuz n Cuz Sports Podcast - USVI athletics analysis and interviews'
@@ -40160,7 +40159,7 @@
                     'icon' = 'https://www.facebook.com/favicon.ico'
                 }
             )
-        },
+        }
         'Culture' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40184,7 +40183,7 @@
                         'URL' = 'https://stcroixsource.com/category/lifestyle/arts-culture/'
                         'icon' = 'https://stcroixsource.com/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'High Country News Culture - Critiques of arts policies narratives'
@@ -40202,7 +40201,7 @@
                         'icon' = 'https://www.samoanvoices.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'mBlyden vLogs Culture - USVI traditions festivals explorations'
@@ -40224,7 +40223,7 @@
                     'URL' = 'https://www.youtube.com/@JDNatlady'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'The Island History Podcast - Folklore hidden histories and lore'
@@ -40242,7 +40241,7 @@
                     'icon' = 'https://open.spotify.com/favicon.ico'
                 }
             )
-        },
+        }
         'Science and Technology' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40266,7 +40265,7 @@
                         'URL' = 'https://www.wtjx.org/science'
                         'icon' = 'https://www.wtjx.org/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'High Country News Science - Critiques on research ethics impacts'
@@ -40284,7 +40283,7 @@
                         'icon' = 'https://www.samoanvoices.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'UVI Science Channel - Campus labs and STEM breakthroughs'
@@ -40306,7 +40305,7 @@
                     'URL' = 'https://www.youtube.com/@uviresearchtechpark'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'UVI Research Talks - World-class research everyday intersections'
@@ -40324,7 +40323,7 @@
                     'icon' = 'https://insideclimatenews.org/favicon.ico'
                 }
             )
-        },
+        }
         'Politics' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40348,7 +40347,7 @@
                         'URL' = 'https://www.vi.gov/news/'
                         'icon' = 'https://www.vi.gov/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'High Country News Politics - Independent watchdog on corruption transparency'
@@ -40366,7 +40365,7 @@
                         'icon' = 'https://www.samoanvoices.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'Government House USVI - Weekly dives into state local issues'
@@ -40388,7 +40387,7 @@
                     'URL' = 'https://www.youtube.com/@AnalyzeThisNeville'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'The Cigar Room VI - Political headlines and expert dives'
@@ -40406,7 +40405,7 @@
                     'icon' = 'https://sharonmcmahon.com/favicon.ico'
                 }
             )
-        },
+        }
         'Fashion' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40430,7 +40429,7 @@
                         'URL' = 'https://stcroixsource.com/tag/fashion/'
                         'icon' = 'https://stcroixsource.com/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'High Country News Fashion - Critiques industry ethics diversity'
@@ -40448,7 +40447,7 @@
                         'icon' = 'https://www.samoanvoices.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'mBlyden vLogs Fashion - USVI hauls and trend breakdowns'
@@ -40470,7 +40469,7 @@
                     'URL' = 'https://www.youtube.com/@emilyg0nzalez'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'Island Girls Rock - Designer interviews and industry talks'
@@ -40488,7 +40487,7 @@
                     'icon' = 'https://podcasts.apple.com/favicon.ico'
                 }
             )
-        },
+        }
         'Military' = @{
             'News' = @{
                 'Mainstream' = @(
@@ -40512,7 +40511,7 @@
                         'URL' = 'https://www.virginislandsdailynews.com/news/military/'
                         'icon' = 'https://www.virginislandsdailynews.com/favicon.ico'
                     }
-                ),
+                )
                 'Counter' = @(
                     @{
                         'Title' = 'High Country News Military - Scrutiny veteran services impacts'
@@ -40530,7 +40529,7 @@
                         'icon' = 'https://www.samoanvoices.org/favicon.ico'
                     }
                 )
-            },
+            }
             'Vloggers' = @(
                 @{
                     'Title' = 'Puerto Rico National Guard USVI - Official training and missions'
@@ -40552,7 +40551,7 @@
                     'URL' = 'https://www.youtube.com/@viarmyguard'
                     'icon' = 'https://www.youtube.com/favicon.ico'
                 }
-            ),
+            )
             'Podcasts' = @(
                 @{
                     'Title' = 'Timeless Patriotism - Stories of service and recognition'

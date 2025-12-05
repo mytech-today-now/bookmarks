@@ -1,4 +1,4 @@
-# Sample curated bookmark data for bookmarks.ps1
+﻿# Sample curated bookmark data for bookmarks.ps1
 #
 # STRUCTURE:
 # This file defines a hierarchical bookmark structure:
