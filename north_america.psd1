@@ -26947,6 +26947,763 @@
         )
     }
 }
+'Oregon' = @{
+    'News' = @{
+        'Mainstream' = @(
+            @{
+                'Title' = 'OregonLive - Comprehensive coverage of Oregon politics economy and events'
+                'URL' = 'https://www.oregonlive.com/'
+                'icon' = 'https://www.oregonlive.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Statesman Journal - Breaking news weather and investigative stories across Oregon'
+                'URL' = 'https://www.statesmanjournal.com/'
+                'icon' = 'https://www.statesmanjournal.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Register-Guard - Local news updates traffic and community features in Oregon'
+                'URL' = 'https://www.registerguard.com/'
+                'icon' = 'https://www.registerguard.com/favicon.ico'
+            },
+            @{
+                'Title' = 'KPTV FOX 12 - Trusted journalism on Oregon breaking news and developments'
+                'URL' = 'https://www.kptv.com/'
+                'icon' = 'https://www.kptv.com/favicon.ico'
+            },
+            @{
+                'Title' = 'OPB Oregon Public Broadcasting - Leading source for Oregon headlines sports and weather'
+                'URL' = 'https://www.opb.org/'
+                'icon' = 'https://www.opb.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Central Oregon Daily - In-depth coverage of central Oregon culture policy and investigations'
+                'URL' = 'https://www.centraloregondaily.com/'
+                'icon' = 'https://www.centraloregondaily.com/favicon.ico'
+            },
+            @{
+                'Title' = 'KGW News - Regional reporting on Portland communities and issues'
+                'URL' = 'https://www.kgw.com/'
+                'icon' = 'https://www.kgw.com/favicon.ico'
+            }
+        ),
+        'Alternative' = @(
+            @{
+                'Title' = 'Portland Mercury - Progressive commentary on Portland culture and politics'
+                'URL' = 'https://www.portlandmercury.com/'
+                'icon' = 'https://www.portlandmercury.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Willamette Week - Independent journalism for Portland arts and culture'
+                'URL' = 'https://www.wweek.com/'
+                'icon' = 'https://www.wweek.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Capital Chronicle - Nonprofit investigations on Oregon issues and stories'
+                'URL' = 'https://oregoncapitalchronicle.com/'
+                'icon' = 'https://oregoncapitalchronicle.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Street Roots - Alternative weekly news source for Portland social justice'
+                'URL' = 'https://www.streetroots.org/'
+                'icon' = 'https://www.streetroots.org/favicon.ico'
+            },
+            @{
+                'Title' = 'The Source Bend - Central Oregon locally owned voice for news and opinion'
+                'URL' = 'https://www.bendsource.com/'
+                'icon' = 'https://www.bendsource.com/favicon.ico'
+            }
+        ),
+        'Counter Culture' = @(
+            @{
+                'Title' = 'Portland Mercury - Progressive voice on Portland arts music and social issues'
+                'URL' = 'https://www.portlandmercury.com/'
+                'icon' = 'https://www.portlandmercury.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Willamette Week - Underground perspectives on Oregon social justice'
+                'URL' = 'https://www.wweek.com/'
+                'icon' = 'https://www.wweek.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Street Roots - Community-led coverage of cultural controversies and equity'
+                'URL' = 'https://www.streetroots.org/'
+                'icon' = 'https://www.streetroots.org/favicon.ico'
+            }
+        )
+    },
+    'Vloggers' = @(
+        @{
+            'Title' = 'KGW News - Breaking news weather and local stories from Oregon'
+            'URL' = 'https://www.youtube.com/channel/UCKgAB8lqTbqbwXC-e6_9lhQ'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The Oregonian - Trusted source for headlines investigations and updates'
+            'URL' = 'https://www.youtube.com/Oregonian'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'OPB Oregon Public Broadcasting - Oregon source for news weather sports and entertainment'
+            'URL' = 'https://www.youtube.com/user/OregonPublicBroadcasting'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'KATU News - Trending stories breaking news and investigative journalism'
+            'URL' = 'https://www.youtube.com/user/katunews'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'KPTV FOX 12 Oregon - Local updates on Oregon politics and community features'
+            'URL' = 'https://www.youtube.com/channel/UCW_2j6G1Kx1x2x3x4x5x6x7'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Alternative Vloggers' = @(
+        @{
+            'Title' = 'Oregon Capital Chronicle - Videos on arts events and independent Oregon stories'
+            'URL' = 'https://www.youtube.com/@oregoncapitalchronicle'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Portland Mercury - Neighborhood investigations and local happenings vlogs'
+            'URL' = 'https://www.youtube.com/@portlandmercury'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Willamette Week - State government coverage and policy breakdowns'
+            'URL' = 'https://www.youtube.com/@willametteweek'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Street Roots - Public media insights on urban issues and culture'
+            'URL' = 'https://www.youtube.com/@streetroots'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Podcasters' = @(
+        @{
+            'Title' = 'Beat Check with The Oregonian - Daily headlines and deeper dives on Oregon news'
+            'URL' = 'https://podcasts.apple.com/us/podcast/beat-check-with-the-oregonian/id1483134030'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Think Out Loud - Nonpartisan analysis of state government stories'
+            'URL' = 'https://www.npr.org/podcasts/408524085/think-out-loud'
+            'icon' = 'https://www.npr.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Oregon On The Record - Weekly commentary on Oregon politics and policy'
+            'URL' = 'https://podcasts.apple.com/us/podcast/oregon-on-the-record/id1676702722'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'OPB Politics Now - Top headlines and insights from Oregon Public Broadcasting'
+            'URL' = 'https://www.opb.org/show/politicsnow/'
+            'icon' = 'https://www.opb.org/favicon.ico'
+        },
+        @{
+            'Title' = 'The Bridge by OR360 - Statewide news talk on Oregon culture and stories'
+            'URL' = 'https://oregonbridgepodcast.podbean.com/'
+            'icon' = 'https://podbean.com/favicon.ico'
+        }
+    ),
+    'Alternative Podcasters' = @(
+        @{
+            'Title' = 'Welcome To Oregon - Curious takes on Oregon political system'
+            'URL' = 'https://podcasts.apple.com/us/podcast/welcome-to-oregon-a-oregon-history-lore-podcast/id1693303368'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Oregon Grapevine - Snapshots of significant state events'
+            'URL' = 'https://www.npr.org/podcasts/976404074/oregon-grapevine'
+            'icon' = 'https://www.npr.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Offbeat Oregon History - Research-driven perspectives on Oregon issues'
+            'URL' = 'https://podcasts.apple.com/us/podcast/offbeat-oregon-history-podcast/id490506026'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The Detour - Activism and policy through Oregon lens'
+            'URL' = 'https://oregonhumanities.org/rll/podcast/'
+            'icon' = 'https://oregonhumanities.org/favicon.ico'
+        }
+    ),
+    'Business' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Oregon Business - Analytics on Oregon healthcare real estate and manufacturing'
+                    'URL' = 'https://oregonbusiness.com/'
+                    'icon' = 'https://oregonbusiness.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Business Journal - Local insights on growth networking and hiring'
+                    'URL' = 'https://www.bizjournals.com/portland'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Daily Journal of Commerce - Coverage of central Oregon economy and developments'
+                    'URL' = 'https://djcoregon.com/'
+                    'icon' = 'https://djcoregon.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Business Oregon - Updates on Oregon tech and startup events'
+                    'URL' = 'https://www.oregon.gov/biz/newsroom/pages/default.aspx'
+                    'icon' = 'https://www.oregon.gov/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Oregon Capital Chronicle Business - Scrutiny of state economic policies'
+                    'URL' = 'https://oregoncapitalchronicle.com/tag/business/'
+                    'icon' = 'https://oregoncapitalchronicle.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Willamette Week Business - Alternative views on Oregon financial challenges'
+                    'URL' = 'https://www.wweek.com/tag/business/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Mercury Business - Investigative analysis of Oregon legal markets'
+                    'URL' = 'https://www.portlandmercury.com/tag/business/'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Oregon Entrepreneurs Network - Conversations with local business leaders'
+                'URL' = 'https://www.youtube.com/watch?v=lDPfscKhnLE'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Asa Morse - Stories from Oregon entrepreneurs and growth'
+                'URL' = 'https://www.youtube.com/@itsasamorse'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Main Street Mavericks - Journeys shaping state economic future'
+                'URL' = 'https://www.youtube.com/watch?v=4X11szsQD3w'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Business & Industry - Tours of key industries and innovations'
+                'URL' = 'https://www.youtube.com/@oregonbusinessindustry7097'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Oregon Business Matters - Insights on business trends and leadership'
+                'URL' = 'https://podcasts.apple.com/us/podcast/oregon-business-matters/id1812519364'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Portland Real Estate Podcast - Spotlights on local companies and success'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-portland-real-estate-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Rainmakers - Roundup of essential Oregon business headlines'
+                'URL' = 'https://www.npr.org/podcasts/1038102492/k-l-c-c-s-oregon-rainmakers'
+                'icon' = 'https://www.npr.org/favicon.ico'
+            }
+        )
+    },
+    'Sports' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'OregonLive Sports - Coverage of Ducks Beavers and Oregon college athletics'
+                    'URL' = 'https://www.oregonlive.com/sports/'
+                    'icon' = 'https://www.oregonlive.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Ducks Wire - Fan analysis of Oregon football recruiting and games'
+                    'URL' = 'https://duckswire.usatoday.com/'
+                    'icon' = 'https://duckswire.usatoday.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Register-Guard Sports - Headlines on Ducks basketball and more'
+                    'URL' = 'https://www.registerguard.com/sports/'
+                    'icon' = 'https://www.registerguard.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoDucks - Updates on Oregon athletics events and scores'
+                    'URL' = 'https://goducks.com/'
+                    'icon' = 'https://goducks.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'DuckTerritory - Independent takes on Ducks recruiting and coaching'
+                    'URL' = 'https://247sports.com/college/oregon/'
+                    'icon' = 'https://247sports.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Addicted To Quack - Alternative coverage of Oregon sports news'
+                    'URL' = 'https://www.addictedtoquack.com/'
+                    'icon' = 'https://www.addictedtoquack.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'FishDuck - Critical analysis of Oregon high school and college games'
+                    'URL' = 'https://fishduck.com/'
+                    'icon' = 'https://fishduck.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'GoDucks - Highlights and reactions to Ducks sports games'
+                'URL' = 'https://www.youtube.com/@GoDucksdotcom'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon SportsBeat - Official behind-the-scenes and game vlogs'
+                'URL' = 'https://www.youtube.com/c/OregonSportsBeat'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SportsChat503 - Recruiting updates and Ducks fan discussions'
+                'URL' = 'https://www.youtube.com/user/SportsChat503'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Oregonian Sports - Local high school game recaps and stories'
+                'URL' = 'https://www.youtube.com/channel/UCra-NCIxn2Xl3Ssr5kqvuYA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Oregon Sports Network - Analysis of Oregon Ducks athletics'
+                'URL' = 'https://podcasts.apple.com/us/podcast/oregon-sports-network/id1271166157'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Locked On Ducks - Daily breakdowns of Ducks news and games'
+                'URL' = 'https://lockedonpodcasts.com/podcasts/locked-on-oregon-ducks/'
+                'icon' = 'https://lockedonpodcasts.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Autzen Audibles - Syndicated talk on Oregon sports'
+                'URL' = 'https://podcasts.apple.com/us/podcast/autzen-audibles-duckterritorys-oregon-athletics-podcast/id1283211411'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Culture' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Portland Monthly - Reviews of Portland arts music and cultural events'
+                    'URL' = 'https://www.pdxmonthly.com/arts-and-culture'
+                    'icon' = 'https://www.pdxmonthly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon ArtsWatch - Features on theater festivals and heritage'
+                    'URL' = 'https://www.orartswatch.org/'
+                    'icon' = 'https://www.orartswatch.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'OPB Arts & Culture - Coverage of Oregon arts and traditions'
+                    'URL' = 'https://www.opb.org/tag/arts-and-culture/'
+                    'icon' = 'https://www.opb.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Bend Source - Stories on creative scenes and exhibitions'
+                    'URL' = 'https://www.bendsource.com/'
+                    'icon' = 'https://www.bendsource.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Portland Mercury Culture - Critiques of arts policies and society'
+                    'URL' = 'https://www.portlandmercury.com/collections/45705699/culture'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Street Roots Culture - Community reporting on cultural inequalities'
+                    'URL' = 'https://www.streetroots.org/news/culture'
+                    'icon' = 'https://www.streetroots.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Willamette Week Culture - Progressive perspectives on Oregon arts identities'
+                    'URL' = 'https://www.wweek.com/category/arts-culture/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Here is Oregon - Explorations of Oregon culture and history'
+                'URL' = 'https://www.youtube.com/hereisoregon'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Living in Portland Oregon - Lifestyle vlogs on regional daily life'
+                'URL' = 'https://www.youtube.com/c/livinginportlandoregon'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Travel - Cultural insights from diverse Oregon communities'
+                'URL' = 'https://www.youtube.com/user/OhioTravel'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Portland Underground - Neighborhood explorations and local traditions'
+                'URL' = 'https://www.youtube.com/@portlandunderground'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Welcome To Oregon - Introductions to diverse Oregon communities'
+                'URL' = 'https://podcasts.apple.com/us/podcast/welcome-to-oregon-a-oregon-history-lore-podcast/id1693303368'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Grapevine - Discussions on Oregon arts and heritage'
+                'URL' = 'https://www.npr.org/podcasts/976404074/oregon-grapevine'
+                'icon' = 'https://www.npr.org/favicon.ico'
+            },
+            @{
+                'Title' = 'The Detour - Snapshots of cultural milestones and events'
+                'URL' = 'https://oregonhumanities.org/rll/podcast/'
+                'icon' = 'https://oregonhumanities.org/favicon.ico'
+            }
+        )
+    },
+    'Science and Technology' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'OPB Science & Technology - Updates on university research breakthroughs'
+                    'URL' = 'https://www.opb.org/tag/science-and-technology/'
+                    'icon' = 'https://www.opb.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon Tech Newsroom - Coverage of Oregon innovations and discoveries'
+                    'URL' = 'https://www.oit.edu/news'
+                    'icon' = 'https://www.oit.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon State University Science - Stories on tech advancements and grants'
+                    'URL' = 'https://science.oregonstate.edu/our-college/science-in-the-spotlight'
+                    'icon' = 'https://science.oregonstate.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Technology Association of Oregon - Reports on Oregon science ecosystem and researchers'
+                    'URL' = 'https://www.techoregon.org/'
+                    'icon' = 'https://www.techoregon.org/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Oregon Capital Chronicle Tech - Critical views on research ethics'
+                    'URL' = 'https://oregoncapitalchronicle.com/tag/technology/'
+                    'icon' = 'https://oregoncapitalchronicle.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Willamette Week Tech - Analysis of state scientific impacts'
+                    'URL' = 'https://www.wweek.com/tag/technology/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Mercury Tech - Scrutiny of innovation policies and equity'
+                    'URL' = 'https://www.portlandmercury.com/tag/technology/'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Oregon Tech - Insights on state innovation hubs'
+                'URL' = 'https://www.youtube.com/user/OregonInstituteTech'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'OSU AgSci - Explanations of Oregon tech growth'
+                'URL' = 'https://www.youtube.com/channel/UC8vBG8QGmC-PbTyEvygbZGg'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'University of Oregon Science - Explorations of local science and engineering'
+                'URL' = 'https://www.youtube.com/playlist?list=PLV88ZmvwupLxrVfvzJBHW_BiUqPecdstu'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tech Oregon - Campus tours and research spotlights'
+                'URL' = 'https://www.youtube.com/c/TechOregon'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Techlandia - Conversations on Oregon tech ecosystem'
+                'URL' = 'https://www.techoregon.org/resources/techlandia-podcast'
+                'icon' = 'https://www.techoregon.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Corvallis Science Pub - EdTech leaders on Oregon digital innovations'
+                'URL' = 'https://communications.oregonstate.edu/podcast'
+                'icon' = 'https://communications.oregonstate.edu/favicon.ico'
+            },
+            @{
+                'Title' = 'The N 2 STEM - Stories of state science pioneers and breakthroughs'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-n-2-stem-podcast/id1540340661'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Politics' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Oregon Capital Chronicle - Nonpartisan coverage of state legislature and policy'
+                    'URL' = 'https://oregoncapitalchronicle.com/'
+                    'icon' = 'https://oregoncapitalchronicle.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'OregonLive Politics - Analysis of Oregon elections and governance'
+                    'URL' = 'https://www.oregonlive.com/politics/'
+                    'icon' = 'https://www.oregonlive.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'OPB Politics - Updates on state races and government news'
+                    'URL' = 'https://www.opb.org/tag/politics/'
+                    'icon' = 'https://www.opb.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon Capital Insider - Insider newsletter on state campaigns and lobbying'
+                    'URL' = 'https://oregoncapitalinsider.com/'
+                    'icon' = 'https://oregoncapitalinsider.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Willamette Week Politics - Independent commentary on Oregon political insiders'
+                    'URL' = 'https://www.wweek.com/news/politics/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Mercury Politics - Watchdog reporting on government transparency'
+                    'URL' = 'https://www.portlandmercury.com/news/politics/'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Street Roots Politics - Critiques of power and reforms'
+                    'URL' = 'https://www.streetroots.org/news/politics'
+                    'icon' = 'https://www.streetroots.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'OPB Politics Now - Discussions on state politics and leadership'
+                'URL' = 'https://www.youtube.com/playlist?list=PLytPuJnaUvWBtdA34pRB5Cpr_aqYr0sWx'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Capital Chronicle Playlist - Profiles of emerging state leaders'
+                'URL' = 'https://www.youtube.com/@oregoncapitalchronicle'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'KATU Politics - Nonpartisan talks on public service'
+                'URL' = 'https://www.youtube.com/user/katunews'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Get Real With Rick Dancer - Progressive breakdowns of election news'
+                'URL' = 'https://www.youtube.com/watch?v=OHfk2vfSGac'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'OPB Politics Now - Insightful dives into state political headlines'
+                'URL' = 'https://www.npr.org/podcasts/477719327/o-p-b-politics-now'
+                'icon' = 'https://www.npr.org/favicon.ico'
+            },
+            @{
+                'Title' = 'The Bridge by OR360 - Backstory on Oregon weekly political stories'
+                'URL' = 'https://oregonbridgepodcast.podbean.com/'
+                'icon' = 'https://podbean.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon On The Record - Commentary on top state government news'
+                'URL' = 'https://podcasts.apple.com/us/podcast/oregon-on-the-record/id1676702722'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Fashion' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Portland Monthly Style & Shopping - Celebrating Portland street style and creatives'
+                    'URL' = 'https://www.pdxmonthly.com/style-and-shopping'
+                    'icon' = 'https://www.pdxmonthly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Fashion Week - Luxury lifestyle fashion beauty and events coverage'
+                    'URL' = 'https://www.portlandfashionweek.net/'
+                    'icon' = 'https://www.portlandfashionweek.net/favicon.ico'
+                },
+                @{
+                    'Title' = 'Daily Emerald Fashion - Trends designers and local fashion events'
+                    'URL' = 'https://dailyemerald.com/category/fashion/'
+                    'icon' = 'https://dailyemerald.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'OPB Fashion - Coverage of city runway shows and influences'
+                    'URL' = 'https://www.opb.org/tag/fashion/'
+                    'icon' = 'https://www.opb.org/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Portland Mercury Fashion - Critiques of industry ethics and diversity'
+                    'URL' = 'https://www.portlandmercury.com/tag/fashion/'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Willamette Week Fashion - Views on sustainable Oregon style'
+                    'URL' = 'https://www.wweek.com/tag/fashion/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Street Roots Fashion - Alternative stories on ethical and local trends'
+                    'URL' = 'https://www.streetroots.org/tag/fashion/'
+                    'icon' = 'https://www.streetroots.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Portland Fashion Institute - Hauls styling and trend breakdowns'
+                'URL' = 'https://www.youtube.com/channel/UCo2c6FkUswsLf1qghFMvHJQ'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'FashioNXT - GRWMs shows and BTS fashion week experiences'
+                'URL' = 'https://www.youtube.com/hashtag/portlandfashionweek'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Summer Mckeen - Behind-the-scenes at city runway events'
+                'URL' = 'https://www.youtube.com/watch?v=5hqxG4IReLU'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'AlwaysFreshApparel - Creator experiences and local inspirations'
+                'URL' = 'https://www.youtube.com/user/alwaysfreshapparel'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Align on Air - Talks on city design and weeks'
+                'URL' = 'https://www.alignmaguo.com/podcast'
+                'icon' = 'https://www.alignmaguo.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pre-Loved Podcast - Social cultural histories of Oregon style'
+                'URL' = 'https://podcasts.apple.com/us/podcast/pre-loved-podcast-with-emily-stochl/id1435719708'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Clotheshorse - Showcasing Oregon vibrant fashion culture'
+                'URL' = 'https://clotheshorsepodcast.com/'
+                'icon' = 'https://clotheshorsepodcast.com/favicon.ico'
+            }
+        )
+    },
+    'Military' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Oregon Military Department Newsroom - Updates on missions training and activations'
+                    'URL' = 'https://apps.oregon.gov/oregon-newsroom/OR/OMD/Posts'
+                    'icon' = 'https://www.oregon.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon National Guard - Coverage of Guard deployments and veteran affairs'
+                    'URL' = 'https://www.nationalguard.mil/News/Tag/110481/oregon-national-guard/'
+                    'icon' = 'https://www.nationalguard.mil/favicon.ico'
+                },
+                @{
+                    'Title' = 'OPB Military - Reports on state guard and federal policies'
+                    'URL' = 'https://www.opb.org/tag/military/'
+                    'icon' = 'https://www.opb.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oregon Sentinel - Stories on veterans and base coverage'
+                    'URL' = 'https://www.dvidshub.net/publication/204/oregon-sentinel'
+                    'icon' = 'https://www.dvidshub.net/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Oregon Capital Chronicle Military - Independent scrutiny of veteran deployments'
+                    'URL' = 'https://oregoncapitalchronicle.com/tag/military/'
+                    'icon' = 'https://oregoncapitalchronicle.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Willamette Week Military - Critical reporting on Oregon soldier experiences'
+                    'URL' = 'https://www.wweek.com/tag/military/'
+                    'icon' = 'https://www.wweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Portland Mercury Military - Scrutiny of defense policies and impacts'
+                    'URL' = 'https://www.portlandmercury.com/tag/military/'
+                    'icon' = 'https://www.portlandmercury.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Oregon National Guard - Official training and community service videos'
+                'URL' = 'https://www.youtube.com/user/oregonmildep'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Military Department - Stories from military members and family connections'
+                'URL' = 'https://www.youtube.com/@OregonMilitaryDepartment'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Valhalla VFT - Analyses of Oregon base life and gear'
+                'URL' = 'https://www.youtube.com/@ValhallaVFT'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oregon Echoes - Military family adventures in Oregon relocations'
+                'URL' = 'https://www.youtube.com/channel/UCMvoX5J1eNuge4UAZHySFrA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Hope in the Trenches - Discussions on veteran legislation and assistance'
+                'URL' = 'https://podcasts.apple.com/us/podcast/hope-in-the-trenches/id1573931210'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Going to War and Coming Home - Original programming on Oregon military history'
+                'URL' = 'https://oregonhumanities.org/rll/podcast/episode/war/'
+                'icon' = 'https://oregonhumanities.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Rogue Cell - Perspectives from Oregon Marine Corps veterans'
+                'URL' = 'https://podcasts.apple.com/us/podcast/rogue-cell/id1668918389'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    }
+}
 
 }
 }
