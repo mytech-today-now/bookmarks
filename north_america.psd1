@@ -1,4 +1,11 @@
-﻿# North America Data Set for bookmarks.ps1
+﻿<#
+.SYNOPSIS
+    External data source for North America bookmarks.
+#>
+
+@{
+'North America' = @{
+# North America Data Set for bookmarks.ps1
 #
 
 # Grok Chat: https://grok.com/c/25595fc2-31a8-460b-b61f-dece2579da62?rid=c9abd568-dfbc-4b24-a35d-d38d70f42475
@@ -26941,5 +26948,23 @@
     }
 }
 
+}
+}
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 }
 }
