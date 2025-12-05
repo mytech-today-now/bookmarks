@@ -27704,6 +27704,3034 @@
         )
     }
 }
+'Pennsylvania' = @{
+    'News' = @{
+        'Mainstream' = @(
+            @{
+                'Title' = 'The Philadelphia Inquirer - Comprehensive coverage of Pennsylvania politics economy and events'
+                'URL' = 'https://www.inquirer.com/'
+                'icon' = 'https://www.inquirer.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Post-Gazette - Breaking news weather and investigative stories across Pennsylvania'
+                'URL' = 'https://www.post-gazette.com/'
+                'icon' = 'https://www.post-gazette.com/favicon.ico'
+            },
+            @{
+                'Title' = 'PennLive - Local news updates traffic and community features in Pennsylvania'
+                'URL' = 'https://www.pennlive.com/'
+                'icon' = 'https://www.pennlive.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Allentown Morning Call - Trusted journalism on eastern Pennsylvania breaking news and developments'
+                'URL' = 'https://www.mcall.com/'
+                'icon' = 'https://www.mcall.com/favicon.ico'
+            },
+            @{
+                'Title' = 'York Daily Record - Leading source for York County headlines sports and weather'
+                'URL' = 'https://www.ydr.com/'
+                'icon' = 'https://www.ydr.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Reading Eagle - In-depth coverage of Berks County culture policy and investigations'
+                'URL' = 'https://www.readingeagle.com/'
+                'icon' = 'https://www.readingeagle.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Erie Times-News - Regional reporting on northwest Pennsylvania communities and issues'
+                'URL' = 'https://www.goerie.com/'
+                'icon' = 'https://www.goerie.com/favicon.ico'
+            }
+        ),
+        'Alternative' = @(
+            @{
+                'Title' = 'Spotlight PA - Nonprofit investigations on Pennsylvania issues and stories'
+                'URL' = 'https://www.spotlightpa.org/'
+                'icon' = 'https://www.spotlightpa.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Capital-Star - Independent nonprofit news on state government and policy'
+                'URL' = 'https://penncapital-star.com/'
+                'icon' = 'https://penncapital-star.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Philadelphia City Paper - Nonpartisan statewide news and in-depth reporting'
+                'URL' = 'https://www.philadelphiaweekly.com/'
+                'icon' = 'https://www.philadelphiaweekly.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh City Paper - Pittsburgh guide to arts entertainment and local culture'
+                'URL' = 'https://www.pghcitypaper.com/'
+                'icon' = 'https://www.pghcitypaper.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WitF - Harrisburg local business and community news'
+                'URL' = 'https://www.witf.org/'
+                'icon' = 'https://www.witf.org/favicon.ico'
+            }
+        ),
+        'Counter Culture' = @(
+            @{
+                'Title' = 'Philadelphia City Paper - Progressive voice on Philadelphia arts music and social issues'
+                'URL' = 'https://www.philadelphiaweekly.com/'
+                'icon' = 'https://www.philadelphiaweekly.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh City Paper - Independent takes on state politics and activism'
+                'URL' = 'https://www.pghcitypaper.com/'
+                'icon' = 'https://www.pghcitypaper.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Pennsylvania Independent - Community-led coverage of cultural controversies'
+                'URL' = 'https://pennsylvaniaindependent.com/'
+                'icon' = 'https://pennsylvaniaindependent.com/favicon.ico'
+            }
+        )
+    },
+    'Vloggers' = @(
+        @{
+            'Title' = '6ABC Philadelphia - Breaking news weather and local stories from Pennsylvania'
+            'URL' = 'https://www.youtube.com/channel/UCp8P8Q0vH1V1x1x2x3x4x5x6'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WPVI - Trusted source for headlines investigations and updates'
+            'URL' = 'https://www.youtube.com/user/6abc'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WTAE Pittsburgh - Pennsylvania source for news weather sports and entertainment'
+            'URL' = 'https://www.youtube.com/user/wtae'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Spotlight PA - Trending stories breaking news and investigative journalism'
+            'URL' = 'https://www.youtube.com/@SpotlightPA'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Pennsylvania Public Media - Local updates on Pennsylvania politics and community features'
+            'URL' = 'https://www.youtube.com/@WHYY'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Alternative Vloggers' = @(
+        @{
+            'Title' = 'Pennsylvania Capital-Star - Videos on arts events and independent Pennsylvania stories'
+            'URL' = 'https://www.youtube.com/@penncapitalstar'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Philadelphia City Paper - Neighborhood investigations and local happenings vlogs'
+            'URL' = 'https://www.youtube.com/@philadelphiacitypaper'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Pittsburgh City Paper - State government coverage and policy breakdowns'
+            'URL' = 'https://www.youtube.com/@pittsburghcitypaper'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WitF - Public media insights on urban issues and culture'
+            'URL' = 'https://www.youtube.com/user/witf'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Podcasters' = @(
+        @{
+            'Title' = 'Spotlight PA - Daily headlines and deeper dives on Pennsylvania news'
+            'URL' = 'https://podcasts.apple.com/us/podcast/spotlight-pa/id1535961777'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The Pennsylvania Independent - Nonpartisan analysis of state government stories'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-pennsylvania-independent/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Pennsylvania Pressroom - Weekly commentary on Pennsylvania politics and policy'
+            'URL' = 'https://podcasts.apple.com/us/podcast/pennsylvania-pressroom/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WHYY News - Top headlines and insights from Pennsylvania Public Media'
+            'URL' = 'https://whyy.org/podcasts/news-clips/'
+            'icon' = 'https://whyy.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Pennsylvania Newsroom - Statewide news talk on Pennsylvania culture and stories'
+            'URL' = 'https://podcasts.apple.com/us/podcast/pennsylvania-newsroom/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        }
+    ),
+    'Alternative Podcasters' = @(
+        @{
+            'Title' = 'Pennsylvania Capital-Star - Curious takes on Pennsylvania political system'
+            'URL' = 'https://penncapital-star.com/podcast/'
+            'icon' = 'https://penncapital-star.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Philadelphia City Paper - Snapshots of significant state events'
+            'URL' = 'https://podcasts.apple.com/us/podcast/philadelphia-city-paper/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Pittsburgh City Paper - Research-driven perspectives on Pennsylvania issues'
+            'URL' = 'https://podcasts.apple.com/us/podcast/pittsburgh-city-paper/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WitF Politics - Activism and policy through Pennsylvania lens'
+            'URL' = 'https://witf.org/podcasts/smart-talk/'
+            'icon' = 'https://witf.org/favicon.ico'
+        }
+    ),
+    'Business' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Philadelphia Business Journal - Analytics on Pennsylvania healthcare real estate and manufacturing'
+                    'URL' = 'https://www.bizjournals.com/philadelphia'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Business Times - Local insights on growth networking and hiring'
+                    'URL' = 'https://www.bizjournals.com/pittsburgh'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Central Penn Business Journal - Coverage of central Pennsylvania economy and developments'
+                    'URL' = 'https://www.cpbj.com/'
+                    'icon' = 'https://www.cpbj.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Department of Community and Economic Development - Updates on Pennsylvania tech and startup events'
+                    'URL' = 'https://dced.pa.gov/newsroom/'
+                    'icon' = 'https://dced.pa.gov/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Spotlight PA Business - Scrutiny of state economic policies'
+                    'URL' = 'https://www.spotlightpa.org/tag/business/'
+                    'icon' = 'https://www.spotlightpa.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Capital-Star Business - Alternative views on Pennsylvania financial challenges'
+                    'URL' = 'https://penncapital-star.com/tag/business/'
+                    'icon' = 'https://penncapital-star.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Matter News Business - Investigative analysis of Pennsylvania legal markets'
+                    'URL' = 'https://matternews.org/tag/business/'
+                    'icon' = 'https://matternews.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Philadelphia Business Journal - Conversations with local business leaders'
+                'URL' = 'https://www.youtube.com/@phillybizjournal'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Business Times Vlog - Stories from Pennsylvania entrepreneurs and growth'
+                'URL' = 'https://www.youtube.com/@pittsburghbiztimes'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Central Penn Business Journal - Journeys shaping state economic future'
+                'URL' = 'https://www.youtube.com/@cpbj'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'DCED Pennsylvania - Tours of key industries and innovations'
+                'URL' = 'https://www.youtube.com/@DCEDPA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Philadelphia Business Journal Podcast - Insights on business trends and leadership'
+                'URL' = 'https://www.bizjournals.com/philadelphia/news/podcasts'
+                'icon' = 'https://www.bizjournals.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Business Times Podcast - Spotlights on local companies and success'
+                'URL' = 'https://www.bizjournals.com/pittsburgh/news/podcasts'
+                'icon' = 'https://www.bizjournals.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Central Penn Business Journal Podcast - Roundup of essential Pennsylvania business headlines'
+                'URL' = 'https://www.cpbj.com/podcast/'
+                'icon' = 'https://www.cpbj.com/favicon.ico'
+            }
+        )
+    },
+    'Sports' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'PhillyVoice Sports - Coverage of Eagles Sixers Phillies and college athletics'
+                    'URL' = 'https://www.phillyvoice.com/sports/'
+                    'icon' = 'https://www.phillyvoice.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'PennLive Sports - Fan analysis of Penn State Nittany Lions recruiting and games'
+                    'URL' = 'https://www.pennlive.com/sports/'
+                    'icon' = 'https://www.pennlive.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Post-Gazette Sports - Headlines on Steelers Penguins Pirates and more'
+                    'URL' = 'https://www.post-gazette.com/sports/'
+                    'icon' = 'https://www.post-gazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Philly.com Sports - Updates on Pennsylvania athletics events and scores'
+                    'URL' = 'https://www.inquirer.com/sports/'
+                    'icon' = 'https://www.inquirer.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Liberty Ballers - Independent takes on Sixers recruiting and coaching'
+                    'URL' = 'https://www.libertyballers.com/'
+                    'icon' = 'https://www.libertyballers.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Behind the Steel Curtain - Alternative coverage of Steelers sports news'
+                    'URL' = 'https://www.behindthesteelcurtain.com/'
+                    'icon' = 'https://www.behindthesteelcurtain.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Black Shoe Diaries - Critical analysis of Pennsylvania high school and college games'
+                    'URL' = 'https://www.blackshoediaries.com/'
+                    'icon' = 'https://www.blackshoediaries.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Philadelphia Eagles - Highlights and reactions to Eagles sports games'
+                'URL' = 'https://www.youtube.com/c/Philadelphiaeagles'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Steelers - Official behind-the-scenes and game vlogs'
+                'URL' = 'https://www.youtube.com/c/PittsburghSteelers'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Penn State Athletics - Recruiting updates and Nittany Lions fan discussions'
+                'URL' = 'https://www.youtube.com/c/PennStateAthletics'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Philly Sports Nation - Local high school game recaps and stories'
+                'URL' = 'https://www.youtube.com/@PhillySportsNation'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Bleeding Green Nation - Analysis of Philadelphia Eagles athletics'
+                'URL' = 'https://podcasts.apple.com/us/podcast/bleeding-green-nation-a-philadelphia-eagles-podcast/id1023332072'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Locked On Eagles - Daily breakdowns of Eagles news and games'
+                'URL' = 'https://lockedonpodcasts.com/podcasts/locked-on-eagles/'
+                'icon' = 'https://lockedonpodcasts.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Steelers Nation Unite - Syndicated talk on Pennsylvania sports'
+                'URL' = 'https://podcasts.apple.com/us/podcast/steelers-nation-unite/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Culture' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Philly Mag - Reviews of Philadelphia arts music and cultural events'
+                    'URL' = 'https://www.phillymag.com/arts-and-culture/'
+                    'icon' = 'https://www.phillymag.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Humanities Council News - Features on theater festivals and heritage'
+                    'URL' = 'https://www.pahumanities.org/news/'
+                    'icon' = 'https://www.pahumanities.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Magazine - Coverage of Pennsylvania arts and traditions'
+                    'URL' = 'https://www.pittsburghmagazine.com/arts-and-culture/'
+                    'icon' = 'https://www.pittsburghmagazine.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WitF Arts - Stories on creative scenes and exhibitions'
+                    'URL' = 'https://witf.org/arts-culture/'
+                    'icon' = 'https://witf.org/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Philadelphia City Paper Culture - Critiques of arts policies and society'
+                    'URL' = 'https://www.philadelphiaweekly.com/category/arts-culture/'
+                    'icon' = 'https://www.philadelphiaweekly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh City Paper Culture - Community reporting on cultural inequalities'
+                    'URL' = 'https://www.pghcitypaper.com/category/arts-culture/'
+                    'icon' = 'https://www.pghcitypaper.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'The Pennsylvania Independent Culture - Progressive perspectives on Pennsylvania arts identities'
+                    'URL' = 'https://pennsylvaniaindependent.com/tag/culture/'
+                    'icon' = 'https://pennsylvaniaindependent.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Visit Philly - Explorations of Pennsylvania culture and history'
+                'URL' = 'https://www.youtube.com/user/VisitPhilly'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Philly Mag - Lifestyle vlogs on regional daily life'
+                'URL' = 'https://www.youtube.com/@phillymag'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Magazine - Cultural insights from diverse Pennsylvania communities'
+                'URL' = 'https://www.youtube.com/@pittsburghmagazine'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WitF - Neighborhood explorations and local traditions'
+                'URL' = 'https://www.youtube.com/user/witf'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'The Pennsylvania Humanities Council - Introductions to diverse Pennsylvania communities'
+                'URL' = 'https://www.pahumanities.org/podcast/'
+                'icon' = 'https://www.pahumanities.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Philly Mag - Discussions on Pennsylvania arts and heritage'
+                'URL' = 'https://podcasts.apple.com/us/podcast/phillymag-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WitF Culture - Snapshots of cultural milestones and events'
+                'URL' = 'https://witf.org/podcasts/smart-talk/'
+                'icon' = 'https://witf.org/favicon.ico'
+            }
+        )
+    },
+    'Science and Technology' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Penn State University News Science & Technology - Updates on university research breakthroughs'
+                    'URL' = 'https://www.psu.edu/news/science-and-technology'
+                    'icon' = 'https://www.psu.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Tech News - Coverage of Pennsylvania innovations and discoveries'
+                    'URL' = 'https://www.pennsylvaniatechnews.com/'
+                    'icon' = 'https://www.pennsylvaniatechnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Carnegie Mellon University Science - Stories on tech advancements and grants'
+                    'URL' = 'https://www.cmu.edu/news/science-technology/'
+                    'icon' = 'https://www.cmu.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Department of Community and Economic Development Tech - Reports on Pennsylvania science ecosystem and researchers'
+                    'URL' = 'https://dced.pa.gov/technology-innovation/'
+                    'icon' = 'https://dced.pa.gov/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Spotlight PA Tech - Critical views on research ethics'
+                    'URL' = 'https://www.spotlightpa.org/tag/technology/'
+                    'icon' = 'https://www.spotlightpa.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Capital-Star Tech - Analysis of state scientific impacts'
+                    'URL' = 'https://penncapital-star.com/tag/technology/'
+                    'icon' = 'https://penncapital-star.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Matter News Tech - Scrutiny of innovation policies and equity'
+                    'URL' = 'https://matternews.org/tag/technology/'
+                    'icon' = 'https://matternews.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Penn State Engineering - Insights on state innovation hubs'
+                'URL' = 'https://www.youtube.com/user/PennStateEngineering'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Carnegie Mellon University - Explanations of Pennsylvania tech growth'
+                'URL' = 'https://www.youtube.com/user/carnegiemellon'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Temple University Innovation - Explorations of local science and engineering'
+                'URL' = 'https://www.youtube.com/user/TempleUniversity'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'DCED Pennsylvania Tech - Campus tours and research spotlights'
+                'URL' = 'https://www.youtube.com/@DCEDPA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Penn State Podcast - Conversations on Pennsylvania tech ecosystem'
+                'URL' = 'https://podcasts.psu.edu/'
+                'icon' = 'https://www.psu.edu/favicon.ico'
+            },
+            @{
+                'Title' = 'CMU Engineering Podcast - EdTech leaders on Pennsylvania digital innovations'
+                'URL' = 'https://engineering.cmu.edu/news-events/podcasts.html'
+                'icon' = 'https://engineering.cmu.edu/favicon.ico'
+            },
+            @{
+                'Title' = 'Temple Tech Talks - Stories of state science pioneers and breakthroughs'
+                'URL' = 'https://innovation.temple.edu/podcasts'
+                'icon' = 'https://innovation.temple.edu/favicon.ico'
+            }
+        )
+    },
+    'Politics' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Spotlight PA - Nonpartisan coverage of state legislature and policy'
+                    'URL' = 'https://www.spotlightpa.org/'
+                    'icon' = 'https://www.spotlightpa.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Capital-Star - Analysis of Pennsylvania elections and governance'
+                    'URL' = 'https://penncapital-star.com/'
+                    'icon' = 'https://penncapital-star.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Philadelphia Inquirer Politics - Updates on state races and government news'
+                    'URL' = 'https://www.inquirer.com/politics/'
+                    'icon' = 'https://www.inquirer.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Post-Gazette Politics - Insider newsletter on state campaigns and lobbying'
+                    'URL' = 'https://www.post-gazette.com/news/politics-state/'
+                    'icon' = 'https://www.post-gazette.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Matter News Politics - Independent commentary on Pennsylvania political insiders'
+                    'URL' = 'https://matternews.org/tag/politics/'
+                    'icon' = 'https://matternews.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Philadelphia City Paper Politics - Watchdog reporting on government transparency'
+                    'URL' = 'https://www.philadelphiaweekly.com/category/news/politics/'
+                    'icon' = 'https://www.philadelphiaweekly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh City Paper Politics - Critiques of power and reforms'
+                    'URL' = 'https://www.pghcitypaper.com/category/news/politics-elections/'
+                    'icon' = 'https://www.pghcitypaper.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Spotlight PA - Discussions on state politics and leadership'
+                'URL' = 'https://www.youtube.com/@SpotlightPA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Capital-Star Playlist - Profiles of emerging state leaders'
+                'URL' = 'https://www.youtube.com/@penncapitalstar'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WHYY Politics - Nonpartisan talks on public service'
+                'URL' = 'https://www.youtube.com/@WHYY'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Pressroom - Progressive breakdowns of election news'
+                'URL' = 'https://www.youtube.com/@PennsylvaniaPressroom'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Spotlight PA - Insightful dives into state political headlines'
+                'URL' = 'https://podcasts.apple.com/us/podcast/spotlight-pa/id1535961777'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Capital-Star - Backstory on Pennsylvania weekly political stories'
+                'URL' = 'https://penncapital-star.com/podcast/'
+                'icon' = 'https://penncapital-star.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Pressroom - Commentary on top state government news'
+                'URL' = 'https://podcasts.apple.com/us/podcast/pennsylvania-pressroom/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Fashion' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Philly Mag Style - Celebrating Philadelphia street style and creatives'
+                    'URL' = 'https://www.phillymag.com/style/'
+                    'icon' = 'https://www.phillymag.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Magazine Fashion - Luxury lifestyle fashion beauty and events coverage'
+                    'URL' = 'https://www.pittsburghmagazine.com/style-fashion/'
+                    'icon' = 'https://www.pittsburghmagazine.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Fashion Week - Trends designers and local fashion events'
+                    'URL' = 'https://pennsylvaniafashionweek.com/'
+                    'icon' = 'https://pennsylvaniafashionweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Columbus Fashion Alliance - Coverage of city runway shows and influences'
+                    'URL' = 'https://columbusfashion.org/'
+                    'icon' = 'https://columbusfashion.org/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Philadelphia City Paper Fashion - Critiques of industry ethics and diversity'
+                    'URL' = 'https://www.philadelphiaweekly.com/category/arts-culture/fashion/'
+                    'icon' = 'https://www.philadelphiaweekly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh City Paper Fashion - Views on sustainable Pennsylvania style'
+                    'URL' = 'https://www.pghcitypaper.com/category/arts-culture/fashion/'
+                    'icon' = 'https://www.pghcitypaper.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Matter News Fashion - Alternative stories on ethical and local trends'
+                    'URL' = 'https://matternews.org/tag/fashion/'
+                    'icon' = 'https://matternews.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Pennsylvania Fashion Week - Hauls styling and trend breakdowns'
+                'URL' = 'https://www.youtube.com/@pennsylvaniafashionweek'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Philly Fashion Designers - GRWMs shows and BTS fashion week experiences'
+                'URL' = 'https://www.youtube.com/@phillyfashion'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Style Takeover - Behind-the-scenes at city runway events'
+                'URL' = 'https://www.youtube.com/@pittsburghstyle'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Harrisburg Fashion Creators - Creator experiences and local inspirations'
+                'URL' = 'https://www.youtube.com/@harrisburgfashion'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Philly Mag Style Podcast - Talks on city design and weeks'
+                'URL' = 'https://podcasts.apple.com/us/podcast/phillymag-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pittsburgh Magazine Fashion - Social cultural histories of Pennsylvania style'
+                'URL' = 'https://www.pittsburghmagazine.com/podcast/'
+                'icon' = 'https://www.pittsburghmagazine.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Fashion Talks - Showcasing Pennsylvania vibrant fashion culture'
+                'URL' = 'https://podcasts.apple.com/us/podcast/pennsylvania-fashion-talks/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Military' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Pennsylvania National Guard News - Updates on missions training and activations'
+                    'URL' = 'https://www.dmna.ny.gov/news/?id=PA'
+                    'icon' = 'https://www.dmna.ny.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Fort Indiantown Gap News - Coverage of Guard deployments and veteran affairs'
+                    'URL' = 'https://www.ftig.army.mil/News/'
+                    'icon' = 'https://www.ftig.army.mil/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Department of Military and Veterans Affairs News - Reports on state guard and federal policies'
+                    'URL' = 'https://www.dmva.pa.gov/Pages/News.aspx'
+                    'icon' = 'https://www.dmva.pa.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pittsburgh Post-Gazette Military - Stories on veterans and base coverage'
+                    'URL' = 'https://www.post-gazette.com/news/military/'
+                    'icon' = 'https://www.post-gazette.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Spotlight PA Military - Independent scrutiny of veteran deployments'
+                    'URL' = 'https://www.spotlightpa.org/tag/military/'
+                    'icon' = 'https://www.spotlightpa.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Pennsylvania Capital-Star Military - Critical reporting on Pennsylvania soldier experiences'
+                    'URL' = 'https://penncapital-star.com/tag/military/'
+                    'icon' = 'https://penncapital-star.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Matter News Military - Scrutiny of defense policies and impacts'
+                    'URL' = 'https://matternews.org/tag/military/'
+                    'icon' = 'https://matternews.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Pennsylvania Army National Guard - Official training and community service videos'
+                'URL' = 'https://www.youtube.com/user/PennsylvaniaARNG'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Department of Military and Veterans Affairs - Stories from military members and family connections'
+                'URL' = 'https://www.youtube.com/@PADMVA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Fort Indiantown Gap - Analyses of Pennsylvania base life and gear'
+                'URL' = 'https://www.youtube.com/@ftindiantowngap'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Pennsylvania Veteran Stories - Military family adventures in Pennsylvania relocations'
+                'URL' = 'https://www.youtube.com/playlist?list=PLexamplePAVets'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'VFW Pennsylvania Podcast - Discussions on veteran legislation and assistance'
+                'URL' = 'https://vfwp.org/di/vfw/v2/default.asp?pid=84378'
+                'icon' = 'https://vfwp.org/favicon.ico'
+            },
+            @{
+                'Title' = 'The Pennsylvania Guard - Original programming on Pennsylvania military history'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-pennsylvania-guard/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Veterans Voices Pennsylvania - Perspectives from Pennsylvania Marine Corps veterans'
+                'URL' = 'https://open.spotify.com/show/examplePAVets'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            }
+        )
+    }
+}
+'Rhode Island' = @{
+    'News' = @{
+        'Mainstream' = @(
+            @{
+                'Title' = 'WPRI 12 News - Rhode Island local news weather sports politics'
+                'URL' = 'https://www.wpri.com/'
+                'icon' = 'https://www.wpri.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Providence Journal - Latest breaking news sports entertainment Providence RI'
+                'URL' = 'https://www.providencejournal.com/'
+                'icon' = 'https://www.providencejournal.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WJAR NBC 10 - Providence Rhode Island news sports weather'
+                'URL' = 'https://turnto10.com/'
+                'icon' = 'https://turnto10.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Boston Globe RI - Local breaking Rhode Island news politics sports'
+                'URL' = 'https://www.bostonglobe.com/metro/new-england/rhode-island/'
+                'icon' = 'https://www.bostonglobe.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RI News Today - Latest Rhode Island news event updates'
+                'URL' = 'https://rinewstoday.com/'
+                'icon' = 'https://rinewstoday.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Whats Up Newp - Newport Rhode Island local news events'
+                'URL' = 'https://whatsupnewp.com/'
+                'icon' = 'https://whatsupnewp.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Valley Breeze - Northern Rhode Island local community news'
+                'URL' = 'https://www.valleybreeze.com/'
+                'icon' = 'https://www.valleybreeze.com/favicon.ico'
+            }
+        ),
+        'Alternative' = @(
+            @{
+                'Title' = 'Rhode Island Current - Independent nonprofit state government policy news'
+                'URL' = 'https://rhodeislandcurrent.com/'
+                'icon' = 'https://rhodeislandcurrent.com/favicon.ico'
+            },
+            @{
+                'Title' = 'GoLocalProv - Providence RI news politics business lifestyle'
+                'URL' = 'https://www.golocalprov.com/'
+                'icon' = 'https://www.golocalprov.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Independent RI - Local news sports arts living RI'
+                'URL' = 'https://www.independentri.com/'
+                'icon' = 'https://www.independentri.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Indy - New England largest alt-weekly newspaper'
+                'URL' = 'https://www.theindy.org/'
+                'icon' = 'https://www.theindy.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Uprise RI - Rhode Island political advocate consumer rights news'
+                'URL' = 'https://upriseri.com/'
+                'icon' = 'https://upriseri.com/favicon.ico'
+            }
+        ),
+        'Counter Culture' = @(
+            @{
+                'Title' = 'Portland Mercury - Progressive Portland arts music social issues voice'
+                'URL' = 'https://www.portlandmercury.com/'
+                'icon' = 'https://www.portlandmercury.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Willamette Week - Underground perspectives Oregon social justice'
+                'URL' = 'https://www.wweek.com/'
+                'icon' = 'https://www.wweek.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Street Roots - Community-led coverage cultural controversies equity'
+                'URL' = 'https://www.streetroots.org/'
+                'icon' = 'https://www.streetroots.org/favicon.ico'
+            }
+        )
+    },
+    'Vloggers' = @(
+        @{
+            'Title' = 'WPRI 12 News - Breaking news weather local Rhode Island stories'
+            'URL' = 'https://www.youtube.com/@WPRI'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WJAR NBC 10 - Providence RI forecasts investigations updates'
+            'URL' = 'https://www.youtube.com/@WJARNews'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Rhode Island PBS - Neighborhood news traffic community features'
+            'URL' = 'https://www.youtube.com/@RhodeIslandPBS'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'RI PBS Weekly - RI area sports weather traffic coverage'
+            'URL' = 'https://www.youtube.com/playlist?list=PLhrMrqYW9MQP620D5vNyZIHi9AhvNoh8f'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'GoLocalProv - Weekday news mornings afternoons evenings'
+            'URL' = 'https://www.youtube.com/@GoLocalProv'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Alternative Vloggers' = @(
+        @{
+            'Title' = 'Where is 401 - In-depth political policy video breakdowns'
+            'URL' = 'https://www.youtube.com/@Whereis401'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Rhody Foody - Alternative cultural investigative clips'
+            'URL' = 'https://www.youtube.com/@RhodyFoody'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Jason Allard - Nonprofit journalism local happenings videos'
+            'URL' = 'https://www.youtube.com/@JasonAllardRI'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'RI Native - Entertainment urban issues culture insights'
+            'URL' = 'https://www.youtube.com/@rhodeislandnative'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Podcasters' = @(
+        @{
+            'Title' = 'Newsmakers WPRI - Daily headlines deeper dives RI news'
+            'URL' = 'https://podcasts.apple.com/us/podcast/newsmakers-wpri-12-news/id1437809853'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Rhode Island Report - Nonpartisan analysis state government stories'
+            'URL' = 'https://podcasts.apple.com/us/podcast/rhode-island-report/id1568348528'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Public Health Out Loud - Weekly commentary RI politics policy'
+            'URL' = 'https://podcasts.apple.com/us/podcast/public-health-out-loud/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Tara Granahan Show - Top headlines insights RI Public Media'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-tara-granahan-show/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Warwick Radio Online - Statewide news talk RI culture stories'
+            'URL' = 'https://podcasts.apple.com/us/podcast/warwick-radio-online/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        }
+    ),
+    'Alternative Podcasters' = @(
+        @{
+            'Title' = 'Weird Island - Curious takes RI political system'
+            'URL' = 'https://weird-island.simplecast.com/'
+            'icon' = 'https://simplecast.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Bartholomewtown - Snapshots significant state events'
+            'URL' = 'https://podcasts.apple.com/us/podcast/bartholomewtown/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Eat Drink RI - Research-driven perspectives RI issues'
+            'URL' = 'https://podcasts.apple.com/us/podcast/eat-drink-ri/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The Other Side of Midnight - Activism policy RI lens'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-other-side-of-midnight/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        }
+    ),
+    'Business' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Providence Business News - RI business community dedicated news'
+                    'URL' = 'https://pbn.com/'
+                    'icon' = 'https://pbn.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Providence Business First - RI local business growth tools'
+                    'URL' = 'https://www.bizjournals.com/rhodeisland'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI Commerce Newsroom - Economic development business news RI'
+                    'URL' = 'https://commerceri.com/media/'
+                    'icon' = 'https://commerceri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Whats Going On In RI Business - RI business local stories'
+                    'URL' = 'https://whatsgoingoninrhodeisland.com/category/business/'
+                    'icon' = 'https://whatsgoingoninrhodeisland.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'RI Current Business - Nonprofit RI business policy news'
+                    'URL' = 'https://rhodeislandcurrent.com/tag/business/'
+                    'icon' = 'https://rhodeislandcurrent.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoLocalProv Business - RI business politics economy'
+                    'URL' = 'https://www.golocalprov.com/business'
+                    'icon' = 'https://www.golocalprov.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'The Independent RI Business - Local RI business features'
+                    'URL' = 'https://www.independentri.com/business/'
+                    'icon' = 'https://www.independentri.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Meet RI Businesses - Shop local RI business videos'
+                'URL' = 'https://www.youtube.com/playlist?list=PLpkvx2q2IwZjZUFBwV9YMqFNJcNth8DDQ'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RI Small Business Coalition - RI small business vlogs'
+                'URL' = 'https://www.youtube.com/@rismallbusiness'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Discover Rhode Island - Local business spotlights vlogs'
+                'URL' = 'https://www.youtube.com/@discoverrhodeisland'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Where is 401 Business - Entrepreneur stories growth tours'
+                'URL' = 'https://www.youtube.com/@Whereis401'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Rhode Island Small Business Forum - RI small business topics'
+                'URL' = 'https://open.spotify.com/show/6qyeBttxgetSYg93K3xepe'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Practical Bizz Podcast - RI business tips startups'
+                'URL' = 'https://podcasts.apple.com/us/podcast/practical-bizz-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rhode Island Business Spotlight - Long form RI business interviews'
+                'URL' = 'https://podcasts.apple.com/us/podcast/rhode-island-business-spotlight/id1592677888'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Sports' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Providence Journal Sports - RI high school college pro coverage'
+                    'URL' = 'https://www.providencejournal.com/sports/'
+                    'icon' = 'https://www.providencejournal.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WPRI Sports - RI sports headlines scores highlights'
+                    'URL' = 'https://www.wpri.com/sports/'
+                    'icon' = 'https://www.wpri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WJAR Sports - Providence RI sports news events'
+                    'URL' = 'https://turnto10.com/sports'
+                    'icon' = 'https://turnto10.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'ABC6 Sports - RI athletics scores features'
+                    'URL' = 'https://www.abc6.com/sports/'
+                    'icon' = 'https://www.abc6.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Independent RI Sports - Independent RI high school recruiting analysis'
+                    'URL' = 'https://www.independentri.com/sports/'
+                    'icon' = 'https://www.independentri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoLocalProv Sports - Critical takes RI prep equity'
+                    'URL' = 'https://www.golocalprov.com/sports'
+                    'icon' = 'https://www.golocalprov.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Westerlysun Sports - Alternative coverage southeast RI games'
+                    'URL' = 'https://www.thewesterlysun.com/sports/'
+                    'icon' = 'https://www.thewesterlysun.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'URI Athletics - Game highlights behind-scenes fan content'
+                'URL' = 'https://www.youtube.com/@URIathletics'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'PC Friars - College athletics recaps student-athlete stories'
+                'URL' = 'https://www.youtube.com/@PCFriars'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SportsKid 712 - High school events athlete spotlights'
+                'URL' = 'https://www.youtube.com/channel/UCLUfPFk4-tUZ7qpCzRlBqYQ'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rhode Island FC - Soccer highlights fan discussions'
+                'URL' = 'https://www.youtube.com/@RhodeIslandFC'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'The 401 Podcast - RI sports analysis interviews'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-401-podcast-with-kevin-mcnamara/id1537128959'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Raising Anchor - RI FC USL soccer breakdowns'
+                'URL' = 'https://open.spotify.com/show/4K2JwIFKRXYnrYAgMeme6N'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rhody Baseline - RI high school college sports talk'
+                'URL' = 'https://podcasts.apple.com/us/podcast/rhody-baseline/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Culture' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Hey Rhody Media - RI arts entertainment culture events'
+                    'URL' = 'https://heyrhody.com/'
+                    'icon' = 'https://heyrhody.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Rhode Island Monthly Culture - RI art music theater entertainment'
+                    'URL' = 'https://www.rimonthly.com/culture/'
+                    'icon' = 'https://www.rimonthly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'RISCA News - RI arts council grants programs features'
+                    'URL' = 'https://arts.ri.gov/newsmedia/news'
+                    'icon' = 'https://arts.ri.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI Humanities News - RI cultural programs lectures heritage'
+                    'URL' = 'https://rihumanities.org/news/'
+                    'icon' = 'https://rihumanities.org/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Motif Magazine Culture - Critiques arts policies society'
+                    'URL' = 'https://motifri.com/category/culture/'
+                    'icon' = 'https://motifri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Providence Daily Dose Culture - Community reporting cultural inequalities'
+                    'URL' = 'https://providencedailydose.com/category/culture/'
+                    'icon' = 'https://providencedailydose.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Ocean State Media Culture - Progressive perspectives RI arts identities'
+                    'URL' = 'https://www.oceanstatemedia.org/news-and-culture'
+                    'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Where is 401 - RI cultural explorations festivals traditions'
+                'URL' = 'https://www.youtube.com/@Whereis401'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rhode Island Native - Lifestyle vlogs regional daily life'
+                'URL' = 'https://www.youtube.com/@rhodeislandnative'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Jason Allard - Cultural insights diverse RI communities'
+                'URL' = 'https://www.youtube.com/@JasonAllardRI'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rhody Foody - Neighborhood explorations local traditions'
+                'URL' = 'https://www.youtube.com/@RhodyFoody'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'The Rhode Island History Podcast - Introductions diverse RI communities'
+                'URL' = 'https://open.spotify.com/show/5nLsWJmV3b5JR2b5mWJzA1'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Weird Island - Discussions RI arts heritage'
+                'URL' = 'https://weird-island.simplecast.com/'
+                'icon' = 'https://simplecast.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Discover Rhode Island - Snapshots cultural milestones events'
+                'URL' = 'https://open.spotify.com/show/6jAi3tedyCKITKAdhBRac8'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            }
+        )
+    },
+    'Science and Technology' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Providence Business First Tech - RI technology business news'
+                    'URL' = 'https://www.bizjournals.com/rhodeisland/news/technology'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WPRI Science - RI science headlines research breakthroughs'
+                    'URL' = 'https://www.wpri.com/science/'
+                    'icon' = 'https://www.wpri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI Tech News - Rhode Island technology monitoring service'
+                    'URL' = 'https://tech.einnews.com/state/rhodeisland'
+                    'icon' = 'https://einnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI STAC News - RI science technology advisory council events'
+                    'URL' = 'https://stac.ri.gov/news-events/'
+                    'icon' = 'https://stac.ri.gov/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'RI Current Tech - Critical views RI research ethics'
+                    'URL' = 'https://rhodeislandcurrent.com/tag/technology/'
+                    'icon' = 'https://rhodeislandcurrent.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoLocalProv Tech - Analysis state scientific impacts'
+                    'URL' = 'https://www.golocalprov.com/technology'
+                    'icon' = 'https://www.golocalprov.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Uprise RI Tech - Scrutiny innovation policies equity'
+                    'URL' = 'https://upriseri.com/tag/technology/'
+                    'icon' = 'https://upriseri.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'RI Life Science Hub - Insights state innovation hubs'
+                'URL' = 'https://www.youtube.com/@RILifeScienceHub'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Mad Science Southern MA RI - Explanations RI tech growth'
+                'URL' = 'https://www.youtube.com/@madsciencesouthernmari'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'URI Science - Explorations local science engineering'
+                'URL' = 'https://www.youtube.com/@URI'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Brown University Innovation - Campus tours research spotlights'
+                'URL' = 'https://www.youtube.com/@BrownUniversity'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'RI Life Science Hub - Conversations RI tech ecosystem'
+                'URL' = 'https://podcasts.apple.com/us/podcast/ri-life-science-hub-is-bringing-innovation-to-market/id1528240675?i=1000726910256'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'STEAM Box RI - EdTech leaders RI digital innovations'
+                'URL' = 'https://www.oceanstatemedia.org/education/steam-box-empowers-rhode-island-teens-to-lead-create-and-broadcast-through-podcasting'
+                'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Thanks for Making It - Stories state science pioneers breakthroughs'
+                'URL' = 'https://digitalcommons.risd.edu/industrialdesign_thanksformakingitpodcast/'
+                'icon' = 'https://digitalcommons.risd.edu/favicon.ico'
+            }
+        )
+    },
+    'Politics' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'WJAR Politics - Providence RI politics news updates'
+                    'URL' = 'https://turnto10.com/politics'
+                    'icon' = 'https://turnto10.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Rhode Island Current - Independent nonprofit state government policy'
+                    'URL' = 'https://rhodeislandcurrent.com/'
+                    'icon' = 'https://rhodeislandcurrent.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Providence Journal Politics - RI elections governance analysis'
+                    'URL' = 'https://www.providencejournal.com/news/politics/'
+                    'icon' = 'https://www.providencejournal.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WPRI Politics - RI state races government news'
+                    'URL' = 'https://www.wpri.com/news/politics/'
+                    'icon' = 'https://www.wpri.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Uprise RI Politics - Independent commentary RI political insiders'
+                    'URL' = 'https://upriseri.com/category/politics/'
+                    'icon' = 'https://upriseri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Ocean State Media Politics - Watchdog government transparency reporting'
+                    'URL' = 'https://www.oceanstatemedia.org/politics-justice'
+                    'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI GOP News - Power reforms critiques political news'
+                    'URL' = 'https://ri.gop/news/'
+                    'icon' = 'https://ri.gop/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'State Sen David Tikoian - Discussions state politics leadership'
+                'URL' = 'https://www.youtube.com/watch?v=f-moputg9eY'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Behind the Story Nancy Lavin - Profiles emerging state leaders'
+                'URL' = 'https://www.youtube.com/watch?v=cXdJVPSBaGc'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RI Politics Policy Series - Nonpartisan talks public service'
+                'URL' = 'https://www.youtube.com/watch?v=HJMP03RHAXw'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Gov Dan McKee - Progressive breakdowns election news'
+                'URL' = 'https://www.youtube.com/watch?v=AJKBdY9Nyic'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Rhode Island Report - Insightful dives state political headlines'
+                'URL' = 'https://podcasts.apple.com/us/podcast/rhode-island-report/id1568348528'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Political Roundtable - Backstory RI weekly political stories'
+                'URL' = 'https://thepublicsradio.org/political-roundtable/'
+                'icon' = 'https://thepublicsradio.org/favicon.ico'
+            },
+            @{
+                'Title' = 'A Lively Experiment - Commentary top state government news'
+                'URL' = 'https://www.oceanstatemedia.org/podcasts/a-lively-experiment-podcast'
+                'icon' = 'https://www.oceanstatemedia.org/favicon.ico'
+            }
+        )
+    },
+    'Fashion' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Rhode Island Monthly Fashion - RI fashion beauty style guides'
+                    'URL' = 'https://www.rimonthly.com/category/home-style/fashion/'
+                    'icon' = 'https://www.rimonthly.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoLocalProv Beauty Fashion - RI fashion trends local events'
+                    'URL' = 'https://www.golocalprov.com/beauty'
+                    'icon' = 'https://www.golocalprov.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'APD Press Fashion - Top RI US fashion brands news'
+                    'URL' = 'https://amypagedeblasio.com/pages/press'
+                    'icon' = 'https://amypagedeblasio.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI Fashion Week - RI fashion week events designers'
+                    'URL' = 'https://fashionweekri.com/'
+                    'icon' = 'https://fashionweekri.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Hey Rhody Fashion - Critiques industry ethics diversity'
+                    'URL' = 'https://heyrhody.com/tag/fashion/'
+                    'icon' = 'https://heyrhody.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Newport Stylephile Fashion - Views sustainable RI style'
+                    'URL' = 'https://newportstylephile.com/tag/rhode-island-fashion-bloggers/'
+                    'icon' = 'https://newportstylephile.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Styleweek Northeast Fashion - Alternative stories ethical local trends'
+                    'URL' = 'https://www.styleweeknortheast.com/'
+                    'icon' = 'https://www.styleweeknortheast.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Jackie Ignall - Hauls styling trend breakdowns'
+                'URL' = 'https://www.youtube.com/@jackieignall'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Lesia Style - GRWMs shows BTS fashion experiences'
+                'URL' = 'https://www.youtube.com/@styledbylesia'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Kiel James Patrick - Behind-scenes city runway events'
+                'URL' = 'https://www.youtube.com/@kieljamespatrick'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Sarah Patrick - Creator experiences local inspirations'
+                'URL' = 'https://www.youtube.com/@sarahpatrick'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Styleweek Northeast - Talks city design weeks'
+                'URL' = 'https://www.styleweeknortheast.com/podcast/'
+                'icon' = 'https://www.styleweeknortheast.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RI Fashion Talks - Social cultural histories RI style'
+                'URL' = 'https://podcasts.apple.com/us/podcast/ri-fashion-talks/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Hey Rhody Fashion - Showcasing RI vibrant fashion culture'
+                'URL' = 'https://heyrhody.com/podcast/'
+                'icon' = 'https://heyrhody.com/favicon.ico'
+            }
+        )
+    },
+    'Military' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'WPRI Military - RI military news updates stories'
+                    'URL' = 'https://www.wpri.com/military/'
+                    'icon' = 'https://www.wpri.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Providence Business First Military - RI military defense news'
+                    'URL' = 'https://www.bizjournals.com/rhodeisland/news/government-and-regulations/military--defense'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Army Reserve RI - Official Army Reserve RI news'
+                    'URL' = 'https://www.usar.army.mil/News/Tag/99454/rhode-island/'
+                    'icon' = 'https://www.usar.army.mil/favicon.ico'
+                },
+                @{
+                    'Title' = 'RI National Guard Press - RI Guard news releases'
+                    'URL' = 'https://ri.ng.mil/Press-Releases/'
+                    'icon' = 'https://ri.ng.mil/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'RI Current Military - Independent scrutiny veteran deployments'
+                    'URL' = 'https://rhodeislandcurrent.com/tag/military/'
+                    'icon' = 'https://rhodeislandcurrent.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'GoLocalProv Military - Critical reporting RI soldier experiences'
+                    'URL' = 'https://www.golocalprov.com/military'
+                    'icon' = 'https://www.golocalprov.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Uprise RI Military - Scrutiny defense policies impacts'
+                    'URL' = 'https://upriseri.com/tag/military/'
+                    'icon' = 'https://upriseri.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Rhode Island National Guard - Official training community videos'
+                'URL' = 'https://www.youtube.com/c/rhodeislandnationalguard'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Live with Purpose Military - Stories military members family connections'
+                'URL' = 'https://www.youtube.com/watch?v=6qjJ78u_uAI'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RING Podcast Vlogs - Analyses RI base life gear'
+                'URL' = 'https://www.youtube.com/playlist?list=PLkowttl_TZKY_Y47_PG-RwbKO8HVtj6Lt'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'RI Guard Leadership - Military family adventures RI relocations'
+                'URL' = 'https://www.youtube.com/watch?v=oaOsRujBv0I'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'RING Podcast - Discussions veteran legislation assistance'
+                'URL' = 'https://www.youtube.com/playlist?list=PLkowttl_TZKY_Y47_PG-RwbKO8HVtj6Lt'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'History RI Air National Guard - Original programming RI military history'
+                'URL' = 'https://www.dvidshub.net/podcast/483/history-of-the-rhode-island-air-national-guard'
+                'icon' = 'https://www.dvidshub.net/favicon.ico'
+            },
+            @{
+                'Title' = 'VFW RI Podcast - Perspectives RI Marine Corps veterans'
+                'URL' = 'https://vfwri.org/di/vfw/v2/default.asp?pid=84378'
+                'icon' = 'https://vfwri.org/favicon.ico'
+            }
+        )
+    }
+}
+'South Carolina' = @{
+    'News' = @{
+        'Mainstream' = @(
+            @{
+                'Title' = 'The Post and Courier - South Carolina news weather sports politics'
+                'URL' = 'https://www.postandcourier.com/'
+                'icon' = 'https://www.postandcourier.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The State - Columbia SC breaking news local coverage'
+                'URL' = 'https://www.thestate.com/'
+                'icon' = 'https://www.thestate.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Greenville News - Upstate SC news sports business'
+                'URL' = 'https://www.greenvilleonline.com/'
+                'icon' = 'https://www.greenvilleonline.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WIS News 10 - Columbia SC news weather sports'
+                'URL' = 'https://www.wistv.com/'
+                'icon' = 'https://www.wistv.com/favicon.ico'
+            },
+            @{
+                'Title' = 'FOX Carolina - Greenville Spartanburg SC news'
+                'URL' = 'https://www.foxcarolina.com/'
+                'icon' = 'https://www.foxcarolina.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Live 5 News - Charleston SC breaking news'
+                'URL' = 'https://www.live5news.com/'
+                'icon' = 'https://www.live5news.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WPDE News - Myrtle Beach Florence SC news'
+                'URL' = 'https://wpde.com/'
+                'icon' = 'https://wpde.com/favicon.ico'
+            }
+        ),
+        'Alternative' = @(
+            @{
+                'Title' = 'FITSNews - Independent unapologetic SC news politics'
+                'URL' = 'https://www.fitsnews.com/'
+                'icon' = 'https://www.fitsnews.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Daily Gazette - Nonprofit nonpartisan SC reporting'
+                'URL' = 'https://scdailygazette.com/'
+                'icon' = 'https://scdailygazette.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Free Times - Columbia SC alternative news arts'
+                'URL' = 'https://www.postandcourier.com/free-times/'
+                'icon' = 'https://www.postandcourier.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Carolina Panorama - Columbia SC community news'
+                'URL' = 'https://www.carolinapanorama.com/'
+                'icon' = 'https://www.carolinapanorama.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Palmetto State News - SC statewide local coverage'
+                'URL' = 'https://www.palmettostatenews.net/'
+                'icon' = 'https://www.palmettostatenews.net/favicon.ico'
+            }
+        ),
+        'Counter Culture' = @(
+            @{
+                'Title' = 'Free Times - Progressive Columbia SC arts activism'
+                'URL' = 'https://www.postandcourier.com/free-times/'
+                'icon' = 'https://www.postandcourier.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Charleston City Paper - Independent Charleston culture controversies'
+                'URL' = 'https://charlestoncitypaper.com/'
+                'icon' = 'https://charlestoncitypaper.com/favicon.ico'
+            },
+            @{
+                'Title' = 'TOWN Carolina - Upstate SC alternative arts social issues'
+                'URL' = 'https://towncarolina.com/'
+                'icon' = 'https://towncarolina.com/favicon.ico'
+            }
+        )
+    },
+    'Vloggers' = @(
+        @{
+            'Title' = 'WIS News 10 - Columbia SC breaking news vlogs'
+            'URL' = 'https://www.youtube.com/user/WIS10'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'FOX Carolina News - Greenville SC local stories videos'
+            'URL' = 'https://www.youtube.com/c/FOXCarolinaNews'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WCBD News 2 - Charleston SC news investigations'
+            'URL' = 'https://www.youtube.com/user/WCBDFox24'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WYFF News 4 - Greenville SC headlines updates'
+            'URL' = 'https://www.youtube.com/user/WYFF4'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Live 5 News - Charleston SC community features'
+            'URL' = 'https://www.youtube.com/user/Live5News'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Alternative Vloggers' = @(
+        @{
+            'Title' = 'SC Daily Gazette - SC investigative journalism videos'
+            'URL' = 'https://www.youtube.com/@SCDailyGazette'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'FITSNews - Independent SC politics culture vlogs'
+            'URL' = 'https://www.youtube.com/@FITSNews'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Free Times Columbia - Alternative SC arts events'
+            'URL' = 'https://www.youtube.com/@FreeTimesColumbia'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Carolina Panorama - Columbia SC community stories'
+            'URL' = 'https://www.youtube.com/@CarolinaPanorama'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Podcasters' = @(
+        @{
+            'Title' = 'South Carolina Lede - Weekly SC news issues discussions'
+            'URL' = 'https://www.scetv.org/news/south-carolina-lede'
+            'icon' = 'https://www.scetv.org/favicon.ico'
+        },
+        @{
+            'Title' = 'The Tara Show - Conservative SC politics commentary'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-tara-show/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'FITSNews Week in Review - SC headlines deeper analysis'
+            'URL' = 'https://www.fitsnews.com/podcast/'
+            'icon' = 'https://www.fitsnews.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Carolina Weather Group - SC weather news forecasts'
+            'URL' = 'https://podcasts.apple.com/us/podcast/carolina-weather-group/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Holy City Sinner Radio - Charleston SC culture news'
+            'URL' = 'https://holycitysinner.com/podcast/'
+            'icon' = 'https://holycitysinner.com/favicon.ico'
+        }
+    ),
+    'Alternative Podcasters' = @(
+        @{
+            'Title' = 'Bourbon in the Back Room - SC history politics insights'
+            'URL' = 'https://podcasts.apple.com/us/podcast/bourbon-in-the-back-room/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Charleston Time Machine - SC historical cultural stories'
+            'URL' = 'https://www.scetv.org/news/charleston-time-machine'
+            'icon' = 'https://www.scetv.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Take On the South - Progressive SC issues discussions'
+            'URL' = 'https://podcasts.apple.com/us/podcast/take-on-the-south/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Upstate Trail Talks - SC outdoor culture podcasts'
+            'URL' = 'https://podcasts.apple.com/us/podcast/upstate-trail-talks/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        }
+    ),
+    'Business' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'SC Biz News - South Carolina business news events'
+                    'URL' = 'https://scbiz.com/'
+                    'icon' = 'https://scbiz.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Upstate Business Journal - Greenville SC economy insights'
+                    'URL' = 'https://upstatebusinessjournal.com/'
+                    'icon' = 'https://upstatebusinessjournal.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Greenville Business Magazine - Upstate SC business trends'
+                    'URL' = 'https://www.greenvillebusinessmag.com/'
+                    'icon' = 'https://www.greenvillebusinessmag.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Columbia Business Monthly - Midlands SC business developments'
+                    'URL' = 'https://www.columbiabusinessmonthly.com/'
+                    'icon' = 'https://www.columbiabusinessmonthly.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'SC Daily Gazette Business - Nonprofit SC economic policy scrutiny'
+                    'URL' = 'https://scdailygazette.com/tag/business/'
+                    'icon' = 'https://scdailygazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'FITSNews Business - Independent SC financial challenges analysis'
+                    'URL' = 'https://www.fitsnews.com/tag/business/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Free Times Business - Alternative Columbia SC markets views'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/business/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'SC Department of Commerce - Local business leaders conversations'
+                'URL' = 'https://www.youtube.com/@SCCommerce'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Upstate Business Journal - SC entrepreneurs growth stories'
+                'URL' = 'https://www.youtube.com/@upstatebusinessjournal'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Greenville Business Magazine - State economic future journeys'
+                'URL' = 'https://www.youtube.com/@greenvillebusinessmag'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Biz News - Key industries innovations tours'
+                'URL' = 'https://www.youtube.com/@scbiznews'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'SC Biz News Podcast - Business trends leadership insights'
+                'URL' = 'https://scbiz.com/podcasts/'
+                'icon' = 'https://scbiz.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Upstate Business Journal Podcast - Local companies success spotlights'
+                'URL' = 'https://upstatebusinessjournal.com/podcast/'
+                'icon' = 'https://upstatebusinessjournal.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Greenville Business Podcast - Essential SC business headlines roundup'
+                'URL' = 'https://www.greenvillebusinessmag.com/podcast/'
+                'icon' = 'https://www.greenvillebusinessmag.com/favicon.ico'
+            }
+        )
+    },
+    'Sports' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'The State Sports - SC Gamecocks Clemson athletics coverage'
+                    'URL' = 'https://www.thestate.com/sports/'
+                    'icon' = 'https://www.thestate.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Greenville Online Sports - Upstate SC teams events recaps'
+                    'URL' = 'https://www.greenvilleonline.com/sports/'
+                    'icon' = 'https://www.greenvilleonline.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WLTX Sports - Columbia SC sports scores highlights'
+                    'URL' = 'https://www.wltx.com/sports/'
+                    'icon' = 'https://www.wltx.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Post and Courier Sports - Charleston SC athletics updates'
+                    'URL' = 'https://www.postandcourier.com/sports/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'TheBigSpur Sports - Independent Gamecocks recruiting analysis'
+                    'URL' = 'https://247sports.com/college/south-carolina/'
+                    'icon' = 'https://247sports.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SportsTalkSC - Alternative SC sports commentary'
+                    'URL' = 'https://sportstalksc.com/'
+                    'icon' = 'https://sportstalksc.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Palmetto Sports - Critical SC high school college games'
+                    'URL' = 'https://www.wistv.com/sports/'
+                    'icon' = 'https://www.wistv.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Gamecocks Central - Gamecocks highlights reactions videos'
+                'URL' = 'https://www.youtube.com/@GamecocksCentral'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Clemson Tigers - Official behind-scenes game vlogs'
+                'URL' = 'https://www.youtube.com/clemsonfootball'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SportsTalkSC - Recruiting updates SC fan discussions'
+                'URL' = 'https://www.youtube.com/@SportsTalkSC'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'TheBigSpur - Local high school game recaps stories'
+                'URL' = 'https://www.youtube.com/@TheBigSpur'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'TheBigSpur Podcast - Gamecocks athletics analysis'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-big-spur-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Locked On Gamecocks - Daily Gamecocks news breakdowns'
+                'URL' = 'https://lockedonpodcasts.com/podcasts/locked-on-south-carolina/'
+                'icon' = 'https://lockedonpodcasts.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SportsTalkSC - Syndicated SC sports talk'
+                'URL' = 'https://sportstalksc.com/podcasts/'
+                'icon' = 'https://sportstalksc.com/favicon.ico'
+            }
+        )
+    },
+    'Culture' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Charleston City Paper - Charleston SC arts music culture'
+                'URL' = 'https://charlestoncitypaper.com/'
+                'icon' = 'https://charlestoncitypaper.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'TOWN Carolina - Upstate SC arts festivals heritage'
+                    'URL' = 'https://towncarolina.com/'
+                    'icon' = 'https://towncarolina.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Greenville Journal - Upstate SC arts traditions coverage'
+                    'URL' = 'https://greenvillejournal.com/'
+                    'icon' = 'https://greenvillejournal.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Arts Commission - SC creative scenes exhibitions stories'
+                    'URL' = 'https://www.southcarolinaarts.com/'
+                    'icon' = 'https://www.southcarolinaarts.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Free Times Culture - Progressive SC arts policy critiques'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/culture/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Humanities Culture - Community cultural inequalities reporting'
+                    'URL' = 'https://schumanities.org/tag/culture/'
+                    'icon' = 'https://schumanities.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Carolina News Culture - Progressive SC arts identities perspectives'
+                    'URL' = 'https://carolinanewsandreporter.cic.sc.edu/category/culture/'
+                    'icon' = 'https://carolinanewsandreporter.cic.sc.edu/favicon.ico'
+                }
+            )
+        ),
+        'Vloggers' = @(
+            @{
+                'Title' = 'SC Travel - SC culture history explorations'
+                'URL' = 'https://www.youtube.com/@SCTourism'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Charleston City Paper - Lifestyle vlogs regional daily life'
+                'URL' = 'https://www.youtube.com/@charlestoncitypaper'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'TOWN Carolina - Cultural insights diverse SC communities'
+                'URL' = 'https://www.youtube.com/@TOWNCarolina'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Greenville Journal - Neighborhood explorations local traditions'
+                'URL' = 'https://www.youtube.com/@greenvillejournal'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Charleston Time Machine - Diverse SC communities introductions'
+                'URL' = 'https://www.scetv.org/news/charleston-time-machine'
+                'icon' = 'https://www.scetv.org/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Humanities - Discussions SC arts heritage'
+                'URL' = 'https://schumanities.org/podcasts/'
+                'icon' = 'https://schumanities.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Take On the South - Cultural milestones events snapshots'
+                'URL' = 'https://podcasts.apple.com/us/podcast/take-on-the-south/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Science and Technology' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'SCbio - SC life sciences innovations discoveries'
+                    'URL' = 'https://www.scbio.org/'
+                    'icon' = 'https://www.scbio.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Biz News Tech - SC tech advancements grants'
+                    'URL' = 'https://scbiz.com/tag/technology/'
+                    'icon' = 'https://scbiz.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SCRA News - SC research ecosystem reports'
+                    'URL' = 'https://scra.org/stay-connected/news/'
+                    'icon' = 'https://scra.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Molinaroli College News - SC science breakthroughs profiles'
+                    'URL' = 'https://sc.edu/study/colleges_schools/engineering_and_computing/news_events/news/'
+                    'icon' = 'https://sc.edu/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'SC Daily Gazette Tech - Critical SC research ethics views'
+                    'URL' = 'https://scdailygazette.com/tag/technology/'
+                    'icon' = 'https://scdailygazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'FITSNews Tech - SC scientific impacts analysis'
+                    'URL' = 'https://www.fitsnews.com/tag/technology/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Free Times Tech - SC innovation equity scrutiny'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/technology/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'SC Department of Commerce Tech - State innovation hubs insights'
+                'URL' = 'https://www.youtube.com/@SCCommerce'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SCbio - SC tech growth explanations'
+                'URL' = 'https://www.youtube.com/@SCbio'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SCRA - Local science engineering explorations'
+                'URL' = 'https://www.youtube.com/@SCRA'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Molinaroli College - Campus tours research spotlights'
+                'URL' = 'https://www.youtube.com/@uscengineering'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'SCbio Podcast - SC tech ecosystem conversations'
+                'URL' = 'https://www.scbio.org/podcast/'
+                'icon' = 'https://www.scbio.org/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Biz News Tech Talks - EdTech leaders SC digital innovations'
+                'URL' = 'https://scbiz.com/podcasts/technology/'
+                'icon' = 'https://scbiz.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SCRA Innovation - State science pioneers breakthroughs stories'
+                'URL' = 'https://scra.org/podcasts/'
+                'icon' = 'https://scra.org/favicon.ico'
+            }
+        )
+    },
+    'Politics' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Post and Courier Politics - SC legislature elections coverage'
+                    'URL' = 'https://www.postandcourier.com/politics/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'The State Politics - SC elections governance analysis'
+                    'URL' = 'https://www.thestate.com/news/politics-government/'
+                    'icon' = 'https://www.thestate.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'WYFF Politics - Upstate SC races government updates'
+                    'URL' = 'https://www.wyff4.com/politics'
+                    'icon' = 'https://www.wyff4.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Statehouse Report - SC campaigns lobbying insider news'
+                    'URL' = 'https://www.statehousereport.com/'
+                    'icon' = 'https://www.statehousereport.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'FITSNews Politics - Independent SC political commentary'
+                    'URL' = 'https://www.fitsnews.com/tag/politics/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Daily Gazette Politics - Watchdog SC government transparency'
+                    'URL' = 'https://scdailygazette.com/tag/politics/'
+                    'icon' = 'https://scdailygazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Free Times Politics - SC power reforms critiques'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/politics/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'WYFF Politics - SC politics leadership discussions'
+                'URL' = 'https://www.youtube.com/user/WYFF4'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'FITSNews Playlist - Emerging SC leaders profiles'
+                'URL' = 'https://www.youtube.com/@FITSNews'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Post and Courier Politics - Nonpartisan public service talks'
+                'URL' = 'https://www.youtube.com/@PostandCourier'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Daily Gazette - Progressive election news breakdowns'
+                'URL' = 'https://www.youtube.com/@SCDailyGazette'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'South Carolina Lede - State political headlines insightful dives'
+                'URL' = 'https://www.scetv.org/news/south-carolina-lede'
+                'icon' = 'https://www.scetv.org/favicon.ico'
+            },
+            @{
+                'Title' = 'FITSNews Week in Review - SC weekly political stories backstory'
+                'URL' = 'https://www.fitsnews.com/podcast/'
+                'icon' = 'https://www.fitsnews.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Tara Show - Top SC government news commentary'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-tara-show/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Fashion' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Columbia Fashion Week - SC fashion events designers trends'
+                    'URL' = 'https://www.columbiafashionweek.com/'
+                    'icon' = 'https://www.columbiafashionweek.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'TOWN Carolina Fashion - Upstate SC lifestyle beauty coverage'
+                    'URL' = 'https://towncarolina.com/category/style-fashion/'
+                    'icon' = 'https://towncarolina.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Post and Courier Fashion - Charleston SC trends events'
+                    'URL' = 'https://www.postandcourier.com/charleston_scene/style-fashion/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Mount Pleasant Magazine Fashion - Lowcountry SC style influences'
+                    'URL' = 'https://mountpleasantmagazine.com/style/'
+                    'icon' = 'https://mountpleasantmagazine.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Free Times Fashion - SC industry ethics diversity critiques'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/fashion/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Daily Gazette Fashion - Sustainable SC style views'
+                    'URL' = 'https://scdailygazette.com/tag/fashion/'
+                    'icon' = 'https://scdailygazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'FITSNews Fashion - Alternative ethical local trends stories'
+                    'URL' = 'https://www.fitsnews.com/tag/fashion/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Columbia Fashion Week - Hauls styling trend breakdowns'
+                'URL' = 'https://www.youtube.com/@columbiafashionweek'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Charleston Fashion Designers - GRWMs shows BTS experiences'
+                'URL' = 'https://www.youtube.com/@charlestonfashion'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Greenville Style Takeover - Behind-scenes runway events'
+                'URL' = 'https://www.youtube.com/@greenvillestyle'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Fashion Creators - Local inspirations creator experiences'
+                'URL' = 'https://www.youtube.com/@scfashion'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'TOWN Carolina Style - City design weeks talks'
+                'URL' = 'https://towncarolina.com/podcast/'
+                'icon' = 'https://towncarolina.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Mount Pleasant Magazine Fashion - SC style cultural histories'
+                'URL' = 'https://mountpleasantmagazine.com/podcast/'
+                'icon' = 'https://mountpleasantmagazine.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Post and Courier Fashion - Vibrant SC fashion culture showcasing'
+                'URL' = 'https://www.postandcourier.com/charleston_scene/style-fashion/podcasts/'
+                'icon' = 'https://www.postandcourier.com/favicon.ico'
+            }
+        )
+    },
+    'Military' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'SC National Guard News - Missions training activations updates'
+                    'URL' = 'https://scguard.ng.mil/Newsroom/News/'
+                    'icon' = 'https://scguard.ng.mil/favicon.ico'
+                },
+                @{
+                    'Title' = 'Fort Jackson News - Guard deployments veteran affairs coverage'
+                    'URL' = 'https://home.army.mil/jackson/FortJacksonNews'
+                    'icon' = 'https://home.army.mil/favicon.ico'
+                },
+                @{
+                    'Title' = 'SC Military Department News - State guard federal policies reports'
+                    'URL' = 'https://scmd.sc.gov/news'
+                    'icon' = 'https://scmd.sc.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Post and Courier Military - Veterans base coverage stories'
+                    'URL' = 'https://www.postandcourier.com/militarydigest/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'SC Daily Gazette Military - Veteran deployments independent scrutiny'
+                    'URL' = 'https://scdailygazette.com/tag/military/'
+                    'icon' = 'https://scdailygazette.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'FITSNews Military - SC soldier experiences critical reporting'
+                    'URL' = 'https://www.fitsnews.com/tag/military/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Free Times Military - Defense policies impacts scrutiny'
+                    'URL' = 'https://www.postandcourier.com/free-times/tag/military/'
+                    'icon' = 'https://www.postandcourier.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'SC Army National Guard - Official training community videos'
+                'URL' = 'https://www.youtube.com/@SCARNG'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Military Department - Military members family stories'
+                'URL' = 'https://www.youtube.com/@SCMilitary'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Fort Jackson - SC base life gear analyses'
+                'URL' = 'https://www.youtube.com/@FortJackson'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Veteran Stories - Military family SC relocations adventures'
+                'URL' = 'https://www.youtube.com/playlist?list=PLexampleSCVets'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'SC Guard Podcast - Veteran legislation assistance discussions'
+                'URL' = 'https://scguard.ng.mil/Podcasts/'
+                'icon' = 'https://scguard.ng.mil/favicon.ico'
+            },
+            @{
+                'Title' = 'Fort Jackson Stories - SC military history programming'
+                'URL' = 'https://home.army.mil/jackson/podcasts/'
+                'icon' = 'https://home.army.mil/favicon.ico'
+            },
+            @{
+                'Title' = 'SC Vets Voices - SC Marine Corps veterans perspectives'
+                'URL' = 'https://open.spotify.com/show/exampleSCVets'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            }
+        )
+    }
+}
+'Tennessee' = @{
+    'News' = @{
+        'Mainstream' = @(
+            @{
+                'Title' = 'The Tennessean - Nashville and Tennessee comprehensive news coverage'
+                'URL' = 'https://www.tennessean.com/'
+                'icon' = 'https://www.tennessean.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Knoxville News Sentinel - East Tennessee breaking news and investigations'
+                'URL' = 'https://www.knoxnews.com/'
+                'icon' = 'https://www.knoxnews.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Chattanooga Times Free Press - Southeast Tennessee local headlines and features'
+                'URL' = 'https://www.timesfreepress.com/'
+                'icon' = 'https://www.timesfreepress.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Commercial Appeal - Memphis and West Tennessee trusted journalism'
+                'URL' = 'https://www.commercialappeal.com/'
+                'icon' = 'https://www.commercialappeal.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WKRN News 2 - Nashville TV news weather and investigations'
+                'URL' = 'https://www.wkrn.com/'
+                'icon' = 'https://www.wkrn.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WSMV 4 - Middle Tennessee news sports and community updates'
+                'URL' = 'https://www.wsmv.com/'
+                'icon' = 'https://www.wsmv.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WATE 6 - Knoxville ABC news and regional stories'
+                'URL' = 'https://www.wate.com/'
+                'icon' = 'https://www.wate.com/favicon.ico'
+            }
+        ),
+        'Alternative' = @(
+            @{
+                'Title' = 'Nashville Scene - Alternative weekly arts politics and culture'
+                'URL' = 'https://www.nashvillescene.com/'
+                'icon' = 'https://www.nashvillescene.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Lookout - Nonprofit investigative state policy news'
+                'URL' = 'https://tennesseelookout.com/'
+                'icon' = 'https://tennesseelookout.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Memphis Flyer - Memphis alternative news and entertainment'
+                'URL' = 'https://www.memphisflyer.com/'
+                'icon' = 'https://www.memphisflyer.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Nashville Banner - Nonprofit daily local news and analysis'
+                'URL' = 'https://nashvillebanner.com/'
+                'icon' = 'https://nashvillebanner.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Tribune - Black community news and perspectives'
+                'URL' = 'https://tntribune.com/'
+                'icon' = 'https://tntribune.com/favicon.ico'
+            }
+        ),
+        'Counter Culture' = @(
+            @{
+                'Title' = 'Nashville Scene - Progressive voice on arts activism and issues'
+                'URL' = 'https://www.nashvillescene.com/'
+                'icon' = 'https://www.nashvillescene.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Memphis Flyer - Underground Memphis culture and social justice'
+                'URL' = 'https://www.memphisflyer.com/'
+                'icon' = 'https://www.memphisflyer.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Knoxville Mercury - East Tennessee alternative arts and commentary'
+                'URL' = 'https://www.knoxmercury.com/'
+                'icon' = 'https://www.knoxmercury.com/favicon.ico'
+            }
+        )
+    },
+    'Vloggers' = @(
+        @{
+            'Title' = 'NewsChannel 5 Nashville - Breaking news weather and investigations'
+            'URL' = 'https://www.youtube.com/channel/UCO6kzQ-7wcG0x8W5LpBA9RQ'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WKRN News 2 - Nashville local headlines and community videos'
+            'URL' = 'https://www.youtube.com/channel/UCrlIS7z20CnVaCrMvdkig_g'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WSMV 4 Nashville - Tennessee news sports and features'
+            'URL' = 'https://www.youtube.com/channel/UCp8P8Q0vH1V1x1x2x3x4x5x6'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WATE 6 On Your Side - Knoxville news and investigations'
+            'URL' = 'https://www.youtube.com/user/WATE6OnYourSide'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'WPLN News - Nashville public radio and stories'
+            'URL' = 'https://www.youtube.com/user/WPLNNews'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Alternative Vloggers' = @(
+        @{
+            'Title' = 'Move to Nashville Franklin - Tennessee lifestyle and relocation guides'
+            'URL' = 'https://www.youtube.com/@movetonashvillefranklin'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Yankee in the South - Smoky Mountains explorations and adventures'
+            'URL' = 'https://www.youtube.com/@YankeeintheSouth'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Tennessee Native - Local culture food and hidden gems'
+            'URL' = 'https://www.youtube.com/@TennesseeNative'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Nashville Life - City events music and daily vlogs'
+            'URL' = 'https://www.youtube.com/@NashvilleLifeVlogs'
+            'icon' = 'https://www.youtube.com/favicon.ico'
+        }
+    ),
+    'Podcasters' = @(
+        @{
+            'Title' = 'This Is Nashville - WPLN daily community driven news discussions'
+            'URL' = 'https://www.npr.org/podcasts/1083459707/this-is-nashville'
+            'icon' = 'https://www.npr.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Tennessee Matters - Public affairs issues and interviews'
+            'URL' = 'https://www.iheart.com/podcast/1248-tennessee-matters-99761932/'
+            'icon' = 'https://www.iheart.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The Tennessee Conservative - State politics and commentary'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-tennessee-conservative/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Nashville Public Radio - Local stories and investigations'
+            'URL' = 'https://wpln.org/podcasts/'
+            'icon' = 'https://wpln.org/favicon.ico'
+        },
+        @{
+            'Title' = 'Tennessee Crossroads - Statewide features and human interest'
+            'URL' = 'https://www.wnpt.org/productions/tennessee-crossroads/'
+            'icon' = 'https://www.wnpt.org/favicon.ico'
+        }
+    ),
+    'Alternative Podcasters' = @(
+        @{
+            'Title' = 'Nashville Scene Podcast - Arts politics and culture deep dives'
+            'URL' = 'https://www.nashvillescene.com/podcast/'
+            'icon' = 'https://www.nashvillescene.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Memphis Flyer Podcast - Memphis alternative news and opinions'
+            'URL' = 'https://www.memphisflyer.com/podcasts/'
+            'icon' = 'https://www.memphisflyer.com/favicon.ico'
+        },
+        @{
+            'Title' = 'Tennessee Lookout Podcast - Policy makers and state issues'
+            'URL' = 'https://tennesseelookout.com/podcast/'
+            'icon' = 'https://tennesseelookout.com/favicon.ico'
+        },
+        @{
+            'Title' = 'The 99% Local Podcast - Middle Tennessee stories and creators'
+            'URL' = 'https://podcasts.apple.com/us/podcast/the-99-local-podcast/idexample'
+            'icon' = 'https://podcasts.apple.com/favicon.ico'
+        }
+    ),
+    'Business' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Nashville Business Journal - Middle Tennessee economy and companies'
+                    'URL' = 'https://www.bizjournals.com/nashville'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Business Journal - West Tennessee business growth insights'
+                    'URL' = 'https://www.bizjournals.com/memphis'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Knoxville Business Journal - East Tennessee networking and developments'
+                    'URL' = 'https://www.bizjournals.com/knoxville'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Chattanooga Business Journal - Southeast Tennessee startups and events'
+                    'URL' = 'https://www.bizjournals.com/chattanooga'
+                    'icon' = 'https://www.bizjournals.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Tennessee Lookout Business - Scrutiny of economic policies and equity'
+                    'URL' = 'https://tennesseelookout.com/tag/business/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Nashville Scene Business - Alternative views on financial challenges'
+                    'URL' = 'https://www.nashvillescene.com/tag/business/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Flyer Business - Investigative corporate accountability reports'
+                    'URL' = 'https://www.memphisflyer.com/tag/business/'
+                    'icon' = 'https://www.memphisflyer.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Nashville Entrepreneur - Middle Tennessee startup journeys and tours'
+                'URL' = 'https://www.youtube.com/@NashvilleEntrepreneur'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Memphis Business Journal - West Tennessee industry spotlights'
+                'URL' = 'https://www.youtube.com/@MemphisBizJournal'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Knoxville Business - East Tennessee economic future insights'
+                'URL' = 'https://www.youtube.com/@KnoxvilleBiz'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Chattanooga Chamber - Southeast Tennessee business operations and events'
+                'URL' = 'https://www.youtube.com/@ChattanoogaChamber'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Mostly Middle Tennessee Business Podcast - Entrepreneurs stories and success'
+                'URL' = 'https://podcasts.apple.com/us/podcast/mostly-middle-tennessee-business-podcast/id1539069986'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'The Talk of Music City Real Estate Podcast - Market trends and investments'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-talk-of-music-city-real-estate-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee on Supply Chain Management - Industry leaders and analysis'
+                'URL' = 'https://www.gscipodcast.com/'
+                'icon' = 'https://www.gscipodcast.com/favicon.ico'
+            }
+        )
+    },
+    'Sports' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'The Tennessean Sports - Vols Titans Predators and high school coverage'
+                    'URL' = 'https://www.tennessean.com/sports/'
+                    'icon' = 'https://www.tennessean.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Knox News Sports - East Tennessee Vols and college athletics'
+                    'URL' = 'https://www.knoxnews.com/sports/'
+                    'icon' = 'https://www.knoxnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Chattanooga Times Free Press Sports - Mocs and regional teams'
+                    'URL' = 'https://www.timesfreepress.com/sports/'
+                    'icon' = 'https://www.timesfreepress.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Commercial Appeal Sports - Grizzlies and Memphis college sports'
+                    'URL' = 'https://www.commercialappeal.com/sports/'
+                    'icon' = 'https://www.commercialappeal.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Rocky Top Talk - Independent Vols fan analysis and recruiting'
+                    'URL' = 'https://www.rockytoptalk.com/'
+                    'icon' = 'https://www.rockytoptalk.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'All for Tennessee - Alternative Vols recruiting and commentary'
+                    'URL' = 'https://www.allfortennessee.com/'
+                    'icon' = 'https://www.allfortennessee.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'VolReport - Critical takes on Tennessee athletics equity'
+                    'URL' = 'https://www.volreport.com/'
+                    'icon' = 'https://www.volreport.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Tennessee Athletics - Vols game highlights and behind-the-scenes'
+                'URL' = 'https://www.youtube.com/user/Vol_Sports'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'VolQuest - Tennessee recruiting and team discussions'
+                'URL' = 'https://www.youtube.com/@VolQuest'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Rocky Top Insider - Vols fan breakdowns and stories'
+                'URL' = 'https://www.youtube.com/@RockyTopInsider'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Knoxville Sports - East Tennessee high school and college recaps'
+                'URL' = 'https://www.youtube.com/@KnoxvilleSports'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'GoVols247 - Tennessee Volunteers athletics deep dives'
+                'URL' = 'https://podcasts.apple.com/us/podcast/govols247-a-tennessee-volunteers-athletics-podcast/id1249921253'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Locked On Vols - Daily Tennessee sports news and analysis'
+                'URL' = 'https://lockedonpodcasts.com/podcasts/locked-on-vols/'
+                'icon' = 'https://lockedonpodcasts.com/favicon.ico'
+            },
+            @{
+                'Title' = 'VolQuest Podcast - Vols recruiting and team insights'
+                'URL' = 'https://podcasts.apple.com/us/podcast/volquest-podcast/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Culture' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Nashville Lifestyles - Music arts events and Tennessee heritage'
+                    'URL' = 'https://nashvillelifestyles.com/'
+                    'icon' = 'https://nashvillelifestyles.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Tennessee Crossroads - Statewide culture travel and features'
+                    'URL' = 'https://www.wnpt.org/productions/tennessee-crossroads/'
+                    'icon' = 'https://www.wnpt.org/favicon.ico'
+                },
+                @{
+                    'Title' = 'Knoxville Mercury - East Tennessee arts and cultural reporting'
+                    'URL' = 'https://www.knoxmercury.com/'
+                'icon' = 'https://www.knoxmercury.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Chattanooga Pulse - Southeast Tennessee music and events'
+                    'URL' = 'https://www.pulsechattanooga.com/'
+                    'icon' = 'https://www.pulsechattanooga.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Nashville Scene Culture - Critiques of arts policies and narratives'
+                    'URL' = 'https://www.nashvillescene.com/arts-culture/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Flyer Culture - Progressive identity and community stories'
+                    'URL' = 'https://www.memphisflyer.com/category/arts-culture/'
+                    'icon' = 'https://www.memphisflyer.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Tennessee Lookout Culture - Alternative views on cultural inequalities'
+                    'URL' = 'https://tennesseelookout.com/tag/culture/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Move to Nashville - Tennessee traditions festivals and explorations'
+                'URL' = 'https://www.youtube.com/@movetonashvillefranklin'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Native - Diverse communities and daily life insights'
+                'URL' = 'https://www.youtube.com/@TennesseeNative'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Nashville Life - Authentic cultural community portraits'
+                'URL' = 'https://www.youtube.com/@NashvilleLifeVlogs'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Yankee in the South - Southern customs and event spotlights'
+                'URL' = 'https://www.youtube.com/@YankeeintheSouth'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'StoryTown Radio - Tennessee history folklore and traditions'
+                'URL' = 'https://open.spotify.com/show/5nLsWJmV3b5JR2b5mWJzA1'
+                'icon' = 'https://open.spotify.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Chasing History Radio - State cultural heritage and stories'
+                'URL' = 'https://podcasts.apple.com/us/podcast/chasing-history-radio/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Nashville Lifestyles Podcast - Community events and milestones'
+                'URL' = 'https://nashvillelifestyles.com/podcast/'
+                'icon' = 'https://nashvillelifestyles.com/favicon.ico'
+            }
+        )
+    },
+    'Science and Technology' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'University of Tennessee Knoxville Science News - Research breakthroughs and grants'
+                    'URL' = 'https://news.utk.edu/category/science-health/'
+                    'icon' = 'https://news.utk.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Vanderbilt University Tech News - Innovations startups and ecosystem'
+                    'URL' = 'https://news.vanderbilt.edu/tag/technology/'
+                    'icon' = 'https://news.vanderbilt.edu/favicon.ico'
+                },
+                @{
+                    'Title' = 'Oak Ridge National Laboratory News - Advanced science and discoveries'
+                    'URL' = 'https://www.ornl.gov/news'
+                    'icon' = 'https://www.ornl.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Tennessee Tech University Engineering News - STEM advancements and projects'
+                    'URL' = 'https://www.tntech.edu/engineering/news/'
+                    'icon' = 'https://www.tntech.edu/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Tennessee Lookout Tech - Critical research ethics and impacts'
+                    'URL' = 'https://tennesseelookout.com/tag/technology/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Nashville Scene Tech - Alternative analysis of scientific challenges'
+                    'URL' = 'https://www.nashvillescene.com/tag/technology/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Flyer Tech - Scrutiny of innovation policies equity'
+                    'URL' = 'https://www.memphisflyer.com/tag/technology/'
+                    'icon' = 'https://www.memphisflyer.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'UT Knoxville Engineering - Campus labs and STEM breakthroughs'
+                'URL' = 'https://www.youtube.com/user/utk'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Vanderbilt Innovation - Research projects and science explanations'
+                'URL' = 'https://www.youtube.com/user/vanderbilt'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Oak Ridge National Lab - Tech demos and facility tours'
+                'URL' = 'https://www.youtube.com/user/ornl'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Tech - University innovations and events'
+                'URL' = 'https://www.youtube.com/user/tennesseetech'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'UT Knoxville Science Podcast - Hot topics and research stories'
+                'URL' = 'https://news.utk.edu/podcasts/'
+                'icon' = 'https://news.utk.edu/favicon.ico'
+            },
+            @{
+                'Title' = 'Vanderbilt Engineering Podcast - Breakthroughs in science and tech'
+                'URL' = 'https://engineering.vanderbilt.edu/podcast/'
+                'icon' = 'https://engineering.vanderbilt.edu/favicon.ico'
+            },
+            @{
+                'Title' = 'Oak Ridge Stories - Innovations and national lab discoveries'
+                'URL' = 'https://www.ornl.gov/podcasts'
+                'icon' = 'https://www.ornl.gov/favicon.ico'
+            }
+        )
+    },
+    'Politics' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Tennessee Lookout - Nonpartisan state legislature and policy coverage'
+                    'URL' = 'https://tennesseelookout.com/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'The Tennessean Politics - Nashville elections and governance analysis'
+                    'URL' = 'https://www.tennessean.com/news/politics/'
+                    'icon' = 'https://www.tennessean.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Knox News Politics - East Tennessee races and government news'
+                    'URL' = 'https://www.knoxnews.com/news/politics/'
+                    'icon' = 'https://www.knoxnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Chattanooga Times Free Press Politics - Southeast Tennessee campaigns'
+                    'URL' = 'https://www.timesfreepress.com/news/politics/'
+                    'icon' = 'https://www.timesfreepress.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'FITSNews Politics - Independent watchdog on corruption and transparency'
+                    'URL' = 'https://www.fitsnews.com/tag/politics/'
+                    'icon' = 'https://www.fitsnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Nashville Scene Politics - Progressive critiques of power structures'
+                    'URL' = 'https://www.nashvillescene.com/tag/politics/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Tennessee Holler - Alternative takes on reforms and lobbying'
+                    'URL' = 'https://www.tennesseholler.com/'
+                    'icon' = 'https://www.tennesseholler.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'WKRN Politics - Tennessee candidate debates and breakdowns'
+                'URL' = 'https://www.youtube.com/playlist?list=PLexampleTNPols'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'WSMV 4 Politics - State policy discussions and profiles'
+                'URL' = 'https://www.youtube.com/user/WSMV4'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Lookout - Voter engagement and race videos'
+                'URL' = 'https://www.youtube.com/@TennesseeLookout'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Nashville Banner - Community activism and local issues'
+                'URL' = 'https://www.youtube.com/@NashvilleBanner'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Outspoken With Pastor Bristol Smith - Tennessee political headlines and dives'
+                'URL' = 'https://podcasts.apple.com/us/podcast/outspoken-with-pastor-bristol-smith/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'TBA Legislative Updates - Backstory on weekly political stories'
+                'URL' = 'https://podcasts.apple.com/us/podcast/tba-legislative-updates/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'You Might Be Right - Bipartisan commentary on state government'
+                'URL' = 'https://podcasts.apple.com/us/podcast/you-might-be-right/id1642334178'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Fashion' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'StyleBlueprint - Nashville fashion trends and lifestyle guides'
+                    'URL' = 'https://styleblueprint.com/'
+                    'icon' = 'https://styleblueprint.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Nashville Lifestyles Fashion - Music City style events and beauty'
+                    'URL' = 'https://nashvillelifestyles.com/category/style/'
+                    'icon' = 'https://nashvillelifestyles.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Magazine Fashion - West Tennessee designers and runway'
+                    'URL' = 'https://memphismagazine.com/fashion/'
+                    'icon' = 'https://memphismagazine.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Chattanooga Fashion Week - Southeast Tennessee trends and shows'
+                    'URL' = 'https://chattanoogafashionweek.com/'
+                    'icon' = 'https://chattanoogafashionweek.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Nashville Scene Fashion - Critiques of industry ethics and diversity'
+                    'URL' = 'https://www.nashvillescene.com/tag/fashion/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Flyer Fashion - Views on sustainable Tennessee style'
+                    'URL' = 'https://www.memphisflyer.com/tag/fashion/'
+                    'icon' = 'https://www.memphisflyer.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Tennessee Lookout Fashion - Alternative stories on ethical trends'
+                    'URL' = 'https://tennesseelookout.com/tag/fashion/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Britt Shaheen - Nashville fashion hauls and styling tips'
+                'URL' = 'https://www.youtube.com/@BrittShaheen'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Alexis Rae Driscoll - Tennessee trend breakdowns and outfits'
+                'URL' = 'https://www.youtube.com/@Alexisraedriscolll'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Blake Guidry - Music City runway and event vlogs'
+                'URL' = 'https://www.youtube.com/@BlakeGuidry'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Allee Sutton - Southern style inspirations and looks'
+                'URL' = 'https://www.youtube.com/@alleesutton'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'Nashville Lifestyles The Podcast - Fashion trends and city style'
+                'URL' = 'https://nashvillelifestyles.com/podcast/'
+                'icon' = 'https://nashvillelifestyles.com/favicon.ico'
+            },
+            @{
+                'Title' = 'StyleBlueprint Podcast - Personal style and cultural histories'
+                'URL' = 'https://styleblueprint.com/podcast/'
+                'icon' = 'https://styleblueprint.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Talkin Tennessee with Yvonnca - Vibrant fashion culture showcasing'
+                'URL' = 'https://podcasts.apple.com/us/podcast/talkin-tennessee-with-yvonnca/idexample'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            }
+        )
+    },
+    'Military' = @{
+        'News' = @{
+            'Mainstream' = @(
+                @{
+                    'Title' = 'Tennessee Military Department News - State guard missions and updates'
+                    'URL' = 'https://www.tn.gov/military/news.html'
+                    'icon' = 'https://www.tn.gov/favicon.ico'
+                },
+                @{
+                    'Title' = 'Clarksville Now Military - Fort Campbell deployments and veterans'
+                    'URL' = 'https://clarksvillenow.com/local/categories/military/'
+                    'icon' = 'https://clarksvillenow.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Knox News Military - East Tennessee guard and policy coverage'
+                    'URL' = 'https://www.knoxnews.com/news/military/'
+                    'icon' = 'https://www.knoxnews.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'The Tennessean Military - Statewide bases and veteran services'
+                    'URL' = 'https://www.tennessean.com/news/military/'
+                    'icon' = 'https://www.tennessean.com/favicon.ico'
+                }
+            ),
+            'Counter' = @(
+                @{
+                    'Title' = 'Tennessee Lookout Military - Independent scrutiny of deployments'
+                    'URL' = 'https://tennesseelookout.com/tag/military/'
+                    'icon' = 'https://tennesseelookout.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Nashville Scene Military - Critical veteran experiences reporting'
+                    'URL' = 'https://www.nashvillescene.com/tag/military/'
+                    'icon' = 'https://www.nashvillescene.com/favicon.ico'
+                },
+                @{
+                    'Title' = 'Memphis Flyer Military - Scrutiny of defense policies and impacts'
+                    'URL' = 'https://www.memphisflyer.com/tag/military/'
+                    'icon' = 'https://www.memphisflyer.com/favicon.ico'
+                }
+            )
+        },
+        'Vloggers' = @(
+            @{
+                'Title' = 'Tennessee National Guard - Official training and mission videos'
+                'URL' = 'https://www.youtube.com/c/tennesseearmy'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Fort Campbell - 101st Airborne stories and deployments'
+                'URL' = 'https://www.youtube.com/@101stAirborne'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Clarksville Military - Veteran spotlights and base life'
+                'URL' = 'https://www.youtube.com/@clarksvilleonline'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Vets - Family adventures and support resources'
+                'URL' = 'https://www.youtube.com/@TennesseeVets'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        ),
+        'Podcasts' = @(
+            @{
+                'Title' = 'The 1796 Podcast - Tennessee Guard news and interviews'
+                'URL' = 'https://podcasts.apple.com/us/podcast/the-1796-podcast/id1618998253'
+                'icon' = 'https://podcasts.apple.com/favicon.ico'
+            },
+            @{
+                'Title' = 'NashVillager Podcast - Veterans honors and transitions'
+                'URL' = 'https://wpln.org/post/nashvillager-podcast-final-honors-for-tennessee-veterans/'
+                'icon' = 'https://wpln.org/favicon.ico'
+            },
+            @{
+                'Title' = 'Tennessee Thunder - Military history and tales'
+                'URL' = 'https://www.youtube.com/watch?v=1iThSukzSqU'
+                'icon' = 'https://www.youtube.com/favicon.ico'
+            }
+        )
+    }
+}
 
 }
 }
