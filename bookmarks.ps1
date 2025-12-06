@@ -12,6 +12,12 @@
     that you can load via the browser's library/import UI. All operations write detailed log output via the
     shared logging module.
 
+    **JSON Template Auto-Generation:**
+    - When executed, the script looks for `bookmarks.json` in the same directory as `bookmarks.ps1`.
+    - If `bookmarks.json` does NOT exist, the script generates one based on the current curated bookmark data.
+    - If `bookmarks.json` DOES exist, it is loaded and used as the source of hierarchical data.
+    - Use `-GenerateTemplate` to generate a new `bookmarks.json` and exit immediately.
+
     Backup files are stored in %USERPROFILE%\myTech.Today\Backups\<BrowserName>\
     Log files are stored in %USERPROFILE%\myTech.Today\logs\bookmarks.md and archived monthly as bookmarks.YYYY-MM.md
 .PARAMETER Mode
@@ -30,6 +36,11 @@
     If not specified and .\bookmarks.json exists, it will be used automatically.
     JSON templates take priority over PSD1/PS1 files.
     Use the tree-organizer tool to create and edit JSON templates visually.
+.PARAMETER GenerateTemplate
+    When this switch is used, the script generates a new `bookmarks.json` file in the script
+    directory based on the current curated bookmark data (from PSD1/PS1 files and external
+    data sources), then exits immediately without performing any browser operations.
+    This is useful for creating a JSON template that can be edited with the tree-organizer tool.
 .PARAMETER WhatIf
     Shows what would change without modifying any bookmark files.
 .EXAMPLE
@@ -62,13 +73,21 @@
 
         .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"
 
+.EXAMPLE
+    Generate a new bookmarks.json template and exit (no browser operations):
+
+        .\bookmarks\bookmarks.ps1 -GenerateTemplate
+
+    This creates .\bookmarks\bookmarks.json from the curated PSD1/PS1 data sources.
+    You can then edit this JSON file with the tree-organizer tool.
+
 .NOTES
-    Version : 1.3.2
+    Version : 1.6.0
     Script  : bookmarks.ps1
     Project : myTech.Today PowerShellScripts
     Author  : Kyle Rode (myTech.Today)
     Created : 2025-11-16
-    LastModified: 2025-12-02 - Enhanced Event Viewer logging with descriptive messages
+    LastModified: 2025-12-06 - Added JSON auto-generation and -GenerateTemplate flag
     Repo: https://github.com/mytech-today-now/bookmarks/
 #>
 
@@ -98,7 +117,12 @@ param(
     # Performance optimization switches
     [switch]$SkipFavicons,           # Skip all favicon fetching for maximum speed
     [int]$FaviconParallelism = 10,   # Number of concurrent favicon downloads (default: 10)
-    [switch]$UseGoogleFavicons       # Use Google's favicon service only (faster, more reliable)
+    [switch]$UseGoogleFavicons,      # Use Google's favicon service only (faster, more reliable)
+
+    # Template generation switch
+    # When specified, generates bookmarks.json from curated data and exits immediately
+    [Alias('ExportTemplate','GenerateJsonOnly')]
+    [switch]$GenerateTemplate
 )
 
 $ErrorActionPreference = 'Stop'
@@ -1125,6 +1149,73 @@ function Convert-JsonToHashtable {
     return $InputObject
 }
 
+function Export-BookmarkTemplate {
+    <#
+    .SYNOPSIS
+        Exports the current curated bookmark data to a bookmarks.json file.
+    .DESCRIPTION
+        Converts the $script:CuratedBookmarks hashtable to JSON format and saves it
+        to the specified path (default: bookmarks.json in the script directory).
+        This function creates a JSON template compatible with the tree-organizer tool
+        and the -Template parameter.
+    .PARAMETER OutputPath
+        Path where the JSON file will be saved. Defaults to .\bookmarks.json in the script directory.
+    .PARAMETER Force
+        If specified, overwrites an existing file without prompting.
+    #>
+    param(
+        [string]$OutputPath,
+        [switch]$Force
+    )
+
+    if (-not $OutputPath) {
+        $OutputPath = Join-Path $PSScriptRoot 'bookmarks.json'
+    }
+
+    if (-not $script:CuratedBookmarks -or $script:CuratedBookmarks.Count -eq 0) {
+        Write-Log "No curated bookmark data available to export." -Level WARNING
+        return $false
+    }
+
+    # Check if file exists and Force is not specified
+    if ((Test-Path -LiteralPath $OutputPath) -and -not $Force) {
+        Write-Log "File already exists at $OutputPath. Use -Force to overwrite." -Level WARNING
+        return $false
+    }
+
+    try {
+        # Convert hashtable to JSON with proper depth for nested structures
+        $jsonContent = $script:CuratedBookmarks | ConvertTo-Json -Depth 20 -Compress:$false
+
+        # Write to file with UTF8 encoding (no BOM for PowerShell 7 compatibility)
+        if ($PSVersionTable.PSVersion.Major -ge 6) {
+            # PowerShell 7+: Use -Encoding utf8NoBOM
+            Set-Content -Path $OutputPath -Value $jsonContent -Encoding utf8NoBOM
+        }
+        else {
+            # PowerShell 5.1: UTF8 encoding includes BOM, which is generally fine for JSON
+            Set-Content -Path $OutputPath -Value $jsonContent -Encoding UTF8
+        }
+
+        # Get file info for logging
+        $fileInfo = Get-Item $OutputPath
+        $categoryCount = $script:CuratedBookmarks.Keys.Count
+
+        Write-Log "Successfully exported bookmarks.json to $OutputPath" -Level SUCCESS
+        Write-Log "  - Categories: $categoryCount" -Level INFO
+        Write-Log "  - File size: $([math]::Round($fileInfo.Length / 1024, 2)) KB" -Level INFO
+
+        return $true
+    }
+    catch {
+        Write-Log "Failed to export bookmark template: $_" -Level ERROR `
+            -Context "Exporting curated bookmarks to JSON file" `
+            -Solution "Ensure the output directory is writable and the path is valid." `
+            -Component "Template Export"
+        return $false
+    }
+}
+
 function Load-ExternalDataSources {
     <#
     .SYNOPSIS
@@ -1903,10 +1994,47 @@ if (-not $script:SkipFavicons) {
 
 # Load curated bookmarks first so we can extract categories from it
 $script:CuratedBookmarks = $null
+
+# Determine the default bookmarks.json path
+$script:DefaultJsonTemplatePath = Join-Path $PSScriptRoot 'bookmarks.json'
+$script:JsonTemplateExists = Test-Path -LiteralPath $script:DefaultJsonTemplatePath
+
+# Check if we're in GenerateTemplate mode - if so, we need to load from PSD1/PS1 sources first
+# (not from bookmarks.json) so we can regenerate it
+if ($GenerateTemplate) {
+    # Don't load from bookmarks.json when generating template - load from PSD1/PS1 sources only
+    Write-Log "GenerateTemplate mode: Loading bookmark data from PSD1/PS1 sources..." -Level INFO
+    Initialize-CuratedBookmarks -Path $CuratedLinksPath -JsonTemplatePath $null
+
+    # Load external data sources (e.g., europe.ps1, asia.psd1) and merge into curated bookmarks
+    Load-ExternalDataSources
+
+    # Export the template
+    $exportResult = Export-BookmarkTemplate -OutputPath $script:DefaultJsonTemplatePath -Force
+    if ($exportResult) {
+        Write-Log "=== Template generation complete. Exiting. ===" -Level SUCCESS
+    }
+    else {
+        Write-Log "=== Template generation failed. Exiting. ===" -Level ERROR
+    }
+    return
+}
+
+# Normal mode: Initialize curated bookmarks with JSON template support
 Initialize-CuratedBookmarks -Path $CuratedLinksPath -JsonTemplatePath $TemplatePath
 
 # Load external data sources (e.g., europe.ps1, asia.psd1) and merge into curated bookmarks
 Load-ExternalDataSources
+
+# Auto-generate bookmarks.json if it doesn't exist and no explicit template was specified
+# This ensures users have a JSON file they can edit with the tree-organizer tool
+if (-not $script:JsonTemplateExists -and -not $TemplatePath -and $script:CuratedBookmarks -and $script:CuratedBookmarks.Count -gt 0) {
+    Write-Log "bookmarks.json not found. Auto-generating from curated data sources..." -Level INFO
+    $autoGenResult = Export-BookmarkTemplate -OutputPath $script:DefaultJsonTemplatePath -Force
+    if ($autoGenResult) {
+        Write-Log "Auto-generated bookmarks.json. You can edit it with the tree-organizer tool." -Level INFO
+    }
+}
 
 # Get categories from installer
 $categories = Get-InstallerCategories

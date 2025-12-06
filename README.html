@@ -182,6 +182,20 @@
       <li><strong>Detailed Logging</strong>: Uses the shared <code>logging.ps1</code> module for comprehensive activity tracking</li>
     </ul>
 
+    <h3>JSON Template Auto-Generation</h3>
+    <p>The script automatically manages a <code>bookmarks.json</code> file in the script directory:</p>
+    <ul>
+      <li><strong>If <code>bookmarks.json</code> does NOT exist</strong>: The script generates one from the curated PSD1/PS1 data sources (links-sample.psd1, europe.ps1, asia.psd1, etc.)</li>
+      <li><strong>If <code>bookmarks.json</code> DOES exist</strong>: The script loads and uses it as the source of hierarchical data</li>
+      <li><strong>Use <code>-GenerateTemplate</code></strong>: To regenerate <code>bookmarks.json</code> from PSD1/PS1 sources and exit immediately (no browser operations)</li>
+    </ul>
+    <p>This allows you to:</p>
+    <ol>
+      <li>Run the script once to auto-generate <code>bookmarks.json</code></li>
+      <li>Edit the JSON file with the <strong>tree-organizer</strong> visual editor tool</li>
+      <li>Run the script again to apply your customized bookmarks to all browsers</li>
+    </ol>
+
     <div class="success">
       <h4>Statistics</h4>
       <ul>
@@ -238,6 +252,18 @@
           <td>String</td>
           <td>(auto)</td>
           <td>Path to curated bookmark data file (.psd1 or .ps1). If omitted, searches for <code>links.psd1</code>, <code>links.ps1</code>, <code>links-sample.psd1</code>, or <code>links-sample.ps1</code> in the script folder</td>
+        </tr>
+        <tr>
+          <td><code>-Template</code></td>
+          <td>String</td>
+          <td>(auto)</td>
+          <td>Path to JSON template file. Supports relative, absolute, UNC, or URL paths. If not specified and <code>.\bookmarks.json</code> exists, it will be used. JSON templates take priority over PSD1/PS1 files.</td>
+        </tr>
+        <tr>
+          <td><code>-GenerateTemplate</code></td>
+          <td>Switch</td>
+          <td>(none)</td>
+          <td>Generate a new <code>bookmarks.json</code> file from curated PSD1/PS1 data sources and exit immediately. No browser operations are performed. Aliases: <code>-ExportTemplate</code>, <code>-GenerateJsonOnly</code></td>
         </tr>
         <tr>
           <td><code>-WhatIf</code></td>
@@ -332,6 +358,12 @@
 
 # Add bookmarks using a custom curated links file
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -CuratedLinksPath ".\my-custom-links.psd1"
+
+# Use a JSON template created with the tree-organizer tool
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template ".\my-bookmarks.json"
+
+# Generate a new bookmarks.json template and exit (no browser operations)
+.\bookmarks\bookmarks.ps1 -GenerateTemplate
 
 # FAST MODE: Skip favicon fetching for maximum speed (~2 seconds)
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -SkipFavicons
@@ -771,6 +803,14 @@ Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
           <li><strong>Auto-detect bookmarks.json</strong>: Automatically uses <code>bookmarks.json</code> in script directory if present</li>
           <li><strong>Drag-and-Drop Editing</strong>: Visual tree editor with SortableJS for intuitive organization</li>
           <li><strong>Validation</strong>: Built-in validation for bookmark structures with error logging</li>
+        </ul>
+      </li>
+      <li><strong>v1.6.0</strong> (2025-12-06)
+        <ul>
+          <li><strong>JSON Auto-Generation</strong>: Script now auto-generates <code>bookmarks.json</code> if it doesn't exist</li>
+          <li><strong>New Parameter</strong>: <code>-GenerateTemplate</code> (aliases: <code>-ExportTemplate</code>, <code>-GenerateJsonOnly</code>) - generates JSON template and exits</li>
+          <li><strong>Improved Workflow</strong>: Edit bookmarks visually with tree-organizer, then apply to all browsers</li>
+          <li><strong>Export Function</strong>: New <code>Export-BookmarkTemplate</code> function for JSON generation</li>
         </ul>
       </li>
       <li><strong>v1.4.0</strong>

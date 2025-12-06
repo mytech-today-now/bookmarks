@@ -24,6 +24,19 @@ The Bookmarks Manager builds and maintains a consistent **myTech.Today** bookmar
 - **Automatic Backups**: Creates timestamped backups before making any changes
 - **Detailed Logging**: Uses the shared `logging.ps1` module for comprehensive activity tracking
 
+### JSON Template Auto-Generation
+
+The script automatically manages a `bookmarks.json` file in the script directory:
+
+- **If `bookmarks.json` does NOT exist**: The script generates one from the curated PSD1/PS1 data sources (links-sample.psd1, europe.ps1, asia.psd1, etc.)
+- **If `bookmarks.json` DOES exist**: The script loads and uses it as the source of hierarchical data
+- **Use `-GenerateTemplate`**: To regenerate `bookmarks.json` from PSD1/PS1 sources and exit immediately (no browser operations)
+
+This allows you to:
+1. Run the script once to auto-generate `bookmarks.json`
+2. Edit the JSON file with the **tree-organizer** visual editor tool
+3. Run the script again to apply your customized bookmarks to all browsers
+
 ### Statistics
 
 - **85 Total Categories** (31 from links-sample.psd1 + 39 European regions + 15 Asian countries)
@@ -51,6 +64,7 @@ The main PowerShell script that manages the myTech.Today bookmark structure acro
 | `-BackupPath` | String | (none) | Path to backup file for Restore mode (JSON for Chromium, SQLite for Firefox) |
 | `-CuratedLinksPath` | String | (auto) | Path to curated bookmark data file (.psd1 or .ps1). If omitted, searches for `links.psd1`, `links.ps1`, `links-sample.psd1`, or `links-sample.ps1` in the script folder |
 | `-Template` | String | (auto) | Path to JSON template file. Supports relative, absolute, UNC, or URL paths. If not specified and `.\bookmarks.json` exists, it will be used. JSON templates take priority over PSD1/PS1 files. |
+| `-GenerateTemplate` | Switch | (none) | Generate a new `bookmarks.json` file from curated PSD1/PS1 data sources and exit immediately. No browser operations are performed. Aliases: `-ExportTemplate`, `-GenerateJsonOnly` |
 | `-WhatIf` | Switch | (none) | Shows what would change without modifying any files |
 | `-SkipFavicons` | Switch | (none) | Skip all favicon fetching for maximum speed (~2 seconds for 9,500+ bookmarks) |
 | `-UseGoogleFavicons` | Switch | (none) | Use only Google's favicon service (faster and more reliable than direct fetching) |
@@ -131,6 +145,9 @@ The script uses a two-tier approach:
 
 # Use a JSON template from a URL
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"
+
+# Generate a new bookmarks.json template and exit (no browser operations)
+.\bookmarks\bookmarks.ps1 -GenerateTemplate
 
 # FAST MODE: Skip favicon fetching for maximum speed (~2 seconds)
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -SkipFavicons
@@ -567,6 +584,12 @@ This script is part of the wider **myTech.Today** PowerShell toolkit:
   - **Icon Key Compatibility**: Handles both `'Icon'` and `'icon'` property names in data files
   - **Massive Scale**: Now supports 85 categories, 3,257 subfolders, and 9,539+ bookmarks
   - **Speed**: With `-SkipFavicons`, processes all bookmarks in ~2 seconds
+
+- **v1.6.0** (2025-12-06)
+  - **JSON Auto-Generation**: Script now auto-generates `bookmarks.json` if it doesn't exist
+  - **New Parameter**: `-GenerateTemplate` (aliases: `-ExportTemplate`, `-GenerateJsonOnly`) - generates JSON template and exits
+  - **Improved Workflow**: Edit bookmarks visually with tree-organizer, then apply to all browsers
+  - **Export Function**: New `Export-BookmarkTemplate` function for JSON generation
 
 - **v1.3.1**
   - Added support for curated bookmarks via `links-sample.psd1`
