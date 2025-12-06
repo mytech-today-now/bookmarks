@@ -50,6 +50,7 @@ The main PowerShell script that manages the myTech.Today bookmark structure acro
 | `-Browser` | String[] | `All` | Target browsers: `Chrome`, `Edge`, `Brave`, `Firefox`, `Vivaldi`, `Opera`, `OperaGX`, `LibreWolf`, `TorBrowser`, `Waterfox`, `Chromium`, `PaleMoon`, `UngoogledChromium`, `Midori`, `Min`, or `All` |
 | `-BackupPath` | String | (none) | Path to backup file for Restore mode (JSON for Chromium, SQLite for Firefox) |
 | `-CuratedLinksPath` | String | (auto) | Path to curated bookmark data file (.psd1 or .ps1). If omitted, searches for `links.psd1`, `links.ps1`, `links-sample.psd1`, or `links-sample.ps1` in the script folder |
+| `-Template` | String | (auto) | Path to JSON template file. Supports relative, absolute, UNC, or URL paths. If not specified and `.\bookmarks.json` exists, it will be used. JSON templates take priority over PSD1/PS1 files. |
 | `-WhatIf` | Switch | (none) | Shows what would change without modifying any files |
 | `-SkipFavicons` | Switch | (none) | Skip all favicon fetching for maximum speed (~2 seconds for 9,500+ bookmarks) |
 | `-UseGoogleFavicons` | Switch | (none) | Use only Google's favicon service (faster and more reliable than direct fetching) |
@@ -124,6 +125,12 @@ The script uses a two-tier approach:
 
 # Add bookmarks using a custom curated links file
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -CuratedLinksPath ".\my-custom-links.psd1"
+
+# Use a JSON template created with the tree-organizer tool
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template ".\my-bookmarks.json"
+
+# Use a JSON template from a URL
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"
 
 # FAST MODE: Skip favicon fetching for maximum speed (~2 seconds)
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -SkipFavicons
@@ -352,6 +359,103 @@ To add your own external data source:
 
 ---
 
+## Tree Organizer Tool
+
+The **Tree Organizer** is a browser-based visual editor for creating and managing bookmark hierarchies. It provides a drag-and-drop interface for organizing bookmarks and exports to JSON format compatible with `bookmarks.ps1`.
+
+### Location
+
+```
+bookmarks/tree-organizer/index.html
+```
+
+Open this file in any modern web browser to use the tool.
+
+### Features
+
+- **Drag-and-Drop Organization**: Reorder folders and bookmarks by dragging them to new positions
+- **Nested Hierarchies**: Create unlimited nesting levels for complex bookmark structures
+- **Add/Rename/Delete**: Full CRUD operations for folders and bookmarks
+- **JSON Import/Export**: Import existing JSON files or export your hierarchy for use with `bookmarks.ps1`
+- **PSD1 Import**: Basic support for importing PowerShell Data Files (`.psd1`)
+- **Validation**: Check for errors like missing URLs, empty names, duplicate entries, and deep nesting
+- **Error Log**: View, copy, or save validation errors with line/column information
+- **Expand/Collapse**: Quickly expand or collapse all folders for easier navigation
+
+### Usage
+
+1. **Open the tool**: Navigate to `bookmarks/tree-organizer/index.html` in your browser
+2. **Create structure**: Use "Add Folder" and "Add Bookmark" buttons to build your hierarchy
+3. **Organize**: Drag and drop items to reorder or move them between folders
+4. **Edit properties**: Click on any item to edit its name, URL, and icon
+5. **Validate**: Click "Validate" to check for errors before exporting
+6. **Export**: Click "Export JSON" to download your bookmark structure
+
+### JSON Template Format
+
+The exported JSON follows this structure:
+
+```json
+{
+    "CategoryName": {
+        "SubfolderName": [
+            {
+                "Title": "Bookmark Title",
+                "URL": "https://example.com/",
+                "Icon": "https://example.com/favicon.ico"
+            }
+        ]
+    }
+}
+```
+
+---
+
+## JSON Template Support
+
+The `bookmarks.ps1` script now supports JSON template files as an alternative to PSD1/PS1 data files. This makes it easier to create and share bookmark configurations.
+
+### New Parameter: `-Template` (alias: `-TemplatePath`)
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `-Template` | String | (auto) | Path to a JSON template file. Supports relative paths, absolute paths, UNC paths, and URLs. If not specified and `.\bookmarks.json` exists, it will be used automatically. |
+
+### Priority Order
+
+When loading bookmark data, the script checks sources in this order:
+
+1. **JSON template** (if `-Template` parameter is specified)
+2. **Default `bookmarks.json`** (if exists in script directory)
+3. **PSD1/PS1 files** (original behavior via `-CuratedLinksPath`)
+
+### Usage Examples
+
+```powershell
+# Use a local JSON template
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template ".\my-bookmarks.json"
+
+# Use a JSON template from a network share
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "\\server\share\bookmarks.json"
+
+# Use a JSON template from a URL
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"
+
+# Auto-detect bookmarks.json in script directory (no parameter needed)
+# Just place bookmarks.json in the bookmarks folder and run:
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All
+```
+
+### Creating JSON Templates
+
+You can create JSON templates in several ways:
+
+1. **Tree Organizer Tool**: Use the visual editor at `bookmarks/tree-organizer/index.html`
+2. **Manual Creation**: Write JSON following the structure above
+3. **Convert from PSD1**: Export your existing PSD1 structure using the Tree Organizer's import/export feature
+
+---
+
 ## Requirements
 
 - **Operating System**: Windows 10 or later
@@ -446,7 +550,15 @@ This script is part of the wider **myTech.Today** PowerShell toolkit:
 
 ## Version History
 
-- **v1.4.0** (Current)
+- **v1.5.0** (Current)
+  - **Tree Organizer Tool**: New browser-based visual editor for creating bookmark hierarchies (`tree-organizer/index.html`)
+  - **JSON Template Support**: New `-Template` parameter for loading bookmark data from JSON files
+  - **URL Template Loading**: Load JSON templates from URLs (e.g., `https://example.com/bookmarks.json`)
+  - **Auto-detect bookmarks.json**: Automatically uses `bookmarks.json` in script directory if present
+  - **Drag-and-Drop Editing**: Visual tree editor with SortableJS for intuitive organization
+  - **Validation**: Built-in validation for bookmark structures with error logging
+
+- **v1.4.0**
   - **Performance Optimizations**: Added parallel favicon fetching using PowerShell runspaces
   - **New Parameters**: `-SkipFavicons`, `-UseGoogleFavicons`, `-FaviconParallelism`
   - **Persistent Favicon Cache**: Favicons cached to disk at `%USERPROFILE%\myTech.Today\cache\favicon-cache.json`

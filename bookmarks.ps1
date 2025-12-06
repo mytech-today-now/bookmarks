@@ -24,6 +24,12 @@
     - For Firefox-family browsers: a places.sqlite backup file created by this script.
 .PARAMETER CuratedLinksPath
     Optional path to a .psd1 or .ps1 file containing curated bookmark data; if omitted, default names in the script folder are probed.
+.PARAMETER TemplatePath
+    Optional path to a JSON template file containing bookmark hierarchy data.
+    Supports relative paths, absolute paths, UNC paths, and URLs.
+    If not specified and .\bookmarks.json exists, it will be used automatically.
+    JSON templates take priority over PSD1/PS1 files.
+    Use the tree-organizer tool to create and edit JSON templates visually.
 .PARAMETER WhatIf
     Shows what would change without modifying any bookmark files.
 .EXAMPLE
@@ -45,6 +51,16 @@
     Restore the bookmarks for a Firefox profile from a places.sqlite backup file:
 
         .\bookmarks\bookmarks.ps1 -Mode Restore -Browser Firefox -BackupPath "C:\Users\YourUserName\myTech.Today\Backups\Firefox\places_oyxj9ris.default-release_20250101_120000.sqlite"
+
+.EXAMPLE
+    Use a JSON template file created with the tree-organizer tool:
+
+        .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template ".\my-bookmarks.json"
+
+.EXAMPLE
+    Use a JSON template from a URL:
+
+        .\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"
 
 .NOTES
     Version : 1.3.2
@@ -69,6 +85,13 @@ param(
     [string]$BackupPath,
 
     [string]$CuratedLinksPath,
+
+    # JSON template path - supports relative, absolute, UNC, or URL paths
+    # If not specified and .\bookmarks.json exists, it will be used
+    # If neither -Template nor -CuratedLinksPath is specified and no bookmarks.json exists,
+    # a default template will be created
+    [Alias('Template')]
+    [string]$TemplatePath,
 
     [switch]$WhatIf,
 
@@ -880,9 +903,33 @@ function Get-TopicGroupForCategory {
 
 function Initialize-CuratedBookmarks {
     param(
-        [string]$Path
+        [string]$Path,
+        [string]$JsonTemplatePath
     )
 
+    # Priority 1: JSON template (if specified or default exists)
+    if ($JsonTemplatePath) {
+        $jsonData = Import-JsonTemplate -Path $JsonTemplatePath
+        if ($jsonData -is [hashtable]) {
+            $script:CuratedBookmarks = $jsonData
+            Write-Log "Loaded curated bookmark data from JSON template." -Level INFO
+            return
+        }
+    }
+    else {
+        # Check for default bookmarks.json in script directory
+        $defaultJsonPath = Join-Path $PSScriptRoot 'bookmarks.json'
+        if (Test-Path -LiteralPath $defaultJsonPath) {
+            $jsonData = Import-JsonTemplate -Path $defaultJsonPath
+            if ($jsonData -is [hashtable]) {
+                $script:CuratedBookmarks = $jsonData
+                Write-Log "Loaded curated bookmark data from default bookmarks.json." -Level INFO
+                return
+            }
+        }
+    }
+
+    # Priority 2: PSD1/PS1 files (original behavior)
     $pathsToTry = @()
 
     if ($Path) {
@@ -966,6 +1013,118 @@ function Import-ExternalDataSource {
     return $data
 }
 
+function Import-JsonTemplate {
+    <#
+    .SYNOPSIS
+        Loads a JSON template file and converts it to a hashtable structure.
+    .DESCRIPTION
+        Supports relative paths, absolute paths, UNC paths, and URLs.
+        The JSON structure should match the bookmark hierarchy format:
+        {
+            "Category": {
+                "Subfolder": [
+                    { "Title": "...", "URL": "...", "Icon": "..." }
+                ]
+            }
+        }
+    .PARAMETER Path
+        Path to the JSON template file. Can be:
+        - Relative path (resolved from script directory)
+        - Absolute path (e.g., C:\path\to\bookmarks.json)
+        - UNC path (e.g., \\server\share\bookmarks.json)
+        - URL (e.g., https://example.com/bookmarks.json)
+    #>
+    param([string]$Path)
+
+    if (-not $Path) { return $null }
+
+    $content = $null
+
+    # Check if it's a URL
+    if ($Path -match '^https?://') {
+        try {
+            Write-Log "Downloading JSON template from URL: $Path" -Level INFO
+            $response = Invoke-WebRequest -Uri $Path -UseBasicParsing -ErrorAction Stop
+            $content = $response.Content
+        }
+        catch {
+            Write-Log "Failed to download JSON template from URL: $_" -Level ERROR
+            return $null
+        }
+    }
+    else {
+        # Resolve relative paths
+        $resolvedPath = $Path
+        if (-not [IO.Path]::IsPathRooted($Path)) {
+            $resolvedPath = Join-Path $PSScriptRoot $Path
+        }
+
+        if (-not (Test-Path -LiteralPath $resolvedPath)) {
+            Write-Log "JSON template file not found: $resolvedPath" -Level WARNING
+            return $null
+        }
+
+        try {
+            $content = Get-Content -LiteralPath $resolvedPath -Raw -Encoding UTF8
+            Write-Log "Loaded JSON template from: $resolvedPath" -Level INFO
+        }
+        catch {
+            Write-Log "Failed to read JSON template file: $_" -Level ERROR
+            return $null
+        }
+    }
+
+    if (-not $content) { return $null }
+
+    try {
+        $jsonData = $content | ConvertFrom-Json
+
+        # Convert PSCustomObject to hashtable recursively
+        $result = Convert-JsonToHashtable -InputObject $jsonData
+        return $result
+    }
+    catch {
+        Write-Log "Failed to parse JSON template: $_" -Level ERROR
+        return $null
+    }
+}
+
+function Convert-JsonToHashtable {
+    <#
+    .SYNOPSIS
+        Recursively converts a PSCustomObject (from ConvertFrom-Json) to a hashtable.
+    .DESCRIPTION
+        PowerShell's ConvertFrom-Json returns PSCustomObject, but the bookmark system
+        expects hashtables. This function performs the conversion recursively.
+    #>
+    param([object]$InputObject)
+
+    if ($null -eq $InputObject) {
+        return $null
+    }
+
+    if ($InputObject -is [System.Collections.IList]) {
+        # Array - convert each element
+        $result = @()
+        foreach ($item in $InputObject) {
+            $result += Convert-JsonToHashtable -InputObject $item
+        }
+        return $result
+    }
+
+    if ($InputObject -is [PSCustomObject]) {
+        # Object - convert to hashtable
+        $result = @{}
+        foreach ($property in $InputObject.PSObject.Properties) {
+            $result[$property.Name] = Convert-JsonToHashtable -InputObject $property.Value
+        }
+        return $result
+    }
+
+    # Primitive value - return as-is
+    return $InputObject
+}
+
 function Load-ExternalDataSources {
     <#
     .SYNOPSIS
@@ -1000,6 +1159,10 @@ function Load-ExternalDataSources {
         @{ Name = 'north_america';   Extensions = @('.psd1', '.ps1'); MergePath = 'News/International News' }
         # OSINT sources - merge at root level (OSINT is now at root of banned-links.psd1)
         @{ Name = 'banned-links';    Extensions = @('.psd1', '.ps1'); MergePath = '' }
+        # Tools - merge at root level (contains 3D & CAD, AI, Audio Production, etc.)
+        @{ Name = 'tools';           Extensions = @('.psd1', '.ps1'); MergePath = '' }
+        # woowoo - merge at root level (alternative/spiritual content)
+        @{ Name = 'woowoo';          Extensions = @('.psd1', '.ps1'); MergePath = '' }
     )
 
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
@@ -1192,7 +1355,8 @@ function New-MyTechTodayFolder {
     $root.children += (New-BookmarkUrlNode -Name 'myTech.Today tools-2025' -Url 'https://mytech.today/tools-2025')
 
     # Special root-level categories that should appear directly under myTech.Today
-    $rootLevelCategories = @('News', 'Media Downloading', 'OSINT')
+    # These are categories from external data sources that have their own multi-level structure
+    $rootLevelCategories = @('News', 'Media Downloading', 'OSINT', 'Tools', 'woowoo')
 
     foreach ($rc in $rootLevelCategories) {
         if ($Categories -contains $rc) {
@@ -1739,7 +1903,7 @@ if (-not $script:SkipFavicons) {
 
 # Load curated bookmarks first so we can extract categories from it
 $script:CuratedBookmarks = $null
-Initialize-CuratedBookmarks -Path $CuratedLinksPath
+Initialize-CuratedBookmarks -Path $CuratedLinksPath -JsonTemplatePath $TemplatePath
 
 # Load external data sources (e.g., europe.ps1, asia.psd1) and merge into curated bookmarks
 Load-ExternalDataSources

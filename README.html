@@ -154,6 +154,8 @@
         <li><a href="#bookmarks-ps1">File: bookmarks.ps1</a></li>
         <li><a href="#links-sample-psd1">File: links-sample.psd1</a></li>
         <li><a href="#external-data">External Data Sources</a></li>
+        <li><a href="#tree-organizer">Tree Organizer Tool</a></li>
+        <li><a href="#json-templates">JSON Template Support</a></li>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#local-resources">Local Resource Links</a></li>
         <li><a href="#safety">Safety and Best Practices</a></li>
@@ -583,6 +585,75 @@ Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
 
     <hr />
 
+    <h2 id="tree-organizer">Tree Organizer Tool</h2>
+    <p>The <strong>Tree Organizer</strong> is a browser-based visual editor for creating and managing bookmark hierarchies. It provides a drag-and-drop interface for organizing bookmarks and exports to JSON format compatible with <code>bookmarks.ps1</code>.</p>
+
+    <h3>Location</h3>
+    <pre><code>bookmarks/tree-organizer/index.html</code></pre>
+    <p>Open this file in any modern web browser to use the tool.</p>
+
+    <h3>Features</h3>
+    <ul>
+      <li><strong>Drag-and-Drop Organization</strong>: Reorder folders and bookmarks by dragging them to new positions</li>
+      <li><strong>Nested Hierarchies</strong>: Create unlimited nesting levels for complex bookmark structures</li>
+      <li><strong>Add/Rename/Delete</strong>: Full CRUD operations for folders and bookmarks</li>
+      <li><strong>JSON Import/Export</strong>: Import existing JSON files or export your hierarchy for use with <code>bookmarks.ps1</code></li>
+      <li><strong>PSD1 Import</strong>: Basic support for importing PowerShell Data Files (<code>.psd1</code>)</li>
+      <li><strong>Validation</strong>: Check for errors like missing URLs, empty names, duplicate entries, and deep nesting</li>
+      <li><strong>Error Log</strong>: View, copy, or save validation errors with line/column information</li>
+      <li><strong>Expand/Collapse</strong>: Quickly expand or collapse all folders for easier navigation</li>
+    </ul>
+
+    <h3>Usage</h3>
+    <ol>
+      <li><strong>Open the tool</strong>: Navigate to <code>bookmarks/tree-organizer/index.html</code> in your browser</li>
+      <li><strong>Create structure</strong>: Use "Add Folder" and "Add Bookmark" buttons to build your hierarchy</li>
+      <li><strong>Organize</strong>: Drag and drop items to reorder or move them between folders</li>
+      <li><strong>Edit properties</strong>: Click on any item to edit its name, URL, and icon</li>
+      <li><strong>Validate</strong>: Click "Validate" to check for errors before exporting</li>
+      <li><strong>Export</strong>: Click "Export JSON" to download your bookmark structure</li>
+    </ol>
+
+    <hr />
+
+    <h2 id="json-templates">JSON Template Support</h2>
+    <p>The <code>bookmarks.ps1</code> script now supports JSON template files as an alternative to PSD1/PS1 data files. This makes it easier to create and share bookmark configurations.</p>
+
+    <h3>New Parameter: <code>-Template</code></h3>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Type</th><th>Default</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>-Template</code></td>
+          <td>String</td>
+          <td>(auto)</td>
+          <td>Path to a JSON template file. Supports relative paths, absolute paths, UNC paths, and URLs. If not specified and <code>.\bookmarks.json</code> exists, it will be used automatically.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Priority Order</h3>
+    <p>When loading bookmark data, the script checks sources in this order:</p>
+    <ol>
+      <li><strong>JSON template</strong> (if <code>-Template</code> parameter is specified)</li>
+      <li><strong>Default <code>bookmarks.json</code></strong> (if exists in script directory)</li>
+      <li><strong>PSD1/PS1 files</strong> (original behavior via <code>-CuratedLinksPath</code>)</li>
+    </ol>
+
+    <h3>Usage Examples</h3>
+    <pre><code># Use a local JSON template
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template ".\my-bookmarks.json"
+
+# Use a JSON template from a network share
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "\\server\share\bookmarks.json"
+
+# Use a JSON template from a URL
+.\bookmarks\bookmarks.ps1 -Mode Add -Browser All -Template "https://example.com/bookmarks.json"</code></pre>
+
+    <hr />
+
     <h2 id="requirements">Requirements</h2>
     <ul>
       <li><strong>Operating System</strong>: Windows 10 or later</li>
@@ -692,7 +763,17 @@ Write-Host "Total bookmarks: $totalBookmarks" -ForegroundColor Cyan</code></pre>
 
     <h2>Version History</h2>
     <ul>
-      <li><strong>v1.4.0</strong> (Current)
+      <li><strong>v1.5.0</strong> (Current)
+        <ul>
+          <li><strong>Tree Organizer Tool</strong>: New browser-based visual editor for creating bookmark hierarchies (<code>tree-organizer/index.html</code>)</li>
+          <li><strong>JSON Template Support</strong>: New <code>-Template</code> parameter for loading bookmark data from JSON files</li>
+          <li><strong>URL Template Loading</strong>: Load JSON templates from URLs (e.g., <code>https://example.com/bookmarks.json</code>)</li>
+          <li><strong>Auto-detect bookmarks.json</strong>: Automatically uses <code>bookmarks.json</code> in script directory if present</li>
+          <li><strong>Drag-and-Drop Editing</strong>: Visual tree editor with SortableJS for intuitive organization</li>
+          <li><strong>Validation</strong>: Built-in validation for bookmark structures with error logging</li>
+        </ul>
+      </li>
+      <li><strong>v1.4.0</strong>
         <ul>
           <li><strong>Performance Optimizations</strong>: Added parallel favicon fetching using PowerShell runspaces</li>
           <li><strong>New Parameters</strong>: <code>-SkipFavicons</code>, <code>-UseGoogleFavicons</code>, <code>-FaviconParallelism</code></li>

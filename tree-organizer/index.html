@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Tree Organizer - myTech.Today</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔖 Bookmark Tree Organizer</h1>
+            <p class="subtitle">Drag and drop to organize your bookmark hierarchy</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="toolbar-group">
+                <button id="btnAddFolder" class="btn btn-primary" title="Add new folder">
+                    📁 Add Folder
+                </button>
+                <button id="btnAddBookmark" class="btn btn-secondary" title="Add new bookmark">
+                    🔗 Add Bookmark
+                </button>
+            </div>
+            <div class="toolbar-group">
+                <button id="btnImportJson" class="btn" title="Import JSON file">
+                    📥 Import JSON
+                </button>
+                <button id="btnImportPsd1" class="btn" title="Import PSD1 file">
+                    📄 Import PSD1
+                </button>
+                <button id="btnExportJson" class="btn btn-success" title="Export as JSON">
+                    📤 Export JSON
+                </button>
+            </div>
+            <div class="toolbar-group">
+                <button id="btnValidate" class="btn btn-warning" title="Validate tree structure">
+                    ✅ Validate
+                </button>
+                <button id="btnShowErrors" class="btn btn-danger" title="Show error log">
+                    ⚠️ Error Log
+                </button>
+            </div>
+            <div class="toolbar-group">
+                <button id="btnExpandAll" class="btn" title="Expand all folders">
+                    ➕ Expand All
+                </button>
+                <button id="btnCollapseAll" class="btn" title="Collapse all folders">
+                    ➖ Collapse All
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tree-panel">
+                <div class="panel-header">
+                    <h2>Bookmark Tree</h2>
+                    <span id="nodeCount" class="badge">0 items</span>
+                </div>
+                <div id="treeContainer" class="tree-container">
+                    <ul id="rootTree" class="tree-list">
+                        <!-- Tree nodes will be inserted here -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <h2>Node Editor</h2>
+                </div>
+                <div id="nodeEditor" class="node-editor">
+                    <p class="placeholder-text">Select a node to edit its properties</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Log Modal -->
+        <div id="errorModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>⚠️ Validation Error Log</h3>
+                    <button id="btnCloseModal" class="btn-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="errorLogContent" class="error-log"></div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCopyErrors" class="btn">📋 Copy to Clipboard</button>
+                    <button id="btnSaveErrors" class="btn">💾 Save as File</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Import File Input (hidden) -->
+        <input type="file" id="fileInput" accept=".json,.psd1" style="display: none;">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
