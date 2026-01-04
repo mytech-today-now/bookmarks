@@ -23,6 +23,20 @@
                     🔗 Add Bookmark
                 </button>
             </div>
+            <div class="toolbar-group selection-group">
+                <button id="btnSelectAll" class="btn" title="Select all nodes (Ctrl+A)">
+                    ☑️ Select All
+                </button>
+                <button id="btnClearSelection" class="btn" title="Clear selection (Escape)">
+                    ☐ Clear
+                </button>
+                <button id="btnInvertSelection" class="btn" title="Invert selection">
+                    🔄 Invert
+                </button>
+                <button id="btnDeleteSelected" class="btn btn-danger" title="Delete selected nodes (Delete)">
+                    🗑️ Delete Selected
+                </button>
+            </div>
             <div class="toolbar-group">
                 <button id="btnImportJson" class="btn" title="Import JSON file">
                     📥 Import JSON
@@ -56,7 +70,13 @@
             <div class="tree-panel">
                 <div class="panel-header">
                     <h2>Bookmark Tree</h2>
-                    <span id="nodeCount" class="badge">0 items</span>
+                    <div class="header-badges">
+                        <span id="nodeCount" class="badge">0 items</span>
+                        <span id="selectionCount" class="badge badge-selection" style="display:none">0 selected</span>
+                    </div>
+                </div>
+                <div class="selection-hint">
+                    <small>💡 Ctrl+Click to multi-select • Shift+Click for range • Drag selected items to move</small>
                 </div>
                 <div id="treeContainer" class="tree-container">
                     <ul id="rootTree" class="tree-list">

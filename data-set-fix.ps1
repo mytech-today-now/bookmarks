@@ -273,7 +273,10 @@ param(
     [switch]$TreeIntegrityCheck,
 
     [Parameter(Mandatory=$false)]
-    [switch]$AutoRepair
+    [switch]$AutoRepair,
+
+    [Parameter(Mandatory=$false)]
+    [switch]$RepairHierarchy
 )
 
 # If AllFixes is specified, enable all fixes
@@ -282,6 +285,7 @@ if ($AllFixes) {
     $FixSyntax = $true
     $FixQuotes = $true
     $FixBraces = $true
+    $RepairHierarchy = $true
     $GenerateReport = $true
 }
 
@@ -1513,6 +1517,177 @@ function Repair-MissingArrayPrefix {
 
     $FixCount.Value = $fixes
     return $fixedLines
+}
+
+function Repair-HierarchyStructure {
+    <#
+    .SYNOPSIS
+        Repair structural hierarchy issues where keys have escaped their parent container.
+
+    .DESCRIPTION
+        When a closing brace is missing, subsequent keys "escape" from their intended
+        parent container and appear at the wrong level (often root level). This function:
+
+        1. Parses the corrupted data file (PowerShell can often still read it)
+        2. Identifies keys that are at the wrong level (e.g., countries at root instead of in 'Europe')
+        3. Merges escaped keys back into their parent container
+        4. Regenerates the file with proper structure
+
+        This is a "nuclear option" that rewrites the entire file structure. Use when
+        brace fixes cannot repair the damage (e.g., multiple scattered missing braces).
+
+    .PARAMETER FilePath
+        Path to the file to repair
+
+    .PARAMETER WrapperKey
+        The expected root wrapper key (e.g., 'Europe', 'North America', 'Asia')
+        All escaped keys will be merged into this container.
+
+    .PARAMETER FixCount
+        Reference to count of fixes made
+
+    .OUTPUTS
+        [string[]] Repaired file content as array of lines, or $null if repair failed
+
+    .EXAMPLE
+        $lines = Repair-HierarchyStructure -FilePath ".\europe.ps1" -WrapperKey "Europe" -FixCount ([ref]$count)
+    #>
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$FilePath,
+
+        [Parameter(Mandatory=$true)]
+        [string]$WrapperKey,
+
+        [ref]$FixCount
+    )
+
+    $fixes = 0
+
+    try {
+        # Step 1: Parse the file (even if corrupted)
+        Write-Host "    Parsing file to extract data..." -ForegroundColor Gray
+        $data = $null
+
+        if ($FilePath -match '\.ps1$') {
+            $data = & $FilePath
+        } else {
+            $content = Get-Content $FilePath -Raw
+            $data = Invoke-Expression $content
+        }
+
+        if (-not $data) {
+            Write-Host "    Failed to parse file data" -ForegroundColor Red
+            return $null
+        }
+
+        # Step 2: Check if repair is needed
+        $rootKeys = @($data.Keys)
+        $wrapperExists = $rootKeys -contains $WrapperKey
+        $escapedKeys = $rootKeys | Where-Object { $_ -ne $WrapperKey }
+
+        if ($escapedKeys.Count -eq 0) {
+            Write-Host "    No escaped keys found - hierarchy appears correct" -ForegroundColor Green
+            return $null
+        }
+
+        Write-Host "    Found $($escapedKeys.Count) escaped root-level keys" -ForegroundColor Yellow
+
+        # Step 3: Merge all keys into the wrapper
+        $mergedWrapper = @{}
+
+        # First, add existing wrapper content (excluding misplaced categories)
+        if ($wrapperExists -and $data[$WrapperKey]) {
+            foreach ($key in $data[$WrapperKey].Keys) {
+                # Skip category keys that shouldn't be direct children of the wrapper
+                if ($key -notin @('Vloggers', 'Podcasters', 'SubCategories', 'News Sites')) {
+                    $mergedWrapper[$key] = $data[$WrapperKey][$key]
+                }
+            }
+        }
+
+        # Then add escaped keys
+        foreach ($key in $escapedKeys) {
+            $mergedWrapper[$key] = $data[$key]
+            $fixes++
+        }
+
+        # Step 4: Generate new file content
+        Write-Host "    Regenerating file with $($mergedWrapper.Keys.Count) entries in '$WrapperKey'..." -ForegroundColor Gray
+
+        $output = ConvertTo-PowerShellDataString -Data @{ $WrapperKey = $mergedWrapper } -IsPs1 ($FilePath -match '\.ps1$')
+
+        $FixCount.Value = $fixes
+        return $output -split "`n"
+    }
+    catch {
+        Write-Host "    Hierarchy repair failed: $($_.Exception.Message)" -ForegroundColor Red
+        return $null
+    }
+}
+
+function ConvertTo-PowerShellDataString {
+    <#
+    .SYNOPSIS
+        Convert a hashtable to PowerShell data file format (PSD1 or PS1)
+
+    .PARAMETER Data
+        The hashtable to convert
+
+    .PARAMETER Indent
+        Current indentation level (used for recursion)
+
+    .PARAMETER IsPs1
+        Whether to format as .ps1 (returns hashtable) vs .psd1 (just data)
+
+    .OUTPUTS
+        [string] The formatted PowerShell data string
+    #>
+    param(
+        [Parameter(Mandatory=$true)]
+        [object]$Data,
+
+        [int]$Indent = 0,
+
+        [switch]$IsPs1
+    )
+
+    $indentStr = "    " * $Indent
+    $nextIndent = "    " * ($Indent + 1)
+    $sb = [System.Text.StringBuilder]::new()
+
+    if ($Data -is [hashtable] -or $Data -is [System.Collections.Specialized.OrderedDictionary]) {
+        [void]$sb.AppendLine("@{")
+        $sortedKeys = $Data.Keys | Sort-Object
+        foreach ($key in $sortedKeys) {
+            $value = $Data[$key]
+            $escapedKey = $key -replace "'", "''"
+            $valueStr = ConvertTo-PowerShellDataString -Data $value -Indent ($Indent + 1)
+            [void]$sb.AppendLine("$nextIndent'$escapedKey' = $valueStr")
+        }
+        [void]$sb.Append("$indentStr}")
+    }
+    elseif ($Data -is [array]) {
+        if ($Data.Count -eq 0) {
+            [void]$sb.Append("@()")
+        } else {
+            [void]$sb.AppendLine("@(")
+            for ($i = 0; $i -lt $Data.Count; $i++) {
+                $item = $Data[$i]
+                $itemStr = ConvertTo-PowerShellDataString -Data $item -Indent ($Indent + 1)
+                $comma = if ($i -lt $Data.Count - 1) { "," } else { "" }
+                [void]$sb.AppendLine("$nextIndent$itemStr$comma")
+            }
+            [void]$sb.Append("$indentStr)")
+        }
+    }
+    else {
+        # String value - escape single quotes
+        $escaped = [string]$Data -replace "'", "''"
+        [void]$sb.Append("'$escaped'")
+    }
+
+    return $sb.ToString()
 }
 
 #endregion Brace Integrity Functions
@@ -2964,6 +3139,36 @@ if ($FixSyntax) {
         $report += "Invalid Hashtable Comma Fixes: $($commaFixCount.Value)"
         $report += ""
     }
+}
+
+# Repair hierarchy structure (escaped keys merged back into parent)
+# This is a "nuclear option" that rewrites the entire file structure
+if ($RepairHierarchy -and $WrapperKey) {
+    Write-Host "  Checking for hierarchy structure issues..." -ForegroundColor Gray
+
+    # First, check if there are escaped root-level keys
+    $rootStruct = Get-RootLevelStructure -Lines $lines
+    if ($rootStruct.RootKeyCount -gt 1) {
+        Write-Host "    Found $($rootStruct.RootKeyCount) root-level keys (expected 1)" -ForegroundColor Yellow
+        Write-Host "    Attempting hierarchy repair..." -ForegroundColor Gray
+
+        $hierarchyFixCount = [ref]0
+        $repairedLines = Repair-HierarchyStructure -FilePath $InputFile -WrapperKey $WrapperKey -FixCount $hierarchyFixCount
+
+        if ($repairedLines -and $hierarchyFixCount.Value -gt 0) {
+            $lines = $repairedLines
+            Write-Host "    Merged $($hierarchyFixCount.Value) escaped key(s) back into '$WrapperKey'" -ForegroundColor Cyan
+            $fixCount += $hierarchyFixCount.Value
+            $report += "Hierarchy Structure Fixes: Merged $($hierarchyFixCount.Value) escaped keys into '$WrapperKey'"
+            $report += ""
+        }
+    } else {
+        Write-Host "    Hierarchy structure: OK (1 root key)" -ForegroundColor Green
+    }
+} elseif ($RepairHierarchy -and -not $WrapperKey) {
+    Write-Host "  WARNING: -RepairHierarchy requires -WrapperKey parameter" -ForegroundColor Yellow
+    $report += "Hierarchy Repair: SKIPPED (WrapperKey not specified)"
+    $report += ""
 }
 
 # Remove duplicate wrapper keys (keep only the first one) - legacy check

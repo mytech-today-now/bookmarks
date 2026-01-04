@@ -82,12 +82,12 @@
     You can then edit this JSON file with the tree-organizer tool.
 
 .NOTES
-    Version : 1.6.0
+    Version : 1.7.0
     Script  : bookmarks.ps1
     Project : myTech.Today PowerShellScripts
     Author  : Kyle Rode (myTech.Today)
     Created : 2025-11-16
-    LastModified: 2025-12-06 - Added JSON auto-generation and -GenerateTemplate flag
+    LastModified: 2025-12-07 - Added robust JSON parsing for files with duplicate keys
     Repo: https://github.com/mytech-today-now/bookmarks/
 #>
 
@@ -124,6 +124,17 @@ param(
     [Alias('ExportTemplate','GenerateJsonOnly')]
     [switch]$GenerateTemplate
 )
+
+# PowerShell 7+ Version Check - myTech.Today standard
+$script:PS7ContinueOnPS51 = $true  # Allow running on PS 5.1 with warning
+$script:PS7Silent = $false
+$script:_RepoRoot = $PSScriptRoot
+while ($script:_RepoRoot -and -not (Test-Path (Join-Path $script:_RepoRoot 'scripts\Require-PowerShell7.ps1'))) {
+    $script:_RepoRoot = Split-Path $script:_RepoRoot -Parent
+}
+if ($script:_RepoRoot -and (Test-Path (Join-Path $script:_RepoRoot 'scripts\Require-PowerShell7.ps1'))) {
+    . (Join-Path $script:_RepoRoot 'scripts\Require-PowerShell7.ps1')
+}
 
 $ErrorActionPreference = 'Stop'
 
@@ -928,27 +939,31 @@ function Get-TopicGroupForCategory {
 function Initialize-CuratedBookmarks {
     param(
         [string]$Path,
-        [string]$JsonTemplatePath
+        [string]$JsonTemplatePath,
+        [switch]$SkipJsonTemplate  # When true, skip JSON template loading (for regeneration)
     )
 
     # Priority 1: JSON template (if specified or default exists)
-    if ($JsonTemplatePath) {
-        $jsonData = Import-JsonTemplate -Path $JsonTemplatePath
-        if ($jsonData -is [hashtable]) {
-            $script:CuratedBookmarks = $jsonData
-            Write-Log "Loaded curated bookmark data from JSON template." -Level INFO
-            return
-        }
-    }
-    else {
-        # Check for default bookmarks.json in script directory
-        $defaultJsonPath = Join-Path $PSScriptRoot 'bookmarks.json'
-        if (Test-Path -LiteralPath $defaultJsonPath) {
-            $jsonData = Import-JsonTemplate -Path $defaultJsonPath
+    # Skip this if SkipJsonTemplate is set (used in GenerateTemplate mode)
+    if (-not $SkipJsonTemplate) {
+        if ($JsonTemplatePath) {
+            $jsonData = Import-JsonTemplate -Path $JsonTemplatePath
             if ($jsonData -is [hashtable]) {
                 $script:CuratedBookmarks = $jsonData
-                Write-Log "Loaded curated bookmark data from default bookmarks.json." -Level INFO
+                Write-Log "Loaded curated bookmark data from JSON template." -Level INFO
                 return
+            }
+        }
+        else {
+            # Check for default bookmarks.json in script directory
+            $defaultJsonPath = Join-Path $PSScriptRoot 'bookmarks.json'
+            if (Test-Path -LiteralPath $defaultJsonPath) {
+                $jsonData = Import-JsonTemplate -Path $defaultJsonPath
+                if ($jsonData -is [hashtable]) {
+                    $script:CuratedBookmarks = $jsonData
+                    Write-Log "Loaded curated bookmark data from default bookmarks.json." -Level INFO
+                    return
+                }
             }
         }
     }
@@ -1043,6 +1058,9 @@ function Import-JsonTemplate {
         Loads a JSON template file and converts it to a hashtable structure.
     .DESCRIPTION
         Supports relative paths, absolute paths, UNC paths, and URLs.
+        Handles JSON files with duplicate keys by merging them (arrays are concatenated,
+        objects are recursively merged).
+
         The JSON structure should match the bookmark hierarchy format:
         {
             "Category": {
@@ -1063,6 +1081,7 @@ function Import-JsonTemplate {
     if (-not $Path) { return $null }
 
     $content = $null
+    $resolvedPath = $null
 
     # Check if it's a URL
     if ($Path -match '^https?://') {
@@ -1090,7 +1109,7 @@ function Import-JsonTemplate {
 
         try {
             $content = Get-Content -LiteralPath $resolvedPath -Raw -Encoding UTF8
-            Write-Log "Loaded JSON template from: $resolvedPath" -Level INFO
+            Write-Log "Loaded JSON template from: $resolvedPath ($(($content.Length / 1KB).ToString('N0')) KB)" -Level INFO
         }
         catch {
             Write-Log "Failed to read JSON template file: $_" -Level ERROR
@@ -1100,17 +1119,451 @@ function Import-JsonTemplate {
 
     if (-not $content) { return $null }
 
+    # Try standard ConvertFrom-Json first (fastest for valid JSON without duplicate keys)
     try {
         $jsonData = $content | ConvertFrom-Json
-
-        # Convert PSCustomObject to hashtable recursively
+        Write-Log "JSON parsed successfully with ConvertFrom-Json" -Level INFO
         $result = Convert-JsonToHashtable -InputObject $jsonData
         return $result
     }
     catch {
-        Write-Log "Failed to parse JSON template: $_" -Level ERROR
+        $standardError = $_.Exception.Message
+        Write-Log "Standard JSON parsing failed: $standardError" -Level WARNING
+        Write-Log "Attempting custom JSON parser with duplicate key merging..." -Level INFO
+    }
+
+    # Method 2: Use custom C# parser that MERGES duplicate keys (preserves all data)
+    try {
+        $result = ConvertFrom-JsonWithMerge -JsonContent $content
+        if ($result) {
+            Write-Log "JSON parsed successfully with custom parser (duplicates merged)" -Level INFO
+            return $result
+        }
+    }
+    catch {
+        Write-Log "Custom JSON parser failed: $_" -Level WARNING
+    }
+
+    # Method 3: Fallback to .NET JavaScriptSerializer (duplicate keys: last value wins - DATA LOSS)
+    try {
+        Add-Type -AssemblyName System.Web.Extensions -ErrorAction SilentlyContinue
+        $serializer = New-Object System.Web.Script.Serialization.JavaScriptSerializer
+        $serializer.MaxJsonLength = [int]::MaxValue
+        $serializer.RecursionLimit = 100
+
+        Write-Log "Falling back to JavaScriptSerializer (WARNING: duplicate keys will use last value only)" -Level WARNING
+        $jsonData = $serializer.DeserializeObject($content)
+        Write-Log "JSON parsed with JavaScriptSerializer" -Level INFO
+        $result = Convert-DictionaryToHashtable -InputObject $jsonData
+        return $result
+    }
+    catch {
+        Write-Log "Custom JSON parser failed: $_" -Level WARNING
+    }
+
+    $displayPath = if ($resolvedPath) { $resolvedPath } else { $Path }
+    Write-Log "All JSON parsing methods failed for: $displayPath" -Level ERROR `
+        -Context "JSON file may have invalid syntax or unsupported structure" `
+        -Solution "Use a JSON validator to check the file, or regenerate with -GenerateTemplate" `
+        -Component "JSON Template Import"
+    return $null
+}
+
+function Convert-DictionaryToHashtable {
+    <#
+    .SYNOPSIS
+        Converts a .NET Dictionary (from JavaScriptSerializer) to a PowerShell hashtable.
+    #>
+    param([object]$InputObject)
+
+    if ($null -eq $InputObject) {
         return $null
     }
+
+    # Handle Dictionary (from JavaScriptSerializer)
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        $result = @{}
+        foreach ($key in $InputObject.Keys) {
+            $result[$key] = Convert-DictionaryToHashtable -InputObject $InputObject[$key]
+        }
+        return $result
+    }
+
+    # Handle arrays/lists
+    if ($InputObject -is [System.Collections.IList] -and $InputObject -isnot [string]) {
+        $result = @()
+        foreach ($item in $InputObject) {
+            $result += Convert-DictionaryToHashtable -InputObject $item
+        }
+        return $result
+    }
+
+    # Primitive value - return as-is
+    return $InputObject
+}
+
+function ConvertFrom-JsonWithMerge {
+    <#
+    .SYNOPSIS
+        Parses JSON content and merges duplicate keys instead of failing.
+    .DESCRIPTION
+        Uses a custom streaming parser that properly merges duplicate keys:
+        - Duplicate object keys: recursively merge their contents
+        - Duplicate array keys: concatenate the arrays
+        - Duplicate primitive keys: keep the last value (with warning)
+    #>
+    param([string]$JsonContent)
+
+    # Detect duplicate keys upfront
+    $duplicateKeys = Find-DuplicateJsonKeys -JsonContent $JsonContent -MaxKeys 50
+    $hasDuplicates = $duplicateKeys.Count -gt 0
+
+    if ($hasDuplicates) {
+        $totalDups = ($duplicateKeys | Measure-Object -Property Count -Sum).Sum
+        Write-Log "Detected $($duplicateKeys.Count) duplicate key patterns ($totalDups total occurrences). Merging..." -Level INFO
+    }
+
+    # Use custom C# parser that merges duplicate keys
+    try {
+        $result = Invoke-JsonParserWithMerge -JsonContent $JsonContent
+        if ($hasDuplicates) {
+            Write-Log "Successfully merged duplicate keys in JSON" -Level INFO
+        }
+        return $result
+    }
+    catch {
+        Write-Log "Custom JSON parser failed: $_" -Level WARNING
+
+        # Fallback to JavaScriptSerializer (last value wins for duplicates)
+        try {
+            Add-Type -AssemblyName System.Web.Extensions -ErrorAction Stop
+            $serializer = New-Object System.Web.Script.Serialization.JavaScriptSerializer
+            $serializer.MaxJsonLength = [int]::MaxValue
+            $serializer.RecursionLimit = 100
+
+            if ($hasDuplicates) {
+                Write-Log "Falling back to JavaScriptSerializer (duplicate keys: last value wins)" -Level WARNING
+            }
+
+            $jsonData = $serializer.DeserializeObject($JsonContent)
+            return Convert-DictionaryToHashtable -InputObject $jsonData
+        }
+        catch {
+            throw "Failed to parse JSON: $_"
+        }
+    }
+}
+
+function Invoke-JsonParserWithMerge {
+    <#
+    .SYNOPSIS
+        Invokes a C# JSON parser that properly merges duplicate keys.
+    #>
+    param([string]$JsonContent)
+
+    # Add the C# type if not already loaded
+    if (-not ([System.Management.Automation.PSTypeName]'JsonMergeParser').Type) {
+        $csharpCode = @'
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using System.Text.RegularExpressions;
+
+public class JsonMergeParser
+{
+    private string _json;
+    private int _pos;
+    private int _length;
+
+    public object Parse(string json)
+    {
+        _json = json;
+        _pos = 0;
+        _length = json.Length;
+        SkipWhitespace();
+        return ParseValue();
+    }
+
+    private void SkipWhitespace()
+    {
+        while (_pos < _length && char.IsWhiteSpace(_json[_pos]))
+            _pos++;
+    }
+
+    private object ParseValue()
+    {
+        SkipWhitespace();
+        if (_pos >= _length) return null;
+
+        char c = _json[_pos];
+        if (c == '{') return ParseObject();
+        if (c == '[') return ParseArray();
+        if (c == '"') return ParseString();
+        if (c == 't' || c == 'f') return ParseBool();
+        if (c == 'n') return ParseNull();
+        if (char.IsDigit(c) || c == '-') return ParseNumber();
+
+        throw new Exception(string.Format("Unexpected character '{0}' at position {1}", c, _pos));
+    }
+
+    private Hashtable ParseObject()
+    {
+        var result = new Hashtable(StringComparer.OrdinalIgnoreCase);
+        _pos++; // skip '{'
+        SkipWhitespace();
+
+        while (_pos < _length && _json[_pos] != '}')
+        {
+            SkipWhitespace();
+            if (_json[_pos] == '}') break;
+
+            string key = ParseString();
+            SkipWhitespace();
+
+            if (_pos >= _length || _json[_pos] != ':')
+                throw new Exception(string.Format("Expected ':' after key '{0}' at position {1}", key, _pos));
+            _pos++; // skip ':'
+
+            SkipWhitespace();
+            object value = ParseValue();
+
+            // Merge logic for duplicate keys
+            if (result.ContainsKey(key))
+            {
+                result[key] = MergeValues(result[key], value);
+            }
+            else
+            {
+                result[key] = value;
+            }
+
+            SkipWhitespace();
+            if (_pos < _length && _json[_pos] == ',')
+            {
+                _pos++;
+                SkipWhitespace();
+            }
+        }
+
+        if (_pos < _length && _json[_pos] == '}')
+            _pos++;
+
+        return result;
+    }
+
+    private object MergeValues(object existing, object newValue)
+    {
+        // Both are hashtables: merge recursively
+        Hashtable existingHt = existing as Hashtable;
+        Hashtable newHt = newValue as Hashtable;
+        if (existingHt != null && newHt != null)
+        {
+            foreach (DictionaryEntry entry in newHt)
+            {
+                string key = entry.Key.ToString();
+                if (existingHt.ContainsKey(key))
+                {
+                    existingHt[key] = MergeValues(existingHt[key], entry.Value);
+                }
+                else
+                {
+                    existingHt[key] = entry.Value;
+                }
+            }
+            return existingHt;
+        }
+
+        // Both are arrays: concatenate
+        ArrayList existingArr = existing as ArrayList;
+        ArrayList newArr = newValue as ArrayList;
+        if (existingArr != null && newArr != null)
+        {
+            existingArr.AddRange(newArr);
+            return existingArr;
+        }
+
+        // Mixed or primitive: new value wins
+        return newValue;
+    }
+
+    private ArrayList ParseArray()
+    {
+        var result = new ArrayList();
+        _pos++; // skip '['
+        SkipWhitespace();
+
+        while (_pos < _length && _json[_pos] != ']')
+        {
+            object value = ParseValue();
+            result.Add(value);
+
+            SkipWhitespace();
+            if (_pos < _length && _json[_pos] == ',')
+            {
+                _pos++;
+                SkipWhitespace();
+            }
+        }
+
+        if (_pos < _length && _json[_pos] == ']')
+            _pos++;
+
+        return result;
+    }
+
+    private string ParseString()
+    {
+        if (_json[_pos] != '"')
+            throw new Exception(string.Format("Expected quote at position {0}", _pos));
+
+        _pos++; // skip opening quote
+        var sb = new StringBuilder();
+
+        while (_pos < _length && _json[_pos] != '"')
+        {
+            if (_json[_pos] == '\\' && _pos + 1 < _length)
+            {
+                _pos++;
+                char escaped = _json[_pos];
+                switch (escaped)
+                {
+                    case 'n': sb.Append('\n'); break;
+                    case 'r': sb.Append('\r'); break;
+                    case 't': sb.Append('\t'); break;
+                    case '\\': sb.Append('\\'); break;
+                    case '"': sb.Append('"'); break;
+                    case '/': sb.Append('/'); break;
+                    case 'u':
+                        if (_pos + 4 < _length)
+                        {
+                            string hex = _json.Substring(_pos + 1, 4);
+                            sb.Append((char)Convert.ToInt32(hex, 16));
+                            _pos += 4;
+                        }
+                        break;
+                    default: sb.Append(escaped); break;
+                }
+            }
+            else
+            {
+                sb.Append(_json[_pos]);
+            }
+            _pos++;
+        }
+
+        if (_pos < _length && _json[_pos] == '"')
+            _pos++; // skip closing quote
+
+        return sb.ToString();
+    }
+
+    private object ParseNumber()
+    {
+        int start = _pos;
+        if (_json[_pos] == '-') _pos++;
+
+        while (_pos < _length && (char.IsDigit(_json[_pos]) || _json[_pos] == '.' ||
+               _json[_pos] == 'e' || _json[_pos] == 'E' || _json[_pos] == '+' || _json[_pos] == '-'))
+        {
+            if ((_json[_pos] == '+' || _json[_pos] == '-') && _pos > start &&
+                _json[_pos-1] != 'e' && _json[_pos-1] != 'E')
+                break;
+            _pos++;
+        }
+
+        string numStr = _json.Substring(start, _pos - start);
+        if (numStr.Contains(".") || numStr.Contains("e") || numStr.Contains("E"))
+            return double.Parse(numStr, System.Globalization.CultureInfo.InvariantCulture);
+
+        long longVal;
+        if (long.TryParse(numStr, out longVal))
+            return longVal;
+        return double.Parse(numStr, System.Globalization.CultureInfo.InvariantCulture);
+    }
+
+    private bool ParseBool()
+    {
+        if (_json.Substring(_pos, 4) == "true")
+        {
+            _pos += 4;
+            return true;
+        }
+        if (_json.Substring(_pos, 5) == "false")
+        {
+            _pos += 5;
+            return false;
+        }
+        throw new Exception(string.Format("Invalid boolean at position {0}", _pos));
+    }
+
+    private object ParseNull()
+    {
+        if (_json.Substring(_pos, 4) == "null")
+        {
+            _pos += 4;
+            return null;
+        }
+        throw new Exception(string.Format("Invalid null at position {0}", _pos));
+    }
+}
+'@
+        Add-Type -TypeDefinition $csharpCode -Language CSharp -ErrorAction Stop
+    }
+
+    $parser = New-Object JsonMergeParser
+    $result = $parser.Parse($JsonContent)
+
+    # Convert to proper PowerShell hashtable structure
+    return Convert-HashtableDeep -InputObject $result
+}
+
+function Convert-HashtableDeep {
+    <#
+    .SYNOPSIS
+        Recursively converts Hashtable/ArrayList to proper PowerShell types.
+    #>
+    param([object]$InputObject)
+
+    if ($null -eq $InputObject) { return $null }
+
+    if ($InputObject -is [System.Collections.Hashtable]) {
+        $result = @{}
+        foreach ($key in $InputObject.Keys) {
+            $result[$key] = Convert-HashtableDeep -InputObject $InputObject[$key]
+        }
+        return $result
+    }
+
+    if ($InputObject -is [System.Collections.ArrayList]) {
+        $result = @()
+        foreach ($item in $InputObject) {
+            $result += Convert-HashtableDeep -InputObject $item
+        }
+        return $result
+    }
+
+    return $InputObject
+}
+
+function Find-DuplicateJsonKeys {
+    <#
+    .SYNOPSIS
+        Finds duplicate keys in a JSON string using regex pattern matching.
+    #>
+    param(
+        [string]$JsonContent,
+        [int]$MaxKeys = 50
+    )
+
+    # Match keys at the start of objects: "key":
+    $keyPattern = '"([^"]+)"\s*:\s*[\[\{"]'
+    $matches = [regex]::Matches($JsonContent, $keyPattern)
+
+    $keys = $matches | ForEach-Object { $_.Groups[1].Value }
+    $grouped = $keys | Group-Object | Where-Object { $_.Count -gt 1 } | Sort-Object Count -Descending
+
+    return $grouped | Select-Object -First $MaxKeys
 }
 
 function Convert-JsonToHashtable {
@@ -2004,7 +2457,7 @@ $script:JsonTemplateExists = Test-Path -LiteralPath $script:DefaultJsonTemplateP
 if ($GenerateTemplate) {
     # Don't load from bookmarks.json when generating template - load from PSD1/PS1 sources only
     Write-Log "GenerateTemplate mode: Loading bookmark data from PSD1/PS1 sources..." -Level INFO
-    Initialize-CuratedBookmarks -Path $CuratedLinksPath -JsonTemplatePath $null
+    Initialize-CuratedBookmarks -Path $CuratedLinksPath -SkipJsonTemplate
 
     # Load external data sources (e.g., europe.ps1, asia.psd1) and merge into curated bookmarks
     Load-ExternalDataSources

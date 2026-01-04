@@ -1,7 +1,36 @@
 /**
  * Bookmark Tree Organizer - Application Logic
  * A drag-and-drop hierarchy editor for bookmark structures
+ *
+ * OPTIMIZED for 10K+ nodes with:
+ * - Lazy rendering (only render expanded nodes)
+ * - Debounced updates
+ * - Efficient DOM updates (partial re-renders)
+ * - Cached computations
  */
+
+// ============================================================================
+// Performance Utilities
+// ============================================================================
+
+function debounce(fn, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+function throttle(fn, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            fn.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
 
 // ============================================================================
 // Data Model
@@ -9,53 +38,66 @@
 
 class TreeNode {
     constructor(type, name, data = {}) {
-        this.id = TreeNode.generateId();
+        this.id = data.id || TreeNode.generateId();
         this.type = type; // 'folder' or 'bookmark'
         this.name = name;
         this.children = [];
         this.parent = null;
-        this.expanded = true;
+        this.expanded = data.expanded !== undefined ? data.expanded : false; // Start collapsed for performance
         this.editable = data.editable !== false;
-        
+        this._pathCache = null; // Cache for getPath()
+
         // Bookmark-specific properties
         if (type === 'bookmark') {
             this.url = data.url || '';
             this.icon = data.icon || '';
         }
-        
+
         // Source tracking for validation
         this.sourceLine = data.sourceLine || null;
         this.sourceColumn = data.sourceColumn || null;
     }
-    
+
+    static _idCounter = 0;
     static generateId() {
-        return 'node_' + Math.random().toString(36).substr(2, 9);
+        return 'node_' + (++TreeNode._idCounter) + '_' + Math.random().toString(36).substring(2, 7);
     }
-    
+
     addChild(node) {
         node.parent = this;
+        node._pathCache = null;
         this.children.push(node);
         return node;
     }
-    
+
     removeChild(node) {
         const idx = this.children.indexOf(node);
         if (idx > -1) {
             this.children.splice(idx, 1);
             node.parent = null;
+            node._pathCache = null;
         }
     }
-    
+
+    invalidatePathCache() {
+        this._pathCache = null;
+        for (const child of this.children) {
+            child.invalidatePathCache();
+        }
+    }
+
     getPath() {
+        if (this._pathCache) return this._pathCache;
         const parts = [];
         let current = this;
         while (current) {
             parts.unshift(current.name);
             current = current.parent;
         }
-        return parts.join(' > ');
+        this._pathCache = parts.join(' > ');
+        return this._pathCache;
     }
-    
+
     toJSON() {
         if (this.type === 'bookmark') {
             return {
@@ -91,89 +133,262 @@ class TreeNode {
 
 class TreeManager {
     constructor() {
-        this.root = new TreeNode('folder', 'Root', { editable: false });
-        this.selectedNode = null;
+        this.root = new TreeNode('folder', 'Root', { editable: false, expanded: true });
+        this.selectedNodes = new Set(); // Multi-selection support
+        this.lastSelectedNode = null;   // For shift+click range selection
         this.errors = [];
         this.nodeMap = new Map(); // id -> node for fast lookup
         this.nodeMap.set(this.root.id, this.root);
+        this._flatNodeList = [];  // Cached flat list for range selection
+        this._flatNodeListDirty = true; // Track if cache needs rebuild
+        this._nodeCount = 0; // Cached node count
     }
-    
+
     clear() {
-        this.root = new TreeNode('folder', 'Root', { editable: false });
-        this.selectedNode = null;
+        this.root = new TreeNode('folder', 'Root', { editable: false, expanded: true });
+        this.selectedNodes.clear();
+        this.lastSelectedNode = null;
         this.errors = [];
         this.nodeMap.clear();
         this.nodeMap.set(this.root.id, this.root);
+        this._flatNodeList = [];
+        this._flatNodeListDirty = true;
+        this._nodeCount = 0;
     }
-    
+
+    _invalidateCache() {
+        this._flatNodeListDirty = true;
+    }
+
+    // ========================================================================
+    // Multi-Selection Methods
+    // ========================================================================
+
+    selectNode(node, addToSelection = false) {
+        if (!addToSelection) {
+            this.selectedNodes.clear();
+        }
+        this.selectedNodes.add(node);
+        this.lastSelectedNode = node;
+    }
+
+    toggleSelection(node) {
+        if (this.selectedNodes.has(node)) {
+            this.selectedNodes.delete(node);
+            if (this.lastSelectedNode === node) {
+                this.lastSelectedNode = this.selectedNodes.size > 0
+                    ? Array.from(this.selectedNodes).pop()
+                    : null;
+            }
+        } else {
+            this.selectedNodes.add(node);
+            this.lastSelectedNode = node;
+        }
+    }
+
+    selectRange(fromNode, toNode) {
+        // Build flat list if not cached
+        this._buildFlatNodeList();
+
+        const fromIndex = this._flatNodeList.findIndex(n => n.id === fromNode.id);
+        const toIndex = this._flatNodeList.findIndex(n => n.id === toNode.id);
+
+        if (fromIndex === -1 || toIndex === -1) return;
+
+        const start = Math.min(fromIndex, toIndex);
+        const end = Math.max(fromIndex, toIndex);
+
+        for (let i = start; i <= end; i++) {
+            this.selectedNodes.add(this._flatNodeList[i]);
+        }
+        this.lastSelectedNode = toNode;
+    }
+
+    selectAll() {
+        this._buildFlatNodeList();
+        for (const node of this._flatNodeList) {
+            if (node.editable) {
+                this.selectedNodes.add(node);
+            }
+        }
+    }
+
+    invertSelection() {
+        this._buildFlatNodeList();
+        for (const node of this._flatNodeList) {
+            if (node.editable) {
+                if (this.selectedNodes.has(node)) {
+                    this.selectedNodes.delete(node);
+                } else {
+                    this.selectedNodes.add(node);
+                }
+            }
+        }
+    }
+
+    clearSelection() {
+        this.selectedNodes.clear();
+        this.lastSelectedNode = null;
+    }
+
+    isSelected(node) {
+        return this.selectedNodes.has(node);
+    }
+
+    getSelectedNodes() {
+        return Array.from(this.selectedNodes);
+    }
+
+    _buildFlatNodeList() {
+        if (!this._flatNodeListDirty && this._flatNodeList.length > 0) {
+            return; // Use cached list
+        }
+        this._flatNodeList = [];
+        this._nodeCount = 0;
+        const traverse = (node) => {
+            if (node !== this.root) {
+                this._flatNodeList.push(node);
+                this._nodeCount++;
+            }
+            for (const child of node.children) {
+                traverse(child);
+            }
+        };
+        traverse(this.root);
+        this._flatNodeListDirty = false;
+    }
+
+    // ========================================================================
+    // Node Management
+    // ========================================================================
+
     addNode(parentId, type, name, data = {}) {
         const parent = this.nodeMap.get(parentId) || this.root;
         const node = new TreeNode(type, name, data);
         parent.addChild(node);
         this.nodeMap.set(node.id, node);
+        this._invalidateCache();
         return node;
     }
-    
+
+    // Batch add nodes for better performance during import
+    addNodeBatch(nodes) {
+        for (const { parentId, type, name, data } of nodes) {
+            const parent = this.nodeMap.get(parentId) || this.root;
+            const node = new TreeNode(type, name, data);
+            parent.addChild(node);
+            this.nodeMap.set(node.id, node);
+        }
+        this._invalidateCache();
+    }
+
     removeNode(nodeId) {
         const node = this.nodeMap.get(nodeId);
         if (node && node.parent && node.editable) {
             node.parent.removeChild(node);
             this.nodeMap.delete(nodeId);
-            // Remove all descendants from map
+            this.selectedNodes.delete(node);
+            // Remove all descendants from map and selection
             const removeDescendants = (n) => {
                 for (const child of n.children) {
                     this.nodeMap.delete(child.id);
+                    this.selectedNodes.delete(child);
                     removeDescendants(child);
                 }
             };
             removeDescendants(node);
+            this._invalidateCache();
             return true;
         }
         return false;
     }
-    
+
+    removeSelectedNodes() {
+        const nodesToRemove = this.getSelectedNodes().filter(n => n.editable);
+        // Sort by depth (deepest first) using cached depth
+        nodesToRemove.sort((a, b) => {
+            const depthA = this._getNodeDepth(a);
+            const depthB = this._getNodeDepth(b);
+            return depthB - depthA;
+        });
+
+        for (const node of nodesToRemove) {
+            this.removeNode(node.id);
+        }
+        return nodesToRemove.length;
+    }
+
+    _getNodeDepth(node) {
+        let depth = 0;
+        let current = node;
+        while (current && current !== this.root) {
+            depth++;
+            current = current.parent;
+        }
+        return depth;
+    }
+
     moveNode(nodeId, newParentId, index = -1) {
         const node = this.nodeMap.get(nodeId);
         const newParent = this.nodeMap.get(newParentId);
-        
+
         if (!node || !newParent || !node.editable) return false;
         if (newParent.type !== 'folder') return false;
-        
+
         // Prevent moving into self or descendant
         let check = newParent;
         while (check) {
             if (check.id === node.id) return false;
             check = check.parent;
         }
-        
+
         // Remove from old parent
         if (node.parent) {
             node.parent.removeChild(node);
         }
-        
+
         // Add to new parent
         node.parent = newParent;
+        node.invalidatePathCache(); // Invalidate path cache for moved node and descendants
         if (index >= 0 && index < newParent.children.length) {
             newParent.children.splice(index, 0, node);
         } else {
             newParent.children.push(node);
         }
-        
+
+        this._invalidateCache();
         return true;
     }
 
-    getNodeCount() {
-        let count = 0;
-        const countNodes = (node) => {
-            count++;
-            for (const child of node.children) {
-                countNodes(child);
+    moveSelectedNodes(newParentId, index = -1) {
+        const nodesToMove = this.getSelectedNodes().filter(n => n.editable);
+        // Filter out nodes whose ancestors are also selected (they move with parent)
+        const topLevelNodes = nodesToMove.filter(node => {
+            let parent = node.parent;
+            while (parent && parent !== this.root) {
+                if (this.selectedNodes.has(parent)) return false;
+                parent = parent.parent;
             }
-        };
-        for (const child of this.root.children) {
-            countNodes(child);
+            return true;
+        });
+
+        let movedCount = 0;
+        for (const node of topLevelNodes) {
+            if (this.moveNode(node.id, newParentId, index)) {
+                movedCount++;
+                if (index >= 0) index++; // Increment index for next node
+            }
         }
-        return count;
+        return movedCount;
+    }
+
+    getNodeCount() {
+        // Use cached count if available
+        if (!this._flatNodeListDirty && this._nodeCount > 0) {
+            return this._nodeCount;
+        }
+        this._buildFlatNodeList();
+        return this._nodeCount;
     }
 
     // ========================================================================
@@ -322,32 +537,55 @@ class TreeManager {
 
     _importObject(obj, parent, lineEstimate) {
         if (Array.isArray(obj)) {
-            // Array of bookmarks
+            // Array of items (could be bookmarks or folders)
             for (const item of obj) {
-                if (item.Title || item.title) {
-                    const node = this.addNode(parent.id, 'bookmark', item.Title || item.title, {
-                        url: item.URL || item.url || '',
-                        icon: item.Icon || item.icon || '',
-                        sourceLine: lineEstimate++
-                    });
-                }
+                this._importItem(item, parent, lineEstimate++);
             }
         } else if (typeof obj === 'object' && obj !== null) {
-            for (const key of Object.keys(obj)) {
-                if (key === '_bookmarks') {
-                    // Special key for bookmarks in mixed folders
-                    this._importObject(obj[key], parent, lineEstimate);
-                } else {
-                    const value = obj[key];
-                    if (Array.isArray(value)) {
-                        // Folder containing bookmarks array
-                        const folder = this.addNode(parent.id, 'folder', key, { sourceLine: lineEstimate++ });
-                        this._importObject(value, folder, lineEstimate);
-                    } else if (typeof value === 'object' && value !== null) {
-                        // Nested folder
-                        const folder = this.addNode(parent.id, 'folder', key, { sourceLine: lineEstimate++ });
-                        this._importObject(value, folder, lineEstimate);
+            // Check if this is a standard tree node with name/type/children
+            if (obj.type && obj.name) {
+                this._importItem(obj, parent, lineEstimate);
+            } else {
+                // Key-value format: keys are folder names, values are contents
+                for (const key of Object.keys(obj)) {
+                    if (key === '_bookmarks') {
+                        // Special key for bookmarks in mixed folders
+                        this._importObject(obj[key], parent, lineEstimate);
+                    } else {
+                        const value = obj[key];
+                        if (Array.isArray(value)) {
+                            // Folder containing bookmarks array
+                            const folder = this.addNode(parent.id, 'folder', key, { sourceLine: lineEstimate++ });
+                            this._importObject(value, folder, lineEstimate);
+                        } else if (typeof value === 'object' && value !== null) {
+                            // Nested folder
+                            const folder = this.addNode(parent.id, 'folder', key, { sourceLine: lineEstimate++ });
+                            this._importObject(value, folder, lineEstimate);
+                        }
                     }
+                }
+            }
+        }
+    }
+
+    // Import a single item (bookmark or folder) with name/type/children format
+    _importItem(item, parent, lineEstimate) {
+        if (!item || typeof item !== 'object') return;
+
+        const name = item.name || item.Name || item.title || item.Title || 'Unnamed';
+        const type = item.type || item.Type || 'folder';
+
+        if (type === 'bookmark') {
+            this.addNode(parent.id, 'bookmark', name, {
+                url: item.url || item.URL || '',
+                icon: item.icon || item.Icon || '',
+                sourceLine: lineEstimate
+            });
+        } else if (type === 'folder') {
+            const folder = this.addNode(parent.id, 'folder', name, { sourceLine: lineEstimate });
+            if (item.children && Array.isArray(item.children)) {
+                for (const child of item.children) {
+                    this._importItem(child, folder, lineEstimate++);
                 }
             }
         }
@@ -362,14 +600,35 @@ class TreeOrganizerUI {
     constructor() {
         this.treeManager = new TreeManager();
         this.sortableInstances = [];
+        this._renderPending = false;
+        this._nodeElementCache = new Map(); // Cache for DOM elements
+        this._visibleNodeCount = 0;
+
+        // Performance: Maximum nodes to render at once
+        this.MAX_VISIBLE_NODES = 2000;
+        this._isLargeDataset = false;
+
+        // Drag hover expand timer (1.5 second delay before auto-expanding folders)
+        this._dragExpandTimer = null;
+        this._dragExpandNodeId = null;
+        this.DRAG_EXPAND_DELAY = 1500; // milliseconds
 
         // DOM Elements
         this.rootTreeEl = document.getElementById('rootTree');
         this.nodeEditorEl = document.getElementById('nodeEditor');
         this.nodeCountEl = document.getElementById('nodeCount');
+        this.selectionCountEl = document.getElementById('selectionCount');
         this.errorModalEl = document.getElementById('errorModal');
         this.errorLogContentEl = document.getElementById('errorLogContent');
         this.fileInputEl = document.getElementById('fileInput');
+        this.treeContainerEl = document.getElementById('treeContainer');
+
+        // Debounced render for performance
+        this._debouncedRender = debounce(() => this._render(), 50);
+        this._debouncedUpdateCounts = debounce(() => {
+            this._updateNodeCount();
+            this._updateSelectionCount();
+        }, 100);
 
         this._bindEvents();
         this._render();
@@ -387,6 +646,12 @@ class TreeOrganizerUI {
         document.getElementById('btnExpandAll').addEventListener('click', () => this._expandAll(true));
         document.getElementById('btnCollapseAll').addEventListener('click', () => this._expandAll(false));
 
+        // Selection toolbar buttons
+        document.getElementById('btnSelectAll').addEventListener('click', () => this._selectAll());
+        document.getElementById('btnClearSelection').addEventListener('click', () => this._clearSelection());
+        document.getElementById('btnInvertSelection').addEventListener('click', () => this._invertSelection());
+        document.getElementById('btnDeleteSelected').addEventListener('click', () => this._deleteSelected());
+
         // Modal buttons
         document.getElementById('btnCloseModal').addEventListener('click', () => this._hideErrorModal());
         document.getElementById('btnCopyErrors').addEventListener('click', () => this._copyErrors());
@@ -399,35 +664,123 @@ class TreeOrganizerUI {
         this.errorModalEl.addEventListener('click', (e) => {
             if (e.target === this.errorModalEl) this._hideErrorModal();
         });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => this._handleKeyboard(e));
+    }
+
+    _handleKeyboard(e) {
+        // Ctrl+A: Select All
+        if (e.ctrlKey && e.key === 'a' && !this._isInputFocused()) {
+            e.preventDefault();
+            this._selectAll();
+        }
+        // Escape: Clear selection
+        if (e.key === 'Escape') {
+            this._clearSelection();
+        }
+        // Delete: Delete selected
+        if (e.key === 'Delete' && !this._isInputFocused()) {
+            this._deleteSelected();
+        }
+    }
+
+    _isInputFocused() {
+        const active = document.activeElement;
+        return active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.tagName === 'SELECT');
     }
 
     _render() {
-        this.rootTreeEl.innerHTML = '';
+        const startTime = performance.now();
+
+        // Check if this is a large dataset
+        const totalNodes = this.treeManager.getNodeCount();
+        this._isLargeDataset = totalNodes > 1000;
+
+        // Use DocumentFragment for batch DOM updates
+        const fragment = document.createDocumentFragment();
         this._destroySortables();
+        this._visibleNodeCount = 0;
+        this._nodeElementCache.clear();
 
         for (const child of this.treeManager.root.children) {
-            this.rootTreeEl.appendChild(this._createNodeElement(child));
+            const el = this._createNodeElement(child);
+            if (el) fragment.appendChild(el);
         }
+
+        // Batch DOM update
+        this.rootTreeEl.innerHTML = '';
+        this.rootTreeEl.appendChild(fragment);
 
         this._initSortable(this.rootTreeEl, this.treeManager.root.id);
         this._updateNodeCount();
+        this._updateSelectionCount();
+        this._updateNodeEditor();
+
+        // Log performance for large datasets
+        if (this._isLargeDataset) {
+            const elapsed = performance.now() - startTime;
+            console.log(`Rendered ${this._visibleNodeCount} visible nodes in ${elapsed.toFixed(1)}ms`);
+        }
     }
 
     _createNodeElement(node) {
+        // Track visible nodes for performance monitoring
+        this._visibleNodeCount++;
+
         const li = document.createElement('li');
         li.className = 'tree-node';
         li.dataset.nodeId = node.id;
+        li.draggable = true;  // Enable native drag for folder drop support
+
+        // Native dragstart for folder drop support
+        li.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', node.id);
+            e.dataTransfer.effectAllowed = 'move';
+            li.classList.add('dragging');
+        });
+
+        li.addEventListener('dragend', () => {
+            li.classList.remove('dragging');
+            // Clear all drop target highlights when drag ends
+            document.querySelectorAll('.drop-target-active').forEach(el => {
+                el.classList.remove('drop-target-active');
+            });
+            // Clear any pending expand timer
+            this._clearDragExpandTimer();
+        });
+
+        // Cache element reference for quick lookup
+        this._nodeElementCache.set(node.id, li);
 
         const content = document.createElement('div');
         content.className = 'node-content';
-        if (this.treeManager.selectedNode === node) {
-            content.classList.add('selected');
+
+        // Multi-selection support - use direct Set lookup
+        const isSelected = this.treeManager.selectedNodes.has(node);
+        if (isSelected) {
+            content.classList.add('multi-selected');
         }
 
-        // Check for errors on this node
-        const nodeErrors = this.treeManager.errors.filter(e => e.node === node);
-        if (nodeErrors.length > 0) {
+        // Check for errors on this node - use Map for O(1) lookup
+        if (this._nodeHasError(node)) {
             content.classList.add('has-error');
+        }
+
+        // Checkbox for selection (only if editable)
+        if (node.editable) {
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'node-checkbox';
+            checkbox.checked = isSelected;
+            checkbox.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.treeManager.toggleSelection(node);
+                // Only update this node's visual state, not full re-render
+                this._updateNodeSelection(li, node);
+                this._debouncedUpdateCounts();
+            });
+            content.appendChild(checkbox);
         }
 
         // Toggle button (for folders)
@@ -438,7 +791,8 @@ class TreeOrganizerUI {
             toggle.addEventListener('click', (e) => {
                 e.stopPropagation();
                 node.expanded = !node.expanded;
-                this._render();
+                // Only update this subtree
+                this._toggleSubtree(li, node);
             });
         }
         content.appendChild(toggle);
@@ -447,16 +801,34 @@ class TreeOrganizerUI {
         const icon = document.createElement('span');
         icon.className = `node-icon ${node.type}`;
         icon.textContent = node.type === 'folder' ? '📁' : '🔗';
+        // Make folder icon clickable to toggle (improves UX)
+        if (node.type === 'folder' && node.children.length > 0) {
+            icon.style.cursor = 'pointer';
+            icon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                node.expanded = !node.expanded;
+                this._toggleSubtree(li, node);
+            });
+        }
         content.appendChild(icon);
 
         // Label
         const label = document.createElement('span');
         label.className = 'node-label';
         label.textContent = node.name;
-        label.title = node.type === 'bookmark' ? node.url : node.getPath();
+        // Lazy tooltip - don't compute path until hover for large datasets
+        if (this._isLargeDataset) {
+            label.addEventListener('mouseenter', () => {
+                if (!label.title) {
+                    label.title = node.type === 'bookmark' ? node.url : node.getPath();
+                }
+            }, { once: true });
+        } else {
+            label.title = node.type === 'bookmark' ? node.url : node.getPath();
+        }
         content.appendChild(label);
 
-        // Actions
+        // Actions (only show on hover via CSS, create lazily)
         if (node.editable) {
             const actions = document.createElement('span');
             actions.className = 'node-actions';
@@ -467,7 +839,9 @@ class TreeOrganizerUI {
             editBtn.title = 'Edit';
             editBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                this._selectNode(node);
+                this.treeManager.clearSelection();
+                this.treeManager.selectNode(node);
+                this._render();
             });
             actions.appendChild(editBtn);
 
@@ -484,41 +858,282 @@ class TreeOrganizerUI {
             content.appendChild(actions);
         }
 
-        content.addEventListener('click', () => this._selectNode(node));
+        // Click handler with multi-selection support
+        content.addEventListener('click', (e) => this._handleNodeClick(node, e));
+
+        // Drop zone for folders - allows dropping items ONTO the folder
+        // Only the currently hovered folder shows as a drop target
+        if (node.type === 'folder') {
+            content.classList.add('folder-drop-target');
+            content.dataset.folderId = node.id;
+
+            content.addEventListener('dragenter', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Clear any other drop targets first - only one should be active at a time
+                document.querySelectorAll('.drop-target-active').forEach(el => {
+                    if (el !== content) el.classList.remove('drop-target-active');
+                });
+                content.classList.add('drop-target-active');
+
+                // Start timer to auto-expand folder after 1.5 seconds of hovering
+                this._clearDragExpandTimer();
+                if (!node.expanded) {
+                    this._dragExpandNodeId = node.id;
+                    this._dragExpandTimer = setTimeout(() => {
+                        if (this._dragExpandNodeId === node.id) {
+                            node.expanded = true;
+                            this._render();
+                        }
+                    }, this.DRAG_EXPAND_DELAY);
+                }
+            });
+
+            content.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Keep the class active while hovering
+                content.classList.add('drop-target-active');
+            });
+
+            content.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                // Only remove if we're actually leaving this element (not moving to a child)
+                const relatedTarget = e.relatedTarget;
+                if (!content.contains(relatedTarget)) {
+                    content.classList.remove('drop-target-active');
+                    // Clear the expand timer when leaving the folder
+                    if (this._dragExpandNodeId === node.id) {
+                        this._clearDragExpandTimer();
+                    }
+                }
+            });
+
+            content.addEventListener('drop', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                content.classList.remove('drop-target-active');
+                // Clear expand timer on drop
+                this._clearDragExpandTimer();
+
+                // Get the dragged node ID from the drag data
+                const draggedId = e.dataTransfer.getData('text/plain');
+                if (draggedId && draggedId !== node.id) {
+                    const draggedNode = this.treeManager.nodeMap.get(draggedId);
+                    if (draggedNode) {
+                        // Check if we're trying to drop a parent into its child
+                        if (this._isDescendant(draggedNode, node)) {
+                            console.warn('Cannot drop a parent into its own child');
+                            return;
+                        }
+
+                        // Move the dragged node (or all selected) into this folder
+                        if (this.treeManager.isSelected(draggedNode) && this.treeManager.selectedNodes.size > 1) {
+                            this.treeManager.moveSelectedNodes(node.id, 0);
+                        } else {
+                            this.treeManager.moveNode(draggedId, node.id, 0);
+                        }
+
+                        // Expand the folder to show the dropped items
+                        node.expanded = true;
+                        this._render();
+                    }
+                }
+            });
+        }
+
         li.appendChild(content);
 
-        // Children (for folders)
+        // Children (for folders) - LAZY: only render if expanded
         if (node.type === 'folder') {
             const childrenUl = document.createElement('ul');
             childrenUl.className = `tree-list node-children ${node.expanded ? 'expanded' : ''}`;
             childrenUl.dataset.parentId = node.id;
 
-            for (const child of node.children) {
-                childrenUl.appendChild(this._createNodeElement(child));
+            // Only render children if expanded (lazy rendering)
+            if (node.expanded) {
+                for (const child of node.children) {
+                    const childEl = this._createNodeElement(child);
+                    if (childEl) childrenUl.appendChild(childEl);
+                }
             }
 
             li.appendChild(childrenUl);
-            this._initSortable(childrenUl, node.id);
+
+            // Initialize sortable for expanded folders (even empty ones for drop targets)
+            if (node.expanded) {
+                this._initSortable(childrenUl, node.id);
+            }
         }
 
         return li;
     }
 
-    _initSortable(el, parentId) {
+    // Clear the drag expand timer
+    _clearDragExpandTimer() {
+        if (this._dragExpandTimer) {
+            clearTimeout(this._dragExpandTimer);
+            this._dragExpandTimer = null;
+            this._dragExpandNodeId = null;
+        }
+    }
+
+    // Check if potentialChild is a descendant of potentialParent
+    _isDescendant(potentialParent, potentialChild) {
+        let current = potentialChild.parent;
+        while (current) {
+            if (current.id === potentialParent.id) {
+                return true;
+            }
+            current = current.parent;
+        }
+        return false;
+    }
+
+    // Helper to check if node has errors (cached)
+    _nodeHasError(node) {
+        return this.treeManager.errors.some(e => e.node === node);
+    }
+
+    // Update just one node's selection state without full re-render
+    _updateNodeSelection(li, node) {
+        const content = li.querySelector('.node-content');
+        const checkbox = li.querySelector('.node-checkbox');
+        const isSelected = this.treeManager.selectedNodes.has(node);
+
+        if (isSelected) {
+            content.classList.add('multi-selected');
+        } else {
+            content.classList.remove('multi-selected');
+        }
+        if (checkbox) {
+            checkbox.checked = isSelected;
+        }
+        this._updateNodeEditor();
+    }
+
+    // Toggle a folder's children without full re-render
+    _toggleSubtree(li, node) {
+        const childrenUl = li.querySelector(':scope > .node-children');
+        const toggle = li.querySelector(':scope > .node-content > .node-toggle');
+
+        if (node.expanded) {
+            // Expanding - render children
+            childrenUl.classList.add('expanded');
+            toggle.textContent = '▼';
+
+            // Render children if not already rendered
+            if (childrenUl.children.length === 0 && node.children.length > 0) {
+                const fragment = document.createDocumentFragment();
+                for (const child of node.children) {
+                    const childEl = this._createNodeElement(child);
+                    if (childEl) fragment.appendChild(childEl);
+                }
+                childrenUl.appendChild(fragment);
+                this._initSortable(childrenUl, node.id);
+            }
+        } else {
+            // Collapsing
+            childrenUl.classList.remove('expanded');
+            toggle.textContent = '▶';
+        }
+    }
+
+    _handleNodeClick(node, e) {
+        if (e.shiftKey && this.treeManager.lastSelectedNode) {
+            // Shift+click: range selection (add range to current selection)
+            this.treeManager.selectRange(this.treeManager.lastSelectedNode, node);
+        } else {
+            // Normal click or Ctrl/Cmd+click: toggle selection
+            // This allows selecting multiple nodes without holding modifier keys
+            this.treeManager.toggleSelection(node);
+        }
+        this._render();
+    }
+
+    _initSortable(el, _parentId) {
+        const self = this;
         const sortable = new Sortable(el, {
-            group: 'tree',
+            group: {
+                name: 'tree',
+                pull: true,  // Allow pulling from this list
+                put: true    // Allow dropping into this list
+            },
             animation: 150,
             fallbackOnBody: true,
             swapThreshold: 0.65,
             ghostClass: 'drag-over',
-            onEnd: (evt) => {
+            chosenClass: 'drag-chosen',
+            dragClass: 'drag-source',
+
+            // Allow dropping on folder items to nest inside them
+            // NOTE: Auto-expand on hover disabled per user request - only hovered node is drop target
+            onMove: () => {
+                return true; // Allow the move
+            },
+
+            onStart: (evt) => {
+                // If dragged item is selected, we're dragging all selected items
                 const nodeId = evt.item.dataset.nodeId;
+                const node = self.treeManager.nodeMap.get(nodeId);
+                const selectedCount = self.treeManager.selectedNodes.size;
+
+                // Mark all selected items as being dragged
+                if (node && self.treeManager.isSelected(node) && selectedCount > 1) {
+                    // Add badge showing count of items being dragged
+                    const badge = document.createElement('span');
+                    badge.className = 'drag-count-badge';
+                    badge.textContent = selectedCount;
+                    const content = evt.item.querySelector('.node-content');
+                    if (content) content.appendChild(badge);
+
+                    // Add visual indicator to all selected items
+                    for (const selectedNode of self.treeManager.selectedNodes) {
+                        const el = self._nodeElementCache.get(selectedNode.id);
+                        if (el && el !== evt.item) {
+                            el.classList.add('drag-sibling');
+                        }
+                    }
+                }
+
+                // Add dragging class to body for global styling
+                document.body.classList.add('dragging');
+            },
+
+            onEnd: (evt) => {
+                // Clean up
+                document.body.classList.remove('dragging');
+
+                // Remove drag count badge if present
+                const badge = evt.item.querySelector('.drag-count-badge');
+                if (badge) badge.remove();
+
+                // Remove sibling markers
+                document.querySelectorAll('.drag-sibling').forEach(el => {
+                    el.classList.remove('drag-sibling');
+                });
+
+                const nodeId = evt.item.dataset.nodeId;
+                const node = self.treeManager.nodeMap.get(nodeId);
                 const newParentEl = evt.to;
-                const newParentId = newParentEl.dataset.parentId || this.treeManager.root.id;
+
+                // Determine new parent: either from data attribute or root
+                let newParentId = newParentEl.dataset.parentId;
+                if (!newParentId) {
+                    // Dropped on root level
+                    newParentId = self.treeManager.root.id;
+                }
+
                 const newIndex = evt.newIndex;
 
-                this.treeManager.moveNode(nodeId, newParentId, newIndex);
-                this._render();
+                // If the dragged node is part of selection, move all selected nodes
+                if (node && self.treeManager.isSelected(node) && self.treeManager.selectedNodes.size > 1) {
+                    const moved = self.treeManager.moveSelectedNodes(newParentId, newIndex);
+                    console.log(`Moved ${moved} nodes to ${newParentId}`);
+                } else if (node) {
+                    self.treeManager.moveNode(nodeId, newParentId, newIndex);
+                }
+                self._render();
             }
         });
         this.sortableInstances.push(sortable);
@@ -536,13 +1151,70 @@ class TreeOrganizerUI {
         this.nodeCountEl.textContent = `${count} item${count !== 1 ? 's' : ''}`;
     }
 
+    _updateSelectionCount() {
+        const count = this.treeManager.selectedNodes.size;
+        if (count > 0) {
+            this.selectionCountEl.style.display = '';
+            this.selectionCountEl.textContent = `${count} selected`;
+        } else {
+            this.selectionCountEl.style.display = 'none';
+        }
+    }
+
     _selectNode(node) {
-        this.treeManager.selectedNode = node;
+        this.treeManager.clearSelection();
+        this.treeManager.selectNode(node);
         this._render();
-        this._showNodeEditor(node);
+    }
+
+    _selectAll() {
+        this.treeManager.selectAll();
+        this._render();
+    }
+
+    _clearSelection() {
+        this.treeManager.clearSelection();
+        this._render();
+    }
+
+    _invertSelection() {
+        this.treeManager.invertSelection();
+        this._render();
+    }
+
+    _deleteSelected() {
+        const count = this.treeManager.selectedNodes.size;
+        if (count === 0) {
+            alert('No nodes selected');
+            return;
+        }
+
+        if (confirm(`Delete ${count} selected item${count !== 1 ? 's' : ''}?`)) {
+            const deleted = this.treeManager.removeSelectedNodes();
+            this._render();
+            if (deleted > 0) {
+                alert(`Deleted ${deleted} item${deleted !== 1 ? 's' : ''}`);
+            }
+        }
+    }
+
+    _updateNodeEditor() {
+        const selectedNodes = this.treeManager.getSelectedNodes();
+
+        if (selectedNodes.length === 0) {
+            this.nodeEditorEl.innerHTML = '<p class="placeholder-text">Select a node to edit its properties</p>';
+        } else if (selectedNodes.length === 1) {
+            this._showSingleNodeEditor(selectedNodes[0]);
+        } else {
+            this._showBulkEditor(selectedNodes);
+        }
     }
 
     _showNodeEditor(node) {
+        this._showSingleNodeEditor(node);
+    }
+
+    _showSingleNodeEditor(node) {
         if (!node.editable) {
             this.nodeEditorEl.innerHTML = '<p class="placeholder-text">This node is read-only</p>';
             return;
@@ -554,8 +1226,8 @@ class TreeOrganizerUI {
             <form class="editor-form" id="nodeEditForm">
                 <div class="form-group">
                     <label>Type</label>
-                    <select id="editType" ${isBookmark ? '' : ''}>
-                        <option value="folder" ${!isBookmark ? 'selected' : ''}>📁 Folder</option>
+                    <select id="editType">
+                        <option value="folder" ${isBookmark ? '' : 'selected'}>📁 Folder</option>
                         <option value="bookmark" ${isBookmark ? 'selected' : ''}>🔗 Bookmark</option>
                     </select>
                 </div>
@@ -600,12 +1272,50 @@ class TreeOrganizerUI {
                 node.icon = document.getElementById('editIcon').value;
             }
             this._render();
-            this._showNodeEditor(node);
         });
 
         // Delete button
         document.getElementById('btnDeleteNode').addEventListener('click', () => {
             this._deleteNode(node);
+        });
+    }
+
+    _showBulkEditor(selectedNodes) {
+        const folderCount = selectedNodes.filter(n => n.type === 'folder').length;
+        const bookmarkCount = selectedNodes.filter(n => n.type === 'bookmark').length;
+
+        let itemsList = '';
+        for (const node of selectedNodes.slice(0, 20)) { // Show max 20 items
+            const icon = node.type === 'folder' ? '📁' : '🔗';
+            itemsList += `<div class="selected-item">${icon} ${this._escapeHtml(node.name)}</div>`;
+        }
+        if (selectedNodes.length > 20) {
+            itemsList += `<div class="selected-item" style="color:#888">... and ${selectedNodes.length - 20} more</div>`;
+        }
+
+        this.nodeEditorEl.innerHTML = `
+            <div class="bulk-editor">
+                <h3>📋 ${selectedNodes.length} Items Selected</h3>
+                <p style="margin-bottom: 1rem; color: #666;">
+                    ${folderCount} folder${folderCount !== 1 ? 's' : ''},
+                    ${bookmarkCount} bookmark${bookmarkCount !== 1 ? 's' : ''}
+                </p>
+                <div class="selected-list">
+                    ${itemsList}
+                </div>
+                <div class="bulk-actions">
+                    <button class="btn btn-danger" id="btnBulkDelete">🗑️ Delete All Selected</button>
+                    <button class="btn" id="btnBulkDeselect">☐ Clear Selection</button>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('btnBulkDelete').addEventListener('click', () => {
+            this._deleteSelected();
+        });
+
+        document.getElementById('btnBulkDeselect').addEventListener('click', () => {
+            this._clearSelection();
         });
     }
 
@@ -616,9 +1326,10 @@ class TreeOrganizerUI {
     }
 
     _addNode(type) {
-        const parentId = this.treeManager.selectedNode?.type === 'folder'
-            ? this.treeManager.selectedNode.id
-            : this.treeManager.root.id;
+        // Get parent from first selected folder, or root
+        const selectedNodes = this.treeManager.getSelectedNodes();
+        const selectedFolder = selectedNodes.find(n => n.type === 'folder');
+        const parentId = selectedFolder ? selectedFolder.id : this.treeManager.root.id;
 
         const name = type === 'folder' ? 'New Folder' : 'New Bookmark';
         const node = this.treeManager.addNode(parentId, type, name, {
@@ -632,12 +1343,9 @@ class TreeOrganizerUI {
     _deleteNode(node) {
         if (!node.editable) return;
 
-        if (confirm(`Delete "${node.name}"${node.children?.length > 0 ? ' and all its contents' : ''}?`)) {
+        const hasChildren = node.children && node.children.length > 0;
+        if (confirm(`Delete "${node.name}"${hasChildren ? ' and all its contents' : ''}?`)) {
             this.treeManager.removeNode(node.id);
-            if (this.treeManager.selectedNode === node) {
-                this.treeManager.selectedNode = null;
-                this.nodeEditorEl.innerHTML = '<p class="placeholder-text">Select a node to edit its properties</p>';
-            }
             this._render();
         }
     }
