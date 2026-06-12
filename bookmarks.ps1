@@ -44,6 +44,10 @@
 .PARAMETER WhatIf
     Shows what would change without modifying any bookmark files.
 .EXAMPLE
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+    Set the execution policy to allow running scripts (run once before first use)
+
+.EXAMPLE
     Install (add) the myTech.Today bookmark structure for all supported browsers:
 
         .\bookmarks\bookmarks.ps1 -Mode Add -Browser All

@@ -349,6 +349,10 @@
       </li>
     </ol>
 
+    <h3>Set Execution Policy</h3>
+    <p>Before running the script for the first time, set the execution policy to allow scripts to run:</p>
+    <pre><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted</code></pre>
+
     <h3>Usage Examples</h3>
     <pre><code class="language-powershell"># Add myTech.Today bookmarks for all supported browsers
 .\bookmarks\bookmarks.ps1 -Mode Add -Browser All
